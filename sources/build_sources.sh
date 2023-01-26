@@ -32,6 +32,9 @@ do
     ufo_file="ufo/"${sfd_file%.*}
     python3 -m sfdLib --ufo-kerning --ufo-anchors $sfd_temp $ufo_file
 
+    # Apply some modifications to the UFO
+    python3 ufo_fixing.py $ufo_file
+
     echo -e "\x1b[0;32m"$ufo_file" has been generated.\x1b[0;0m"
 done
 
