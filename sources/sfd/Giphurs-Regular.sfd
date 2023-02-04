@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1655845567
-ModificationTime: 1675506873
+ModificationTime: 1675508588
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -270,10 +270,16 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 7676 38 14
+WinInfo: 0 38 14
 BeginPrivate: 0
 EndPrivate
 Grid
+-2048 656 m 0
+ 4096 656 l 1024
+-2048 824 m 0
+ 4096 824 l 1024
+-2048 740 m 0
+ 4096 740 l 1024
 297.666666667 2692 m 0
  297.666666667 -1404 l 1024
 -2048 1587.04162598 m 0
@@ -1951,29 +1957,29 @@ EndChar
 
 StartChar: S
 Encoding: 83 83 52
-Width: 1268
+Width: 1219
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "bottom_center" 656 0 basechar 0
-AnchorPoint: "top_center" 656 1400 basechar 0
+AnchorPoint: "bottom_center" 610 0 basechar 0
+AnchorPoint: "top_center" 610 1400 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-271 452 m 1
- 316 309 436 150 656 150 c 0
- 876 150 982 254 982 394 c 0
- 982 534 864 578 656 631 c 0
- 361 706 140 831 140 1086 c 0
- 140 1341 348 1500 656 1500 c 0
- 965 1500 1089 1339 1160 1120 c 1
- 999 1028 l 1
- 953 1171 876 1330 656 1330 c 0
- 436 1330 330 1226 330 1086 c 0
- 330 946 449 868 656 816 c 0
- 949 742 1168 649 1168 394 c 0
- 1168 139 962 -20 656 -20 c 0
- 348 -20 171 141 100 360 c 1
- 271 452 l 1
+610 1332 m 0
+ 400 1332 314 1214 314 1086 c 0
+ 314 958 403 889 610 837 c 0
+ 903 763 1119 649 1119 394 c 0
+ 1119 139 916 -20 610 -20 c 0
+ 329 -20 127 158 100 396 c 1
+ 287 446 l 0
+ 287 290 410 148 610 148 c 0
+ 830 148 933 254 933 394 c 0
+ 933 534 818 600 610 653 c 4
+ 315 728 124 846 124 1086 c 0
+ 124 1326 319 1500 610 1500 c 0
+ 891 1500 1066 1322 1093 1084 c 1
+ 906 1034 l 0
+ 906 1190 810 1332 610 1332 c 0
 EndSplineSet
 Colour: ffff
 EndChar
@@ -2009,23 +2015,23 @@ SplineSet
 EndSplineSet
 Fore
 SplineSet
-105 418 m 0
+105 418 m 4
  105 569 186 702 320 781 c 1
  212 854 148 969 148 1098 c 0
  148 1321 340 1500 615 1500 c 0
  890 1500 1082 1321 1082 1098 c 0
  1082 969 1018 854 910 781 c 1
  1045 702 1127 570 1127 418 c 0
- 1127 175 915 -20 615 -20 c 0
- 315 -20 105 175 105 418 c 0
+ 1127 175 915 -20 615 -20 c 4
+ 315 -20 105 175 105 418 c 4
 338 1094 m 0
  338 957 440 856 615 856 c 0
  790 856 892 957 892 1094 c 0
  892 1231 790 1332 615 1332 c 0
  440 1332 338 1231 338 1094 c 0
 615 696 m 0
- 415 696 295 578 295 422 c 0
- 295 266 415 148 615 148 c 0
+ 415 696 295 578 295 422 c 4
+ 295 266 415 148 615 148 c 4
  815 148 937 266 937 422 c 0
  937 578 815 696 615 696 c 0
 EndSplineSet
@@ -2196,14 +2202,14 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-321 949 m 1
- 128 1000 l 0
- 128 1300 336 1500 616 1500 c 0
+321 949 m 5
+ 128 1000 l 4
+ 128 1300 336 1500 616 1500 c 4
  896 1500 1104 1320 1104 1040 c 0
  914 1040 l 0
- 914 1220 796 1332 616 1332 c 0
- 436 1332 318 1180 318 1000 c 0
- 318 982 319 966 321 949 c 1
+ 914 1220 796 1332 616 1332 c 4
+ 436 1332 318 1180 318 1000 c 4
+ 318 982 319 966 321 949 c 5
 120 0 m 1
  120 160 131 388 616 668 c 0
  772 758 914 860 914 1040 c 1
@@ -2310,10 +2316,10 @@ SplineSet
  205 701 l 1
  292 858 382 986 615 986 c 0
  896 986 1127 774 1127 483 c 0
- 1127 192 895 -20 614 -20 c 0
- 333 -20 131 158 104 396 c 1
- 291 446 l 0
- 291 290 414 148 614 148 c 0
+ 1127 192 895 -20 614 -20 c 4
+ 333 -20 131 158 104 396 c 5
+ 291 446 l 4
+ 291 290 414 148 614 148 c 4
  793 148 937 279 937 483 c 0
  937 687 793 818 615 818 c 0
  459 818 374 763 318 668 c 1
@@ -2799,7 +2805,7 @@ Width: 1356
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 -310 0 2
+Refer: 83 768 N 1 0 0 1 80 360 2
 Refer: 27 65 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -2822,8 +2828,6 @@ Encoding: 768 768 83
 Width: 0
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "top_left" 800 1480 mark 0
-AnchorPoint: "top_left_O2" 787 1224 mark 0
 AnchorPoint: "circumflex_left" 653 1092 mark 0
 AnchorPoint: "top_center" 598 1040 mark 0
 LayerCount: 4
@@ -2843,18 +2847,16 @@ Encoding: 769 769 84
 Width: 0
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "top_left" 944 1480 mark 0
-AnchorPoint: "top_left_O2" 767 1224 mark 0
 AnchorPoint: "circumflex_right" 543 1092 mark 0
 AnchorPoint: "top_center" 598 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-677 1224 m 5
- 499 1224 l 5
- 677 1480 l 5
- 903 1480 l 5
- 677 1224 l 5
+677 1224 m 1
+ 499 1224 l 1
+ 677 1480 l 1
+ 903 1480 l 1
+ 677 1224 l 1
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -3011,7 +3013,7 @@ Width: 1356
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -454 0 2
+Refer: 84 769 N 1 0 0 1 80 360 2
 Refer: 27 65 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -3079,7 +3081,7 @@ Width: 1208
 Flags: HM
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 -660 0 2
+Refer: 83 768 N 1 0 0 1 6 360 2
 Refer: 31 69 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -3090,7 +3092,7 @@ Width: 1208
 Flags: HM
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -804 0 2
+Refer: 84 769 N 1 0 0 1 6 360 2
 Refer: 31 69 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -3125,7 +3127,7 @@ Width: 806
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 -660 0 2
+Refer: 83 768 N 1 0 0 1 -195 360 2
 Refer: 36 73 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -3136,7 +3138,7 @@ Width: 806
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -804 0 2
+Refer: 84 769 N 1 0 0 1 -195 360 2
 Refer: 36 73 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -3180,7 +3182,7 @@ Width: 1602
 Flags: HM
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 -535 0 2
+Refer: 83 768 N 1 0 0 1 203 360 2
 Refer: 30 79 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -3191,7 +3193,7 @@ Width: 1602
 Flags: HM
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -515 0 2
+Refer: 84 769 N 1 0 0 1 203 360 2
 Refer: 30 79 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -3284,7 +3286,7 @@ Width: 1392
 Flags: HM
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -844 1 2
+Refer: 84 769 N 1 0 0 1 98 360 2
 Refer: 48 89 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -3754,34 +3756,33 @@ EndChar
 
 StartChar: dollar
 Encoding: 36 36 142
-Width: 1268
+Width: 1219
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-271 452 m 1
- 316 309 436 150 656 150 c 0
- 876 150 982 254 982 394 c 0
- 982 534 864 578 656 631 c 0
- 361 706 140 831 140 1086 c 0
- 140 1341 348 1500 656 1500 c 0
- 965 1500 1089 1339 1160 1120 c 1
- 999 1028 l 1
- 953 1171 876 1330 656 1330 c 0
- 436 1330 330 1226 330 1086 c 0
- 330 946 449 868 656 816 c 0
- 949 742 1168 649 1168 394 c 0
- 1168 139 962 -20 656 -20 c 0
- 348 -20 171 141 100 360 c 1
- 271 452 l 1
-732 1660 m 25
- 732 -180 l 25
- 580 -180 l 1
- 580 1660 l 1
- 732 1660 l 25
+610 1332 m 0
+ 400 1332 314 1214 314 1086 c 0
+ 314 958 403 889 610 837 c 0
+ 903 763 1119 649 1119 394 c 0
+ 1119 139 916 -20 610 -20 c 0
+ 329 -20 127 158 100 396 c 1
+ 287 446 l 0
+ 287 290 410 148 610 148 c 0
+ 830 148 933 254 933 394 c 0
+ 933 534 818 600 610 653 c 0
+ 315 728 124 846 124 1086 c 0
+ 124 1326 319 1500 610 1500 c 0
+ 891 1500 1066 1322 1093 1084 c 1
+ 906 1034 l 0
+ 906 1190 810 1332 610 1332 c 0
+686 1660 m 25
+ 686 -180 l 25
+ 534 -180 l 1
+ 534 1660 l 1
+ 686 1660 l 25
 EndSplineSet
-Validated: 5
 Colour: ffff
 EndChar
 
@@ -7451,11 +7452,11 @@ EndChar
 
 StartChar: Sacute
 Encoding: 346 346 288
-Width: 1268
+Width: 1219
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 58 360 2
+Refer: 84 769 N 1 0 0 1 12 360 2
 Refer: 52 83 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -7474,11 +7475,11 @@ EndChar
 
 StartChar: Scircumflex
 Encoding: 348 348 290
-Width: 1268
+Width: 1219
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 58 360 2
+Refer: 85 770 N 1 0 0 1 12 360 2
 Refer: 52 83 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -7497,11 +7498,11 @@ EndChar
 
 StartChar: Scedilla
 Encoding: 350 350 292
-Width: 1268
+Width: 1219
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 90 807 N 1 0 0 1 139 -7.33333 2
+Refer: 90 807 N 1 0 0 1 93 -7.33333 2
 Refer: 52 83 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -7520,13 +7521,13 @@ EndChar
 
 StartChar: Scaron
 Encoding: 352 352 294
-Width: 1268
+Width: 1219
 Flags: HMW
 AnchorPoint: "top_center" 656 1760 basechar 0
 AnchorPoint: "bottom_center" 656 0 basechar 0
 LayerCount: 4
 Fore
-Refer: 231 780 N 1 0 0 1 58 360 2
+Refer: 231 780 N 1 0 0 1 12 360 2
 Refer: 52 83 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -10212,29 +10213,30 @@ EndChar
 
 StartChar: uni01A7
 Encoding: 423 423 405
-Width: 1268
+Width: 1219
 VWidth: 1000
 Flags: HMW
+AnchorPoint: "bottom_center" 609 0 basechar 0
+AnchorPoint: "top_center" 609 1400 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-997 452 m 1
- 952 309 832 150 612 150 c 0
- 392 150 286 254 286 394 c 0
- 286 534 404 578 612 631 c 0
- 907 706 1128 831 1128 1086 c 0
- 1128 1341 920 1500 612 1500 c 0
- 303 1500 179 1339 108 1120 c 1
- 269 1028 l 1
- 315 1171 392 1330 612 1330 c 0
- 832 1330 938 1226 938 1086 c 0
- 938 946 819 868 612 816 c 0
- 319 742 100 649 100 394 c 0
- 100 139 306 -20 612 -20 c 0
- 920 -20 1097 141 1168 360 c 1
- 997 452 l 1
+609 1332 m 0
+ 819 1332 905 1214 905 1086 c 0
+ 905 958 816 889 609 837 c 0
+ 316 763 100 649 100 394 c 0
+ 100 139 303 -20 609 -20 c 0
+ 890 -20 1092 158 1119 396 c 1
+ 932 446 l 0
+ 932 290 809 148 609 148 c 0
+ 389 148 286 254 286 394 c 0
+ 286 534 401 600 609 653 c 0
+ 904 728 1095 846 1095 1086 c 0
+ 1095 1326 900 1500 609 1500 c 0
+ 328 1500 153 1322 126 1084 c 5
+ 313 1034 l 4
+ 313 1190 409 1332 609 1332 c 0
 EndSplineSet
-Validated: 9
 Colour: ffff
 EndChar
 
@@ -12428,12 +12430,12 @@ EndChar
 
 StartChar: Scommaaccent
 Encoding: 536 536 525
-Width: 1268
+Width: 1219
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 529 806 N 1 0 0 1 181 -20 2
+Refer: 529 806 N 1 0 0 1 135 -20 2
 Refer: 52 83 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -20852,7 +20854,7 @@ EndChar
 
 StartChar: afii10054
 Encoding: 1029 1029 814
-Width: 1268
+Width: 1219
 Flags: HMW
 LayerCount: 4
 Fore
@@ -30265,11 +30267,11 @@ EndChar
 
 StartChar: uni1E60
 Encoding: 7776 7776 1163
-Width: 1268
+Width: 1219
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 230 775 N 1 0 0 1 58 360 2
+Refer: 230 775 N 1 0 0 1 380 360 2
 Refer: 52 83 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -30367,11 +30369,11 @@ EndChar
 
 StartChar: uni1E66
 Encoding: 7782 7782 1167
-Width: 1268
+Width: 1219
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 230 775 N 1 0 0 1 58 720 2
+Refer: 230 775 N 1 0 0 1 380 720 2
 Refer: 294 352 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -31470,11 +31472,11 @@ EndChar
 
 StartChar: uni1E62
 Encoding: 7778 7778 1253
-Width: 1268
+Width: 1219
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1201 803 N 1 0 0 1 58 0 2
+Refer: 1201 803 N 1 0 0 1 380 0 2
 Refer: 52 83 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -31493,11 +31495,11 @@ EndChar
 
 StartChar: uni1E68
 Encoding: 7784 7784 1255
-Width: 1268
+Width: 1219
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 230 775 N 1 0 0 1 58 398 2
+Refer: 230 775 N 1 0 0 1 380 398 2
 Refer: 1253 7778 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -36887,9 +36889,26 @@ Encoding: 8372 8372 1506
 Width: 1560
 VWidth: 1000
 Flags: HMW
+AnchorPoint: "bottom_center" 610 0 basechar 0
+AnchorPoint: "top_center" 610 1400 basechar 0
 LayerCount: 4
 Fore
 SplineSet
+780 1332 m 4
+ 990 1332 1076 1214 1076 1086 c 4
+ 1076 958 987 889 780 837 c 4
+ 487 763 271 649 271 394 c 4
+ 271 139 474 -20 780 -20 c 4
+ 1061 -20 1263 158 1290 396 c 5
+ 1103 446 l 4
+ 1103 290 980 148 780 148 c 4
+ 560 148 457 254 457 394 c 4
+ 457 534 572 600 780 653 c 4
+ 1075 728 1266 846 1266 1086 c 4
+ 1266 1326 1071 1500 780 1500 c 4
+ 499 1500 324 1322 297 1084 c 5
+ 484 1034 l 4
+ 484 1190 580 1332 780 1332 c 4
 351 520 m 1
  1420 520 l 1
  1420 672 l 1
@@ -36904,23 +36923,7 @@ SplineSet
  140 960 l 1
  140 914 140 854 140 808 c 1
  354 808 l 1
-1143 452 m 1
- 1098 309 978 150 758 150 c 0
- 538 150 432 254 432 394 c 0
- 432 534 550 578 758 631 c 0
- 1053 706 1274 831 1274 1086 c 0
- 1274 1341 1066 1500 758 1500 c 0
- 449 1500 325 1339 254 1120 c 1
- 415 1028 l 1
- 461 1171 538 1330 758 1330 c 0
- 978 1330 1084 1226 1084 1086 c 0
- 1084 946 965 868 758 816 c 0
- 465 742 246 649 246 394 c 0
- 246 139 452 -20 758 -20 c 0
- 1066 -20 1243 141 1314 360 c 1
- 1143 452 l 1
 EndSplineSet
-Validated: 5
 Colour: ffff
 EndChar
 
@@ -37005,21 +37008,21 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-821 140 m 0
- 1041 140 1147 254 1147 394 c 0
- 1147 534 1029 578 821 631 c 0
- 526 706 305 831 305 1086 c 0
- 305 1341 513 1500 821 1500 c 0
- 1130 1500 1254 1339 1325 1120 c 1
- 1164 1028 l 1
- 1118 1171 1041 1330 821 1330 c 0
- 601 1330 495 1226 495 1086 c 0
- 495 946 614 868 821 816 c 0
- 1114 742 1333 649 1333 394 c 0
- 1333 139 1127 -20 821 -20 c 0
+821 837 m 0
+ 1114 764 1330 649 1330 394 c 4
+ 1330 139 1127 -20 821 -20 c 0
  352 -20 192 135 192 135 c 1
  274 276 l 1
  274 276 411 140 821 140 c 0
+ 1041 140 1144 254 1144 394 c 4
+ 1144 534 1029 600 821 653 c 0
+ 526 728 335 824 335 1064 c 0
+ 335 1304 530 1478 821 1478 c 0
+ 1102 1478 1277 1300 1304 1062 c 1
+ 1117 1012 l 0
+ 1117 1168 1021 1310 821 1310 c 0
+ 611 1310 525 1192 525 1064 c 0
+ 525 936 614 889 821 837 c 0
 574 189 m 1
  574 396 675 505 831 505 c 0
  987 505 1075 409 1075 189 c 1
@@ -37043,7 +37046,6 @@ SplineSet
  675 -160 l 1
  540 -160 l 1
 EndSplineSet
-Validated: 5
 Colour: ff0000
 EndChar
 
@@ -81185,8 +81187,8 @@ Width: 1602
 Flags: HM
 LayerCount: 4
 Fore
-Refer: 155 96 N 1 0 0 1 -312 0 2
-Refer: 30 79 N 1 0 0 1 0 0 3
+Refer: 3209 8175 N 1 0 0 1 -312 0 2
+Refer: 684 927 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
 
@@ -81218,8 +81220,8 @@ Width: 1602
 Flags: HM
 LayerCount: 4
 Fore
-Refer: 169 180 N 1 0 0 1 -148 0 2
-Refer: 30 79 N 1 0 0 1 0 0 3
+Refer: 3212 8189 N 1 0 0 1 630 350 2
+Refer: 684 927 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
 
