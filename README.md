@@ -4,6 +4,8 @@ Your average Arial/Helvetica/Circular on budget UwU.
 
 ![Preview](documentation/quick_preview.png)
 
+Made with [Fontforge](https://fontforge.org/en-US/).
+
 # Status of the project
 
 This project **isn't complete and is under developpement**. Things may change at any time.
@@ -17,9 +19,16 @@ I'm aware that there's already some issues, for example the font version being i
 * Bring back '`calt`' features which couldn't be added to the build (which for example change the width of the )
 * Add the other weights (100, 200, ..., 900?)
 * Add italic.
-* Add better pictures of the font.
+* Add better pictures of the font and better description.
 
 # Build the fonts
+
+## Requirements
+
+TODO
+
+## Scripts
+
 This repo provides differents scripts to make the font files, inside the `sources` folder.
 **Ensure that the source folder is your current working directory else they won't work!!!**
 
