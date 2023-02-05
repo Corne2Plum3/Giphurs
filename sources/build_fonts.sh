@@ -109,7 +109,7 @@ case $1 in
         done
 
         # post-processing
-        echo -e "\x1b[0;36mPost-processing OTF files...\x1b[0;0m"
+        echo -e "\x1b[0;36mPost-processing TTF files...\x1b[0;0m"
 
         TTF_LIST=$(ls ../fonts/ttf/*.ttf)
         for ttf_file in $TTF_LIST
