@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1676738621
+ModificationTime: 1676739019
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -32,16 +32,16 @@ LineGap: 0
 VLineGap: 0
 OS2TypoAscent: 2122
 OS2TypoAOffset: 0
-OS2TypoDescent: -562
+OS2TypoDescent: -578
 OS2TypoDOffset: 0
 OS2TypoLinegap: 0
 OS2WinAscent: 2122
 OS2WinAOffset: 0
-OS2WinDescent: 562
+OS2WinDescent: 578
 OS2WinDOffset: 0
 HheadAscent: 2122
 HheadAOffset: 0
-HheadDescent: -562
+HheadDescent: -578
 HheadDOffset: 0
 OS2CapHeight: 1480
 OS2XHeight: 1040
@@ -260,19 +260,19 @@ KernClass2: 8 17 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-1"
  131 y.sc yacute.sc uni0233.sc upsilondieresistonos.sc uni04AF.sc uni04B1.sc uni1E8F.sc uni1EF3.sc uni1EF5.sc uni1EF7.sc uni1EF9.sc y.pc
  0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} -350 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {} 0 {} -280 {} -280 {} -280 {} -210 {} -210 {} -210 {} -141 {} -350 {} -210 {} -280 {} -280 {} -210 {} -210 {} -210 {} -141 {} -210 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} 0 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {}
 LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "" "" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
-OtfFeatName: 'ss06' 1036 "Op+AOkA-rateurs math+AOkA-matiques plus gros." 2057 "Bigger math operators." 1033 "Bigger math operators."
-OtfFeatName: 'ss05' 1036 "f ligatures (i.e. fi, fl, ...) ('liga' doit +AOoA-tre activ+AOkA !)" 2057 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 1033 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)"
-OtfFeatName: 'ss04' 1036 "Lettres minuscules a et g simplifi+AOkA-s." 2057 "Simplified small letters a and g." 1033 "Simplified small a and g."
-OtfFeatName: 'ss03' 1036 "Alternatif esperluette." 2057 "Alternative ampersand." 1033 "Alternative ampersand."
-OtfFeatName: 'ss02' 1036 "Chiffres 6 et 9 alternatifs." 2057 "Alternative digits 6 and 9." 1033 "Alternative digits 6 and 9."
-OtfFeatName: 'ss01' 1036 "Chiffres 1 et 4 alternatifs." 2057 "Alternative digits 1 and 4." 1033 "Alternative digits 1 and 4."
+OtfFeatName: 'ss01' 1033 "Alternative digits 1 and 4." 2057 "Alternative digits 1 and 4." 1036 "Chiffres 1 et 4 alternatifs."
+OtfFeatName: 'ss02' 1033 "Alternative digits 6 and 9." 2057 "Alternative digits 6 and 9." 1036 "Chiffres 6 et 9 alternatifs."
+OtfFeatName: 'ss03' 1033 "Alternative ampersand." 2057 "Alternative ampersand." 1036 "Alternatif esperluette."
+OtfFeatName: 'ss04' 1033 "Simplified small a and g." 2057 "Simplified small letters a and g." 1036 "Lettres minuscules a et g simplifi+AOkA-s."
+OtfFeatName: 'ss05' 1033 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 2057 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 1036 "f ligatures (i.e. fi, fl, ...) ('liga' doit +AOoA-tre activ+AOkA !)"
+OtfFeatName: 'ss06' 1033 "Bigger math operators." 2057 "Bigger math operators." 1036 "Op+AOkA-rateurs math+AOkA-matiques plus gros."
 Encoding: UnicodeBmp
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 57342 38 14
+WinInfo: 8360 38 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -38880,7 +38880,7 @@ StartChar: uni210A
 Encoding: 8458 8458 1560
 Width: 1425
 VWidth: 997
-Flags: HMW
+Flags: HMWO
 LayerCount: 4
 Fore
 SplineSet
@@ -38910,18 +38910,18 @@ SplineSet
  698 29 728 47 753 69 c 128
  778 91 795 107 807 120 c 1
  717 -4 l 1
- 679 -17 629 -33 569 -54 c 128
- 509 -75 446 -99 380 -126 c 128
- 314 -153 253 -183 196 -215 c 128
- 139 -247 93 -278 55 -311 c 128
- 17 -344 0 -377 0 -409 c 0
- 0 -424 6 -442 19 -463 c 128
- 32 -484 53 -505 82 -520 c 128
- 111 -535 149 -545 195 -545 c 0
- 260 -545 322 -534 380 -514 c 128
- 438 -494 491 -467 541 -434 c 128
- 591 -401 636 -365 674 -327 c 128
- 712 -289 747 -252 775 -214 c 2
+ 679 -17 629 -19.9248046875 569 -41.974609375 c 128
+ 509 -64.025390625 446 -89.224609375 380 -117.575195312 c 128
+ 314 -145.924804688 253 -177.424804688 196 -211.025390625 c 128
+ 139 -244.625 93 -277.174804688 55 -311.825195312 c 128
+ 17 -346.474609375 0 -381.125 0 -414.724609375 c 0
+ 0 -430.474609375 6 -449.375 19 -471.424804688 c 128
+ 32 -493.474609375 53 -515.525390625 82 -531.275390625 c 128
+ 111 -547.025390625 149 -557.525390625 195 -557.525390625 c 0
+ 260 -557.525390625 322 -545.974609375 380 -524.974609375 c 128
+ 438 -503.974609375 491 -475.625 541 -440.974609375 c 128
+ 591 -406.325195312 636 -368.525390625 674 -328.625 c 128
+ 712 -288.724609375 747 -249.875 775 -209.974609375 c 2
  924 -17 l 1
  971 4 l 1
 570 29 m 0
@@ -38939,19 +38939,19 @@ SplineSet
  910 345 873 286 835 229 c 128
  797 172 754 124 709 86 c 128
  664 48 617 29 570 29 c 0
-192 -518 m 0
- 167 -518 145 -515 123 -505 c 128
- 101 -495 90 -476 90 -446 c 0
- 90 -414 104 -382 130 -351 c 128
- 156 -320 191 -291 233 -262 c 128
- 275 -233 322 -205 369 -181 c 128
- 416 -157 464 -136 510 -116 c 128
- 556 -96 595 -81 627 -68 c 128
- 659 -55 680 -47 690 -44 c 1
- 526 -267 l 2
- 491 -315 458 -358 424 -396 c 128
- 390 -434 356 -464 318 -486 c 128
- 280 -508 239 -518 192 -518 c 0
+192 -529.174804688 m 0
+ 167 -529.174804688 145 -526.025390625 123 -515.525390625 c 128
+ 101 -505.025390625 90 -485.075195312 90 -453.575195312 c 0
+ 90 -419.974609375 104 -386.375 130 -353.825195312 c 128
+ 156 -321.275390625 191 -290.825195312 233 -260.375 c 128
+ 275 -229.924804688 322 -200.525390625 369 -175.325195312 c 128
+ 416 -150.125 464 -128.075195312 510 -107.075195312 c 128
+ 556 -86.0751953125 595 -70.3251953125 627 -56.6748046875 c 128
+ 659 -43.025390625 680 -34.625 690 -31.474609375 c 1
+ 526 -265.625 l 2
+ 491 -316.025390625 458 -361.174804688 424 -401.075195312 c 128
+ 390 -440.974609375 356 -472.474609375 318 -495.575195312 c 128
+ 280 -518.674804688 239 -529.174804688 192 -529.174804688 c 0
 EndSplineSet
 Colour: ff00ff
 EndChar
