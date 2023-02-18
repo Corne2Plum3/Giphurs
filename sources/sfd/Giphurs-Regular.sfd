@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1676738329
+ModificationTime: 1676738621
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -260,19 +260,19 @@ KernClass2: 8 17 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-1"
  131 y.sc yacute.sc uni0233.sc upsilondieresistonos.sc uni04AF.sc uni04B1.sc uni1E8F.sc uni1EF3.sc uni1EF5.sc uni1EF7.sc uni1EF9.sc y.pc
  0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} -350 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {} 0 {} -280 {} -280 {} -280 {} -210 {} -210 {} -210 {} -141 {} -350 {} -210 {} -280 {} -280 {} -210 {} -210 {} -210 {} -141 {} -210 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} 0 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {}
 LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "" "" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
-OtfFeatName: 'ss01' 1033 "Alternative digits 1 and 4." 2057 "Alternative digits 1 and 4." 1036 "Chiffres 1 et 4 alternatifs."
-OtfFeatName: 'ss02' 1033 "Alternative digits 6 and 9." 2057 "Alternative digits 6 and 9." 1036 "Chiffres 6 et 9 alternatifs."
-OtfFeatName: 'ss03' 1033 "Alternative ampersand." 2057 "Alternative ampersand." 1036 "Alternatif esperluette."
-OtfFeatName: 'ss04' 1033 "Simplified small a and g." 2057 "Simplified small letters a and g." 1036 "Lettres minuscules a et g simplifi+AOkA-s."
-OtfFeatName: 'ss05' 1033 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 2057 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 1036 "f ligatures (i.e. fi, fl, ...) ('liga' doit +AOoA-tre activ+AOkA !)"
-OtfFeatName: 'ss06' 1033 "Bigger math operators." 2057 "Bigger math operators." 1036 "Op+AOkA-rateurs math+AOkA-matiques plus gros."
+OtfFeatName: 'ss06' 1036 "Op+AOkA-rateurs math+AOkA-matiques plus gros." 2057 "Bigger math operators." 1033 "Bigger math operators."
+OtfFeatName: 'ss05' 1036 "f ligatures (i.e. fi, fl, ...) ('liga' doit +AOoA-tre activ+AOkA !)" 2057 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 1033 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)"
+OtfFeatName: 'ss04' 1036 "Lettres minuscules a et g simplifi+AOkA-s." 2057 "Simplified small letters a and g." 1033 "Simplified small a and g."
+OtfFeatName: 'ss03' 1036 "Alternatif esperluette." 2057 "Alternative ampersand." 1033 "Alternative ampersand."
+OtfFeatName: 'ss02' 1036 "Chiffres 6 et 9 alternatifs." 2057 "Alternative digits 6 and 9." 1033 "Alternative digits 6 and 9."
+OtfFeatName: 'ss01' 1036 "Chiffres 1 et 4 alternatifs." 2057 "Alternative digits 1 and 4." 1033 "Alternative digits 1 and 4."
 Encoding: UnicodeBmp
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 7638 38 14
+WinInfo: 57342 38 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -63509,7 +63509,7 @@ StartChar: o.sc
 Encoding: 57517 57517 2373
 Width: 1388
 Flags: HMW
-AnchorPoint: "bottom_right" 878 0 basechar 0
+AnchorPoint: "bottom_right" 881 0 basechar 0
 AnchorPoint: "top_right" 1214 1200 basechar 0
 AnchorPoint: "top_center" 694 1200 basechar 0
 AnchorPoint: "bottom_center" 694 0 basechar 0
@@ -66025,7 +66025,7 @@ Width: 1388
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 227 808 N 1 0 0 1 90 0 2
+Refer: 227 808 N 1 0 0 1 93 0 2
 Refer: 2373 57517 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
