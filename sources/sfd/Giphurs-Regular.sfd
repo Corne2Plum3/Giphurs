@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1676739228
+ModificationTime: 1677776739
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -260,22 +260,24 @@ KernClass2: 8 17 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-1"
  131 y.sc yacute.sc uni0233.sc upsilondieresistonos.sc uni04AF.sc uni04B1.sc uni1E8F.sc uni1EF3.sc uni1EF5.sc uni1EF7.sc uni1EF9.sc y.pc
  0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} -350 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {} 0 {} -280 {} -280 {} -280 {} -210 {} -210 {} -210 {} -141 {} -350 {} -210 {} -280 {} -280 {} -210 {} -210 {} -210 {} -141 {} -210 {} 0 {} -210 {} -210 {} -210 {} -141 {} -141 {} -141 {} -70 {} -280 {} -141 {} 0 {} -210 {} -141 {} -141 {} -141 {} -70 {} -141 {}
 LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "" "" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
-OtfFeatName: 'ss01' 1033 "Alternative digits 1 and 4." 2057 "Alternative digits 1 and 4." 1036 "Chiffres 1 et 4 alternatifs."
-OtfFeatName: 'ss02' 1033 "Alternative digits 6 and 9." 2057 "Alternative digits 6 and 9." 1036 "Chiffres 6 et 9 alternatifs."
-OtfFeatName: 'ss03' 1033 "Alternative ampersand." 2057 "Alternative ampersand." 1036 "Alternatif esperluette."
-OtfFeatName: 'ss04' 1033 "Simplified small a and g." 2057 "Simplified small letters a and g." 1036 "Lettres minuscules a et g simplifi+AOkA-s."
-OtfFeatName: 'ss05' 1033 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 2057 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 1036 "f ligatures (i.e. fi, fl, ...) ('liga' doit +AOoA-tre activ+AOkA !)"
-OtfFeatName: 'ss06' 1033 "Bigger math operators." 2057 "Bigger math operators." 1036 "Op+AOkA-rateurs math+AOkA-matiques plus gros."
+OtfFeatName: 'ss06' 1036 "Op+AOkA-rateurs math+AOkA-matiques plus gros." 2057 "Bigger math operators." 1033 "Bigger math operators."
+OtfFeatName: 'ss05' 1036 "f ligatures (i.e. fi, fl, ...) ('liga' doit +AOoA-tre activ+AOkA !)" 2057 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 1033 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)"
+OtfFeatName: 'ss04' 1036 "Lettres minuscules a et g simplifi+AOkA-s." 2057 "Simplified small letters a and g." 1033 "Simplified small a and g."
+OtfFeatName: 'ss03' 1036 "Alternatif esperluette." 2057 "Alternative ampersand." 1033 "Alternative ampersand."
+OtfFeatName: 'ss02' 1036 "Chiffres 6 et 9 alternatifs." 2057 "Alternative digits 6 and 9." 1033 "Alternative digits 6 and 9."
+OtfFeatName: 'ss01' 1036 "Chiffres 1 et 4 alternatifs." 2057 "Alternative digits 1 and 4." 1033 "Alternative digits 1 and 4."
 Encoding: UnicodeBmp
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 8056 38 13
+WinInfo: 0 38 14
 BeginPrivate: 0
 EndPrivate
 Grid
+-2048 880.010864258 m 0
+ 4096 880.010864258 l 1024
 -2048 -561.99432373 m 0
  4096 -561.99432373 l 1024
   Named: "-562"
@@ -663,9 +665,9 @@ AnchorPoint: "top_center" 510 1400 basechar 0
 LayerCount: 3
 Fore
 SplineSet
-720 1305 m 1
- 694 1324 643 1340 600 1340 c 0
- 498 1340 439 1283 439 1181 c 2
+720 1305 m 5
+ 694 1324 643 1340 600 1340 c 4
+ 498 1340 439 1283 439 1181 c 6
  439 1040 l 1
  720 1040 l 1
  720 880 l 1
@@ -676,10 +678,10 @@ SplineSet
  50 880 l 1
  50 926 50 994 50 1040 c 1
  260 1040 l 1
- 260 1181 l 2
- 260 1382 399 1500 600 1500 c 0
- 656 1500 720 1486 765 1468 c 1
- 720 1305 l 1
+ 260 1181 l 6
+ 260 1382 399 1500 600 1500 c 4
+ 656 1500 720 1486 765 1468 c 5
+ 720 1305 l 5
 EndSplineSet
 Substitution2: "'ss05' Latin f ligatures lookups0-1" f.ss05
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" f.sc
@@ -696,17 +698,17 @@ AnchorPoint: "top_center" 488 1040 basechar 0
 LayerCount: 3
 Fore
 SplineSet
-744 849 m 1
- 701 883 649 900 578 900 c 0
- 398 900 320 791 320 572 c 2
+744 849 m 5
+ 701 883 649 900 578 900 c 4
+ 398 900 320 791 320 572 c 6
  320 0 l 1
  141 0 l 1
  141 1040 l 1
  308 1040 l 1
- 308 920 l 1
- 393 1005 493 1060 618 1060 c 0
- 686 1060 742 1050 792 1028 c 1
- 744 849 l 1
+ 308 920 l 5
+ 393 1005 493 1060 618 1060 c 4
+ 686 1060 742 1050 792 1028 c 5
+ 744 849 l 5
 EndSplineSet
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" r.sc
 Colour: ff00
@@ -1001,7 +1003,7 @@ SplineSet
  309 489 132 567 132 755 c 0
  132 942 302 1060 532 1060 c 0
  762 1060 862 957 924 788 c 1
- 771 700 l 1
+ 771 700 l 5
  735 799 690 900 532 900 c 0
  356 900 311 836 311 755 c 0
 EndSplineSet
@@ -1055,7 +1057,7 @@ EndChar
 
 StartChar: g
 Encoding: 103 103 24
-Width: 1082
+Width: 1085
 VWidth: 997
 Flags: HMW
 AnchorPoint: "bottom_center" 520 -361 basechar 0
@@ -1063,44 +1065,44 @@ AnchorPoint: "top_center" 520 1040 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-50 -150 m 4
- 50 51 260 80 520 80 c 4
- 520 0 l 4
- 272 0 230 -75 230 -150 c 4
- 50 -150 l 4
-603 968 m 5
- 676 1024 761 1060 861 1060 c 4
- 929 1060 986 1050 1036 1028 c 5
- 986 849 l 5
- 943 883 892 900 821 900 c 4
- 774 900 734 892 700 877 c 5
- 603 968 l 5
-520 160 m 4
- 520 0 l 4
- 280 0 141 70 141 230 c 4
- 141 390 360 414 520 414 c 4
- 520 301 l 4
- 362 301 320 270 320 230 c 4
- 320 190 362 160 520 160 c 4
-520 160 m 4
- 881 160 1036 30 1036 -150 c 4
- 1036 -330 881 -459 520 -459 c 4
- 159 -459 50 -310 50 -150 c 4
- 230 -150 l 4
- 230 -225 272 -301 520 -301 c 4
- 768 -301 855 -250 855 -150 c 4
- 855 -50 768 0 520 0 c 4
- 520 160 l 4
-320 679 m 4
- 320 559 400 459 520 459 c 4
- 640 459 720 559 720 679 c 4
- 720 799 640 900 520 900 c 4
- 400 900 320 799 320 679 c 4
-141 679 m 4
- 141 898 301 1060 520 1060 c 4
- 739 1060 900 898 900 679 c 4
- 900 460 739 301 520 301 c 4
- 301 301 141 460 141 679 c 4
+571 941 m 5
+ 656 1026 736 1081 861 1081 c 4
+ 929 1081 985 1071 1035 1049 c 5
+ 987 870 l 5
+ 944 904 892 921 821 921 c 4
+ 765 921 739 910 702 889 c 5
+ 571 941 l 5
+50 -165 m 0
+ 50 36 260 80 520 80 c 0
+ 520 15 l 0
+ 272 15 230 -90 230 -165 c 0
+ 50 -165 l 0
+520 160 m 0
+ 520 0 l 0
+ 280 0 141 80 141 210 c 0
+ 141 370 380 420 520 420 c 0
+ 520 300 l 0
+ 362 300 320 260 320 220 c 0
+ 320 180 412 160 520 160 c 0
+520 160 m 0
+ 841 160 1035 60 1035 -120 c 0
+ 1035 -300 881 -460 520 -460 c 0
+ 159 -460 50 -325 50 -165 c 0
+ 230 -165 l 0
+ 230 -240 272 -300 520 -300 c 0
+ 768 -300 855 -230 855 -130 c 0
+ 855 -50 718 0 520 0 c 0
+ 520 160 l 0
+320 680 m 0
+ 320 560 400 460 520 460 c 0
+ 640 460 720 560 720 680 c 0
+ 720 800 640 900 520 900 c 0
+ 400 900 320 800 320 680 c 0
+140 680 m 0
+ 140 899 301 1060 520 1060 c 0
+ 739 1060 900 899 900 680 c 0
+ 900 461 739 300 520 300 c 0
+ 301 300 140 461 140 680 c 0
 EndSplineSet
 Layer: 2
 SplineSet
@@ -6717,7 +6719,7 @@ EndChar
 
 StartChar: gcircumflex
 Encoding: 285 285 254
-Width: 1082
+Width: 1085
 Flags: HMW
 LayerCount: 4
 Fore
@@ -6741,7 +6743,7 @@ EndChar
 
 StartChar: gbreve
 Encoding: 287 287 256
-Width: 1082
+Width: 1085
 Flags: HMW
 LayerCount: 4
 Fore
@@ -6765,7 +6767,7 @@ EndChar
 
 StartChar: gdotaccent
 Encoding: 289 289 258
-Width: 1082
+Width: 1085
 Flags: HMW
 LayerCount: 4
 Fore
@@ -7592,7 +7594,7 @@ EndChar
 
 StartChar: gcommaaccent
 Encoding: 291 291 322
-Width: 1082
+Width: 1085
 VWidth: 997
 Flags: HMW
 LayerCount: 4
@@ -10953,49 +10955,49 @@ AnchorPoint: "bottom_center" 520 -361 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-50 -150 m 4
- 50 51 260 80 520 80 c 4
- 520 0 l 4
- 272 0 230 -75 230 -150 c 4
- 50 -150 l 4
-603 968 m 5
- 676 1024 761 1060 861 1060 c 4
- 929 1060 986 1050 1036 1028 c 5
- 986 849 l 5
- 943 883 892 900 821 900 c 4
- 774 900 734 892 700 877 c 5
- 603 968 l 5
-520 160 m 4
- 520 0 l 4
- 280 0 141 70 141 230 c 4
- 141 390 360 414 520 414 c 4
- 520 301 l 4
- 362 301 320 270 320 230 c 4
- 320 190 362 160 520 160 c 4
-520 160 m 4
- 881 160 1036 30 1036 -150 c 4
- 1036 -330 881 -459 520 -459 c 4
- 159 -459 50 -310 50 -150 c 4
- 230 -150 l 4
- 230 -225 272 -301 520 -301 c 4
- 768 -301 855 -250 855 -150 c 4
- 855 -50 768 0 520 0 c 4
- 520 160 l 4
-320 679 m 4
- 320 559 400 459 520 459 c 4
- 640 459 720 559 720 679 c 4
- 720 799 640 900 520 900 c 4
- 400 900 320 799 320 679 c 4
-141 679 m 4
- 141 898 301 1060 520 1060 c 4
- 739 1060 900 898 900 679 c 4
- 900 460 739 301 520 301 c 4
- 301 301 141 460 141 679 c 4
-575 -226 m 1
- 575 -180 575 -112 575 -66 c 1
- 1245 -66 l 1
- 1245 -226 l 1
- 575 -226 l 1
+571 941 m 1
+ 656 1026 736 1081 861 1081 c 0
+ 929 1081 985 1071 1035 1049 c 1
+ 987 870 l 1
+ 944 904 892 921 821 921 c 0
+ 765 921 739 910 702 889 c 1
+ 571 941 l 1
+50 -165 m 0
+ 50 36 260 80 520 80 c 0
+ 520 15 l 0
+ 272 15 230 -90 230 -165 c 0
+ 50 -165 l 0
+520 160 m 0
+ 520 0 l 0
+ 280 0 141 80 141 210 c 0
+ 141 370 380 420 520 420 c 0
+ 520 300 l 0
+ 362 300 320 260 320 220 c 0
+ 320 180 412 160 520 160 c 0
+520 160 m 0
+ 841 160 1035 60 1035 -120 c 0
+ 1035 -300 881 -460 520 -460 c 0
+ 159 -460 50 -325 50 -165 c 0
+ 230 -165 l 0
+ 230 -240 272 -300 520 -300 c 0
+ 768 -300 855 -230 855 -130 c 0
+ 855 -50 718 0 520 0 c 0
+ 520 160 l 0
+320 680 m 0
+ 320 560 400 460 520 460 c 0
+ 640 460 720 560 720 680 c 0
+ 720 800 640 900 520 900 c 0
+ 400 900 320 800 320 680 c 0
+140 680 m 0
+ 140 899 301 1060 520 1060 c 0
+ 739 1060 900 899 900 680 c 0
+ 900 461 739 300 520 300 c 0
+ 301 300 140 461 140 680 c 0
+573 -226 m 5
+ 573 -180 573 -112 573 -66 c 5
+ 1243 -66 l 5
+ 1243 -226 l 5
+ 573 -226 l 5
 EndSplineSet
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" uni01E5.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni01E5.ss04
@@ -11015,7 +11017,7 @@ EndChar
 
 StartChar: gcaron
 Encoding: 487 487 460
-Width: 1082
+Width: 1085
 Flags: HMW
 LayerCount: 4
 Fore
@@ -11201,7 +11203,7 @@ EndChar
 
 StartChar: uni01F5
 Encoding: 501 501 474
-Width: 1082
+Width: 1085
 Flags: HMW
 LayerCount: 4
 Fore
@@ -29135,7 +29137,7 @@ EndChar
 
 StartChar: uni1E21
 Encoding: 7713 7713 1132
-Width: 1082
+Width: 1085
 Flags: HMW
 LayerCount: 4
 Fore
