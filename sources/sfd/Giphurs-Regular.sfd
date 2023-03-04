@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1677952898
+ModificationTime: 1677958559
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -264,19 +264,19 @@ KernClass2: 8 17 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-1"
  131 y.sc yacute.sc uni0233.sc upsilondieresistonos.sc uni04AF.sc uni04B1.sc uni1E8F.sc uni1EF3.sc uni1EF5.sc uni1EF7.sc uni1EF9.sc y.pc
  0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -350 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -280 {} -280 {} -280 {} -210 {} -210 {} -210 {} -140 {} -350 {} -210 {} -280 {} -280 {} -210 {} -210 {} -210 {} -140 {} -210 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} 0 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {}
 LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "" "" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
-OtfFeatName: 'ss01' 1033 "Alternative digits 1 and 4." 2057 "Alternative digits 1 and 4." 1036 "Chiffres 1 et 4 alternatifs."
-OtfFeatName: 'ss02' 1033 "Alternative digits 6 and 9." 2057 "Alternative digits 6 and 9." 1036 "Chiffres 6 et 9 alternatifs."
-OtfFeatName: 'ss03' 1033 "Alternative ampersand." 2057 "Alternative ampersand." 1036 "Alternatif esperluette."
-OtfFeatName: 'ss04' 1033 "Simplified small a and g." 2057 "Simplified small letters a and g." 1036 "Lettres minuscules a et g simplifi+AOkA-s."
-OtfFeatName: 'ss05' 1033 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 2057 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 1036 "f ligatures (i.e. fi, fl, ...) ('liga' doit +AOoA-tre activ+AOkA !)"
-OtfFeatName: 'ss06' 1033 "Bigger math operators." 2057 "Bigger math operators." 1036 "Op+AOkA-rateurs math+AOkA-matiques plus gros."
+OtfFeatName: 'ss06' 1036 "Op+AOkA-rateurs math+AOkA-matiques plus gros." 2057 "Bigger math operators." 1033 "Bigger math operators."
+OtfFeatName: 'ss05' 1036 "f ligatures (i.e. fi, fl, ...) ('liga' doit +AOoA-tre activ+AOkA !)" 2057 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 1033 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)"
+OtfFeatName: 'ss04' 1036 "Lettres minuscules a et g simplifi+AOkA-s." 2057 "Simplified small letters a and g." 1033 "Simplified small a and g."
+OtfFeatName: 'ss03' 1036 "Alternatif esperluette." 2057 "Alternative ampersand." 1033 "Alternative ampersand."
+OtfFeatName: 'ss02' 1036 "Chiffres 6 et 9 alternatifs." 2057 "Alternative digits 6 and 9." 1033 "Alternative digits 6 and 9."
+OtfFeatName: 'ss01' 1036 "Chiffres 1 et 4 alternatifs." 2057 "Alternative digits 1 and 4." 1033 "Alternative digits 1 and 4."
 Encoding: UnicodeBmp
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 57760 38 14
+WinInfo: 57684 38 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -1067,51 +1067,51 @@ EndChar
 StartChar: g
 Encoding: 103 103 24
 Width: 1085
-VWidth: 1000
+VWidth: 997
 Flags: HMW
-AnchorPoint: "bottom_center" 520 -360 basechar 0
+AnchorPoint: "bottom_center" 520 -361 basechar 0
 AnchorPoint: "top_center" 520 1040 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-50 -150 m 4
- 50 50 260 80 520 80 c 4
- 520 0 l 4
- 272 0 230 -75 230 -150 c 4
- 50 -150 l 4
-604 968 m 5
- 677 1024 761 1060 861 1060 c 4
- 929 1060 984 1049 1035 1028 c 5
- 987 849 l 5
- 944 883 892 900 821 900 c 4
- 774 900 734 892 700 877 c 5
- 604 968 l 5
-520 160 m 4
- 520 0 l 4
- 280 0 140 70 140 230 c 4
- 140 390 360 415 520 415 c 4
- 520 300 l 4
- 362 300 320 270 320 230 c 4
- 320 190 362 160 520 160 c 4
-520 160 m 4
- 880 160 1035 30 1035 -150 c 4
- 1035 -330 880 -460 520 -460 c 4
- 160 -460 50 -310 50 -150 c 4
- 230 -150 l 4
- 230 -225 272 -300 520 -300 c 4
- 768 -300 855 -250 855 -150 c 4
- 855 -50 768 0 520 0 c 4
- 520 160 l 4
-320 680 m 4
- 320 560 400 460 520 460 c 4
- 640 460 720 560 720 680 c 4
- 720 800 640 900 520 900 c 4
- 400 900 320 800 320 680 c 4
-140 680 m 4
- 140 899 301 1060 520 1060 c 4
- 739 1060 900 899 900 680 c 4
- 900 461 739 300 520 300 c 4
- 301 300 140 461 140 680 c 4
+571 941 m 1
+ 656 1026 736 1081 861 1081 c 0
+ 929 1081 985 1071 1035 1049 c 1
+ 987 870 l 1
+ 944 904 892 921 821 921 c 0
+ 765 921 739 910 702 889 c 1
+ 571 941 l 1
+50 -165 m 0
+ 50 36 260 120 520 120 c 4
+ 520 30 l 4
+ 272 30 230 -90 230 -165 c 0
+ 50 -165 l 0
+520 160 m 0
+ 520 0 l 0
+ 280 0 141 80 141 210 c 0
+ 141 370 380 420 520 420 c 0
+ 520 300 l 0
+ 362 300 320 260 320 220 c 0
+ 320 180 412 160 520 160 c 0
+520 160 m 0
+ 841 160 1035 70 1035 -110 c 0
+ 1035 -290 881 -460 520 -460 c 0
+ 159 -460 50 -325 50 -165 c 0
+ 230 -165 l 0
+ 230 -240 272 -300 520 -300 c 0
+ 768 -300 855 -220 855 -120 c 0
+ 855 -40 718 0 520 0 c 0
+ 520 160 l 0
+320 680 m 0
+ 320 560 400 460 520 460 c 0
+ 640 460 720 560 720 680 c 0
+ 720 800 640 900 520 900 c 0
+ 400 900 320 800 320 680 c 0
+140 680 m 0
+ 140 899 301 1060 520 1060 c 0
+ 739 1060 900 899 900 680 c 0
+ 900 461 739 300 520 300 c 0
+ 301 300 140 461 140 680 c 0
 EndSplineSet
 Layer: 2
 SplineSet
@@ -1138,13 +1138,13 @@ SplineSet
 EndSplineSet
 Layer: 3
 SplineSet
-604.309570312 967.538085938 m 5
+604.309570312 967.537109375 m 5
  677.329101562 1023.9375 761.196289062 1060 861 1060 c 4
  929 1060 984 1049 1035 1028 c 5
  987 849 l 5
  944 883 892 900 821 900 c 4
- 773.765625 900 733.5546875 892.494140625 699.93359375 877.463867188 c 5
- 604.309570312 967.538085938 l 5
+ 773.765625 900 733.5546875 892.494140625 699.93359375 877.462890625 c 5
+ 604.309570312 967.537109375 l 5
 520 160 m 4
  520 0 l 4
  280 0 140 70 140 230 c 4
@@ -11144,44 +11144,44 @@ AnchorPoint: "bottom_center" 520 -360 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-50 -150 m 4
- 50 50 260 80 520 80 c 4
- 520 0 l 4
- 272 0 230 -75 230 -150 c 4
- 50 -150 l 4
-604 968 m 5
- 677 1024 761 1060 861 1060 c 4
- 929 1060 984 1049 1035 1028 c 5
- 987 849 l 5
- 944 883 892 900 821 900 c 4
- 774 900 734 892 700 877 c 5
- 604 968 l 5
-520 160 m 4
- 520 0 l 4
- 280 0 140 70 140 230 c 4
- 140 390 360 415 520 415 c 4
- 520 300 l 4
- 362 300 320 270 320 230 c 4
- 320 190 362 160 520 160 c 4
-520 160 m 4
- 880 160 1035 30 1035 -150 c 4
- 1035 -330 880 -460 520 -460 c 4
- 160 -460 50 -310 50 -150 c 4
- 230 -150 l 4
- 230 -225 272 -300 520 -300 c 4
- 768 -300 855 -250 855 -150 c 4
- 855 -50 768 0 520 0 c 4
- 520 160 l 4
-320 680 m 4
- 320 560 400 460 520 460 c 4
- 640 460 720 560 720 680 c 4
- 720 800 640 900 520 900 c 4
- 400 900 320 800 320 680 c 4
-140 680 m 4
- 140 899 301 1060 520 1060 c 4
- 739 1060 900 899 900 680 c 4
- 900 461 739 300 520 300 c 4
- 301 300 140 461 140 680 c 4
+571 941 m 1
+ 656 1026 736 1081 861 1081 c 0
+ 929 1081 985 1071 1035 1049 c 1
+ 987 870 l 1
+ 944 904 892 921 821 921 c 0
+ 765 921 739 910 702 889 c 1
+ 571 941 l 1
+50 -165 m 0
+ 50 36 260 120 520 120 c 0
+ 520 30 l 0
+ 272 30 230 -90 230 -165 c 0
+ 50 -165 l 0
+520 160 m 0
+ 520 0 l 0
+ 280 0 141 80 141 210 c 0
+ 141 370 380 420 520 420 c 0
+ 520 300 l 0
+ 362 300 320 260 320 220 c 0
+ 320 180 412 160 520 160 c 0
+520 160 m 0
+ 841 160 1035 70 1035 -110 c 0
+ 1035 -290 881 -460 520 -460 c 0
+ 159 -460 50 -325 50 -165 c 0
+ 230 -165 l 0
+ 230 -240 272 -300 520 -300 c 0
+ 768 -300 855 -220 855 -120 c 0
+ 855 -40 718 0 520 0 c 0
+ 520 160 l 0
+320 680 m 0
+ 320 560 400 460 520 460 c 0
+ 640 460 720 560 720 680 c 0
+ 720 800 640 900 520 900 c 0
+ 400 900 320 800 320 680 c 0
+140 680 m 0
+ 140 899 301 1060 520 1060 c 0
+ 739 1060 900 899 900 680 c 0
+ 900 461 739 300 520 300 c 0
+ 301 300 140 461 140 680 c 0
 575 -227 m 1
  575 -181 575 -113 575 -67 c 1
  1245 -67 l 1
