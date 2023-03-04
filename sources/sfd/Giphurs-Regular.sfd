@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1655845567
-ModificationTime: 1677938864
+ModificationTime: 1677939205
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -270,7 +270,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 8512 38 14
+WinInfo: 608 38 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -603,7 +603,7 @@ StartChar: e
 Encoding: 101 101 9
 Width: 1196
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_cedilla" 598 -20 basechar 0
 AnchorPoint: "bottom_right" 752 0 basechar 0
 AnchorPoint: "bottom_center" 598 0 basechar 0
@@ -638,7 +638,7 @@ StartChar: c
 Encoding: 99 99 10
 Width: 1142
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_cedilla" 598 -20 basechar 0
 AnchorPoint: "bottom_center" 598 0 basechar 0
 AnchorPoint: "top_center" 598 1040 basechar 0
@@ -16747,7 +16747,7 @@ EndChar
 StartChar: uni037E
 Encoding: 894 894 674
 Width: 568
-Flags: HW
+Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
@@ -16801,7 +16801,7 @@ StartChar: Alpha
 Encoding: 913 913 676
 Width: 1356
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_ypogegrammeni" 678 -90 basechar 0
 AnchorPoint: "top_left" 490 1480 basechar 0
 AnchorPoint: "bottom_center" 678 -0 basechar 0
@@ -16830,10 +16830,7 @@ EndChar
 StartChar: Epsilon
 Encoding: 917 917 677
 Width: 1208
-Flags: W
-HStem: 0 168<330 1068> 656 168<330 973> 1312 168<330 1068>
-VStem: 140 190<168 656 824 1312>
-CounterMasks: 1 e0
+Flags: MW
 AnchorPoint: "bottom_cedilla" 604 -20 basechar 0
 AnchorPoint: "top_left" 140 1480 basechar 0
 AnchorPoint: "bottom_right" 1068 0 basechar 0
@@ -16863,7 +16860,7 @@ StartChar: Zeta
 Encoding: 918 918 678
 Width: 1308
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_center" 696 0 basechar 0
 AnchorPoint: "top_center" 699 1400 basechar 0
 LayerCount: 4
@@ -16893,7 +16890,7 @@ EndChar
 StartChar: Eta
 Encoding: 919 919 679
 Width: 1398
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_ypogegrammeni" 699 -90 basechar 0
 AnchorPoint: "bottom_cedilla" 235 -20 basechar 0
 AnchorPoint: "top_left" 140 1480 basechar 0
@@ -16922,7 +16919,7 @@ EndChar
 StartChar: Iota
 Encoding: 921 921 680
 Width: 806
-Flags: HW
+Flags: MW
 AnchorPoint: "top_left" 140 1480 basechar 0
 AnchorPoint: "bottom_right" 498 0 basechar 0
 AnchorPoint: "bottom_center" 403 0 basechar 0
@@ -16950,7 +16947,7 @@ EndChar
 StartChar: Kappa
 Encoding: 922 922 681
 Width: 1356
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_center" 699 0 basechar 0
 AnchorPoint: "top_center" 699 1400 basechar 0
 LayerCount: 4
@@ -16978,7 +16975,7 @@ StartChar: Mu
 Encoding: 924 924 682
 Width: 1588
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_center" 794 0 basechar 0
 AnchorPoint: "top_center" 794 1400 basechar 0
 LayerCount: 4
@@ -17009,7 +17006,7 @@ EndChar
 StartChar: Nu
 Encoding: 925 925 683
 Width: 1398
-Flags: HW
+Flags: HMW
 AnchorPoint: "bottom_center" 699 0 basechar 0
 AnchorPoint: "bottom_right" 699 1400 basechar 0
 LayerCount: 4
@@ -17033,7 +17030,7 @@ EndChar
 StartChar: Omicron
 Encoding: 927 927 684
 Width: 1602
-Flags: HW
+Flags: MW
 AnchorPoint: "top_left_O2" 252 1224 basechar 0
 AnchorPoint: "top_left_O1" 634 1480 basechar 0
 AnchorPoint: "bottom_right" 968 0 basechar 0
@@ -17060,7 +17057,7 @@ EndChar
 StartChar: Rho
 Encoding: 929 929 685
 Width: 1188
-Flags: HW
+Flags: MW
 AnchorPoint: "top_left" 140 1480 basechar 0
 AnchorPoint: "bottom_center" 235 0 basechar 0
 AnchorPoint: "top_center" 598 1400 basechar 0
@@ -17088,7 +17085,7 @@ EndChar
 StartChar: Tau
 Encoding: 932 932 686
 Width: 1398
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_cedilla" 699 -20 basechar 0
 AnchorPoint: "bottom_center" 699 0 basechar 0
 AnchorPoint: "top_center" 699 1400 basechar 0
@@ -17112,7 +17109,7 @@ StartChar: Upsilon
 Encoding: 933 933 687
 Width: 1392
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "top_left" 100 1481 basechar 0
 AnchorPoint: "bottom_center" 696 0 basechar 0
 AnchorPoint: "top_center" 696 1400 basechar 0
@@ -17140,7 +17137,7 @@ StartChar: Chi
 Encoding: 935 935 688
 Width: 1392
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_center" 696 0 basechar 0
 AnchorPoint: "top_center" 696 1400 basechar 0
 LayerCount: 4
@@ -18320,7 +18317,7 @@ EndChar
 StartChar: psi
 Encoding: 968 968 734
 Width: 1338
-Flags: HW
+Flags: MW
 AnchorPoint: "top_center" 688 1400 basechar 0
 AnchorPoint: "bottom_center" 688 -360 basechar 0
 LayerCount: 4
@@ -20033,7 +20030,7 @@ StartChar: afii10017
 Encoding: 1040 1040 795
 Width: 1356
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_ypogegrammeni" 678 -90 basechar 0
 AnchorPoint: "top_left" 490 1480 basechar 0
 AnchorPoint: "bottom_center" 678 -0 basechar 0
@@ -20062,7 +20059,7 @@ EndChar
 StartChar: afii10020
 Encoding: 1043 1043 796
 Width: 1208
-Flags: HW
+Flags: MW
 AnchorPoint: "top_center" 604 1400 basechar 0
 AnchorPoint: "bottom_center" 604 0 basechar 0
 LayerCount: 4
@@ -20084,7 +20081,7 @@ EndChar
 StartChar: afii10022
 Encoding: 1045 1045 797
 Width: 1208
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_cedilla" 604 -20 basechar 0
 AnchorPoint: "top_left" 140 1480 basechar 0
 AnchorPoint: "bottom_right" 1068 0 basechar 0
@@ -20113,7 +20110,7 @@ EndChar
 StartChar: afii10028
 Encoding: 1050 1050 798
 Width: 1356
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_center" 699 0 basechar 0
 AnchorPoint: "top_center" 699 1400 basechar 0
 LayerCount: 4
@@ -20141,7 +20138,7 @@ StartChar: afii10030
 Encoding: 1052 1052 799
 Width: 1588
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_center" 794 0 basechar 0
 AnchorPoint: "top_center" 794 1400 basechar 0
 LayerCount: 4
@@ -20172,7 +20169,7 @@ EndChar
 StartChar: afii10031
 Encoding: 1053 1053 800
 Width: 1398
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_ypogegrammeni" 699 -90 basechar 0
 AnchorPoint: "bottom_cedilla" 235 -20 basechar 0
 AnchorPoint: "top_left" 140 1480 basechar 0
@@ -20201,7 +20198,7 @@ EndChar
 StartChar: afii10032
 Encoding: 1054 1054 801
 Width: 1602
-Flags: HW
+Flags: MW
 AnchorPoint: "top_left_O2" 252 1224 basechar 0
 AnchorPoint: "top_left_O1" 634 1480 basechar 0
 AnchorPoint: "bottom_right" 968 0 basechar 0
@@ -20228,7 +20225,7 @@ EndChar
 StartChar: afii10033
 Encoding: 1055 1055 802
 Width: 1398
-Flags: HW
+Flags: MW
 AnchorPoint: "top_center" 699 1400 basechar 0
 AnchorPoint: "bottom_center" 699 0 basechar 0
 LayerCount: 4
@@ -20250,7 +20247,7 @@ EndChar
 StartChar: afii10034
 Encoding: 1056 1056 803
 Width: 1188
-Flags: HW
+Flags: MW
 AnchorPoint: "top_left" 140 1480 basechar 0
 AnchorPoint: "bottom_center" 235 0 basechar 0
 AnchorPoint: "top_center" 598 1400 basechar 0
@@ -20278,7 +20275,7 @@ EndChar
 StartChar: afii10035
 Encoding: 1057 1057 804
 Width: 1514
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_cedilla" 801 -20 basechar 0
 AnchorPoint: "bottom_center" 801 0 basechar 0
 AnchorPoint: "top_center" 801 1400 basechar 0
@@ -20303,7 +20300,7 @@ EndChar
 StartChar: afii10036
 Encoding: 1058 1058 805
 Width: 1398
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_cedilla" 699 -20 basechar 0
 AnchorPoint: "bottom_center" 699 0 basechar 0
 AnchorPoint: "top_center" 699 1400 basechar 0
@@ -20326,7 +20323,7 @@ EndChar
 StartChar: afii10038
 Encoding: 1060 1060 806
 Width: 1216
-Flags: HW
+Flags: MW
 AnchorPoint: "top_center" 608 1400 basechar 0
 AnchorPoint: "bottom_center" 608 0 basechar 0
 LayerCount: 4
@@ -20363,7 +20360,7 @@ StartChar: afii10039
 Encoding: 1061 1061 807
 Width: 1392
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_center" 696 0 basechar 0
 AnchorPoint: "top_center" 696 1400 basechar 0
 LayerCount: 4
@@ -21251,7 +21248,7 @@ StartChar: afii10065
 Encoding: 1072 1072 842
 Width: 1140
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "top_right" 980 1040 basechar 0
 AnchorPoint: "bottom_right" 1033 0 basechar 0
 AnchorPoint: "bottom_center" 540 0 basechar 0
@@ -21295,7 +21292,7 @@ StartChar: afii10070
 Encoding: 1077 1077 843
 Width: 1196
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_cedilla" 598 -20 basechar 0
 AnchorPoint: "bottom_right" 752 0 basechar 0
 AnchorPoint: "bottom_center" 598 0 basechar 0
@@ -21329,7 +21326,7 @@ EndChar
 StartChar: afii10076
 Encoding: 1082 1082 844
 Width: 1094
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_center" 554 0 basechar 0
 AnchorPoint: "top_center" 554 1040 basechar 0
 LayerCount: 4
@@ -21405,7 +21402,7 @@ StartChar: afii10083
 Encoding: 1089 1089 847
 Width: 1142
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_cedilla" 598 -20 basechar 0
 AnchorPoint: "bottom_center" 598 0 basechar 0
 AnchorPoint: "top_center" 598 1040 basechar 0
@@ -21431,7 +21428,7 @@ EndChar
 StartChar: afii10087
 Encoding: 1093 1093 848
 Width: 1092
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_center" 546 0 basechar 0
 AnchorPoint: "top_center" 546 1040 basechar 0
 LayerCount: 4
@@ -22300,7 +22297,7 @@ StartChar: afii10102
 Encoding: 1109 1109 880
 Width: 1032
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_center" 532 0 basechar 0
 AnchorPoint: "top_center" 532 1040 basechar 0
 LayerCount: 4
@@ -22328,7 +22325,7 @@ EndChar
 StartChar: afii10103
 Encoding: 1110 1110 881
 Width: 500
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_right" 340 0 basechar 0
 AnchorPoint: "bottom_center" 250 -0 basechar 0
 AnchorPoint: "top_center" 250 1040 basechar 0
@@ -22363,7 +22360,7 @@ EndChar
 StartChar: afii10105
 Encoding: 1112 1112 883
 Width: 529
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_center" 219 -360 basechar 0
 AnchorPoint: "top_center" 279 1040 basechar 0
 LayerCount: 4
@@ -23188,7 +23185,7 @@ EndChar
 StartChar: uni0470
 Encoding: 1136 1136 904
 Width: 1398
-Flags: HW
+Flags: MW
 AnchorPoint: "top_center" 699 1400 basechar 0
 AnchorPoint: "bottom_center" 699 0 basechar 0
 LayerCount: 4
@@ -23217,7 +23214,7 @@ EndChar
 StartChar: uni0471
 Encoding: 1137 1137 905
 Width: 1338
-Flags: HW
+Flags: MW
 AnchorPoint: "top_center" 688 1400 basechar 0
 AnchorPoint: "bottom_center" 688 -360 basechar 0
 LayerCount: 4
@@ -24410,7 +24407,7 @@ StartChar: uni04AE
 Encoding: 1198 1198 933
 Width: 1392
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "top_left" 100 1481 basechar 0
 AnchorPoint: "bottom_center" 696 0 basechar 0
 AnchorPoint: "top_center" 696 1400 basechar 0
@@ -31521,27 +31518,27 @@ EndChar
 StartChar: hookabovecomb
 Encoding: 777 777 1288
 Width: 0
-VWidth: 1000
+VWidth: 997
 Flags: HMW
-AnchorPoint: "circumflex_right" 598 1000 mark 0
-AnchorPoint: "top_center" 598 1040 mark 0
+AnchorPoint: "circumflex_right" 663 1000 mark 0
+AnchorPoint: "top_center" 663 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-535 1328 m 1
- 662 1328 l 1
- 662 1150 l 1
- 535 1150 l 1
- 535 1328 l 1
-598 1211 m 0
- 598 1328 l 0
- 643 1328 674 1359 674 1404 c 0
- 674 1449 635 1480 535 1480 c 0
- 524 1480 445 1480 445 1480 c 1
- 445 1597 l 1
- 445 1597 525 1597 535 1597 c 0
- 735 1597 801 1514 801 1404 c 0
- 801 1294 708 1211 598 1211 c 0
+599 1314 m 5
+ 727 1314 l 5
+ 727 1157 l 5
+ 599 1157 l 5
+ 599 1314 l 5
+534 1405 m 5
+ 500 1523 l 5
+ 500 1523 555 1557 639 1557 c 4
+ 763 1557 856 1486 856 1376 c 4
+ 856 1266 773 1197 663 1197 c 4
+ 663 1314 l 4
+ 708 1314 729 1346 729 1376 c 4
+ 729 1406 709 1436 649 1436 c 4
+ 579 1436 534 1405 534 1405 c 5
 EndSplineSet
 Colour: ffbf00
 EndChar
@@ -79847,7 +79844,7 @@ StartChar: uni1FEF
 Encoding: 8175 8175 3179
 Width: 544
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "top_left_O2" 564 1224 mark 0
 AnchorPoint: "top_left" 577 1480 mark 0
 LayerCount: 4
@@ -80796,19 +80793,19 @@ EndChar
 StartChar: uni0357
 Encoding: 855 855 3219
 Width: 0
-VWidth: 1000
+VWidth: 997
 Flags: HMW
 AnchorPoint: "top_center" 598 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-598 1265 m 0
- 652 1265 694 1307 694 1361 c 0
- 694 1415 652 1457 598 1457 c 0
- 598 1574 l 0
- 720 1574 821 1475 821 1361 c 0
- 821 1247 720 1148 598 1148 c 0
- 598 1265 l 0
+598 1247 m 0
+ 644 1247 678 1281 678 1327 c 0
+ 678 1373 644 1407 598 1407 c 0
+ 598 1524 l 0
+ 708 1524 806 1437 806 1327 c 0
+ 806 1217 708 1130 598 1130 c 0
+ 598 1247 l 0
 EndSplineSet
 Colour: ffbf00
 EndChar
@@ -80817,18 +80814,16 @@ StartChar: uni04D5.ss04
 Encoding: 57487 57487 3220
 Width: 1982
 VWidth: 1000
-Flags: W
-HStem: -20 160<429.332 727.586 1229.65 1563.75> 0 21G<892 1064> 440 160<960 1696 1702 1766> 900 160<429.332 729.31 1229.65 1538.35> 1020 20G<864 1044>
-VStem: 100 180<305.138 734.862> 864 180<920 1040> 886 180<254 786> 960 84<440 600> 1702 64<492 600>
+Flags: MW
 AnchorPoint: "top_center" 954 1040 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-960 600 m 1x24c0
+960 600 m 1
  1766 600 l 1
  1766 440 l 1
  960 440 l 1
- 960 600 l 1x24c0
+ 960 600 l 1
 1696 340 m 1
  1849 252 l 1
  1766 74 1583 -20 1384 -20 c 0
@@ -80840,24 +80835,24 @@ SplineSet
  1700 466 1702 492 1702 520 c 0
  1702 740 1575 900 1384 900 c 0
  1193 900 1066 740 1066 520 c 0
- 1066 300 1193 140 1384 140 c 0xb540
+ 1066 300 1193 140 1384 140 c 0
  1525 140 1647 207 1696 340 c 1
 876 520 m 0
  876 750 758 900 578 900 c 0
  398 900 280 750 280 520 c 0
  280 290 398 140 578 140 c 0
  758 140 876 290 876 520 c 0
-1044 168 m 1x2cc0
+1044 168 m 1
  1044 66 1064 0 1064 0 c 1
- 892 0 l 1x6cc0
+ 892 0 l 1
  892 0 876 60 876 120 c 1
  791 35 703 -20 578 -20 c 0
  297 -20 100 208 100 520 c 0
- 100 832 297 1060 578 1060 c 0xb4c0
+ 100 832 297 1060 578 1060 c 0
  703 1060 779 1005 864 920 c 1
  864 1040 l 1
- 1044 1040 l 1x2e40
- 1044 168 l 1x2cc0
+ 1044 1040 l 1
+ 1044 168 l 1
 EndSplineSet
 Colour: ff00
 EndChar
@@ -80900,7 +80895,7 @@ StartChar: omicron
 Encoding: 959 959 3222
 Width: 1196
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_right" 738 0 basechar 0
 AnchorPoint: "top_right" 1048 1040 basechar 0
 AnchorPoint: "bottom_center" 598 0 basechar 0
@@ -80927,7 +80922,7 @@ StartChar: afii10082
 Encoding: 1088 1088 3223
 Width: 1184
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_center" 230 -360 basechar 0
 AnchorPoint: "top_center" 606 1040 basechar 0
 LayerCount: 4
@@ -80957,7 +80952,7 @@ EndChar
 StartChar: Beta
 Encoding: 914 914 3224
 Width: 1323
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_center" 600 -0 basechar 0
 AnchorPoint: "top_center" 600 1400 basechar 0
 LayerCount: 4
@@ -80994,7 +80989,7 @@ StartChar: afii10085
 Encoding: 1091 1091 3225
 Width: 1077
 VWidth: 1000
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_center" 294 -360 basechar 0
 AnchorPoint: "top_center" 530 1040 basechar 0
 LayerCount: 4
@@ -81021,7 +81016,7 @@ EndChar
 StartChar: afii10019
 Encoding: 1042 1042 3226
 Width: 1323
-Flags: HW
+Flags: MW
 AnchorPoint: "bottom_center" 600 -0 basechar 0
 AnchorPoint: "top_center" 600 1400 basechar 0
 LayerCount: 4
