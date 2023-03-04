@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1677961707
+ModificationTime: 1677962627
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -43,6 +43,8 @@ HheadAscent: 2218
 HheadAOffset: 0
 HheadDescent: -578
 HheadDOffset: 0
+OS2CapHeight: 1480
+OS2XHeight: 1040
 OS2Vendor: 'PfEd'
 Lookup: 1 0 0 "'c2sc' Capitales vers petites capitales dans Latin lookup 0" { "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0"  } ['c2sc' ('latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'smcp' Bas-de-casse vers petites capitales lookups0" { "'smcp' Bas-de-casse vers petites capitales lookups0-1"  } ['smcp' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
@@ -277,7 +279,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 7638 38 13
+WinInfo: 760 38 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -729,7 +731,7 @@ Encoding: 116 116 13
 Width: 815
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "bottom_cedilla" 540 -20 basechar 0
+AnchorPoint: "bottom_cedilla" 533 -20 basechar 0
 AnchorPoint: "bottom_center" 480 0 basechar 0
 AnchorPoint: "top_center" 350 1380 basechar 0
 LayerCount: 3
@@ -1897,7 +1899,7 @@ SplineSet
  1718 1480 l 1
  1914 1480 l 1
  1502 0 l 1
- 1306 2 l 1
+ 1306 0 l 5
  992 1150 l 1
  678 0 l 1
  482 0 l 1
@@ -7339,7 +7341,7 @@ Width: 815
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 90 807 N 1 0 0 1 -102 0 2
+Refer: 90 807 N 1 0 0 1 -109 0 2
 Refer: 13 116 N 1 0 0 1 0 0 3
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" tcommaaccent.sc
 Colour: ff
@@ -21326,31 +21328,31 @@ EndChar
 
 StartChar: afii10078
 Encoding: 1084 1084 855
-Width: 1115
+Width: 1292
 Flags: HMW
-AnchorPoint: "bottom_center" 558 0 mark 0
-AnchorPoint: "top_center" 558 1040 basechar 0
+AnchorPoint: "bottom_center" 646 0 basechar 0
+AnchorPoint: "top_center" 646 1040 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-554 368 m 1
- 232 1040 l 1
- 127 877 l 1
- 502 112 l 1
- 606 112 l 1
- 984 877 l 1
- 884 1040 l 1
- 554 368 l 1
-1064 1040 m 1
- 884 1040 l 1
- 884 -0 l 1
- 1064 0 l 1
- 1064 1040 l 1
-52 1040 m 1
- 52 0 l 1
- 232 -0 l 1
- 232 1040 l 1
- 52 1040 l 1
+642 368 m 1
+ 320 1040 l 1
+ 215 877 l 1
+ 590 112 l 1
+ 694 112 l 1
+ 1072 877 l 1
+ 972 1040 l 1
+ 642 368 l 1
+1152 1040 m 1
+ 972 1040 l 1
+ 972 0 l 1
+ 1152 0 l 1
+ 1152 1040 l 1
+140 1040 m 1
+ 140 0 l 1
+ 320 0 l 1
+ 320 1040 l 1
+ 140 1040 l 1
 EndSplineSet
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" afii10078.sc
 Colour: ff00
