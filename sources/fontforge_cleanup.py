@@ -29,6 +29,7 @@ else:
     font.round()
     font.removeOverlap()
     font.correctDirection()
+    font.simplify()
 
     # save
     font.save(sfd_dest)
