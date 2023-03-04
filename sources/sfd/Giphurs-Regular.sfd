@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1677952009
+ModificationTime: 1677952754
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -276,7 +276,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 8550 19 13
+WinInfo: 57760 38 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -32630,10 +32630,8 @@ SplineSet
  375 901 l 1
  567 1390 l 1
  704 1390 l 1
- 451 754 l 1
  383 595 l 1
 EndSplineSet
-Validated: 1
 Colour: ff8000
 EndChar
 
@@ -41764,16 +41762,18 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-1059 931 m 1
+1109 1111 m 1
  1109 1111 l 1
- 396 920 l 1
+ 508 950 l 1
  348 740 l 1
- 1059 931 l 1
-1085 1026 m 1
+ 348 740 l 1
+ 968 907 l 1
+ 1109 1111 l 1
+1109 1111 m 1
  911 999 l 1
  678 127 l 1
  832 85 l 1
- 1085 1026 l 1
+ 1109 1111 l 1
 551 1500 m 1
  348 740 l 1
  557 904 l 1
@@ -41788,7 +41788,6 @@ SplineSet
  687 23 l 1
  772 0 l 1
 EndSplineSet
-Validated: 5
 Colour: ff00
 EndChar
 
@@ -41922,7 +41921,7 @@ SplineSet
 1028 1313 m 1
  1028 1153 l 1
  60 1153 l 1
- 60 1313 l 1
+ 60 1313 l 5
  1028 1313 l 1
 1064 187 m 1
  656 595 l 1
@@ -59351,7 +59350,7 @@ SplineSet
  1280 1500 1620 1160 1620 740 c 0
  1620 320 1280 -20 860 -20 c 0
  440 -20 100 320 100 740 c 0
-881 384 m 1
+881 384 m 5
  850 294 773 242 665 242 c 0
  627 242 583 252 552 266 c 1
  580 383 l 1
@@ -59362,11 +59361,9 @@ SplineSet
  679 1179 l 1
  873 690 l 1
  1065 1179 l 1
- 1202 1179 l 1
- 949 543 l 1
- 881 384 l 1
+ 1202 1179 l 5
+ 881 384 l 5
 EndSplineSet
-Validated: 1
 Colour: ff8000
 EndChar
 
@@ -61390,7 +61387,7 @@ SplineSet
  243 127 476 -13 547 -39 c 1
  495 -159 l 1
  395 -125 100 90 100 465 c 0
-981 -145 m 1
+981 -145 m 5
  950 -235 873 -287 765 -287 c 0
  727 -287 683 -277 652 -263 c 1
  680 -146 l 1
@@ -61401,11 +61398,9 @@ SplineSet
  779 650 l 1
  973 161 l 1
  1165 650 l 1
- 1302 650 l 1
- 1049 14 l 1
- 981 -145 l 1
+ 1302 650 l 5
+ 981 -145 l 5
 EndSplineSet
-Validated: 9
 Colour: ff8000
 EndChar
 
@@ -70159,25 +70154,24 @@ EndChar
 
 StartChar: uni0479.sc
 Encoding: 57822 57822 2677
-Width: 1821
+Width: 1871
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-1385 -217 m 1
- 1346 -324 1248 -385 1112 -385 c 0
- 1064 -385 1009 -371 970 -354 c 1
- 1007 -207 l 1
- 1028 -221 1069 -232 1104 -232 c 0
- 1166 -232 1209 -213 1226 -177 c 1
+1405 -217 m 1
+ 1366 -324 1258 -385 1122 -385 c 0
+ 1074 -385 1019 -371 980 -354 c 1
+ 1017 -207 l 1
+ 1038 -221 1079 -232 1114 -232 c 0
+ 1176 -232 1219 -213 1236 -177 c 1
  1285 -10 l 1
  1000 837 l 1
  1180 837 l 1
  1386 222 l 1
  1593 837 l 1
- 1751 837 l 1
- 1466 -10 l 1
- 1385 -217 l 1
+ 1771 837 l 1
+ 1405 -217 l 1
 271 600 m 0
  271 284 374 125 529 125 c 0
  684 125 787 284 787 600 c 0
@@ -70189,7 +70183,6 @@ SplineSet
  958 187 771 -29 529 -29 c 0
  287 -29 100 187 100 600 c 0
 EndSplineSet
-Validated: 1
 Colour: ff00
 EndChar
 
