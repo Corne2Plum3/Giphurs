@@ -10,6 +10,10 @@ Made with [Fontforge](https://fontforge.org/en-US/).
 
 This project **isn't complete and is under developpement**. Things may change at any time.
 
+## IMPORTANT
+
+**It was noticied that the commit c50a237fcde203bd1440b440425430d53fca83f3 was a breaking change, ruining the geometry of the font and making inconsistency. I'm working on that to have a sane source file of the font, starting from the sfd file before this commit, then apply what has been done and also the features I was working on.**
+
 The end goal is to upload this font on [Google Fonts](https://fonts.google.com/).
 
 I'm aware that there's already some issues, for example the font version being invalid for Google Fonts, but while I don't have a finished version, the version will be still under 1.0, it's intended.
