@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1681222633
+ModificationTime: 1681243521
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -46,6 +46,7 @@ HheadDOffset: 0
 OS2CapHeight: 1480
 OS2XHeight: 1040
 OS2Vendor: 'PfEd'
+Lookup: 4 0 1 "'liga' Standard Ligatures lookup0" { "'liga' Soft Dotted i j"  "'liga' Arrows"  "'liga' Standard Ligatures for ss05"  } ['liga' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'pcap' Bas-de-casse vers tr+AOgA-s petites capitales dans Latin lookup 0" { "sous-table 'pcap' Bas-de-casse vers tr+AOgA-s petites capitales dans Latin lookup 0"  } ['pcap' ('latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'c2pc' Capitales vers tr+AOgA-s petites capitales dans Latin lookup 0" { "sous-table 'c2pc' Capitales vers tr+AOgA-s petites capitales dans Latin lookup 0"  } ['c2pc' ('latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'c2sc' Capitales vers petites capitales dans Latin lookup 0" { "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0"  } ['c2sc' ('latn' <'dflt' > ) ]
@@ -67,7 +68,6 @@ Lookup: 1 0 0 "'pnum' Proportional Numbers lookups0" { "'pnum' Proportional Numb
 Lookup: 1 0 0 "'zero' Slashed Zero lookups0" { "'zero' Slashed Zero lookups0-1"  } ['zero' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'subs' Indice lookups0" { "sous-table 'subs' Indice lookups0" ("inferior") } ['subs' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
 Lookup: 1 0 0 "'sups' Exposant lookups0" { "sous-table 'sups' Exposant lookups0" ("superior") } ['sups' ('latn' <'dflt' > 'DFLT' <'dflt' > ) ]
-Lookup: 4 0 1 "'liga' Standard Ligatures lookup0" { "'liga' Arrows"  "'liga' Standard Ligatures for ss05"  } ['liga' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 258 0 0 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0" { "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-1" [307,30,0] "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-2" [307,30,0] "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-3" [307,0,2] "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-4" [307,0,2] "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-5" [307,0,0] "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-6" [307,0,2] "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-7" [307,30,0] "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-8" [307,30,0] "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-9" [307,0,4] } ['kern' ('copt' <'dflt' > 'grek' <'dflt' > 'cyrl' <'dflt' > 'DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 260 0 0 "'mark' Positionnement de signe lookups1" { "'mark' Positionnement de signe lookups1-1"  } ['mark' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
 MarkAttachClasses: 1
@@ -269,19 +269,19 @@ KernClass2: 8 17 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-1"
  131 y.sc yacute.sc uni0233.sc upsilondieresistonos.sc uni04AF.sc uni04B1.sc uni1E8F.sc uni1EF3.sc uni1EF5.sc uni1EF7.sc uni1EF9.sc y.pc
  0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -350 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -280 {} -280 {} -280 {} -210 {} -210 {} -210 {} -140 {} -350 {} -210 {} -280 {} -280 {} -210 {} -210 {} -210 {} -140 {} -210 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} 0 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {}
 LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "" "" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
-OtfFeatName: 'ss06' 1036 "Op+AOkA-rateurs math+AOkA-matiques plus gros." 2057 "Bigger math operators." 1033 "Bigger math operators."
-OtfFeatName: 'ss05' 1036 "f ligatures (i.e. fi, fl, ...) ('liga' doit +AOoA-tre activ+AOkA !)" 2057 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 1033 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)"
-OtfFeatName: 'ss04' 1036 "Lettres minuscules a et g simplifi+AOkA-s." 2057 "Simplified small letters a and g." 1033 "Simplified small a and g."
-OtfFeatName: 'ss03' 1036 "Alternatif esperluette." 2057 "Alternative ampersand." 1033 "Alternative ampersand."
-OtfFeatName: 'ss02' 1036 "Chiffres 6 et 9 alternatifs." 2057 "Alternative digits 6 and 9." 1033 "Alternative digits 6 and 9."
-OtfFeatName: 'ss01' 1036 "Chiffres 1 et 4 alternatifs." 2057 "Alternative digits 1 and 4." 1033 "Alternative digits 1 and 4."
+OtfFeatName: 'ss01' 1033 "Alternative digits 1 and 4." 2057 "Alternative digits 1 and 4." 1036 "Chiffres 1 et 4 alternatifs."
+OtfFeatName: 'ss02' 1033 "Alternative digits 6 and 9." 2057 "Alternative digits 6 and 9." 1036 "Chiffres 6 et 9 alternatifs."
+OtfFeatName: 'ss03' 1033 "Alternative ampersand." 2057 "Alternative ampersand." 1036 "Alternatif esperluette."
+OtfFeatName: 'ss04' 1033 "Simplified small a and g." 2057 "Simplified small letters a and g." 1036 "Lettres minuscules a et g simplifi+AOkA-s."
+OtfFeatName: 'ss05' 1033 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 2057 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 1036 "f ligatures (i.e. fi, fl, ...) ('liga' doit +AOoA-tre activ+AOkA !)"
+OtfFeatName: 'ss06' 1033 "Bigger math operators." 2057 "Bigger math operators." 1036 "Op+AOkA-rateurs math+AOkA-matiques plus gros."
 Encoding: UnicodeBmp
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 38 14
+WinInfo: 57798 38 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -329,7 +329,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 307200 153600 102400 532480 -1048576 102400 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "bottom_ypogegrammeni" "'mark' Positionnement de signe lookups1-1" "top_left_O2" "'mark' Positionnement de signe lookups1-1" "top_left_O1" "'mark' Positionnement de signe lookups1-1" "circumflex_right" "'mark' Positionnement de signe lookups1-1" "circumflex_left" "'mark' Positionnement de signe lookups1-1" "bottom_cedilla" "'mark' Positionnement de signe lookups1-1" "top_left" "'mark' Positionnement de signe lookups1-1" "dieresis_center" "'mark' Positionnement de signe lookups1-1" "stack_u0303"""  "top_right" "'mark' Positionnement de signe lookups1-1" "bottom_right" "'mark' Positionnement de signe lookups1-1" "bottom_center" "'mark' Positionnement de signe lookups1-1" "top_center" "'mark' Positionnement de signe lookups1-1" "Top"""  "min_top_1"""  "aaaa""" 
-BeginChars: 65587 3228
+BeginChars: 65587 3268
 
 StartChar: o
 Encoding: 111 111 0
@@ -884,61 +884,37 @@ EndChar
 
 StartChar: i
 Encoding: 105 105 18
-Width: 500
+Width: 460
 Flags: HMW
-AnchorPoint: "bottom_right" 340 0 basechar 0
-AnchorPoint: "bottom_center" 250 -0 basechar 0
-AnchorPoint: "top_center" 250 1040 basechar 0
+AnchorPoint: "bottom_right" 320 0 basechar 0
+AnchorPoint: "bottom_center" 230 0 basechar 0
+AnchorPoint: "top_center" 230 1040 basechar 0
 LayerCount: 3
 Fore
-SplineSet
-122 1372 m 0
- 122 1444 178 1500 250 1500 c 0
- 322 1500 378 1444 378 1372 c 0
- 378 1300 322 1244 250 1244 c 0
- 178 1244 122 1300 122 1372 c 0
-160 0 m 5
- 160 1040 l 1
- 340 1040 l 1
- 340 0 l 5
- 160 0 l 5
-EndSplineSet
+Refer: 230 775 N 1 0 0 1 -412 0 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+LCarets2: 1 0
+Ligature2: "'liga' Soft Dotted i j" i uni0307
 Substitution2: "'ss05' Latin f ligatures lookups0-1" i.ss05
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" i.sc
-Colour: ff00
+Colour: ff
 EndChar
 
 StartChar: j
 Encoding: 106 106 19
-Width: 529
+Width: 509
 Flags: HMW
 AnchorPoint: "bottom_center" 219 -360 basechar 0
 AnchorPoint: "top_center" 279 1040 basechar 0
 LayerCount: 3
 Fore
-SplineSet
-151 1372 m 0
- 151 1444 207 1500 279 1500 c 0
- 351 1500 407 1444 407 1372 c 0
- 407 1300 351 1244 279 1244 c 0
- 207 1244 151 1300 151 1372 c 0
-47 -284 m 1
- 59 -291 83 -300 99 -300 c 0
- 159 -300 189 -270 189 -210 c 2
- 189 0 l 1
- 189 138 l 1
- 189 1040 l 1
- 369 1040 l 1
- 369 138 l 1
- 369 0 l 1
- 369 -210 l 2
- 369 -380 269 -460 99 -460 c 4
- 67 -460 27 -449 5 -436 c 1
- 47 -284 l 1
-EndSplineSet
+Refer: 230 775 N 1 0 0 1 -363 0 2
+Refer: 318 567 N 1 0 0 1 0 0 3
+LCarets2: 1 0
+Ligature2: "'liga' Soft Dotted i j" j uni0307
 Substitution2: "'ss05' Latin f ligatures lookups0-1" j.ss05
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" j.sc
-Colour: ff00
+Colour: ff
 EndChar
 
 StartChar: l
@@ -3094,7 +3070,7 @@ Width: 1514
 Flags: HM
 LayerCount: 4
 Fore
-Refer: 90 807 N 1 0 0 1 159 0 2
+Refer: 90 807 S 1 0 0 1 159 0 2
 Refer: 41 67 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -3442,6 +3418,8 @@ LayerCount: 4
 Fore
 Refer: 83 768 N 1 0 0 1 -422 -42 2
 Refer: 141 305 N 1 0 0 1 0 0 3
+LCarets2: 1 0
+Ligature2: "'liga' Soft Dotted i j" i gravecomb
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" igrave.sc
 Colour: ff
 EndChar
@@ -3454,6 +3432,8 @@ LayerCount: 4
 Fore
 Refer: 84 769 N 1 0 0 1 -402 -42 2
 Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" afii10103 acutecomb
+Ligature2: "'liga' Soft Dotted i j" i acutecomb
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" iacute.sc
 Colour: ff
 EndChar
@@ -3466,6 +3446,7 @@ LayerCount: 4
 Fore
 Refer: 85 770 N 1 0 0 1 -412 -42 2
 Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" i uni0302
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" icircumflex.sc
 Colour: ff
 EndChar
@@ -3476,8 +3457,10 @@ Width: 460
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 -411 -42 2
+Refer: 87 776 S 1 0 0 1 -411 -42 2
 Refer: 141 305 N 1 0 0 1 0 0 3
+LCarets2: 1 0
+Ligature2: "'liga' Soft Dotted i j" i uni0308
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" idieresis.sc
 Colour: ff
 EndChar
@@ -3634,6 +3617,9 @@ StartChar: dotlessi
 Encoding: 305 305 141
 Width: 460
 Flags: HMW
+AnchorPoint: "top_center" 230 1040 basechar 0
+AnchorPoint: "bottom_center" 230 0 basechar 0
+AnchorPoint: "bottom_right" 320 0 basechar 0
 LayerCount: 4
 Fore
 SplineSet
@@ -3643,7 +3629,6 @@ SplineSet
  320 0 l 1
  140 0 l 1
 EndSplineSet
-Validated: 1
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" dotlessi.sc
 Colour: ff00
 EndChar
@@ -6940,6 +6925,7 @@ LayerCount: 4
 Fore
 Refer: 86 771 N 1 0 0 1 -408 -32 2
 Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" i tildecomb
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" itilde.sc
 Colour: ff
 EndChar
@@ -6963,6 +6949,7 @@ LayerCount: 4
 Fore
 Refer: 222 772 N 1 0 0 1 -412 -42 2
 Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" i uni0304
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" imacron.sc
 Colour: ff
 EndChar
@@ -6986,6 +6973,7 @@ LayerCount: 4
 Fore
 Refer: 225 774 N 1 0 0 1 -412 -32 2
 Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" i uni0306
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" ibreve.sc
 Colour: ff
 EndChar
@@ -7003,12 +6991,14 @@ EndChar
 
 StartChar: iogonek
 Encoding: 303 303 268
-Width: 500
+Width: 460
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 227 808 N 1 0 0 1 -302 0 2
+Refer: 227 808 S 1 0 0 1 -322 0 2
 Refer: 18 105 N 1 0 0 1 0 0 3
+LCarets2: 1 0
+Ligature2: "'liga' Soft Dotted i j" iogonek gravecomb
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" iogonek.sc
 Colour: ff
 EndChar
@@ -7043,6 +7033,7 @@ LayerCount: 4
 Fore
 Refer: 85 770 N 1 0 0 1 -363 -42 2
 Refer: 318 567 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" j uni0302
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" jcircumflex.sc
 Colour: ff
 EndChar
@@ -7584,6 +7575,8 @@ StartChar: uni0237
 Encoding: 567 567 318
 Width: 509
 Flags: HMW
+AnchorPoint: "top_center" 279 1040 basechar 0
+AnchorPoint: "bottom_center" 219 -360 basechar 0
 LayerCount: 4
 Fore
 SplineSet
@@ -7601,7 +7594,6 @@ SplineSet
  67 -460 27 -449 5 -436 c 1
  47 -284 l 1
 EndSplineSet
-Validated: 1
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" uni0237.sc
 Colour: ff00
 EndChar
@@ -10857,6 +10849,7 @@ LayerCount: 4
 Fore
 Refer: 231 780 N 1 0 0 1 -412 -42 2
 Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" i uni030C
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" uni01D0.sc
 Colour: ff
 EndChar
@@ -11816,6 +11809,7 @@ LayerCount: 4
 Fore
 Refer: 499 783 N 1 0 0 1 -462 -42 2
 Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" i uni030F
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" uni0209.sc
 Colour: ff
 EndChar
@@ -11975,6 +11969,7 @@ LayerCount: 4
 Fore
 Refer: 512 785 N 1 0 0 1 -412 -42 2
 Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" i uni0311
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" uni020B.sc
 Colour: ff
 EndChar
@@ -13120,6 +13115,7 @@ SplineSet
  103 -284 l 1
 EndSplineSet
 Validated: 5
+Ligature2: "'liga' Soft Dotted i j" j uni0307
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" uni0249.sc
 Colour: ff00
 EndChar
@@ -14103,6 +14099,7 @@ StartChar: uni0268
 Encoding: 616 616 591
 Width: 670
 Flags: HMW
+AnchorPoint: "bottom_right" 425 0 basechar 0
 LayerCount: 4
 Fore
 SplineSet
@@ -14118,11 +14115,10 @@ SplineSet
  263 1244 207 1300 207 1372 c 0
 245 0 m 1
  245 1040 l 1
- 425 1040 l 1
- 425 0 l 1
+ 425 1040 l 5
+ 425 0 l 5
  245 0 l 1
 EndSplineSet
-Validated: 5
 Colour: ff00
 EndChar
 
@@ -22008,7 +22004,7 @@ EndChar
 
 StartChar: afii10103
 Encoding: 1110 1110 881
-Width: 500
+Width: 460
 Flags: HMW
 AnchorPoint: "bottom_right" 340 0 basechar 0
 AnchorPoint: "bottom_center" 250 -0 basechar 0
@@ -22027,12 +22023,13 @@ LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 -411 -42 2
 Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" afii10103 uni0307
 Colour: ff
 EndChar
 
 StartChar: afii10105
 Encoding: 1112 1112 883
-Width: 529
+Width: 509
 Flags: HMW
 AnchorPoint: "bottom_center" 219 -360 basechar 0
 AnchorPoint: "top_center" 279 1040 basechar 0
@@ -28564,15 +28561,15 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-209 1227 m 1
- 70 1264 l 1
- 86 1400 176 1490 284 1490 c 0
- 416 1490 450 1354 530 1354 c 0
- 578 1354 600 1417 605 1477 c 1
- 744 1440 l 1
- 728 1304 638 1214 530 1214 c 0
- 398 1214 364 1350 284 1350 c 0
- 236 1350 214 1287 209 1227 c 1
+209 1227 m 5
+ 70 1264 l 5
+ 86 1400 176 1490 284 1490 c 4
+ 416 1490 450 1354 530 1354 c 4
+ 578 1354 600 1417 605 1477 c 5
+ 744 1440 l 5
+ 728 1304 638 1214 530 1214 c 4
+ 398 1214 364 1350 284 1350 c 4
+ 236 1350 214 1287 209 1227 c 5
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -30252,7 +30249,7 @@ EndChar
 
 StartChar: uni1E2D
 Encoding: 7725 7725 1226
-Width: 500
+Width: 460
 Flags: HM
 LayerCount: 4
 Fore
@@ -31599,6 +31596,7 @@ LayerCount: 4
 Fore
 Refer: 1288 777 N 1 0 0 1 -412 26 2
 Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" i hookabovecomb
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" uni1EC9.sc
 Colour: ff
 EndChar
@@ -31616,11 +31614,11 @@ EndChar
 
 StartChar: uni1ECB
 Encoding: 7883 7883 1331
-Width: 500
+Width: 460
 Flags: HM
 LayerCount: 4
 Fore
-Refer: 1201 803 N 1 0 0 1 -392 0 2
+Refer: 1201 803 S 1 0 0 1 -412 0 2
 Refer: 18 105 N 1 0 0 1 0 0 3
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" uni1ECB.sc
 Colour: ff
@@ -40301,7 +40299,7 @@ EndChar
 
 StartChar: uni2170
 Encoding: 8560 8560 1606
-Width: 500
+Width: 460
 Flags: HMW
 LayerCount: 4
 Fore
@@ -80658,6 +80656,747 @@ SplineSet
  788 105 l 0
 EndSplineSet
 Colour: ff0000
+EndChar
+
+StartChar: iring
+Encoding: 58103 58103 3228
+Width: 460
+Flags: H
+LayerCount: 4
+Fore
+Refer: 88 778 N 1 0 0 1 -412 0 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" i uni030A
+LCarets2: 1 0
+Colour: ff
+EndChar
+
+StartChar: idoubleaccute
+Encoding: 58104 58104 3229
+Width: 460
+Flags: HW
+AnchorPoint: "bottom_center" 219 -360 basechar 0
+LayerCount: 4
+Fore
+Refer: 343 779 N 1 0 0 1 -412 0 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" i uni030B
+Ligature2: "'liga' Soft Dotted i j" j gravecomb
+LCarets2: 1 0
+Colour: ff
+EndChar
+
+StartChar: jacute
+Encoding: 58106 58106 3230
+Width: 509
+Flags: HW
+AnchorPoint: "bottom_center" 219 -360 basechar 0
+LayerCount: 4
+Fore
+Refer: 84 769 N 1 0 0 1 -353 -42 2
+Refer: 318 567 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" j acutecomb
+LCarets2: 1 0
+Colour: ff
+EndChar
+
+StartChar: jgrave
+Encoding: 58105 58105 3231
+Width: 509
+Flags: H
+LayerCount: 4
+Fore
+Refer: 83 768 N 1 0 0 1 -373 -42 2
+Refer: 318 567 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" j gravecomb
+Colour: ff
+EndChar
+
+StartChar: jtilde
+Encoding: 58107 58107 3232
+Width: 509
+Flags: H
+LayerCount: 4
+Fore
+Refer: 86 771 N 1 0 0 1 -359 -32 2
+Refer: 318 567 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" j tildecomb
+LCarets2: 1 0
+Colour: ff
+EndChar
+
+StartChar: jmacron
+Encoding: 58108 58108 3233
+Width: 509
+Flags: H
+LayerCount: 4
+Fore
+Refer: 222 772 N 1 0 0 1 -363 -42 2
+Refer: 318 567 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" j uni0304
+Colour: ff
+EndChar
+
+StartChar: jdiaeresis
+Encoding: 58109 58109 3234
+Width: 509
+Flags: H
+LayerCount: 4
+Fore
+Refer: 87 776 N 1 0 0 1 -362 -42 2
+Refer: 318 567 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" j uni0308
+Colour: ff
+EndChar
+
+StartChar: jbreve
+Encoding: 58110 58110 3235
+Width: 509
+Flags: H
+LayerCount: 4
+Fore
+Refer: 225 774 N 1 0 0 1 -363 -32 2
+Refer: 318 567 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" j uni0306
+Colour: ff
+EndChar
+
+StartChar: iogonekgrave
+Encoding: 58111 58111 3236
+Width: 460
+Flags: HW
+LayerCount: 4
+Fore
+Refer: 227 808 S 1 0 0 1 -322 0 2
+Refer: 83 768 N 1 0 0 1 -422 -42 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+LCarets2: 1 0
+Ligature2: "'liga' Soft Dotted i j" iogonek gravecomb
+Colour: ff00
+EndChar
+
+StartChar: iogonekacute
+Encoding: 58112 58112 3237
+Width: 460
+Flags: HW
+LayerCount: 4
+Fore
+Refer: 227 808 S 1 0 0 1 -322 0 2
+Refer: 84 769 N 1 0 0 1 -402 -42 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" iogonek acutecomb
+Colour: ff00
+EndChar
+
+StartChar: iogonekcircumflex
+Encoding: 58113 58113 3238
+Width: 460
+Flags: W
+LayerCount: 4
+Fore
+Refer: 227 808 S 1 0 0 1 -322 0 2
+Refer: 85 770 N 1 0 0 1 -412 -42 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" iogonek uni0302
+Colour: ff00
+EndChar
+
+StartChar: iogonektilde
+Encoding: 58114 58114 3239
+Width: 460
+Flags: W
+LayerCount: 4
+Fore
+Refer: 227 808 S 1 0 0 1 -322 0 2
+Refer: 86 771 N 1 0 0 1 -408 -32 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" iogonek tildecomb
+Colour: ff00
+EndChar
+
+StartChar: iogonekmacron
+Encoding: 58115 58115 3240
+Width: 460
+Flags: W
+LayerCount: 4
+Fore
+Refer: 227 808 S 1 0 0 1 -322 0 2
+Refer: 222 772 N 1 0 0 1 -412 -42 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" iogonek uni0304
+Colour: ff00
+EndChar
+
+StartChar: iogonekcaron
+Encoding: 58116 58116 3241
+Width: 460
+Flags: W
+LayerCount: 4
+Fore
+Refer: 227 808 S 1 0 0 1 -322 0 2
+Refer: 231 780 N 1 0 0 1 -412 -42 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" iogonek uni030C
+Colour: ff00
+EndChar
+
+StartChar: istrokegrave
+Encoding: 58117 58117 3242
+Width: 670
+Flags: W
+HStem: 0 21G<245 425> 440 160<0 670> 1020 20G<245 425>
+VStem: 245 180<0 1040>
+LayerCount: 4
+Fore
+SplineSet
+0 440 m 5
+ 0 486 0 554 0 600 c 5
+ 670 600 l 5
+ 670 440 l 5
+ 0 440 l 5
+245 0 m 5
+ 245 1040 l 5
+ 425 1040 l 5
+ 425 0 l 5
+ 245 0 l 5
+EndSplineSet
+Refer: 83 768 N 1 0 0 1 -317 -42 2
+Ligature2: "'liga' Soft Dotted i j" uni0268 gravecomb
+Colour: ff00
+EndChar
+
+StartChar: istrokeacute
+Encoding: 58118 58118 3243
+Width: 670
+Flags: W
+HStem: 0 21G<245 425> 440 160<0 670> 1020 20G<245 425>
+VStem: 245 180<0 1040>
+LayerCount: 4
+Fore
+SplineSet
+0 440 m 5
+ 0 486 0 554 0 600 c 5
+ 670 600 l 5
+ 670 440 l 5
+ 0 440 l 5
+245 0 m 5
+ 245 1040 l 5
+ 425 1040 l 5
+ 425 0 l 5
+ 245 0 l 5
+EndSplineSet
+Refer: 84 769 N 1 0 0 1 -297 -42 2
+Ligature2: "'liga' Soft Dotted i j" uni0268 acutecomb
+Colour: ff00
+EndChar
+
+StartChar: istrokecircumflex
+Encoding: 58119 58119 3244
+Width: 670
+Flags: W
+HStem: 0 21G<245 425> 440 160<0 670> 1020 20G<245 425>
+VStem: 245 180<0 1040>
+LayerCount: 4
+Fore
+SplineSet
+0 440 m 5
+ 0 486 0 554 0 600 c 5
+ 670 600 l 5
+ 670 440 l 5
+ 0 440 l 5
+245 0 m 5
+ 245 1040 l 5
+ 425 1040 l 5
+ 425 0 l 5
+ 245 0 l 5
+EndSplineSet
+Refer: 85 770 N 1 0 0 1 -307 -42 2
+Ligature2: "'liga' Soft Dotted i j" uni0268 uni0302
+Colour: ff00
+EndChar
+
+StartChar: istroketilde
+Encoding: 58120 58120 3245
+Width: 670
+Flags: W
+HStem: 0 21G<245 425> 440 160<0 670> 1020 20G<245 425>
+VStem: 245 180<0 1040>
+LayerCount: 4
+Fore
+SplineSet
+0 440 m 5
+ 0 486 0 554 0 600 c 5
+ 670 600 l 5
+ 670 440 l 5
+ 0 440 l 5
+245 0 m 5
+ 245 1040 l 5
+ 425 1040 l 5
+ 425 0 l 5
+ 245 0 l 5
+EndSplineSet
+Refer: 86 771 N 1 0 0 1 -303 -32 2
+Ligature2: "'liga' Soft Dotted i j" uni0268 tildecomb
+Colour: ff00
+EndChar
+
+StartChar: istrokemacron
+Encoding: 58121 58121 3246
+Width: 670
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+0 440 m 5
+ 0 486 0 554 0 600 c 5
+ 670 600 l 5
+ 670 440 l 5
+ 0 440 l 5
+245 0 m 5
+ 245 1040 l 5
+ 425 1040 l 5
+ 425 0 l 5
+ 245 0 l 5
+EndSplineSet
+Refer: 222 772 N 1 0 0 1 -307 -42 2
+Ligature2: "'liga' Soft Dotted i j" uni0268 uni0304
+Colour: ff00
+EndChar
+
+StartChar: istrokediaeresis
+Encoding: 58122 58122 3247
+Width: 670
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+0 440 m 1
+ 0 486 0 554 0 600 c 1
+ 670 600 l 1
+ 670 440 l 1
+ 0 440 l 1
+245 0 m 1
+ 245 1040 l 1
+ 425 1040 l 1
+ 425 0 l 1
+ 245 0 l 1
+EndSplineSet
+Refer: 87 776 S 1 0 0 1 -306 -42 2
+Ligature2: "'liga' Soft Dotted i j" uni0268 uni0308
+Colour: ff00
+EndChar
+
+StartChar: istrokedoubleacute
+Encoding: 58123 58123 3248
+Width: 670
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+0 440 m 1
+ 0 486 0 554 0 600 c 1
+ 670 600 l 1
+ 670 440 l 1
+ 0 440 l 1
+245 0 m 1
+ 245 1040 l 1
+ 425 1040 l 1
+ 425 0 l 1
+ 245 0 l 1
+EndSplineSet
+Refer: 343 779 N 1 0 0 1 -307 0 2
+Ligature2: "'liga' Soft Dotted i j" uni0268 uni030B
+Colour: ff00
+EndChar
+
+StartChar: istrokecaron
+Encoding: 58124 58124 3249
+Width: 670
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+0 440 m 5
+ 0 486 0 554 0 600 c 5
+ 670 600 l 5
+ 670 440 l 5
+ 0 440 l 5
+245 0 m 5
+ 245 1040 l 5
+ 425 1040 l 5
+ 425 0 l 5
+ 245 0 l 5
+EndSplineSet
+Refer: 231 780 N 1 0 0 1 -307 -42 2
+Ligature2: "'liga' Soft Dotted i j" uni0268 uni030C
+Colour: ff00
+EndChar
+
+StartChar: istrokedoublegrave
+Encoding: 58125 58125 3250
+Width: 670
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+0 440 m 1
+ 0 486 0 554 0 600 c 1
+ 670 600 l 1
+ 670 440 l 1
+ 0 440 l 1
+245 0 m 1
+ 245 1040 l 1
+ 425 1040 l 1
+ 425 0 l 1
+ 245 0 l 1
+EndSplineSet
+Refer: 499 783 N 1 0 0 1 -357 -42 2
+Ligature2: "'liga' Soft Dotted i j" uni0268 uni030F
+Colour: ff00
+EndChar
+
+StartChar: istrokecedillagrave
+Encoding: 58126 58126 3251
+Width: 670
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+0 440 m 1
+ 0 486 0 554 0 600 c 1
+ 670 600 l 1
+ 670 440 l 1
+ 0 440 l 1
+245 0 m 1
+ 245 1040 l 1
+ 425 1040 l 1
+ 425 0 l 1
+ 245 0 l 1
+EndSplineSet
+Refer: 90 807 S 1 0 0 1 -307 0 2
+Refer: 83 768 N 1 0 0 1 -317 -42 2
+Ligature2: "'liga' Soft Dotted i j" uni0268 uni0327 gravecomb
+LCarets2: 2 0 0
+Colour: ff00
+EndChar
+
+StartChar: istrokecedillaacute
+Encoding: 58127 58127 3252
+Width: 670
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+0 440 m 1
+ 0 486 0 554 0 600 c 1
+ 670 600 l 1
+ 670 440 l 1
+ 0 440 l 1
+245 0 m 1
+ 245 1040 l 1
+ 425 1040 l 1
+ 425 0 l 1
+ 245 0 l 1
+EndSplineSet
+Refer: 90 807 S 1 0 0 1 -307 0 2
+Refer: 84 769 N 1 0 0 1 -297 -42 2
+Ligature2: "'liga' Soft Dotted i j" uni0268 uni0327 acutecomb
+LCarets2: 2 0 0
+Colour: ff00
+EndChar
+
+StartChar: istrokecedillacircumflex
+Encoding: 58128 58128 3253
+Width: 670
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+0 440 m 1
+ 0 486 0 554 0 600 c 1
+ 670 600 l 1
+ 670 440 l 1
+ 0 440 l 1
+245 0 m 1
+ 245 1040 l 1
+ 425 1040 l 1
+ 425 0 l 1
+ 245 0 l 1
+EndSplineSet
+Refer: 90 807 S 1 0 0 1 -307 0 2
+Refer: 85 770 N 1 0 0 1 -307 -42 2
+Ligature2: "'liga' Soft Dotted i j" uni0268 uni0327 uni0302
+LCarets2: 2 0 0
+Colour: ff00
+EndChar
+
+StartChar: istrokecedillacaron
+Encoding: 58129 58129 3254
+Width: 670
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+0 440 m 1
+ 0 486 0 554 0 600 c 1
+ 670 600 l 1
+ 670 440 l 1
+ 0 440 l 1
+245 0 m 1
+ 245 1040 l 1
+ 425 1040 l 1
+ 425 0 l 1
+ 245 0 l 1
+EndSplineSet
+Refer: 90 807 N 1 0 0 1 -307 0 2
+Refer: 231 780 N 1 0 0 1 -307 -42 2
+Ligature2: "'liga' Soft Dotted i j" uni0268 uni0327 uni030C
+LCarets2: 2 0 0
+Colour: ff00
+EndChar
+
+StartChar: istrokemacronbelowgrave
+Encoding: 58130 58130 3255
+Width: 670
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+30 -324 m 5
+ 30 -184 l 5
+ 640 -184 l 5
+ 640 -324 l 5
+ 30 -324 l 5
+0 440 m 1
+ 0 486 0 554 0 600 c 1
+ 670 600 l 1
+ 670 440 l 1
+ 0 440 l 1
+245 0 m 1
+ 245 1040 l 1
+ 425 1040 l 1
+ 425 0 l 1
+ 245 0 l 1
+EndSplineSet
+Refer: 83 768 N 1 0 0 1 -317 -42 2
+Ligature2: "'liga' Soft Dotted i j" uni0268 uni0331 gravecomb
+Colour: ff00
+EndChar
+
+StartChar: istrokemacronbelowacute
+Encoding: 58131 58131 3256
+Width: 670
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+30 -324 m 5
+ 30 -184 l 5
+ 640 -184 l 5
+ 640 -324 l 5
+ 30 -324 l 5
+0 440 m 1
+ 0 486 0 554 0 600 c 1
+ 670 600 l 1
+ 670 440 l 1
+ 0 440 l 1
+245 0 m 1
+ 245 1040 l 1
+ 425 1040 l 1
+ 425 0 l 1
+ 245 0 l 1
+EndSplineSet
+Refer: 84 769 N 1 0 0 1 -297 -42 2
+Ligature2: "'liga' Soft Dotted i j" uni0268 uni0331 acutecomb
+Colour: ff00
+EndChar
+
+StartChar: istrokemacronbelowdiaeresis
+Encoding: 58132 58132 3257
+Width: 670
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+30 -324 m 5
+ 30 -184 l 5
+ 640 -184 l 5
+ 640 -324 l 5
+ 30 -324 l 5
+0 440 m 1
+ 0 486 0 554 0 600 c 1
+ 670 600 l 1
+ 670 440 l 1
+ 0 440 l 1
+245 0 m 1
+ 245 1040 l 1
+ 425 1040 l 1
+ 425 0 l 1
+ 245 0 l 1
+EndSplineSet
+Refer: 87 776 N 1 0 0 1 -306 -42 2
+Ligature2: "'liga' Soft Dotted i j" uni0268 uni0331 uni0308
+Colour: ff00
+EndChar
+
+StartChar: itildebelowgrave
+Encoding: 58133 58133 3258
+Width: 460
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+32 -437 m 5
+ -107 -400 l 5
+ -91 -264 -1 -174 107 -174 c 4
+ 239 -174 273 -310 353 -310 c 4
+ 401 -310 423 -247 428 -187 c 5
+ 567 -224 l 5
+ 551 -360 461 -450 353 -450 c 4
+ 221 -450 187 -314 107 -314 c 4
+ 59 -314 37 -377 32 -437 c 5
+EndSplineSet
+Refer: 83 768 N 1 0 0 1 -422 -42 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" uni1E2D gravecomb
+Colour: ff00
+EndChar
+
+StartChar: itildebelowacute
+Encoding: 58134 58134 3259
+Width: 460
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+32 -437 m 5
+ -107 -400 l 5
+ -91 -264 -1 -174 107 -174 c 4
+ 239 -174 273 -310 353 -310 c 4
+ 401 -310 423 -247 428 -187 c 5
+ 567 -224 l 5
+ 551 -360 461 -450 353 -450 c 4
+ 221 -450 187 -314 107 -314 c 4
+ 59 -314 37 -377 32 -437 c 5
+EndSplineSet
+Refer: 84 769 N 1 0 0 1 -402 -42 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" uni1E2D acutecomb
+Colour: ff00
+EndChar
+
+StartChar: itildebelowmacron
+Encoding: 58135 58135 3260
+Width: 460
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+32 -437 m 5
+ -107 -400 l 5
+ -91 -264 -1 -174 107 -174 c 4
+ 239 -174 273 -310 353 -310 c 4
+ 401 -310 423 -247 428 -187 c 5
+ 567 -224 l 5
+ 551 -360 461 -450 353 -450 c 4
+ 221 -450 187 -314 107 -314 c 4
+ 59 -314 37 -377 32 -437 c 5
+EndSplineSet
+Refer: 222 772 N 1 0 0 1 -412 -42 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" uni1E2D uni0304
+Colour: ff00
+EndChar
+
+StartChar: idotbelowgrave
+Encoding: 58136 58136 3261
+Width: 460
+Flags: HW
+LayerCount: 4
+Fore
+Refer: 1201 803 S 1 0 0 1 -412 0 2
+Refer: 83 768 N 1 0 0 1 -422 -42 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" uni1ECB gravecomb
+Colour: ff00
+EndChar
+
+StartChar: idotbelowacute
+Encoding: 58137 58137 3262
+Width: 460
+Flags: HW
+LayerCount: 4
+Fore
+Refer: 1201 803 S 1 0 0 1 -412 0 2
+Refer: 84 769 N 1 0 0 1 -402 -42 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" uni1ECB acutecomb
+Colour: ff00
+EndChar
+
+StartChar: idotbelowcircumflex
+Encoding: 58138 58138 3263
+Width: 460
+Flags: HW
+LayerCount: 4
+Fore
+Refer: 1201 803 S 1 0 0 1 -412 0 2
+Refer: 85 770 N 1 0 0 1 -412 -42 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" uni1ECB uni0302
+Colour: ff00
+EndChar
+
+StartChar: idotbelowtilde
+Encoding: 58139 58139 3264
+Width: 460
+Flags: HW
+LayerCount: 4
+Fore
+Refer: 1201 803 S 1 0 0 1 -412 0 2
+Refer: 86 771 N 1 0 0 1 -408 -32 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" uni1ECB tildecomb
+Colour: ff00
+EndChar
+
+StartChar: idotbelowmacron
+Encoding: 58140 58140 3265
+Width: 460
+Flags: HW
+LayerCount: 4
+Fore
+Refer: 1201 803 N 1 0 0 1 -412 0 2
+Refer: 222 772 N 1 0 0 1 -412 -42 2
+Refer: 141 305 S 1 0 0 1 0 0 3
+LCarets2: 1 0
+Ligature2: "'liga' Soft Dotted i j" uni1ECB uni0304
+Colour: ff00
+EndChar
+
+StartChar: icommaabove
+Encoding: 58141 58141 3266
+Width: 460
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+Refer: 1384 787 N 1 0 0 1 -412 0 2
+Refer: 141 305 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" i uni0313
+Colour: ff
+EndChar
+
+StartChar: jinvertedbreve
+Encoding: 58142 58142 3267
+Width: 509
+Flags: HW
+LayerCount: 4
+Fore
+Refer: 512 785 N 1 0 0 1 -363 0 2
+Refer: 318 567 N 1 0 0 1 0 0 3
+Ligature2: "'liga' Soft Dotted i j" j uni0311
+Colour: ff
 EndChar
 EndChars
 EndSplineFont
