@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1677966068
+ModificationTime: 1681218300
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -267,19 +267,19 @@ KernClass2: 8 17 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-1"
  131 y.sc yacute.sc uni0233.sc upsilondieresistonos.sc uni04AF.sc uni04B1.sc uni1E8F.sc uni1EF3.sc uni1EF5.sc uni1EF7.sc uni1EF9.sc y.pc
  0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -350 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -280 {} -280 {} -280 {} -210 {} -210 {} -210 {} -140 {} -350 {} -210 {} -280 {} -280 {} -210 {} -210 {} -210 {} -140 {} -210 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} 0 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {}
 LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "" "" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
-OtfFeatName: 'ss01' 1033 "Alternative digits 1 and 4." 2057 "Alternative digits 1 and 4." 1036 "Chiffres 1 et 4 alternatifs."
-OtfFeatName: 'ss02' 1033 "Alternative digits 6 and 9." 2057 "Alternative digits 6 and 9." 1036 "Chiffres 6 et 9 alternatifs."
-OtfFeatName: 'ss03' 1033 "Alternative ampersand." 2057 "Alternative ampersand." 1036 "Alternatif esperluette."
-OtfFeatName: 'ss04' 1033 "Simplified small a and g." 2057 "Simplified small letters a and g." 1036 "Lettres minuscules a et g simplifi+AOkA-s."
-OtfFeatName: 'ss05' 1033 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 2057 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 1036 "f ligatures (i.e. fi, fl, ...) ('liga' doit +AOoA-tre activ+AOkA !)"
-OtfFeatName: 'ss06' 1033 "Bigger math operators." 2057 "Bigger math operators." 1036 "Op+AOkA-rateurs math+AOkA-matiques plus gros."
+OtfFeatName: 'ss06' 1036 "Op+AOkA-rateurs math+AOkA-matiques plus gros." 2057 "Bigger math operators." 1033 "Bigger math operators."
+OtfFeatName: 'ss05' 1036 "f ligatures (i.e. fi, fl, ...) ('liga' doit +AOoA-tre activ+AOkA !)" 2057 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 1033 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)"
+OtfFeatName: 'ss04' 1036 "Lettres minuscules a et g simplifi+AOkA-s." 2057 "Simplified small letters a and g." 1033 "Simplified small a and g."
+OtfFeatName: 'ss03' 1036 "Alternatif esperluette." 2057 "Alternative ampersand." 1033 "Alternative ampersand."
+OtfFeatName: 'ss02' 1036 "Chiffres 6 et 9 alternatifs." 2057 "Alternative digits 6 and 9." 1033 "Alternative digits 6 and 9."
+OtfFeatName: 'ss01' 1036 "Chiffres 1 et 4 alternatifs." 2057 "Alternative digits 1 and 4." 1033 "Alternative digits 1 and 4."
 Encoding: UnicodeBmp
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 760 38 14
+WinInfo: 57342 38 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -1642,7 +1642,7 @@ EndChar
 
 StartChar: G
 Encoding: 71 71 42
-Width: 1522
+Width: 1562
 Flags: HMW
 AnchorPoint: "bottom_center" 801 0 basechar 0
 AnchorPoint: "top_center" 801 1380 basechar 0
@@ -6583,7 +6583,7 @@ EndChar
 
 StartChar: Gcommaaccent
 Encoding: 290 290 232
-Width: 1522
+Width: 1562
 Flags: HMW
 LayerCount: 4
 Fore
@@ -6826,7 +6826,7 @@ EndChar
 
 StartChar: Gcircumflex
 Encoding: 284 284 253
-Width: 1522
+Width: 1562
 Flags: HMW
 LayerCount: 4
 Fore
@@ -6850,7 +6850,7 @@ EndChar
 
 StartChar: Gbreve
 Encoding: 286 286 255
-Width: 1522
+Width: 1562
 Flags: HMW
 LayerCount: 4
 Fore
@@ -6874,7 +6874,7 @@ EndChar
 
 StartChar: Gdotaccent
 Encoding: 288 288 257
-Width: 1522
+Width: 1562
 Flags: HMW
 LayerCount: 4
 Fore
@@ -11197,7 +11197,7 @@ EndChar
 
 StartChar: Gcaron
 Encoding: 486 486 459
-Width: 1522
+Width: 1562
 Flags: HMW
 LayerCount: 4
 Fore
@@ -11383,7 +11383,7 @@ EndChar
 
 StartChar: uni01F4
 Encoding: 500 500 473
-Width: 1522
+Width: 1562
 Flags: HMW
 LayerCount: 4
 Fore
@@ -29023,7 +29023,7 @@ EndChar
 
 StartChar: uni1E20
 Encoding: 7712 7712 1131
-Width: 1522
+Width: 1562
 Flags: HMW
 LayerCount: 4
 Fore
@@ -35814,7 +35814,7 @@ EndChar
 
 StartChar: uni20B2
 Encoding: 8370 8370 1504
-Width: 1522
+Width: 1562
 Flags: HMW
 LayerCount: 4
 Fore
@@ -36883,33 +36883,32 @@ EndChar
 
 StartChar: uni2141
 Encoding: 8513 8513 1530
-Width: 1522
+Width: 1562
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-269 451 m 1
- 352 264 520 148 721 148 c 0
- 1011 148 1232 390 1232 740 c 0
- 1232 1090 1011 1332 721 1332 c 0
- 520 1332 352 1216 269 1029 c 1
- 108 1120 l 1
- 226 1352 453 1500 721 1500 c 0
- 1116 1500 1422 1179 1422 740 c 0
- 1422 301 1116 -20 721 -20 c 0
- 453 -20 226 128 108 360 c 1
- 269 451 l 1
-721 740 m 25
- 100 740 l 25
- 100 1480 l 25
- 282 1480 l 17
- 282 1253 l 1
- 290 1227 l 1
- 290 908 l 9
- 721 908 l 25
- 721 740 l 25
+309 451 m 1
+ 392 264 560 148 761 148 c 0
+ 1051 148 1272 390 1272 740 c 0
+ 1272 1090 1051 1332 761 1332 c 0
+ 560 1332 392 1216 309 1029 c 1
+ 148 1120 l 1
+ 266 1352 493 1500 761 1500 c 0
+ 1156 1500 1462 1179 1462 740 c 0
+ 1462 301 1156 -20 761 -20 c 0
+ 493 -20 266 128 148 360 c 1
+ 309 451 l 1
+761 740 m 25
+ 140 740 l 25
+ 140 1480 l 25
+ 322 1480 l 17
+ 322 1253 l 1
+ 330 1227 l 1
+ 330 908 l 9
+ 761 908 l 25
+ 761 740 l 25
 EndSplineSet
-Validated: 5
 Colour: ffff
 EndChar
 
@@ -63937,7 +63936,7 @@ EndChar
 
 StartChar: g.sc
 Encoding: 57509 57509 2365
-Width: 1324
+Width: 1364
 Flags: HMW
 AnchorPoint: "top_center" 694 1200 basechar 0
 AnchorPoint: "bottom_center" 694 0 basechar 0
@@ -65052,8 +65051,8 @@ EndChar
 
 StartChar: gcircumflex.sc
 Encoding: 57573 57573 2429
-Width: 1324
-Flags: HM
+Width: 1364
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 85 770 N 1 0 0 1 52 160 2
@@ -65063,8 +65062,8 @@ EndChar
 
 StartChar: gbreve.sc
 Encoding: 57574 57574 2430
-Width: 1324
-Flags: HM
+Width: 1364
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 225 774 N 1 0 0 1 52 160 2
@@ -65074,8 +65073,8 @@ EndChar
 
 StartChar: gdotaccent.sc
 Encoding: 57575 57575 2431
-Width: 1324
-Flags: HM
+Width: 1364
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 230 775 N 1 0 0 1 52 160 2
@@ -65085,7 +65084,7 @@ EndChar
 
 StartChar: gcommaaccent.sc
 Encoding: 57576 57576 2432
-Width: 1324
+Width: 1364
 Flags: HMW
 LayerCount: 4
 Fore
@@ -66666,8 +66665,8 @@ EndChar
 
 StartChar: uni01E7.sc
 Encoding: 57664 57664 2519
-Width: 1324
-Flags: HM
+Width: 1364
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 231 780 N 1 0 0 1 52 160 2
@@ -66774,8 +66773,8 @@ EndChar
 
 StartChar: uni01F5.sc
 Encoding: 57671 57671 2526
-Width: 1324
-Flags: HM
+Width: 1364
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 84 769 N 1 0 0 1 52 160 2
@@ -73015,8 +73014,8 @@ EndChar
 
 StartChar: uni1E21.sc
 Encoding: 57944 57944 2799
-Width: 1324
-Flags: HM
+Width: 1364
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 222 772 N 1 0 0 1 52 160 2
