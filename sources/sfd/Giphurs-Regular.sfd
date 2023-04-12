@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1681311768
+ModificationTime: 1681313371
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -269,19 +269,19 @@ KernClass2: 8 17 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-1"
  131 y.sc yacute.sc uni0233.sc upsilondieresistonos.sc uni04AF.sc uni04B1.sc uni1E8F.sc uni1EF3.sc uni1EF5.sc uni1EF7.sc uni1EF9.sc y.pc
  0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -350 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -280 {} -280 {} -280 {} -210 {} -210 {} -210 {} -140 {} -350 {} -210 {} -280 {} -280 {} -210 {} -210 {} -210 {} -140 {} -210 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} 0 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {}
 LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "" "" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
-OtfFeatName: 'ss06' 1036 "Op+AOkA-rateurs math+AOkA-matiques plus gros." 2057 "Bigger math operators." 1033 "Bigger math operators."
-OtfFeatName: 'ss05' 1036 "f ligatures (i.e. fi, fl, ...) ('liga' doit +AOoA-tre activ+AOkA !)" 2057 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 1033 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)"
-OtfFeatName: 'ss04' 1036 "Lettres minuscules a et g simplifi+AOkA-s." 2057 "Simplified small letters a and g." 1033 "Simplified small a and g."
-OtfFeatName: 'ss03' 1036 "Alternatif esperluette." 2057 "Alternative ampersand." 1033 "Alternative ampersand."
-OtfFeatName: 'ss02' 1036 "Chiffres 6 et 9 alternatifs." 2057 "Alternative digits 6 and 9." 1033 "Alternative digits 6 and 9."
-OtfFeatName: 'ss01' 1036 "Chiffres 1 et 4 alternatifs." 2057 "Alternative digits 1 and 4." 1033 "Alternative digits 1 and 4."
+OtfFeatName: 'ss01' 1033 "Alternative digits 1 and 4." 2057 "Alternative digits 1 and 4." 1036 "Chiffres 1 et 4 alternatifs."
+OtfFeatName: 'ss02' 1033 "Alternative digits 6 and 9." 2057 "Alternative digits 6 and 9." 1036 "Chiffres 6 et 9 alternatifs."
+OtfFeatName: 'ss03' 1033 "Alternative ampersand." 2057 "Alternative ampersand." 1036 "Alternatif esperluette."
+OtfFeatName: 'ss04' 1033 "Simplified small a and g." 2057 "Simplified small letters a and g." 1036 "Lettres minuscules a et g simplifi+AOkA-s."
+OtfFeatName: 'ss05' 1033 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 2057 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 1036 "f ligatures (i.e. fi, fl, ...) ('liga' doit +AOoA-tre activ+AOkA !)"
+OtfFeatName: 'ss06' 1033 "Bigger math operators." 2057 "Bigger math operators." 1036 "Op+AOkA-rateurs math+AOkA-matiques plus gros."
 Encoding: UnicodeBmp
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 2470 19 14
+WinInfo: 570 19 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -12816,31 +12816,31 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-910 -41 m 5
- 1032 -164 l 5
- 971 -241 887 -282 797 -282 c 4
- 743 -282 687 -267 633 -236 c 4
- 460 -136 519 0 419 58 c 4
- 398 70 374 77 350 77 c 4
- 306 77 259 54 222 1 c 5
- 100 124 l 5
- 161 201 245 242 335 242 c 4
- 389 242 445 227 499 196 c 4
- 672 96 613 -40 713 -98 c 4
- 734 -110 758 -117 782 -117 c 4
- 826 -117 873 -94 910 -41 c 5
-100 124 m 1029
+910 -42 m 5
+ 1032 -165 l 5
+ 971 -242 887 -283 797 -283 c 4
+ 743 -283 687 -268 633 -237 c 4
+ 460 -137 519 -1 419 57 c 4
+ 398 69 374 76 350 76 c 4
+ 306 76 259 53 222 0 c 5
+ 100 123 l 5
+ 161 200 245 241 335 241 c 4
+ 389 241 445 226 499 195 c 4
+ 672 95 613 -41 713 -99 c 4
+ 734 -111 758 -118 782 -118 c 4
+ 826 -118 873 -95 910 -42 c 5
+100 123 m 1029
 140 1040 m 1
  884 1040 l 1
  884 896 l 1
  680 880 l 1
  140 880 l 1
  140 1040 l 1
-304 140 m 5
- 100 124 l 5
+304 139 m 5
+ 100 123 l 5
  680 880 l 1
  884 896 l 1
- 304 140 l 5
+ 304 139 l 5
 EndSplineSet
 Colour: ff00
 EndChar
@@ -16231,19 +16231,19 @@ SplineSet
  320 578 l 1
  320 440 l 1
  320 230 l 2
- 320 170 350 140 410 140 c 0
- 794 141 l 4
- 944 141 1020 191 1020 281 c 4
- 1020 371 940 404 794 438 c 4
- 560 492 420 585 420 760 c 4
- 420 935 575 1060 794 1060 c 4
- 1013 1060 1141 953 1180 808 c 5
- 1023 720 l 5
- 992 836 926 900 794 900 c 4
- 662 900 600 840 600 760 c 4
- 600 680 648 642 794 608 c 4
- 1028 554 1200 477 1200 281 c 4
- 1200 85 990.740234375 -20 794 -20 c 5
+ 320 170 350 140 410 140 c 4
+ 794 140 l 0
+ 944 140 1020 191 1020 281 c 0
+ 1020 371 940 404 794 438 c 0
+ 560 492 420 585 420 760 c 0
+ 420 935 575 1060 794 1060 c 0
+ 1013 1060 1141 953 1180 808 c 1
+ 1023 720 l 1
+ 992 836 926 900 794 900 c 0
+ 662 900 600 840 600 760 c 0
+ 600 680 648 642 794 608 c 0
+ 1028 554 1200 477 1200 281 c 0
+ 1200 85 990.740234375 -20 794 -20 c 1
  410 -20 l 0
 EndSplineSet
 Colour: ff00
