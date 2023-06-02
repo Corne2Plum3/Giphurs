@@ -5,7 +5,7 @@ FamilyName: Giphurs
 Weight: Regular
 Copyright: Copyright 2023 The Giphurs Project Authors (https://github.com/Corne2Plum3/Giphurs)
 UComments: "2023-01-20: Finally found a name for the font lol+AAoA-2022-06-21: Created with FontForge (http://fontforge.org)"
-Version: 000.640
+Version: 000.650
 ItalicAngle: 0
 UnderlinePosition: -204
 UnderlineWidth: 102
@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1685721955
+ModificationTime: 1685723963
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -269,19 +269,19 @@ KernClass2: 8 17 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-1"
  131 y.sc yacute.sc uni0233.sc upsilondieresistonos.sc uni04AF.sc uni04B1.sc uni1E8F.sc uni1EF3.sc uni1EF5.sc uni1EF7.sc uni1EF9.sc y.pc
  0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -350 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -280 {} -280 {} -280 {} -210 {} -210 {} -210 {} -140 {} -350 {} -210 {} -280 {} -280 {} -210 {} -210 {} -210 {} -140 {} -210 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} 0 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {}
 LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "" "" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
-OtfFeatName: 'ss01' 1033 "Alternative digits 1 and 4." 2057 "Alternative digits 1 and 4." 1036 "Chiffres 1 et 4 alternatifs."
-OtfFeatName: 'ss02' 1033 "Alternative digits 6 and 9." 2057 "Alternative digits 6 and 9." 1036 "Chiffres 6 et 9 alternatifs."
-OtfFeatName: 'ss03' 1033 "Alternative ampersand." 2057 "Alternative ampersand." 1036 "Alternatif esperluette."
-OtfFeatName: 'ss04' 1033 "Simplified small a and g." 2057 "Simplified small letters a and g." 1036 "Lettres minuscules a et g simplifi+AOkA-s."
-OtfFeatName: 'ss05' 1033 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 2057 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 1036 "f ligatures (i.e. fi, fl, ...) ('liga' doit +AOoA-tre activ+AOkA !)"
-OtfFeatName: 'ss06' 1033 "Bigger math operators." 2057 "Bigger math operators." 1036 "Op+AOkA-rateurs math+AOkA-matiques plus gros."
+OtfFeatName: 'ss06' 1036 "Op+AOkA-rateurs math+AOkA-matiques plus gros." 2057 "Bigger math operators." 1033 "Bigger math operators."
+OtfFeatName: 'ss05' 1036 "f ligatures (i.e. fi, fl, ...) ('liga' doit +AOoA-tre activ+AOkA !)" 2057 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)" 1033 "f ligatures (e.g. fi, fl, ...) ('liga' must be enabled!)"
+OtfFeatName: 'ss04' 1036 "Lettres minuscules a et g simplifi+AOkA-s." 2057 "Simplified small letters a and g." 1033 "Simplified small a and g."
+OtfFeatName: 'ss03' 1036 "Alternatif esperluette." 2057 "Alternative ampersand." 1033 "Alternative ampersand."
+OtfFeatName: 'ss02' 1036 "Chiffres 6 et 9 alternatifs." 2057 "Alternative digits 6 and 9." 1033 "Alternative digits 6 and 9."
+OtfFeatName: 'ss01' 1036 "Chiffres 1 et 4 alternatifs." 2057 "Alternative digits 1 and 4." 1033 "Alternative digits 1 and 4."
 Encoding: UnicodeBmp
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 65360 19 14
+WinInfo: 8208 24 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -4787,32 +4787,32 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-621 1189 m 4
- 553 1189 l 4
- 553 1250 507 1282 402 1282 c 4
- 297 1282 251 1249 251 1192 c 4
- 251 1135 297 1102 402 1102 c 4
- 489 1102 553 1132 553 1197 c 6
- 553 1339 l 6
- 553 1437 486 1481 376 1481 c 4
- 268 1481 198 1434 198 1434 c 5
- 146 1547 l 5
- 146 1547 219 1608 384 1608 c 4
- 543 1608 688 1558 688 1342 c 5
- 688 1261 l 5
- 688 1261 688 1164 688 1102 c 13
- 583 1068 l 5
- 528 1007 457 981 376 981 c 4
- 210 981 116 1078 116 1192 c 4
- 116 1306 213 1403 376 1403 c 4
- 520 1403 621 1313 621 1189 c 4
-716 967 m 5
- 613 975 553 1021 553 1111 c 6
- 553 1274 l 5
- 688 1274 l 5
- 688 1132 l 6
- 688 1101 705 1087 740 1087 c 4
- 716 967 l 5
+621 1188 m 4
+ 553 1188 l 4
+ 553 1249 507 1281 402 1281 c 4
+ 297 1281 251 1248 251 1191 c 4
+ 251 1134 297 1101 402 1101 c 4
+ 489 1101 553 1131 553 1196 c 6
+ 553 1338 l 6
+ 553 1436 486 1480 376 1480 c 4
+ 268 1480 198 1433 198 1433 c 5
+ 146 1546 l 5
+ 146 1546 219 1607 384 1607 c 4
+ 543 1607 688 1557 688 1341 c 5
+ 688 1260 l 5
+ 688 1260 688 1163 688 1101 c 13
+ 583 1067 l 5
+ 528 1006 457 980 376 980 c 4
+ 210 980 116 1077 116 1191 c 4
+ 116 1305 213 1402 376 1402 c 4
+ 520 1402 621 1312 621 1188 c 4
+716 966 m 5
+ 613 974 553 1020 553 1110 c 6
+ 553 1273 l 5
+ 688 1273 l 5
+ 688 1131 l 6
+ 688 1100 705 1086 740 1086 c 4
+ 716 966 l 5
 100 741 m 1
  100 861 l 1
  752 861 l 1
@@ -4830,16 +4830,16 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-439 1608 m 4
- 267 1608 130 1474 130 1294 c 4
- 130 1114 267 981 439 981 c 4
- 611 981 748 1114 748 1294 c 4
- 748 1474 611 1608 439 1608 c 4
-439 1102 m 4
- 331 1102 265 1179 265 1294 c 4
- 265 1409 331 1487 439 1487 c 4
- 547 1487 613 1409 613 1294 c 4
- 613 1179 547 1102 439 1102 c 4
+439 1607 m 4
+ 267 1607 130 1473 130 1293 c 4
+ 130 1113 267 980 439 980 c 4
+ 611 980 748 1113 748 1293 c 4
+ 748 1473 611 1607 439 1607 c 4
+439 1101 m 4
+ 331 1101 265 1178 265 1293 c 4
+ 265 1408 331 1486 439 1486 c 4
+ 547 1486 613 1408 613 1293 c 4
+ 613 1178 547 1101 439 1101 c 4
 108 741 m 1
  108 861 l 1
  760 861 l 1
@@ -33160,8 +33160,8 @@ SplineSet
  425 415 l 1
  425 295 l 1
  262 295 l 1
- 262 1 l 2
- 262 -51 296 -80 355 -80 c 0
+ 262 0 l 6
+ 262 -52 296 -80 355 -80 c 0
  380 -80 410 -72 425 -62 c 1
  457 -176 l 1
  428 -190 381 -200 345 -200 c 0
@@ -63023,29 +63023,28 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-605 1328 m 0
- 605 1462 532 1550 419 1550 c 0
- 306 1550 233 1462 233 1328 c 0
- 233 1194 306 1106 419 1106 c 0
- 532 1106 605 1194 605 1328 c 0
-731 1108 m 1
- 731 1044 745 1004 745 1004 c 1
- 617 1001 l 1
- 617 1001 605 1047 605 1092 c 1
- 549 1028 492 986 410 986 c 0
- 226 986 97 1131 97 1329 c 0
- 97 1527 226 1671 410 1671 c 0
- 492 1671 541 1629 597 1565 c 1
- 597 1656 l 1
- 731 1656 l 1
- 731 1108 l 1
-100 740 m 1
+598 1294 m 0
+ 598 1413 529 1488 425 1488 c 0
+ 321 1488 252 1413 252 1294 c 0
+ 252 1175 321 1101 425 1101 c 0
+ 529 1101 598 1175 598 1294 c 0
+724 1093 m 1
+ 724 1034 736 993 736 993 c 1
+ 610 993 l 1
+ 610 993 598 1039 598 1084 c 1
+ 545 1020 490 981 413 981 c 0
+ 239 981 117 1111 117 1294 c 0
+ 117 1477 238 1608 412 1608 c 0
+ 489 1608 536 1569 589 1505 c 1
+ 589 1596 l 1
+ 724 1596 l 1
+ 724 1093 l 1
+100 741 m 1
  100 861 l 1
  752 861 l 1
- 752 740 l 1
- 100 740 l 1
+ 752 741 l 1
+ 100 741 l 1
 EndSplineSet
-Validated: 1
 Colour: ff8000
 EndChar
 
