@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1685997352
+ModificationTime: 1686001079
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -48,7 +48,6 @@ OS2XHeight: 1040
 OS2Vendor: 'PfEd'
 Lookup: 1 0 0 "'c2sc' Capitales vers petites capitales dans Latin lookup 0" { "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0"  } ['c2sc' ('latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'smcp' Bas-de-casse vers petites capitales lookups0" { "'smcp' Bas-de-casse vers petites capitales lookups0-1"  } ['smcp' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 4 0 1 "'liga' Standard Ligatures lookup0" { "'liga' Soft Dotted i j"  "'liga' Arrows"  "'liga' Standard Ligatures for ss05"  } ['liga' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'pcap' Bas-de-casse vers tr+AOgA-s petites capitales dans Latin lookup 0" { "sous-table 'pcap' Bas-de-casse vers tr+AOgA-s petites capitales dans Latin lookup 0"  } ['pcap' ('latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'c2pc' Capitales vers tr+AOgA-s petites capitales dans Latin lookup 0" { "sous-table 'c2pc' Capitales vers tr+AOgA-s petites capitales dans Latin lookup 0"  } ['c2pc' ('latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'cv01' Alternative digit 1 1" { "'cv01' Alternative digit 1 1-1"  } ['cv01' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
@@ -76,7 +75,8 @@ Lookup: 1 0 0 "'ss02' Alternative numbers set 2" { "'ss02' Alternative numbers s
 Lookup: 1 0 0 "'ss03' Simplified G and I" { "'ss03' Simplified G and I lookups0-1"  } ['ss03' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'ss04' Simplified a and g" { "'ss04' Simplified a and g lookups0-1"  } ['ss04' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'hani' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'ss05' Simplified u" { "'ss05' Simplified u lookups0-1" ("ss05") } ['ss05' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 1 0 0 "'ss06' Bigger operators lookups0" { "'ss06' Bigger operators lookups0-1"  } ['ss06' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 1 0 0 "'ss06' f ligatures" { "'ss06' f ligatures lookups0-1"  } ['ss06' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 1 0 0 "'ss07' Bigger basic math operators" { "'ss07' Bigger basic math operators lookups0-1"  } ['ss07' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'zero' Slashed Zero" { "'zero' Slashed Zero lookups0-1"  } ['zero' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'sups' Supscript numbers" { "sous-table 'sups' Exposant lookups0" ("superior") } ['sups' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'subs' Subscript numbers" { "sous-table 'subs' Indice lookups0" ("subscript") } ['subs' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
@@ -85,6 +85,7 @@ Lookup: 1 0 0 "'dnom' Denominators" { "'dnom' D+AOkA-nominateurs lookups0-1"  } 
 Lookup: 1 0 0 "'onum' Oldstyle Figures" { "'onum' Oldstyle Figures lookups0-1" ("oldstyle") } ['onum' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'pnum' Proportional Numbers" { "'pnum' Proportional Numbers lookups0-1"  } ['pnum' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'tnum' Tabular Numbers" { "'tnum' Tabular Numbers lookups0-1"  } ['tnum' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 4 0 1 "'liga' Standard Ligatures lookup0" { "'liga' Soft Dotted i j"  "'liga' Arrows"  "'liga' Standard Ligatures for ss06"  } ['liga' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 258 0 0 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0" { "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-1" [307,30,0] "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-2" [307,30,0] "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-3" [307,0,2] "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-4" [307,0,2] "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-5" [307,0,0] "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-6" [307,0,2] "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-7" [307,30,0] "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-8" [307,30,0] "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-9" [307,0,4] } ['kern' ('copt' <'dflt' > 'grek' <'dflt' > 'cyrl' <'dflt' > 'DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 260 0 0 "'mark' Positionnement de signe lookups1" { "'mark' Positionnement de signe lookups1-1"  } ['mark' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
 MarkAttachClasses: 1
@@ -291,16 +292,22 @@ OtfFeatName: 'ss02' 1033 "Alternative numbers set 2" 2057 "Alternative numbers s
 OtfFeatName: 'ss03' 1033 "Simplified uppercase G and I" 2057 "Simplified uppercase G and I" 1036 "Majuscules G et I simplifi+AOkA-s"
 OtfFeatName: 'ss04' 1033 "Simplified lowercases a and g" 2057 "Simplified lowercases a and g" 1036 "Minuscules a et g simplifi+AOkA-s"
 OtfFeatName: 'ss05' 1033 "Simplified lowercase u" 2057 "Simplified lowercase u" 1036 "Minuscule u simplifi+AOkA"
+OtfFeatName: 'ss06' 1033 "f ligatures (fi, fl, ffi, ...) ('liga' must be enabled!)" 2057 "f ligatures (fi, fl, ffi, ...) ('liga' must be enabled!)" 1036 "f ligatures (fi, fl, ffi, ...) ('liga' doit +AOoA-tre activ+AOkA !)"
+OtfFeatName: 'ss07' 1033 "Bigger basic math operators" 2057 "Bigger basic math operators" 1036 "Plus gros op+AOkA-rateurs math+AOkA-matiques de base"
 Encoding: UnicodeBmp
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 9291 19 11
+WinInfo: 66158 19 14
 BeginPrivate: 0
 EndPrivate
 Grid
+-2048 1312.05004883 m 0
+ 4096 1312.05004883 l 1024
+-2048 656.009460449 m 0
+ 4096 656.009460449 l 1024
 -2048 -267.011810303 m 0
  4096 -267.011810303 l 1024
 -2048 602.982682292 m 0
@@ -354,7 +361,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 307200 153600 102400 532480 -1048576 102400 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "bottom_ypogegrammeni" "'mark' Positionnement de signe lookups1-1" "top_left_O2" "'mark' Positionnement de signe lookups1-1" "top_left_O1" "'mark' Positionnement de signe lookups1-1" "circumflex_right" "'mark' Positionnement de signe lookups1-1" "circumflex_left" "'mark' Positionnement de signe lookups1-1" "bottom_cedilla" "'mark' Positionnement de signe lookups1-1" "top_left" "'mark' Positionnement de signe lookups1-1" "dieresis_center" "'mark' Positionnement de signe lookups1-1" "stack_u0303"""  "top_right" "'mark' Positionnement de signe lookups1-1" "bottom_right" "'mark' Positionnement de signe lookups1-1" "bottom_center" "'mark' Positionnement de signe lookups1-1" "top_center" "'mark' Positionnement de signe lookups1-1" "Top"""  "min_top_1"""  "aaaa""" 
-BeginChars: 66638 3794
+BeginChars: 66638 3814
 
 StartChar: o
 Encoding: 111 111 0
@@ -725,6 +732,7 @@ SplineSet
  656 1500 720 1486 765 1468 c 1
  720 1305 l 1
 EndSplineSet
+Substitution2: "'ss06' f ligatures lookups0-1" f.ss06
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" uniE0A4
 Colour: ff00
 EndChar
@@ -785,6 +793,7 @@ SplineSet
  50 926 50 982 50 1028 c 1
  122 1028 l 17
 EndSplineSet
+Substitution2: "'ss06' f ligatures lookups0-1" t.ss06
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" uniE0B2
 Colour: ff00
 EndChar
@@ -916,6 +925,7 @@ LayerCount: 3
 Fore
 Refer: 229 775 N 1 0 0 1 -412 0 2
 Refer: 141 305 N 1 0 0 1 0 0 3
+Substitution2: "'ss06' f ligatures lookups0-1" i.ss06
 LCarets2: 1 0
 Ligature2: "'liga' Soft Dotted i j" i uni0307
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" uniE0A7
@@ -932,6 +942,7 @@ LayerCount: 3
 Fore
 Refer: 229 775 N 1 0 0 1 -363 0 2
 Refer: 317 567 N 1 0 0 1 0 0 3
+Substitution2: "'ss06' f ligatures lookups0-1" j.ss06
 LCarets2: 1 0
 Ligature2: "'liga' Soft Dotted i j" j uni0307
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" uniE0A8
@@ -961,6 +972,7 @@ SplineSet
  320 170 350 140 410 140 c 0
  426 140 450 149 462 156 c 1
 EndSplineSet
+Substitution2: "'ss06' f ligatures lookups0-1" l.ss06
 Substitution2: "'smcp' Bas-de-casse vers petites capitales lookups0-1" uniE0AA
 Colour: ff00
 EndChar
@@ -3748,7 +3760,7 @@ SplineSet
  140 740 l 5
  140 580 l 5
 EndSplineSet
-Substitution2: "'ss06' Bigger operators lookups0-1" uniE2D5
+Substitution2: "'ss07' Bigger basic math operators lookups0-1" plus.ss07
 Colour: ff00
 EndChar
 
@@ -3766,7 +3778,7 @@ SplineSet
  140 580 l 1
 EndSplineSet
 Validated: 1
-Substitution2: "'ss06' Bigger operators lookups0-1" uniE2D6
+Substitution2: "'ss07' Bigger basic math operators lookups0-1" hyphen.ss07
 Colour: ff00
 EndChar
 
@@ -4168,7 +4180,7 @@ SplineSet
  337 660 286 572 278 472 c 1
 EndSplineSet
 Validated: 1
-Substitution2: "'ss06' Bigger operators lookups0-1" uniE2D0
+Substitution2: "'ss07' Bigger basic math operators lookups0-1" asciitilde.ss07
 Colour: ff00
 EndChar
 
@@ -6131,7 +6143,7 @@ SplineSet
  140 304 l 1
  260 184 l 1
 EndSplineSet
-Substitution2: "'ss06' Bigger operators lookups0-1" uniE2D7
+Substitution2: "'ss07' Bigger basic math operators lookups0-1" multiply.ss07
 Colour: ff00
 EndChar
 
@@ -6358,7 +6370,7 @@ SplineSet
  1092 580 l 1
  140 580 l 1
 EndSplineSet
-Substitution2: "'ss06' Bigger operators lookups0-1" uniE2D8
+Substitution2: "'ss07' Bigger basic math operators lookups0-1" divide.ss07
 Colour: ff00
 EndChar
 
@@ -45096,7 +45108,7 @@ SplineSet
  140 740 l 1
  140 580 l 1
 EndSplineSet
-Substitution2: "'ss06' Bigger operators lookups0-1" uniE2D9
+Substitution2: "'ss07' Bigger basic math operators lookups0-1" minus.ss07
 Colour: ff00
 EndChar
 
@@ -70301,7 +70313,6 @@ SplineSet
  590 880 l 1
 EndSplineSet
 Validated: 1
-Ligature2: "'liga' Standard Ligatures for ss05" uniE2D0 uniE2D0
 Colour: ff00
 EndChar
 
@@ -70356,7 +70367,6 @@ SplineSet
  590 880 l 1
 EndSplineSet
 Validated: 5
-Ligature2: "'liga' Standard Ligatures for ss05" uniE2D0 uniE2D0 uniE2D1
 Colour: ff00
 EndChar
 
@@ -70417,7 +70427,6 @@ SplineSet
  590 880 l 1
 EndSplineSet
 Validated: 5
-Ligature2: "'liga' Standard Ligatures for ss05" uniE2D0 uniE2D0 uniE2D2
 Colour: ff00
 EndChar
 
@@ -70475,7 +70484,6 @@ SplineSet
  590 880 l 1
 EndSplineSet
 Validated: 5
-Ligature2: "'liga' Standard Ligatures for ss05" uniE2D0 uniE2D0 uniE2D3
 Colour: ff00
 EndChar
 
@@ -70538,7 +70546,6 @@ SplineSet
  590 880 l 1
 EndSplineSet
 Validated: 5
-Ligature2: "'liga' Standard Ligatures for ss05" uniE2D0 uniE2D0 uniE2D4
 Colour: ff00
 EndChar
 
@@ -70579,7 +70586,6 @@ SplineSet
  50 1040 l 1
 EndSplineSet
 Validated: 5
-Ligature2: "'liga' Standard Ligatures for ss05" uniE2D0 uniE2D1
 Colour: ff00
 EndChar
 
@@ -70626,7 +70632,6 @@ SplineSet
  50 1040 l 1
 EndSplineSet
 Validated: 5
-Ligature2: "'liga' Standard Ligatures for ss05" uniE2D0 uniE2D2
 Colour: ff00
 EndChar
 
@@ -70670,7 +70675,6 @@ SplineSet
  0 1040 l 1
 EndSplineSet
 Validated: 5
-Ligature2: "'liga' Standard Ligatures for ss05" uniE2D0 uniE2D3
 Colour: ff00
 EndChar
 
@@ -70719,7 +70723,6 @@ SplineSet
  50 1040 l 1
 EndSplineSet
 Validated: 5
-Ligature2: "'liga' Standard Ligatures for ss05" uniE2D0 uniE2D4
 Colour: ff00
 EndChar
 
@@ -95691,6 +95694,714 @@ SplineSet
  710 1038 l 5
 EndSplineSet
 Colour: ff8000
+EndChar
+
+StartChar: f_f.ss06
+Encoding: 66222 -1 3794
+Width: 1355
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+590 880 m 1
+ 440 880 l 1
+ 440 0 l 1
+ 260 0 l 1
+ 260 880 l 1
+ 50 880 l 1
+ 50 926 50 994 50 1040 c 1
+ 260 1040 l 1
+ 260 1180 l 2
+ 260 1380 400 1500 600 1500 c 0
+ 656 1500 720 1486 765 1468 c 1
+ 720 1305 l 1
+ 694 1324 643 1340 600 1340 c 0
+ 498 1340 440 1282 440 1180 c 2
+ 440 1040 l 1
+ 590 1040 l 1
+ 800 1040 l 1
+ 800 1180 l 2
+ 800 1380 940 1500 1140 1500 c 0
+ 1196 1500 1260 1486 1305 1468 c 1
+ 1260 1305 l 1
+ 1234 1324 1183 1340 1140 1340 c 0
+ 1038 1340 980 1282 980 1180 c 2
+ 980 1040 l 1
+ 1260 1040 l 1
+ 1260 880 l 1
+ 980 880 l 1
+ 980 0 l 1
+ 800 0 l 1
+ 800 880 l 1
+ 590 880 l 1
+EndSplineSet
+Ligature2: "'liga' Standard Ligatures for ss06" f.ss06 f.ss06
+Colour: ff00
+EndChar
+
+StartChar: f_f_i.ss06
+Encoding: 66223 -1 3795
+Width: 1660
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+1302 1372 m 0
+ 1302 1444 1358 1500 1430 1500 c 0
+ 1502 1500 1558 1444 1558 1372 c 0
+ 1558 1300 1502 1244 1430 1244 c 0
+ 1358 1244 1302 1300 1302 1372 c 0
+1340 0 m 1
+ 1340 1040 l 1
+ 1520 1040 l 1
+ 1520 0 l 1
+ 1340 0 l 1
+590 880 m 1
+ 440 880 l 1
+ 440 0 l 1
+ 260 0 l 1
+ 260 880 l 1
+ 50 880 l 1
+ 50 926 50 994 50 1040 c 1
+ 260 1040 l 1
+ 260 1180 l 2
+ 260 1380 400 1500 600 1500 c 0
+ 656 1500 720 1486 765 1468 c 1
+ 720 1305 l 1
+ 694 1324 643 1340 600 1340 c 0
+ 498 1340 440 1282 440 1180 c 2
+ 440 1040 l 1
+ 590 1040 l 1
+ 800 1040 l 1
+ 800 1180 l 2
+ 800 1380 940 1500 1140 1500 c 0
+ 1196 1500 1260 1486 1305 1468 c 1
+ 1260 1305 l 1
+ 1234 1324 1183 1340 1140 1340 c 0
+ 1038 1340 980 1282 980 1180 c 2
+ 980 1040 l 1
+ 1340 1040 l 1
+ 1340 880 l 1
+ 980 880 l 1
+ 980 0 l 1
+ 800 0 l 1
+ 800 880 l 1
+ 590 880 l 1
+EndSplineSet
+Ligature2: "'liga' Standard Ligatures for ss06" f.ss06 f.ss06 i.ss06
+Colour: ff00
+EndChar
+
+StartChar: f_f_j.ss06
+Encoding: 66224 -1 3796
+Width: 1660
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+1302 1372 m 0
+ 1302 1444 1358 1500 1430 1500 c 0
+ 1502 1500 1558 1444 1558 1372 c 0
+ 1558 1300 1502 1244 1430 1244 c 0
+ 1358 1244 1302 1300 1302 1372 c 0
+1340 0 m 1
+ 1340 1040 l 1
+ 1520 1040 l 1
+ 1520 0 l 1
+ 1520 -210 l 2
+ 1520 -380 1420 -460 1250 -460 c 0
+ 1218 -460 1178 -449 1156 -436 c 1
+ 1198 -284 l 1
+ 1210 -291 1234 -300 1250 -300 c 0
+ 1310 -300 1340 -270 1340 -210 c 2
+ 1340 0 l 1
+590 880 m 1
+ 440 880 l 1
+ 440 0 l 1
+ 260 0 l 1
+ 260 880 l 1
+ 50 880 l 1
+ 50 926 50 994 50 1040 c 1
+ 260 1040 l 1
+ 260 1180 l 2
+ 260 1380 400 1500 600 1500 c 0
+ 656 1500 720 1486 765 1468 c 1
+ 720 1305 l 1
+ 694 1324 643 1340 600 1340 c 0
+ 498 1340 440 1282 440 1180 c 2
+ 440 1040 l 1
+ 590 1040 l 1
+ 800 1040 l 1
+ 800 1180 l 2
+ 800 1380 940 1500 1140 1500 c 0
+ 1196 1500 1260 1486 1305 1468 c 1
+ 1260 1305 l 1
+ 1234 1324 1183 1340 1140 1340 c 0
+ 1038 1340 980 1282 980 1180 c 2
+ 980 1040 l 1
+ 1340 1040 l 1
+ 1340 880 l 1
+ 980 880 l 1
+ 980 0 l 1
+ 800 0 l 1
+ 800 880 l 1
+ 590 880 l 1
+EndSplineSet
+Ligature2: "'liga' Standard Ligatures for ss06" f.ss06 f.ss06 j.ss06
+Colour: ff00
+EndChar
+
+StartChar: f_f_l.ss06
+Encoding: 66225 -1 3797
+Width: 1754
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+1662 156 m 1
+ 1704 4 l 1
+ 1682 -9 1642 -20 1610 -20 c 0
+ 1440 -20 1340 60 1340 230 c 2
+ 1340 440 l 1
+ 1340 578 l 1
+ 1340 1480 l 1
+ 1520 1480 l 1
+ 1520 578 l 1
+ 1520 440 l 1
+ 1520 230 l 2
+ 1520 170 1550 140 1610 140 c 0
+ 1626 140 1650 149 1662 156 c 1
+590 880 m 1
+ 440 880 l 1
+ 440 0 l 1
+ 260 0 l 1
+ 260 880 l 1
+ 50 880 l 1
+ 50 926 50 994 50 1040 c 1
+ 260 1040 l 1
+ 260 1180 l 2
+ 260 1380 400 1500 600 1500 c 0
+ 656 1500 720 1486 765 1468 c 1
+ 720 1305 l 1
+ 694 1324 643 1340 600 1340 c 0
+ 498 1340 440 1282 440 1180 c 2
+ 440 1040 l 1
+ 590 1040 l 1
+ 800 1040 l 1
+ 800 1180 l 2
+ 800 1380 940 1500 1140 1500 c 0
+ 1196 1500 1260 1486 1305 1468 c 1
+ 1260 1305 l 1
+ 1234 1324 1183 1340 1140 1340 c 0
+ 1038 1340 980 1282 980 1180 c 2
+ 980 1040 l 1
+ 1390 1040 l 1
+ 1390 880 l 1
+ 980 880 l 1
+ 980 0 l 1
+ 800 0 l 1
+ 800 880 l 1
+ 590 880 l 1
+EndSplineSet
+Ligature2: "'liga' Standard Ligatures for ss06" f.ss06 f.ss06 l.ss06
+Colour: ff00
+EndChar
+
+StartChar: f_f_t.ss06
+Encoding: 66226 -1 3798
+Width: 1895
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+1218 1040 m 17
+ 1308 1040 1352 1104 1352 1194 c 9
+ 1352 1320 l 1
+ 1520 1320 l 1
+ 1520 1040 l 1
+ 1800 1040 l 1
+ 1800 880 l 1
+ 1520 880 l 1
+ 1520 300 l 2
+ 1520 198 1578 140 1680 140 c 0
+ 1723 140 1774 156 1800 175 c 1
+ 1845 12 l 1
+ 1800 -6 1736 -20 1680 -20 c 0
+ 1480 -20 1340 101 1340 300 c 2
+ 1340 880 l 1
+ 1130 880 l 1
+ 1130 926 1130 994 1130 1040 c 1
+ 1218 1040 l 17
+590 880 m 1
+ 440 880 l 1
+ 440 0 l 1
+ 260 0 l 1
+ 260 880 l 1
+ 50 880 l 1
+ 50 926 50 994 50 1040 c 1
+ 260 1040 l 1
+ 260 1180 l 2
+ 260 1380 400 1500 600 1500 c 0
+ 656 1500 720 1486 765 1468 c 1
+ 720 1305 l 1
+ 694 1324 643 1340 600 1340 c 0
+ 498 1340 440 1282 440 1180 c 2
+ 440 1040 l 1
+ 590 1040 l 1
+ 800 1040 l 1
+ 800 1180 l 2
+ 800 1380 940 1500 1140 1500 c 0
+ 1196 1500 1260 1486 1305 1468 c 1
+ 1260 1305 l 1
+ 1234 1324 1183 1340 1140 1340 c 0
+ 1038 1340 980 1282 980 1180 c 2
+ 980 1040 l 1
+ 1130 1040 l 1
+ 1130 880 l 1
+ 980 880 l 1
+ 980 0 l 1
+ 800 0 l 1
+ 800 880 l 1
+ 590 880 l 1
+EndSplineSet
+Ligature2: "'liga' Standard Ligatures for ss06" f.ss06 f.ss06 t.ss06
+Colour: ff00
+EndChar
+
+StartChar: f_i.ss06
+Encoding: 66227 -1 3799
+Width: 1120
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+762 1372 m 0
+ 762 1444 818 1500 890 1500 c 0
+ 962 1500 1018 1444 1018 1372 c 0
+ 1018 1300 962 1244 890 1244 c 0
+ 818 1244 762 1300 762 1372 c 0
+800 0 m 1
+ 800 1040 l 1
+ 980 1040 l 1
+ 980 0 l 1
+ 800 0 l 1
+50 1040 m 1
+ 260 1040 l 1
+ 260 1180 l 2
+ 260 1380 400 1500 600 1500 c 0
+ 656 1500 720 1486 765 1468 c 1
+ 720 1305 l 1
+ 694 1324 643 1340 600 1340 c 0
+ 498 1340 440 1282 440 1180 c 2
+ 440 1040 l 1
+ 800 1040 l 1
+ 800 880 l 1
+ 440 880 l 1
+ 440 0 l 1
+ 260 0 l 1
+ 260 880 l 1
+ 50 880 l 1
+ 50 1040 l 1
+EndSplineSet
+Ligature2: "'liga' Standard Ligatures for ss06" f.ss06 i.ss06
+Colour: ff00
+EndChar
+
+StartChar: f_j.ss06
+Encoding: 66228 -1 3800
+Width: 1120
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+762 1372 m 0
+ 762 1444 818 1500 890 1500 c 0
+ 962 1500 1018 1444 1018 1372 c 0
+ 1018 1300 962 1244 890 1244 c 0
+ 818 1244 762 1300 762 1372 c 0
+800 0 m 1
+ 800 1040 l 1
+ 980 1040 l 1
+ 980 0 l 1
+ 980 -210 l 2
+ 980 -380 880 -460 710 -460 c 0
+ 678 -460 638 -449 616 -436 c 1
+ 658 -284 l 1
+ 670 -291 694 -300 710 -300 c 0
+ 770 -300 800 -270 800 -210 c 2
+ 800 0 l 1
+50 1040 m 1
+ 260 1040 l 1
+ 260 1180 l 2
+ 260 1380 400 1500 600 1500 c 0
+ 656 1500 720 1486 765 1468 c 1
+ 720 1305 l 1
+ 694 1324 643 1340 600 1340 c 0
+ 498 1340 440 1282 440 1180 c 2
+ 440 1040 l 1
+ 800 1040 l 1
+ 800 880 l 1
+ 440 880 l 1
+ 440 0 l 1
+ 260 0 l 1
+ 260 880 l 1
+ 50 880 l 1
+ 50 1040 l 1
+EndSplineSet
+Ligature2: "'liga' Standard Ligatures for ss06" f.ss06 j.ss06
+Colour: ff00
+EndChar
+
+StartChar: f_l.ss06
+Encoding: 66229 -1 3801
+Width: 1214
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+1122 156 m 1
+ 1164 4 l 1
+ 1142 -9 1102 -20 1070 -20 c 0
+ 900 -20 800 60 800 230 c 2
+ 800 440 l 1
+ 800 578 l 1
+ 800 1480 l 1
+ 980 1480 l 1
+ 980 578 l 1
+ 980 440 l 1
+ 980 230 l 2
+ 980 170 1010 140 1070 140 c 0
+ 1086 140 1110 149 1122 156 c 1
+50 1040 m 1
+ 260 1040 l 1
+ 260 1180 l 2
+ 260 1380 400 1500 600 1500 c 0
+ 656 1500 720 1486 765 1468 c 1
+ 720 1305 l 1
+ 694 1324 643 1340 600 1340 c 0
+ 498 1340 440 1282 440 1180 c 2
+ 440 1040 l 1
+ 850 1040 l 1
+ 850 880 l 1
+ 440 880 l 1
+ 440 0 l 1
+ 260 0 l 1
+ 260 880 l 1
+ 50 880 l 1
+ 50 1040 l 1
+EndSplineSet
+Ligature2: "'liga' Standard Ligatures for ss06" f.ss06 l.ss06
+Colour: ff00
+EndChar
+
+StartChar: f_t.ss06
+Encoding: 66230 -1 3802
+Width: 1355
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+678 1040 m 17
+ 768 1040 812 1104 812 1194 c 9
+ 812 1320 l 1
+ 980 1320 l 1
+ 980 1040 l 1
+ 1260 1040 l 1
+ 1260 880 l 1
+ 980 880 l 1
+ 980 300 l 2
+ 980 198 1038 140 1140 140 c 0
+ 1183 140 1234 156 1260 175 c 1
+ 1305 12 l 1
+ 1260 -6 1196 -20 1140 -20 c 0
+ 940 -20 800 101 800 300 c 2
+ 800 880 l 1
+ 590 880 l 1
+ 590 926 590 994 590 1040 c 1
+ 678 1040 l 17
+50 1040 m 1
+ 260 1040 l 1
+ 260 1180 l 2
+ 260 1380 400 1500 600 1500 c 0
+ 656 1500 720 1486 765 1468 c 1
+ 720 1305 l 1
+ 694 1324 643 1340 600 1340 c 0
+ 498 1340 440 1282 440 1180 c 2
+ 440 1040 l 1
+ 590 1040 l 1
+ 590 880 l 1
+ 440 880 l 1
+ 440 0 l 1
+ 260 0 l 1
+ 260 880 l 1
+ 50 880 l 1
+ 50 1040 l 1
+EndSplineSet
+Ligature2: "'liga' Standard Ligatures for ss06" f.ss06 t.ss06
+Colour: ff00
+EndChar
+
+StartChar: f.ss06
+Encoding: 66231 -1 3803
+Width: 815
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+720 1305 m 1
+ 694 1324 643 1340 600 1340 c 0
+ 498 1340 440 1282 440 1180 c 2
+ 440 1040 l 1
+ 720 1040 l 1
+ 720 880 l 1
+ 440 880 l 1
+ 440 0 l 1
+ 260 0 l 1
+ 260 880 l 1
+ 50 880 l 1
+ 50 926 50 994 50 1040 c 1
+ 260 1040 l 1
+ 260 1180 l 2
+ 260 1380 400 1500 600 1500 c 0
+ 656 1500 720 1486 765 1468 c 1
+ 720 1305 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: i.ss06
+Encoding: 66232 -1 3804
+Width: 500
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+122 1372 m 0
+ 122 1444 178 1500 250 1500 c 0
+ 322 1500 378 1444 378 1372 c 0
+ 378 1300 322 1244 250 1244 c 0
+ 178 1244 122 1300 122 1372 c 0
+160 0 m 1
+ 160 1040 l 1
+ 340 1040 l 1
+ 340 0 l 1
+ 160 0 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: j.ss06
+Encoding: 66233 -1 3805
+Width: 509
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+151 1372 m 0
+ 151 1444 207 1500 279 1500 c 0
+ 351 1500 407 1444 407 1372 c 0
+ 407 1300 351 1244 279 1244 c 0
+ 207 1244 151 1300 151 1372 c 0
+47 -284 m 1
+ 59 -291 83 -300 99 -300 c 0
+ 159 -300 189 -270 189 -210 c 2
+ 189 0 l 1
+ 189 138 l 1
+ 189 1040 l 1
+ 369 1040 l 1
+ 369 138 l 1
+ 369 0 l 1
+ 369 -210 l 2
+ 369 -380 269 -460 99 -460 c 0
+ 67 -460 27 -449 5 -436 c 1
+ 47 -284 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: l.ss06
+Encoding: 66234 -1 3806
+Width: 509
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+462 156 m 1
+ 504 4 l 1
+ 482 -9 442 -20 410 -20 c 0
+ 240 -20 140 60 140 230 c 2
+ 140 440 l 1
+ 140 578 l 1
+ 140 1480 l 1
+ 320 1480 l 1
+ 320 578 l 1
+ 320 440 l 1
+ 320 230 l 2
+ 320 170 350 140 410 140 c 0
+ 426 140 450 149 462 156 c 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: t.ss06
+Encoding: 66235 -1 3807
+Width: 815
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+122 1028 m 17
+ 212 1028 272 1092 272 1182 c 9
+ 272 1320 l 1
+ 440 1320 l 1
+ 440 1040 l 1
+ 720 1040 l 1
+ 720 880 l 1
+ 440 880 l 1
+ 440 300 l 2
+ 440 198 498 140 600 140 c 0
+ 643 140 694 156 720 175 c 1
+ 765 12 l 1
+ 720 -6 656 -20 600 -20 c 0
+ 400 -20 260 101 260 300 c 2
+ 260 880 l 1
+ 50 880 l 1
+ 50 926 50 982 50 1028 c 1
+ 122 1028 l 17
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: plus.ss07
+Encoding: 66236 -1 3808
+Width: 1452
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+816 84 m 1
+ 636 84 l 1
+ 636 1236 l 17
+ 816 1236 l 1
+ 816 84 l 1
+140 580 m 5
+ 140 740 l 5
+ 1312 740 l 17
+ 1312 580 l 1
+ 140 580 l 5
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: hyphen.ss07
+Encoding: 66237 -1 3809
+Width: 1452
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+140 580 m 1
+ 140 740 l 1
+ 1312 740 l 17
+ 1312 580 l 1
+ 140 580 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: multiply.ss07
+Encoding: 66238 -1 3810
+Width: 1452
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+1253 253 m 5
+ 1133 133 l 5
+ 199 1067 l 17
+ 319 1187 l 1
+ 1253 253 l 5
+312 126 m 1
+ 192 246 l 1
+ 1140 1194 l 17
+ 1260 1074 l 1
+ 312 126 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: divide.ss07
+Encoding: 66239 -1 3811
+Width: 1452
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+140 580 m 5
+ 140 740 l 5
+ 1312 740 l 21
+ 1312 580 l 5
+ 140 580 l 5
+600 291 m 0
+ 600 363 653 420 725 420 c 0
+ 797 420 852 363 852 291 c 0
+ 852 219 797 164 725 164 c 0
+ 653 164 600 219 600 291 c 0
+600 1027 m 0
+ 600 1099 653 1156 725 1156 c 0
+ 797 1156 852 1099 852 1027 c 0
+ 852 955 797 900 725 900 c 0
+ 653 900 600 955 600 1027 c 0
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: minus.ss07
+Encoding: 66240 -1 3812
+Width: 1452
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+140 580 m 1
+ 140 740 l 1
+ 1312 740 l 17
+ 1312 580 l 1
+ 140 580 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: asciitilde.ss07
+Encoding: 66241 -1 3813
+Width: 1452
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+318 496 m 1
+ 140 544 l 1
+ 163 739 345 824 500 824 c 0
+ 720 824 817 676 952 676 c 4
+ 1041 676 1126 724 1134 824 c 1
+ 1312 776 l 1
+ 1289 581 1107 496 952 496 c 0
+ 732 496 635 644 500 644 c 4
+ 411 644 326 596 318 496 c 1
+EndSplineSet
+Colour: ff00
 EndChar
 EndChars
 EndSplineFont
