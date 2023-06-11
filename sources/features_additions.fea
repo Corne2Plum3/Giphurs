@@ -1,6 +1,30 @@
 lookup ccmpsoftdottedilookup1 {
-    sub [i]' [gravecomb acutecomb circumflex tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343] by [dotlessi];
-    sub [i]' [uni0327 uni0328] [gravecomb acutecomb circumflex tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 ] by [dotlessi];
+    # i with a dot above it
+    sub [i]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343] by [dotlessi];
+    # i with something below and a dot above it
+    sub [i]' [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E  uni0330 uni0331] [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] by [dotlessi];
+    sub [i]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E  uni0330 uni0331] by [dotlessi];
+    # j with a dot above it 
+    sub [j]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343] by [uni0237];
+    # j with something below and a dot above it
+    sub [j]' [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E uni0330 uni0331] [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] by [uni0237];
+    sub [j]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E uni0330 uni0331] by [uni0237];
+    # i stroke with a dot above it
+    sub [uni0268]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343] by [dotlessuni0268];
+    # i stroke with something below and a dot above it
+    sub [uni0268]' [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E uni0330 uni0331] [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] by [dotlessuni0268];
+    sub [uni0268]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E  uni0330 uni0331] by [dotlessuni0268];
+    # j stroke with a dot above it
+    sub [uni0249]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343] by [uni025F];
+    # j stroke with something below and a dot above it
+    sub [uni0249]' [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E uni0330 uni0331] [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] by [uni025F];
+    sub [uni0249]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E  uni0330 uni0331] by [uni025F];
+    # i ogonek
+    sub [iogonek]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] by i uni0328;
+    # i tilde below
+    sub [uni1E2D]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] by i uni0330;
+    # i dot below
+    sub [uni1ECB]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] by i dotbelowcomb;
 } ccmpsoftdottedilookup1;
 
 feature ccmp {
