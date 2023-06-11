@@ -1,0 +1,21 @@
+lookup ccmpsoftdottedilookup1 {
+    lookupflag: 0;
+    sub [i]' [gravecomb acutecomb circumflex tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343] by [dotlessi];
+    sub [i]' [uni0327 uni0328] [gravecomb acutecomb circumflex tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 ] by [dotlessi];
+} ccmpsoftdottedilookup1;
+
+feature ccmp {
+ script DFLT;
+     language dflt ;
+      lookup ccmpsoftdottedilookup1;
+
+ script latn;
+     language dflt ;
+      lookup ccmpsoftdottedilookup1;
+     language CAT  exclude_dflt;
+      lookup ccmpsoftdottedilookup1;
+     language MOL  exclude_dflt;
+      lookup ccmpsoftdottedilookup1;
+     language ROM  exclude_dflt;
+      lookup ccmpsoftdottedilookup1;
+} ccmp;
