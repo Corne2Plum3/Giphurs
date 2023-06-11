@@ -3,8 +3,7 @@ set -e
 
 # don't forget the '/' at the end!
 SFD_DIR="sfd/"  # where the sfd source files are
-
-SFD_LIST=$(ls $SFD_DIR)
+SFD_LIST=$(ls $SFD_DIR)  # list of all files inside SFD_DIR
 
 # initialisation: set python stuff
 echo -e "\x1b[0;36mSetting up Python environnement...\x1b[0;0m"
@@ -35,6 +34,7 @@ do
     # Apply some modifications to the UFO
     python3 ufo_flatten_components.py $ufo_file
     python3 ufo_add_stylistic_features_from_sfd.py $ufo_file $SFD_DIR/$sfd_file
+    python3 ufo_inject_fea_additions.py "features_additions.fea" $ufo_file/features.fea
 
     echo -e "\x1b[0;32m"$ufo_file" has been generated.\x1b[0;0m"
 done
