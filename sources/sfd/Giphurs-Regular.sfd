@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1687119950
+ModificationTime: 1687120466
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -321,7 +321,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 8246 38 14
+WinInfo: 8550 38 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -36556,7 +36556,7 @@ StartChar: uni20B7
 Encoding: 8375 8375 1508
 Width: 1528
 VWidth: 1050
-Flags: HMWO
+Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
@@ -45011,7 +45011,7 @@ SplineSet
  599 860 l 25
 479 580 m 25
  479 368 l 25
- 217 660 l 5
+ 206 660 l 5
  479 952 l 25
  479 740 l 1
  479 580 l 25
@@ -45043,7 +45043,7 @@ SplineSet
  961 860 l 25
 1081 580 m 25
  1081 368 l 25
- 1403 660 l 1
+ 1414 660 l 5
  1081 952 l 25
  1081 740 l 1
  1081 580 l 25
@@ -45053,7 +45053,6 @@ SplineSet
  1022 740 l 1
  1022 580 l 1
 EndSplineSet
-Validated: 5
 Comment: "See uni21FD"
 Colour: ff0000
 EndChar
@@ -45077,7 +45076,7 @@ SplineSet
 479 580 m 25
  479 740 l 1
  479 952 l 25
- 217 660 l 1
+ 206 660 l 1
  479 368 l 25
  479 580 l 25
 538 580 m 1
@@ -45096,7 +45095,7 @@ SplineSet
  1021 860 l 25
 1141 580 m 25
  1141 368 l 25
- 1403 660 l 1
+ 1414 660 l 5
  1141 952 l 25
  1141 740 l 1
  1141 580 l 25
@@ -45106,7 +45105,6 @@ SplineSet
  1082 740 l 1
  1082 580 l 1
 EndSplineSet
-Validated: 5
 Comment: "See uni21FD"
 Colour: ff0000
 EndChar
@@ -45731,71 +45729,24 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-402 1365 m 2
- 493 1365 546 1413 546 1476 c 0
- 546 1539 493 1586 402 1586 c 0
- 311 1586 258 1528 258 1465 c 1
- 146 1488 l 1
- 160 1594 250 1688 402 1688 c 0
- 554 1688 662 1594 662 1480 c 4
- 662 1414 623 1358 558 1320 c 1
- 640 1279 689 1212 689 1134 c 0
- 689 1010 569 910 402 910 c 0
- 246 910 134 1003 119 1128 c 1
- 231 1152 l 1
- 231 1079 296 1012 402 1012 c 0
- 508 1012 574 1068 574 1141 c 0
- 574 1214 510 1269 404 1269 c 2
- 353 1269 l 1
- 353 1365 l 1
- 402 1365 l 2
-1127 1668 m 1
- 1599 1668 l 1
- 1599 1514 l 1
- 1127 1514 l 1
- 1127 1668 l 1
-511 660 m 1
- 511 500 l 1
- 139 500 l 1
- 139 660 l 1
- 511 660 l 1
-552 0 m 1
- 319 660 l 1
- 511 660 l 1
- 651 224 l 1
- 1127 1668 l 1
- 1319 1668 l 1
- 750 0 l 1
- 552 0 l 1
-EndSplineSet
-Comment: "radical +- three.superior"
-Colour: ff0000
-EndChar
-
-StartChar: uni221C
-Encoding: 8732 8732 1759
-Width: 1600
-VWidth: 1000
-Flags: HMW
-LayerCount: 4
-Fore
-SplineSet
-524 1668 m 1
- 403 1668 l 1
- 138 1184 l 1
- 138 1082 l 1
- 464 1082 l 1
- 464 928 l 1
- 579 928 l 1
- 579 1082 l 1
- 682 1082 l 1
- 682 1184 l 1
- 579 1184 l 1
- 579 1338 l 1
- 468 1338 l 1
- 468 1184 l 1
- 257 1184 l 1
- 524 1668 l 1
+368 1397 m 4
+ 453 1397 502 1437 502 1495 c 4
+ 502 1553 453 1591 368 1591 c 4
+ 283 1591 232 1535 232 1477 c 5
+ 125 1505 l 5
+ 139 1604 225 1688 368 1688 c 4
+ 511 1688 610 1607 610 1501 c 4
+ 610 1439 575 1388 513 1354 c 5
+ 590 1316 636 1259 636 1186 c 4
+ 636 1070 525 982 368 982 c 4
+ 221 982 114 1064 100 1181 c 5
+ 207 1210 l 5
+ 207 1143 269 1079 368 1079 c 4
+ 467 1079 528 1125 528 1192 c 4
+ 528 1259 468 1305 369 1305 c 4
+ 334 1305 322 1305 322 1305 c 5
+ 322 1397 l 5
+ 322 1397 334 1397 368 1397 c 4
 1128 1668 m 1
  1600 1668 l 1
  1600 1514 l 1
@@ -45815,8 +45766,54 @@ SplineSet
  751 0 l 1
  553 0 l 1
 EndSplineSet
-Validated: 5
-Comment: "radical +- four.superior"
+Comment: "radical +- three.superior, scaled by 80%"
+Colour: ff0000
+EndChar
+
+StartChar: uni221C
+Encoding: 8732 8732 1759
+Width: 1600
+VWidth: 1000
+Flags: HMW
+LayerCount: 4
+Fore
+SplineSet
+452 1668 m 5
+ 335 1668 l 5
+ 100 1218 l 5
+ 100 1122 l 5
+ 416 1122 l 5
+ 416 982 l 5
+ 524 982 l 5
+ 524 1122 l 5
+ 616 1122 l 5
+ 616 1218 l 5
+ 524 1218 l 5
+ 524 1356 l 5
+ 419 1356 l 5
+ 419 1218 l 5
+ 215 1218 l 5
+ 452 1668 l 5
+1128 1668 m 1
+ 1600 1668 l 1
+ 1600 1514 l 1
+ 1128 1514 l 1
+ 1128 1668 l 1
+512 660 m 1
+ 512 500 l 1
+ 140 500 l 1
+ 140 660 l 1
+ 512 660 l 1
+553 0 m 1
+ 320 660 l 1
+ 512 660 l 1
+ 652 224 l 1
+ 1128 1668 l 1
+ 1320 1668 l 1
+ 751 0 l 1
+ 553 0 l 1
+EndSplineSet
+Comment: "radical +- four.superior, scaled by 80%"
 Colour: ff0000
 EndChar
 
