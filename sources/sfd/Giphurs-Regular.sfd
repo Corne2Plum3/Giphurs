@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1687123176
+ModificationTime: 1687123852
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -321,7 +321,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 8664 19 14
+WinInfo: 8702 19 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -389,7 +389,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 307200 153600 102400 532480 -1048576 102400 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "bottom_ypogegrammeni" "'mark' Positionnement de signe lookups1-1" "top_left_O2" "'mark' Positionnement de signe lookups1-1" "top_left_O1" "'mark' Positionnement de signe lookups1-1" "circumflex_right" "'mark' Positionnement de signe lookups1-1" "circumflex_left" "'mark' Positionnement de signe lookups1-1" "bottom_cedilla" "'mark' Positionnement de signe lookups1-1" "top_left" "'mark' Positionnement de signe lookups1-1" "dieresis_center" "'mark' Positionnement de signe lookups1-1" "stack_u0303"""  "top_right" "'mark' Positionnement de signe lookups1-1" "bottom_right" "'mark' Positionnement de signe lookups1-1" "bottom_center" "'mark' Positionnement de signe lookups1-1" "top_center" "'mark' Positionnement de signe lookups1-1" "Top"""  "min_top_1"""  "aaaa""" 
-BeginChars: 66925 3856
+BeginChars: 66926 3857
 
 StartChar: o
 Encoding: 111 111 0
@@ -41353,6 +41353,7 @@ SplineSet
  168 580 l 1
 EndSplineSet
 Validated: 5
+Substitution2: "'dnom' D+AOkA-nominateurs lookups0-1" arrowleft.denominator
 Ligature2: "'liga' Arrows" less hyphen
 Colour: ff00
 EndChar
@@ -48697,36 +48698,36 @@ StartChar: uni228C
 Encoding: 8844 8844 1852
 Width: 1308
 VWidth: 1000
-Flags: HMW
+Flags: HMWO
 LayerCount: 4
 Fore
 SplineSet
-400 630 m 1
- 604 426 l 1
- 662 483 l 1
- 488 652 l 1
- 662 821 l 1
- 604 878 l 1
- 400 674 l 1
- 400 630 l 1
-449 612 m 1
- 908 612 l 1
- 908 692 l 1
- 449 692 l 1
- 449 612 l 1
-140 657 m 0
- 140 376 342 139 654 139 c 0
- 966 139 1168 376 1168 657 c 0
- 1168 1320 l 25
- 988 1320 l 25
- 988 657 l 0
- 988 466 874 307 654 307 c 0
- 434 307 320 466 320 657 c 0
- 320 1320 l 25
- 140 1320 l 25
- 140 657 l 0
+368 693 m 5
+ 604 456 l 5
+ 682 533 l 5
+ 490 718 l 5
+ 682 904 l 5
+ 604 981 l 5
+ 368 744 l 5
+ 368 693 l 5
+424 658 m 5
+ 930 658 l 5
+ 930 778 l 5
+ 424 778 l 5
+ 424 658 l 5
+140 734 m 0
+ 140 453 342 216 654 216 c 0
+ 966 216 1168 453 1168 734 c 0
+ 1168 1244 l 25
+ 988 1244 l 25
+ 988 734 l 0
+ 988 543 874 384 654 384 c 0
+ 434 384 320 543 320 734 c 0
+ 320 1244 l 25
+ 140 1244 l 25
+ 140 734 l 0
 EndSplineSet
-Validated: 5
+Comment: "union (U+-222A) as base +- arrow subscript, length decreased to make it fit inside"
 Colour: ff0000
 EndChar
 
@@ -48738,24 +48739,24 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-529 657 m 0
- 529 729 582 786 654 786 c 0
- 726 786 781 729 781 657 c 0
- 781 585 726 530 654 530 c 0
- 582 530 529 585 529 657 c 0
-140 657 m 0
- 140 376 342 139 654 139 c 0
- 966 139 1168 376 1168 657 c 0
- 1168 1320 l 25
- 988 1320 l 25
- 988 657 l 0
- 988 466 874 307 654 307 c 0
- 434 307 320 466 320 657 c 0
- 320 1320 l 25
- 140 1320 l 25
- 140 657 l 0
+558 734 m 4
+ 558 788 600 830 654 830 c 4
+ 708 830 750 788 750 734 c 4
+ 750 680 708 638 654 638 c 4
+ 600 638 558 680 558 734 c 4
+140 734 m 0
+ 140 453 342 216 654 216 c 0
+ 966 216 1168 453 1168 734 c 0
+ 1168 1244 l 25
+ 988 1244 l 25
+ 988 734 l 0
+ 988 543 874 384 654 384 c 0
+ 434 384 320 543 320 734 c 0
+ 320 1244 l 25
+ 140 1244 l 25
+ 140 734 l 0
 EndSplineSet
-Validated: 9
+Comment: "union (U+-222A) as base +- the dot from i.superior"
 Colour: ff0000
 EndChar
 
@@ -48767,29 +48768,29 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-604 875 m 1
- 604 440 l 1
- 704 440 l 9
- 704 875 l 1
- 604 875 l 1
-436 612 m 1
- 872 612 l 1
- 872 702 l 9
- 436 702 l 1
- 436 612 l 1
-140 657 m 0
- 140 376 342 139 654 139 c 0
- 966 139 1168 376 1168 657 c 0
- 1168 1320 l 25
- 988 1320 l 25
- 988 657 l 0
- 988 466 874 307 654 307 c 0
- 434 307 320 466 320 657 c 0
- 320 1320 l 25
- 140 1320 l 25
- 140 657 l 0
+587 994 m 5
+ 587 442 l 5
+ 721 442 l 13
+ 721 994 l 5
+ 587 994 l 5
+378 658 m 5
+ 930 658 l 5
+ 930 778 l 13
+ 378 778 l 5
+ 378 658 l 5
+140 734 m 0
+ 140 453 342 216 654 216 c 0
+ 966 216 1168 453 1168 734 c 0
+ 1168 1244 l 25
+ 988 1244 l 25
+ 988 734 l 0
+ 988 543 874 384 654 384 c 0
+ 434 384 320 543 320 734 c 0
+ 320 1244 l 25
+ 140 1244 l 25
+ 140 734 l 0
 EndSplineSet
-Validated: 5
+Comment: "union (U+-222A) as base +- plus sign subscript"
 Colour: ff0000
 EndChar
 
@@ -96751,6 +96752,29 @@ SplineSet
  151 800 238 870 364 870 c 0
  399 870 440 860 468 847 c 1
  442 738 l 1
+EndSplineSet
+EndChar
+
+StartChar: arrowleft.denominator
+Encoding: 66925 -1 3856
+Width: 939
+Flags: H
+LayerCount: 4
+Fore
+SplineSet
+41 357 m 5
+ 277 120 l 5
+ 355 197 l 5
+ 163 382 l 5
+ 355 568 l 5
+ 277 645 l 5
+ 41 408 l 5
+ 41 357 l 5
+97 322 m 5
+ 899 322 l 5
+ 899 442 l 5
+ 97 442 l 5
+ 97 322 l 5
 EndSplineSet
 EndChar
 EndChars
