@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1687125419
+ModificationTime: 1687125882
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -321,7 +321,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 8759 19 14
+WinInfo: 66671 19 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -389,7 +389,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 307200 153600 102400 532480 -1048576 102400 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "bottom_ypogegrammeni" "'mark' Positionnement de signe lookups1-1" "top_left_O2" "'mark' Positionnement de signe lookups1-1" "top_left_O1" "'mark' Positionnement de signe lookups1-1" "circumflex_right" "'mark' Positionnement de signe lookups1-1" "circumflex_left" "'mark' Positionnement de signe lookups1-1" "bottom_cedilla" "'mark' Positionnement de signe lookups1-1" "top_left" "'mark' Positionnement de signe lookups1-1" "dieresis_center" "'mark' Positionnement de signe lookups1-1" "stack_u0303"""  "top_right" "'mark' Positionnement de signe lookups1-1" "bottom_right" "'mark' Positionnement de signe lookups1-1" "bottom_center" "'mark' Positionnement de signe lookups1-1" "top_center" "'mark' Positionnement de signe lookups1-1" "Top"""  "min_top_1"""  "aaaa""" 
-BeginChars: 66926 3857
+BeginChars: 66921 3852
 
 StartChar: o
 Encoding: 111 111 0
@@ -507,7 +507,6 @@ SplineSet
  1044 1480 l 1
  1044 168 l 1
 EndSplineSet
-Substitution2: "'dnom' D+AOkA-nominateurs lookups0-1" d.denominator
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" d.sc
 Colour: ff00
 EndChar
@@ -761,7 +760,6 @@ SplineSet
  656 1500 720 1486 765 1468 c 1
  720 1305 l 1
 EndSplineSet
-Substitution2: "'dnom' D+AOkA-nominateurs lookups0-1" f.denominator
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" f.sc
 Substitution2: "'ss06' f ligatures lookups0-1" f.ss06
 Colour: ff00
@@ -1307,7 +1305,6 @@ SplineSet
  776 0 l 5
  590 0 l 5
 EndSplineSet
-Substitution2: "'dnom' D+AOkA-nominateurs lookups0-1" V.denominator
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" v.sc
 Colour: ffff
 EndChar
@@ -2690,7 +2687,6 @@ SplineSet
  482 452 l 1
 EndSplineSet
 Validated: 5
-Substitution2: "'dnom' D+AOkA-nominateurs lookups0-1" question.denominator
 Colour: ff00
 EndChar
 
@@ -41353,7 +41349,6 @@ SplineSet
  168 580 l 1
 EndSplineSet
 Validated: 5
-Substitution2: "'dnom' D+AOkA-nominateurs lookups0-1" arrowleft.denominator
 Ligature2: "'liga' Arrows" less hyphen
 Colour: ff00
 EndChar
@@ -96662,132 +96657,6 @@ SplineSet
  245 0 l 1
 EndSplineSet
 Colour: ff00
-EndChar
-
-StartChar: V.denominator
-Encoding: 66921 -1 3852
-Width: 786
-Flags: H
-LayerCount: 4
-Fore
-SplineSet
-395 140 m 5
- 632 858 l 5
- 776 858 l 5
- 480 0 l 5
- 306 0 l 5
- 10 858 l 5
- 154 858 l 5
- 395 140 l 5
-EndSplineSet
-EndChar
-
-StartChar: question.denominator
-Encoding: 66922 -1 3853
-Width: 744
-Flags: HW
-LayerCount: 4
-Fore
-SplineSet
-276 84 m 0
- 276 138 318 180 372 180 c 0
- 426 180 468 138 468 84 c 0
- 468 30 426 -12 372 -12 c 0
- 318 -12 276 30 276 84 c 0
-372 750 m 0
- 492 750 548 687 548 602 c 0
- 548 517 493 452 372 452 c 4
- 372 332 l 4
- 541 332 683 439 683 602 c 0
- 683 765 552 870 372 870 c 0
- 192 870 61 747 61 586 c 0
- 199 554 l 1
- 197 563 196 573 196 583 c 0
- 196 668 251 750 372 750 c 0
-308 257 m 1
- 436 257 l 1
- 436 452 l 5
- 308 452 l 5
- 308 257 l 1
-EndSplineSet
-EndChar
-
-StartChar: d.denominator
-Encoding: 66923 -1 3854
-Width: 733
-Flags: H
-AnchorPoint: "top_right" 650 858 basechar 0
-AnchorPoint: "top_center" 588 795 basechar 0
-LayerCount: 4
-Fore
-SplineSet
-532 304 m 0
- 532 427 463 500 359 500 c 4
- 255 500 186 427 186 304 c 0
- 186 181 255 108 359 108 c 0
- 463 108 532 181 532 304 c 0
-652 100 m 1
- 652 41 664 0 664 0 c 1
- 543 0 l 1
- 543 0 532 44 532 87 c 1
- 480 26 426 -12 350 -12 c 0
- 178 -12 58 120 58 304 c 0
- 58 488 178 620 349 620 c 4
- 425 620 471 583 523 522 c 1
- 523 858 l 1
- 652 858 l 1
- 652 100 l 1
-EndSplineSet
-EndChar
-
-StartChar: f.denominator
-Encoding: 66924 -1 3855
-Width: 497
-Flags: H
-LayerCount: 4
-Fore
-SplineSet
-442 738 m 1
- 427 748 397 756 372 756 c 0
- 313 756 279 726 279 674 c 2
- 279 603 l 1
- 439 603 l 5
- 439 489 l 5
- 279 489 l 1
- 279 0 l 1
- 151 0 l 1
- 151 489 l 1
- 31 489 l 1
- 31 522 31 570 31 603 c 1
- 151 603 l 1
- 151 684 l 2
- 151 800 238 870 364 870 c 0
- 399 870 440 860 468 847 c 1
- 442 738 l 1
-EndSplineSet
-EndChar
-
-StartChar: arrowleft.denominator
-Encoding: 66925 -1 3856
-Width: 939
-Flags: H
-LayerCount: 4
-Fore
-SplineSet
-41 357 m 5
- 277 120 l 5
- 355 197 l 5
- 163 382 l 5
- 355 568 l 5
- 277 645 l 5
- 41 408 l 5
- 41 357 l 5
-97 322 m 5
- 899 322 l 5
- 899 442 l 5
- 97 442 l 5
- 97 322 l 5
-EndSplineSet
 EndChar
 EndChars
 EndSplineFont
