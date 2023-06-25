@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+COMPILATION_START_TIME=$(date +%s)  # when the compilation started
+
 # don't forget the '/' at the end!
 SFD_DIR="sfd/"  # where the sfd source files are
 SFD_LIST=$(ls $SFD_DIR)  # list of all files inside SFD_DIR
@@ -40,4 +42,7 @@ do
     echo -e "\x1b[0;32m"$ufo_file" has been generated.\x1b[0;0m"
 done
 
-echo -e "\x1b[0;32mAll sources has been generated succesfully! ^^\x1b[0;0m"
+# sucess message
+COMPILATION_END_TIME=$(date +%s)  # when the compilation finished
+COMPILATION_DURATION=$(($COMPILATION_END_TIME-$COMPILATION_START_TIME))
+echo -e "\x1b[0;32mAll sources has been generated succesfully in "$COMPILATION_DURATION" second(s) ^^\x1b[0;0m"

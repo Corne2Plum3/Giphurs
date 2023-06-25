@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-COMPILATION_START_TIME=$(date +%s)  # when the compilation started
+SCRIPT_START_TIME=$(date +%s)  # when the whole script started
 
 # check if there's at least one argument
 if [ $# -lt 1 ]
@@ -51,6 +51,7 @@ then
     mkdir ../fonts
 fi
 
+COMPILATION_START_TIME=$(date +%s)  # when the compilation started
 
 # build fonts
 case $1 in
