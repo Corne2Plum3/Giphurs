@@ -25,15 +25,15 @@ for sfd_file in $SFD_LIST
 do
     # Clean the SFD file
     sfd_temp="sfd_cleaned/"${sfd_file%.*}"_temp.sfd"
-    python3 fontforge_cleanup.py $SFD_DIR$sfd_file $sfd_temp
+    python3 sfd_cleanup.py $SFD_DIR$sfd_file $sfd_temp
 
     # Convert to UFO
     ufo_file="ufo/"${sfd_file%.*}
     python3 -m sfdLib --ufo-kerning --ufo-anchors $sfd_temp $ufo_file
 
     # Apply some modifications to the UFO
-    python3 ufo_flatten_components.py $ufo_file
-    python3 ufo_add_stylistic_features_from_sfd.py $ufo_file $SFD_DIR/$sfd_file
+    python3 ufo_force_flatten_components.py $ufo_file
+    python3 ufo_add_stylistic_sets_descriptions_from_sfd.py $ufo_file $SFD_DIR/$sfd_file
     python3 ufo_inject_fea_additions.py "features_additions_beginning.fea" $ufo_file/features.fea 0
     python3 ufo_inject_fea_additions.py "features_additions_end.fea" $ufo_file/features.fea 1
 

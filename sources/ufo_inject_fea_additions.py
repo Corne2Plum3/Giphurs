@@ -5,19 +5,19 @@ This script inject the content of src_file at the end of dst_file, both being pa
 import os
 import sys
 
-def copy_src_content_into_dst(src_path, src_dst, mode="1"):
+def copy_src_content_into_dst(src_path, dst_path, mode="1"):
     """ Copy content of src_path at the end of src_dst. 
     Mode: 0 for the beginning, 1 for the end. """
 
     assert (mode in ["0","1"]), f"Invalid mode value '{mode}'. This can be either 0 or 1."
 
     # open the source file
-    f_src = open(sys.argv[1], "r")
+    f_src = open(src_path, "r")
 
     if mode == "0":  # add lines at the beginning
         # store original content in another file
         temp_filename = "temp"
-        with open(sys.argv[2], "r") as f_dst, open(temp_filename, "a") as f_temp:
+        with open(dst_path, "r") as f_dst, open(temp_filename, "a") as f_temp:
             # Write given content to the temp file
             for line in f_src:
                 f_temp.write(line)
@@ -27,8 +27,8 @@ def copy_src_content_into_dst(src_path, src_dst, mode="1"):
                 f_temp.write(line)
         
         # remove original file
-        os.remove(sys.argv[2])
-        os.rename(temp_filename, sys.argv[2])
+        os.remove(dst_path)
+        os.rename(temp_filename, dst_path)
 
     else:  # add lines at the end
         with open(sys.argv[2], "a") as f_dst:  # open the dst file
