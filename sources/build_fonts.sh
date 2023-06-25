@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+COMPILATION_START_TIME=$(date +%s)  # when the compilation started
+
 # check if there's at least one argument
 if [ $# -lt 1 ]
 then
@@ -61,6 +63,11 @@ case $1 in
         ./$0 ttf -i
         ./$0 woff2 -i
 
+        # sucess message
+        COMPILATION_END_TIME=$(date +%s)  # when the compilation finished
+        COMPILATION_DURATION=$(($COMPILATION_END_TIME-$COMPILATION_START_TIME))
+        echo -e "\x1b[1;32mAll fonts have been generated in "$COMPILATION_DURATION" second(s) OwO\x1b[0;0m"
+
         ;;
 
     otf )
@@ -89,7 +96,11 @@ case $1 in
             rm temp
         done
 
-        echo -e "\x1b[1;32mOTF fonts has been generated with sucess! UwU\x1b[0;0m"
+        # sucess message
+        COMPILATION_END_TIME=$(date +%s)  # when the compilation finished
+        COMPILATION_DURATION=$(($COMPILATION_END_TIME-$COMPILATION_START_TIME))
+        echo -e "\x1b[1;32mOTF font(s) have been generated in "$COMPILATION_DURATION" second(s) UwU\x1b[0;0m"
+
 
         ;;
 
@@ -119,7 +130,10 @@ case $1 in
             rm temp
         done
 
-        echo -e "\x1b[1;32mTTF fonts has been generated with sucess! UwU\x1b[0;0m"
+        # sucess message
+        COMPILATION_END_TIME=$(date +%s)  # when the compilation finished
+        COMPILATION_DURATION=$(($COMPILATION_END_TIME-$COMPILATION_START_TIME))
+        echo -e "\x1b[1;32mTTF font(s) have been generated in "$COMPILATION_DURATION" second(s) UwU\x1b[0;0m"
 
         ;;
 
@@ -172,8 +186,11 @@ case $1 in
 
         # The woff2 has been generated inside the ttf folder bruh. Moving them into the right folder
         mv $(find ../fonts/ttf/*.woff2) ../fonts/webfonts/
-
-        echo -e "\x1b[1;32mWOFF2 webfonts has been generated with sucess! UwU\x1b[0;0m"
+        
+        # sucess message
+        COMPILATION_END_TIME=$(date +%s)  # when the compilation finished
+        COMPILATION_DURATION=$(($COMPILATION_END_TIME-$COMPILATION_START_TIME))
+        echo -e "\x1b[1;32mWOFF2 webfont(s) have been generated in "$COMPILATION_DURATION" second(s) UwU\x1b[0;0m"
 
         ;;
     
