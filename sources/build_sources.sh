@@ -34,7 +34,8 @@ do
     # Apply some modifications to the UFO
     python3 ufo_flatten_components.py $ufo_file
     python3 ufo_add_stylistic_features_from_sfd.py $ufo_file $SFD_DIR/$sfd_file
-    python3 ufo_inject_fea_additions.py "features_additions.fea" $ufo_file/features.fea
+    python3 ufo_inject_fea_additions.py "features_additions_beginning.fea" $ufo_file/features.fea 0
+    python3 ufo_inject_fea_additions.py "features_additions_end.fea" $ufo_file/features.fea 1
 
     echo -e "\x1b[0;32m"$ufo_file" has been generated.\x1b[0;0m"
 done
