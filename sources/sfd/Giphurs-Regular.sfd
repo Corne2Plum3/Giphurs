@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1688234572
+ModificationTime: 1688236160
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -318,10 +318,10 @@ OtfFeatName: 'ss08' 1033 "Alternative ampersand, dollar and cent" 2057 "Alternat
 Encoding: UnicodeBmp
 UnicodeInterp: none
 NameList: Adobe Glyph List
-DisplaySize: -48
+DisplaySize: -72
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 7733 19 14
+WinInfo: 144 12 3
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -4297,11 +4297,11 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-862 1220 m 25
- 482 -180 l 25
- 334 -180 l 1
- 714 1220 l 1
- 862 1220 l 25
+862 1220 m 29
+ 482 -180 l 29
+ 334 -180 l 5
+ 714 1220 l 5
+ 862 1220 l 29
 280 520 m 0
  280 300 407 140 598 140 c 0
  739 140 840 207 889 340 c 1
@@ -4375,43 +4375,42 @@ EndChar
 
 StartChar: currency
 Encoding: 164 164 160
-Width: 2048
-Flags: HM
+Width: 1320
+Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-1270 798 m 17
- 1142 926 l 9
- 1432 1216 l 25
- 1560 1088 l 25
- 1270 798 l 17
-730 514 m 17
- 858 386 l 9
- 568 96 l 25
- 440 224 l 25
- 730 514 l 17
-1142 386 m 17
- 1270 514 l 9
- 1560 224 l 25
- 1432 96 l 25
- 1142 386 l 17
-858 926 m 17
- 730 798 l 9
- 440 1088 l 25
- 568 1216 l 25
- 858 926 l 17
-560 656 m 0
- 560 907 737 1096 1000 1096 c 0
- 1263 1096 1440 907 1440 656 c 0
- 1440 405 1263 216 1000 216 c 0
- 737 216 560 405 560 656 c 0
-740 656 m 0
- 740 496 840 376 1000 376 c 0
- 1160 376 1260 496 1260 656 c 0
- 1260 816 1160 936 1000 936 c 0
- 840 936 740 816 740 656 c 0
+930 798 m 17
+ 802 926 l 9
+ 1092 1216 l 25
+ 1220 1088 l 25
+ 930 798 l 17
+390 514 m 17
+ 518 386 l 9
+ 228 96 l 25
+ 100 224 l 25
+ 390 514 l 17
+802 386 m 17
+ 930 514 l 9
+ 1220 224 l 25
+ 1092 96 l 25
+ 802 386 l 17
+518 926 m 17
+ 390 798 l 9
+ 100 1088 l 25
+ 228 1216 l 25
+ 518 926 l 17
+220 656 m 0
+ 220 907 397 1096 660 1096 c 0
+ 923 1096 1100 907 1100 656 c 0
+ 1100 405 923 216 660 216 c 0
+ 397 216 220 405 220 656 c 0
+400 656 m 0
+ 400 496 500 376 660 376 c 0
+ 820 376 920 496 920 656 c 0
+ 920 816 820 936 660 936 c 0
+ 500 936 400 816 400 656 c 0
 EndSplineSet
-Validated: 5
 Colour: ff00
 EndChar
 
@@ -4419,20 +4418,20 @@ StartChar: yen
 Encoding: 165 165 161
 Width: 1392
 VWidth: 1000
-Flags: HMW
+Flags: HMWO
 LayerCount: 4
 Fore
 SplineSet
-232 608 m 1
- 232 760 l 1
- 1160 760 l 17
- 1160 608 l 1
- 232 608 l 1
-232 320 m 1
- 232 472 l 1
- 1160 472 l 17
- 1160 320 l 1
- 232 320 l 1
+232 608 m 5
+ 232 760 l 5
+ 1160 760 l 21
+ 1160 608 l 5
+ 232 608 l 5
+232 320 m 5
+ 232 472 l 5
+ 1160 472 l 21
+ 1160 320 l 5
+ 232 320 l 5
 601 0 m 1
  601 740 l 1
  791 740 l 1
