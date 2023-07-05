@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1688583501
+ModificationTime: 1688584352
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -321,7 +321,7 @@ NameList: Adobe Glyph List
 DisplaySize: -72
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 8124 12 10
+WinInfo: 0 12 10
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -1253,7 +1253,7 @@ AnchorPoint: "bottom_ypogegrammeni" 678 -90 basechar 0
 AnchorPoint: "top_left" 490 1480 basechar 0
 AnchorPoint: "bottom_center" 678 0 basechar 0
 AnchorPoint: "bottom_right" 1286 0 basechar 0
-AnchorPoint: "top_center" 678 1390 basechar 0
+AnchorPoint: "top_center" 678 1380 basechar 0
 LayerCount: 4
 Fore
 SplineSet
@@ -6755,7 +6755,7 @@ Flags: HMW
 AnchorPoint: "top_center" 678 1680 basechar 0
 LayerCount: 4
 Fore
-Refer: 224 774 S 1 0 0 1 36 340 2
+Refer: 224 774 N 1 0 0 1 36 340 2
 Refer: 27 65 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" abreve.sc
 Colour: ff
@@ -11338,7 +11338,7 @@ Width: 1356
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 80 738 2
+Refer: 221 772 N 1 0 0 1 36 718 2
 Refer: 469 550 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni01E1.sc
 Colour: ff
