@@ -100,7 +100,7 @@ In this section you will install the dependencies (all Python libraries) inside 
 
 Once all dependencies are ready, you can finally build the font. Inside the `sources` folder you have differents scripts to make the font files. All of them **must** be run with the `sources` folder as working directory else they won't work.
 
-### List of th available scripts
+### List of the available scripts
 
 * `build_sources.sh`: before being converted into font files, the sources files (the `.sfd` files) are first converted into [UFO files](https://en.wikipedia.org/wiki/Unified_Font_Object) before being compiled by [Fontmake](https://github.com/googlefonts/fontmake). This is what this script does, where the `.sfd` are first cleaned (for example, correcting directions and overlaps) and put into the `sfd_cleaned` folder, then converted into UFO inside `ufo` folder.
 
