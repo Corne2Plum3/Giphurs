@@ -1,3 +1,7 @@
+# make a zip archive of the font folder, used to export fonts
+export_fonts:
+	zip -r fonts fonts/
+
 # build the fonts (otf, ttf, woof2, static + variables)
 fonts: ufo
 	cd sources && gftools builder config.yaml
