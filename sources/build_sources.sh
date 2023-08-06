@@ -7,14 +7,6 @@ COMPILATION_START_TIME=$(date +%s)  # when the compilation started
 SFD_DIR="sfd/"  # where the sfd source files are
 SFD_LIST=$(ls $SFD_DIR)  # list of all files inside SFD_DIR
 
-# initialisation: set python stuff
-echo -e "\x1b[0;36mSetting up Python environnement...\x1b[0;0m"
-export PYTHONV=$(python3 -c 'import sys; v=sys.version_info; print(f"python{v.major}.{v.minor}")')
-export PYTHONPATH="py/local/lib/$PYTHONV/dist-packages:$(python3 -c "import sys; print(':'.join(sys.path)[1:])")"
-if [ ! -d py ]; then
-  pip install -U --prefix=py git+https://github.com/MFEK/sfdLib.py
-fi
-
 # make the folder to work in
 rm -rf sfd_cleaned
 mkdir sfd_cleaned
@@ -23,6 +15,7 @@ mkdir ufo
 
 echo -e "\x1b[0;36mBuilding the sources...\x1b[0;0m"
 
+# build the ufo files from sfd
 for sfd_file in $SFD_LIST
 do
     # Clean the SFD file

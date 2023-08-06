@@ -17,11 +17,11 @@ def clean_sfd(sfd_source, sfd_dest):
     # corrections
     font.selection.all()  # select all glyphs
 
-    font.simplify()
+    #font.simplify()  # removed as some points would be removed between 2 differents weight
+    #font.removeOverlap()  # removed as some glyphs as the cent (¢) would have a different number of point between weights 400 and 900
     font.round()
-    font.removeOverlap()
-    font.correctDirection()
-    font.simplify()
+    #font.correctDirection()  # to ensure that the directions are the same between the differents sfd file
+    #font.simplify()
 
     # save
     font.save(sfd_dest)

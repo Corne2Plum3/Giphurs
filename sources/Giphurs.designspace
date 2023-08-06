@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="wght" name="weight" minimum="400" maximum="900" default="400"/>
+  </axes>
+  <sources>
+    <source filename="ufo/Giphurs-Regular" name="master.Giphurs.Black.0" familyname="Giphurs" stylename="Regular">
+      <lib copy="1"/>
+      <groups copy="1"/>
+      <features copy="1"/>
+      <info copy="1"/>
+      <location>
+        <dimension name="weight" xvalue="400"/>
+      </location>
+    </source>
+    <source filename="ufo/Giphurs-Black" familyname="Giphurs" stylename="Black">
+      <location>
+        <dimension name="weight" xvalue="900"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance name="Giphurs Regular" familyname="Giphurs" stylename="Regular" stylemapfamilyname="Giphurs Regular" stylemapstylename="">
+      <location>
+        <dimension name="weight" xvalue="400"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Giphurs Medium" familyname="Giphurs" stylename="Medium" stylemapfamilyname="Giphurs Medium" stylemapstylename="">
+      <location>
+        <dimension name="weight" xvalue="500"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Giphurs SemiBold" familyname="Giphurs" stylename="SemiBold" stylemapfamilyname="Giphurs SemiBold" stylemapstylename="">
+      <location>
+        <dimension name="weight" xvalue="600"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Giphurs Bold" familyname="Giphurs" stylename="Bold" stylemapfamilyname="Giphurs Bold" stylemapstylename="">
+      <location>
+        <dimension name="weight" xvalue="700"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Giphurs ExtraBold" familyname="Giphurs" stylename="ExtraBold" stylemapfamilyname="Giphurs ExtraBold" stylemapstylename="">
+      <location>
+        <dimension name="weight" xvalue="800"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Giphurs Black" familyname="Giphurs" stylename="Black" stylemapfamilyname="Giphurs Black" stylemapstylename="">
+      <location>
+        <dimension name="weight" xvalue="900"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+  </instances>
+</designspace>
