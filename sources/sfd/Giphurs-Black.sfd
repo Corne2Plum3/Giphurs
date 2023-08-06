@@ -5,7 +5,7 @@ FamilyName: Giphurs
 Weight: Black
 Copyright: Copyright 2023 The Giphurs Project Authors (https://github.com/Corne2Plum3/Giphurs)
 UComments: "2023-01-20: Finally found a name for the font lol+AAoA-2022-06-21: Created with FontForge (http://fontforge.org)"
-Version: 000.800
+Version: 000.810
 ItalicAngle: 0
 UnderlinePosition: -204
 UnderlineWidth: 102
@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1691323696
+ModificationTime: 1691331937
 PfmFamily: 33
 TTFWeight: 900
 TTFWidth: 5
@@ -316,7 +316,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 171 19 4
+WinInfo: 0 19 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -831,14 +831,14 @@ AnchorPoint: "top_center" 616 1040 basechar 0
 LayerCount: 3
 Fore
 SplineSet
-419 0 m 1
- 64 1040 l 1
- 448 1040 l 1
- 624 404 l 1
+624 404 m 1
  784 1040 l 1
  1168 1040 l 1
  813 0 l 1
  419 0 l 1
+ 64 1040 l 1
+ 448 1040 l 1
+ 624 404 l 1
 EndSplineSet
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" v.sc
 Colour: ff00
@@ -4674,7 +4674,7 @@ StartChar: three.superior
 Encoding: 179 179 171
 Width: 956
 VWidth: 1528
-Flags: HMWO
+Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
