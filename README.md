@@ -29,7 +29,7 @@ I'm aware that there's already some issues, for example the font version being i
 
 Go in [releases](https://github.com/Corne2Plum3/Giphurs/releases) page and pick the latest version. The font is available in the following formats: `otf`, `ttf` and `woff2`.
 
-Note that these are currenly pre-releases, so the font may contains issues and everything can be changed in the future.
+Note that these are currenly pre-releases, so the font may contain issues and everything can be changed in the future.
 
 # Build the fonts
 
