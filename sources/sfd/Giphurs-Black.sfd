@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1691331937
+ModificationTime: 1691418086
 PfmFamily: 33
 TTFWeight: 900
 TTFWidth: 5
@@ -316,10 +316,18 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 19 14
+WinInfo: 324 18 5
 BeginPrivate: 0
 EndPrivate
 Grid
+-2048 -431.993663194 m 0
+ 4096 -431.993663194 l 1024
+642 2692 m 0
+ 642 -1404 l 1024
+564 2692 m 0
+ 564 -1404 l 1024
+-2048 1151.91666667 m 0
+ 4096 1151.91666667 l 1024
 -2048 869.97479248 m 0
  4096 869.97479248 l 1024
 -2048 1079.98819633 m 0
@@ -327,26 +335,8 @@ Grid
 -2048 1759.03234863 m 0
  4096 1759.03234863 l 1024
   Named: "ttt"
-259.958374023 2692 m 0
- 259.958374023 -1404 l 1024
-  Named: "y"
 -2048 1413.91662598 m 0
  4096 1413.91662598 l 1024
-350.000030518 2692 m 0
- 350.000030518 -1404 l 1024
-  Named: "o"
-45.5 2692 m 0
- 45.5 -1404 l 1024
-  Named: "i"
-275 2692 m 0
- 275 -1404 l 1024
-  Named: "h"
-185.166666667 2692 m 0
- 185.166666667 -1404 l 1024
-  Named: "e"
-250.977722168 2692 m 0
- 250.977722168 -1404 l 1024
-  Named: "a"
 -2048 1479.92800071 m 0
  4096 1479.92800071 l 1024
   Named: "1480"
@@ -354,8 +344,6 @@ Grid
  4096 1223.97790527 l 1024
 -2048 1234.13378906 m 0
  4096 1234.13378906 l 1024
-999.333496094 2692 m 0
- 999.333496094 -1404 l 1024
 -2048 1403.92492676 m 0
  4096 1403.92492676 l 1024
   Named: "accute"
@@ -363,18 +351,6 @@ Grid
  4096 1728.98508523 l 1024
   Named: "tilde"
 4096 1728.99254261 m 1024
-507 2692 m 0
- 507 -1404 l 1024
-  Named: "accent"
-528 2692 m 0
- 528 -1404 l 1024
-  Named: "comma +- tilde"
-790 2692 m 0
- 790 -1404 l 1024
-  Named: "comma +- accent"
-397 2692 m 0
- 397 -1404 l 1024
-  Named: "1 comma"
 -2048 -578 m 0
  4096 -578 l 1024
   Named: "-578"
@@ -485,22 +461,22 @@ AnchorPoint: "top_right" 1214 1480 basechar 0
 LayerCount: 3
 Fore
 SplineSet
-854 510 m 0
- 854 640 791 750 654 750 c 0
- 517 750 444 650 444 520 c 0
- 444 390 517 290 654 290 c 0
- 785 290 854 380 854 510 c 0
-1214 168 m 1
- 1214 66 1238 0 1238 0 c 1
- 890 0 l 1
- 890 0 866 60 866 120 c 1
- 866 80 739 -30 589 -30 c 0
- 269 -30 84 200 84 520 c 0
- 84 840 269 1070 589 1070 c 0
- 739 1070 844 959 854 920 c 1
- 854 1480 l 1
- 1214 1480 l 1
- 1214 168 l 1
+854 510 m 4
+ 854 640 791 750 654 750 c 4
+ 517 750 444 650 444 520 c 4
+ 444 390 517 290 654 290 c 4
+ 785 290 854 380 854 510 c 4
+1214 168 m 5
+ 1214 66 1238 0 1238 0 c 5
+ 890 0 l 5
+ 890 0 866 60 866 120 c 5
+ 866 80 739 -30 589 -30 c 4
+ 269 -30 84 200 84 520 c 4
+ 84 840 269 1070 589 1070 c 4
+ 739 1070 844 959 854 920 c 5
+ 854 1480 l 5
+ 1214 1480 l 5
+ 1214 168 l 5
 EndSplineSet
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" d.sc
 Colour: ff00
@@ -946,7 +922,7 @@ AnchorPoint: "bottom_center" 296 0 basechar 0
 AnchorPoint: "top_center" 296 1040 basechar 0
 LayerCount: 3
 Fore
-Refer: 229 775 N 1 0 0 1 -410 0 2
+Refer: 229 775 N 1 0 0 1 -346 0 2
 Refer: 141 305 N 1 0 0 1 0 0 3
 Substitution2: "Soft dotted i substitutions lookups0-1" dotlessi
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" i.sc
@@ -964,7 +940,7 @@ AnchorPoint: "top_center" 414 1040 basechar 0
 AnchorPoint: "bottom_center" 310 -360 basechar 0
 LayerCount: 3
 Fore
-Refer: 229 775 N 1 0 0 1 -292 0 2
+Refer: 229 775 N 1 0 0 1 -228 0 2
 Refer: 317 567 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" j.sc
 Substitution2: "'ss06' f ligatures lookups0-1" j.ss06
@@ -982,19 +958,19 @@ AnchorPoint: "top_center" 296 1380 basechar 0
 LayerCount: 3
 Fore
 SplineSet
-606 316 m 1
- 706 24 l 1
- 680 11 632 -20 544 -20 c 0
- 360 -20 116 72 116 372 c 2
- 116 440 l 1
- 116 578 l 1
+606 316 m 5
+ 706 24 l 5
+ 680 11 632 -20 544 -20 c 4
+ 360 -20 116 72 116 372 c 6
+ 116 440 l 5
+ 116 578 l 5
  116 1480 l 1
  476 1480 l 1
- 476 578 l 1
- 476 440 l 1
- 476 372 l 2
- 476 322 492 300 544 300 c 0
- 563 300 593 307 606 316 c 1
+ 476 578 l 5
+ 476 440 l 5
+ 476 372 l 6
+ 476 322 492 300 544 300 c 4
+ 563 300 593 307 606 316 c 5
 EndSplineSet
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" l.sc
 Substitution2: "'ss06' f ligatures lookups0-1" l.ss06
@@ -2929,11 +2905,11 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-474 1224 m 1
- 248 1480 l 1
- 652 1480 l 1
- 830 1224 l 1
- 474 1224 l 1
+474 1224 m 5
+ 248 1480 l 5
+ 652 1480 l 5
+ 830 1224 l 5
+ 474 1224 l 5
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -2949,8 +2925,8 @@ LayerCount: 4
 Fore
 SplineSet
 810 1224 m 5
- 454 1224 l 1
- 632 1480 l 1
+ 454 1224 l 5
+ 632 1480 l 5
  1036 1480 l 5
  810 1224 l 5
 EndSplineSet
@@ -2962,20 +2938,20 @@ Encoding: 770 770 85
 Width: 0
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "top_center" 706 1040 mark 0
+AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-763 1224 m 1
- 603 1480 l 1
- 909 1480 l 1
- 1114 1224 l 1
- 763 1224 l 1
-649 1224 m 1
- 298 1224 l 1
- 503 1480 l 1
- 809 1480 l 5
- 649 1224 l 1
+699 1224 m 5
+ 539 1480 l 5
+ 845 1480 l 5
+ 1050 1224 l 5
+ 699 1224 l 5
+585 1224 m 5
+ 234 1224 l 5
+ 439 1480 l 5
+ 745 1480 l 5
+ 585 1224 l 5
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -2989,15 +2965,15 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-488 1204 m 1
- 279 1260 l 1
- 296 1377 389 1499 545 1499 c 0
- 635 1499 689 1436 731 1436 c 0
- 776 1436 788 1478 788 1499 c 1
- 997 1443 l 1
- 980 1326 887 1204 731 1204 c 0
- 641 1204 587 1267 545 1267 c 0
- 494 1267 488 1225 488 1204 c 1
+488 1204 m 5
+ 279 1260 l 5
+ 296 1377 389 1499 545 1499 c 4
+ 635 1499 689 1436 731 1436 c 4
+ 776 1436 788 1478 788 1499 c 5
+ 997 1443 l 5
+ 980 1326 887 1204 731 1204 c 4
+ 641 1204 587 1267 545 1267 c 4
+ 494 1267 488 1225 488 1204 c 5
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -3007,21 +2983,21 @@ Encoding: 776 776 87
 Width: 0
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "top_center" 517 1040 mark 0
-AnchorPoint: "dieresis_center" 516 1350 basechar 0
+AnchorPoint: "top_center" 642 1040 mark 0
+AnchorPoint: "dieresis_center" 641 1350 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-630 1352 m 4
- 630 1463 719 1552 830 1552 c 4
- 941 1552 1030 1463 1030 1352 c 4
- 1030 1241 941 1152 830 1152 c 4
- 719 1152 630 1241 630 1352 c 4
-0 1352 m 4
- 0 1463 89 1552 200 1552 c 4
- 311 1552 400 1463 400 1352 c 4
- 400 1241 311 1152 200 1152 c 4
- 89 1152 0 1241 0 1352 c 4
+755 1352 m 4
+ 755 1463 844 1552 955 1552 c 4
+ 1066 1552 1155 1463 1155 1352 c 4
+ 1155 1241 1066 1152 955 1152 c 4
+ 844 1152 755 1241 755 1352 c 4
+125 1352 m 4
+ 125 1463 214 1552 325 1552 c 4
+ 436 1552 525 1463 525 1352 c 4
+ 525 1241 436 1152 325 1152 c 4
+ 214 1152 125 1241 125 1352 c 4
 EndSplineSet
 Colour: ff00
 EndChar
@@ -3035,16 +3011,16 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-434 1347 m 0
- 434 1457 522 1544 642 1544 c 0
- 762 1544 850 1457 850 1347 c 0
- 850 1237 762 1150 642 1150 c 4
- 522 1150 434 1237 434 1347 c 0
-594 1347 m 0
- 594 1321 616 1300 642 1300 c 0
- 668 1300 689 1321 689 1347 c 0
- 689 1373 668 1394 642 1394 c 0
- 616 1394 594 1373 594 1347 c 0
+436 1347 m 4
+ 436 1457 522 1542 642 1542 c 4
+ 762 1542 848 1457 848 1347 c 4
+ 848 1237 762 1152 642 1152 c 4
+ 522 1152 436 1237 436 1347 c 4
+596 1347 m 4
+ 596 1321 616 1302 642 1302 c 4
+ 668 1302 687 1321 687 1347 c 4
+ 687 1373 668 1392 642 1392 c 4
+ 616 1392 596 1373 596 1347 c 4
 EndSplineSet
 Colour: ffc71c
 EndChar
@@ -3083,23 +3059,23 @@ AnchorPoint: "bottom_cedilla" 704 -20 mark 0
 LayerCount: 4
 Fore
 SplineSet
-516 -291 m 5
- 645 -229 l 5
- 667 -258 697 -263 722 -263 c 4
- 760 -263 786 -240 786 -216 c 4
- 786 -192 760 -169 722 -169 c 4
- 696 -169 675 -178 665 -192 c 5
- 535 -130 l 5
- 573 -84 644 -52 722 -52 c 4
- 842 -52 938 -126 938 -216 c 4
- 938 -306 842 -380 722 -380 c 4
- 643 -380 562 -352 516 -291 c 5
-627 0 m 5
- 781 0 l 5
- 666 -165 l 5
- 665 -192 l 5
- 536 -131 l 5
- 627 0 l 5
+516 -314 m 1
+ 645 -239 l 1
+ 667 -268 707 -272 722 -272 c 0
+ 757 -272 778 -261 778 -246 c 0
+ 778 -231 757 -220 722 -220 c 0
+ 707 -220 688 -223 675 -232 c 1
+ 545 -170 l 5
+ 580 -120 624 -60 722 -60 c 4
+ 842 -60 938 -146 938 -246 c 0
+ 938 -346 872 -432 722 -432 c 0
+ 622 -432 562 -375 516 -314 c 1
+647 0 m 1
+ 807 0 l 5
+ 682 -205 l 5
+ 675 -232 l 1
+ 546 -171 l 1
+ 647 0 l 1
 EndSplineSet
 Colour: ffc71c
 EndChar
@@ -3124,7 +3100,7 @@ AnchorPoint: "circumflex_left" 387 1564 basechar 0
 AnchorPoint: "circumflex_right" 969 1564 basechar 0
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 86 340 2
+Refer: 85 770 N 1 0 0 1 150 340 2
 Refer: 27 65 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" acircumflex.sc
 Colour: ff
@@ -3149,7 +3125,7 @@ Width: 1576
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 275 340 2
+Refer: 87 776 N 1 0 0 1 150 340 2
 Refer: 27 65 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" adieresis.sc
 Colour: ff
@@ -3212,7 +3188,7 @@ AnchorPoint: "circumflex_right" 895 1564 basechar 0
 AnchorPoint: "circumflex_left" 313 1564 basechar 0
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -33 340 2
+Refer: 85 770 N 1 0 0 1 31 340 2
 Refer: 31 69 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" ecircumflex.sc
 Colour: ff
@@ -3224,7 +3200,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 156 340 2
+Refer: 87 776 N 1 0 0 1 31 340 2
 Refer: 31 69 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" edieresis.sc
 Colour: ff
@@ -3262,7 +3238,7 @@ Width: 1016
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -198 340 2
+Refer: 85 770 N 1 0 0 1 -134 340 2
 Refer: 36 73 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" icircumflex.sc
 Substitution2: "'ss03' Simplified G and I lookups0-1" Icircumflex.ss03
@@ -3275,7 +3251,7 @@ Width: 1016
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 -9 340 2
+Refer: 87 776 N 1 0 0 1 -134 340 2
 Refer: 36 73 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" idieresis.sc
 Substitution2: "'ss03' Simplified G and I lookups0-1" Idieresis.ss03
@@ -3326,7 +3302,7 @@ AnchorPoint: "circumflex_left" 510 1564 basechar 0
 AnchorPoint: "circumflex_right" 1092 1564 basechar 0
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 138 340 2
+Refer: 85 770 N 1 0 0 1 202 340 2
 Refer: 30 79 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" ocircumflex.sc
 Colour: ff
@@ -3352,7 +3328,7 @@ Flags: HMW
 AnchorPoint: "top_center" 801 1760 basechar 0
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 327 340 2
+Refer: 87 776 N 1 0 0 1 202 340 2
 Refer: 30 79 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" odieresis.sc
 Colour: ff
@@ -3388,7 +3364,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 81 340 2
+Refer: 85 770 N 1 0 0 1 145 340 2
 Refer: 44 85 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" ucircumflex.sc
 Colour: ff
@@ -3401,7 +3377,7 @@ Flags: HMW
 AnchorPoint: "top_center" 699 1760 basechar 0
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 270 340 2
+Refer: 87 776 N 1 0 0 1 145 340 2
 Refer: 44 85 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" udieresis.sc
 Colour: ff
@@ -3440,7 +3416,7 @@ AnchorPoint: "circumflex_right" 831 1224 basechar 0
 AnchorPoint: "circumflex_left" 249 1224 basechar 0
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -94 0 2
+Refer: 85 770 N 1 0 0 1 -30 0 2
 Refer: 23 97 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" acircumflex.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" acircumflex.ss04
@@ -3467,7 +3443,7 @@ Flags: HMW
 AnchorPoint: "top_center" 540 1400 basechar 0
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 95 0 2
+Refer: 87 776 N 1 0 0 1 -30 0 2
 Refer: 23 97 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" adieresis.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" adieresis.ss04
@@ -3520,7 +3496,7 @@ AnchorPoint: "circumflex_left" 307 1224 basechar 0
 AnchorPoint: "circumflex_right" 889 1224 basechar 0
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -72 0 2
+Refer: 85 770 N 1 0 0 1 -8 0 2
 Refer: 9 101 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ecircumflex.sc
 Colour: ff
@@ -3532,7 +3508,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 117 0 2
+Refer: 87 776 N 1 0 0 1 -8 0 2
 Refer: 9 101 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" edieresis.sc
 Colour: ff
@@ -3572,7 +3548,7 @@ Width: 592
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -410 0 2
+Refer: 85 770 N 1 0 0 1 -346 0 2
 Refer: 141 305 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" icircumflex.sc
 Ligature2: "'liga' Soft Dotted i j" i uni0302
@@ -3585,7 +3561,7 @@ Width: 592
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 -221 0 2
+Refer: 87 776 N 1 0 0 1 -346 0 2
 Refer: 141 305 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" idieresis.sc
 LCarets2: 1 0
@@ -3637,7 +3613,7 @@ AnchorPoint: "circumflex_left" 307 1224 basechar 0
 AnchorPoint: "circumflex_right" 889 1224 basechar 0
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -72 0 2
+Refer: 85 770 N 1 0 0 1 -8 0 2
 Refer: 0 111 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ocircumflex.sc
 Colour: ff
@@ -3663,7 +3639,7 @@ Flags: HMW
 AnchorPoint: "top_center" 598 1400 basechar 0
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 117 0 2
+Refer: 87 776 N 1 0 0 1 -8 0 2
 Refer: 0 111 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" odieresis.sc
 Colour: ff
@@ -3701,7 +3677,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -64 0 2
+Refer: 85 770 N 1 0 0 1 0 0 2
 Refer: 2 117 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ucircumflex.sc
 Substitution2: "'ss05' Simplified u lookups0-1" ucircumflex.ss05
@@ -3714,7 +3690,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 125 0 2
+Refer: 87 776 N 1 0 0 1 0 0 2
 Refer: 2 117 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" udieresis.sc
 Substitution2: "'ss05' Simplified u lookups0-1" udieresis.ss05
@@ -3739,7 +3715,7 @@ Width: 1274
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 141 0 2
+Refer: 87 776 N 1 0 0 1 16 0 2
 Refer: 17 121 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ydieresis.sc
 Colour: ff
@@ -6178,29 +6154,29 @@ EndChar
 
 StartChar: Eth
 Encoding: 208 208 211
-Width: 1566
+Width: 1660
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-766 572 m 1
- 766 908 l 1
- -94 908 l 1
- -94 862 -94 618 -94 572 c 1
- 766 572 l 1
-496 1144 m 25
- 716 1144 l 17
- 910 1144 1102 1013 1102 740 c 0
- 1102 467 920 336 716 336 c 9
- 496 336 l 25
- 496 1144 l 25
-716 0 m 1
- 1172 0 1482 290 1482 740 c 0
- 1482 1190 1172 1480 716 1480 c 1
- 116 1480 l 1
- 116 0 l 1
- 344 0 l 25
- 716 0 l 1
+860 620 m 5
+ 860 860 l 1
+ 0 860 l 1
+ 0 814 0 666 0 620 c 5
+ 860 620 l 5
+590 1144 m 25
+ 810 1144 l 17
+ 1004 1144 1196 1013 1196 740 c 0
+ 1196 467 1014 336 810 336 c 9
+ 590 336 l 25
+ 590 1144 l 25
+810 0 m 1
+ 1266 0 1576 290 1576 740 c 0
+ 1576 1190 1266 1480 810 1480 c 1
+ 210 1480 l 1
+ 210 0 l 1
+ 438 0 l 25
+ 810 0 l 1
 EndSplineSet
 Colour: ffff
 EndChar
@@ -6505,15 +6481,15 @@ Encoding: 772 772 221
 Width: 0
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "top_center" 706 1040 mark 0
+AnchorPoint: "top_center" 643 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-340 1200 m 1
- 340 1410 l 1
- 1072 1410 l 1
- 1072 1200 l 1
- 340 1200 l 1
+277 1200 m 5
+ 277 1410 l 5
+ 1009 1410 l 5
+ 1009 1200 l 5
+ 277 1200 l 5
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -6524,7 +6500,7 @@ Width: 1576
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 36 340 2
+Refer: 221 772 N 1 0 0 1 149 340 2
 Refer: 27 65 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" amacron.sc
 Colour: ff
@@ -6536,7 +6512,7 @@ Width: 1306
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 -102 0 2
+Refer: 221 772 N 1 0 0 1 -31 0 2
 Refer: 23 97 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" amacron.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" amacron.ss04
@@ -6552,13 +6528,13 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-642 1214 m 4
- 492 1214 362 1340 362 1480 c 5
- 522 1480 l 5
- 522 1414 576 1354 642 1354 c 4
- 708 1354 762 1414 762 1480 c 5
- 922 1480 l 5
- 922 1340 792 1214 642 1214 c 4
+642 1194 m 4
+ 432 1194 306 1340 306 1480 c 5
+ 564 1480 l 5
+ 564 1450 592 1404 642 1404 c 4
+ 692 1404 718 1450 718 1480 c 5
+ 978 1480 l 5
+ 978 1340 852 1194 642 1194 c 4
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -6570,7 +6546,7 @@ Flags: HMW
 AnchorPoint: "top_center" 540 1320 basechar 0
 LayerCount: 4
 Fore
-Refer: 224 774 N 1 0 0 1 -102 0 2
+Refer: 224 774 N 1 0 0 1 -30 0 2
 Refer: 23 97 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" abreve.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" abreve.ss04
@@ -6586,15 +6562,15 @@ AnchorPoint: "bottom_right" 642 0 mark 0
 LayerCount: 4
 Fore
 SplineSet
-609 -225 m 1
- 667 -326 l 1
- 612 -364 569 -380 505 -380 c 0
- 405 -380 315 -324 315 -204 c 0
- 315 -84 507 44 562 80 c 4
+599 -225 m 1
+ 677 -368 l 1
+ 620 -418 569 -432 505 -432 c 0
+ 405 -432 292 -374 292 -224 c 4
+ 292 -64 494 65 542 100 c 4
  642 0 l 0
- 534 -78 442 -137 442 -204 c 0
- 442 -240 469 -263 505 -263 c 0
- 541 -263 575 -250 609 -225 c 1
+ 534 -78 452 -137 452 -204 c 0
+ 452 -240 469 -271 505 -271 c 0
+ 531 -271 579 -256 599 -225 c 1
 EndSplineSet
 Layer: 2
 SplineSet
@@ -6617,7 +6593,7 @@ Width: 1576
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 226 808 N 1 0 0 1 644 0 2
+Refer: 226 808 N 1 0 0 1 876 0 2
 Refer: 27 65 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" aogonek.sc
 Colour: ff
@@ -6629,7 +6605,7 @@ Width: 1306
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 226 808 N 1 0 0 1 391 0 2
+Refer: 226 808 N 1 0 0 1 534 0 2
 Refer: 23 97 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" aogonek.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" aogonek.ss04
@@ -6641,15 +6617,15 @@ Encoding: 775 775 229
 Width: 0
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "top_center" 706 1040 mark 0
+AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-506 1352 m 0
- 506 1463 595 1552 706 1552 c 4
- 817 1552 906 1463 906 1352 c 0
- 906 1241 817 1152 706 1152 c 0
- 595 1152 506 1241 506 1352 c 0
+442 1352 m 4
+ 442 1463 531 1552 642 1552 c 4
+ 753 1552 842 1463 842 1352 c 4
+ 842 1241 753 1152 642 1152 c 4
+ 531 1152 442 1241 442 1352 c 4
 EndSplineSet
 Colour: ff00
 EndChar
@@ -6663,16 +6639,16 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-529 1480 m 5
- 737 1224 l 5
- 547 1224 l 5
- 351 1480 l 5
- 529 1480 l 5
-755 1480 m 5
- 933 1480 l 5
- 737 1224 l 5
- 547 1224 l 5
- 755 1480 l 5
+585 1480 m 5
+ 745 1224 l 5
+ 439 1224 l 5
+ 234 1480 l 5
+ 585 1480 l 5
+699 1480 m 5
+ 1050 1480 l 5
+ 845 1224 l 5
+ 539 1224 l 5
+ 699 1480 l 5
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -6683,7 +6659,7 @@ Width: 1647
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 528 806 N 1 0 0 1 144 -20 2
+Refer: 528 806 N 1 0 0 1 202 0 2
 Refer: 42 71 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" gcommaaccent.sc
 Substitution2: "'ss03' Simplified G and I lookups0-1" Gcommaaccent.ss03
@@ -6698,7 +6674,7 @@ Flags: HMW
 AnchorPoint: "top_center" 678 1680 basechar 0
 LayerCount: 4
 Fore
-Refer: 224 774 N 1 0 0 1 36 340 2
+Refer: 224 774 N 1 0 0 1 150 340 2
 Refer: 27 65 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" abreve.sc
 Colour: ff
@@ -6710,7 +6686,7 @@ Width: 1603
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 159 340 2
+Refer: 84 769 N 1 0 0 1 202 340 2
 Refer: 41 67 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" cacute.sc
 Colour: ff
@@ -6722,7 +6698,7 @@ Width: 1205
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -44 0 2
+Refer: 84 769 N 1 0 0 1 -8 0 2
 Refer: 10 99 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" cacute.sc
 Colour: ff
@@ -6734,7 +6710,7 @@ Width: 1603
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 159 340 2
+Refer: 85 770 N 1 0 0 1 202 340 2
 Refer: 41 67 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" ccircumflex.sc
 Colour: ff
@@ -6746,7 +6722,7 @@ Width: 1205
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -44 0 2
+Refer: 85 770 N 1 0 0 1 -8 0 2
 Refer: 10 99 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ccircumflex.sc
 Colour: ff
@@ -6758,7 +6734,7 @@ Width: 1603
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 159 340 2
+Refer: 229 775 N 1 0 0 1 202 340 2
 Refer: 41 67 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" cdotaccent.sc
 Colour: ff
@@ -6770,7 +6746,7 @@ Width: 1205
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -44 0 2
+Refer: 229 775 N 1 0 0 1 -8 0 2
 Refer: 10 99 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" cdotaccent.sc
 Colour: ff
@@ -6782,7 +6758,7 @@ Width: 1603
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 230 780 N 1 0 0 1 159 340 2
+Refer: 230 780 N 1 0 0 1 202 340 2
 Refer: 41 67 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" ccaron.sc
 Colour: ff
@@ -6794,7 +6770,7 @@ Width: 1205
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 230 780 N 1 0 0 1 -44 0 2
+Refer: 230 780 N 1 0 0 1 -8 0 2
 Refer: 10 99 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ccaron.sc
 Colour: ff
@@ -6806,7 +6782,7 @@ Width: 1566
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 230 780 N 1 0 0 1 20 340 2
+Refer: 230 780 N 1 0 0 1 96 340 2
 Refer: 37 68 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" dcaron.sc
 Colour: ff
@@ -6818,7 +6794,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 -38 340 2
+Refer: 221 772 N 1 0 0 1 30 340 2
 Refer: 31 69 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" emacron.sc
 Colour: ff
@@ -6831,7 +6807,7 @@ Flags: HMW
 AnchorPoint: "top_center" 598 1320 basechar 0
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 -44 0 2
+Refer: 221 772 N 1 0 0 1 -9 0 2
 Refer: 9 101 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" emacron.sc
 Colour: ff
@@ -6843,7 +6819,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 224 774 N 1 0 0 1 -38 340 2
+Refer: 224 774 N 1 0 0 1 31 340 2
 Refer: 31 69 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" ebreve.sc
 Colour: ff
@@ -6855,7 +6831,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 224 774 N 1 0 0 1 -44 0 2
+Refer: 224 774 N 1 0 0 1 -8 0 2
 Refer: 9 101 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ebreve.sc
 Colour: ff
@@ -6867,7 +6843,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -38 340 2
+Refer: 229 775 N 1 0 0 1 31 340 2
 Refer: 31 69 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" edotaccent.sc
 Colour: ff
@@ -6879,7 +6855,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -44 0 2
+Refer: 229 775 N 1 0 0 1 -8 0 2
 Refer: 9 101 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" edotaccent.sc
 Colour: ff
@@ -6891,7 +6867,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 226 808 N 1 0 0 1 426 0 2
+Refer: 226 808 N 1 0 0 1 588 0 2
 Refer: 31 69 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" eogonek.sc
 Colour: ff
@@ -6903,7 +6879,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 226 808 N 1 0 0 1 110 0 2
+Refer: 226 808 N 1 0 0 1 195 0 2
 Refer: 9 101 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" eogonek.sc
 Colour: ff
@@ -6915,7 +6891,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 230 780 N 1 0 0 1 -38 340 2
+Refer: 230 780 N 1 0 0 1 31 340 2
 Refer: 31 69 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" ecaron.sc
 Colour: ff
@@ -6927,7 +6903,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 230 780 N 1 0 0 1 -44 0 2
+Refer: 230 780 N 1 0 0 1 -8 0 2
 Refer: 9 101 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ecaron.sc
 Colour: ff
@@ -6939,7 +6915,7 @@ Width: 1647
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 159 340 2
+Refer: 85 770 N 1 0 0 1 202 340 2
 Refer: 42 71 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" gcircumflex.sc
 Substitution2: "'ss03' Simplified G and I lookups0-1" Gcircumflex.ss03
@@ -6952,7 +6928,7 @@ Width: 1230
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -122 0 2
+Refer: 85 770 N 1 0 0 1 -54 0 2
 Refer: 24 103 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" gcircumflex.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" gcircumflex.ss04
@@ -6965,7 +6941,7 @@ Width: 1647
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 224 774 N 1 0 0 1 159 340 2
+Refer: 224 774 N 1 0 0 1 202 340 2
 Refer: 42 71 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" gbreve.sc
 Substitution2: "'ss03' Simplified G and I lookups0-1" Gbreve.ss03
@@ -6978,7 +6954,7 @@ Width: 1230
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 224 774 N 1 0 0 1 -122 0 2
+Refer: 224 774 N 1 0 0 1 -54 0 2
 Refer: 24 103 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" gbreve.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" gbreve.ss04
@@ -6991,7 +6967,7 @@ Width: 1647
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 159 340 2
+Refer: 229 775 N 1 0 0 1 202 340 2
 Refer: 42 71 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" gdotaccent.sc
 Substitution2: "'ss03' Simplified G and I lookups0-1" Gdotaccent.ss03
@@ -7004,7 +6980,7 @@ Width: 1230
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -122 0 2
+Refer: 229 775 N 1 0 0 1 -54 0 2
 Refer: 24 103 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" gdotaccent.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" gdotaccent.ss04
@@ -7017,7 +6993,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 57 340 2
+Refer: 85 770 N 1 0 0 1 147 322 2
 Refer: 29 72 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" hcircumflex.sc
 Colour: ff
@@ -7029,7 +7005,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -412 340 2
+Refer: 85 770 N 1 0 0 1 -346 340 2
 Refer: 7 104 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" hcircumflex.sc
 Colour: ff
@@ -7041,7 +7017,7 @@ Width: 1016
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 -239 340 2
+Refer: 86 771 N 1 0 0 1 -134 340 2
 Refer: 36 73 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" itilde.sc
 Substitution2: "'ss03' Simplified G and I lookups0-1" Itilde.ss03
@@ -7054,7 +7030,7 @@ Width: 592
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 -408 -32 2
+Refer: 86 771 N 1 0 0 1 -346 0 2
 Refer: 141 305 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" itilde.sc
 LCarets2: 1 0
@@ -7068,7 +7044,7 @@ Width: 1016
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 -239 340 2
+Refer: 221 772 N 1 0 0 1 -135 340 2
 Refer: 36 73 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" imacron.sc
 Substitution2: "'ss03' Simplified G and I lookups0-1" Imacron.ss03
@@ -7081,7 +7057,7 @@ Width: 592
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 -412 -42 2
+Refer: 221 772 N 1 0 0 1 -347 0 2
 Refer: 141 305 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" imacron.sc
 Ligature2: "'liga' Soft Dotted i j" i uni0304
@@ -7094,7 +7070,7 @@ Width: 1016
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 224 774 N 1 0 0 1 -239 340 2
+Refer: 224 774 N 1 0 0 1 -134 340 2
 Refer: 36 73 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" ibreve.sc
 Substitution2: "'ss03' Simplified G and I lookups0-1" Ibreve.ss03
@@ -7107,7 +7083,7 @@ Width: 592
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 224 774 N 1 0 0 1 -412 -32 2
+Refer: 224 774 N 1 0 0 1 -346 0 2
 Refer: 141 305 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ibreve.sc
 Ligature2: "'liga' Soft Dotted i j" i uni0306
@@ -7120,7 +7096,7 @@ Width: 1016
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 226 808 N 1 0 0 1 -144 0 2
+Refer: 226 808 N 1 0 0 1 56 0 2
 Refer: 36 73 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" iogonek.sc
 Substitution2: "'ss03' Simplified G and I lookups0-1" Iogonek.ss03
@@ -7133,7 +7109,7 @@ Width: 592
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 226 808 S 1 0 0 1 -322 0 2
+Refer: 226 808 N 1 0 0 1 -166 0 2
 Refer: 18 105 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" iogonek.sc
 LCarets2: 1 0
@@ -7147,7 +7123,7 @@ Width: 1016
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -239 340 2
+Refer: 229 775 N 1 0 0 1 -134 340 2
 Refer: 36 73 N 1 0 0 1 0 0 3
 Substitution2: "'ss03' Simplified G and I lookups0-1" Idotaccent.ss03
 Colour: ff
@@ -7159,7 +7135,7 @@ Width: 1365
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 291 340 2
+Refer: 85 770 N 1 0 0 1 417 340 2
 Refer: 50 74 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" jcircumflex.sc
 Colour: ff
@@ -7171,7 +7147,7 @@ Width: 710
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -363 -42 2
+Refer: 85 770 N 1 0 0 1 -228 0 2
 Refer: 317 567 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" jcircumflex.sc
 Ligature2: "'liga' Soft Dotted i j" j uni0302
@@ -7184,7 +7160,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -407 340 2
+Refer: 84 769 N 1 0 0 1 -336 340 2
 Refer: 35 76 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" lacute.sc
 Colour: ff
@@ -7196,7 +7172,7 @@ Width: 710
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -412 340 2
+Refer: 84 769 N 1 0 0 1 -346 340 2
 Refer: 20 108 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" lacute.sc
 Colour: ff
@@ -7208,22 +7184,22 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 187 183 S 1 0 0 1 338 80 2
+Refer: 187 183 S 1 0 0 1 464 95 2
 Refer: 35 76 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" ldot.sc
-Colour: ffff
+Colour: 80ff
 EndChar
 
 StartChar: ldot
 Encoding: 320 320 274
-Width: 721
+Width: 960
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 187 183 S 1 0 0 1 329 80 2
+Refer: 187 183 S 1 0 0 1 444 0 2
 Refer: 20 108 N 1 0 0 1 0 0 2
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ldot.sc
-Colour: ff00
+Colour: 80ff
 EndChar
 
 StartChar: Nacute
@@ -7232,7 +7208,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 57 340 2
+Refer: 84 769 N 1 0 0 1 146 340 2
 Refer: 34 78 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" nacute.sc
 Colour: ff
@@ -7244,7 +7220,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -64 0 2
+Refer: 84 769 N 1 0 0 1 0 0 2
 Refer: 1 110 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" nacute.sc
 Colour: ff
@@ -7256,7 +7232,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 230 780 N 1 0 0 1 57 340 2
+Refer: 230 780 N 1 0 0 1 146 340 2
 Refer: 34 78 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" ncaron.sc
 Colour: ff
@@ -7268,7 +7244,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 230 780 N 1 0 0 1 -64 0 2
+Refer: 230 780 N 1 0 0 1 0 0 2
 Refer: 1 110 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ncaron.sc
 Colour: ff
@@ -7280,7 +7256,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 159 340 2
+Refer: 221 772 N 1 0 0 1 201 340 2
 Refer: 30 79 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" omacron.sc
 Colour: ff
@@ -7293,7 +7269,7 @@ Flags: HMW
 AnchorPoint: "top_center" 598 1320 basechar 0
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 -44 0 2
+Refer: 221 772 N 1 0 0 1 -9 0 2
 Refer: 0 111 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" omacron.sc
 Colour: ff
@@ -7305,7 +7281,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 224 774 N 1 0 0 1 159 340 2
+Refer: 224 774 N 1 0 0 1 202 340 2
 Refer: 30 79 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" obreve.sc
 Colour: ff
@@ -7317,7 +7293,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 224 774 N 1 0 0 1 -44 0 2
+Refer: 224 774 N 1 0 0 1 -8 0 2
 Refer: 0 111 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" obreve.sc
 Colour: ff
@@ -7329,7 +7305,7 @@ Width: 1338
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -44 340 2
+Refer: 84 769 N 1 0 0 1 23 340 2
 Refer: 40 82 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" racute.sc
 Colour: ff
@@ -7341,7 +7317,7 @@ Width: 952
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -154 0 2
+Refer: 84 769 N 1 0 0 1 -106 0 2
 Refer: 12 114 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" racute.sc
 Colour: ff
@@ -7353,7 +7329,7 @@ Width: 1338
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 230 780 N 1 0 0 1 -44 340 2
+Refer: 230 780 N 1 0 0 1 23 340 2
 Refer: 40 82 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" rcaron.sc
 Colour: ff
@@ -7365,7 +7341,7 @@ Width: 952
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 230 780 N 1 0 0 1 -154 0 2
+Refer: 230 780 N 1 0 0 1 -106 0 2
 Refer: 12 114 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" rcaron.sc
 Colour: ff
@@ -7377,7 +7353,7 @@ Width: 1395
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -32 340 2
+Refer: 84 769 N 1 0 0 1 54 340 2
 Refer: 52 83 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" sacute.sc
 Colour: ff
@@ -7389,7 +7365,7 @@ Width: 1134
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -128 0 2
+Refer: 84 769 N 1 0 0 1 -79 0 2
 Refer: 22 115 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" sacute.sc
 Colour: ff
@@ -7401,7 +7377,7 @@ Width: 1395
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -32 340 2
+Refer: 85 770 N 1 0 0 1 54 340 2
 Refer: 52 83 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" scircumflex.sc
 Colour: ff
@@ -7413,7 +7389,7 @@ Width: 1134
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -128 0 2
+Refer: 85 770 N 1 0 0 1 -79 0 2
 Refer: 22 115 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" scircumflex.sc
 Colour: ff
@@ -7425,7 +7401,7 @@ Width: 1395
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 90 807 N 1 0 0 1 -32 -7.33333 2
+Refer: 90 807 N 1 0 0 1 -31 -15.6 2
 Refer: 52 83 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" scedilla.sc
 Colour: ff
@@ -7437,7 +7413,7 @@ Width: 1134
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 90 807 N 1 0 0 1 -128 -7.33333 2
+Refer: 90 807 N 1 0 0 1 -164 -15.6 2
 Refer: 22 115 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" scedilla.sc
 Colour: ff
@@ -7451,7 +7427,7 @@ AnchorPoint: "top_center" 656 1760 basechar 0
 AnchorPoint: "bottom_center" 656 0 basechar 0
 LayerCount: 4
 Fore
-Refer: 230 780 N 1 0 0 1 -32 340 2
+Refer: 230 780 N 1 0 0 1 54 340 2
 Refer: 52 83 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" scaron.sc
 Colour: ff
@@ -7465,7 +7441,7 @@ AnchorPoint: "top_center" 532 1400 basechar 0
 AnchorPoint: "bottom_center" 532 0 basechar 0
 LayerCount: 4
 Fore
-Refer: 230 780 N 1 0 0 1 -128 0 2
+Refer: 230 780 N 1 0 0 1 -79 0 2
 Refer: 22 115 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" scaron.sc
 Colour: ff
@@ -7477,7 +7453,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 90 807 N 1 0 0 1 57 0 2
+Refer: 90 807 N 1 0 0 1 83 0 2
 Refer: 39 84 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" tcommaaccent.sc
 Colour: ff
@@ -7489,7 +7465,7 @@ Width: 1056
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 90 807 N 1 0 0 1 -109 0 2
+Refer: 90 807 N 1 0 0 1 -65 0 2
 Refer: 13 116 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" tcommaaccent.sc
 Colour: ff
@@ -7501,7 +7477,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 230 780 N 1 0 0 1 57 340 2
+Refer: 230 780 N 1 0 0 1 145 340 2
 Refer: 39 84 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" tcaron.sc
 Colour: ff
@@ -7513,7 +7489,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 57 340 2
+Refer: 86 771 N 1 0 0 1 145 340 2
 Refer: 44 85 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" utilde.sc
 Colour: ff
@@ -7525,7 +7501,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 -64 0 2
+Refer: 86 771 N 1 0 0 1 0 0 2
 Refer: 2 117 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" utilde.sc
 Substitution2: "'ss05' Simplified u lookups0-1" utilde.ss05
@@ -7538,7 +7514,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 57 340 2
+Refer: 221 772 N 1 0 0 1 144 340 2
 Refer: 44 85 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" umacron.sc
 Colour: ff
@@ -7550,7 +7526,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 -64 0 2
+Refer: 221 772 N 1 0 0 1 -1 0 2
 Refer: 2 117 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" umacron.sc
 Substitution2: "'ss05' Simplified u lookups0-1" umacron.ss05
@@ -7563,7 +7539,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 224 774 N 1 0 0 1 57 340 2
+Refer: 224 774 N 1 0 0 1 145 340 2
 Refer: 44 85 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" ubreve.sc
 Colour: ff
@@ -7576,7 +7552,7 @@ Flags: HMW
 AnchorPoint: "top_center" 578 1400 basechar 0
 LayerCount: 4
 Fore
-Refer: 224 774 N 1 0 0 1 -64 0 2
+Refer: 224 774 N 1 0 0 1 0 0 2
 Refer: 2 117 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ubreve.sc
 Substitution2: "'ss05' Simplified u lookups0-1" ubreve.ss05
@@ -7589,7 +7565,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 88 778 N 1 0 0 1 57 340 2
+Refer: 88 778 N 1 0 0 1 145 340 2
 Refer: 44 85 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uring.sc
 Colour: ff
@@ -7601,7 +7577,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 88 778 N 1 0 0 1 -64 0 2
+Refer: 88 778 N 1 0 0 1 0 0 2
 Refer: 2 117 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uring.sc
 Substitution2: "'ss05' Simplified u lookups0-1" uring.ss05
@@ -7614,7 +7590,7 @@ Width: 2328
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 350 340 2
+Refer: 85 770 N 1 0 0 1 522 340 2
 Refer: 49 87 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" wcircumflex.sc
 Colour: ff
@@ -7626,7 +7602,7 @@ Width: 1890
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 154 0 2
+Refer: 85 770 N 1 0 0 1 298 0 2
 Refer: 15 119 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" wcircumflex.sc
 Colour: ff
@@ -7638,7 +7614,7 @@ Width: 1618
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 54 340 2
+Refer: 85 770 N 1 0 0 1 167 340 2
 Refer: 48 89 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" ycircumflex.sc
 Colour: ff
@@ -7650,7 +7626,7 @@ Width: 1274
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -112 0 2
+Refer: 85 770 N 1 0 0 1 16 0 2
 Refer: 17 121 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ycircumflex.sc
 Colour: ff
@@ -7662,7 +7638,7 @@ Width: 1618
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 54 340 2
+Refer: 87 776 N 1 0 0 1 167 340 2
 Refer: 48 89 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" ydieresis.sc
 Colour: ff
@@ -7674,7 +7650,7 @@ Width: 1466
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 57 340 2
+Refer: 84 769 N 1 0 0 1 94 340 2
 Refer: 46 90 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" zacute.sc
 Colour: ff
@@ -7686,7 +7662,7 @@ Width: 1124
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -130 0 2
+Refer: 84 769 N 1 0 0 1 -80 0 2
 Refer: 25 122 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" zacute.sc
 Colour: ff
@@ -7698,7 +7674,7 @@ Width: 1466
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 57 340 2
+Refer: 229 775 N 1 0 0 1 94 340 2
 Refer: 46 90 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" zdotaccent.sc
 Colour: ff
@@ -7710,7 +7686,7 @@ Width: 1124
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -130 0 2
+Refer: 229 775 N 1 0 0 1 -80 0 2
 Refer: 25 122 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" zdotaccent.sc
 Colour: ff
@@ -7722,7 +7698,7 @@ Width: 1466
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 230 780 N 1 0 0 1 57 340 2
+Refer: 230 780 N 1 0 0 1 94 340 2
 Refer: 46 90 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" zcaron.sc
 Colour: ff
@@ -7734,7 +7710,7 @@ Width: 1124
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 230 780 N 1 0 0 1 -130 0 2
+Refer: 230 780 N 1 0 0 1 -80 0 2
 Refer: 25 122 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" zcaron.sc
 Colour: ff
@@ -7769,109 +7745,106 @@ EndChar
 
 StartChar: Dcroat
 Encoding: 272 272 318
-Width: 1448
+Width: 1660
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-670 656 m 1
- 670 824 l 1
- 0 824 l 1
- 0 778 0 702 0 656 c 1
- 670 656 l 1
-400 1312 m 25
- 682 1312 l 17
- 952 1312 1158 1073 1158 740 c 0
- 1158 407 952 168 682 168 c 9
- 400 168 l 25
- 400 1312 l 25
-682 0 m 1
- 1062 0 1348 290 1348 740 c 0
- 1348 1190 1062 1480 682 1480 c 1
+860 620 m 5
+ 860 860 l 1
+ 0 860 l 1
+ 0 814 0 666 0 620 c 5
+ 860 620 l 5
+590 1144 m 25
+ 810 1144 l 17
+ 1004 1144 1196 1013 1196 740 c 0
+ 1196 467 1014 336 810 336 c 9
+ 590 336 l 25
+ 590 1144 l 25
+810 0 m 1
+ 1266 0 1576 290 1576 740 c 0
+ 1576 1190 1266 1480 810 1480 c 1
  210 1480 l 1
  210 0 l 1
- 400 0 l 25
- 682 0 l 1
+ 438 0 l 25
+ 810 0 l 1
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" dcroat.sc
 Colour: ffff
 EndChar
 
 StartChar: oe
 Encoding: 339 339 319
-Width: 2012
+Width: 2008
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-990 600 m 1
- 1796 600 l 1
- 1796 440 l 1
- 990 440 l 1
- 990 600 l 1
-1726 340 m 1
- 1879 252 l 1
- 1796 74 1613 -20 1414 -20 c 0
- 1133 -20 916 208 916 520 c 0
- 916 832 1133 1060 1414 1060 c 0
- 1695 1060 1912 832 1912 520 c 0
- 1912 493 1910 466 1907 440 c 1
- 1726 440 l 1
- 1730 466 1732 492 1732 520 c 0
- 1732 740 1605 900 1414 900 c 0
- 1223 900 1096 740 1096 520 c 0
- 1096 300 1223 140 1414 140 c 0
- 1555 140 1677 207 1726 340 c 1
-280 520 m 0
- 280 300 407 140 598 140 c 0
- 789 140 916 300 916 520 c 0
- 916 740 789 900 598 900 c 0
- 407 900 280 740 280 520 c 0
-100 520 m 0
- 100 832 317 1060 598 1060 c 0
- 879 1060 1096 832 1096 520 c 0
- 1096 208 879 -20 598 -20 c 0
- 317 -20 100 208 100 520 c 0
+950 660 m 1
+ 1856 660 l 1
+ 1856 400 l 1
+ 950 400 l 1
+ 950 660 l 1
+1563 368 m 1
+ 1870 242 l 1
+ 1778 65 1596 -30 1374 -30 c 0
+ 1053 -30 824 200 824 520 c 0
+ 824 840 1054 1070 1374 1070 c 0
+ 1694 1070 1924 840 1924 520 c 0
+ 1924 479 1919 438 1912 400 c 1
+ 1554 400 l 1
+ 1568 435 1594 476 1594 520 c 0
+ 1594 657 1511 750 1374 750 c 0
+ 1237 750 1144 657 1144 520 c 0
+ 1144 390 1236 290 1374 290 c 0
+ 1488 290 1545 329 1563 368 c 1
+444 520 m 0
+ 444 390 497 290 634 290 c 0
+ 771 290 824 383 824 520 c 0
+ 824 657 771 750 634 750 c 0
+ 497 750 444 657 444 520 c 0
+84 520 m 0
+ 84 840 314 1070 634 1070 c 0
+ 954 1070 1184 840 1184 520 c 0
+ 1184 200 954 -30 634 -30 c 0
+ 314 -30 84 200 84 520 c 0
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" oe.sc
 Colour: ff00
 EndChar
 
 StartChar: OE
 Encoding: 338 338 320
-Width: 2380
+Width: 2454
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-290 740 m 0
- 290 390 511 148 801 148 c 0
- 1091 148 1312 390 1312 740 c 0
- 1312 1090 1091 1332 801 1332 c 0
- 511 1332 290 1090 290 740 c 0
-100 740 m 0
- 100 1179 406 1500 801 1500 c 0
- 1196 1500 1502 1179 1502 740 c 0
- 1502 301 1196 -20 801 -20 c 0
- 406 -20 100 301 100 740 c 0
-2145 824 m 17
- 2145 656 l 9
- 1502 656 l 17
- 1502 168 l 1
- 2240 168 l 1
- 2240 0 l 1
- 1312 0 l 25
- 1312 1480 l 1
- 2240 1480 l 17
- 2240 1312 l 1
- 1502 1312 l 1
- 1502 824 l 9
- 2145 824 l 17
+464 740 m 0
+ 464 490 594 306 844 306 c 0
+ 1094 306 1224 490 1224 740 c 0
+ 1224 990 1094 1174 844 1174 c 0
+ 594 1174 464 990 464 740 c 0
+84 740 m 0
+ 84 1190 384 1510 844 1510 c 0
+ 1304 1510 1604 1190 1604 740 c 0
+ 1604 290 1304 -30 844 -30 c 0
+ 384 -30 84 290 84 740 c 0
+2224 908 m 21
+ 2224 572 l 9
+ 1604 572 l 17
+ 1604 336 l 1
+ 2338 336 l 1
+ 2338 0 l 1
+ 1224 0 l 25
+ 1224 1480 l 1
+ 2338 1480 l 17
+ 2338 1144 l 1
+ 1604 1144 l 1
+ 1604 908 l 9
+ 2224 908 l 21
 EndSplineSet
-Validated: 5
 Colour: ffff
 EndChar
 
@@ -7882,7 +7855,7 @@ VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 2219 786 N 1 0 0 1 -122 0 2
+Refer: 2219 786 N 1 0 0 1 -54 0 2
 Refer: 24 103 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" gcommaaccent.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" gcommaaccent.ss04
@@ -7891,40 +7864,40 @@ EndChar
 
 StartChar: dcaron
 Encoding: 271 271 322
-Width: 1472
+Width: 1609
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-1184 1371 m 0
- 1184 1443 1237 1500 1309 1500 c 0
- 1381 1500 1436 1443 1436 1371 c 0
- 1436 1299 1381 1244 1309 1244 c 0
- 1237 1244 1184 1299 1184 1371 c 0
-1199 1103 m 1
- 1256 1116 1345 1164 1345 1284 c 0
- 1345 1312 1310 1372 1310 1372 c 1
- 1309 1500 l 1
- 1379 1500 1472 1454 1472 1284 c 0
- 1472 1104 1306 1008 1229 988 c 1
- 1199 1103 l 1
-876 520 m 0
- 876 750 758 900 578 900 c 0
- 398 900 280 750 280 520 c 0
- 280 290 398 140 578 140 c 0
- 758 140 876 290 876 520 c 0
-1044 168 m 1
- 1044 66 1064 0 1064 0 c 1
- 892 0 l 1
- 892 0 876 60 876 120 c 1
- 791 35 703 -20 578 -20 c 0
- 297 -20 100 208 100 520 c 0
- 100 832 297 1060 578 1060 c 0
- 703 1060 779 1005 864 920 c 1
- 864 1480 l 1
- 1044 1480 l 1
- 1044 168 l 1
+1330 1390 m 4
+ 1330 1457 1383 1510 1450 1510 c 4
+ 1517 1510 1570 1457 1570 1390 c 4
+ 1570 1323 1517 1270 1450 1270 c 4
+ 1383 1270 1330 1323 1330 1390 c 4
+1339 1193 m 5
+ 1416 1205 1475 1254 1475 1307 c 4
+ 1475 1333 1451 1390 1451 1390 c 5
+ 1450 1510 l 5
+ 1518 1510 1609 1467 1609 1307 c 4
+ 1609 1180 1470 1082 1375 1065 c 5
+ 1339 1193 l 5
+854 510 m 0
+ 854 640 791 750 654 750 c 0
+ 517 750 444 650 444 520 c 0
+ 444 390 517 290 654 290 c 0
+ 785 290 854 380 854 510 c 0
+1214 168 m 1
+ 1214 66 1238 0 1238 0 c 1
+ 890 0 l 1
+ 890 0 866 60 866 120 c 1
+ 866 80 739 -30 589 -30 c 0
+ 269 -30 84 200 84 520 c 0
+ 84 840 269 1070 589 1070 c 0
+ 739 1070 844 959 854 920 c 1
+ 854 1480 l 1
+ 1214 1480 l 1
+ 1214 168 l 1
 EndSplineSet
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" dcaron.sc
 Colour: ff00
@@ -7932,98 +7905,125 @@ EndChar
 
 StartChar: dcroat
 Encoding: 273 273 323
-Width: 1254
+Width: 1609
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-1254 1160 m 1
- 584 1160 l 1
- 584 1206 584 1274 584 1320 c 1
- 1254 1320 l 1
- 1254 1160 l 1
-876 520 m 0
- 876 750 758 900 578 900 c 0
- 398 900 280 750 280 520 c 0
- 280 290 398 140 578 140 c 0
- 758 140 876 290 876 520 c 0
-1044 168 m 1
- 1044 66 1064 0 1064 0 c 1
- 892 0 l 1
- 892 0 876 60 876 120 c 1
- 791 35 703 -20 578 -20 c 0
- 297 -20 100 208 100 520 c 0
- 100 832 297 1060 578 1060 c 0
- 703 1060 779 1005 864 920 c 1
- 864 1480 l 1
- 1044 1480 l 1
- 1044 168 l 1
+1424 1120 m 5
+ 584 1120 l 5
+ 584 1166 584 1314 584 1360 c 5
+ 1424 1360 l 5
+ 1424 1120 l 5
+854 510 m 0
+ 854 640 791 750 654 750 c 0
+ 517 750 444 650 444 520 c 0
+ 444 390 517 290 654 290 c 0
+ 785 290 854 380 854 510 c 0
+1214 168 m 1
+ 1214 66 1238 0 1238 0 c 1
+ 890 0 l 1
+ 890 0 866 60 866 120 c 1
+ 866 80 739 -30 589 -30 c 0
+ 269 -30 84 200 84 520 c 0
+ 84 840 269 1070 589 1070 c 0
+ 739 1070 844 959 854 920 c 1
+ 854 1480 l 1
+ 1214 1480 l 1
+ 1214 168 l 1
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" dcroat.sc
 Colour: ff00
 EndChar
 
 StartChar: Hbar
 Encoding: 294 294 324
-Width: 1398
+Width: 1678
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-1398 1004 m 1
+1678 1004 m 1
  0 1004 l 1
- 0 1050 0 1110 0 1156 c 1
- 1398 1156 l 1
- 1398 1004 l 1
-140 1480 m 25
- 330 1480 l 25
- 330 824 l 25
- 1068 824 l 25
- 1068 1480 l 25
- 1258 1480 l 25
- 1258 0 l 25
- 1068 0 l 25
- 1068 656 l 25
- 330 656 l 25
- 330 0 l 25
- 140 0 l 25
- 140 1480 l 25
+ 0 1050 0 1198 0 1244 c 1
+ 1678 1244 l 1
+ 1678 1004 l 1
+168 1480 m 29
+ 548 1480 l 25
+ 548 908 l 25
+ 1130 908 l 25
+ 1130 1480 l 25
+ 1510 1480 l 25
+ 1510 0 l 25
+ 1130 0 l 25
+ 1130 572 l 25
+ 548 572 l 25
+ 548 0 l 25
+ 168 -10 l 25
+ 168 1480 l 29
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" hbar.sc
 Colour: ffff
 EndChar
 
 StartChar: hbar
 Encoding: 295 295 325
-Width: 1276
+Width: 1378
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-720 1160 m 1
- 50 1160 l 1
- 50 1206 50 1274 50 1320 c 1
- 720 1320 l 1
- 720 1160 l 1
-956 0 m 1
- 956 572 l 2
- 956 791 878 900 698 900 c 0
- 518 900 440 791 440 572 c 2
- 440 0 l 1
- 260 0 l 1
- 260 1480 l 1
- 432 1480 l 1
- 432 920 l 1
- 517 1005 613 1060 738 1060 c 0
- 1008 1060 1136 892 1136 572 c 1
- 1136 0 l 1
- 956 0 l 1
+840 1120 m 5
+ 0 1120 l 5
+ 0 1166 0 1314 0 1360 c 5
+ 840 1360 l 5
+ 840 1120 l 5
+  Spiro
+    840 1120 v
+    0 1120 v
+    0 1360 v
+    840 1360 v
+    0 0 z
+  EndSpiro
+902 0 m 1
+ 902 572 l 2
+ 902 682 866 750 736 750 c 0
+ 606 750 570 682 570 572 c 2
+ 570 0 l 1
+ 210 0 l 1
+ 210 1480 l 1
+ 558 1480 l 1
+ 558 920 l 1
+ 593 981 682 1070 832 1070 c 0
+ 1096 1070 1262 892 1262 572 c 1
+ 1262 0 l 1
+ 902 0 l 1
+  Spiro
+    902 0 v
+    902 572 ]
+    887.882 666.958 o
+    836.741 728.339 o
+    736 750 o
+    635.259 728.339 o
+    584.118 666.958 o
+    570 572 [
+    570 0 v
+    210 0 v
+    210 1480 v
+    558 1480 v
+    558 920 v
+    611.188 985.933 o
+    702.184 1044.71 o
+    832 1070 o
+    1060.62 1012.11 o
+    1209.29 843.112 o
+    1262 572 v
+    1262 0 v
+    0 0 z
+  EndSpiro
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" hbar.sc
 Colour: ff00
 EndChar
@@ -8034,7 +8034,7 @@ Width: 1508
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 528 806 N 1 0 0 1 61 0 2
+Refer: 528 806 N 1 0 0 1 145 0 2
 Refer: 51 75 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" kcommaaccent.sc
 Colour: ff
@@ -8046,7 +8046,7 @@ Width: 1208
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 528 806 N 1 0 0 1 -75 0 2
+Refer: 528 806 N 1 0 0 1 -12 0 2
 Refer: 21 107 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" kcommaaccent.sc
 Colour: ff
@@ -8058,7 +8058,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 226 808 N 1 0 0 1 219 0 2
+Refer: 226 808 N 1 0 0 1 377 0 2
 Refer: 44 85 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uogonek.sc
 Colour: ff
@@ -8070,7 +8070,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 226 808 N 1 0 0 1 394 0 2
+Refer: 226 808 N 1 0 0 1 550 0 2
 Refer: 2 117 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uogonek.sc
 Substitution2: "'ss05' Simplified u lookups0-1" uogonek.ss05
@@ -8083,7 +8083,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 528 806 N 1 0 0 1 -53 0 2
+Refer: 528 806 N 1 0 0 1 31 0 2
 Refer: 35 76 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" lcommaaccent.sc
 Colour: ff
@@ -8095,7 +8095,7 @@ Width: 710
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 528 806 N 1 0 0 1 -247 -20 2
+Refer: 528 806 N 1 0 0 1 -245 0 2
 Refer: 20 108 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" lcommaaccent.sc
 Colour: ff
@@ -8103,126 +8103,122 @@ EndChar
 
 StartChar: Lcaron
 Encoding: 317 317 332
-Width: 1208
+Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-470 1371 m 0
- 470 1443 523 1500 595 1500 c 0
- 667 1500 722 1443 722 1371 c 0
- 722 1299 667 1244 595 1244 c 0
- 523 1244 470 1299 470 1371 c 0
-485 1103 m 1
- 542 1116 631 1164 631 1284 c 0
- 631 1312 596 1372 596 1372 c 1
- 595 1500 l 1
- 665 1500 758 1454 758 1284 c 0
- 758 1104 592 1008 515 988 c 1
- 485 1103 l 1
-330 1480 m 17
- 330 168 l 1
- 1068 168 l 1
- 1068 0 l 1
- 140 0 l 25
- 140 1480 l 1
- 330 1480 l 17
+612 1390 m 4
+ 612 1457 665 1510 732 1510 c 4
+ 799 1510 852 1457 852 1390 c 4
+ 852 1323 799 1270 732 1270 c 4
+ 665 1270 612 1323 612 1390 c 4
+621 1193 m 5
+ 698 1205 757 1254 757 1307 c 4
+ 757 1333 733 1390 733 1390 c 5
+ 732 1510 l 5
+ 800 1510 891 1467 891 1307 c 4
+ 891 1180 752 1082 657 1065 c 5
+ 621 1193 l 5
+496 1480 m 1
+ 496 336 l 1
+ 1230 336 l 1
+ 1230 0 l 1
+ 116 0 l 25
+ 116 1480 l 1
+ 496 1480 l 1
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" lcaron.sc
 Colour: ffff
 EndChar
 
 StartChar: lcaron
 Encoding: 318 318 333
-Width: 748
+Width: 871
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-460 1371 m 0
- 460 1443 513 1500 585 1500 c 0
- 657 1500 712 1443 712 1371 c 0
- 712 1299 657 1244 585 1244 c 0
- 513 1244 460 1299 460 1371 c 0
-475 1103 m 1
- 532 1116 621 1164 621 1284 c 0
- 621 1312 586 1372 586 1372 c 1
- 585 1500 l 1
- 655 1500 748 1454 748 1284 c 0
- 748 1104 582 1008 505 988 c 1
- 475 1103 l 1
-462 156 m 1
- 504 4 l 1
- 482 -9 442 -20 410 -20 c 0
- 240 -20 140 60 140 230 c 2
- 140 440 l 1
- 140 578 l 1
- 140 1480 l 1
- 320 1480 l 1
- 320 578 l 1
- 320 440 l 1
- 320 230 l 2
- 320 170 350 140 410 140 c 0
- 426 140 450 149 462 156 c 1
+592 1390 m 4
+ 592 1457 645 1510 712 1510 c 4
+ 779 1510 832 1457 832 1390 c 4
+ 832 1323 779 1270 712 1270 c 4
+ 645 1270 592 1323 592 1390 c 4
+601 1193 m 5
+ 678 1205 737 1254 737 1307 c 4
+ 737 1333 713 1390 713 1390 c 5
+ 712 1510 l 5
+ 780 1510 871 1467 871 1307 c 4
+ 871 1180 732 1082 637 1065 c 5
+ 601 1193 l 5
+606 316 m 1
+ 706 24 l 1
+ 680 11 632 -20 544 -20 c 0
+ 360 -20 116 72 116 372 c 2
+ 116 440 l 1
+ 116 578 l 1
+ 116 1480 l 1
+ 476 1480 l 1
+ 476 578 l 1
+ 476 440 l 1
+ 476 372 l 2
+ 476 322 492 300 544 300 c 0
+ 563 300 593 307 606 316 c 1
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" lcaron.sc
 Colour: ff00
 EndChar
 
 StartChar: Lslash
 Encoding: 321 321 334
-Width: 1208
+Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-600 1100 m 1
- 600 907 l 1
- -70 520 l 1
- -70 713 l 1
- 600 1100 l 1
-330 1480 m 17
- 330 168 l 1
- 1068 168 l 1
- 1068 0 l 1
- 140 0 l 25
- 140 1480 l 1
- 330 1480 l 17
+766 1245 m 5
+ 766 956 l 5
+ -70 472 l 5
+ -70 761 l 5
+ 766 1245 l 5
+496 1480 m 1
+ 496 336 l 1
+ 1230 336 l 1
+ 1230 0 l 1
+ 116 0 l 25
+ 116 1480 l 1
+ 496 1480 l 1
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" lslash.sc
 Colour: ffff
 EndChar
 
 StartChar: lslash
 Encoding: 322 322 335
-Width: 509
+Width: 871
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-530 1060 m 1
- 530 867 l 1
- -70 520 l 1
- -70 713 l 1
- 530 1060 l 1
-462 156 m 1
- 504 4 l 1
- 482 -9 442 -20 410 -20 c 0
- 240 -20 140 60 140 230 c 2
- 140 440 l 1
- 140 578 l 1
- 140 1480 l 1
- 320 1480 l 1
- 320 578 l 1
- 320 440 l 1
- 320 230 l 2
- 320 170 350 140 410 140 c 0
- 426 140 450 149 462 156 c 1
+686 1198.68457031 m 1
+ 686 909.684570312 l 1
+ -70 472 l 1
+ -70 761 l 1
+ 686 1198.68457031 l 1
+606 316 m 1
+ 706 24 l 1
+ 680 11 632 -20 544 -20 c 0
+ 360 -20 116 72 116 372 c 2
+ 116 440 l 1
+ 116 578 l 1
+ 116 1480 l 1
+ 476 1480 l 1
+ 476 578 l 1
+ 476 440 l 1
+ 476 372 l 2
+ 476 322 492 300 544 300 c 0
+ 563 300 593 307 606 316 c 1
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" lslash.sc
 Colour: ff00
 EndChar
@@ -8233,7 +8229,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 528 806 N 1 0 0 1 42 0 2
+Refer: 528 806 N 1 0 0 1 130 0 2
 Refer: 34 78 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" ncommaaccent.sc
 Colour: ff
@@ -8246,7 +8242,7 @@ VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 528 806 N 1 0 0 1 -79 0 2
+Refer: 528 806 N 1 0 0 1 -15 0 2
 Refer: 1 110 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ncommaaccent.sc
 Colour: ff
@@ -8254,7 +8250,7 @@ EndChar
 
 StartChar: napostrophe
 Encoding: 329 329 338
-Width: 1584
+Width: 1712
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
@@ -8262,74 +8258,74 @@ Fore
 Refer: 1 110 N 1 0 0 1 428 0 2
 Refer: 341 700 N 1 0 0 1 0 0 2
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" napostrophe.sc
-Colour: 8000ff
+Colour: ff
 EndChar
 
 StartChar: Eng
 Encoding: 330 330 339
-Width: 1398
+Width: 1574
 Flags: HMW
+AnchorPoint: "top_center" 788 1380 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-1258 0 m 1
- 1258 -202 l 2
- 1258 -372 1148 -460 978 -460 c 0
- 946 -460 896 -449 874 -436 c 1
- 916 -284 l 1
- 928 -291 962 -292 978 -292 c 0
- 1038 -292 1068 -262 1068 -202 c 2
- 1068 0 l 1
- 1258 0 l 1
-330 1480 m 1
- 1068 320 l 25
- 1068 1480 l 1
- 1258 1480 l 25
- 1258 0 l 25
- 1068 0 l 1
- 330 1160 l 1
- 330 0 l 1
- 140 0 l 25
- 140 1480 l 1
- 330 1480 l 1
+1458 -78 m 6
+ 1458 -378 1290 -470 1026 -470 c 4
+ 938 -470 890 -439 864 -426 c 5
+ 964 -134 l 5
+ 977 -143 1007 -150 1026 -150 c 4
+ 1078 -150 1094 -128 1094 -78 c 6
+ 1094 0 l 5
+ 1458 0 l 5
+ 1458 -78 l 6
+480 1480 m 1
+ 1078 652 l 25
+ 1078 1480 l 1
+ 1458 1480 l 25
+ 1458 0 l 29
+ 1094 0 l 5
+ 496 828 l 1
+ 496 0 l 1
+ 116 0 l 25
+ 116 1480 l 1
+ 480 1480 l 1
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" eng.sc
 Colour: ffff
 EndChar
 
 StartChar: eng
 Encoding: 331 331 340
-Width: 1156
+Width: 1284
 VWidth: 1000
 Flags: HMW
+AnchorPoint: "top_center" 642 1040 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-1016 0 m 1
- 1016 -210 l 2
- 1016 -380 916 -460 746 -460 c 0
- 714 -460 674 -449 652 -436 c 1
- 694 -284 l 1
- 706 -291 730 -300 746 -300 c 0
- 806 -300 836 -270 836 -210 c 2
- 836 0 l 1
- 1016 0 l 1
-836 0 m 1
- 836 572 l 2
- 836 791 758 900 578 900 c 0
- 398 900 320 791 320 572 c 2
- 320 0 l 1
- 140 0 l 1
- 140 1040 l 1
- 308 1040 l 1
- 308 920 l 1
- 393 1005 493 1060 618 1060 c 0
- 888 1060 1016 892 1016 572 c 1
- 1016 0 l 1
- 836 0 l 1
+1168 -78 m 2
+ 1168 -378 1004 -470 740 -470 c 0
+ 652 -470 604 -439 578 -426 c 1
+ 678 -134 l 1
+ 691 -143 721 -150 740 -150 c 0
+ 792 -150 808 -128 808 -78 c 2
+ 808 0 l 1
+ 1168 0 l 1
+ 1168 -78 l 2
+808 572 m 2
+ 808 682 772 750 642 750 c 0
+ 512 750 476 682 476 572 c 2
+ 476 0 l 1
+ 116 0 l 1
+ 116 1040 l 1
+ 464 1040 l 1
+ 464 920 l 1
+ 499 981 588 1070 738 1070 c 0
+ 1002 1070 1168 892 1168 572 c 1
+ 1168 0 l 1
+ 808 0 l 1
+ 808 572 l 2
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" eng.sc
 Colour: ff00
 EndChar
@@ -8368,16 +8364,16 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-883 1224 m 5
- 705 1224 l 5
- 883 1480 l 5
- 1109 1480 l 5
- 883 1224 l 5
-479 1224 m 5
- 301 1224 l 5
- 479 1480 l 5
- 705 1480 l 5
- 479 1224 l 5
+1061 1224 m 5
+ 705 1224 l 1
+ 883 1480 l 1
+ 1287 1480 l 1
+ 1061 1224 l 5
+481 1224 m 1
+ 125 1224 l 1
+ 303 1480 l 1
+ 707 1480 l 1
+ 481 1224 l 1
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -8388,7 +8384,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 342 779 N 1 0 0 1 159 340 2
+Refer: 342 779 N 1 0 0 1 202 340 2
 Refer: 30 79 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" ohungarumlaut.sc
 Colour: ff
@@ -8400,7 +8396,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 342 779 N 1 0 0 1 -44 0 2
+Refer: 342 779 N 1 0 0 1 -8 0 2
 Refer: 0 111 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ohungarumlaut.sc
 Colour: ff
@@ -8412,7 +8408,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 342 779 N 1 0 0 1 57 340 2
+Refer: 342 779 N 1 0 0 1 145 340 2
 Refer: 44 85 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uhungarumlaut.sc
 Colour: ff
@@ -8424,7 +8420,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 342 779 N 1 0 0 1 -64 0 2
+Refer: 342 779 N 1 0 0 1 0 0 2
 Refer: 2 117 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uhungarumlaut.sc
 Substitution2: "'ss05' Simplified u lookups0-1" uhungarumlaut.ss05
@@ -8437,7 +8433,7 @@ Width: 1338
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 528 806 N 1 0 0 1 -23 0 2
+Refer: 528 806 N 1 0 0 1 23 0 2
 Refer: 40 82 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" rcommaaccent.sc
 Colour: ff
@@ -8450,7 +8446,7 @@ VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 528 806 N 1 0 0 1 -427 0 2
+Refer: 528 806 N 1 0 0 1 -346 0 2
 Refer: 12 114 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" rcommaaccent.sc
 Colour: ff
@@ -8458,135 +8454,131 @@ EndChar
 
 StartChar: tcaron
 Encoding: 357 357 349
-Width: 1148
+Width: 1336
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-860 1371 m 0
- 860 1443 913 1500 985 1500 c 0
- 1057 1500 1112 1443 1112 1371 c 0
- 1112 1299 1057 1244 985 1244 c 0
- 913 1244 860 1299 860 1371 c 0
-875 1103 m 1
- 932 1116 1021 1164 1021 1284 c 0
- 1021 1312 986 1372 986 1372 c 1
- 985 1500 l 1
- 1055 1500 1148 1454 1148 1284 c 0
- 1148 1104 982 1008 905 988 c 1
- 875 1103 l 1
-122 1028 m 17
- 212 1028 272 1092 272 1182 c 9
- 272 1320 l 1
- 440 1320 l 1
- 440 1040 l 1
- 720 1040 l 1
- 720 880 l 1
- 440 880 l 1
- 440 300 l 2
- 440 198 498 140 600 140 c 0
- 643 140 694 156 720 175 c 1
- 765 12 l 1
- 720 -6 656 -20 600 -20 c 0
- 400 -20 260 101 260 300 c 2
- 260 880 l 1
- 50 880 l 1
- 50 926 50 982 50 1028 c 1
- 122 1028 l 17
+1057 1427 m 0
+ 1057 1494 1110 1547 1177 1547 c 0
+ 1244 1547 1297 1494 1297 1427 c 0
+ 1297 1360 1244 1307 1177 1307 c 0
+ 1110 1307 1057 1360 1057 1427 c 0
+1066 1230 m 1
+ 1143 1242 1202 1291 1202 1344 c 0
+ 1202 1370 1178 1427 1178 1427 c 1
+ 1177 1547 l 1
+ 1245 1547 1336 1504 1336 1344 c 0
+ 1336 1217 1197 1119 1102 1102 c 1
+ 1066 1230 l 1
+96 1028 m 1
+ 216 1028 300 1106 300 1226 c 1
+ 300 1320 l 1
+ 636 1320 l 1
+ 636 1040 l 1
+ 941 1040 l 1
+ 941 720 l 1
+ 636 720 l 1
+ 636 440 l 2
+ 636 340 684 290 774 290 c 0
+ 834 290 909 313 941 345 c 1
+ 1032 22 l 1
+ 976 -2 891 -30 770 -30 c 0
+ 410 -30 276 160 276 440 c 2
+ 276 720 l 1
+ 24 720 l 1
+ 24 740 24 1008 24 1028 c 1
+ 96 1028 l 1
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" tcaron.sc
 Colour: ff00
 EndChar
 
 StartChar: tbar
 Encoding: 359 359 350
-Width: 770
+Width: 1056
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-50 440 m 1
- 50 486 50 554 50 600 c 1
- 720 600 l 1
- 720 440 l 1
- 50 440 l 1
-122 1028 m 17
- 212 1028 272 1092 272 1182 c 9
- 272 1320 l 1
- 440 1320 l 1
- 440 1040 l 1
- 720 1040 l 1
- 720 880 l 1
- 440 880 l 1
- 440 300 l 2
- 440 198 498 140 600 140 c 0
- 643 140 694 156 720 175 c 1
- 765 12 l 1
- 720 -6 656 -20 600 -20 c 0
- 400 -20 260 101 260 300 c 2
- 260 880 l 1
- 50 880 l 1
- 50 926 50 982 50 1028 c 1
- 122 1028 l 17
+24 410 m 1
+ 24 456 24 604 24 650 c 1
+ 941 650 l 1
+ 941 410 l 1
+ 24 410 l 1
+96 1028 m 1
+ 216 1028 300 1106 300 1226 c 1
+ 300 1320 l 1
+ 636 1320 l 1
+ 636 1040 l 1
+ 941 1040 l 1
+ 941 720 l 1
+ 636 720 l 1
+ 636 440 l 2
+ 636 340 684 290 774 290 c 0
+ 834 290 909 313 941 345 c 1
+ 1032 22 l 1
+ 976 -2 891 -30 770 -30 c 0
+ 410 -30 276 160 276 440 c 2
+ 276 720 l 1
+ 24 720 l 1
+ 24 750 24 998 24 1028 c 1
+ 96 1028 l 1
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" tbar.sc
 Colour: ff00
 EndChar
 
 StartChar: Tbar
 Encoding: 358 358 351
-Width: 1398
+Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-1034 656 m 1
- 364 656 l 1
- 364 702 364 778 364 824 c 1
- 1034 824 l 1
- 1034 656 l 1
-794 0 m 25
- 604 0 l 25
- 604 1312 l 25
- 140 1312 l 25
- 140 1480 l 25
- 1258 1480 l 25
- 1258 1312 l 25
- 794 1312 l 25
- 794 0 l 25
+1217 620 m 5
+ 357 620 l 5
+ 357 666 357 814 357 860 c 5
+ 1217 860 l 5
+ 1217 620 l 5
+977 0 m 25
+ 597 0 l 25
+ 597 1144 l 25
+ 116 1144 l 25
+ 116 1480 l 25
+ 1458 1480 l 25
+ 1458 1144 l 25
+ 977 1144 l 25
+ 977 0 l 25
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" tbar.sc
 Colour: ffff
 EndChar
 
 StartChar: kgreenlandic
 Encoding: 312 312 352
-Width: 1094
+Width: 1208
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-417 562 m 1
- 526 702 l 1
- 1024 0 l 1
- 816 0 l 1
- 417 562 l 1
-320 340 m 1
- 320 0 l 1
- 140 0 l 1
- 140 1040 l 1
- 320 1040 l 1
- 320 572 l 1
- 788 1040 l 1
- 848 1040 960 1040 1020 1040 c 1
- 320 340 l 1
+331 643 m 1
+ 728 660 l 1
+ 1204 0 l 1
+ 784 0 l 1
+ 331 643 l 1
+476 344 m 1
+ 476 0 l 1
+ 116 0 l 1
+ 116 1040 l 5
+ 476 1040 l 5
+ 476 808 l 1
+ 708 1040 l 1
+ 780 1040 1100 1040 1172 1040 c 1
+ 476 344 l 1
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" kgreenlandic.sc
 Colour: ff00
 EndChar
@@ -8882,25 +8874,25 @@ EndChar
 
 StartChar: longs
 Encoding: 383 383 363
-Width: 695
+Width: 894
 VWidth: 1000
-Flags: HMW
-AnchorPoint: "top_center" 390 1400 basechar 0
-AnchorPoint: "bottom_center" 230 0 basechar 0
+Flags: HMWO
+AnchorPoint: "top_center" 502 1380 basechar 0
+AnchorPoint: "bottom_center" 296 0 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-320 1040 m 1
- 320 1180 l 2
- 320 1282 378 1340 480 1340 c 0
- 523 1340 574 1324 600 1305 c 1
- 645 1468 l 1
- 600 1486 536 1500 480 1500 c 0
- 280 1500 140 1380 140 1180 c 2
- 140 1040 l 1
- 140 0 l 1
- 320 0 l 1
- 320 1040 l 1
+476 690 m 1
+ 476 1050 l 1
+ 476 1150 524 1190 614 1190 c 0
+ 674 1190 749 1167 781 1135 c 1
+ 872 1458 l 1
+ 816 1482 731 1510 610 1510 c 0
+ 250 1510 116 1320 116 1040 c 1
+ 116 680 l 1
+ 116 0 l 1
+ 476 0 l 1
+ 476 690 l 1
 EndSplineSet
 Colour: ff00
 EndChar
@@ -9204,7 +9196,7 @@ EndChar
 
 StartChar: uni0189
 Encoding: 393 393 373
-Width: 1566
+Width: 1660
 Flags: HMW
 LayerCount: 4
 Fore
@@ -9946,14 +9938,14 @@ AnchorPoint: "top_right" 0 1480 mark 0
 LayerCount: 4
 Fore
 SplineSet
-169 1319 m 5
- 162 1316 157 1315 149 1315 c 4
- 97 1315 53 1355 53 1407 c 4
- 53 1459 97 1500 149 1500 c 4
- 199 1500 272 1466 272 1344 c 4
- 272 1214 172 1100 0 1063 c 5
- 0 1175 l 5
- 127 1207 169 1270 169 1319 c 5
+159.19921875 1272.41308594 m 1
+ 156 1271 152.438231594 1270 149 1270 c 0
+ 82 1270 29 1323 29 1390 c 0
+ 29 1457 82 1510 149 1510 c 0
+ 217 1510 288 1467 288 1307 c 0
+ 288 1150 147.720703125 1059.046875 0 1033 c 5
+ 0 1193 l 1
+ 118.176930361 1213.83778132 159 1255.97753906 159.19921875 1272.41308594 c 1
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -11980,15 +11972,15 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-401 1224 m 5
- 579 1224 l 5
- 401 1480 l 5
- 175 1480 l 5
- 401 1224 l 5
+223 1224 m 1
+ 579 1224 l 1
+ 401 1480 l 1
+ -3 1480 l 1
+ 223 1224 l 1
 805 1224 m 5
- 983 1224 l 5
- 805 1480 l 5
- 579 1480 l 5
+ 1161 1224 l 1
+ 983 1480 l 1
+ 579 1480 l 1
  805 1224 l 5
 EndSplineSet
 Colour: ffff00
@@ -12151,13 +12143,13 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-642 1490 m 4
- 492 1490 362 1364 362 1224 c 5
- 522 1224 l 5
- 522 1290 576 1350 642 1350 c 4
- 708 1350 762 1290 762 1224 c 5
- 922 1224 l 5
- 922 1364 792 1490 642 1490 c 4
+642 1510 m 4
+ 432 1510 306 1364 306 1224 c 5
+ 564 1224 l 5
+ 564 1254 592 1300 642 1300 c 4
+ 692 1300 718 1254 718 1224 c 5
+ 978 1224 l 5
+ 978 1364 852 1510 642 1510 c 4
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -12364,22 +12356,24 @@ EndChar
 StartChar: uni0326
 Encoding: 806 806 528
 Width: 0
+VWidth: 1000
 Flags: HMW
+AnchorPoint: "bottom_center" 642 0 mark 0
 LayerCount: 4
 Fore
 SplineSet
-542 -225 m 4
- 542 -167 584 -122 642 -122 c 4
- 698 -122 743 -167 743 -225 c 4
- 743 -283 700 -327 642 -327 c 4
- 584 -327 542 -283 542 -225 c 4
-554 -440 m 5
- 600 -430 671 -391 671 -295 c 4
- 671 -273 643 -225 643 -225 c 5
- 642 -122 l 5
- 698 -122 772 -159 772 -295 c 4
- 772 -439 640 -516 578 -532 c 5
- 554 -440 l 5
+522 -232 m 0
+ 522 -165 575 -112 642 -112 c 0
+ 709 -112 762 -165 762 -232 c 0
+ 762 -299 709 -352 642 -352 c 0
+ 575 -352 522 -299 522 -232 c 0
+531 -429 m 1
+ 608 -417 667 -368 667 -315 c 0
+ 667 -289 643 -232 643 -232 c 1
+ 642 -112 l 1
+ 710 -112 801 -155 801 -315 c 0
+ 801 -442 662 -540 567 -557 c 1
+ 531 -429 l 1
 EndSplineSet
 Colour: ffbf00
 EndChar
@@ -23905,18 +23899,19 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-742 1429 m 4
- 742 1487 700 1532 642 1532 c 4
- 586 1532 541 1487 541 1429 c 4
- 541 1371 584 1327 642 1327 c 4
- 700 1327 742 1371 742 1429 c 4
-730 1214 m 5
- 684 1224 613 1263 613 1359 c 4
- 613 1381 641 1429 641 1429 c 5
- 642 1532 l 5
- 586 1532 512 1495 512 1359 c 4
- 512 1215 644 1138 706 1122 c 5
- 730 1214 l 5
+762 1427 m 0
+ 762 1494 709 1547 642 1547 c 0
+ 575 1547 522 1494 522 1427 c 0
+ 522 1360 575 1307 642 1307 c 0
+ 709 1307 762 1360 762 1427 c 0
+753 1230 m 5
+ 676 1242 617 1291 617 1344 c 0
+ 617 1370 641 1427 641 1427 c 1
+ 642 1547 l 1
+ 574 1547 483 1504 483 1344 c 0
+ 483 1217 622 1119 717 1102 c 1
+ 753 1230 l 5
+642 1325 m 1024
 EndSplineSet
 Colour: ffbf00
 EndChar
@@ -23932,18 +23927,19 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-542 1429 m 4
- 542 1487 584 1532 642 1532 c 4
- 698 1532 743 1487 743 1429 c 4
- 743 1371 700 1327 642 1327 c 4
- 584 1327 542 1371 542 1429 c 4
-554 1214 m 5
- 600 1224 671 1263 671 1359 c 4
- 671 1381 643 1429 643 1429 c 5
- 642 1532 l 5
- 698 1532 772 1495 772 1359 c 4
- 772 1215 640 1138 578 1122 c 5
- 554 1214 l 5
+522 1427 m 0
+ 522 1494 575 1547 642 1547 c 0
+ 709 1547 762 1494 762 1427 c 0
+ 762 1360 709 1307 642 1307 c 0
+ 575 1307 522 1360 522 1427 c 0
+531 1230 m 1
+ 608 1242 667 1291 667 1344 c 0
+ 667 1370 643 1427 643 1427 c 1
+ 642 1547 l 1
+ 710 1547 801 1504 801 1344 c 0
+ 801 1217 662 1119 567 1102 c 1
+ 531 1230 l 1
+642 1325 m 1024
 EndSplineSet
 Colour: ffbf00
 EndChar
@@ -28853,218 +28849,217 @@ EndChar
 
 StartChar: uni02CB
 Encoding: 715 715 1097
-Width: 544
+Width: 698
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-296 1224 m 1
- 70 1480 l 1
- 296 1480 l 1
- 474 1224 l 1
- 296 1224 l 1
+284 1224 m 1
+ 58 1480 l 1
+ 462 1480 l 1
+ 640 1224 l 1
+ 284 1224 l 1
 EndSplineSet
 Colour: ffff00
 EndChar
 
 StartChar: uni02CA
 Encoding: 714 714 1098
-Width: 544
+Width: 698
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-248 1224 m 5
- 70 1224 l 5
- 248 1480 l 5
- 474 1480 l 5
- 248 1224 l 5
+414 1224 m 1
+ 58 1224 l 1
+ 236 1480 l 1
+ 640 1480 l 1
+ 414 1224 l 1
 EndSplineSet
 Colour: ffff00
 EndChar
 
 StartChar: circumflex
 Encoding: 710 710 1099
-Width: 722
+Width: 932
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-474 1224 m 1
- 266 1480 l 1
- 456 1480 l 1
- 652 1224 l 1
- 474 1224 l 1
-248 1224 m 1
- 70 1224 l 1
- 266 1480 l 1
- 456 1480 l 1
- 248 1224 l 1
+523 1224 m 1
+ 363 1480 l 1
+ 669 1480 l 1
+ 874 1224 l 1
+ 523 1224 l 1
+409 1224 m 1
+ 58 1224 l 1
+ 263 1480 l 1
+ 569 1480 l 1
+ 409 1224 l 1
 EndSplineSet
 Colour: ffff00
 EndChar
 
 StartChar: tilde
 Encoding: 732 732 1100
-Width: 814
+Width: 834
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-209 1227 m 5
- 70 1264 l 5
- 86 1400 176 1490 284 1490 c 4
- 416 1490 450 1354 530 1354 c 4
- 578 1354 600 1417 605 1477 c 5
- 744 1440 l 5
- 728 1304 638 1214 530 1214 c 4
- 398 1214 364 1350 284 1350 c 4
- 236 1350 214 1287 209 1227 c 5
+267 1204 m 1
+ 58 1260 l 1
+ 75 1377 168 1499 324 1499 c 0
+ 414 1499 468 1436 510 1436 c 0
+ 555 1436 567 1478 567 1499 c 1
+ 776 1443 l 1
+ 759 1326 666 1204 510 1204 c 0
+ 420 1204 366 1267 324 1267 c 0
+ 273 1267 267 1225 267 1204 c 1
 EndSplineSet
 Colour: ffff00
 EndChar
 
 StartChar: uni02C9
 Encoding: 713 713 1101
-Width: 750
+Width: 848
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-70 1224 m 1
- 70 1364 l 1
- 680 1364 l 1
- 680 1224 l 1
- 70 1224 l 1
+58 1200 m 1
+ 58 1410 l 1
+ 790 1410 l 1
+ 790 1200 l 1
+ 58 1200 l 1
 EndSplineSet
 Colour: ffff00
 EndChar
 
 StartChar: breve
 Encoding: 728 728 1102
-Width: 700
+Width: 788
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-350 1214 m 0
- 200 1214 70 1340 70 1480 c 1
- 230 1480 l 1
- 230 1414 284 1354 350 1354 c 0
- 416 1354 470 1414 470 1480 c 1
- 630 1480 l 1
- 630 1340 500 1214 350 1214 c 0
+394 1194 m 0
+ 184 1194 58 1340 58 1480 c 1
+ 316 1480 l 1
+ 316 1450 344 1404 394 1404 c 0
+ 444 1404 470 1450 470 1480 c 1
+ 730 1480 l 1
+ 730 1340 604 1194 394 1194 c 0
 EndSplineSet
 Colour: ffff00
 EndChar
 
 StartChar: dotaccent
 Encoding: 729 729 1103
-Width: 396
+Width: 516
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-70 1352 m 4
- 70 1424 126 1480 198 1480 c 0
- 270 1480 326 1424 326 1352 c 0
- 326 1280 270 1224 198 1224 c 0
- 126 1224 70 1280 70 1352 c 4
+58 1352 m 0
+ 58 1463 147 1552 258 1552 c 0
+ 369 1552 458 1463 458 1352 c 0
+ 458 1241 369 1152 258 1152 c 0
+ 147 1152 58 1241 58 1352 c 0
 EndSplineSet
 Colour: ff00
 EndChar
 
 StartChar: ring
 Encoding: 730 730 1104
-Width: 556
+Width: 528
 VWidth: 997
 Flags: HMW
-AnchorPoint: "top_center" 278 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-70 1347 m 4
- 70 1457 168 1544 278 1544 c 4
- 388 1544 486 1457 486 1347 c 4
- 486 1237 388 1150 278 1150 c 4
- 168 1150 70 1237 70 1347 c 4
-198 1347 m 4
- 198 1301 232 1267 278 1267 c 4
- 324 1267 358 1301 358 1347 c 4
- 358 1393 324 1427 278 1427 c 4
- 232 1427 198 1393 198 1347 c 4
+58 1347 m 0
+ 58 1457 144 1542 264 1542 c 0
+ 384 1542 470 1457 470 1347 c 0
+ 470 1237 384 1152 264 1152 c 0
+ 144 1152 58 1237 58 1347 c 0
+218 1347 m 0
+ 218 1321 238 1302 264 1302 c 0
+ 290 1302 309 1321 309 1347 c 0
+ 309 1373 290 1392 264 1392 c 0
+ 238 1392 218 1373 218 1347 c 0
 EndSplineSet
 Colour: ffbf00
 EndChar
 
 StartChar: hungarumlaut
 Encoding: 733 733 1105
-Width: 948
+Width: 1278
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-652 1224 m 1
- 474 1224 l 1
- 652 1480 l 1
- 878 1480 l 1
- 652 1224 l 1
-248 1224 m 1
- 70 1224 l 1
- 248 1480 l 1
- 474 1480 l 1
- 248 1224 l 1
+994 1224 m 1
+ 638 1224 l 1
+ 816 1480 l 1
+ 1220 1480 l 1
+ 994 1224 l 1
+414 1224 m 1
+ 58 1224 l 1
+ 236 1480 l 1
+ 640 1480 l 1
+ 414 1224 l 1
 EndSplineSet
 Colour: ffff00
 EndChar
 
 StartChar: caron
 Encoding: 711 711 1106
-Width: 722
+Width: 932
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-248 1480 m 1
- 456 1224 l 1
- 266 1224 l 1
- 70 1480 l 1
- 248 1480 l 1
-474 1480 m 1
- 652 1480 l 1
- 456 1224 l 1
- 266 1224 l 1
- 474 1480 l 1
+409 1480 m 1
+ 569 1224 l 1
+ 263 1224 l 1
+ 58 1480 l 1
+ 409 1480 l 1
+523 1480 m 1
+ 874 1480 l 1
+ 669 1224 l 1
+ 363 1224 l 1
+ 523 1480 l 1
 EndSplineSet
 Colour: ffff00
 EndChar
 
 StartChar: ogonek
 Encoding: 731 731 1107
-Width: 492
+Width: 501
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-397 0 m 0
- 289 -78 197 -137 197 -204 c 0
- 197 -240 224 -263 260 -263 c 0
- 296 -263 330 -250 364 -225 c 1
- 422 -326 l 1
- 367 -364 324 -380 260 -380 c 0
- 160 -380 70 -324 70 -204 c 0
- 70 -131.588867188 139.18359375 -56.2646484375 206.140625 0 c 1
- 397 0 l 0
+365 -225 m 1
+ 443 -368 l 1
+ 386 -418 335 -432 271 -432 c 0
+ 171 -432 58 -374 58 -224 c 0
+ 58 -64 260 65 308 100 c 0
+ 408 0 l 4
+ 300 -78 218 -137 218 -204 c 0
+ 218 -240 235 -271 271 -271 c 0
+ 297 -271 345 -256 365 -225 c 1
 EndSplineSet
 Colour: ffbf00
 EndChar
@@ -29097,39 +29092,39 @@ EndChar
 
 StartChar: uni02B9
 Encoding: 697 697 1109
-Width: 544
+Width: 698
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-248 1224 m 5
- 70 1224 l 5
- 248 1480 l 5
- 474 1480 l 5
- 248 1224 l 5
+414 1224 m 1
+ 58 1224 l 1
+ 236 1480 l 1
+ 640 1480 l 1
+ 414 1224 l 1
 EndSplineSet
 Colour: ffff00
 EndChar
 
 StartChar: uni02BA
 Encoding: 698 698 1110
-Width: 948
+Width: 1278
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-652 1224 m 1
- 474 1224 l 1
- 652 1480 l 1
- 878 1480 l 1
- 652 1224 l 1
-248 1224 m 1
- 70 1224 l 1
- 248 1480 l 1
- 474 1480 l 1
- 248 1224 l 1
+994 1224 m 1
+ 638 1224 l 1
+ 816 1480 l 1
+ 1220 1480 l 1
+ 994 1224 l 1
+414 1224 m 1
+ 58 1224 l 1
+ 236 1480 l 1
+ 640 1480 l 1
+ 414 1224 l 1
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -30228,34 +30223,33 @@ EndChar
 
 StartChar: uni1E9B
 Encoding: 7835 7835 1195
-Width: 695
+Width: 894
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -252 360 2
+Refer: 229 775 N 1 0 0 1 -411.999 360 2
 Refer: 363 383 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
 
 StartChar: uni02F3
 Encoding: 755 755 1196
-Width: 555
+Width: 528
 VWidth: 997
 Flags: HMW
-AnchorPoint: "bottom_center" 278 0 mark 0
 LayerCount: 4
 Fore
 SplineSet
-70 -307 m 4
- 70 -197 168 -110 278 -110 c 4
- 388 -110 485 -197 485 -307 c 4
- 485 -417 388 -504 278 -504 c 4
- 168 -504 70 -417 70 -307 c 4
-198 -307 m 4
- 198 -353 232 -387 278 -387 c 4
- 324 -387 358 -353 358 -307 c 4
- 358 -261 324 -227 278 -227 c 4
- 232 -227 198 -261 198 -307 c 4
+58 -307 m 0
+ 58 -197 144 -112 264 -112 c 0
+ 384 -112 470 -197 470 -307 c 0
+ 470 -417 384 -502 264 -502 c 0
+ 144 -502 58 -417 58 -307 c 0
+218 -307 m 0
+ 218 -333 238 -352 264 -352 c 0
+ 290 -352 309 -333 309 -307 c 0
+ 309 -281 290 -262 264 -262 c 0
+ 238 -262 218 -281 218 -307 c 0
 EndSplineSet
 Colour: ffbf00
 EndChar
@@ -30269,16 +30263,16 @@ AnchorPoint: "bottom_center" 642 0 mark 0
 LayerCount: 4
 Fore
 SplineSet
-434 -307 m 4
- 434 -197 532 -110 642 -110 c 4
- 752 -110 850 -197 850 -307 c 4
- 850 -417 752 -504 642 -504 c 4
- 532 -504 434 -417 434 -307 c 4
-562 -307 m 4
- 562 -353 596 -387 642 -387 c 4
- 688 -387 722 -353 722 -307 c 4
- 722 -261 688 -227 642 -227 c 4
- 596 -227 562 -261 562 -307 c 4
+436 -307 m 4
+ 436 -197 522 -112 642 -112 c 4
+ 762 -112 848 -197 848 -307 c 4
+ 848 -417 762 -502 642 -502 c 4
+ 522 -502 436 -417 436 -307 c 4
+596 -307 m 4
+ 596 -333 616 -352 642 -352 c 4
+ 668 -352 687 -333 687 -307 c 4
+ 687 -281 668 -262 642 -262 c 4
+ 616 -262 596 -281 596 -307 c 4
 EndSplineSet
 Colour: ffbf00
 EndChar
@@ -30313,15 +30307,16 @@ Encoding: 803 803 1200
 Width: 0
 VWidth: 1000
 Flags: HMW
+AnchorPoint: "top_center" 642 1040 mark 0
 AnchorPoint: "bottom_center" 642 0 mark 0
 LayerCount: 4
 Fore
 SplineSet
-514 -312 m 4
- 514 -240 570 -184 642 -184 c 4
- 714 -184 770 -240 770 -312 c 4
- 770 -384 714 -440 642 -440 c 4
- 570 -440 514 -384 514 -312 c 4
+442 -312 m 4
+ 442 -201 531 -112 642 -112 c 4
+ 753 -112 842 -201 842 -312 c 4
+ 842 -423 753 -512 642 -512 c 4
+ 531 -512 442 -423 442 -312 c 4
 EndSplineSet
 Colour: ff00
 EndChar
@@ -30359,29 +30354,28 @@ AnchorPoint: "bottom_center" 642 0 mark 0
 LayerCount: 4
 Fore
 SplineSet
-337 -324 m 5
- 337 -184 l 5
- 947 -184 l 5
- 947 -324 l 5
- 337 -324 l 5
+277 -370 m 1
+ 277 -160 l 1
+ 1009 -160 l 1
+ 1009 -370 l 1
+ 277 -370 l 1
 EndSplineSet
 Colour: ffff00
 EndChar
 
 StartChar: uni02CD
 Encoding: 717 717 1204
-Width: 750
+Width: 848
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "bottom_center" 375 0 mark 0
 LayerCount: 4
 Fore
 SplineSet
-70 -324 m 1
- 70 -184 l 1
- 680 -184 l 1
- 680 -324 l 1
- 70 -324 l 1
+58 -370 m 1
+ 58 -160 l 1
+ 790 -160 l 1
+ 790 -370 l 1
+ 58 -370 l 1
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -30463,20 +30457,21 @@ Encoding: 813 813 1211
 Width: 0
 VWidth: 1000
 Flags: HMW
+AnchorPoint: "top_center" 642 1040 mark 0
 AnchorPoint: "bottom_center" 642 0 mark 0
 LayerCount: 4
 Fore
 SplineSet
-755 -440 m 5
- 547 -184 l 5
- 737 -184 l 5
- 933 -440 l 5
- 755 -440 l 5
-529 -440 m 5
- 351 -440 l 5
- 547 -184 l 5
- 737 -184 l 5
- 529 -440 l 5
+699 -410 m 5
+ 539 -154 l 5
+ 845 -154 l 5
+ 1050 -410 l 5
+ 699 -410 l 5
+585 -410 m 5
+ 234 -410 l 5
+ 439 -154 l 5
+ 745 -154 l 5
+ 585 -410 l 5
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -30534,19 +30529,20 @@ Encoding: 816 816 1216
 Width: 0
 VWidth: 1000
 Flags: HMW
+AnchorPoint: "top_center" 642 1040 mark 0
 AnchorPoint: "bottom_center" 642 0 mark 0
 LayerCount: 4
 Fore
 SplineSet
-444 -437 m 5
- 305 -400 l 5
- 321 -264 411 -174 519 -174 c 4
- 651 -174 685 -310 765 -310 c 4
- 813 -310 835 -247 840 -187 c 5
- 979 -224 l 5
- 963 -360 873 -450 765 -450 c 4
- 633 -450 599 -314 519 -314 c 4
- 471 -314 449 -377 444 -437 c 5
+488 -460 m 5
+ 279 -404 l 5
+ 296 -287 389 -165 545 -165 c 4
+ 635 -165 689 -228 731 -228 c 4
+ 776 -228 788 -186 788 -165 c 5
+ 997 -221 l 5
+ 980 -338 887 -460 731 -460 c 4
+ 641 -460 587 -397 545 -397 c 4
+ 494 -397 488 -439 488 -460 c 5
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -30604,17 +30600,18 @@ Encoding: 814 814 1221
 Width: 0
 VWidth: 1000
 Flags: HMW
+AnchorPoint: "top_center" 642 1040 mark 0
 AnchorPoint: "bottom_center" 642 0 mark 0
 LayerCount: 4
 Fore
 SplineSet
-643 -174 m 4
- 493 -174 363 -300 363 -440 c 5
- 523 -440 l 5
- 523 -374 577 -314 643 -314 c 4
- 709 -314 763 -374 763 -440 c 5
- 923 -440 l 5
- 923 -300 793 -174 643 -174 c 4
+642 -154 m 4
+ 432 -154 306 -300 306 -440 c 5
+ 564 -440 l 5
+ 564 -410 592 -364 642 -364 c 4
+ 692 -364 718 -410 718 -440 c 5
+ 978 -440 l 5
+ 978 -300 852 -154 642 -154 c 4
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -31210,16 +31207,16 @@ AnchorPoint: "bottom_center" 642 0 mark 0
 LayerCount: 4
 Fore
 SplineSet
-738 -312 m 4
- 738 -240 794 -184 866 -184 c 4
- 938 -184 994 -240 994 -312 c 4
- 994 -384 938 -440 866 -440 c 4
- 794 -440 738 -384 738 -312 c 4
-290 -312 m 4
- 290 -240 346 -184 418 -184 c 4
- 490 -184 546 -240 546 -312 c 4
- 546 -384 490 -440 418 -440 c 4
- 346 -440 290 -384 290 -312 c 4
+755 -312 m 0
+ 755 -201 844 -112 955 -112 c 0
+ 1066 -112 1155 -201 1155 -312 c 0
+ 1155 -423 1066 -512 955 -512 c 0
+ 844 -512 755 -423 755 -312 c 0
+125 -312 m 0
+ 125 -201 214 -112 325 -112 c 0
+ 436 -112 525 -201 525 -312 c 0
+ 525 -423 436 -512 325 -512 c 0
+ 214 -512 125 -423 125 -312 c 0
 EndSplineSet
 Colour: ff00
 EndChar
@@ -31310,20 +31307,19 @@ EndChar
 
 StartChar: uni02BE
 Encoding: 702 702 1278
-Width: 348
+Width: 322
 VWidth: 997
 Flags: HMW
-AnchorPoint: "top_center" 70 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-70 1247 m 4
- 116 1247 150 1281 150 1327 c 0
- 150 1373 116 1407 70 1407 c 0
- 70 1524 l 0
- 180 1524 278 1437 278 1327 c 0
- 278 1217 180 1130 70 1130 c 4
- 70 1247 l 4
+58 1302 m 0
+ 84 1302 103 1321 103 1347 c 0
+ 103 1373 84 1392 58 1392 c 0
+ 58 1542 l 0
+ 178 1542 264 1457 264 1347 c 0
+ 264 1237 178 1152 58 1152 c 0
+ 58 1302 l 0
 EndSplineSet
 Colour: ffbf00
 EndChar
@@ -31520,48 +31516,46 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-578 1314 m 1
- 706 1314 l 1
- 706 1156 l 1
- 578 1156 l 1
- 578 1314 l 1
-513 1405 m 1
- 479 1523 l 1
- 479 1523 534 1558 618 1558 c 0
- 742 1558 835 1486 835 1376 c 0
- 835 1266 752 1197 642 1197 c 0
- 642 1314 l 0
- 687 1314 708 1346 708 1376 c 0
- 708 1406 688 1437 628 1437 c 0
- 558 1437 513 1405 513 1405 c 1
+562 1334 m 1
+ 722 1334 l 1
+ 722 1156 l 1
+ 562 1156 l 1
+ 562 1334 l 1
+487 1368 m 5
+ 446 1523 l 1
+ 446 1523 532 1558 613 1558 c 0
+ 812 1558 874 1466 874 1376 c 0
+ 874 1236 774 1193 642 1193 c 0
+ 642 1334 l 0
+ 696 1334 714 1346 714 1366 c 0
+ 714 1386 677 1398 625 1398 c 4
+ 531 1398 487 1368 487 1368 c 5
 EndSplineSet
 Colour: ffbf00
 EndChar
 
 StartChar: uni02C0
 Encoding: 704 704 1288
-Width: 496
+Width: 544
 VWidth: 997
 Flags: HMW
-AnchorPoint: "circumflex_right" 233 1000 mark 0
-AnchorPoint: "top_center" 233 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-169 1314 m 1
- 297 1314 l 1
- 297 1156 l 1
- 169 1156 l 1
- 169 1314 l 1
-104 1405 m 1
- 70 1523 l 1
- 70 1523 125 1558 209 1558 c 0
- 333 1558 426 1486 426 1376 c 0
- 426 1266 343 1197 233 1197 c 0
- 233 1314 l 0
- 278 1314 299 1346 299 1376 c 0
- 299 1406 279 1437 219 1437 c 0
- 149 1437 104 1405 104 1405 c 1
+174 1334 m 1
+ 334 1334 l 1
+ 334 1156 l 1
+ 174 1156 l 1
+ 174 1334 l 1
+99 1368 m 1
+ 58 1523 l 1
+ 58 1523 144 1558 225 1558 c 0
+ 424 1558 486 1466 486 1376 c 0
+ 486 1236 386 1193 254 1193 c 0
+ 254 1334 l 0
+ 308 1334 326 1346 326 1366 c 0
+ 326 1386 289 1398 237 1398 c 0
+ 143 1398 99 1368 99 1368 c 1
 EndSplineSet
 Colour: ffbf00
 EndChar
@@ -32845,18 +32839,18 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-542 1429 m 4
- 542 1487 584 1532 642 1532 c 4
- 698 1532 743 1487 743 1429 c 4
- 743 1371 700 1327 642 1327 c 4
- 584 1327 542 1371 542 1429 c 4
-554 1214 m 5
- 600 1224 671 1263 671 1359 c 4
- 671 1381 643 1429 643 1429 c 5
- 642 1532 l 5
- 698 1532 772 1495 772 1359 c 4
- 772 1215 640 1138 578 1122 c 5
- 554 1214 l 5
+522 1427 m 4
+ 522 1494 575 1547 642 1547 c 4
+ 709 1547 762 1494 762 1427 c 4
+ 762 1360 709 1307 642 1307 c 4
+ 575 1307 522 1360 522 1427 c 4
+531 1230 m 5
+ 608 1242 667 1291 667 1344 c 4
+ 667 1370 643 1427 643 1427 c 5
+ 642 1547 l 5
+ 710 1547 801 1504 801 1344 c 4
+ 801 1217 662 1119 567 1102 c 5
+ 531 1230 l 5
 EndSplineSet
 Colour: ffbf00
 EndChar
@@ -53098,11 +53092,11 @@ EndChar
 
 StartChar: IJ
 Encoding: 306 306 2019
-Width: 1974
+Width: 2381
 Flags: HM
 LayerCount: 4
 Fore
-Refer: 50 74 N 1 0 0 1 806 0 2
+Refer: 50 74 N 1 0 0 1 1016 0 2
 Refer: 36 73 N 1 0 0 1 0 0 2
 Substitution2: "'ss03' Simplified G and I lookups0-1" IJ.ss03
 Colour: 8000ff
@@ -53110,11 +53104,11 @@ EndChar
 
 StartChar: ij
 Encoding: 307 307 2020
-Width: 999
+Width: 1302
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 19 106 S 1 0 0 1 470 0 2
+Refer: 19 106 N 1 0 0 1 592 0 2
 Refer: 18 105 N 1 0 0 1 0 0 2
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ij.sc
 Colour: 8000ff
@@ -60555,18 +60549,18 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-742 1225 m 4
- 742 1167 700 1122 642 1122 c 4
- 586 1122 541 1167 541 1225 c 4
- 541 1283 584 1327 642 1327 c 4
- 700 1327 742 1283 742 1225 c 4
-730 1440 m 5
- 684 1430 613 1391 613 1295 c 4
- 613 1273 641 1225 641 1225 c 5
- 642 1122 l 5
- 586 1122 512 1159 512 1295 c 4
- 512 1439 644 1516 706 1532 c 5
- 730 1440 l 5
+762 1227 m 0
+ 762 1160 709 1107 642 1107 c 0
+ 575 1107 522 1160 522 1227 c 0
+ 522 1294 575 1347 642 1347 c 0
+ 709 1347 762 1294 762 1227 c 0
+753 1424 m 5
+ 676 1412 617 1363 617 1310 c 0
+ 617 1284 641 1227 641 1227 c 1
+ 642 1107 l 1
+ 574 1107 483 1150 483 1310 c 0
+ 483 1437 622 1535 717 1552 c 1
+ 753 1424 l 5
 EndSplineSet
 Colour: ffbf00
 EndChar
@@ -61118,18 +61112,18 @@ Encoding: 832 832 2248
 Width: 0
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "top_left" 844 1480 mark 0
-AnchorPoint: "top_left_O2" 831 1224 mark 0
+AnchorPoint: "top_left" 923 1480 mark 0
+AnchorPoint: "top_left_O2" 910 1224 mark 0
 AnchorPoint: "circumflex_left" 697 1092 mark 0
 AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-563 1224 m 5
- 337 1480 l 5
- 563 1480 l 5
- 741 1224 l 5
- 563 1224 l 5
+474 1224 m 1
+ 248 1480 l 1
+ 652 1480 l 1
+ 830 1224 l 1
+ 474 1224 l 1
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -61139,18 +61133,18 @@ Encoding: 833 833 2249
 Width: 0
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "top_left" 988 1480 mark 0
-AnchorPoint: "top_left_O2" 811 1224 mark 0
+AnchorPoint: "top_left" 1068 1480 mark 0
+AnchorPoint: "top_left_O2" 891 1224 mark 0
 AnchorPoint: "circumflex_right" 587 1092 mark 0
 AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-721 1224 m 5
- 543 1224 l 5
- 721 1480 l 5
- 947 1480 l 5
- 721 1224 l 5
+810 1224 m 1
+ 454 1224 l 1
+ 632 1480 l 1
+ 1036 1480 l 1
+ 810 1224 l 1
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -61166,18 +61160,19 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-542 1429 m 4
- 542 1487 584 1532 642 1532 c 4
- 698 1532 743 1487 743 1429 c 4
- 743 1371 700 1327 642 1327 c 4
- 584 1327 542 1371 542 1429 c 4
-554 1214 m 5
- 600 1224 671 1263 671 1359 c 4
- 671 1381 643 1429 643 1429 c 5
- 642 1532 l 5
- 698 1532 772 1495 772 1359 c 4
- 772 1215 640 1138 578 1122 c 5
- 554 1214 l 5
+522 1427 m 4
+ 522 1494 575 1547 642 1547 c 4
+ 709 1547 762 1494 762 1427 c 4
+ 762 1360 709 1307 642 1307 c 4
+ 575 1307 522 1360 522 1427 c 4
+531 1230 m 5
+ 608 1242 667 1291 667 1344 c 4
+ 667 1370 643 1427 643 1427 c 5
+ 642 1547 l 5
+ 710 1547 801 1504 801 1344 c 4
+ 801 1217 662 1119 567 1102 c 5
+ 531 1230 l 5
+642 1325 m 1028
 EndSplineSet
 Colour: ffbf00
 EndChar
@@ -61191,15 +61186,15 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-440 1227 m 5
- 301 1264 l 5
- 317 1400 407 1490 515 1490 c 4
- 647 1490 681 1354 761 1354 c 4
- 809 1354 831 1417 836 1477 c 5
- 975 1440 l 5
- 959 1304 869 1214 761 1214 c 4
- 629 1214 595 1350 515 1350 c 4
- 467 1350 445 1287 440 1227 c 5
+488 1204 m 5
+ 279 1260 l 5
+ 296 1377 389 1499 545 1499 c 4
+ 635 1499 689 1436 731 1436 c 4
+ 776 1436 788 1478 788 1499 c 5
+ 997 1443 l 5
+ 980 1326 887 1204 731 1204 c 4
+ 641 1204 587 1267 545 1267 c 4
+ 494 1267 488 1225 488 1204 c 5
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -62946,19 +62941,19 @@ AnchorPoint: "bottom_ypogegrammeni" 642 -90 mark 0
 LayerCount: 4
 Fore
 SplineSet
-798 -331 m 5
- 825 -442 l 5
- 810 -452 782 -460 760 -460 c 4
- 643 -460 575 -410 575 -304 c 6
- 575 -175 l 5
- 575 -109 l 5
- 575 -90 l 5
- 709 -90 l 5
- 709 -98 l 5
- 709 -161 l 5
- 709 -286 l 6
- 709 -322 728 -340 766 -340 c 4
- 776 -340 790 -335 798 -331 c 5
+865 -271 m 5
+ 922 -492 l 5
+ 907 -502 879 -520 827 -520 c 4
+ 630 -520 508 -420 508 -244 c 6
+ 508 -175 l 1
+ 508 -109 l 1
+ 508 -90 l 1
+ 776 -90 l 1
+ 776 -98 l 1
+ 776 -161 l 1
+ 776 -226 l 2
+ 776 -262 795 -280 833 -280 c 0
+ 843 -280 857 -278 865 -271 c 5
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -64867,13 +64862,13 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-642 1247 m 4
- 688 1247 722 1281 722 1327 c 4
- 722 1373 688 1407 642 1407 c 4
- 642 1524 l 4
- 752 1524 850 1437 850 1327 c 4
- 850 1217 752 1130 642 1130 c 4
- 642 1247 l 4
+642 1302 m 0
+ 668 1302 687 1321 687 1347 c 0
+ 687 1373 668 1392 642 1392 c 0
+ 642 1542 l 0
+ 762 1542 848 1457 848 1347 c 0
+ 848 1237 762 1152 642 1152 c 0
+ 642 1302 l 0
 EndSplineSet
 Colour: ffbf00
 EndChar
@@ -81446,8 +81441,8 @@ EndChar
 StartChar: I.ss03
 Encoding: 66092 -1 3023
 Width: 470
-Flags: MW
-AnchorPoint: "top_left" 152 1480 basechar 0
+Flags: HMW
+AnchorPoint: "top_left" 140 1480 basechar 0
 AnchorPoint: "bottom_right" 330 0 basechar 0
 AnchorPoint: "bottom_center" 235 0 basechar 0
 AnchorPoint: "top_center" 235 1380 basechar 0
@@ -81470,7 +81465,7 @@ EndChar
 StartChar: Igrave.ss03
 Encoding: 66093 -1 3024
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 83 768 N 1 0 0 1 -407 340 2
@@ -81481,7 +81476,7 @@ EndChar
 StartChar: Iacute.ss03
 Encoding: 66094 -1 3025
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 84 769 N 1 0 0 1 -407 340 2
@@ -81492,7 +81487,7 @@ EndChar
 StartChar: Icircumflex.ss03
 Encoding: 66095 -1 3026
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 85 770 N 1 0 0 1 -407 340 2
@@ -81503,7 +81498,7 @@ EndChar
 StartChar: Idieresis.ss03
 Encoding: 66096 -1 3027
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 -407 340 2
@@ -81514,7 +81509,7 @@ EndChar
 StartChar: Itilde.ss03
 Encoding: 66097 -1 3028
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 86 771 N 1 0 0 1 -407 340 2
@@ -81525,7 +81520,7 @@ EndChar
 StartChar: Imacron.ss03
 Encoding: 66098 -1 3029
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 221 772 N 1 0 0 1 -407 340 2
@@ -81536,7 +81531,7 @@ EndChar
 StartChar: Ibreve.ss03
 Encoding: 66099 -1 3030
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 224 774 N 1 0 0 1 -407 340 2
@@ -81547,7 +81542,7 @@ EndChar
 StartChar: Iogonek.ss03
 Encoding: 66100 -1 3031
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 226 808 N 1 0 0 1 -312 0 2
@@ -81558,7 +81553,7 @@ EndChar
 StartChar: Idotaccent.ss03
 Encoding: 66101 -1 3032
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 229 775 N 1 0 0 1 -407 340 2
@@ -81569,7 +81564,7 @@ EndChar
 StartChar: IJ.ss03
 Encoding: 66102 -1 3033
 Width: 1638
-Flags: MW
+Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
@@ -81624,7 +81619,7 @@ EndChar
 StartChar: uni01CF.ss03
 Encoding: 66104 -1 3035
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 230 780 N 1 0 0 1 -407 340 2
@@ -81635,7 +81630,7 @@ EndChar
 StartChar: uni0208.ss03
 Encoding: 66105 -1 3036
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 498 783 N 1 0 0 1 -407 340 2
@@ -81646,7 +81641,7 @@ EndChar
 StartChar: uni020A.ss03
 Encoding: 66106 -1 3037
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 511 785 N 1 0 0 1 -407 340 2
@@ -81719,26 +81714,26 @@ EndChar
 
 StartChar: Iotatonos.ss03
 Encoding: 66109 -1 3040
-Width: 837
+Width: 836
 Flags: HMW
-AnchorPoint: "top_center" 602 1380 basechar 0
-AnchorPoint: "bottom_center" 602 0 basechar 0
-AnchorPoint: "bottom_right" 697 0 basechar 0
-AnchorPoint: "top_left" 519 1480 basechar 0
+AnchorPoint: "top_left" 506 1480 basechar 0
+AnchorPoint: "bottom_right" 696 0 basechar 0
+AnchorPoint: "bottom_center" 601 0 basechar 0
+AnchorPoint: "top_center" 601 1380 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-697 1312 m 25
- 697 168 l 25
- 697 0 l 25
- 507 0 l 25
- 507 168 l 25
- 507 1312 l 25
- 507 1480 l 25
- 697 1480 l 25
- 697 1312 l 25
+696 1312 m 25
+ 696 168 l 25
+ 696 0 l 25
+ 506 0 l 25
+ 506 168 l 25
+ 506 1312 l 25
+ 506 1480 l 25
+ 696 1480 l 25
+ 696 1312 l 25
 EndSplineSet
-Refer: 702 900 S 1 0 0 1 -70 10 2
+Refer: 702 900 S 1 0 0 1 -70 0 2
 Colour: 80ff
 EndChar
 
@@ -81759,7 +81754,7 @@ EndChar
 StartChar: Iotadieresis.ss03
 Encoding: 66111 -1 3042
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 -407 340 2
@@ -81780,7 +81775,7 @@ EndChar
 StartChar: afii10056.ss03
 Encoding: 66113 -1 3044
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 -406 398 2
@@ -81801,32 +81796,45 @@ EndChar
 StartChar: uni1E2C.ss03
 Encoding: 66115 -1 3046
 Width: 470
-Flags: HM
+Flags: HMW
+AnchorPoint: "top_left" 140 1480 basechar 0
+AnchorPoint: "bottom_right" 330 0 basechar 0
+AnchorPoint: "bottom_center" 235 0 basechar 0
+AnchorPoint: "top_center" 235 1380 basechar 0
 LayerCount: 4
 Fore
-Refer: 1216 816 N 1 0 0 1 -407 0 2
-Refer: 3023 -1 N 1 0 0 1 0 0 3
+SplineSet
+330 1312 m 29
+ 330 168 l 29
+ 330 0 l 29
+ 140 0 l 29
+ 140 168 l 29
+ 140 1312 l 29
+ 140 1480 l 29
+ 330 1480 l 29
+ 330 1312 l 29
+EndSplineSet
 Colour: ff
 EndChar
 
 StartChar: uni1E2E.ss03
 Encoding: 66116 -1 3047
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 S 1 0 0 1 -398 642 2
-Refer: 3027 -1 N 1 0 0 1 0 0 3
+Refer: 83 768 N 1 0 0 1 -407 340 2
+Refer: 3023 -1 N 1 0 0 1 0 0 3
 Colour: 80ff
 EndChar
 
 StartChar: uni1EC8.ss03
 Encoding: 66117 -1 3048
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 -407 340 2
+Refer: 84 769 N 1 0 0 1 -407 340 2
 Refer: 3023 -1 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -81834,61 +81842,43 @@ EndChar
 StartChar: uni1ECA.ss03
 Encoding: 66118 -1 3049
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -407 0 2
+Refer: 85 770 N 1 0 0 1 -407 340 2
 Refer: 3023 -1 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
 
 StartChar: uni1F38.ss03
 Encoding: 66119 -1 3050
-Width: 727
+Width: 470
 Flags: HMW
-AnchorPoint: "top_center" 492 1380 basechar 0
-AnchorPoint: "bottom_center" 492 0 basechar 0
-AnchorPoint: "bottom_right" 587 0 basechar 0
-AnchorPoint: "top_left" 409 1480 basechar 0
 LayerCount: 4
 Fore
-SplineSet
-587 1312 m 25
- 587 168 l 25
- 587 0 l 25
- 397 0 l 25
- 397 168 l 25
- 397 1312 l 25
- 397 1480 l 25
- 587 1480 l 25
- 587 1312 l 25
-EndSplineSet
-Refer: 2403 8127 S 1 0 0 1 -70 0 2
+Refer: 87 776 N 1 0 0 1 -407 340 2
+Refer: 3023 -1 N 1 0 0 1 0 0 3
 Colour: 80ff
 EndChar
 
 StartChar: uni1F39.ss03
 Encoding: 66120 -1 3051
-Width: 727
+Width: 714
 Flags: HMW
-AnchorPoint: "top_center" 492 1380 basechar 0
-AnchorPoint: "bottom_center" 492 0 basechar 0
-AnchorPoint: "bottom_right" 587 0 basechar 0
-AnchorPoint: "top_left" 409 1480 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-587 1312 m 25
- 587 168 l 25
- 587 0 l 25
- 397 0 l 25
- 397 168 l 25
- 397 1312 l 25
- 397 1480 l 25
- 587 1480 l 25
- 587 1312 l 25
+574 1312 m 25
+ 574 168 l 25
+ 574 0 l 25
+ 384 0 l 25
+ 384 168 l 25
+ 384 1312 l 25
+ 384 1480 l 29
+ 574 1480 l 25
+ 574 1312 l 25
 EndSplineSet
-Refer: 2451 8190 S 1 0 0 1 -70 0 2
+Refer: 2451 8190 N 1 0 0 1 -70 0 2
 Colour: 80ff
 EndChar
 
@@ -81896,10 +81886,6 @@ StartChar: uni1F3A.ss03
 Encoding: 66121 -1 3052
 Width: 1120
 Flags: HMW
-AnchorPoint: "top_center" 885 1380 basechar 0
-AnchorPoint: "bottom_center" 885 0 basechar 0
-AnchorPoint: "bottom_right" 980 0 basechar 0
-AnchorPoint: "top_left" 802 1480 basechar 0
 LayerCount: 4
 Fore
 SplineSet
@@ -81913,24 +81899,20 @@ SplineSet
  980 1480 l 25
  980 1312 l 25
 EndSplineSet
-Refer: 2270 8141 S 1 0 0 1 -70 0 2
+Refer: 2270 8141 N 1 0 0 1 -70 0 2
 Colour: 80ff
 EndChar
 
 StartChar: uni1F3B.ss03
 Encoding: 66122 -1 3053
-Width: 1120
+Width: 470
 Flags: HMW
-AnchorPoint: "top_center" 885 1380 basechar 0
-AnchorPoint: "bottom_center" 885 0 basechar 0
-AnchorPoint: "bottom_right" 980 0 basechar 0
-AnchorPoint: "top_left" 802 1480 basechar 0
 LayerCount: 4
 Fore
 SplineSet
 980 1312 m 25
  980 168 l 25
- 980 0 l 25
+ 980 0 l 29
  790 0 l 25
  790 168 l 25
  790 1312 l 25
@@ -81938,18 +81920,14 @@ SplineSet
  980 1480 l 25
  980 1312 l 25
 EndSplineSet
-Refer: 2272 8157 S 1 0 0 1 -70 0 2
+Refer: 2272 8157 N 1 0 0 1 -70 0 2
 Colour: 80ff
 EndChar
 
 StartChar: uni1F3C.ss03
 Encoding: 66123 -1 3054
-Width: 1120
+Width: 470
 Flags: HMW
-AnchorPoint: "top_center" 885 1380 basechar 0
-AnchorPoint: "bottom_center" 885 0 basechar 0
-AnchorPoint: "bottom_right" 980 0 basechar 0
-AnchorPoint: "top_left" 802 1480 basechar 0
 LayerCount: 4
 Fore
 SplineSet
@@ -81963,24 +81941,20 @@ SplineSet
  980 1480 l 25
  980 1312 l 25
 EndSplineSet
-Refer: 2271 8142 S 1 0 0 1 -70 0 2
+Refer: 2271 8142 N 1 0 0 1 -70 0 2
 Colour: 80ff
 EndChar
 
 StartChar: uni1F3D.ss03
 Encoding: 66124 -1 3055
-Width: 1120
+Width: 470
 Flags: HMW
-AnchorPoint: "top_center" 885 1380 basechar 0
-AnchorPoint: "bottom_center" 885 0 basechar 0
-AnchorPoint: "bottom_right" 980 0 basechar 0
-AnchorPoint: "top_left" 802 1480 basechar 0
 LayerCount: 4
 Fore
 SplineSet
 980 1312 m 25
  980 168 l 25
- 980 0 l 25
+ 980 0 l 29
  790 0 l 25
  790 168 l 25
  790 1312 l 25
@@ -81988,18 +81962,16 @@ SplineSet
  980 1480 l 25
  980 1312 l 25
 EndSplineSet
-Refer: 2273 8158 S 1 0 0 1 -70 0 2
+Refer: 2273 8158 N 1 0 0 1 -70 0 2
 Colour: 80ff
 EndChar
 
 StartChar: uni1F3E.ss03
 Encoding: 66125 -1 3056
-Width: 858
+Width: 470
 Flags: HMW
-AnchorPoint: "top_center" 623 1380 basechar 0
 AnchorPoint: "bottom_center" 623 0 basechar 0
 AnchorPoint: "bottom_right" 718 0 basechar 0
-AnchorPoint: "top_left" 540 1480 basechar 0
 LayerCount: 4
 Fore
 SplineSet
@@ -82013,39 +81985,35 @@ SplineSet
  718 1480 l 25
  718 1312 l 25
 EndSplineSet
-Refer: 2274 8143 N 1 0 0 1 -172 4 2
+Refer: 2274 8143 S 1 0 0 1 -267 4 2
 Colour: 80ff
 EndChar
 
 StartChar: uni1F3F.ss03
 Encoding: 66126 -1 3057
-Width: 858
+Width: 470
 Flags: HMW
-AnchorPoint: "top_center" 623 1380 basechar 0
-AnchorPoint: "bottom_center" 623 0 basechar 0
-AnchorPoint: "bottom_right" 718 0 basechar 0
-AnchorPoint: "top_left" 540 1480 basechar 0
 LayerCount: 4
 Fore
 SplineSet
 718 1312 m 25
  718 168 l 25
- 718 0 l 25
+ 718 0 l 29
  528 0 l 25
  528 168 l 25
  528 1322 l 25
- 528 1480 l 29
+ 528 1480 l 25
  718 1480 l 25
  718 1312 l 25
 EndSplineSet
-Refer: 2275 8159 N 1 0 0 1 -172 0 2
+Refer: 2275 8159 N 1 0 0 1 -267 0 2
 Colour: 80ff
 EndChar
 
 StartChar: uni1FD8.ss03
 Encoding: 66127 -1 3058
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 224 774 N 1 0 0 1 -407 340 2
@@ -82056,7 +82024,7 @@ EndChar
 StartChar: uni1FD9.ss03
 Encoding: 66128 -1 3059
 Width: 470
-Flags: HM
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 221 772 N 1 0 0 1 -407 340 2
@@ -82068,16 +82036,12 @@ StartChar: uni1FDA.ss03
 Encoding: 66129 -1 3060
 Width: 837
 Flags: HMW
-AnchorPoint: "top_center" 602 1380 basechar 0
-AnchorPoint: "bottom_center" 602 0 basechar 0
-AnchorPoint: "bottom_right" 697 0 basechar 0
-AnchorPoint: "top_left" 519 1480 basechar 0
 LayerCount: 4
 Fore
 SplineSet
 697 1312 m 25
  697 168 l 25
- 697 0 l 25
+ 697 0 l 29
  507 0 l 25
  507 168 l 25
  507 1312 l 25
@@ -82085,7 +82049,7 @@ SplineSet
  697 1480 l 25
  697 1312 l 25
 EndSplineSet
-Refer: 2447 8175 S 1 0 0 1 -70 0 2
+Refer: 2447 8175 N 1 0 0 1 -70 0 2
 Colour: 80ff
 EndChar
 
@@ -82093,10 +82057,6 @@ StartChar: uni1FDB.ss03
 Encoding: 66130 -1 3061
 Width: 837
 Flags: HMW
-AnchorPoint: "top_center" 602 1380 basechar 0
-AnchorPoint: "bottom_center" 602 0 basechar 0
-AnchorPoint: "bottom_right" 697 0 basechar 0
-AnchorPoint: "top_left" 519 1480 basechar 0
 LayerCount: 4
 Fore
 SplineSet
@@ -82110,7 +82070,7 @@ SplineSet
  697 1480 l 25
  697 1312 l 25
 EndSplineSet
-Refer: 2450 8189 S 1 0 0 1 -70 0 2
+Refer: 2450 8189 N 1 0 0 1 -70 0 2
 Colour: 80ff
 EndChar
 

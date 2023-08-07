@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1691415685
+ModificationTime: 1691417360
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -316,7 +316,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 66804 19 7
+WinInfo: 285 19 5
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -8183,11 +8183,11 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-600 1100 m 1
- 600 907 l 1
- -70 520 l 1
- -70 713 l 1
- 600 1100 l 1
+600 1100 m 5
+ 600 907 l 5
+ -70 520 l 5
+ -70 713 l 5
+ 600 1100 l 5
 330 1480 m 17
  330 168 l 1
  1068 168 l 1
@@ -8196,7 +8196,6 @@ SplineSet
  140 1480 l 1
  330 1480 l 17
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" lslash.sc
 Colour: ffff
 EndChar
@@ -8267,7 +8266,7 @@ Fore
 Refer: 1 110 N 1 0 0 1 428 0 2
 Refer: 341 700 N 1 0 0 1 0 0 2
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" napostrophe.sc
-Colour: 8000ff
+Colour: ff
 EndChar
 
 StartChar: Eng
@@ -8277,8 +8276,7 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-1258 0 m 1
- 1258 -202 l 2
+1258 -202 m 6
  1258 -372 1148 -460 978 -460 c 0
  946 -460 896 -449 874 -436 c 1
  916 -284 l 1
@@ -8286,6 +8284,7 @@ SplineSet
  1038 -292 1068 -262 1068 -202 c 2
  1068 0 l 1
  1258 0 l 1
+ 1258 -202 l 6
 330 1480 m 1
  1068 320 l 25
  1068 1480 l 1
@@ -8298,7 +8297,6 @@ SplineSet
  140 1480 l 1
  330 1480 l 1
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" eng.sc
 Colour: ffff
 EndChar
@@ -8311,8 +8309,7 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-1016 0 m 1
- 1016 -210 l 2
+1016 -210 m 2
  1016 -380 916 -460 746 -460 c 0
  714 -460 674 -449 652 -436 c 1
  694 -284 l 1
@@ -8320,8 +8317,8 @@ SplineSet
  806 -300 836 -270 836 -210 c 2
  836 0 l 1
  1016 0 l 1
-836 0 m 1
- 836 572 l 2
+ 1016 -210 l 2
+836 572 m 6
  836 791 758 900 578 900 c 0
  398 900 320 791 320 572 c 2
  320 0 l 1
@@ -8333,8 +8330,8 @@ SplineSet
  888 1060 1016 892 1016 572 c 1
  1016 0 l 1
  836 0 l 1
+ 836 572 l 6
 EndSplineSet
-Validated: 5
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" eng.sc
 Colour: ff00
 EndChar
@@ -8545,15 +8542,15 @@ EndChar
 StartChar: Tbar
 Encoding: 358 358 351
 Width: 1398
-Flags: HMW
+Flags: HMWO
 LayerCount: 4
 Fore
 SplineSet
-1034 656 m 1
- 364 656 l 1
- 364 702 364 778 364 824 c 1
- 1034 824 l 1
- 1034 656 l 1
+1034 656 m 5
+ 364 656 l 5
+ 364 702 364 778 364 824 c 5
+ 1034 824 l 5
+ 1034 656 l 5
 794 0 m 25
  604 0 l 25
  604 1312 l 25
@@ -62897,19 +62894,20 @@ AnchorPoint: "bottom_ypogegrammeni" 642 -90 mark 0
 LayerCount: 4
 Fore
 SplineSet
-798 -331 m 5
- 825 -442 l 5
- 810 -452 782 -460 760 -460 c 4
- 643 -460 575 -410 575 -304 c 6
- 575 -175 l 5
- 575 -109 l 5
- 575 -90 l 5
- 709 -90 l 5
- 709 -98 l 5
- 709 -161 l 5
- 709 -286 l 6
- 709 -322 728 -340 766 -340 c 4
- 776 -340 790 -335 798 -331 c 5
+1216 -176 m 1052
+798 -331 m 1
+ 825 -442 l 1
+ 810 -452 782 -460 760 -460 c 0
+ 643 -460 575 -410 575 -304 c 2
+ 575 -175 l 1
+ 575 -109 l 1
+ 575 -90 l 1
+ 709 -90 l 1
+ 709 -98 l 1
+ 709 -161 l 1
+ 709 -286 l 2
+ 709 -322 728 -340 766 -340 c 0
+ 776 -340 790 -335 798 -331 c 1
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -63616,7 +63614,7 @@ StartChar: uni1FBD
 Encoding: 8125 8125 2399
 Width: 370
 VWidth: 1000
-Flags: HMWO
+Flags: HMW
 AnchorPoint: "top_center" 170 1040 mark 0
 AnchorPoint: "top_left" 467 1480 mark 0
 AnchorPoint: "top_left_O2" 450 1224 mark 0
@@ -64818,13 +64816,13 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-642 1247 m 4
- 688 1247 722 1281 722 1327 c 4
- 722 1373 688 1407 642 1407 c 4
- 642 1524 l 4
- 752 1524 850 1437 850 1327 c 4
- 850 1217 752 1130 642 1130 c 4
- 642 1247 l 4
+642 1247 m 0
+ 688 1247 722 1281 722 1327 c 0
+ 722 1373 688 1407 642 1407 c 0
+ 642 1524 l 0
+ 752 1524 850 1437 850 1327 c 0
+ 850 1217 752 1130 642 1130 c 0
+ 642 1247 l 0
 EndSplineSet
 Colour: ffbf00
 EndChar
