@@ -302,21 +302,21 @@ KernClass2: 11 17 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-1"
  410 y.sc yacute.sc ydieresis.sc ycircumflex.sc uni01B4.sc uni024F.sc upsilondieresistonos.sc upsilon.sc afii10085.sc afii10110.sc uni04AF.sc uni04B1.sc uni04EF.sc uni04F1.sc uni04F3.sc uni1E8F.sc ygrave.sc uni1EF5.sc uni1EF7.sc uni1EF9.sc uni1F50.sc uni1F51.sc uni1F52.sc uni1F53.sc uni1F54.sc uni1F55.sc uni1F56.sc uni1F57.sc uni1F7A.sc uni1F7B.sc uni1FE0.sc uni1FE1.sc uni1FE2.sc uni1FE3.sc uni1FE6.sc uni1FE7.sc
  0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -350 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -280 {} -280 {} -280 {} -210 {} -210 {} -210 {} -140 {} -350 {} -210 {} -280 {} -280 {} -210 {} -210 {} -210 {} -140 {} -210 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} 0 {} -210 {} -140 {} -210 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -210 {} -140 {} -70 {} -210 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -210 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -210 {} -140 {} -70 {} -210 {}
 LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "" "" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
-OtfFeatName: 'ss01' 1033 "Alternative numbers set 1" 2057 "Alternative numbers set 1" 1036 "Nombres alternatifs set 1"
-OtfFeatName: 'ss02' 1033 "Alternative numbers set 2" 2057 "Alternative numbers set 2" 1036 "Nombres alternatifs set 2"
-OtfFeatName: 'ss03' 1033 "Simplified uppercase G and I" 2057 "Simplified uppercase G and I" 1036 "Majuscules G et I simplifi+AOkA-s"
-OtfFeatName: 'ss04' 1033 "Simplified lowercases a and g" 2057 "Simplified lowercases a and g" 1036 "Minuscules a et g simplifi+AOkA-s"
-OtfFeatName: 'ss05' 1033 "Simplified lowercase u" 2057 "Simplified lowercase u" 1036 "Minuscule u simplifi+AOkA"
-OtfFeatName: 'ss06' 1033 "f ligatures (fi, fl, ffi, ...) ('liga' must be enabled!)" 2057 "f ligatures (fi, fl, ffi, ...) ('liga' must be enabled!)" 1036 "f ligatures (fi, fl, ffi, ...) ('liga' doit +AOoA-tre activ+AOkA !)"
-OtfFeatName: 'ss07' 1033 "Bigger basic math operators" 2057 "Bigger basic math operators" 1036 "Plus gros op+AOkA-rateurs math+AOkA-matiques de base"
-OtfFeatName: 'ss08' 1033 "Alternative ampersand, dollar and cent" 2057 "Alternative ampersand, dollar and cent" 1036 "Esperluette, dollar et cent alternatifs"
+OtfFeatName: 'ss08' 1036 "Esperluette, dollar et cent alternatifs" 2057 "Alternative ampersand, dollar and cent" 1033 "Alternative ampersand, dollar and cent"
+OtfFeatName: 'ss07' 1036 "Plus gros op+AOkA-rateurs math+AOkA-matiques de base" 2057 "Bigger basic math operators" 1033 "Bigger basic math operators"
+OtfFeatName: 'ss06' 1036 "f ligatures (fi, fl, ffi, ...) ('liga' doit +AOoA-tre activ+AOkA !)" 2057 "f ligatures (fi, fl, ffi, ...) ('liga' must be enabled!)" 1033 "f ligatures (fi, fl, ffi, ...) ('liga' must be enabled!)"
+OtfFeatName: 'ss05' 1036 "Minuscule u simplifi+AOkA" 2057 "Simplified lowercase u" 1033 "Simplified lowercase u"
+OtfFeatName: 'ss04' 1036 "Minuscules a et g simplifi+AOkA-s" 2057 "Simplified lowercases a and g" 1033 "Simplified lowercases a and g"
+OtfFeatName: 'ss03' 1036 "Majuscules G et I simplifi+AOkA-s" 2057 "Simplified uppercase G and I" 1033 "Simplified uppercase G and I"
+OtfFeatName: 'ss02' 1036 "Nombres alternatifs set 2" 2057 "Alternative numbers set 2" 1033 "Alternative numbers set 2"
+OtfFeatName: 'ss01' 1036 "Nombres alternatifs set 1" 2057 "Alternative numbers set 1" 1033 "Alternative numbers set 1"
 Encoding: UnicodeBmp
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 1216 19 5
+WinInfo: 66519 19 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -16824,7 +16824,7 @@ LayerCount: 4
 Fore
 Refer: 27 65 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" alpha.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: Epsilon
@@ -16840,7 +16840,7 @@ LayerCount: 4
 Fore
 Refer: 31 69 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" epsilon.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: Zeta
@@ -16854,7 +16854,7 @@ LayerCount: 4
 Fore
 Refer: 46 90 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" zeta.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: Eta
@@ -16870,7 +16870,7 @@ LayerCount: 4
 Fore
 Refer: 29 72 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" eta.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: Iota
@@ -16886,7 +16886,7 @@ Fore
 Refer: 36 73 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" iota.sc
 Substitution2: "'ss03' Simplified G and I lookups0-1" Iota.ss03
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: Kappa
@@ -16899,7 +16899,7 @@ LayerCount: 4
 Fore
 Refer: 51 75 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" kappa.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: Mu
@@ -16913,7 +16913,7 @@ LayerCount: 4
 Fore
 Refer: 45 77 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni03BC.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: Nu
@@ -16926,7 +16926,7 @@ LayerCount: 4
 Fore
 Refer: 34 78 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" nu.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: Omicron
@@ -16943,7 +16943,7 @@ LayerCount: 4
 Fore
 Refer: 30 79 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" omicron.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: Rho
@@ -16957,7 +16957,7 @@ LayerCount: 4
 Fore
 Refer: 33 80 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" rho.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: Tau
@@ -16971,7 +16971,7 @@ LayerCount: 4
 Fore
 Refer: 39 84 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" tau.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: Upsilon
@@ -16986,7 +16986,7 @@ LayerCount: 4
 Fore
 Refer: 48 89 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" upsilon.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: Chi
@@ -17000,7 +17000,7 @@ LayerCount: 4
 Fore
 Refer: 47 88 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" chi.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: uni037F
@@ -20043,7 +20043,7 @@ AnchorPoint: "bottom_right" 1524 0 basechar 0
 LayerCount: 4
 Fore
 Refer: 27 65 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10020
@@ -20055,7 +20055,7 @@ AnchorPoint: "bottom_center" 306 0 basechar 0
 LayerCount: 4
 Fore
 Refer: 689 915 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10022
@@ -20070,7 +20070,7 @@ AnchorPoint: "top_center" 673 1380 basechar 0
 LayerCount: 4
 Fore
 Refer: 31 69 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10028
@@ -20082,7 +20082,7 @@ AnchorPoint: "top_center" 787 1380 basechar 0
 LayerCount: 4
 Fore
 Refer: 51 75 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10030
@@ -20095,7 +20095,7 @@ AnchorPoint: "top_center" 895 1380 basechar 0
 LayerCount: 4
 Fore
 Refer: 45 77 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10031
@@ -20110,7 +20110,7 @@ AnchorPoint: "bottom_ypogegrammeni" 789 -108 basechar 0
 LayerCount: 4
 Fore
 Refer: 29 72 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10032
@@ -20126,7 +20126,7 @@ AnchorPoint: "top_left_O2" 233 1224 basechar 0
 LayerCount: 4
 Fore
 Refer: 30 79 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10033
@@ -20161,7 +20161,7 @@ AnchorPoint: "top_left" 116 1480 basechar 0
 LayerCount: 4
 Fore
 Refer: 33 80 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10035
@@ -20174,7 +20174,7 @@ AnchorPoint: "top_center" 844 1380 basechar 0
 LayerCount: 4
 Fore
 Refer: 41 67 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10036
@@ -20187,7 +20187,7 @@ AnchorPoint: "top_center" 787 1380 basechar 0
 LayerCount: 4
 Fore
 Refer: 39 84 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10038
@@ -20212,7 +20212,7 @@ AnchorPoint: "top_center" 815 1380 basechar 0
 LayerCount: 4
 Fore
 Refer: 47 88 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: uni0400
@@ -21074,7 +21074,7 @@ Fore
 Refer: 23 97 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10065.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" afii10065.ss04
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10070
@@ -21090,7 +21090,7 @@ LayerCount: 4
 Fore
 Refer: 9 101 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10070.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10076
@@ -21103,7 +21103,7 @@ LayerCount: 4
 Fore
 Refer: 719 954 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10076.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10080
@@ -21117,7 +21117,7 @@ LayerCount: 4
 Fore
 Refer: 0 111 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10080.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10081
@@ -21157,7 +21157,7 @@ LayerCount: 4
 Fore
 Refer: 10 99 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10083.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10087
@@ -21170,7 +21170,7 @@ LayerCount: 4
 Fore
 Refer: 16 120 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10087.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10066
@@ -22106,7 +22106,7 @@ LayerCount: 4
 Fore
 Refer: 22 115 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10102.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10103
@@ -22120,7 +22120,7 @@ LayerCount: 4
 Fore
 Refer: 18 105 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10103.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10104
@@ -22146,7 +22146,7 @@ LayerCount: 4
 Fore
 Refer: 19 106 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10105.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10106
@@ -22987,7 +22987,7 @@ AnchorPoint: "bottom_center" 699 0 basechar 0
 LayerCount: 4
 Fore
 Refer: 697 936 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: uni0471
@@ -23000,7 +23000,7 @@ LayerCount: 4
 Fore
 Refer: 733 968 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0471.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10147
@@ -24171,7 +24171,7 @@ AnchorPoint: "top_left" 100 1480 basechar 0
 LayerCount: 4
 Fore
 Refer: 48 89 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: uni048B
@@ -26921,7 +26921,7 @@ StartChar: uni04FC
 Encoding: 1276 1276 1046
 Width: 1630
 VWidth: 1000
-Flags: HMWO
+Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
@@ -64429,7 +64429,7 @@ LayerCount: 4
 Fore
 Refer: 0 111 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" omicron.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10082
@@ -64443,7 +64443,7 @@ LayerCount: 4
 Fore
 Refer: 5 112 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10082.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: Beta
@@ -64456,7 +64456,7 @@ LayerCount: 4
 Fore
 Refer: 38 66 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" beta.sc
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10085
@@ -64482,7 +64482,7 @@ AnchorPoint: "top_center" 668 1380 basechar 0
 LayerCount: 4
 Fore
 Refer: 38 66 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: uni25CC
@@ -88521,7 +88521,7 @@ AnchorPoint: "bottom_right" 880 0 basechar 0
 LayerCount: 4
 Fore
 Refer: 3190 -1 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: pi.sc
@@ -88559,7 +88559,7 @@ AnchorPoint: "top_center" 548 1200 basechar 0
 LayerCount: 4
 Fore
 Refer: 3191 -1 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: sigma.sc
@@ -88681,7 +88681,7 @@ Flags: HMW
 LayerCount: 4
 Fore
 Refer: 3199 -1 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: psi.sc
@@ -89165,7 +89165,7 @@ Flags: HMW
 LayerCount: 4
 Fore
 Refer: 3180 -1 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10072.sc
@@ -89370,7 +89370,7 @@ Flags: HMW
 LayerCount: 4
 Fore
 Refer: 3190 -1 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10081.sc
@@ -89382,7 +89382,7 @@ AnchorPoint: "bottom_center" 538 0 basechar 0
 LayerCount: 4
 Fore
 Refer: 3414 -1 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10082.sc
@@ -89392,7 +89392,7 @@ Flags: HMW
 LayerCount: 4
 Fore
 Refer: 3191 -1 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10083.sc
@@ -89402,7 +89402,7 @@ Flags: HMW
 LayerCount: 4
 Fore
 Refer: 3178 -1 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10084.sc
@@ -89436,7 +89436,7 @@ AnchorPoint: "top_center" 609 1200 basechar 0
 LayerCount: 4
 Fore
 Refer: 3200 -1 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10086.sc
@@ -90424,7 +90424,7 @@ Flags: HMW
 LayerCount: 4
 Fore
 Refer: 3421 -1 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10195.sc
@@ -95984,7 +95984,7 @@ Flags: HM
 LayerCount: 4
 Fore
 Refer: 3259 -1 N 1 0 0 1 0 0 3
-Colour: 8000ff
+Colour: bf80ff
 EndChar
 
 StartChar: afii10076.sc
