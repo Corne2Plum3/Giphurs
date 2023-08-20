@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1692547084
+ModificationTime: 1692551865
 PfmFamily: 33
 TTFWeight: 900
 TTFWidth: 5
@@ -316,10 +316,16 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 66063 19 14
+WinInfo: 7790 19 5
 BeginPrivate: 0
 EndPrivate
 Grid
+1140.10437012 2692 m 0
+ 1140.10437012 -1404 l 1024
+-2048 1564.02663352 m 0
+ 4096 1564.02663352 l 1024
+843.982666016 2692 m 0
+ 843.982666016 -1404 l 1024
 1186.62392704 2692 m 0
  1186.62392704 -1404 l 1024
 -2048 1534.00976562 m 0
@@ -380,23 +386,23 @@ Encoding: 111 111 0
 Width: 1268
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "bottom_right" 834 0 basechar 0
+AnchorPoint: "bottom_right" 825 0 basechar 0
 AnchorPoint: "top_right" 1126 1040 basechar 0
 AnchorPoint: "bottom_center" 634 0 basechar 0
 AnchorPoint: "top_center" 634 1040 basechar 0
 LayerCount: 3
 Fore
 SplineSet
-444 520 m 4
- 444 390 497 290 634 290 c 4
- 771 290 824 383 824 520 c 4
- 824 657 771 750 634 750 c 4
- 497 750 444 657 444 520 c 4
-84 520 m 4
- 84 840 314 1070 634 1070 c 4
- 954 1070 1184 840 1184 520 c 4
- 1184 200 954 -30 634 -30 c 4
- 314 -30 84 200 84 520 c 4
+444 520 m 0
+ 444 390 497 290 634 290 c 0
+ 771 290 824 383 824 520 c 0
+ 824 657 771 750 634 750 c 0
+ 497 750 444 657 444 520 c 0
+84 520 m 0
+ 84 840 314 1070 634 1070 c 0
+ 954 1070 1184 840 1184 520 c 0
+ 1184 200 954 -30 634 -30 c 0
+ 314 -30 84 200 84 520 c 0
 EndSplineSet
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" o.sc
 Colour: ff00
@@ -759,17 +765,17 @@ AnchorPoint: "top_center" 536 1040 basechar 0
 LayerCount: 3
 Fore
 SplineSet
-821 691 m 5
- 783 730 725 750 642 750 c 4
+821 691 m 1
+ 783 730 725 750 642 750 c 0
  512 750 476 682 476 572 c 2
  476 0 l 1
  116 0 l 1
  116 1040 l 1
  464 1040 l 1
  464 920 l 1
- 499 981 588 1070 738 1070 c 4
- 809 1070 872 1058 928 1034 c 5
- 821 691 l 5
+ 499 981 588 1070 738 1070 c 0
+ 809 1070 872 1058 928 1034 c 1
+ 821 691 l 1
 EndSplineSet
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" r.sc
 Colour: ff00
@@ -1328,22 +1334,22 @@ Flags: HMW
 AnchorPoint: "top_center" 844 1380 basechar 0
 AnchorPoint: "top_right" 1458 1480 basechar 0
 AnchorPoint: "bottom_center" 844 -4.926e-05 basechar 0
-AnchorPoint: "bottom_right" 1079 -4.926e-05 basechar 0
+AnchorPoint: "bottom_right" 1076 -4.926e-05 basechar 0
 AnchorPoint: "top_left_O1" 612 1480 basechar 0
 AnchorPoint: "top_left_O2" 233 1224 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-464 740 m 4
- 464 490 594 306 844 306 c 4
- 1094 306 1224 490 1224 740 c 4
- 1224 990 1094 1174 844 1174 c 4
- 594 1174 464 990 464 740 c 4
-84 740 m 4
- 84 1190 384 1510 844 1510 c 4
- 1304 1510 1604 1190 1604 740 c 4
- 1604 290 1304 -30 844 -30 c 4
- 384 -30 84 290 84 740 c 4
+464 740 m 0
+ 464 490 594 306 844 306 c 0
+ 1094 306 1224 490 1224 740 c 0
+ 1224 990 1094 1174 844 1174 c 0
+ 594 1174 464 990 464 740 c 0
+84 740 m 0
+ 84 1190 384 1510 844 1510 c 0
+ 1304 1510 1604 1190 1604 740 c 0
+ 1604 290 1304 -30 844 -30 c 0
+ 384 -30 84 290 84 740 c 0
 EndSplineSet
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" o.sc
 Colour: ffff
@@ -1632,7 +1638,7 @@ SplineSet
  874 1094 803 1144 683 1144 c 9
  496 1144 l 25
 116 0 m 1
- 116 1480 l 5
+ 116 1480 l 1
  683 1480 l 1
  1069 1480 1254 1239 1254 984 c 0
  1254 729 1069 488 683 488 c 1
@@ -3109,8 +3115,8 @@ StartChar: Acircumflex
 Encoding: 194 194 92
 Width: 1588
 Flags: HMW
-AnchorPoint: "circumflex_left" 387 1564 basechar 0
-AnchorPoint: "circumflex_right" 1249 1564 basechar 0
+AnchorPoint: "circumflex_left" 390 1564 basechar 0
+AnchorPoint: "circumflex_right" 1206 1564 basechar 0
 LayerCount: 4
 Fore
 Refer: 85 770 N 1 0 0 1 156 340 2
@@ -3123,7 +3129,7 @@ StartChar: Atilde
 Encoding: 195 195 93
 Width: 1588
 Flags: HMW
-AnchorPoint: "top_center" 678 1720 basechar 0
+AnchorPoint: "top_center" 793 1720 basechar 0
 LayerCount: 4
 Fore
 Refer: 86 771 N 1 0 0 1 156 340 2
@@ -3161,6 +3167,7 @@ StartChar: Ccedilla
 Encoding: 199 199 96
 Width: 1603
 Flags: HMW
+AnchorPoint: "top_center" 844 1380 basechar 0
 LayerCount: 4
 Fore
 Refer: 90 807 N 1 0 0 1 140 0 2
@@ -3197,8 +3204,8 @@ StartChar: Ecircumflex
 Encoding: 202 202 99
 Width: 1346
 Flags: HMW
-AnchorPoint: "circumflex_right" 1145 1564 basechar 0
-AnchorPoint: "circumflex_left" 313 1564 basechar 0
+AnchorPoint: "circumflex_right" 1081 1564 basechar 0
+AnchorPoint: "circumflex_left" 265 1564 basechar 0
 LayerCount: 4
 Fore
 Refer: 85 770 N 1 0 0 1 31 340 2
@@ -3311,8 +3318,8 @@ StartChar: Ocircumflex
 Encoding: 212 212 108
 Width: 1688
 Flags: HMW
-AnchorPoint: "circumflex_left" 510 1564 basechar 0
-AnchorPoint: "circumflex_right" 1312 1564 basechar 0
+AnchorPoint: "circumflex_left" 436 1564 basechar 0
+AnchorPoint: "circumflex_right" 1251 1564 basechar 0
 LayerCount: 4
 Fore
 Refer: 85 770 N 1 0 0 1 202 340 2
@@ -3325,7 +3332,7 @@ StartChar: Otilde
 Encoding: 213 213 109
 Width: 1688
 Flags: HMW
-AnchorPoint: "top_center" 801 1720 basechar 0
+AnchorPoint: "top_center" 844 1720 basechar 0
 LayerCount: 4
 Fore
 Refer: 86 771 N 1 0 0 1 202 340 2
@@ -3338,7 +3345,7 @@ StartChar: Odieresis
 Encoding: 214 214 110
 Width: 1688
 Flags: HMW
-AnchorPoint: "top_center" 801 1760 basechar 0
+AnchorPoint: "top_center" 844 1760 basechar 0
 LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 202 340 2
@@ -3387,7 +3394,7 @@ StartChar: Udieresis
 Encoding: 220 220 114
 Width: 1574
 Flags: HMW
-AnchorPoint: "top_center" 785 1760 basechar 0
+AnchorPoint: "top_center" 787 1760 basechar 0
 LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 145 340 2
@@ -3425,8 +3432,8 @@ StartChar: acircumflex
 Encoding: 226 226 117
 Width: 1306
 Flags: HMW
-AnchorPoint: "circumflex_right" 831 1224 basechar 0
-AnchorPoint: "circumflex_left" 249 1224 basechar 0
+AnchorPoint: "circumflex_right" 1060 1224 basechar 0
+AnchorPoint: "circumflex_left" 244 1224 basechar 0
 LayerCount: 4
 Fore
 Refer: 85 770 N 1 0 0 1 10 0 2
@@ -3453,7 +3460,7 @@ StartChar: adieresis
 Encoding: 228 228 119
 Width: 1306
 Flags: HMW
-AnchorPoint: "top_center" 610 1400 basechar 0
+AnchorPoint: "top_center" 652 1400 basechar 0
 LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 10 0 2
@@ -3505,8 +3512,8 @@ StartChar: ecircumflex
 Encoding: 234 234 123
 Width: 1268
 Flags: HMW
-AnchorPoint: "circumflex_left" 307 1224 basechar 0
-AnchorPoint: "circumflex_right" 889 1224 basechar 0
+AnchorPoint: "circumflex_left" 226 1224 basechar 0
+AnchorPoint: "circumflex_right" 1042 1224 basechar 0
 LayerCount: 4
 Fore
 Refer: 85 770 N 1 0 0 1 -8 0 2
@@ -3563,6 +3570,7 @@ LayerCount: 4
 Fore
 Refer: 85 770 N 1 0 0 1 -346 0 2
 Refer: 141 305 N 1 0 0 1 0 0 3
+LCarets2: 1 0
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" icircumflex.sc
 Ligature2: "'liga' Soft Dotted i j" i uni0302
 Colour: ff
@@ -3622,8 +3630,8 @@ StartChar: ocircumflex
 Encoding: 244 244 132
 Width: 1268
 Flags: HMW
-AnchorPoint: "circumflex_left" 307 1224 basechar 0
-AnchorPoint: "circumflex_right" 1089 1224 basechar 0
+AnchorPoint: "circumflex_left" 226 1224 basechar 0
+AnchorPoint: "circumflex_right" 1041 1224 basechar 0
 LayerCount: 4
 Fore
 Refer: 85 770 N 1 0 0 1 -8 0 2
@@ -3636,7 +3644,7 @@ StartChar: otilde
 Encoding: 245 245 133
 Width: 1268
 Flags: HMW
-AnchorPoint: "top_center" 598 1400 basechar 0
+AnchorPoint: "top_center" 634 1400 basechar 0
 LayerCount: 4
 Fore
 Refer: 86 771 N 1 0 0 1 -8 0 2
@@ -6374,44 +6382,44 @@ EndChar
 
 StartChar: germandbls
 Encoding: 223 223 218
-Width: 1342
+Width: 1380
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Back
 SplineSet
-607 856 m 0
- 907 856 1144 661 1144 418 c 0
- 1144 175 907 -20 607 -20 c 4
- 525 -20 449 -6 383 20 c 5
- 429 187 l 5
- 478 161 537 148 607 148 c 4
- 807 148 954 262 954 418 c 0
- 954 574 807 688 607 688 c 0
- 607 856 l 0
+681 856 m 0
+ 981 856 1218 661 1218 418 c 0
+ 1218 175 981 -20 681 -20 c 4
+ 599 -20 523 -6 457 20 c 5
+ 503 187 l 5
+ 552 161 611 148 681 148 c 4
+ 881 148 1028 262 1028 418 c 0
+ 1028 574 881 688 681 688 c 0
+ 681 856 l 0
 EndSplineSet
 Fore
 SplineSet
-654 290 m 4
- 612 290 586 296 527 329 c 5
- 462 10 l 5
- 502 -3 604 -30 654 -30 c 4
- 1013 -30 1222 176 1222 456 c 4
- 1222 736 950 932 590 932 c 4
- 590 612 l 4
- 710 612 862 576 862 456 c 4
- 862 336 774 290 654 290 c 4
-402 1056 m 0
- 402 1136 488 1190 578 1190 c 0
- 668 1190 754 1141 754 1056 c 0
- 754 981 720 932 590 932 c 4
- 590 692 l 0
- 896 692 1114 801 1114 1056 c 0
- 1114 1311 884 1510 578 1510 c 0
- 272 1510 42 1311 42 1056 c 0
- 42 801 42 0 42 0 c 9
- 402 0 l 17
- 402 0 402 976 402 1056 c 0
+728 290 m 4
+ 686 290 660 296 601 329 c 5
+ 536 10 l 5
+ 576 -3 678 -30 728 -30 c 4
+ 1087 -30 1296 176 1296 456 c 4
+ 1296 736 1024 932 664 932 c 4
+ 664 612 l 4
+ 784 612 936 576 936 456 c 4
+ 936 336 848 290 728 290 c 4
+476 1056 m 0
+ 476 1136 562 1190 652 1190 c 0
+ 742 1190 828 1141 828 1056 c 0
+ 828 981 794 932 664 932 c 4
+ 664 692 l 0
+ 970 692 1188 801 1188 1056 c 0
+ 1188 1311 958 1510 652 1510 c 0
+ 346 1510 116 1311 116 1056 c 0
+ 116 801 116 0 116 0 c 9
+ 476 0 l 17
+ 476 0 476 976 476 1056 c 0
 EndSplineSet
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" germandbls.sc
 Colour: ff00
@@ -6536,7 +6544,7 @@ StartChar: abreve
 Encoding: 259 259 225
 Width: 1306
 Flags: HMW
-AnchorPoint: "top_center" 540 1320 basechar 0
+AnchorPoint: "top_center" 652 1320 basechar 0
 LayerCount: 4
 Fore
 Refer: 224 774 N 1 0 0 1 10 0 2
@@ -6664,7 +6672,7 @@ Encoding: 258 258 232
 Width: 1588
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "top_center" 678 1680 basechar 0
+AnchorPoint: "top_center" 798 1680 basechar 0
 LayerCount: 4
 Fore
 Refer: 224 774 N 1 0 0 1 156 340 2
@@ -7417,7 +7425,7 @@ StartChar: Scaron
 Encoding: 352 352 293
 Width: 1395
 Flags: HMW
-AnchorPoint: "top_center" 656 1760 basechar 0
+AnchorPoint: "top_center" 696 1760 basechar 0
 AnchorPoint: "bottom_center" 656 0 basechar 0
 LayerCount: 4
 Fore
@@ -7431,8 +7439,8 @@ StartChar: scaron
 Encoding: 353 353 294
 Width: 1134
 Flags: HMW
-AnchorPoint: "top_center" 532 1400 basechar 0
-AnchorPoint: "bottom_center" 532 0 basechar 0
+AnchorPoint: "top_center" 563 1400 basechar 0
+AnchorPoint: "bottom_center" 563 0 basechar 0
 LayerCount: 4
 Fore
 Refer: 230 780 N 1 0 0 1 -79 0 2
@@ -8142,8 +8150,8 @@ Fore
 SplineSet
 766 1245 m 5
  766 956 l 5
- -70 472 l 5
- -70 761 l 5
+ -94 460 l 5
+ -94 749 l 5
  766 1245 l 5
 496 1480 m 1
  496 336 l 1
@@ -8164,24 +8172,24 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-686 1199 m 1
- 686 910 l 1
- -70 472 l 1
- -70 761 l 1
- 686 1199 l 1
-606 306 m 5
- 706 14 l 5
- 680 1 632 -30 544 -30 c 4
- 360 -30 116 62 116 362 c 6
+686 1199 m 5
+ 686 910 l 5
+ -94 461 l 5
+ -94 750 l 5
+ 686 1199 l 5
+606 306 m 1
+ 706 14 l 1
+ 680 1 632 -30 544 -30 c 0
+ 360 -30 116 62 116 362 c 2
  116 440 l 1
  116 578 l 1
  116 1480 l 1
  476 1480 l 1
  476 578 l 1
  476 440 l 1
- 476 362 l 6
- 476 312 492 290 544 290 c 4
- 563 290 593 297 606 306 c 5
+ 476 362 l 2
+ 476 312 492 290 544 290 c 0
+ 563 290 593 297 606 306 c 1
 EndSplineSet
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" lslash.sc
 Colour: ff00
@@ -11379,9 +11387,10 @@ StartChar: uni01EA
 Encoding: 490 490 462
 Width: 1688
 Flags: HMW
+AnchorPoint: "top_center" 844 1380 basechar 0
 LayerCount: 4
 Fore
-Refer: 226 808 N 1 0 0 1 451 -23 2
+Refer: 226 808 N 1 0 0 1 434 -4.926e-05 2
 Refer: 30 79 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni01EB.sc
 Colour: ff
@@ -11391,9 +11400,10 @@ StartChar: uni01EB
 Encoding: 491 491 463
 Width: 1268
 Flags: HMW
+AnchorPoint: "top_center" 634 1040 basechar 0
 LayerCount: 4
 Fore
-Refer: 226 808 N 1 0 0 1 192 0 2
+Refer: 226 808 N 1 0 0 1 183 0 2
 Refer: 0 111 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni01EB.sc
 Colour: ff
@@ -11405,7 +11415,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 201 420 2
+Refer: 221 772 N 1 0 0 1 201 340 2
 Refer: 462 490 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni01ED.sc
 Colour: 8080ff
@@ -11417,7 +11427,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 -9 -20 2
+Refer: 221 772 N 1 0 0 1 -9 0 2
 Refer: 463 491 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni01ED.sc
 Colour: 8080ff
@@ -11694,7 +11704,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 158 720 2
+Refer: 221 772 N 1 0 0 1 201 720 2
 Refer: 110 214 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni022B.sc
 Colour: 8080ff
@@ -11718,7 +11728,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 158 680 2
+Refer: 221 772 N 1 0 0 1 201 680 2
 Refer: 109 213 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni022D.sc
 Colour: 8080ff
@@ -11730,7 +11740,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 -45 360 2
+Refer: 221 772 N 1 0 0 1 -9 360 2
 Refer: 133 245 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni022D.sc
 Colour: 8080ff
@@ -22982,8 +22992,8 @@ StartChar: uni0470
 Encoding: 1136 1136 903
 Width: 1574
 Flags: HMW
-AnchorPoint: "top_center" 699 1400 basechar 0
-AnchorPoint: "bottom_center" 699 0 basechar 0
+AnchorPoint: "top_center" 787 1380 basechar 0
+AnchorPoint: "bottom_center" 787 0 basechar 0
 LayerCount: 4
 Fore
 Refer: 697 936 N 1 0 0 1 0 0 3
@@ -22994,8 +23004,8 @@ StartChar: uni0471
 Encoding: 1137 1137 904
 Width: 1580
 Flags: HMW
-AnchorPoint: "top_center" 688 1400 basechar 0
-AnchorPoint: "bottom_center" 688 -360 basechar 0
+AnchorPoint: "top_center" 769 1380 basechar 0
+AnchorPoint: "bottom_center" 774 -360 basechar 0
 LayerCount: 4
 Fore
 Refer: 733 968 N 1 0 0 1 0 0 3
@@ -28963,7 +28973,7 @@ Width: 1452
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -41 340 2
+Refer: 229 775 N 1 0 0 1 26 340 2
 Refer: 38 66 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E03.sc
 Colour: ff
@@ -28975,7 +28985,7 @@ Width: 1330
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -412 340 2
+Refer: 229 775 N 1 0 0 1 -346 340 2
 Refer: 4 98 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E03.sc
 Colour: ff
@@ -28987,7 +28997,7 @@ Width: 1603
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 169 398 2
+Refer: 84 769 N 1 0 0 1 202 340 2
 Refer: 96 199 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E09.sc
 Colour: 8080ff
@@ -28999,7 +29009,7 @@ Width: 1205
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 580 -42 2
+Refer: 84 769 N 1 0 0 1 2 -32 2
 Refer: 89 231 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E09.sc
 Colour: 8080ff
@@ -29011,7 +29021,7 @@ Width: 1566
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 20 340 2
+Refer: 229 775 N 1 0 0 1 96 340 2
 Refer: 37 68 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E0B.sc
 Colour: ff
@@ -29023,7 +29033,7 @@ Width: 1330
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 312 340 2
+Refer: 229 775 N 1 0 0 1 392 340 2
 Refer: 3 100 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E0B.sc
 Colour: ff
@@ -29035,7 +29045,7 @@ Width: 1566
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 90 807 N 1 0 0 1 -75 0 2
+Refer: 90 807 N 1 0 0 1 -61 0 2
 Refer: 37 68 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E11.sc
 Colour: ff
@@ -29047,7 +29057,7 @@ Width: 1330
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 90 807 N 1 0 0 1 -64 0 2
+Refer: 90 807 N 1 0 0 1 -115 0 2
 Refer: 3 100 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E11.sc
 Colour: ff
@@ -29059,7 +29069,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 -48 602 2
+Refer: 83 768 N 1 0 0 1 21 640 2
 Refer: 242 274 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E15.sc
 Colour: 8080ff
@@ -29083,7 +29093,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -28 602 2
+Refer: 84 769 N 1 0 0 1 41 640 2
 Refer: 242 274 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E17.sc
 Colour: 8080ff
@@ -29107,7 +29117,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 224 774 N 1 0 0 1 -38 408 2
+Refer: 224 774 N 1 0 0 1 31 438 2
 Refer: 484 552 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E1D.sc
 Colour: 8080ff
@@ -29119,7 +29129,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 224 774 N 1 0 0 1 -44 -32 2
+Refer: 224 774 N 1 0 0 1 -8 -2 2
 Refer: 485 553 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E1D.sc
 Colour: 8080ff
@@ -29131,7 +29141,7 @@ Width: 1294
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -38 340 2
+Refer: 229 775 N 1 0 0 1 31 340 2
 Refer: 32 70 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E1F.sc
 Colour: ff
@@ -29143,7 +29153,7 @@ Width: 1056
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -132 340 2
+Refer: 229 775 N 1 0 0 1 20 340 2
 Refer: 11 102 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E1F.sc
 Colour: ff
@@ -29155,7 +29165,7 @@ Width: 1643
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 159 340 2
+Refer: 221 772 N 1 0 0 1 201 340 2
 Refer: 42 71 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E21.sc
 Substitution2: "'ss03' Simplified G and I lookups0-1" uni1E20.ss03
@@ -29168,7 +29178,7 @@ Width: 1230
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 -122 0 2
+Refer: 221 772 N 1 0 0 1 -55 0 2
 Refer: 24 103 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E21.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni1E21.ss04
@@ -29181,7 +29191,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 57 340 2
+Refer: 229 775 N 1 0 0 1 147 322 2
 Refer: 29 72 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E23.sc
 Colour: ff
@@ -29193,7 +29203,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -412 340 2
+Refer: 229 775 N 1 0 0 1 -346 340 2
 Refer: 7 104 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E23.sc
 Colour: ff
@@ -29205,7 +29215,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 57 340 2
+Refer: 87 776 N 1 0 0 1 147 322 2
 Refer: 29 72 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E27.sc
 Colour: ff
@@ -29217,7 +29227,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 -412 340 2
+Refer: 87 776 N 1 0 0 1 -346 340 2
 Refer: 7 104 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E27.sc
 Colour: ff
@@ -29229,7 +29239,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 90 807 N 1 0 0 1 -407 0 2
+Refer: 90 807 N 1 0 0 1 -398 -18 2
 Refer: 29 72 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E29.sc
 Colour: ff
@@ -29241,7 +29251,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 90 807 N 1 0 0 1 -412 0 2
+Refer: 90 807 N 1 0 0 1 -408 0 2
 Refer: 7 104 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E29.sc
 Colour: ff
@@ -29253,7 +29263,7 @@ Width: 1016
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -230 718 2
+Refer: 84 769 S 1 0 0 1 -126 642 2
 Refer: 104 207 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E2F.sc
 Substitution2: "'ss03' Simplified G and I lookups0-1" uni1E2E.ss03
@@ -29278,7 +29288,7 @@ Width: 1508
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 57 340 2
+Refer: 84 769 N 1 0 0 1 145 340 2
 Refer: 51 75 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E31.sc
 Colour: ff
@@ -29290,7 +29300,7 @@ Width: 1208
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -412 340 2
+Refer: 84 769 N 1 0 0 1 -346 340 2
 Refer: 21 107 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E31.sc
 Colour: ff
@@ -29302,7 +29312,7 @@ Width: 1802
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 152 340 2
+Refer: 84 769 N 1 0 0 1 253 340 2
 Refer: 45 77 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E3F.sc
 Colour: ff
@@ -29314,7 +29324,7 @@ Width: 1736
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 194 0 2
+Refer: 84 769 N 1 0 0 1 226 0 2
 Refer: 8 109 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E3F.sc
 Colour: ff
@@ -29326,7 +29336,7 @@ Width: 1802
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 152 340 2
+Refer: 229 775 N 1 0 0 1 253 340 2
 Refer: 45 77 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E41.sc
 Colour: ff
@@ -29338,7 +29348,7 @@ Width: 1736
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 194 0 2
+Refer: 229 775 N 1 0 0 1 226 0 2
 Refer: 8 109 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E41.sc
 Colour: ff
@@ -29350,7 +29360,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 57 340 2
+Refer: 229 775 N 1 0 0 1 146 340 2
 Refer: 34 78 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E45.sc
 Colour: ff
@@ -29362,7 +29372,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -64 0 2
+Refer: 229 775 N 1 0 0 1 0 0 2
 Refer: 1 110 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E45.sc
 Colour: ff
@@ -29374,7 +29384,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 S 1 0 0 1 675 642 2
+Refer: 84 769 S 1 0 0 1 202 642 2
 Refer: 109 213 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E4D.sc
 Colour: 80bfff
@@ -29386,7 +29396,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -44 360 2
+Refer: 84 769 N 1 0 0 1 -8 360 2
 Refer: 133 245 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E4D.sc
 Colour: 8080ff
@@ -29398,7 +29408,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 675 642 2
+Refer: 87 776 S 1 0 0 1 202 570 2
 Refer: 109 213 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E4F.sc
 Colour: 80bfff
@@ -29410,7 +29420,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 -44 360 2
+Refer: 87 776 N 1 0 0 1 -8 360 2
 Refer: 133 245 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E4F.sc
 Colour: 8080ff
@@ -29422,7 +29432,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 665 602 2
+Refer: 83 768 N 1 0 0 1 192 640 2
 Refer: 279 332 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E51.sc
 Colour: 8080ff
@@ -29446,7 +29456,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 685 602 2
+Refer: 84 769 N 1 0 0 1 212 640 2
 Refer: 279 332 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E53.sc
 Colour: 8080ff
@@ -29470,7 +29480,7 @@ Width: 1338
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -44 340 2
+Refer: 84 769 N 1 0 0 1 23 340 2
 Refer: 33 80 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E55.sc
 Colour: ff
@@ -29482,7 +29492,7 @@ Width: 1330
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 486 0 2
+Refer: 84 769 N 1 0 0 1 34 0 2
 Refer: 5 112 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E55.sc
 Colour: ff
@@ -29494,7 +29504,7 @@ Width: 1338
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -44 340 2
+Refer: 229 775 N 1 0 0 1 23 340 2
 Refer: 33 80 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E57.sc
 Colour: ff
@@ -29506,7 +29516,7 @@ Width: 1330
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 486 0 2
+Refer: 229 775 N 1 0 0 1 34 0 2
 Refer: 5 112 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E57.sc
 Colour: ff
@@ -29518,7 +29528,7 @@ Width: 1338
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -44 340 2
+Refer: 229 775 N 1 0 0 1 23 340 2
 Refer: 40 82 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E59.sc
 Colour: ff
@@ -29530,7 +29540,7 @@ Width: 952
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -154 0 2
+Refer: 229 775 N 1 0 0 1 -106 0 2
 Refer: 12 114 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E59.sc
 Colour: ff
@@ -29542,7 +29552,7 @@ Width: 1395
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -32 340 2
+Refer: 229 775 N 1 0 0 1 54 340 2
 Refer: 52 83 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E61.sc
 Colour: ff
@@ -29554,7 +29564,7 @@ Width: 1134
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -128 0 2
+Refer: 229 775 N 1 0 0 1 -79 0 2
 Refer: 22 115 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E61.sc
 Colour: ff
@@ -29562,39 +29572,37 @@ EndChar
 
 StartChar: uni1E64
 Encoding: 7780 7780 1164
-Width: 1220
+Width: 1395
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "bottom_center" 610 0 basechar 0
-AnchorPoint: "top_center" 610 1380 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-610 1332 m 0
- 400 1332 335 1212 335 1084 c 0
- 335 956 465 876 610 837 c 0
- 900 759 1120 656 1120 396 c 0
- 1120 136 916 -20 610 -20 c 0
- 329 -20 127 158 100 396 c 1
- 286 446 l 0
- 286 289 409 148 610 148 c 0
- 830 148 930 255 930 396 c 0
- 930 537 803 601 610 653 c 0
- 320 731 145 854 145 1084 c 0
- 145 1314 319 1500 610 1500 c 0
- 891 1500 1073 1332 1100 1094 c 1
- 913 1044 l 0
- 913 1201 811 1332 610 1332 c 0
-787 1587 m 1
- 609 1587 l 1
- 787 1843 l 1
- 1013 1843 l 1
- 787 1587 l 1
-293 1715 m 0
- 293 1787 349 1843 421 1843 c 0
- 493 1843 549 1787 549 1715 c 0
- 549 1643 493 1587 421 1587 c 0
- 349 1587 293 1643 293 1715 c 0
+696 1174 m 0
+ 556 1174 492 1132 492 1052 c 0
+ 492 992 590 973 696 945 c 0
+ 1063 847 1311 725 1311 445 c 0
+ 1311 165 1106 -30 696 -30 c 0
+ 391 -30 127 91 84 361 c 1
+ 457 461 l 0
+ 457 361 546 306 696 306 c 0
+ 846 306 931 355 931 445 c 0
+ 931 535 802 549 696 577 c 0
+ 348 670 112 792 112 1052 c 0
+ 112 1312 326 1510 696 1510 c 0
+ 1001 1510 1240 1394 1283 1124 c 1
+ 910 1024 l 0
+ 910 1124 836 1174 696 1174 c 0
+1052 1564 m 5
+ 696 1564 l 1
+ 874 1820 l 1
+ 1278 1820 l 1
+ 1052 1564 l 5
+250 1692 m 0
+ 250 1803 339 1892 450 1892 c 0
+ 561 1892 650 1803 650 1692 c 0
+ 650 1581 561 1492 450 1492 c 0
+ 339 1492 250 1581 250 1692 c 0
 EndSplineSet
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E65.sc
 Colour: ffff
@@ -29602,37 +29610,100 @@ EndChar
 
 StartChar: uni1E65
 Encoding: 7781 7781 1165
-Width: 1020
+Width: 1134
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-514 1060 m 0
- 733 1060 861 953 900 808 c 1
- 743 720 l 1
- 712 836 646 900 514 900 c 0
- 382 900 320 840 320 760 c 0
- 320 680 368 642 514 608 c 0
- 748 554 920 477 920 281 c 0
- 920 85 744 -20 514 -20 c 0
- 284 -20 139 108 100 253 c 1
- 257 341 l 1
- 288 225 364 141 514 141 c 0
- 664 141 740 191 740 281 c 0
- 740 371 660 404 514 438 c 0
- 280 492 140 585 140 760 c 0
- 140 935 295 1060 514 1060 c 0
-709 1224 m 1
- 531 1224 l 1
- 709 1480 l 1
- 935 1480 l 1
- 709 1224 l 1
-215 1352 m 0
- 215 1424 271 1480 343 1480 c 0
- 415 1480 471 1424 471 1352 c 0
- 471 1280 415 1224 343 1224 c 0
- 271 1224 215 1280 215 1352 c 0
+563 1070 m 0
+ 843 1070 983 931 1029 775 c 1
+ 682 685 l 0
+ 682 705 663 750 563 750 c 0
+ 493 750 474 735 474 715 c 0
+ 474 695 504 675 563 663 c 0
+ 856 601 1050 566 1050 326 c 0
+ 1050 86 839 -30 563 -30 c 0
+ 324 -30 132 85 84 265 c 1
+ 436 356 l 0
+ 436 326 473 290 563 290 c 0
+ 653 290 690 296 690 326 c 0
+ 690 356 622 371 563 383 c 0
+ 283 442 114 515 114 715 c 0
+ 114 915 283 1070 563 1070 c 0
+  Spiro
+    563 1070 o
+    797.845 1028.26 o
+    950.077 920.684 o
+    1029 775 v
+    682 685 [
+    673.39 710.712 o
+    638.243 737.615 o
+    563 750 o
+    508.854 745.379 o
+    481.502 732.947 o
+    474 715 o
+    483.943 695.315 o
+    513.743 677.354 o
+    563 663 o
+    819.265 601.477 o
+    988.971 506.13 o
+    1050 326 o
+    985.198 127.195 o
+    811.709 8.88478 o
+    563 -30 o
+    343.456 6.4104 o
+    176.274 108.65 o
+    84 265 v
+    436 356 [
+    448.899 325.585 o
+    490.131 300.425 o
+    563 290 o
+    635.869 292.661 o
+    677.101 303.349 o
+    690 326 o
+    670.222 351.423 o
+    622.092 369.571 o
+    563 383 o
+    322.348 450.771 o
+    168.079 553.276 o
+    114 715 o
+    168.079 895.768 o
+    322.348 1022.5 o
+    0 0 z
+  EndSpiro
+919 1224 m 1
+ 563 1224 l 1
+ 741 1480 l 1
+ 1145 1480 l 1
+ 919 1224 l 1
+  Spiro
+    919 1224 v
+    563 1224 v
+    741 1480 v
+    1145 1480 v
+    0 0 z
+  EndSpiro
+117 1352 m 4
+ 117 1463 206 1552 317 1552 c 0
+ 428 1552 517 1463 517 1352 c 0
+ 517 1241 428 1152 317 1152 c 0
+ 206 1152 117 1241 117 1352 c 4
+  Spiro
+    117 1352 o
+    144.133 1453.1 o
+    215.904 1524.87 o
+    317 1552 o
+    418.096 1524.87 o
+    489.867 1453.1 o
+    517 1352 o
+    489.867 1250.9 o
+    418.096 1179.13 o
+    317 1152 o
+    215.904 1179.13 o
+    144.133 1250.9 o
+    0 0 z
+  EndSpiro
 EndSplineSet
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E65.sc
 Colour: ff00
@@ -29644,7 +29715,7 @@ Width: 1395
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 S 1 0 0 1 -27 642 2
+Refer: 229 775 S 1 0 0 1 54 570 2
 Refer: 293 352 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E67.sc
 Colour: 80bfff
@@ -29656,7 +29727,7 @@ Width: 1134
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -110 360 2
+Refer: 229 775 N 1 0 0 1 -79 360 2
 Refer: 294 353 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E67.sc
 Colour: 8080ff
@@ -29668,7 +29739,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 57 340 2
+Refer: 229 775 N 1 0 0 1 145 340 2
 Refer: 39 84 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E6B.sc
 Colour: ff
@@ -29680,7 +29751,7 @@ Width: 1056
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -292 340 2
+Refer: 229 775 N 1 0 0 1 -186 340 2
 Refer: 13 116 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E6B.sc
 Colour: ff
@@ -29692,7 +29763,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -60 728 2
+Refer: 84 769 S 1 0 0 1 179.5 642 2
 Refer: 298 360 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E79.sc
 Colour: 80bfff
@@ -29704,7 +29775,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -181 388 2
+Refer: 84 769 N 1 0 0 1 34.5 397 2
 Refer: 299 361 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E79.sc
 Substitution2: "'ss05' Simplified u lookups0-1" uni1E79.ss05
@@ -29717,7 +29788,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 58 602 2
+Refer: 87 776 N 1 0 0 1 147 712 2
 Refer: 300 362 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E7B.sc
 Colour: 8080ff
@@ -29729,7 +29800,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 -63 262 2
+Refer: 87 776 N 1 0 0 1 2 372 2
 Refer: 301 363 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E7B.sc
 Substitution2: "'ss05' Simplified u lookups0-1" uni1E7B.ss05
@@ -29742,7 +29813,7 @@ Width: 1588
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 41.9992 340 2
+Refer: 86 771 N 1 0 0 1 152 340 2
 Refer: 28 86 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E7D.sc
 Colour: ff
@@ -29754,7 +29825,7 @@ Width: 1232
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 -112 0 2
+Refer: 86 771 N 1 0 0 1 -26 0 2
 Refer: 14 118 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E7D.sc
 Colour: ff
@@ -29766,7 +29837,7 @@ Width: 2340
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 356 340 2
+Refer: 83 768 N 1 0 0 1 528 340 2
 Refer: 49 87 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" wgrave.sc
 Colour: ff
@@ -29778,7 +29849,7 @@ Width: 1890
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 154 0 2
+Refer: 83 768 N 1 0 0 1 298 0 2
 Refer: 15 119 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" wgrave.sc
 Colour: ff
@@ -29790,7 +29861,7 @@ Width: 2340
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 356 340 2
+Refer: 84 769 N 1 0 0 1 528 340 2
 Refer: 49 87 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" wacute.sc
 Colour: ff
@@ -29802,7 +29873,7 @@ Width: 1890
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 154 0 2
+Refer: 84 769 N 1 0 0 1 298 0 2
 Refer: 15 119 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" wacute.sc
 Colour: ff
@@ -29814,7 +29885,7 @@ Width: 2340
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 356 340 2
+Refer: 87 776 N 1 0 0 1 528 340 2
 Refer: 49 87 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" wdieresis.sc
 Colour: ff
@@ -29826,7 +29897,7 @@ Width: 1890
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 154 0 2
+Refer: 87 776 N 1 0 0 1 298 0 2
 Refer: 15 119 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" wdieresis.sc
 Colour: ff
@@ -29838,7 +29909,7 @@ Width: 2340
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 356 340 2
+Refer: 229 775 N 1 0 0 1 528 340 2
 Refer: 49 87 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E87.sc
 Colour: ff
@@ -29850,7 +29921,7 @@ Width: 1890
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 154 0 2
+Refer: 229 775 N 1 0 0 1 298 0 2
 Refer: 15 119 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E87.sc
 Colour: ff
@@ -29862,7 +29933,7 @@ Width: 1630
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 371.999 340 2
+Refer: 229 775 N 1 0 0 1 173 340 2
 Refer: 47 88 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E8B.sc
 Colour: ff
@@ -29874,7 +29945,7 @@ Width: 1270
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -96 0 2
+Refer: 229 775 N 1 0 0 1 -7 0 2
 Refer: 16 120 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E8B.sc
 Colour: ff
@@ -29886,7 +29957,7 @@ Width: 1630
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 371.999 340 2
+Refer: 87 776 N 1 0 0 1 173 340 2
 Refer: 47 88 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E8D.sc
 Colour: ff
@@ -29898,7 +29969,7 @@ Width: 1270
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 -96 0 2
+Refer: 87 776 N 1 0 0 1 -7 0 2
 Refer: 16 120 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E8D.sc
 Colour: ff
@@ -29910,7 +29981,7 @@ Width: 1630
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 60 340 2
+Refer: 229 775 N 1 0 0 1 173 340 2
 Refer: 48 89 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E8F.sc
 Colour: ff
@@ -29922,7 +29993,7 @@ Width: 1274
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -112 0 2
+Refer: 229 775 N 1 0 0 1 16 0 2
 Refer: 17 121 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E8F.sc
 Colour: ff
@@ -29934,7 +30005,7 @@ Width: 1466
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 57 340 2
+Refer: 85 770 N 1 0 0 1 94 340 2
 Refer: 46 90 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E91.sc
 Colour: ff
@@ -29946,7 +30017,7 @@ Width: 1124
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -130 0 2
+Refer: 85 770 N 1 0 0 1 -80 0 2
 Refer: 25 122 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E91.sc
 Colour: ff
@@ -29958,7 +30029,7 @@ Width: 1056
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 87 776 N 1 0 0 1 -292 340 2
+Refer: 87 776 N 1 0 0 1 -186 340 2
 Refer: 13 116 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E97.sc
 Colour: ff
@@ -29970,7 +30041,7 @@ Width: 1890
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 88 778 N 1 0 0 1 154 0 2
+Refer: 88 778 N 1 0 0 1 298 0 2
 Refer: 15 119 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E98.sc
 Colour: ff
@@ -29982,7 +30053,7 @@ Width: 1274
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 88 778 N 1 0 0 1 -112 0 2
+Refer: 88 778 N 1 0 0 1 16 0 2
 Refer: 17 121 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E99.sc
 Colour: ff
@@ -29994,7 +30065,7 @@ Width: 894
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 -412 360 2
+Refer: 229 775 N 1 0 0 1 -140 340 2
 Refer: 363 383 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -30050,7 +30121,7 @@ Width: 1588
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1197 805 N 1 0 0 1 41.9984 0 2
+Refer: 1197 805 N 1 0 0 1 156 0 2
 Refer: 27 65 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E01.sc
 Colour: ff
@@ -30062,7 +30133,7 @@ Width: 1306
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1197 805 N 1 0 0 1 -102 0 2
+Refer: 1197 805 N 1 0 0 1 -30 0 2
 Refer: 23 97 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E01.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni1E01.ss04
@@ -30093,7 +30164,7 @@ Width: 1452
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -41 0 2
+Refer: 1200 803 N 1 0 0 1 26 0 2
 Refer: 38 66 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E05.sc
 Colour: ff
@@ -30105,7 +30176,7 @@ Width: 1330
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -36 0 2
+Refer: 1200 803 N 1 0 0 1 99 0 2
 Refer: 4 98 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E05.sc
 Colour: ff
@@ -30152,7 +30223,7 @@ Width: 1452
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 -41 0 2
+Refer: 1203 817 N 1 0 0 1 26 0 2
 Refer: 38 66 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E07.sc
 Colour: ff
@@ -30164,7 +30235,7 @@ Width: 1330
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 -36 0 2
+Refer: 1203 817 N 1 0 0 1 99 0 2
 Refer: 4 98 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E07.sc
 Colour: ff
@@ -30176,7 +30247,7 @@ Width: 1566
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 20 0 2
+Refer: 1200 803 N 1 0 0 1 96 0 2
 Refer: 37 68 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E0D.sc
 Colour: ff
@@ -30188,7 +30259,7 @@ Width: 1330
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -64 0 2
+Refer: 1200 803 N 1 0 0 1 -53 0 2
 Refer: 3 100 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E0D.sc
 Colour: ff
@@ -30200,7 +30271,7 @@ Width: 1566
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 20 0 2
+Refer: 1203 817 N 1 0 0 1 96 0 2
 Refer: 37 68 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E0F.sc
 Colour: ff
@@ -30212,7 +30283,7 @@ Width: 1330
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 -64 0 2
+Refer: 1203 817 N 1 0 0 1 -53 0 2
 Refer: 3 100 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E0F.sc
 Colour: ff
@@ -30247,7 +30318,7 @@ Width: 1566
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1211 813 N 1 0 0 1 20 0 2
+Refer: 1211 813 N 1 0 0 1 96 0 2
 Refer: 37 68 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E13.sc
 Colour: ff
@@ -30259,7 +30330,7 @@ Width: 1330
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1211 813 N 1 0 0 1 -64 0 2
+Refer: 1211 813 N 1 0 0 1 -53 0 2
 Refer: 3 100 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E13.sc
 Colour: ff
@@ -30271,7 +30342,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1211 813 N 1 0 0 1 -38 0 2
+Refer: 1211 813 N 1 0 0 1 31 0 2
 Refer: 31 69 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E19.sc
 Colour: ff
@@ -30283,7 +30354,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1211 813 N 1 0 0 1 -44 0 2
+Refer: 1211 813 N 1 0 0 1 -8 0 2
 Refer: 9 101 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E19.sc
 Colour: ff
@@ -30317,7 +30388,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1216 816 N 1 0 0 1 -38 0 2
+Refer: 1216 816 N 1 0 0 1 31 0 2
 Refer: 31 69 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E1B.sc
 Colour: ff
@@ -30329,7 +30400,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1216 816 N 1 0 0 1 -44 0 2
+Refer: 1216 816 N 1 0 0 1 -8 0 2
 Refer: 9 101 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E1B.sc
 Colour: ff
@@ -30341,7 +30412,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 57 0 2
+Refer: 1200 803 N 1 0 0 1 147 -18 2
 Refer: 29 72 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E25.sc
 Colour: ff
@@ -30353,7 +30424,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -44 0 2
+Refer: 1200 803 N 1 0 0 1 0 0 2
 Refer: 7 104 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E25.sc
 Colour: ff
@@ -30385,7 +30456,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1221 814 N 1 0 0 1 57 0 2
+Refer: 1221 814 N 1 0 0 1 147 -18 2
 Refer: 29 72 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E2B.sc
 Colour: ff
@@ -30397,7 +30468,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1221 814 N 1 0 0 1 -44 0 2
+Refer: 1221 814 N 1 0 0 1 0 0 2
 Refer: 7 104 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E2B.sc
 Colour: ff
@@ -30409,7 +30480,7 @@ Width: 1016
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1216 816 N 1 0 0 1 -239 0 2
+Refer: 1216 816 N 1 0 0 1 -134 0 2
 Refer: 36 73 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E2D.sc
 Substitution2: "'ss03' Simplified G and I lookups0-1" uni1E2C.ss03
@@ -30422,7 +30493,7 @@ Width: 592
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1216 816 N 1 0 0 1 -392 0 2
+Refer: 1216 816 N 1 0 0 1 -346 0 2
 Refer: 18 105 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E2D.sc
 Colour: 8080ff
@@ -30434,7 +30505,7 @@ Width: 1508
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 57 0 2
+Refer: 1200 803 N 1 0 0 1 145 0 2
 Refer: 51 75 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E33.sc
 Colour: ff
@@ -30446,7 +30517,7 @@ Width: 1208
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -74 0 2
+Refer: 1200 803 N 1 0 0 1 -12 0 2
 Refer: 21 107 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E33.sc
 Colour: ff
@@ -30458,7 +30529,7 @@ Width: 1508
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 57 0 2
+Refer: 1203 817 N 1 0 0 1 145 0 2
 Refer: 51 75 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E35.sc
 Colour: ff
@@ -30470,7 +30541,7 @@ Width: 1208
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 -74 0 2
+Refer: 1203 817 N 1 0 0 1 -12 0 2
 Refer: 21 107 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E35.sc
 Colour: ff
@@ -30482,7 +30553,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -38 0 2
+Refer: 1200 803 N 1 0 0 1 31 0 2
 Refer: 35 76 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E37.sc
 Colour: ff
@@ -30494,7 +30565,7 @@ Width: 710
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -352 0 2
+Refer: 1200 803 N 1 0 0 1 -245 0 2
 Refer: 20 108 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E37.sc
 Colour: ff
@@ -30506,7 +30577,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 -407 398 2
+Refer: 221 772 N 1 0 0 1 -337 420 2
 Refer: 1230 7734 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E39.sc
 Colour: 8080ff
@@ -30518,7 +30589,7 @@ Width: 710
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 -412 378 2
+Refer: 221 772 N 1 0 0 1 -347 390 2
 Refer: 1231 7735 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E39.sc
 Colour: 8080ff
@@ -30530,7 +30601,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 -38 0 2
+Refer: 1203 817 N 1 0 0 1 31 0 2
 Refer: 35 76 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E3B.sc
 Colour: ff
@@ -30542,7 +30613,7 @@ Width: 710
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 -352 0 2
+Refer: 1203 817 N 1 0 0 1 -245 0 2
 Refer: 20 108 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E3B.sc
 Colour: ff
@@ -30554,7 +30625,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1211 813 N 1 0 0 1 -38 0 2
+Refer: 1211 813 N 1 0 0 1 31 0 2
 Refer: 35 76 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E3D.sc
 Colour: ff
@@ -30566,7 +30637,7 @@ Width: 710
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1211 813 N 1 0 0 1 -352 0 2
+Refer: 1211 813 N 1 0 0 1 -245 0 2
 Refer: 20 108 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E3D.sc
 Colour: ff
@@ -30578,7 +30649,7 @@ Width: 1802
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 152 0 2
+Refer: 1200 803 N 1 0 0 1 253 0 2
 Refer: 45 77 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E43.sc
 Colour: ff
@@ -30590,7 +30661,7 @@ Width: 1736
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 194 0 2
+Refer: 1200 803 N 1 0 0 1 226 0 2
 Refer: 8 109 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E43.sc
 Colour: ff
@@ -30602,7 +30673,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 57 0 2
+Refer: 1200 803 N 1 0 0 1 146 0 2
 Refer: 34 78 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E47.sc
 Colour: ff
@@ -30614,7 +30685,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -64 0 2
+Refer: 1200 803 N 1 0 0 1 0 0 2
 Refer: 1 110 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E47.sc
 Colour: ff
@@ -30626,7 +30697,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 57 0 2
+Refer: 1203 817 N 1 0 0 1 146 0 2
 Refer: 34 78 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E49.sc
 Colour: ff
@@ -30638,7 +30709,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 -64 0 2
+Refer: 1203 817 N 1 0 0 1 0 0 2
 Refer: 1 110 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E49.sc
 Colour: ff
@@ -30650,7 +30721,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1211 813 N 1 0 0 1 57 0 2
+Refer: 1211 813 N 1 0 0 1 146 0 2
 Refer: 34 78 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E4B.sc
 Colour: ff
@@ -30662,7 +30733,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1211 813 N 1 0 0 1 -64 0 2
+Refer: 1211 813 N 1 0 0 1 0 0 2
 Refer: 1 110 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E4B.sc
 Colour: ff
@@ -30672,10 +30743,10 @@ StartChar: uni1E5A
 Encoding: 7770 7770 1246
 Width: 1338
 Flags: HMW
-AnchorPoint: "top_center" 598 1400 basechar 0
+AnchorPoint: "top_center" 665 1380 basechar 0
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -44 0 2
+Refer: 1200 803 N 1 0 0 1 23 0 2
 Refer: 40 82 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E5B.sc
 Colour: ff
@@ -30685,10 +30756,10 @@ StartChar: uni1E5B
 Encoding: 7771 7771 1247
 Width: 952
 Flags: HMW
-AnchorPoint: "top_center" 468 1040 basechar 0
+AnchorPoint: "top_center" 536 1040 basechar 0
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -412 0 2
+Refer: 1200 803 N 1 0 0 1 -346 0 2
 Refer: 12 114 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E5B.sc
 Colour: ff
@@ -30700,7 +30771,7 @@ Width: 1338
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 -44 360 2
+Refer: 221 772 N 1 0 0 1 22 340 2
 Refer: 1246 7770 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E5D.sc
 Colour: 8080ff
@@ -30712,7 +30783,7 @@ Width: 952
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 221 772 N 1 0 0 1 -174 0 2
+Refer: 221 772 N 1 0 0 1 -107 0 2
 Refer: 1247 7771 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E5D.sc
 Colour: 8080ff
@@ -30724,7 +30795,7 @@ Width: 1338
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 -44 0 2
+Refer: 1203 817 N 1 0 0 1 23 0 2
 Refer: 40 82 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E5F.sc
 Colour: ff
@@ -30736,7 +30807,7 @@ Width: 952
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 -412 0 2
+Refer: 1203 817 N 1 0 0 1 -346 0 2
 Refer: 12 114 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E5F.sc
 Colour: ff
@@ -30746,6 +30817,7 @@ StartChar: uni1E62
 Encoding: 7778 7778 1252
 Width: 1395
 Flags: HMW
+AnchorPoint: "top_center" 696 1380 basechar 0
 LayerCount: 4
 Fore
 Refer: 1200 803 N 1 0 0 1 54 0 2
@@ -30761,7 +30833,7 @@ Flags: HMW
 AnchorPoint: "top_center" 532 1040 basechar 0
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -128 0 2
+Refer: 1200 803 N 1 0 0 1 -79 0 2
 Refer: 22 115 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E63.sc
 Colour: ff
@@ -30773,7 +30845,7 @@ Width: 1395
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 54 480 2
+Refer: 229 775 N 1 0 0 1 54 340 2
 Refer: 1252 7778 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E69.sc
 Colour: 8080ff
@@ -30797,7 +30869,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 57 0 2
+Refer: 1200 803 N 1 0 0 1 145 0 2
 Refer: 39 84 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E6D.sc
 Colour: ff
@@ -30809,7 +30881,7 @@ Width: 1056
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -162 0 2
+Refer: 1200 803 N 1 0 0 1 -86 0 2
 Refer: 13 116 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E6D.sc
 Colour: ff
@@ -30821,7 +30893,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 57 0 2
+Refer: 1203 817 N 1 0 0 1 145 0 2
 Refer: 39 84 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E6F.sc
 Colour: ff
@@ -30833,7 +30905,7 @@ Width: 1056
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 -162 0 2
+Refer: 1203 817 N 1 0 0 1 -86 0 2
 Refer: 13 116 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E6F.sc
 Colour: ff
@@ -30845,7 +30917,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1211 813 N 1 0 0 1 57 0 2
+Refer: 1211 813 N 1 0 0 1 145 0 2
 Refer: 39 84 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E71.sc
 Colour: ff
@@ -30857,7 +30929,7 @@ Width: 1056
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1211 813 N 1 0 0 1 -162 0 2
+Refer: 1211 813 N 1 0 0 1 -86 0 2
 Refer: 13 116 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E71.sc
 Colour: ff
@@ -30869,7 +30941,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1216 816 N 1 0 0 1 57 0 2
+Refer: 1216 816 N 1 0 0 1 145 0 2
 Refer: 44 85 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E75.sc
 Colour: ff
@@ -30881,7 +30953,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1216 816 N 1 0 0 1 -64 0 2
+Refer: 1216 816 N 1 0 0 1 0 0 2
 Refer: 2 117 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E75.sc
 Substitution2: "'ss05' Simplified u lookups0-1" uni1E75.ss05
@@ -30894,7 +30966,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1211 813 N 1 0 0 1 57 0 2
+Refer: 1211 813 N 1 0 0 1 145 0 2
 Refer: 44 85 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E77.sc
 Colour: ff
@@ -30906,7 +30978,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1211 813 N 1 0 0 1 -64 0 2
+Refer: 1211 813 N 1 0 0 1 0 0 2
 Refer: 2 117 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E77.sc
 Substitution2: "'ss05' Simplified u lookups0-1" uni1E77.ss05
@@ -30919,7 +30991,7 @@ Width: 1588
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 41.9992 0 2
+Refer: 1200 803 N 1 0 0 1 152 0 2
 Refer: 28 86 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E7F.sc
 Colour: ff
@@ -30931,7 +31003,7 @@ Width: 1232
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -112 0 2
+Refer: 1200 803 N 1 0 0 1 -26 0 2
 Refer: 14 118 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E7F.sc
 Colour: ff
@@ -30943,7 +31015,7 @@ Width: 2340
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 356 0 2
+Refer: 1200 803 N 1 0 0 1 528 0 2
 Refer: 49 87 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E89.sc
 Colour: ff
@@ -30955,7 +31027,7 @@ Width: 1890
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 154 0 2
+Refer: 1200 803 N 1 0 0 1 298 0 2
 Refer: 15 119 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E89.sc
 Colour: ff
@@ -30990,7 +31062,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1270 804 N 1 0 0 1 57 0 2
+Refer: 1270 804 N 1 0 0 1 145 0 2
 Refer: 44 85 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E73.sc
 Colour: ff
@@ -31002,7 +31074,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1270 804 N 1 0 0 1 -64 0 2
+Refer: 1270 804 N 1 0 0 1 0 0 2
 Refer: 2 117 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E73.sc
 Substitution2: "'ss05' Simplified u lookups0-1" uni1E73.ss05
@@ -31015,7 +31087,7 @@ Width: 1466
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 54 0 2
+Refer: 1200 803 N 1 0 0 1 91 0 2
 Refer: 46 90 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E93.sc
 Colour: ff
@@ -31027,7 +31099,7 @@ Width: 1124
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -130 0 2
+Refer: 1200 803 N 1 0 0 1 -80 0 2
 Refer: 25 122 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E93.sc
 Colour: ff
@@ -31039,7 +31111,7 @@ Width: 1466
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 54 0 2
+Refer: 1203 817 N 1 0 0 1 91 0 2
 Refer: 46 90 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E95.sc
 Colour: ff
@@ -31051,7 +31123,7 @@ Width: 1124
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 -130 0 2
+Refer: 1203 817 N 1 0 0 1 -80 0 2
 Refer: 25 122 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E95.sc
 Colour: ff
@@ -31063,7 +31135,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1203 817 N 1 0 0 1 -44 0 2
+Refer: 1203 817 N 1 0 0 1 0 0 2
 Refer: 7 104 N 1 0 0 1 0 0 3
 Colour: ff
 EndChar
@@ -31108,11 +31180,11 @@ EndChar
 
 StartChar: uni1E9A
 Encoding: 7834 7834 1280
-Width: 1348
+Width: 1347
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1278 702 S 1 0 0 1 1070 0 2
+Refer: 1278 702 S 1 0 0 1 1077 0 2
 Refer: 23 97 N 1 0 0 1 0 0 2
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E9A.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni1E9A.ss04
@@ -31121,121 +31193,120 @@ EndChar
 
 StartChar: uni1E9C
 Encoding: 7836 7836 1281
-Width: 765
+Width: 894
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-670 1096 m 1
- 670 911 l 1
- 0 524 l 1
- 0 709 l 1
- 670 1096 l 1
-390 1040 m 1
- 390 0 l 1
- 210 0 l 1
- 210 1040 l 1
- 210 1180 l 2
- 210 1380 350 1500 550 1500 c 0
- 606 1500 670 1486 715 1468 c 1
- 670 1305 l 1
- 644 1324 593 1340 550 1340 c 0
- 448 1340 390 1282 390 1180 c 2
- 390 1040 l 1
+746 1044 m 1
+ 746 755 l 1
+ -94 271 l 1
+ -94 560 l 1
+ 746 1044 l 1
+476 690 m 5
+ 476 0 l 1
+ 116 0 l 1
+ 116 680 l 1
+ 116 1040 l 1
+ 116 1320 250 1510 610 1510 c 0
+ 731 1510 816 1482 872 1458 c 1
+ 781 1135 l 1
+ 749 1167 674 1190 614 1190 c 0
+ 524 1190 476 1150 476 1050 c 1
+ 476 690 l 5
 EndSplineSet
 Colour: ff00
 EndChar
 
 StartChar: uni1E9E
 Encoding: 7838 7838 1282
-Width: 1244
+Width: 1420
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-1045 1172 m 1
- 1003 1375 820 1500 597 1500 c 0
- 342 1500 140 1337 140 1082 c 0
- 140 827 140 0 140 0 c 13
- 330 0 l 17
- 330 0 330 924 330 1082 c 0
- 330 1242 447 1332 597 1332 c 0
- 711 1332 808 1274 846 1180 c 1
- 607 856 l 1
- 732 756 l 1
- 1045 1172 l 1
-607 856 m 0
- 607 688 l 0
- 807 688 954 574 954 418 c 0
- 954 262 860 148 660 148 c 0
- 590 148 531 161 482 187 c 1
- 436 20 l 1
- 502 -6 578 -20 660 -20 c 0
- 960 -20 1144 163 1144 418 c 0
- 1144 673 907 856 607 856 c 0
-845 1180 m 1025
+1248 1040 m 0
+ 1248 1295 978 1510 672 1510 c 0
+ 366 1510 116 1295 116 1040 c 0
+ 116 785 116 0 116 0 c 9
+ 496 0 l 17
+ 496 0 496 960 496 1040 c 0
+ 496 1120 582 1174 672 1174 c 0
+ 762 1174 848 1130 848 1060 c 4
+ 684 932 l 1
+ 760 662 l 17
+ 1248 1040 l 0
+748 306 m 0
+ 706 306 680 312 621 345 c 1
+ 556 10 l 1
+ 596 -3 698 -30 748 -30 c 0
+ 1107 -30 1336 176 1336 456 c 0
+ 1336 736 1044 932 684 932 c 0
+ 684 612 l 0
+ 804 612 956 576 956 456 c 0
+ 956 336 868 306 748 306 c 0
 EndSplineSet
 Colour: ffff
 EndChar
 
 StartChar: uni1E9D
 Encoding: 7837 7837 1283
-Width: 765
+Width: 1032
 VWidth: 1000
-Flags: HMW
+Flags: HMWO
 LayerCount: 4
 Fore
 SplineSet
-670 880 m 1
- 0 880 l 1
- 0 926 0 994 0 1040 c 1
- 670 1040 l 1
- 670 880 l 1
-390 1040 m 1
- 390 0 l 1
- 210 0 l 1
- 210 1040 l 1
- 210 1180 l 2
- 210 1380 350 1500 550 1500 c 0
- 606 1500 670 1486 715 1468 c 1
- 670 1305 l 1
- 644 1324 593 1340 550 1340 c 0
- 448 1340 390 1282 390 1180 c 2
- 390 1040 l 1
+917 760 m 1
+ 0 760 l 1
+ 0 1000 l 1
+ 917 1000 l 1
+ 917 760 l 1
+612 926 m 1
+ 612 0 l 9
+ 252 0 l 17
+ 252 926 l 1
+ 252 1050 l 1
+ 252 1330 386 1510 746 1510 c 0
+ 867 1510 952 1482 1008 1458 c 1
+ 917 1135 l 1
+ 885 1167 810 1190 750 1190 c 0
+ 660 1190 612 1150 612 1050 c 1
+ 612 926 l 1
 EndSplineSet
 Colour: ff00
 EndChar
 
 StartChar: uni1E9F
 Encoding: 7839 7839 1284
-Width: 1196
+Width: 1268
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-100 520 m 0
- 100 832 317 980 598 980 c 0
- 598 900 l 0
- 407 900 280 740 280 520 c 0
- 280 300 407 140 598 140 c 0
- 789 140 916 300 916 520 c 0
- 916 740 789 900 598 900 c 0
- 598 1060 l 0
- 879 1060 1096 832 1096 520 c 0
- 1096 208 879 -20 598 -20 c 0
- 317 -20 100 208 100 520 c 0
-677 1509 m 0
- 857 1509 997 1385 997 1385 c 1
- 915 1244 l 1
- 915 1244 788 1350 638 1350 c 0
- 388 1350 348 1257 348 1197 c 0
- 348 1137 378 1060 598 1060 c 0
- 598 900 l 0
- 298 900 168 1047 168 1197 c 0
- 168 1347 297 1509 677 1509 c 0
+84 520 m 0
+ 84 840 314 970 634 970 c 0
+ 634 750 l 0
+ 497 750 444 657 444 520 c 0
+ 444 390 497 290 634 290 c 0
+ 771 290 824 383 824 520 c 0
+ 824 657 771 750 634 750 c 0
+ 634 1070 l 0
+ 954 1070 1184 840 1184 520 c 0
+ 1184 200 954 -30 634 -30 c 0
+ 314 -30 84 200 84 520 c 0
+634 1510 m 0
+ 850 1510 994 1484 1116 1433 c 1
+ 1038 1119 l 1
+ 911 1174 773 1190 634 1190 c 0
+ 548 1190 512 1170 512 1130 c 0
+ 512 1090 548 1070 634 1070 c 0
+ 634 750 l 0
+ 298 750 152 950 152 1130 c 0
+ 152 1310 298 1510 634 1510 c 0
 EndSplineSet
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E9F.sc
 Colour: ff00
@@ -31247,7 +31318,7 @@ Width: 1588
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 41.9984 0 2
+Refer: 1200 803 N 1 0 0 1 156 0 2
 Refer: 27 65 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EA1.sc
 Colour: ff
@@ -31259,7 +31330,7 @@ Width: 1306
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -102 0 2
+Refer: 1200 803 N 1 0 0 1 -30 0 2
 Refer: 23 97 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EA1.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni1EA1.ss04
@@ -31326,7 +31397,7 @@ Width: 1588
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 41.9984 340 2
+Refer: 1287 777 N 1 0 0 1 156 340 2
 Refer: 27 65 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EA3.sc
 Colour: ff
@@ -31338,7 +31409,7 @@ Width: 1306
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 -102 0 2
+Refer: 1287 777 N 1 0 0 1 10 0 2
 Refer: 23 97 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EA3.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni1EA3.ss04
@@ -31351,7 +31422,7 @@ Width: 1588
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 387.998 472 2
+Refer: 84 769 N 1 0 0 1 619 472 2
 Refer: 92 194 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EA5.sc
 Colour: 8080ff
@@ -31363,7 +31434,7 @@ Width: 1306
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 244 132 2
+Refer: 84 769 N 1 0 0 1 473 132 2
 Refer: 117 226 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EA5.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni1EA5.ss04
@@ -31376,7 +31447,7 @@ Width: 1588
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 -304.002 472 2
+Refer: 83 768 N 1 0 0 1 -307 472 2
 Refer: 92 194 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EA7.sc
 Colour: 8080ff
@@ -31388,7 +31459,7 @@ Width: 1306
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 -448 132 2
+Refer: 83 768 N 1 0 0 1 -453 132 2
 Refer: 117 226 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EA7.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni1EA7.ss04
@@ -31401,7 +31472,7 @@ Width: 1588
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 332.998 564 2
+Refer: 1287 777 N 1 0 0 1 564 564 2
 Refer: 92 194 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EA9.sc
 Colour: 8080ff
@@ -31413,7 +31484,7 @@ Width: 1306
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 189 224 2
+Refer: 1287 777 N 1 0 0 1 418 224 2
 Refer: 117 226 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EA9.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni1EA9.ss04
@@ -31426,7 +31497,7 @@ Width: 1588
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 45.9984 728 2
+Refer: 86 771 S 1 0 0 1 160 623 2
 Refer: 92 194 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EAB.sc
 Colour: 80bfff
@@ -31438,7 +31509,7 @@ Width: 1306
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 -98 388 2
+Refer: 86 771 N 1 0 0 1 14 398 2
 Refer: 117 226 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EAB.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni1EAB.ss04
@@ -31451,7 +31522,7 @@ Width: 1588
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 41.9984 398 2
+Refer: 85 770 N 1 0 0 1 152 408 2
 Refer: 1285 7840 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EAD.sc
 Colour: 8080ff
@@ -31463,7 +31534,7 @@ Width: 1306
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -102 -42 2
+Refer: 85 770 N 1 0 0 1 -30 -22 2
 Refer: 1286 7841 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EAD.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni1EAD.ss04
@@ -31476,7 +31547,7 @@ Width: 1588
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 41.9984 640 2
+Refer: 84 769 N 1 0 0 1 156 640 2
 Refer: 232 258 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EAF.sc
 Colour: 8080ff
@@ -31488,7 +31559,7 @@ Width: 1306
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -102 280 2
+Refer: 84 769 N 1 0 0 1 10 280 2
 Refer: 225 259 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EAF.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni1EAF.ss04
@@ -31501,7 +31572,7 @@ Width: 1588
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 41.9984 640 2
+Refer: 83 768 N 1 0 0 1 156 640 2
 Refer: 232 258 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EB1.sc
 Colour: 8080ff
@@ -31513,7 +31584,7 @@ Width: 1306
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 -102 280 2
+Refer: 83 768 N 1 0 0 1 10 280 2
 Refer: 225 259 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EB1.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni1EB1.ss04
@@ -31527,8 +31598,8 @@ VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 41.9984 559 2
-Refer: 224 774 S 1 0 0 1 41.9984 300 2
+Refer: 1287 777 N 1 0 0 1 151.998 564 2
+Refer: 224 774 N 1 0 0 1 151.998 270 2
 Refer: 27 65 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EB3.sc
 Colour: ffff
@@ -31540,7 +31611,7 @@ Width: 1306
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 S 1 0 0 1 -102 280 2
+Refer: 1287 777 N 1 0 0 1 10 280 2
 Refer: 225 259 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EB3.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni1EB3.ss04
@@ -31553,7 +31624,7 @@ Width: 1588
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 S 1 0 0 1 41.9984 632 2
+Refer: 86 771 S 1 0 0 1 156 623 2
 Refer: 232 258 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EB5.sc
 Colour: 80ff
@@ -31565,7 +31636,7 @@ Width: 1306
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 -102 280 2
+Refer: 86 771 N 1 0 0 1 10 280 2
 Refer: 225 259 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EB5.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni1EB5.ss04
@@ -31578,7 +31649,7 @@ Width: 1588
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 224 774 N 1 0 0 1 41.9984 408 2
+Refer: 224 774 N 1 0 0 1 152 438 2
 Refer: 1285 7840 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EB7.sc
 Colour: 8080ff
@@ -31590,7 +31661,7 @@ Width: 1306
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 224 774 N 1 0 0 1 -102 -32 2
+Refer: 224 774 N 1 0 0 1 -30 8 2
 Refer: 1286 7841 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EB7.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni1EB7.ss04
@@ -31603,7 +31674,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -38 0 2
+Refer: 1200 803 N 1 0 0 1 31 0 2
 Refer: 31 69 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EB9.sc
 Colour: ff
@@ -31615,7 +31686,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -44 0 2
+Refer: 1200 803 N 1 0 0 1 -8 0 2
 Refer: 9 101 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EB9.sc
 Colour: ff
@@ -31627,7 +31698,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 -38 340 2
+Refer: 1287 777 N 1 0 0 1 31 340 2
 Refer: 31 69 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EBB.sc
 Colour: ff
@@ -31639,7 +31710,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 -44 0 2
+Refer: 1287 777 N 1 0 0 1 -8 0 2
 Refer: 9 101 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EBB.sc
 Colour: ff
@@ -31651,7 +31722,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 -38 340 2
+Refer: 86 771 N 1 0 0 1 31 340 2
 Refer: 31 69 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EBD.sc
 Colour: ff
@@ -31663,7 +31734,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 -44 0 2
+Refer: 86 771 N 1 0 0 1 -8 0 2
 Refer: 9 101 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EBD.sc
 Colour: ff
@@ -31675,7 +31746,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 308 472 2
+Refer: 84 769 N 1 0 0 1 494 472 2
 Refer: 99 202 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EBF.sc
 Colour: 8080ff
@@ -31687,7 +31758,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 302 132 2
+Refer: 84 769 N 1 0 0 1 455 132 2
 Refer: 123 234 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EBF.sc
 Colour: 8080ff
@@ -31699,7 +31770,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 -384 472 2
+Refer: 83 768 N 1 0 0 1 -432 472 2
 Refer: 99 202 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EC1.sc
 Colour: 8080ff
@@ -31711,7 +31782,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 -390 132 2
+Refer: 83 768 N 1 0 0 1 -471 132 2
 Refer: 123 234 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EC1.sc
 Colour: 8080ff
@@ -31723,7 +31794,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 253 564 2
+Refer: 1287 777 N 1 0 0 1 439 564 2
 Refer: 99 202 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EC3.sc
 Colour: 8080ff
@@ -31735,7 +31806,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 247 224 2
+Refer: 1287 777 N 1 0 0 1 400 224 2
 Refer: 123 234 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EC3.sc
 Colour: 8080ff
@@ -31747,7 +31818,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 S 1 0 0 1 -34 632 2
+Refer: 86 771 S 1 0 0 1 35 623 2
 Refer: 99 202 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EC5.sc
 Colour: 80ff
@@ -31759,7 +31830,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 -40 388 2
+Refer: 86 771 N 1 0 0 1 -4 398 2
 Refer: 123 234 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EC5.sc
 Colour: 8080ff
@@ -31771,7 +31842,7 @@ Width: 1346
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -38 398 2
+Refer: 85 770 N 1 0 0 1 31 408 2
 Refer: 1311 7864 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EC7.sc
 Colour: 8080ff
@@ -31783,7 +31854,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -44 -42 2
+Refer: 85 770 N 1 0 0 1 -8 -32 2
 Refer: 1312 7865 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EC7.sc
 Colour: 8080ff
@@ -31795,7 +31866,7 @@ Width: 1016
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 -239 340 2
+Refer: 1287 777 N 1 0 0 1 -134 340 2
 Refer: 36 73 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EC9.sc
 Substitution2: "'ss03' Simplified G and I lookups0-1" uni1EC8.ss03
@@ -31808,7 +31879,7 @@ Width: 592
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 -412 26 2
+Refer: 1287 777 N 1 0 0 1 -346 0 2
 Refer: 141 305 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EC9.sc
 Ligature2: "'liga' Soft Dotted i j" i hookabovecomb
@@ -31821,7 +31892,7 @@ Width: 1016
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -239 0 2
+Refer: 1200 803 N 1 0 0 1 -134 0 2
 Refer: 36 73 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1ECB.sc
 Substitution2: "'ss03' Simplified G and I lookups0-1" uni1ECA.ss03
@@ -31834,7 +31905,7 @@ Width: 592
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 S 1 0 0 1 -412 0 2
+Refer: 1200 803 N 1 0 0 1 -346 0 2
 Refer: 18 105 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1ECB.sc
 Colour: 8080ff
@@ -31846,7 +31917,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 675 0 2
+Refer: 1200 803 N 1 0 0 1 202 -4.926e-05 2
 Refer: 30 79 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1ECD.sc
 Colour: ff
@@ -31858,7 +31929,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -44 0 2
+Refer: 1200 803 N 1 0 0 1 -8 0 2
 Refer: 0 111 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1ECD.sc
 Colour: ff
@@ -31870,7 +31941,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 675 340 2
+Refer: 1287 777 N 1 0 0 1 202 340 2
 Refer: 30 79 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1ECF.sc
 Colour: ff
@@ -31882,7 +31953,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 -44 0 2
+Refer: 1287 777 N 1 0 0 1 -8 0 2
 Refer: 0 111 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1ECF.sc
 Colour: ff
@@ -31894,7 +31965,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 1021 472 2
+Refer: 84 769 N 1 0 0 1 664 472 2
 Refer: 108 212 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1ED1.sc
 Colour: 8080ff
@@ -31906,7 +31977,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 302 132 2
+Refer: 84 769 N 1 0 0 1 454 132 2
 Refer: 132 244 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1ED1.sc
 Colour: 8080ff
@@ -31918,7 +31989,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 329 472 2
+Refer: 83 768 N 1 0 0 1 -261 472 2
 Refer: 108 212 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1ED3.sc
 Colour: 8080ff
@@ -31930,7 +32001,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 -390 132 2
+Refer: 83 768 N 1 0 0 1 -471 132 2
 Refer: 132 244 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1ED3.sc
 Colour: 8080ff
@@ -31942,7 +32013,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 966 564 2
+Refer: 1287 777 N 1 0 0 1 609 564 2
 Refer: 108 212 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1ED5.sc
 Colour: 8080ff
@@ -31954,7 +32025,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 247 224 2
+Refer: 1287 777 N 1 0 0 1 399 224 2
 Refer: 132 244 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1ED5.sc
 Colour: 8080ff
@@ -31966,7 +32037,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 S 1 0 0 1 679 632 2
+Refer: 86 771 S 1 0 0 1 206 623 2
 Refer: 108 212 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1ED7.sc
 Colour: 80ff
@@ -31978,7 +32049,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 -40 388 2
+Refer: 86 771 N 1 0 0 1 -4 398 2
 Refer: 132 244 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1ED7.sc
 Colour: 8080ff
@@ -31990,7 +32061,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 675 398 2
+Refer: 85 770 N 1 0 0 1 202 408 2
 Refer: 1331 7884 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1ED9.sc
 Colour: 8080ff
@@ -32002,7 +32073,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 85 770 N 1 0 0 1 -44 -42 2
+Refer: 85 770 N 1 0 0 1 -8 -32 2
 Refer: 1332 7885 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1ED9.sc
 Colour: 8080ff
@@ -32014,7 +32085,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 675 360 2
+Refer: 84 769 N 1 0 0 1 202 360 2
 Refer: 396 416 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EDB.sc
 Colour: 8080ff
@@ -32026,7 +32097,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 84 769 N 1 0 0 1 -44 0 2
+Refer: 84 769 N 1 0 0 1 -8 0 2
 Refer: 397 417 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EDB.sc
 Colour: 8080ff
@@ -32038,7 +32109,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 675 360 2
+Refer: 83 768 N 1 0 0 1 202 360 2
 Refer: 396 416 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EDD.sc
 Colour: 8080ff
@@ -32050,7 +32121,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 -44 0 2
+Refer: 83 768 N 1 0 0 1 -8 0 2
 Refer: 397 417 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EDD.sc
 Colour: 8080ff
@@ -32062,7 +32133,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 675 360 2
+Refer: 1287 777 N 1 0 0 1 202 360 2
 Refer: 396 416 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EDF.sc
 Colour: 8080ff
@@ -32074,7 +32145,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 -44 0 2
+Refer: 1287 777 N 1 0 0 1 -8 0 2
 Refer: 397 417 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EDF.sc
 Colour: 8080ff
@@ -32086,7 +32157,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 675 360 2
+Refer: 86 771 N 1 0 0 1 202 360 2
 Refer: 396 416 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EE1.sc
 Colour: 8080ff
@@ -32098,7 +32169,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 -44 0 2
+Refer: 86 771 N 1 0 0 1 -8 0 2
 Refer: 397 417 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EE1.sc
 Colour: 8080ff
@@ -32110,7 +32181,7 @@ Width: 1688
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 675 0 2
+Refer: 1200 803 N 1 0 0 1 202 0 2
 Refer: 396 416 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EE3.sc
 Colour: 8080ff
@@ -32122,7 +32193,7 @@ Width: 1268
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -44 0 2
+Refer: 1200 803 N 1 0 0 1 -8 0 2
 Refer: 397 417 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EE3.sc
 Colour: 8080ff
@@ -32134,7 +32205,7 @@ Width: 1630
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 60 340 2
+Refer: 1287 777 N 1 0 0 1 173 340 2
 Refer: 48 89 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EF7.sc
 Colour: ff
@@ -32146,7 +32217,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 57 0 2
+Refer: 1200 803 N 1 0 0 1 145 0 2
 Refer: 44 85 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EE5.sc
 Colour: ff
@@ -32158,7 +32229,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 -64 0 2
+Refer: 1200 803 N 1 0 0 1 0 0 2
 Refer: 2 117 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EE5.sc
 Substitution2: "'ss05' Simplified u lookups0-1" uni1EE5.ss05
@@ -32171,7 +32242,7 @@ Width: 1574
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 57 340 2
+Refer: 1287 777 N 1 0 0 1 145 340 2
 Refer: 44 85 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EE7.sc
 Colour: ff
@@ -32183,7 +32254,7 @@ Width: 1284
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 -64 0 2
+Refer: 1287 777 N 1 0 0 1 0 0 2
 Refer: 2 117 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EE7.sc
 Substitution2: "'ss05' Simplified u lookups0-1" uni1EE7.ss05
@@ -32321,7 +32392,7 @@ Width: 1630
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 60 340 2
+Refer: 83 768 N 1 0 0 1 173 340 2
 Refer: 48 89 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" ygrave.sc
 Colour: ff
@@ -32333,7 +32404,7 @@ Width: 1274
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 83 768 N 1 0 0 1 -112 0 2
+Refer: 83 768 N 1 0 0 1 16 0 2
 Refer: 17 121 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" ygrave.sc
 Colour: ff
@@ -32345,7 +32416,7 @@ Width: 1630
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 N 1 0 0 1 60 0 2
+Refer: 1200 803 N 1 0 0 1 173 0 2
 Refer: 48 89 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EF5.sc
 Colour: ff
@@ -32357,7 +32428,7 @@ Width: 1274
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1200 803 S 1 0 0 1 212 -40 2
+Refer: 1200 803 S 1 0 0 1 432 40 2
 Refer: 17 121 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EF5.sc
 Colour: 80ff
@@ -32369,7 +32440,7 @@ Width: 1274
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 1287 777 N 1 0 0 1 -112 0 2
+Refer: 1287 777 N 1 0 0 1 16 0 2
 Refer: 17 121 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EF7.sc
 Colour: ff
@@ -32381,7 +32452,7 @@ Width: 1630
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 60 340 2
+Refer: 86 771 N 1 0 0 1 173 340 2
 Refer: 48 89 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EF9.sc
 Colour: ff
@@ -32393,7 +32464,7 @@ Width: 1274
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 N 1 0 0 1 -112 0 2
+Refer: 86 771 N 1 0 0 1 16 0 2
 Refer: 17 121 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EF9.sc
 Colour: ff
@@ -32401,25 +32472,25 @@ EndChar
 
 StartChar: uni1EFA
 Encoding: 7930 7930 1377
-Width: 1778
+Width: 2030
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-330 1480 m 17
- 330 168 l 1
- 710 168 l 1
- 710 0 l 1
- 140 0 l 1
- 140 1480 l 1
- 330 1480 l 17
-900 1480 m 17
- 900 168 l 1
- 1638 168 l 1
- 1638 0 l 1
- 710 0 l 25
- 710 1480 l 1
- 900 1480 l 17
+496 1480 m 5
+ 496 336 l 5
+ 800 336 l 1
+ 800 0 l 1
+ 116 0 l 29
+ 116 1480 l 5
+ 496 1480 l 5
+1180 1480 m 1
+ 1180 336 l 1
+ 1914 336 l 1
+ 1914 0 l 1
+ 800 0 l 25
+ 800 1480 l 1
+ 1180 1480 l 1
 EndSplineSet
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EFB.sc
 Colour: ffff
@@ -32427,42 +32498,42 @@ EndChar
 
 StartChar: uni1EFB
 Encoding: 7931 7931 1378
-Width: 1050
+Width: 1394
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-1050 1160 m 1
- 0 1160 l 1
- 0 1206 0 1274 0 1320 c 1
- 1050 1320 l 1
- 1050 1160 l 1
-982 156 m 1
- 1024 4 l 1
- 1002 -9 962 -20 930 -20 c 0
- 760 -20 660 60 660 230 c 2
- 660 440 l 1
- 660 578 l 1
- 660 1480 l 1
- 840 1480 l 1
- 840 578 l 1
- 840 440 l 1
- 840 230 l 2
- 840 170 870 140 930 140 c 0
- 946 140 970 149 982 156 c 1
-532 156 m 1
- 574 4 l 1
- 552 -9 512 -20 480 -20 c 0
- 310 -20 210 60 210 230 c 2
+1370 1080 m 5
+ 0 1080 l 1
+ 0 1126 0 1274 0 1320 c 1
+ 1370 1320 l 1
+ 1370 1080 l 5
+1290 306 m 1
+ 1390 14 l 1
+ 1364 1 1316 -30 1228 -30 c 0
+ 1044 -30 800 62 800 362 c 2
+ 800 440 l 1
+ 800 578 l 1
+ 800 1480 l 1
+ 1160 1480 l 1
+ 1160 578 l 1
+ 1160 440 l 1
+ 1160 362 l 2
+ 1160 312 1176 290 1228 290 c 0
+ 1247 290 1277 297 1290 306 c 1
+700 306 m 1
+ 800 14 l 1
+ 774 1 726 -30 638 -30 c 0
+ 454 -30 210 62 210 362 c 2
  210 440 l 1
  210 578 l 1
  210 1480 l 1
- 390 1480 l 1
- 390 578 l 1
- 390 440 l 1
- 390 230 l 2
- 390 170 420 140 480 140 c 0
- 496 140 520 149 532 156 c 1
+ 570 1480 l 1
+ 570 578 l 1
+ 570 440 l 1
+ 570 362 l 2
+ 570 312 586 290 638 290 c 0
+ 657 290 687 297 700 306 c 1
 EndSplineSet
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EFB.sc
 Colour: ff00
@@ -32470,23 +32541,23 @@ EndChar
 
 StartChar: uni1EFC
 Encoding: 7932 7932 1379
-Width: 1306
+Width: 1496
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-727 799 m 1
- 877 755 1016 693 1016 483 c 0
- 1016 279 872 148 693 148 c 0
- 514 148 290 220 290 740 c 0
- 290 1330 694 1332 873 1332 c 0
- 873 1500 l 0
- 610 1500 100 1440 100 740 c 0
- 100 90 430 -20 693 -20 c 0
- 956 -20 1206 192 1206 483 c 0
- 1206 783 984 889 775 959 c 1
- 727 799 l 1
+809 719 m 1
+ 989 675 1032 603 1032 483 c 0
+ 1032 363 956 306 796 306 c 0
+ 636 306 464 340 464 740 c 0
+ 464 1140 747 1164 1012 1164 c 0
+ 1012 1500 l 0
+ 696 1500 84 1440 84 740 c 0
+ 84 90 466 -30 796 -30 c 0
+ 1126 -30 1412 133 1412 483 c 4
+ 1412 788 1173 969 922 1039 c 1
+ 809 719 l 1
 EndSplineSet
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EFD.sc
 Colour: ffff
@@ -32494,23 +32565,23 @@ EndChar
 
 StartChar: uni1EFD
 Encoding: 7933 7933 1380
-Width: 1246
+Width: 1424
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-690 970 m 1
- 940 910 1146 783 1146 483 c 0
- 1146 192 906 -20 643 -20 c 0
- 380 -20 100 163 100 563 c 0
- 100 1163 540 1480 540 1480 c 9
- 789 1480 l 17
- 789 1480 280 1163 280 563 c 0
- 280 283 464 140 643 140 c 0
- 822 140 966 279 966 483 c 0
- 966 713 784 774 646 808 c 1
- 690 970 l 1
+817 1051 m 5
+ 1117 991 1340 823 1340 483 c 4
+ 1340 192 1096 -30 736 -30 c 0
+ 376 -30 84 163 84 563 c 0
+ 84 1163 512 1480 512 1480 c 9
+ 1011 1480 l 17
+ 1011 1480 444 1163 444 563 c 0
+ 444 383 541 290 736 290 c 4
+ 931 290 980 359 980 483 c 4
+ 980 613 881 693 715 727 c 1
+ 817 1051 l 5
 EndSplineSet
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EFD.sc
 Colour: ff00
@@ -32518,34 +32589,34 @@ EndChar
 
 StartChar: uni1EFE
 Encoding: 7934 7934 1381
-Width: 1222
+Width: 1476
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-500 206 m 0
- 500 64 410 -20 280 -20 c 0
- 150 -20 40 64 40 206 c 0
- 40 348 150 432 280 432 c 0
- 410 432 500 348 500 206 c 0
-220 206 m 0
- 220 170 244 140 280 140 c 0
- 316 140 340 170 340 206 c 0
- 340 242 316 272 280 272 c 0
- 244 272 220 242 220 206 c 0
-647 568 m 1
- 552 365 l 1
- 70 1480 l 1
- 267 1480 l 1
- 647 568 l 1
-280 140 m 0
- 357 140 415 184 440 244 c 2
- 955 1480 l 1
- 1152 1480 l 1
- 597 185 l 2
- 544 62 438 -20 280 -20 c 0
- 280 140 l 0
+784 309 m 0
+ 784 96 619 -30 424 -30 c 0
+ 229 -30 64 96 64 309 c 0
+ 64 522 229 648 424 648 c 0
+ 619 648 784 522 784 309 c 0
+334 309 m 0
+ 334 255 370 210 424 210 c 0
+ 478 210 514 255 514 309 c 0
+ 514 363 478 408 424 408 c 0
+ 370 408 334 363 334 309 c 0
+853 623 m 1
+ 615 340 l 25
+ 114 1480 l 1
+ 508 1480 l 1
+ 853 623 l 1
+1018 1480 m 5
+ 1412 1480 l 1
+ 871 258 l 2
+ 800.833984375 99.509765625 681.579101562 -30 424 -30 c 0
+ 424 210 l 0
+ 516.163085938 210 529.737304688 324.493164062 548.780273438 369.560546875 c 2
+ 1018 1480 l 5
 EndSplineSet
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EFF.sc
 Colour: ffff
@@ -32553,34 +32624,34 @@ EndChar
 
 StartChar: uni1EFF
 Encoding: 7935 7935 1382
-Width: 1077
+Width: 1309
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-455 -234 m 0
- 455 -376 365 -460 235 -460 c 0
- 105 -460 -5 -376 -5 -234 c 0
- -5 -92 105 -8 235 -8 c 0
- 365 -8 455 -92 455 -234 c 0
-175 -234 m 0
- 175 -270 199 -300 235 -300 c 0
- 271 -300 295 -270 295 -234 c 0
- 295 -198 271 -168 235 -168 c 0
- 199 -168 175 -198 175 -234 c 0
-235 -300 m 0
- 312 -300 364 -267 385 -206 c 1
- 458 0 l 1
- 93 1040 l 1
- 282 1040 l 1
- 550 224 l 1
- 818 1040 l 1
- 1007 1040 l 1
- 642 0 l 1
- 552 -255 l 1
- 507 -385 393 -460 235 -460 c 0
- 235 -300 l 0
+784.000976562 -131 m 0
+ 784.000976562 -344 619.000976562 -470 424.000976562 -470 c 0
+ 229.000976562 -470 64.0009765625 -344 64.0009765625 -131 c 0
+ 64.0009765625 82 229.000976562 208 424.000976562 208 c 0
+ 619.000976562 208 784.000976562 82 784.000976562 -131 c 0
+334.000976562 -131 m 4
+ 334.000976562 -185 370.000976562 -230 424.000976562 -230 c 0
+ 478.000976562 -230 514.000976562 -185 514.000976562 -131 c 0
+ 514.000976562 -77 478.000976562 -32 424.000976562 -32 c 0
+ 370.000976562 -32 334.000976562 -77 334.000976562 -131 c 4
+919 1040 m 1
+ 1303 1040 l 1
+ 948 0 l 1
+ 894 -158 l 1
+ 812 -384 703 -470 424 -470 c 0
+ 424.000976562 -230 l 0
+ 484.000976562 -230 526 -184 553 -44 c 1
+ 565 0 l 1
+ 199 1040 l 1
+ 583 1040 l 1
+ 759 404 l 1
+ 919 1040 l 1
 EndSplineSet
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EFF.sc
 Colour: ff00
@@ -60691,11 +60762,11 @@ AnchorPoint: "top_center" 642 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-810 1224 m 1
- 454 1224 l 1
- 632 1480 l 1
- 1036 1480 l 1
- 810 1224 l 1
+810 1224 m 5
+ 454 1224 l 5
+ 632 1480 l 5
+ 1036 1480 l 5
+ 810 1224 l 5
 EndSplineSet
 Colour: ffff00
 EndChar
