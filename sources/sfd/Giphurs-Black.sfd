@@ -5,7 +5,7 @@ FamilyName: Giphurs
 Weight: Black
 Copyright: Copyright 2023 The Giphurs Project Authors (https://github.com/Corne2Plum3/Giphurs)
 UComments: "2023-01-20: Finally found a name for the font lol+AAoA-2022-06-21: Created with FontForge (http://fontforge.org)"
-Version: 000.810
+Version: 000.820
 ItalicAngle: 0
 UnderlinePosition: -204
 UnderlineWidth: 102
@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1692910466
+ModificationTime: 1692911978
 PfmFamily: 33
 TTFWeight: 900
 TTFWidth: 5
@@ -316,10 +316,14 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 36 9 5
+WinInfo: 8683 19 6
 BeginPrivate: 0
 EndPrivate
 Grid
+684.992587003 2692 m 0
+ 684.992587003 -1404 l 1024
+2855.50024414 2692 m 0
+ 2855.50024414 -1404 l 1024
 -2048 534.999938965 m 0
  4096 534.999938965 l 1024
 -2048 524.000366211 m 0
@@ -4978,21 +4982,21 @@ EndChar
 
 StartChar: logicalnot
 Encoding: 172 172 183
-Width: 1374
+Width: 1370
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-898 797 m 1
- 898 260 l 5
- 1258 260 l 5
- 1258 797 l 1
- 898 797 l 1
-116 500 m 1
- 1258 500 l 1
- 1258 820 l 9
- 116 820 l 1
- 116 500 l 1
+894 797 m 1
+ 894 260 l 1
+ 1254 260 l 1
+ 1254 797 l 1
+ 894 797 l 1
+116 500 m 5
+ 1254 500 l 1
+ 1254 820 l 9
+ 116 820 l 5
+ 116 500 l 5
 EndSplineSet
 Colour: ff00
 EndChar
@@ -46183,27 +46187,27 @@ EndChar
 
 StartChar: uni2237
 Encoding: 8759 8759 1786
-Width: 1392
+Width: 1370
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-876 930 m 0
- 876 1041 965 1130 1076 1130 c 0
- 1187 1130 1276 1041 1276 930 c 0
- 1276 819 1187 730 1076 730 c 0
- 965 730 876 819 876 930 c 0
-116 930 m 4
+854 930 m 4
+ 854 1041 943 1130 1054 1130 c 4
+ 1165 1130 1254 1041 1254 930 c 4
+ 1254 819 1165 730 1054 730 c 4
+ 943 730 854 819 854 930 c 4
+116 930 m 0
  116 1041 205 1130 316 1130 c 0
  427 1130 516 1041 516 930 c 0
  516 819 427 730 316 730 c 0
- 205 730 116 819 116 930 c 4
-876 170 m 0
- 876 281 965 370 1076 370 c 0
- 1187 370 1276 281 1276 170 c 0
- 1276 59 1187 -30 1076 -30 c 0
- 965 -30 876 59 876 170 c 0
+ 205 730 116 819 116 930 c 0
+854 170 m 4
+ 854 281 943 370 1054 370 c 4
+ 1165 370 1254 281 1254 170 c 4
+ 1254 59 1165 -30 1054 -30 c 4
+ 943 -30 854 59 854 170 c 4
 116 170 m 0
  116 281 205 370 316 370 c 0
  427 370 516 281 516 170 c 0
@@ -46370,27 +46374,27 @@ EndChar
 
 StartChar: uni223E
 Encoding: 8766 8766 1793
-Width: 1816
+Width: 1370
 VWidth: 1000
-Flags: HMW
+Flags: HMWO
 LayerCount: 4
 Fore
 SplineSet
-1230 814 m 4
- 1320 814 1372 750 1372 660 c 0
- 1372 570 1320 506 1230 506 c 0
- 1140 506 1087 570 1087 660 c 0
- 1087 940 866 1134 586 1134 c 0
- 306 1134 84 940 84 660 c 0
- 84 408.504124974 255.033203125 226.389648438 500 191.91796875 c 1
- 586 506 l 0
- 496 506 444 570 444 660 c 0
- 444 750 496 814 586 814 c 0
- 676 814 727 750 727 660 c 0
- 727 380 940 186 1230 186 c 0
- 1520 186 1732 380 1732 660 c 0
- 1732 910.632207862 1554.12695312 1092.35839844 1316 1127.72167969 c 1
- 1230 814 l 4
+895 770 m 4
+ 913 770 926 760 926 740 c 0
+ 926 720 913 710 895 710 c 0
+ 877 710 864 720 864 740 c 0
+ 864 918 719 1090 475 1090 c 0
+ 231 1090 84 918 84 740 c 0
+ 84 584 197 431 390 397 c 1
+ 475 710 l 0
+ 457 710 444 720 444 740 c 0
+ 444 760 457 770 475 770 c 0
+ 493 770 506 760 506 740 c 0
+ 506 562 651 390 895 390 c 0
+ 1139 390 1286 562 1286 740 c 0
+ 1286 896 1173 1049 980 1083 c 1
+ 895 770 l 4
 EndSplineSet
 Colour: ff00
 EndChar
@@ -59848,7 +59852,7 @@ EndChar
 StartChar: uni27FE
 Encoding: 10238 10238 2208
 Width: 2188
-Flags: HMWO
+Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
@@ -83209,6 +83213,7 @@ SplineSet
  800 880 l 1
  590 880 l 1
 EndSplineSet
+LCarets2: 1 0
 Ligature2: "'liga' Standard Ligatures for ss06" f.ss06 f.ss06
 Colour: ff00
 EndChar

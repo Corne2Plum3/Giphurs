@@ -5,7 +5,7 @@ FamilyName: Giphurs
 Weight: Regular
 Copyright: Copyright 2023 The Giphurs Project Authors (https://github.com/Corne2Plum3/Giphurs)
 UComments: "2023-01-20: Finally found a name for the font lol+AAoA-2022-06-21: Created with FontForge (http://fontforge.org)"
-Version: 000.810
+Version: 000.820
 ItalicAngle: 0
 UnderlinePosition: -204
 UnderlineWidth: 102
@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1692910121
+ModificationTime: 1692910955
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -316,7 +316,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 36 9 5
+WinInfo: 8702 19 6
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -46015,25 +46015,25 @@ StartChar: uni223E
 Encoding: 8766 8766 1793
 Width: 1232
 VWidth: 1000
-Flags: HMW
+Flags: HMWO
 LayerCount: 4
 Fore
 SplineSet
-842 900 m 0
- 932 900 982 830 982 740 c 0
- 982 650 932 580 842 580 c 0
- 752 580 702 650 702 740 c 0
- 702 918 568 1060 390 1060 c 0
- 212 1060 70 918 70 740 c 0
- 70 576 190 443 348 423 c 1
- 390 580 l 0
- 300 580 250 650 250 740 c 0
- 250 830 300 900 390 900 c 0
- 480 900 530 830 530 740 c 0
- 530 562 664 420 842 420 c 0
- 1020 420 1162 562 1162 740 c 0
- 1162 904 1042 1037 884 1057 c 1
- 842 900 l 0
+842 900 m 4
+ 932 900 982 830 982 740 c 4
+ 982 650 932 580 842 580 c 4
+ 752 580 702 650 702 740 c 4
+ 702 918 568 1060 390 1060 c 4
+ 212 1060 70 918 70 740 c 4
+ 70 576 190 443 348 423 c 5
+ 390 580 l 4
+ 300 580 250 650 250 740 c 4
+ 250 830 300 900 390 900 c 4
+ 480 900 530 830 530 740 c 4
+ 530 562 664 420 842 420 c 4
+ 1020 420 1162 562 1162 740 c 4
+ 1162 904 1042 1037 884 1057 c 5
+ 842 900 l 4
 EndSplineSet
 Colour: ff00
 EndChar
@@ -59233,7 +59233,7 @@ EndChar
 StartChar: uni27FE
 Encoding: 10238 10238 2208
 Width: 2188
-Flags: HMWO
+Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
