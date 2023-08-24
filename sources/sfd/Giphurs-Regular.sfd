@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1692906853
+ModificationTime: 1692910121
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -316,7 +316,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 9360 9 5
+WinInfo: 36 9 5
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -44509,7 +44509,7 @@ SplineSet
  336 1312 l 1
  748 250 l 1
 EndSplineSet
-Colour: ffff00
+Colour: ffff
 EndChar
 
 StartChar: element
@@ -57468,7 +57468,7 @@ EndChar
 StartChar: uni249C
 Encoding: 9372 9372 2164
 Width: 1720
-Flags: HMWO
+Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
@@ -58992,20 +58992,21 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-2118 616 m 1
- 1710 208 l 1
- 1593 323 l 1
- 1942 660 l 1
- 1593 997 l 1
- 1710 1112 l 1
- 2118 704 l 1
- 2118 616 l 1
+2118 616 m 5
+ 1710 208 l 5
+ 1593 323 l 5
+ 1942 660 l 5
+ 1593 997 l 5
+ 1710 1112 l 5
+ 2118 704 l 5
+ 2118 616 l 5
 2020 580 m 1
  70 580 l 1
  70 740 l 1
  2020 740 l 1
  2020 580 l 1
 EndSplineSet
+LCarets2: 2 0 0
 Ligature2: "'liga' Arrows" hyphen hyphen greater
 Colour: ff00
 EndChar
@@ -59031,6 +59032,7 @@ SplineSet
  168 740 l 1
  168 580 l 1
 EndSplineSet
+LCarets2: 2 0 0
 Ligature2: "'liga' Arrows" less hyphen hyphen
 Colour: ff00
 EndChar
@@ -59042,14 +59044,6 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-70 616 m 1
- 478 208 l 1
- 595 323 l 1
- 246 660 l 1
- 595 997 l 1
- 478 1112 l 1
- 70 704 l 1
- 70 616 l 1
 2118 616 m 1
  2118 704 l 1
  1710 1112 l 1
@@ -59058,12 +59052,21 @@ SplineSet
  1593 323 l 1
  1710 208 l 1
  2118 616 l 1
-2020 580 m 1
- 2020 740 l 1
+70 616 m 1
+ 478 208 l 1
+ 595 323 l 1
+ 246 660 l 1
+ 595 997 l 1
+ 478 1112 l 1
+ 70 704 l 1
+ 70 616 l 1
+168 580 m 1
+ 1988 580 l 5
+ 1988 740 l 5
  168 740 l 1
  168 580 l 1
- 2020 580 l 1
 EndSplineSet
+LCarets2: 3 0 0 0
 Ligature2: "'liga' Arrows" less hyphen hyphen greater
 Colour: ff00
 EndChar
@@ -59102,6 +59105,7 @@ SplineSet
  258 884 l 1
  258 740 l 1
 EndSplineSet
+LCarets2: 3 0 0 0
 Ligature2: "'liga' Arrows" less equal equal greater
 Colour: ff00
 EndChar
@@ -59132,6 +59136,7 @@ SplineSet
  70 884 l 1
  70 740 l 1
 EndSplineSet
+LCarets2: 2 0 0
 Ligature2: "'liga' Arrows" equal equal greater
 Colour: ff00
 EndChar
@@ -59162,6 +59167,7 @@ SplineSet
  2118 884 l 1
  2118 740 l 1
 EndSplineSet
+LCarets2: 2 0 0
 Ligature2: "'liga' Arrows" less equal equal
 Colour: ff00
 EndChar
@@ -59227,7 +59233,7 @@ EndChar
 StartChar: uni27FE
 Encoding: 10238 10238 2208
 Width: 2188
-Flags: HMW
+Flags: HMWO
 LayerCount: 4
 Fore
 SplineSet
@@ -59344,37 +59350,28 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-996 346 m 0
- 996 186 l 0
- 1147 186 1289 248 1390 349 c 0
- 1489 448 1550 586 1550 740 c 0
- 1390 740 l 0
- 1390 623 1345 531 1276 462 c 0
- 1205 391 1108 346 996 346 c 0
-443 740 m 1
- 443 603 l 1
- 603 603 l 1
- 603 740 l 1
- 443 740 l 1
-1390 740 m 0
- 1550 740 l 0
- 1550 894 1489 1032 1390 1131 c 0
- 1289 1232 1147 1294 996 1294 c 0
- 845 1294 705 1233 604 1132 c 0
- 505 1033 443 894 443 740 c 0
- 603 740 l 0
- 603 857 647 949 716 1018 c 0
- 787 1089 884 1134 996 1134 c 0
- 1108 1134 1205 1089 1276 1018 c 0
- 1345 949 1390 857 1390 740 c 0
-566 481 m 1
- 974 889 l 1
- 860 1006 l 1
- 523 657 l 1
- 185 1006 l 1
- 70 889 l 1
- 478 481 l 1
- 566 481 l 1
+996 346 m 4
+ 996 186 l 4
+ 1296 186 1550 428 1550 740 c 4
+ 1550 1052 1296 1294 996 1294 c 4
+ 696 1294 442 1052 442 740 c 4
+ 602 740 l 4
+ 602 980 777 1134 996 1134 c 4
+ 1215 1134 1390 980 1390 740 c 4
+ 1390 500 1215 346 996 346 c 4
+602 603 m 5
+ 602 740 l 5
+ 442 740 l 5
+ 442 603 l 5
+ 602 603 l 5
+566 481 m 5
+ 974 889 l 5
+ 859 1006 l 5
+ 522 657 l 5
+ 185 1006 l 5
+ 70 889 l 5
+ 478 481 l 5
+ 566 481 l 5
 EndSplineSet
 Colour: ff00
 EndChar
@@ -59387,37 +59384,28 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-624 346 m 0
- 624 186 l 0
- 473 186 331 248 230 349 c 0
- 131 448 70 586 70 740 c 0
- 230 740 l 0
- 230 623 275 531 344 462 c 0
- 415 391 512 346 624 346 c 0
-1177 740 m 1
- 1177 603 l 1
- 1017 603 l 1
- 1017 740 l 1
- 1177 740 l 1
-230 740 m 0
- 70 740 l 0
- 70 894 131 1032 230 1131 c 0
- 331 1232 473 1294 624 1294 c 0
- 775 1294 915 1233 1016 1132 c 0
- 1115 1033 1177 894 1177 740 c 0
- 1017 740 l 0
- 1017 857 973 949 904 1018 c 0
- 833 1089 736 1134 624 1134 c 0
- 512 1134 415 1089 344 1018 c 0
- 275 949 230 857 230 740 c 0
-1054 481 m 1
- 646 889 l 1
- 760 1006 l 1
- 1097 657 l 1
- 1435 1006 l 1
- 1550 889 l 1
- 1142 481 l 1
- 1054 481 l 1
+624 346 m 4
+ 624 186 l 4
+ 324 186 70 428 70 740 c 4
+ 70 1052 324 1294 624 1294 c 4
+ 924 1294 1178 1052 1178 740 c 4
+ 1018 740 l 4
+ 1018 980 843 1134 624 1134 c 4
+ 405 1134 230 980 230 740 c 4
+ 230 500 405 346 624 346 c 4
+1018 603 m 5
+ 1018 740 l 5
+ 1178 740 l 5
+ 1178 603 l 5
+ 1018 603 l 5
+1054 481 m 5
+ 646 889 l 5
+ 761 1006 l 5
+ 1098 657 l 5
+ 1435 1006 l 5
+ 1550 889 l 5
+ 1142 481 l 5
+ 1054 481 l 5
 EndSplineSet
 Colour: ff00
 EndChar
@@ -63637,21 +63625,21 @@ EndChar
 
 StartChar: uni2E17
 Encoding: 11799 11799 2452
-Width: 1322
+Width: 972
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-1180 1062 m 1
- 1222 907 l 1
- 142 618 l 17
- 100 773 l 1
- 1180 1062 l 1
-142 258 m 1
- 100 413 l 1
- 1180 702 l 17
- 1222 547 l 1
- 142 258 l 1
+792 1109 m 5
+ 872 970 l 5
+ 180 571 l 21
+ 100 710 l 5
+ 792 1109 l 5
+180 211 m 1
+ 100 350 l 5
+ 792 749 l 21
+ 872 610 l 5
+ 180 211 l 1
 EndSplineSet
 Colour: ff00
 EndChar
