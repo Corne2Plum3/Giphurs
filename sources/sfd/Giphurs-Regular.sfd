@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1693492334
+ModificationTime: 1693494067
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -329,7 +329,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 65474 19 6
+WinInfo: 65740 19 6
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -2402,24 +2402,22 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-707 370 m 5
- 713 428 l 1
+125 488 m 1
+ 609 1480 l 1
+ 809 1480 l 1
+ 321 488 l 1
+ 713 488 l 1
  713 808 l 1
  897 808 l 1
+ 897 488 l 1
+ 1107 488 l 1
+ 1107 320 l 1
  897 320 l 1
  897 0 l 1
  707 0 l 1
- 707 370 l 5
-809 1480 m 1
- 321 488 l 1
- 125 488 l 1
- 609 1480 l 1
- 809 1480 l 1
-125 320 m 1
- 125 488 l 1
- 1107 488 l 1
- 1107 320 l 1
+ 707 320 l 1
  125 320 l 1
+ 125 488 l 1
 EndSplineSet
 Substitution2: "'ss02' Alternative numbers set 2 lookups0-1" four.cv14
 Substitution2: "'ss01' Alternative numbers set 1 lookups0-1" four.cv04
@@ -11289,7 +11287,7 @@ StartChar: uni01E5
 Encoding: 485 485 457
 Width: 1245
 VWidth: 1000
-Flags: HMWO
+Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
@@ -64108,24 +64106,22 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-682 370 m 5
- 688 428 l 1
+100 488 m 1
+ 584 1480 l 1
+ 784 1480 l 1
+ 296 488 l 1
+ 688 488 l 1
  688 808 l 1
  872 808 l 1
+ 872 488 l 1
+ 1082 488 l 1
+ 1082 320 l 1
  872 320 l 1
  872 0 l 1
  682 0 l 1
- 682 370 l 5
-784 1480 m 1
- 296 488 l 1
- 100 488 l 1
- 584 1480 l 1
- 784 1480 l 1
-100 320 m 1
- 100 488 l 1
- 1082 488 l 1
- 1082 320 l 1
+ 682 320 l 1
  100 320 l 1
+ 100 488 l 1
 EndSplineSet
 Colour: ffff
 EndChar
@@ -64393,24 +64389,22 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-707 370 m 5
- 713 428 l 1
+125 488 m 1
+ 609 1480 l 1
+ 809 1480 l 1
+ 321 488 l 1
+ 713 488 l 1
  713 808 l 1
  897 808 l 1
+ 897 488 l 1
+ 1107 488 l 1
+ 1107 320 l 1
  897 320 l 1
  897 0 l 1
  707 0 l 1
- 707 370 l 5
-809 1480 m 1
- 321 488 l 1
- 125 488 l 1
- 609 1480 l 1
- 809 1480 l 1
-125 320 m 1
- 125 488 l 1
- 1107 488 l 1
- 1107 320 l 1
+ 707 320 l 1
  125 320 l 1
+ 125 488 l 1
 EndSplineSet
 Colour: ffff
 EndChar
@@ -64683,24 +64677,22 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-682 90 m 5
- 688 148 l 1
+100 208 m 1
+ 584 1200 l 1
+ 784 1200 l 1
+ 296 208 l 1
+ 688 208 l 1
  688 528 l 1
  872 528 l 1
+ 872 208 l 1
+ 1082 208 l 1
+ 1082 40 l 1
  872 40 l 1
  872 -280 l 1
  682 -280 l 1
- 682 90 l 5
-784 1200 m 1
- 296 208 l 1
- 100 208 l 1
- 584 1200 l 1
- 784 1200 l 1
-100 40 m 1
- 100 208 l 1
- 1082 208 l 1
- 1082 40 l 1
+ 682 40 l 1
  100 40 l 1
+ 100 208 l 1
 EndSplineSet
 Substitution2: "'tnum' Tabular Numbers lookups0-1" four.onum.tnum
 Colour: ffff
@@ -64976,24 +64968,22 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-707 90 m 5
- 713 148 l 1
+125 208 m 1
+ 609 1200 l 1
+ 809 1200 l 1
+ 321 208 l 1
+ 713 208 l 1
  713 528 l 1
  897 528 l 1
+ 897 208 l 1
+ 1107 208 l 1
+ 1107 40 l 1
  897 40 l 1
  897 -280 l 1
  707 -280 l 1
- 707 90 l 5
-809 1200 m 1
- 321 208 l 1
- 125 208 l 1
- 609 1200 l 1
- 809 1200 l 1
-125 40 m 1
- 125 208 l 1
- 1107 208 l 1
- 1107 40 l 1
+ 707 40 l 1
  125 40 l 1
+ 125 208 l 1
 EndSplineSet
 Colour: ffff
 EndChar
@@ -69209,26 +69199,22 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-713 740 m 5
- 713 488 l 1
- 897 488 l 1
- 897 846 l 5
- 713 740 l 5
-707 320 m 1
- 707 0 l 1
- 897 0 l 1
- 897 320 l 1
- 707 320 l 1
 809 1480 m 1
  609 1480 l 1
  125 488 l 1
- 321 488 l 1
- 809 1480 l 1
-125 320 m 1
+ 125 320 l 1
+ 707 320 l 1
+ 707 0 l 1
+ 897 0 l 1
+ 897 320 l 1
  1107 320 l 1
  1107 488 l 1
- 125 488 l 1
- 125 320 l 1
+ 897 488 l 1
+ 897 846 l 1
+ 713 740 l 1
+ 713 488 l 1
+ 321 488 l 1
+ 809 1480 l 1
 EndSplineSet
 Substitution2: "'onum' Oldstyle Figures lookups0-1" four.cv04.onum
 Substitution2: "sous-table 'sups' Exposant lookups0" four.cv04.superior
@@ -69247,26 +69233,22 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-688 740 m 5
- 688 488 l 1
- 872 488 l 1
- 872 846 l 5
- 688 740 l 5
-682 320 m 1
- 682 0 l 1
- 872 0 l 1
- 872 320 l 1
- 682 320 l 1
 784 1480 m 1
  584 1480 l 1
  100 488 l 1
- 296 488 l 1
- 784 1480 l 1
-100 320 m 1
+ 100 320 l 1
+ 682 320 l 1
+ 682 0 l 1
+ 872 0 l 1
+ 872 320 l 1
  1082 320 l 1
  1082 488 l 1
- 100 488 l 1
- 100 320 l 1
+ 872 488 l 1
+ 872 846 l 1
+ 688 740 l 1
+ 688 488 l 1
+ 296 488 l 1
+ 784 1480 l 1
 EndSplineSet
 Colour: ffff
 EndChar
@@ -69274,30 +69256,26 @@ EndChar
 StartChar: four.cv04.tnum
 Encoding: 65760 -1 2659
 Width: 1232
-Flags: HMW
+Flags: HMWO
 LayerCount: 4
 Fore
 SplineSet
-713 740 m 5
- 713 488 l 1
- 897 488 l 1
- 897 846 l 5
- 713 740 l 5
-707 320 m 1
- 707 0 l 1
- 897 0 l 1
- 897 320 l 1
- 707 320 l 1
 809 1480 m 1
  609 1480 l 1
  125 488 l 1
- 321 488 l 1
- 809 1480 l 1
-125 320 m 1
+ 125 320 l 1
+ 707 320 l 1
+ 707 0 l 1
+ 897 0 l 1
+ 897 320 l 1
  1107 320 l 1
  1107 488 l 1
- 125 488 l 1
- 125 320 l 1
+ 897 488 l 1
+ 897 846 l 1
+ 713 740 l 1
+ 713 488 l 1
+ 321 488 l 1
+ 809 1480 l 1
 EndSplineSet
 Colour: ffff
 EndChar
@@ -69310,26 +69288,22 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-688 460 m 5
- 688 208 l 1
- 872 208 l 1
- 872 566 l 5
- 688 460 l 5
-682 40 m 1
- 682 -280 l 1
- 872 -280 l 1
- 872 40 l 1
- 682 40 l 1
 784 1200 m 1
  584 1200 l 1
  100 208 l 1
- 296 208 l 1
- 784 1200 l 1
-100 40 m 1
+ 100 40 l 1
+ 682 40 l 1
+ 682 -280 l 1
+ 872 -280 l 1
+ 872 40 l 1
  1082 40 l 1
  1082 208 l 1
- 100 208 l 1
- 100 40 l 1
+ 872 208 l 1
+ 872 566 l 1
+ 688 460 l 1
+ 688 208 l 1
+ 296 208 l 1
+ 784 1200 l 1
 EndSplineSet
 Substitution2: "'tnum' Tabular Numbers lookups0-1" four.cv04.onum.tnum
 Colour: ffff
@@ -69343,26 +69317,22 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-713 460 m 5
- 713 208 l 1
- 897 208 l 1
- 897 566 l 5
- 713 460 l 5
-707 40 m 1
- 707 -280 l 1
- 897 -280 l 1
- 897 40 l 1
- 707 40 l 1
 809 1200 m 1
  609 1200 l 1
  125 208 l 1
- 321 208 l 1
- 809 1200 l 1
-125 40 m 1
+ 125 40 l 1
+ 707 40 l 1
+ 707 -280 l 1
+ 897 -280 l 1
+ 897 40 l 1
  1107 40 l 1
  1107 208 l 1
- 125 208 l 1
- 125 40 l 1
+ 897 208 l 1
+ 897 566 l 1
+ 713 460 l 1
+ 713 208 l 1
+ 321 208 l 1
+ 809 1200 l 1
 EndSplineSet
 Colour: ffff
 EndChar
