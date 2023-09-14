@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1694722063
+ModificationTime: 1694723342
 PfmFamily: 33
 TTFWeight: 900
 TTFWidth: 5
@@ -254,8 +254,9 @@ KernClass2: 7+ 8 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-7"
  487 a.ss04 agrave.ss04 aacute.ss04 acircumflex.ss04 atilde.ss04 adieresis.ss04 aring.ss04 ae.ss04 amacron.ss04 abreve.ss04 aogonek.ss04 uni01CE.ss04 uni01DF.ss04 uni01E1.ss04 uni01E3.ss04 aringacute.ss04 aeacute.ss04 uni0201.ss04 uni0203.ss04 uni0227.ss04 afii10065.ss04 uni04D1.ss04 uni04D3.ss04 uni04D5.ss04 uni1E01.ss04 uni1E9A.ss04 uni1EA1.ss04 uni1EA3.ss04 uni1EA5.ss04 uni1EA7.ss04 uni1EA9.ss04 uni1EAB.ss04 uni1EAD.ss04 uni1EAF.ss04 uni1EB1.ss04 uni1EB3.ss04 uni1EB5.ss04 uni1EB7.ss04
  120 g.ss04 gcircumflex.ss04 gbreve.ss04 gdotaccent.ss04 gcommaaccent.ss04 uni01E5.ss04 gcaron.ss04 uni01F5.ss04 uni1E21.ss04
  0 {} -210 {} -210 {} -210 {} -210 {} -210 {} -210 {} -210 {} 0 {} -140 {} -140 {} -140 {} -70 {} -140 {} -70 {} -70 {} 0 {} -70 {} -70 {} -70 {} -70 {} -70 {} -35 {} -35 {} 0 {} -210 {} -210 {} -210 {} -210 {} -210 {} -210 {} -210 {} 0 {} -140 {} -140 {} -140 {} -140 {} -140 {} -140 {} -140 {} 0 {} -210 {} -210 {} -210 {} -210 {} -210 {} -210 {} -210 {} 0 {} -35 {} -35 {} -35 {} -35 {} -35 {} 0 {} 0 {}
-KernClass2: 13+ 13 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-2"
+KernClass2: 15+ 13 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-2"
  5 slash
+ 39 P Rho afii10034 uni1E54 uni1E56 uni1FEC
  98 T Tcommaaccent Tcaron Tbar uni01AC uni01AE uni021A uni023E uni04AC uni1E6A uni1E6C uni1E6E uni1E70
  43 V afii10148 uni0476 uni0477 uni1E7C uni1E7E
  27 v afii10196 uni1E7D uni1E7F
@@ -264,6 +265,7 @@ KernClass2: 13+ 13 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-2"
  211 Y Yacute Ycircumflex Ydieresis uni0232 Upsilontonos Upsilondieresis Upsilon1 uni03D3 uni03D4 uni04AE uni04B0 uni1E8E Ygrave uni1EF4 uni1EF6 uni1EF8 uni1F59 uni1F5B uni1F5D uni1F5F uni1FE8 uni1FE9 uni1FEA uni1FEB
  104 y ydieresis ycircumflex uni0233 afii10085 uni04EF uni04F1 uni04F3 uni1E8F ygrave uni1EF5 uni1EF7 uni1EF9
  18 universal gradient
+ 46 p.sc rho.sc afii10082.sc uni1E55.sc uni1E57.sc
  172 t.sc tcommaaccent.sc tcaron.sc tbar.sc uni01AB.sc uni01AD.sc uni021B.sc tau.sc afii10084.sc afii10099.sc afii10108.sc uni04AD.sc uni1E6B.sc uni1E6D.sc uni1E6F.sc uni1E71.sc
  72 v.sc afii10196.sc uni0477.sc uni1E7D.sc uni1E7F.sc uni2173.sc uni2174.sc
  74 w.sc wcircumflex.sc wgrave.sc wacute.sc wdieresis.sc uni1E87.sc uni1E89.sc
@@ -280,7 +282,7 @@ KernClass2: 13+ 13 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-2"
  31 uni019B.sc lambda.sc uni0467.sc
  27 ae.sc uni01E3.sc uni04D5.sc
  82 afii10069.sc afii10077.sc afii10106.sc uni0513.sc uni0515.sc uni0521.sc uni052B.sc
- 0 {} -210 {} -350 {} -210 {} -210 {} -280 {} -210 {} -70 {} -210 {} -210 {} -210 {} -280 {} -70 {} 0 {} -210 {} -210 {} -210 {} -210 {} -280 {} -140 {} -70 {} -210 {} -210 {} -210 {} -280 {} -140 {} 0 {} -210 {} -210 {} -210 {} -210 {} -280 {} -210 {} -70 {} -210 {} -210 {} -210 {} -210 {} -70 {} 0 {} -140 {} -140 {} -140 {} -140 {} -210 {} -140 {} 0 {} -140 {} -140 {} -140 {} -210 {} 0 {} 0 {} -140 {} -140 {} -140 {} -140 {} -210 {} -140 {} 0 {} -140 {} -140 {} -140 {} -210 {} -70 {} 0 {} -70 {} -70 {} -70 {} -70 {} -140 {} -70 {} 0 {} -70 {} -70 {} -70 {} -140 {} 0 {} 0 {} -140 {} -140 {} -210 {} -210 {} -280 {} -210 {} -140 {} -210 {} -210 {} -210 {} -280 {} -140 {} 0 {} -140 {} -140 {} -140 {} -140 {} -210 {} -140 {} 0 {} -140 {} -140 {} -140 {} -210 {} 0 {} 0 {} -210 {} -210 {} -210 {} -210 {} -280 {} -210 {} 0 {} -210 {} -210 {} -210 {} -210 {} -70 {} 0 {} -140 {} -140 {} -140 {} -140 {} -210 {} -140 {} 0 {} -140 {} -210 {} -210 {} -280 {} -140 {} 0 {} -140 {} -140 {} -140 {} -140 {} -210 {} -140 {} 0 {} -140 {} -140 {} -140 {} -210 {} -70 {} 0 {} -70 {} -70 {} -70 {} -70 {} -140 {} -70 {} 0 {} -70 {} -70 {} -70 {} -140 {} 0 {} 0 {} -140 {} -140 {} -140 {} -140 {} -210 {} -70 {} 0 {} -140 {} -210 {} -210 {} -280 {} -70 {}
+ 0 {} -210 {} -350 {} -210 {} -210 {} -280 {} -210 {} -140 {} -210 {} -210 {} -210 {} -280 {} -140 {} 0 {} -210 {} -210 {} -210 {} -210 {} -280 {} -140 {} -140 {} -140 {} -210 {} -210 {} -280 {} -140 {} 0 {} -210 {} -210 {} -210 {} -210 {} -280 {} -140 {} -140 {} -210 {} -210 {} -210 {} -280 {} -210 {} 0 {} -210 {} -210 {} -210 {} -210 {} -280 {} -210 {} -140 {} -210 {} -210 {} -210 {} -210 {} -140 {} 0 {} -140 {} -140 {} -140 {} -140 {} -210 {} -140 {} -70 {} -140 {} -140 {} -140 {} -210 {} -70 {} 0 {} -140 {} -140 {} -140 {} -140 {} -210 {} -140 {} -70 {} -140 {} -140 {} -140 {} -210 {} -140 {} 0 {} -70 {} -70 {} -70 {} -70 {} -140 {} -70 {} -70 {} -70 {} -70 {} -70 {} -140 {} -70 {} 0 {} -280 {} -280 {} -280 {} -280 {} -280 {} -280 {} -210 {} -280 {} -280 {} -280 {} -350 {} -280 {} 0 {} -140 {} -140 {} -140 {} -140 {} -210 {} -140 {} -70 {} -140 {} -140 {} -140 {} -210 {} -70 {} 0 {} -210 {} -210 {} -210 {} -210 {} -280 {} -210 {} -70 {} -210 {} -210 {} -210 {} -210 {} -140 {} 0 {} -140 {} -140 {} -140 {} -140 {} -210 {} -140 {} -140 {} -140 {} -140 {} -140 {} -210 {} -140 {} 0 {} -140 {} -140 {} -140 {} -140 {} -210 {} -140 {} -70 {} -140 {} -210 {} -210 {} -280 {} -140 {} 0 {} -140 {} -140 {} -140 {} -140 {} -210 {} -140 {} -70 {} -140 {} -140 {} -140 {} -210 {} -140 {} 0 {} -70 {} -70 {} -70 {} -70 {} -140 {} -70 {} -70 {} -70 {} -70 {} -70 {} -140 {} 0 {} 0 {} -140 {} -140 {} -140 {} -140 {} -210 {} -70 {} -140 {} -140 {} -210 {} -210 {} -280 {} -140 {}
 KernClass2: 11 17 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-1"
  431 A Agrave Aacute Acircumflex Atilde Adieresis Aring Amacron Abreve Aogonek uni01CD Aringacute uni0200 uni0202 Alphatonos Alpha afii10017 uni04D0 uni04D2 uni1E00 uni1EA0 uni1EA2 uni1EA4 uni1EA6 uni1EA8 uni1EAA uni1EAC uni1EAE uni1EB0 uni1EB2 uni1EB4 uni1EB6 uni1F08 uni1F09 uni1F0A uni1F0B uni1F0C uni1F0D uni1F0E uni1F0F uni1F88 uni1F89 uni1F8A uni1F8B uni1F8C uni1F8D uni1F8E uni1F8F uni1FB8 uni1FB9 uni1FBA uni1FBB uni1FBC uni212B
  9 backslash
@@ -310,22 +312,22 @@ KernClass2: 11 17 "'kern' Cr+AOkA-nage horizontal dans Latin lookup 0-1"
  410 y.sc yacute.sc ydieresis.sc ycircumflex.sc uni01B4.sc uni024F.sc upsilondieresistonos.sc upsilon.sc afii10085.sc afii10110.sc uni04AF.sc uni04B1.sc uni04EF.sc uni04F1.sc uni04F3.sc uni1E8F.sc ygrave.sc uni1EF5.sc uni1EF7.sc uni1EF9.sc uni1F50.sc uni1F51.sc uni1F52.sc uni1F53.sc uni1F54.sc uni1F55.sc uni1F56.sc uni1F57.sc uni1F7A.sc uni1F7B.sc uni1FE0.sc uni1FE1.sc uni1FE2.sc uni1FE3.sc uni1FE6.sc uni1FE7.sc
  0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -350 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -140 {} 0 {} -280 {} -280 {} -280 {} -210 {} -210 {} -210 {} -140 {} -350 {} -210 {} -280 {} -280 {} -210 {} -210 {} -210 {} -140 {} -210 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} 0 {} -210 {} -140 {} -210 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -210 {} -140 {} -70 {} -210 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -210 {} -140 {} -70 {} -140 {} 0 {} -210 {} -210 {} -210 {} -140 {} -140 {} -140 {} -70 {} -280 {} -140 {} -210 {} -210 {} -140 {} -210 {} -140 {} -70 {} -210 {}
 LangName: 1033 "" "" "" "" "" "" "" "" "" "" "" "" "" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
-OtfFeatName: 'ss09' 1036 "Barre sous le chiffre 1" 2057 "Bar below digit 1" 1033 "Bar below digit 1"
-OtfFeatName: 'ss08' 1036 "Esperluette, dollar et cent alternatifs" 2057 "Alternative ampersand, dollar and cent" 1033 "Alternative ampersand, dollar and cent"
-OtfFeatName: 'ss07' 1036 "Plus gros op+AOkA-rateurs math+AOkA-matiques de base" 2057 "Bigger basic math operators" 1033 "Bigger basic math operators"
-OtfFeatName: 'ss06' 1036 "f ligatures (fi, fl, ffi, ...) ('liga' doit +AOoA-tre activ+AOkA !)" 2057 "f ligatures (fi, fl, ffi, ...) ('liga' must be enabled!)" 1033 "f ligatures (fi, fl, ffi, ...) ('liga' must be enabled!)"
-OtfFeatName: 'ss05' 1036 "Minuscule u simplifi+AOkA" 2057 "Simplified lowercase u" 1033 "Simplified lowercase u"
-OtfFeatName: 'ss04' 1036 "Minuscules a et g simplifi+AOkA-s" 2057 "Simplified lowercases a and g" 1033 "Simplified lowercases a and g"
-OtfFeatName: 'ss03' 1036 "Majuscules G et I simplifi+AOkA-s" 2057 "Simplified uppercase G and I" 1033 "Simplified uppercase G and I"
-OtfFeatName: 'ss02' 1036 "Nombres alternatifs set 2" 2057 "Alternative numbers set 2" 1033 "Alternative numbers set 2"
-OtfFeatName: 'ss01' 1036 "Nombres alternatifs set 1" 2057 "Alternative numbers set 1" 1033 "Alternative numbers set 1"
+OtfFeatName: 'ss01' 1033 "Alternative numbers set 1" 2057 "Alternative numbers set 1" 1036 "Nombres alternatifs set 1"
+OtfFeatName: 'ss02' 1033 "Alternative numbers set 2" 2057 "Alternative numbers set 2" 1036 "Nombres alternatifs set 2"
+OtfFeatName: 'ss03' 1033 "Simplified uppercase G and I" 2057 "Simplified uppercase G and I" 1036 "Majuscules G et I simplifi+AOkA-s"
+OtfFeatName: 'ss04' 1033 "Simplified lowercases a and g" 2057 "Simplified lowercases a and g" 1036 "Minuscules a et g simplifi+AOkA-s"
+OtfFeatName: 'ss05' 1033 "Simplified lowercase u" 2057 "Simplified lowercase u" 1036 "Minuscule u simplifi+AOkA"
+OtfFeatName: 'ss06' 1033 "f ligatures (fi, fl, ffi, ...) ('liga' must be enabled!)" 2057 "f ligatures (fi, fl, ffi, ...) ('liga' must be enabled!)" 1036 "f ligatures (fi, fl, ffi, ...) ('liga' doit +AOoA-tre activ+AOkA !)"
+OtfFeatName: 'ss07' 1033 "Bigger basic math operators" 2057 "Bigger basic math operators" 1036 "Plus gros op+AOkA-rateurs math+AOkA-matiques de base"
+OtfFeatName: 'ss08' 1033 "Alternative ampersand, dollar and cent" 2057 "Alternative ampersand, dollar and cent" 1036 "Esperluette, dollar et cent alternatifs"
+OtfFeatName: 'ss09' 1033 "Bar below digit 1" 2057 "Bar below digit 1" 1036 "Barre sous le chiffre 1"
 Encoding: UnicodeBmp
 UnicodeInterp: none
 NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 66474 9 4
+WinInfo: 65816 19 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -22111,7 +22113,7 @@ EndChar
 StartChar: afii10105
 Encoding: 1112 1112 882
 Width: 665
-Flags: HMWO
+Flags: HMW
 AnchorPoint: "top_center" 414 1040 basechar 0
 AnchorPoint: "bottom_center" 310 -360 basechar 0
 LayerCount: 4
