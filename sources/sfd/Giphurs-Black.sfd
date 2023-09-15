@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1694723342
+ModificationTime: 1694775080
 PfmFamily: 33
 TTFWeight: 900
 TTFWidth: 5
@@ -327,7 +327,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 65816 19 14
+WinInfo: 304 19 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -5087,16 +5087,16 @@ SplineSet
  1018 -440 l 1
  1018 1439 l 1
  866 1439 l 1
-505 1440 m 1
+506 1440 m 5
  506 -440 l 1
  658 -440 l 1
  658 1440 l 1
  577 1440 l 1
- 505 1440 l 1
-100 1058 m 4
+ 506 1440 l 5
+100 1058 m 0
  100 788 297 616 567 616 c 0
  567 1500 l 0
- 297 1500 100 1328 100 1058 c 4
+ 297 1500 100 1328 100 1058 c 0
 EndSplineSet
 Colour: ff00
 EndChar
@@ -10721,33 +10721,33 @@ EndChar
 
 StartChar: uni01BC
 Encoding: 444 444 425
-Width: 1426
+Width: 1425
 VWidth: 1000
-Flags: HMW
+Flags: HMWO
 LayerCount: 4
 Fore
 SplineSet
-569 615 m 1
- 375 678 l 1
- 457 829 556 1012 779 1012 c 0
- 1128 1012 1356 802 1356 491 c 0
- 1356 180 1128 -30 778 -30 c 0
- 483 -30 229 91 186 361 c 1
- 559 461 l 0
- 559 361 628 306 778 306 c 0
- 899 306 976 371 976 491 c 0
- 976 611 879 676 759 676 c 0
- 705 676 612 668 569 615 c 1
-342.336914062 1412 m 5
- 695.995117188 1412 l 1
- 588 678 l 1
- 375 678 l 1
- 244 720 l 1
- 342.336914062 1412 l 5
+568 615 m 1
+ 374 678 l 1
+ 456 829 555 1012 778 1012 c 0
+ 1127 1012 1355 802 1355 491 c 0
+ 1355 180 1127 -30 777 -30 c 0
+ 482 -30 228 91 185 361 c 1
+ 558 461 l 0
+ 558 361 627 306 777 306 c 0
+ 898 306 975 371 975 491 c 0
+ 975 611 878 676 758 676 c 0
+ 704 676 611 668 568 615 c 1
+341.336914062 1412 m 1
+ 694.995117188 1412 l 1
+ 587 678 l 1
+ 374 678 l 1
+ 243 720 l 1
+ 341.336914062 1412 l 1
 35 1144 m 1
- 36 1480 l 1
- 1284 1480 l 1
- 1284 1144 l 1
+ 35 1480 l 1
+ 1283 1480 l 1
+ 1283 1144 l 1
  35 1144 l 1
 EndSplineSet
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni01BD.sc
@@ -29597,7 +29597,7 @@ Width: 1327
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 229 775 N 1 0 0 1 20 720 2
+Refer: 229 775 S 1 0 0 1 20 570 2
 Refer: 293 352 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1E67.sc
 Colour: 80bfff
@@ -31506,7 +31506,7 @@ Width: 1530
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 86 771 S 1 0 0 1 156 623 2
+Refer: 86 771 S 1 0 0 1 136 623 2
 Refer: 232 258 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EB5.sc
 Colour: 80ff
@@ -34757,16 +34757,16 @@ SplineSet
  300 -440 l 1
  300 1439 l 1
  452 1439 l 1
-813 1440 m 1
+812 1440 m 5
  812 -440 l 1
  660 -440 l 1
  660 1440 l 1
  741 1440 l 1
- 813 1440 l 1
-1218 1058 m 4
+ 812 1440 l 5
+1218 1058 m 0
  1218 788 1021 616 751 616 c 0
  751 1500 l 0
- 1021 1500 1218 1328 1218 1058 c 4
+ 1021 1500 1218 1328 1218 1058 c 0
 EndSplineSet
 Colour: ff00
 EndChar
