@@ -1,5 +1,8 @@
-# calt
+# classes
+@CombiningTopAccents = [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0357 uni0483 uni0484 uni0485 uni0486 uni0487];
+@CombiningBottomAccents = [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E uni0330 uni0331];
 
+# calt
 lookup centeredglyphs {
     sub [asterisk]' by [asterisk.centered];
     sub [colon]' by [colon.centered];

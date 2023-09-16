@@ -1,46 +1,46 @@
 # ccmp
-
-lookup ccmpsoftdottedilookup1 {
+lookup ccmpsoftdottedlookup1 {
     # i with a dot above it
-    sub [i]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343] by [dotlessi];
+    sub [i afii10103]' @CombiningTopAccents by [dotlessi dotlessi];
     # i with something below and a dot above it
-    sub [i]' [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E  uni0330 uni0331] [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] by [dotlessi];
-    sub [i]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E  uni0330 uni0331] by [dotlessi];
-    # j with a dot above it 
-    sub [j]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343] by [uni0237];
-    # j with something below and a dot above it
-    sub [j]' [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E uni0330 uni0331] [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] by [uni0237];
-    sub [j]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E uni0330 uni0331] by [uni0237];
+    sub [i afii10103]' @CombiningBottomAccents @CombiningTopAccents by [dotlessi dotlessi];
     # i stroke with a dot above it
-    sub [uni0268]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343] by [dotlessuni0268];
+    sub [uni0268]' @CombiningTopAccents by [dotlessuni0268];
     # i stroke with something below and a dot above it
-    sub [uni0268]' [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E uni0330 uni0331] [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] by [dotlessuni0268];
-    sub [uni0268]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E  uni0330 uni0331] by [dotlessuni0268];
-    # j stroke with a dot above it
-    sub [uni0249]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343] by [uni025F];
-    # j stroke with something below and a dot above it
-    sub [uni0249]' [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E uni0330 uni0331] [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] by [uni025F];
-    sub [uni0249]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E  uni0330 uni0331] by [uni025F];
-    # i ogonek
-    sub [iogonek]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] by i uni0328;
+    sub [uni0268]' @CombiningBottomAccents @CombiningTopAccents by [dotlessuni0268];
+    # i with horn a dot above it
+    sub [i afii10103]' uni031B @CombiningTopAccents by [dotlessi dotlessi];
+    # i with horn and something below and a dot above it
+    sub [i afii10103]' uni031B @CombiningBottomAccents @CombiningTopAccents by [dotlessi dotlessi];
+    # i ogonek wih something above it
+    sub [iogonek]' @CombiningTopAccents by i uni0328;
     # i tilde below
-    sub [uni1E2D]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] by i uni0330;
+    sub [uni1E2D]' @CombiningTopAccents by i uni0330;
     # i dot below
-    sub [uni1ECB]' [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0345] by i dotbelowcomb;
-} ccmpsoftdottedilookup1;
+    sub [uni1ECB]' @CombiningTopAccents by i dotbelowcomb;
+    # j with a dot above it 
+    sub [j uni03F3 afii10105]' @CombiningTopAccents by [uni0237 uni0237 uni0237];
+    # j with something below and a dot above it
+    sub [j uni03F3 afii10105]' @CombiningBottomAccents @CombiningTopAccents by [uni0237 uni0237 uni0237];
+    # j stroke with a dot above it
+    sub [uni0249]' @CombiningTopAccents by [uni025F];
+    # j stroke with something below and a dot above it
+    sub [uni0249]' @CombiningBottomAccents @CombiningTopAccents by [uni025F];
+
+} ccmpsoftdottedlookup1;
 
 feature ccmp {
  script DFLT;
      language dflt ;
-      lookup ccmpsoftdottedilookup1;
+      lookup ccmpsoftdottedlookup1;
 
  script latn;
      language dflt ;
-      lookup ccmpsoftdottedilookup1;
+      lookup ccmpsoftdottedlookup1;
      language CAT  exclude_dflt;
-      lookup ccmpsoftdottedilookup1;
+      lookup ccmpsoftdottedlookup1;
      language MOL  exclude_dflt;
-      lookup ccmpsoftdottedilookup1;
+      lookup ccmpsoftdottedlookup1;
      language ROM  exclude_dflt;
-      lookup ccmpsoftdottedilookup1;
+      lookup ccmpsoftdottedlookup1;
 } ccmp;
