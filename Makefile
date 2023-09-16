@@ -1,5 +1,5 @@
 # remove the "0" in the first echo when version is 1.000 or above
-font_version := $(shell echo "0"$(shell echo "scale=3;"$(shell fc-query -f '%{fontversion}\n' fonts/otf/Giphurs-Regular.otf)"/65536" | bc))
+font_version := $(shell echo "0"$(shell echo "scale=3;("$(shell echo $(shell fc-query -f '%{fontversion}\n' fonts/otf/Giphurs-Regular.otf)"+16" | bc)"/65536)" | bc))
 
 # documentaton
 help:
@@ -28,3 +28,4 @@ clean:
 	rm -rf sources/ufo/
 	rm -f sources/-backup*
 	rm -f sources/.fuse_hidden*
+	rm -f *.zip
