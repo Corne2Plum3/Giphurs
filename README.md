@@ -4,6 +4,9 @@ Your average Arial/Helvetica/Circular on budget, made with [Fontforge](https://f
 
 ![It was supposed to be a preview here](documentation/quick_preview_v2.png)
 
+## About this branch
+
+**This branch is experimental, as I'm making the weights between 100 and 400 in this branch, instead of master, so in the master branch there's a "stable" version, with a fully working font, while the fonts built in this branch may be not working or incomplete.**
 
 ## Status of the project
 
