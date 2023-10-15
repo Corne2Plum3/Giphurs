@@ -23,7 +23,7 @@ do
     python3 sfd_cleanup.py $SFD_DIR$sfd_file $sfd_temp
 
     # Convert to UFO
-    ufo_file="ufo/"${sfd_file%.*}
+    ufo_file="ufo/"${sfd_file%.*}".ufo"
     python3 -m sfdLib --ufo-kerning --ufo-anchors $sfd_temp $ufo_file
 
     # Apply some modifications to the UFO
