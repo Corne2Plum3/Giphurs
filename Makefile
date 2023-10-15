@@ -11,7 +11,7 @@ help:
 
 # make a zip archive of the font folder, used to export fonts
 export_fonts:
-	zip -r Giphurs_fonts_v$(font_version).zip fonts/
+	zip -r Giphurs_fonts_v$(font_version).zip fonts/ OFL.txt
 
 # build the fonts (otf, ttf, woof2, static + variables)
 fonts: ufo
