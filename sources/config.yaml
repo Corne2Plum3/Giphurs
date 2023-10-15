@@ -14,6 +14,12 @@ stat:
   - name: Weight
     tag: wght
     values:
+    - name: Thin
+      value: 100
+    - name: SemiLight
+      value: 200
+    - name: Light
+      value: 300
     - name: Regular
       value: 400
       flags: 2
