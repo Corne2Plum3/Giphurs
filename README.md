@@ -2,28 +2,35 @@
 
 Your average Arial/Helvetica/Circular on budget, made with [Fontforge](https://fontforge.org/en-US/).
 
-![It was supposed to be a preview here](documentation/quick_preview_v2.png)
+![It was supposed to be a preview here](documentation/quick_preview_v3.png)
 
+# ⚠️ Important
 
-## Status of the project
+**The weights below 400 (Thin, ExtraLight, Light) aren't fully implemented yet and glyphs that aren't on the list below are either broken or have incorrect weight**
+
+Supported glyphs for weight < 400 (non-complete list):
+
+* ASCII glyphs: (`U+0020` to `U+00FF`)
+* Numeric fractions (`U+2150` to `U+215F`)
+* Circled numbers and letters (`U+2460` to `U+24FF` and `U+2776` to `U+277F`)
+
+# Status of the project
 
 This project **isn't complete and is under developpement**. Things may change at any time.
-
-# IMPORTANT
 
 The end goal is to upload this font on [Google Fonts](https://fonts.google.com/).
 
 I'm aware that there's already some issues, for example the font version being invalid for Google Fonts, but while I don't have a finished version, the version will be still under 1.0, it's intended.
 
-## TODO list
+# TODO list
 
-* Finish weight 900 glyphs in the `sfd` sources.
-* Add `sfd` files for weight 100.
+* Implement weight 100 (Thin).
 * Add italic.
 * Fix other small problems that [Font Bakery](https://github.com/googlefonts/fontbakery) complains about.
 * Improve font documentation (if it even exists).
 * Add better pictures of the font and better description.
 
+Real list is here: https://github.com/users/Corne2Plum3/projects/2
 
 # Download
 

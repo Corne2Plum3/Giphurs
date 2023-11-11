@@ -38,4 +38,4 @@ done
 # sucess message
 COMPILATION_END_TIME=$(date +%s)  # when the compilation finished
 COMPILATION_DURATION=$(($COMPILATION_END_TIME-$COMPILATION_START_TIME))
-echo -e "\x1b[0;32mAll sources has been generated succesfully in "$COMPILATION_DURATION" second(s) ^^\x1b[0;0m"
+echo -e "\x1b[1;32mAll ufo sources has been generated succesfully in "$COMPILATION_DURATION" second(s) ^^\x1b[0;0m"
