@@ -332,7 +332,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 9405 9 3
+WinInfo: 8307 9 3
 BeginPrivate: 5
 BlueValues 27 [-20 0 1040 1060 1480 1500]
 StemSnapV 13 [120 160 168]
@@ -4989,7 +4989,7 @@ EndChar
 StartChar: ordmasculine
 Encoding: 186 186 181
 Width: 868
-Flags: HMW
+Flags: HMWO
 LayerCount: 4
 Fore
 SplineSet
@@ -5319,11 +5319,11 @@ SplineSet
  552 622 l 1
  417 622 l 1
  417 1201 l 1
-700 98 m 1
+700 98 m 5
  592 160 l 1
- 1300 1382 l 5
- 1408 1320 l 5
- 700 98 l 1
+ 1300 1382 l 1
+ 1408 1320 l 1
+ 700 98 l 5
 EndSplineSet
 Substitution2: "'ss09' Bar below digit 1-1" onehalf.ss09
 Colour: ff8000
@@ -55958,7 +55958,7 @@ EndChar
 StartChar: uni24D6
 Encoding: 9430 9430 2124
 Width: 1720
-Flags: HMWO
+Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
