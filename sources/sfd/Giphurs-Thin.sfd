@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1708949863
+ModificationTime: 1708950734
 PfmFamily: 33
 TTFWeight: 100
 TTFWidth: 5
@@ -332,7 +332,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 936 18 5
+WinInfo: 918 18 5
 BeginPrivate: 5
 BlueValues 27 [-10 0 1040 1050 1480 1490]
 StemSnapV 10 [30 40 42]
@@ -18248,7 +18248,7 @@ StartChar: xi
 Encoding: 958 958 722
 Width: 1028
 VWidth: 1000
-Flags: HMWO
+Flags: HMW
 AnchorPoint: "bottom_center" 573 0 basechar 0
 AnchorPoint: "top_center" 573 1380 basechar 0
 LayerCount: 4
@@ -18361,17 +18361,17 @@ EndChar
 StartChar: pi
 Encoding: 960 960 725
 Width: 1094
-Flags: HMW
+Flags: HMWO
 AnchorPoint: "bottom_center" 521 0 basechar 0
 AnchorPoint: "top_center" 521 1040 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-292 1000 m 5
+292 1000 m 1
  337 1000 l 1
- 337 450 258 0 258 0 c 1
- 213 0 l 1
- 213 0 292 450 292 1000 c 5
+ 338 0 l 1
+ 293 0 l 1
+ 292 1000 l 1
 749 1020 m 1
  749 230 l 2
  749 40 888 30 941 30 c 0
