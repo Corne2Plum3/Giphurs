@@ -15,7 +15,7 @@ Supported glyphs for weight < 400 (non-complete list):
 * ASCII glyphs: (`U+0020` to `U+00FF`)
 * Some latin additional glyphs (`U+0100` to `U+02FF`)
 * Combining accents and diacritics  (`U+0300` to `U+0369`)
-* Basic greek, coptic and cyrillic  (`U+0300` to `U+052F`)
+* Basic greek, coptic and cyrillic  (`U+0370` to `U+052F`)
 * Numeric fractions (`U+2150` to `U+215F`)
 * Circled numbers and letters (`U+2460` to `U+24FF` and `U+2776` to `U+277F`)
 
