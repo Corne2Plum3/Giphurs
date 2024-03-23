@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1711218182
+ModificationTime: 1711222745
 PfmFamily: 33
 TTFWeight: 900
 TTFWidth: 5
@@ -329,7 +329,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 7999 19 14
+WinInfo: 910 13 5
 BeginPrivate: 5
 BlueValues 27 [-30 0 1040 1070 1480 1510]
 StemSnapV 13 [240 320 336]
@@ -17317,16 +17317,18 @@ Encoding: 900 900 702
 Width: 652
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "dieresis_center" 213 1140 mark 0
-AnchorPoint: "top_center" 213 1040 mark 0
+AnchorPoint: "dieresis_center" 223 1140 mark 0
+AnchorPoint: "top_left_O2" 617 1224 mark 0
+AnchorPoint: "top_left" 649 1480 mark 0
+AnchorPoint: "top_center_1F" 223 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-391 1224 m 5
- 35 1224 l 1
- 213 1480 l 1
+391 1224 m 1
  617 1480 l 1
- 391 1224 l 5
+ 213 1480 l 1
+ 35 1224 l 1
+ 391 1224 l 1
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -17361,124 +17363,49 @@ EndChar
 
 StartChar: Alphatonos
 Encoding: 902 902 704
-Width: 1646
+Width: 1617
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "bottom_ypogegrammeni" 885 -90 basechar 0
-AnchorPoint: "top_left" 643 1480 basechar 0
-AnchorPoint: "bottom_center" 885 0 basechar 0
-AnchorPoint: "top_center" 885 1380 basechar 0
-AnchorPoint: "bottom_right" 1611 0 basechar 0
 LayerCount: 4
 Fore
-SplineSet
-432 688 m 1
- 1303 688 l 1
- 1303 352 l 1
- 432 352 l 1
- 432 688 l 1
-885 1080 m 1
- 543 0 l 1
- 151 0 l 1
- 643 1480 l 1
- 1119 1480 l 1
- 1611 0 l 1
- 1219 0 l 1
- 885 1080 l 1
-EndSplineSet
-Refer: 702 900 S 1 0 0 1 -35 0 2
+Refer: 702 900 N 1 0 0 1 -35 0 2
+Refer: 675 913 S 1 0 0 1 87 0 2
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" alphatonos.sc
 Colour: ffff
 EndChar
 
 StartChar: Epsilontonos
 Encoding: 904 904 705
-Width: 1827
+Width: 1798
 Flags: HMW
-AnchorPoint: "bottom_cedilla" 1200 -20 basechar 0
-AnchorPoint: "top_left" 643 1480 basechar 0
-AnchorPoint: "bottom_right" 1757 0 basechar 0
-AnchorPoint: "bottom_center" 1200 0 basechar 0
-AnchorPoint: "top_center" 1200 1380 basechar 0
 LayerCount: 4
 Fore
-SplineSet
-1643 908 m 17
- 1643 572 l 9
- 1023 572 l 17
- 1023 336 l 1
- 1757 336 l 1
- 1757 0 l 1
- 643 0 l 25
- 643 1480 l 1
- 1757 1480 l 17
- 1757 1144 l 1
- 1023 1144 l 1
- 1023 908 l 9
- 1643 908 l 17
-EndSplineSet
-Refer: 702 900 S 1 0 0 1 -35 0 2
+Refer: 702 900 N 1 0 0 1 -35 0 2
+Refer: 676 917 S 1 0 0 1 544 0 2
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" epsilontonos.sc
 Colour: ffff
 EndChar
 
 StartChar: Etatonos
 Encoding: 905 905 706
-Width: 2055
+Width: 2026
 Flags: HMW
-AnchorPoint: "top_center" 1316 1362 basechar 0
-AnchorPoint: "bottom_center" 1316 -18 basechar 0
-AnchorPoint: "top_left" 643 1480 basechar 0
-AnchorPoint: "bottom_cedilla" 833 -38 basechar 0
-AnchorPoint: "bottom_ypogegrammeni" 1316 -108 basechar 0
 LayerCount: 4
 Fore
-SplineSet
-643 1480 m 25
- 1023 1480 l 25
- 1023 908 l 25
- 1605 908 l 25
- 1605 1480 l 25
- 1985 1480 l 25
- 1985 0 l 25
- 1605 0 l 25
- 1605 572 l 25
- 1023 572 l 25
- 1023 0 l 25
- 643 0 l 25
- 643 1480 l 25
-EndSplineSet
-Refer: 702 900 S 1 0 0 1 -35 0 2
+Refer: 702 900 N 1 0 0 1 -35 0 2
+Refer: 678 919 S 1 0 0 1 544 0 2
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" etatonos.sc
 Colour: ffff
 EndChar
 
 StartChar: Iotatonos
 Encoding: 906 906 707
-Width: 1497
+Width: 1468
 Flags: HMW
-AnchorPoint: "top_center" 1035 1380 basechar 0
-AnchorPoint: "bottom_center" 1035 0 basechar 0
-AnchorPoint: "bottom_right" 1225 0 basechar 0
-AnchorPoint: "top_left" 643 1480 basechar 0
 LayerCount: 4
 Fore
-SplineSet
-643 1480 m 25
- 1427 1480 l 25
- 1427 1144 l 25
- 1225 1144 l 25
- 1225 336 l 25
- 1427 336 l 25
- 1427 0 l 25
- 643 0 l 25
- 643 336 l 25
- 845 336 l 25
- 845 1144 l 25
- 643 1144 l 25
- 643 1480 l 25
-EndSplineSet
-Refer: 702 900 S 1 0 0 1 -35 0 2
+Refer: 702 900 N 1 0 0 1 -35 0 2
+Refer: 679 921 S 1 0 0 1 544 0 2
 Substitution2: "'ss03' Simplified G and I lookups0-1" Iotatonos.ss03
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" iotatonos.sc
 Colour: ffff
@@ -17486,97 +17413,37 @@ EndChar
 
 StartChar: Omicrontonos
 Encoding: 908 908 708
-Width: 2033
+Width: 2003
 Flags: HMW
-AnchorPoint: "top_center" 1223 1380 basechar 0
-AnchorPoint: "top_right" 1837 1480 basechar 0
-AnchorPoint: "bottom_center" 1240 -23 basechar 0
-AnchorPoint: "bottom_right" 1472 -23 basechar 0
 LayerCount: 4
 Fore
-SplineSet
-843 740 m 0
- 843 490 973 306 1223 306 c 0
- 1473 306 1603 490 1603 740 c 0
- 1603 990 1473 1174 1223 1174 c 0
- 973 1174 843 990 843 740 c 0
-463 740 m 0
- 463 1190 763 1510 1223 1510 c 0
- 1683 1510 1983 1190 1983 740 c 0
- 1983 290 1683 -30 1223 -30 c 0
- 763 -30 463 290 463 740 c 0
-EndSplineSet
 Refer: 702 900 N 1 0 0 1 -35 0 2
+Refer: 683 927 N 1 0 0 1 383 0 2
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" omicrontonos.sc
 Colour: ffff
 EndChar
 
 StartChar: Upsilontonos
 Encoding: 910 910 709
-Width: 2159
+Width: 2115
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "top_center" 1358 1380 basechar 0
-AnchorPoint: "bottom_center" 1358 0 basechar 0
-AnchorPoint: "top_left" 643 1480 basechar 0
 LayerCount: 4
 Fore
-SplineSet
-1168 0 m 25
- 1168 834 l 25
- 1548 834 l 25
- 1548 0 l 25
- 1168 0 l 25
-1361 426 m 1
- 1252 578 l 1
- 607 1480 l 5
- 1035 1480 l 1
- 1358 988 l 1
- 1681 1480 l 1
- 2109 1480 l 1
- 1361 426 l 1
-EndSplineSet
-Refer: 702 900 S 1 0 0 1 -35 0 2
+Refer: 702 900 N 1 0 0 1 -35 0 2
+Refer: 686 933 S 1 0 0 1 543 0 2
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" upsilontonos.sc
 Colour: ffff
 EndChar
 
 StartChar: Omegatonos
 Encoding: 911 911 710
-Width: 2053
+Width: 2003
 Flags: HMW
-AnchorPoint: "bottom_ypogegrammeni" 1240 -80 basechar 0
-AnchorPoint: "bottom_center" 1240 -23 basechar 0
-AnchorPoint: "top_center" 1223 1380 basechar 0
 LayerCount: 4
 Fore
-SplineSet
-463 0 m 1
- 1064 0 l 1
- 1064 336 l 1
- 463 336 l 1
- 463 0 l 1
-1983 0 m 1
- 1983 336 l 1
- 1382 336 l 1
- 1382 0 l 1
- 1983 0 l 1
-463 740 m 0
- 463 588 517 451 600 336 c 1
- 1064 336 l 1
- 918 398 843 550 843 740 c 0
- 843 990 973 1174 1223 1174 c 0
- 1223 1510 l 0
- 763 1510 463 1190 463 740 c 0
-1983 740 m 0
- 1983 1190 1683 1510 1223 1510 c 0
- 1223 1174 l 0
- 1473 1174 1603 990 1603 740 c 0
- 1603 550 1528 398 1382 336 c 1
- 1846 336 l 1
- 1929 451 1983 588 1983 740 c 0
-EndSplineSet
 Refer: 702 900 N 1 0 0 1 -35 0 2
+Refer: 698 937 S 1 0 0 1 383 0 2
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" omegatonos.sc
 Colour: ffff
 EndChar
@@ -18331,7 +18198,7 @@ Width: 1528
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 702 900 N 1 0 0 1 482.5 0 2
+Refer: 702 900 N 1 0 0 1 472 0 2
 Refer: 711 945 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" alphatonos.sc
 Colour: ff
@@ -18343,7 +18210,7 @@ Width: 1064
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 702 900 N 1 0 0 1 326 0 2
+Refer: 702 900 N 1 0 0 1 316 0 2
 Refer: 715 949 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" epsilontonos.sc
 Colour: ff
@@ -18356,7 +18223,7 @@ Flags: HMW
 AnchorPoint: "bottom_ypogegrammeni" 296 -90 basechar 0
 LayerCount: 4
 Fore
-Refer: 702 900 N 1 0 0 1 383 0 2
+Refer: 702 900 N 1 0 0 1 373 0 2
 Refer: 716 951 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" etatonos.sc
 Colour: ff
@@ -18368,7 +18235,7 @@ Width: 665
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 702 900 N 1 0 0 1 37 0 2
+Refer: 702 900 N 1 0 0 1 27 0 2
 Refer: 718 953 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" iotatonos.sc
 Colour: ff
@@ -18416,7 +18283,7 @@ Width: 1200
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 702 900 N 1 0 0 1 387 0 2
+Refer: 702 900 N 1 0 0 1 377 0 2
 Refer: 2462 959 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" omicrontonos.sc
 Colour: ff
@@ -18428,7 +18295,7 @@ Width: 1172
 Flags: HMW
 LayerCount: 4
 Fore
-Refer: 702 900 N 1 0 0 1 323 0 2
+Refer: 702 900 N 1 0 0 1 313 0 2
 Refer: 730 965 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" upsilontonos.sc
 Colour: ff
@@ -18441,7 +18308,7 @@ Flags: HMW
 AnchorPoint: "bottom_ypogegrammeni" 836 -90 basechar 0
 LayerCount: 4
 Fore
-Refer: 702 900 N 1 0 0 1 589 0 2
+Refer: 702 900 N 1 0 0 1 579 0 2
 Refer: 606 969 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" omegatonos.sc
 Colour: ff
@@ -18556,12 +18423,13 @@ Encoding: 978 978 748
 Width: 1588
 VWidth: 1000
 Flags: HMW
+AnchorPoint: "top_left" 71 1480 basechar 0
 AnchorPoint: "bottom_center" 786 0 basechar 0
 AnchorPoint: "top_center" 786 1400 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-976 709.275390625 m 5
+976 709.275390625 m 1
  976 0 l 1
  596 0 l 1
  596 695.469726562 l 1
@@ -18576,40 +18444,21 @@ SplineSet
  1418 1143 1408 1152 1397 1158 c 0
  1382 1167 1367 1170 1352 1170 c 0
  1324 1170 1300 1152 1282 1127 c 2
- 976 709.275390625 l 5
+ 976 709.275390625 l 1
 EndSplineSet
 Colour: ffff
 EndChar
 
 StartChar: uni03D3
 Encoding: 979 979 749
-Width: 2160
+Width: 2131
 VWidth: 1000
-Flags: HMW
-AnchorPoint: "bottom_center" 1358 0 basechar 0
-AnchorPoint: "top_center" 1358 1400 basechar 0
+Flags: HMWO
 LayerCount: 4
 Fore
-SplineSet
-1548 709.275390625 m 1
- 1548 0 l 1
- 1168 0 l 1
- 1168 695.469726562 l 1
- 607 1480 l 1
- 1035 1480 l 1
- 1358 988 l 1
- 1575 1317 l 6
- 1655 1434 1737 1510 1863 1510 c 4
- 1951 1510 2044 1484 2129 1435 c 4
- 2139 1429 2150 1423 2160 1416 c 5
- 1997 1133 l 5
- 1990 1143 1980 1152 1969 1158 c 4
- 1954 1167 1939 1170 1924 1170 c 4
- 1896 1170 1872 1152 1854 1127 c 6
- 1548 709.275390625 l 1
-EndSplineSet
 Refer: 702 900 N 1 0 0 1 -35 0 2
-Colour: ffff
+Refer: 748 978 S 1 0 0 1 543 0 2
+Colour: 80ff
 EndChar
 
 StartChar: uni03D4
@@ -62699,7 +62548,7 @@ EndChar
 StartChar: uni1FC8
 Encoding: 8136 8136 2409
 Width: 1865
-Flags: HMWO
+Flags: HMW
 LayerCount: 4
 Fore
 Refer: 2447 8175 N 1 0 0 1 -35 0 2

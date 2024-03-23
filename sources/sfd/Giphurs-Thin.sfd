@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1711220504
+ModificationTime: 1711222762
 PfmFamily: 33
 TTFWeight: 100
 TTFWidth: 5
@@ -332,7 +332,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 963 9 5
+WinInfo: 924 12 5
 BeginPrivate: 5
 BlueValues 27 [-10 0 1040 1050 1480 1490]
 StemSnapV 10 [30 40 42]
@@ -17657,17 +17657,19 @@ StartChar: tonos
 Encoding: 900 900 702
 Width: 482
 VWidth: 1000
-Flags: HMW
+Flags: HMWO
+AnchorPoint: "top_left" 549 1480 mark 0
+AnchorPoint: "top_left_O2" 372 1224 mark 0
 AnchorPoint: "dieresis_center" 142 1140 mark 0
-AnchorPoint: "top_center" 142 1040 mark 0
+AnchorPoint: "top_center_1F" 142 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-164 1224 m 5
- 120 1224 l 5
- 306 1480 l 5
- 362 1480 l 5
- 164 1224 l 5
+164 1224 m 1
+ 120 1224 l 1
+ 306 1480 l 1
+ 362 1480 l 1
+ 164 1224 l 1
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -17705,221 +17707,86 @@ Encoding: 902 902 704
 Width: 1310
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "bottom_center" 655 0 basechar 0
-AnchorPoint: "top_center" 655 1380 basechar 0
-AnchorPoint: "bottom_ypogegrammeni" 655 -90 basechar 0
-AnchorPoint: "bottom_right" 1190 0 basechar 0
-AnchorPoint: "top_left" 540 1480 basechar 0
 LayerCount: 4
 Fore
-SplineSet
-331 541 m 5
- 987 541 l 5
- 987 499 l 5
- 331 499 l 5
- 331 541 l 5
-656 1408 m 5
- 169 0 l 5
- 120 0 l 5
- 630 1480 l 5
- 680 1480 l 5
- 1190 0 l 5
- 1141 0 l 5
- 656 1408 l 5
-EndSplineSet
-Refer: 702 900 N 1 0 0 1 102 0 2
+Refer: 702 900 N 1 0 0 1 -9 0 2
+Refer: 675 913 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" alphatonos.sc
-Colour: ffff
+Colour: ff
 EndChar
 
 StartChar: Epsilontonos
 Encoding: 904 904 705
-Width: 1314
+Width: 1425
 Flags: HMW
-AnchorPoint: "top_center" 726 1380 basechar 0
-AnchorPoint: "bottom_center" 726 0 basechar 0
-AnchorPoint: "bottom_right" 1134 0 basechar 0
-AnchorPoint: "top_left" 318 1480 basechar 0
-AnchorPoint: "bottom_cedilla" 726 -20 basechar 0
 LayerCount: 4
 Fore
-SplineSet
-1051 761 m 21
- 1051 719 l 13
- 364 719 l 21
- 364 42 l 5
- 1134 42 l 5
- 1134 0 l 5
- 318 0 l 29
- 318 1480 l 5
- 1134 1480 l 21
- 1134 1438 l 5
- 364 1438 l 5
- 364 761 l 13
- 1051 761 l 21
-EndSplineSet
 Refer: 702 900 N 1 0 0 1 -120 0 2
+Refer: 676 917 S 1 0 0 1 249 0 2
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" epsilontonos.sc
-Colour: ffff
+Colour: 80ff
 EndChar
 
 StartChar: Etatonos
 Encoding: 905 905 706
-Width: 1482
+Width: 1593
 Flags: HMW
-AnchorPoint: "top_center" 826 1362 basechar 0
-AnchorPoint: "bottom_center" 826 -18 basechar 0
-AnchorPoint: "top_left" 318 1480 basechar 0
-AnchorPoint: "bottom_cedilla" 341 -38 basechar 0
-AnchorPoint: "bottom_ypogegrammeni" 826 -108 basechar 0
 LayerCount: 4
 Fore
-SplineSet
-318 1480 m 25
- 364 1480 l 25
- 364 761 l 25
- 1256 761 l 25
- 1256 1480 l 25
- 1302 1480 l 25
- 1302 0 l 25
- 1256 0 l 25
- 1256 719 l 25
- 364 719 l 25
- 364 0 l 25
- 318 0 l 25
- 318 1480 l 25
-EndSplineSet
 Refer: 702 900 N 1 0 0 1 -120 0 2
+Refer: 678 919 S 1 0 0 1 249 0 2
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" etatonos.sc
-Colour: ffff
+Colour: 80ff
 EndChar
 
 StartChar: Iotatonos
 Encoding: 906 906 707
-Width: 960
+Width: 1071
 Flags: HMW
-AnchorPoint: "top_center" 549 1380 basechar 0
-AnchorPoint: "bottom_center" 549 0 basechar 0
-AnchorPoint: "bottom_right" 573 0 basechar 0
-AnchorPoint: "top_left" 318 1480 basechar 0
 LayerCount: 4
 Fore
-SplineSet
-318 1480 m 29
- 780 1480 l 29
- 780 1438 l 29
- 573 1438 l 29
- 573 42 l 29
- 780 42 l 29
- 780 0 l 29
- 318 0 l 29
- 318 42 l 29
- 525 42 l 29
- 525 1438 l 29
- 318 1438 l 29
- 318 1480 l 29
-EndSplineSet
 Refer: 702 900 N 1 0 0 1 -120 0 2
+Refer: 679 921 S 1 0 0 1 249 0 2
 Substitution2: "'ss03' Simplified G and I lookups0-1" Iotatonos.ss03
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" iotatonos.sc
-Colour: ffff
+Colour: 80ff
 EndChar
 
 StartChar: Omicrontonos
 Encoding: 908 908 708
-Width: 1430
+Width: 1514
 Flags: HMW
-AnchorPoint: "top_center" 673 1380 basechar 0
-AnchorPoint: "top_right" 1183 1480 basechar 0
-AnchorPoint: "bottom_center" 673 0 basechar 0
-AnchorPoint: "bottom_right" 779 0 basechar 0
 LayerCount: 4
 Fore
-SplineSet
-102 740 m 0
- 102 265 413 32 673 32 c 0
- 933 32 1244 265 1244 740 c 0
- 1244 1215 933 1448 673 1448 c 0
- 413 1448 102 1215 102 740 c 0
-56 740 m 0
- 56 1179 325 1490 673 1490 c 0
- 1021 1490 1290 1179 1290 740 c 0
- 1290 301 1021 -10 673 -10 c 0
- 325 -10 56 301 56 740 c 0
-EndSplineSet
-Refer: 702 900 N 1 0 0 1 -120 0 2
+Refer: 702 900 N 1 0 0 1 -95 0 2
+Refer: 683 927 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" omicrontonos.sc
-Colour: ffff
+Colour: ff
 EndChar
 
 StartChar: Upsilontonos
 Encoding: 910 910 709
-Width: 1540
+Width: 1651
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "top_center" 869 1380 basechar 0
-AnchorPoint: "bottom_center" 869 0 basechar 0
-AnchorPoint: "top_left" 318 1480 basechar 0
 LayerCount: 4
 Fore
-SplineSet
-846 0 m 1
- 846 740 l 1
- 892 740 l 1
- 892 0 l 1
- 846 0 l 1
-883 719 m 1
- 857 716 l 1
- 318 1480 l 1
- 372 1480 l 1
- 869 778 l 1
- 1366 1480 l 1
- 1420 1480 l 1
- 883 719 l 1
-EndSplineSet
 Refer: 702 900 N 1 0 0 1 -120 0 2
+Refer: 686 933 S 1 0 0 1 309 0 2
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" upsilontonos.sc
-Colour: ffff
+Colour: 80ff
 EndChar
 
 StartChar: Omegatonos
 Encoding: 911 911 710
-Width: 1430
+Width: 1514
 Flags: HMW
-AnchorPoint: "bottom_center" 673 0 basechar 0
-AnchorPoint: "top_center" 673 1380 basechar 0
-AnchorPoint: "bottom_ypogegrammeni" 673 -90 basechar 0
 LayerCount: 4
 Fore
-SplineSet
-56 0 m 1
- 578 0 l 1
- 578 42 l 1
- 56 42 l 1
- 56 0 l 1
-1290 0 m 1
- 1290 42 l 1
- 768 42 l 1
- 768 0 l 1
- 1290 0 l 1
-56 740 m 0
- 56 407 211 148 437 42 c 1
- 578 42 l 1
- 343 91 102 322 102 740 c 0
- 102 1215 413 1448 673 1448 c 0
- 673 1490 l 0
- 325 1490 56 1179 56 740 c 0
-1290 740 m 0
- 1290 1179 1021 1490 673 1490 c 0
- 673 1448 l 0
- 933 1448 1244 1215 1244 740 c 0
- 1244 322 1003 91 768 42 c 1
- 909 42 l 1
- 1135 148 1290 407 1290 740 c 0
-EndSplineSet
-Refer: 702 900 N 1 0 0 1 -120 0 2
+Refer: 702 900 N 1 0 0 1 -95 0 2
+Refer: 698 937 N 1 0 0 1 0 0 3
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" omegatonos.sc
-Colour: ffff
+Colour: ff
 EndChar
 
 StartChar: alpha
@@ -18887,12 +18754,13 @@ Encoding: 978 978 748
 Width: 1495
 VWidth: 1000
 Flags: HMW
+AnchorPoint: "top_left" 120 1480 basechar 0
 AnchorPoint: "top_center" 671 1380 basechar 0
 AnchorPoint: "bottom_center" 671 0 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-694 731.743164062 m 5
+694 731.743164062 m 1
  694 0 l 1
  648 0 l 1
  648 731.591796875 l 1
@@ -18907,40 +18775,21 @@ SplineSet
  1472 1405 1469 1407 1466 1409 c 0
  1421 1435 1375 1447 1330 1447 c 0
  1239 1447 1158 1397 1101 1308 c 1
- 694 731.743164062 l 5
+ 694 731.743164062 l 1
 EndSplineSet
 Colour: ffff
 EndChar
 
 StartChar: uni03D3
 Encoding: 979 979 749
-Width: 1692
+Width: 1804
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "bottom_center" 868 0 basechar 0
-AnchorPoint: "top_center" 868 1380 basechar 0
 LayerCount: 4
 Fore
-SplineSet
-891 731.743164062 m 5
- 891 0 l 1
- 845 0 l 1
- 845 731.591796875 l 1
- 317 1480 l 1
- 371 1480 l 1
- 868 778 l 1
- 1259 1330 l 2
- 1328 1432 1418 1488 1523 1488 c 0
- 1576 1488 1631 1474 1683 1444 c 0
- 1686 1442 1689 1440 1692 1437 c 1
- 1672 1402 l 1
- 1669 1405 1666 1407 1663 1409 c 0
- 1618 1435 1572 1447 1527 1447 c 0
- 1436 1447 1355 1397 1298 1308 c 1
- 891 731.743164062 l 5
-EndSplineSet
 Refer: 702 900 N 1 0 0 1 -120 0 2
-Colour: ffff
+Refer: 748 978 S 1 0 0 1 309 0 2
+Colour: 80ff
 EndChar
 
 StartChar: uni03D4
@@ -60766,7 +60615,7 @@ StartChar: uni1FDD
 Encoding: 8157 8157 2272
 Width: 764
 VWidth: 1000
-Flags: HMWO
+Flags: HMW
 AnchorPoint: "top_center_1F" 413 1040 mark 0
 AnchorPoint: "top_left_O2" 847 1224 mark 0
 AnchorPoint: "top_left" 860 1480 mark 0
