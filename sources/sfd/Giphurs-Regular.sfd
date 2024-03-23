@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1711226653
+ModificationTime: 1711230330
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -332,7 +332,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 8264 8 4
+WinInfo: 152 8 5
 BeginPrivate: 5
 BlueValues 27 [-20 0 1040 1060 1480 1500]
 StemSnapV 13 [120 160 168]
@@ -4647,7 +4647,7 @@ StartChar: acute
 Encoding: 180 180 169
 Width: 544
 VWidth: 1000
-Flags: HMW
+Flags: HMWO
 AnchorPoint: "top_left" 577 1480 mark 0
 AnchorPoint: "top_left_O2" 400 1224 mark 0
 AnchorPoint: "dieresis_center" 170 1140 mark 0
@@ -4655,11 +4655,11 @@ AnchorPoint: "top_center" 170 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-248 1224 m 1
- 474 1480 l 1
- 248 1480 l 1
+248 1224 m 5
  70 1224 l 1
- 248 1224 l 1
+ 248 1480 l 1
+ 474 1480 l 1
+ 248 1224 l 5
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -34679,7 +34679,7 @@ EndChar
 StartChar: uni2056
 Encoding: 8278 8278 1478
 Width: 952
-Flags: HMWO
+Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
@@ -34773,14 +34773,14 @@ SplineSet
  812 35 758 -20 686 -20 c 0
  614 -20 560 35 560 107 c 0
 978 740 m 0
- 978 812 1032 869 1104 869 c 4
+ 978 812 1032 869 1104 869 c 0
  1176 869 1230 812 1230 740 c 0
- 1230 668 1176 613 1104 613 c 4
+ 1230 668 1176 613 1104 613 c 0
  1032 613 978 668 978 740 c 0
 140 740 m 0
- 140 812 194 869 266 869 c 4
+ 140 812 194 869 266 869 c 0
  338 869 392 812 392 740 c 0
- 392 668 338 613 266 613 c 4
+ 392 668 338 613 266 613 c 0
  194 613 140 668 140 740 c 0
 EndSplineSet
 Colour: ff00

@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1711229882
+ModificationTime: 1711230599
 PfmFamily: 33
 TTFWeight: 100
 TTFWidth: 5
@@ -16917,7 +16917,7 @@ StartChar: uni0374
 Encoding: 884 884 666
 Width: 482
 VWidth: 1000
-Flags: HMW
+Flags: HMWO
 LayerCount: 4
 Fore
 SplineSet
@@ -17666,9 +17666,9 @@ LayerCount: 4
 Fore
 SplineSet
 164 1224 m 1
- 120 1224 l 1
- 306 1480 l 1
  362 1480 l 1
+ 306 1480 l 1
+ 120 1224 l 1
  164 1224 l 1
 EndSplineSet
 Colour: ffff00
@@ -33660,7 +33660,7 @@ StartChar: quotedblleft
 Encoding: 8220 8220 1430
 Width: 753
 VWidth: 1000
-Flags: HMWO
+Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
@@ -62726,21 +62726,21 @@ AnchorPoint: "top_center" 345 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-323 1436 m 5
- 367 1436 l 5
- 181 1692 l 5
- 125 1692 l 5
- 323 1436 l 5
-440 1352 m 0
- 440 1388 468 1416 504 1416 c 0
- 540 1416 568 1388 568 1352 c 0
- 568 1316 540 1288 504 1288 c 0
- 468 1288 440 1316 440 1352 c 0
-120 1352 m 0
- 120 1388 148 1416 184 1416 c 0
- 220 1416 248 1388 248 1352 c 0
- 248 1316 220 1288 184 1288 c 0
- 148 1288 120 1316 120 1352 c 0
+323 1436 m 1
+ 367 1436 l 1
+ 181 1692 l 1
+ 125 1692 l 1
+ 323 1436 l 1
+248 1352 m 0
+ 248 1388 220 1416 184 1416 c 0
+ 148 1416 120 1388 120 1352 c 0
+ 120 1316 148 1288 184 1288 c 0
+ 220 1288 248 1316 248 1352 c 0
+568 1352 m 0
+ 568 1388 540 1416 504 1416 c 0
+ 468 1416 440 1388 440 1352 c 0
+ 440 1316 468 1288 504 1288 c 0
+ 540 1288 568 1316 568 1352 c 0
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -62950,11 +62950,11 @@ AnchorPoint: "top_center_1F" 142 1040 mark 0
 LayerCount: 4
 Fore
 SplineSet
-164 1224 m 1
- 120 1224 l 1
- 306 1480 l 1
+164 1224 m 5
  362 1480 l 1
- 164 1224 l 1
+ 306 1480 l 1
+ 120 1224 l 1
+ 164 1224 l 5
 EndSplineSet
 Colour: ffff00
 EndChar
