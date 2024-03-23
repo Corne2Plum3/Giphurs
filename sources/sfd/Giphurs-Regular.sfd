@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1711216343
+ModificationTime: 1711220314
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -332,7 +332,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 8092 17 7
+WinInfo: 8163 9 5
 BeginPrivate: 5
 BlueValues 27 [-20 0 1040 1060 1480 1500]
 StemSnapV 13 [120 160 168]
@@ -59721,9 +59721,6 @@ Encoding: 7944 7944 2222
 Width: 1356
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "bottom_center" 678 0 basechar 0
-AnchorPoint: "bottom_right" 1286 0 basechar 0
-AnchorPoint: "top_center" 678 1380 basechar 0
 AnchorPoint: "bottom_ypogegrammeni" 678 -90 basechar 0
 LayerCount: 4
 Fore
@@ -59738,9 +59735,6 @@ Encoding: 7945 7945 2223
 Width: 1356
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "top_center" 678 1380 basechar 0
-AnchorPoint: "bottom_right" 1286 0 basechar 0
-AnchorPoint: "bottom_center" 678 0 basechar 0
 AnchorPoint: "bottom_ypogegrammeni" 678 -90 basechar 0
 LayerCount: 4
 Fore
@@ -59817,7 +59811,7 @@ Fore
 Refer: 2274 8143 N 1 0 0 1 -172 0 2
 Refer: 675 913 N 1 0 0 1 118 0 2
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1F06.sc
-Colour: ff
+Colour: 80ff
 EndChar
 
 StartChar: uni1F0F
@@ -59831,7 +59825,7 @@ Fore
 Refer: 2275 8159 N 1 0 0 1 -172 0 2
 Refer: 675 913 N 1 0 0 1 118 0 2
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1F07.sc
-Colour: ff
+Colour: 80ff
 EndChar
 
 StartChar: uni1F10
@@ -62192,7 +62186,6 @@ StartChar: uni1FC8
 Encoding: 8136 8136 2409
 Width: 1504
 Flags: HM
-AnchorPoint: "bottom_ypogegrammeni" 900 -90 basechar 0
 LayerCount: 4
 Fore
 Refer: 2447 8175 N 1 0 0 1 -70 0 2
@@ -62205,7 +62198,6 @@ StartChar: uni1FCA
 Encoding: 8138 8138 2410
 Width: 1694
 Flags: HM
-AnchorPoint: "bottom_ypogegrammeni" 995 -90 basechar 0
 LayerCount: 4
 Fore
 Refer: 2447 8175 N 1 0 0 1 -70 0 2
@@ -62315,7 +62307,6 @@ StartChar: uni1FDA
 Encoding: 8154 8154 2419
 Width: 1102
 Flags: HMW
-AnchorPoint: "bottom_ypogegrammeni" 699 -90 basechar 0
 LayerCount: 4
 Fore
 Refer: 2447 8175 N 1 0 0 1 -70 0 2
@@ -62329,7 +62320,6 @@ StartChar: uni1FCB
 Encoding: 8139 8139 2420
 Width: 1765
 Flags: HM
-AnchorPoint: "bottom_ypogegrammeni" 1066 -90 basechar 0
 LayerCount: 4
 Fore
 Refer: 2450 8189 N 1 0 0 1 -70 0 2
@@ -62485,7 +62475,7 @@ EndChar
 StartChar: uni1FEC
 Encoding: 8172 8172 2433
 Width: 1444
-Flags: HMO
+Flags: HM
 LayerCount: 4
 Fore
 Refer: 2451 8190 N 1 0 0 1 -70 0 2
@@ -62704,7 +62694,6 @@ StartChar: uni1FDB
 Encoding: 8155 8155 2448
 Width: 1173
 Flags: HMW
-AnchorPoint: "bottom_ypogegrammeni" 770 -90 basechar 0
 LayerCount: 4
 Fore
 Refer: 2450 8189 N 1 0 0 1 -70 0 2
@@ -62718,7 +62707,6 @@ StartChar: uni1FC9
 Encoding: 8137 8137 2449
 Width: 1575
 Flags: HM
-AnchorPoint: "bottom_ypogegrammeni" 971 -90 basechar 0
 LayerCount: 4
 Fore
 Refer: 2450 8189 N 1 0 0 1 -70 0 2
@@ -62731,7 +62719,7 @@ StartChar: uni1FFD
 Encoding: 8189 8189 2450
 Width: 544
 VWidth: 1000
-Flags: HMW
+Flags: HMWO
 AnchorPoint: "top_left" 577 1480 mark 0
 AnchorPoint: "top_left_O2" 400 1224 mark 0
 AnchorPoint: "dieresis_center" 170 1140 mark 0
