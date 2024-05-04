@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1714823360
+ModificationTime: 1714825479
 PfmFamily: 33
 TTFWeight: 900
 TTFWidth: 5
@@ -329,7 +329,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 10127 19 14
+WinInfo: 10127 19 6
 BeginPrivate: 5
 BlueValues 27 [-30 0 1040 1070 1480 1510]
 StemSnapV 13 [240 320 336]
@@ -394,7 +394,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 307200 153600 102400 532480 -1048576 102400 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "top_center_1F"""  "bottom_ypogegrammeni" "'mark' Positionnement de signe lookups1-1" "top_left_O2" "'mark' Positionnement de signe lookups1-1" "top_left_O1" "'mark' Positionnement de signe lookups1-1" "circumflex_right" "'mark' Positionnement de signe lookups1-1" "circumflex_left" "'mark' Positionnement de signe lookups1-1" "bottom_cedilla" "'mark' Positionnement de signe lookups1-1" "top_left" "'mark' Positionnement de signe lookups1-1" "dieresis_center" "'mark' Positionnement de signe lookups1-1" "stack_u0303"""  "top_right" "'mark' Positionnement de signe lookups1-1" "bottom_right" "'mark' Positionnement de signe lookups1-1" "bottom_center" "'mark' Positionnement de signe lookups1-1" "top_center" "'mark' Positionnement de signe lookups1-1" "Top"""  "min_top_1"""  "aaaa""" 
-BeginChars: 67081 4012
+BeginChars: 67081 4013
 
 StartChar: o
 Encoding: 111 111 0
@@ -48304,21 +48304,21 @@ SplineSet
  681 384 l 13
  681 936 l 5
  547 936 l 5
-338 600 m 5
- 890 600 l 5
- 890 720 l 13
- 338 720 l 5
- 338 600 l 5
-614 1054 m 0
- 837 1054 1008 883 1008 660 c 0
- 1008 437 837 266 614 266 c 0
- 391 266 220 437 220 660 c 0
- 220 883 391 1054 614 1054 c 0
-614 1174 m 0
- 324 1174 100 950 100 660 c 0
- 100 370 324 146 614 146 c 0
- 904 146 1128 370 1128 660 c 0
- 1128 950 904 1174 614 1174 c 0
+338 600 m 1
+ 890 600 l 1
+ 890 720 l 9
+ 338 720 l 1
+ 338 600 l 1
+614 1054 m 4
+ 837 1054 1008 883 1008 660 c 4
+ 1008 437 837 266 614 266 c 4
+ 391 266 220 437 220 660 c 4
+ 220 883 391 1054 614 1054 c 4
+614 1174 m 4
+ 324 1174 100 950 100 660 c 4
+ 100 370 324 146 614 146 c 4
+ 904 146 1128 370 1128 660 c 4
+ 1128 950 904 1174 614 1174 c 4
 EndSplineSet
 Comment: "Circle with same thickness than circled number/letters but smaller, with subscript plus sign inside"
 Colour: ff8000
@@ -101198,6 +101198,45 @@ SplineSet
  440 -20 100 320 100 740 c 0
 EndSplineSet
 Colour: ff8000
+EndChar
+
+StartChar: uni27F4
+Encoding: 10228 10228 4012
+Width: 2188
+Flags: HWO
+LayerCount: 4
+Fore
+SplineSet
+804 1014 m 0
+ 1007 1014 1178 863 1178 660 c 0
+ 1178 457 1007 306 804 306 c 0
+ 601 306 450 457 450 660 c 0
+ 450 863 601 1014 804 1014 c 0
+804 1320 m 0
+ 432 1320 144 1032 144 660 c 0
+ 144 288 432 0 804 0 c 0
+ 1176 0 1464 288 1464 660 c 0
+ 1464 1032 1176 1320 804 1320 c 0
+954 344 m 9
+ 954 976 l 1
+ 654 976 l 1
+ 654 344 l 1
+ 954 344 l 9
+2118 704 m 1
+ 1678 1144 l 1
+ 1448 914 l 1
+ 1722 660 l 1
+ 1448 406 l 1
+ 1678 176 l 1
+ 2118 616 l 1
+ 2118 704 l 1
+1970 820 m 1
+ 70 820 l 1
+ 70 500 l 1
+ 1970 500 l 1
+ 1970 820 l 1
+EndSplineSet
+Colour: ff00
 EndChar
 EndChars
 EndSplineFont
