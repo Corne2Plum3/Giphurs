@@ -1,8 +1,11 @@
 *.deb
-.vscode/
+*.ninja
+*.ninja_log
 *.zip
+.vscode/
 misc
 py
+sources/instance_ufos/
 sources/sfd_cleaned/
 sources/sfd_unused/
 sources/ufo/
