@@ -6,18 +6,9 @@ Your average Arial/Helvetica/Circular on budget, made with [Fontforge](https://f
 
 # ⚠️ Important
 
-**The weights below 400 (Thin, ExtraLight, Light) aren't fully implemented yet and glyphs that aren't on the list below are either broken or have incorrect weight.**
+**The weights below 400 (Thin, ExtraLight, Light) aren't fully implemented yet.** As of version 0.9.2 only font features (small caps, glyphs alternates etc.) aren't implemented yet), but if you don't use them it will most likely work correctly.
 
 Note that those weights are only available for versions `0.9.0+` (marked as "pre-releases")
-
-Supported glyphs for weight < 400 (non-complete list):
-
-* ASCII glyphs: (`U+0020` to `U+00FF`)
-* Some latin additional glyphs (`U+0100` to `U+02FF`)
-* Combining accents and diacritics  (`U+0300` to `U+0369`)
-* Basic greek, coptic and cyrillic  (`U+0370` to `U+052F`)
-* Numeric fractions (`U+2150` to `U+215F`)
-* Circled numbers and letters (`U+2460` to `U+24FF` and `U+2776` to `U+277F`)
 
 # Status of the project
 
@@ -40,6 +31,8 @@ Real list is here: https://github.com/users/Corne2Plum3/projects/2
 # Download
 
 Go in [releases](https://github.com/Corne2Plum3/Giphurs/releases) page and pick the latest version. The font is available in the following formats: `otf`, `ttf` and `woff2`.
+
+You also have "SC" versions of the font (currently available for weights 400 and above) which uses small caps.
 
 Note that these are currenly pre-releases, so the font may contain issues and everything can be changed in the future.
 
