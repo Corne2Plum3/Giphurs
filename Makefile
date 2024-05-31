@@ -16,7 +16,7 @@ export_fonts:
 # build the fonts (otf, ttf, woof2, static + variables)
 fonts: ufo
 	d=$$(date +%s) \
-	; cd sources && gftools builder config.yaml \
+	; cd sources && touch Giphurs.designspace && gftools builder config.yaml \
 	&& echo "\033[1;32mFonts build in $$(($$(date +%s)-d)) second(s) UwU\033[0;0m"
 
 # build the ufo files from sfd
