@@ -6,7 +6,7 @@ Your average Arial/Helvetica/Circular on budget, made with [Fontforge](https://f
 
 # ⚠️ Important
 
-**The weights below 400 (Thin, ExtraLight, Light) aren't fully implemented yet.** As of version 0.9.2 only font features (small caps, glyphs alternates etc.) aren't implemented yet), but if you don't use them it will most likely work correctly.
+**The weights below 400 (Thin, ExtraLight, Light) aren't fully implemented yet.** As of version 0.9.3 only small caps aren't implemented yet), but if you don't use them it will most likely work correctly.
 
 Note that those weights are only available for versions `0.9.0+` (marked as "pre-releases")
 
