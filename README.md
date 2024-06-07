@@ -2,6 +2,8 @@
 
 Your average Arial/Helvetica/Circular on budget, made with [Fontforge](https://fontforge.org/en-US/).
 
+*![](documentation/quick_preview_v3.png)
+
 # Status of the project
 
 The font itself works fine, but there's still stuff to do, and things may change at any time.
