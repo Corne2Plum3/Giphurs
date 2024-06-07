@@ -2,17 +2,9 @@
 
 Your average Arial/Helvetica/Circular on budget, made with [Fontforge](https://fontforge.org/en-US/).
 
-![It was supposed to be a preview here](documentation/quick_preview_v3.png)
-
-# ⚠️ Important
-
-**The weights below 400 (Thin, ExtraLight, Light) aren't fully implemented yet.** As of version 0.9.3 only small caps aren't implemented yet), but if you don't use them it will most likely work correctly.
-
-Note that those weights are only available for versions `0.9.0+` (marked as "pre-releases")
-
 # Status of the project
 
-This project **isn't complete and is under development**. Things may change at any time.
+The font itself works fine, but there's still stuff to do, and things may change at any time.
 
 The end goal is to upload this font on [Google Fonts](https://fonts.google.com/).
 
@@ -20,7 +12,6 @@ I'm aware that there's already some issues, for example the font version being i
 
 # TODO list
 
-* Implement weight 100 (Thin).
 * Add italic.
 * Fix other small problems that [Font Bakery](https://github.com/googlefonts/fontbakery) complains about.
 * Improve font documentation (if it even exists).
