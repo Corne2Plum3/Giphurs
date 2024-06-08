@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1717882299
+ModificationTime: 1717883588
 PfmFamily: 33
 TTFWeight: 900
 TTFWidth: 5
@@ -217,7 +217,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 414 18 4
+WinInfo: 7902 18 4
 BeginPrivate: 5
 BlueValues 27 [-30 0 1040 1070 1480 1510]
 StemSnapV 13 [240 320 336]
@@ -10087,7 +10087,7 @@ EndChar
 StartChar: uni01AC
 Encoding: 428 428 409
 Width: 1528
-Flags: HMWO
+Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
@@ -31956,34 +31956,30 @@ EndChar
 
 StartChar: uni1EFE
 Encoding: 7934 7934 1381
-Width: 1418
+Width: 1452
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-755 309 m 0
- 755 96 590 -30 395 -30 c 0
- 200 -30 35 96 35 309 c 0
- 35 522 200 648 395 648 c 0
- 590 648 755 522 755 309 c 0
-305 309 m 0
- 305 255 341 210 395 210 c 0
- 449 210 485 255 485 309 c 0
- 485 363 449 408 395 408 c 0
- 341 408 305 363 305 309 c 0
-824 623 m 1
- 586 340 l 25
- 85 1480 l 1
- 479 1480 l 1
- 824 623 l 1
-989 1480 m 5
- 1383 1480 l 1
- 842 258 l 2
- 772 100 653 -30 395 -30 c 0
- 395 210 l 0
- 487 210 501 325 520 370 c 2
- 989 1480 l 5
+409 210 m 0
+ 500.009765625 210 534.98828125 325.004882812 554 370 c 2
+ 1023 1480 l 1
+ 1417 1480 l 1
+ 876 258 l 2
+ 806 100 667 -29 410 -30 c 0
+ 215 -30 50 106 50 319 c 0
+ 50 532 215 648 410 648 c 0
+ 619 648 l 9
+ 619 408 l 17
+ 410 408 l 0
+ 356 408 320 363 320 309 c 0
+ 320 255 355 210 409 210 c 0
+858 623 m 1
+ 620 340 l 25
+ 119 1480 l 1
+ 513 1480 l 1
+ 858 623 l 1
 EndSplineSet
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" uni1EFF.sc
 Colour: ffff
@@ -31991,34 +31987,29 @@ EndChar
 
 StartChar: uni1EFF
 Encoding: 7935 7935 1382
-Width: 1279
-VWidth: 1000
-Flags: HMW
+Width: 1309
+Flags: HMWO
 LayerCount: 4
 Fore
 SplineSet
-755 -131 m 0
- 755 -344 590 -470 395 -470 c 0
- 200 -470 35 -344 35 -131 c 0
- 35 82 200 208 395 208 c 0
- 590 208 755 82 755 -131 c 0
-305 -131 m 4
- 305 -185 341 -230 395 -230 c 0
- 449 -230 485 -185 485 -131 c 0
- 485 -77 449 -32 395 -32 c 0
- 341 -32 305 -77 305 -131 c 4
-890 1040 m 1
- 1274 1040 l 1
- 919 0 l 1
- 865 -158 l 1
- 783 -384 674 -470 395 -470 c 0
- 395 -230 l 0
- 455 -230 497 -184 524 -44 c 1
+395 -230 m 4
+ 455 -230 487 -184 524 -44 c 5
  536 0 l 1
  170 1040 l 1
  554 1040 l 1
  730 404 l 1
  890 1040 l 1
+ 1274 1040 l 1
+ 919 0 l 1
+ 865 -158 l 1
+ 783 -384 674 -469 395 -470 c 4
+ 200 -470 35 -334 35 -121 c 4
+ 35 92 200 208 395 208 c 4
+ 604 208 l 13
+ 604 -32 l 21
+ 395 -32 l 4
+ 341 -32 305 -77 305 -131 c 4
+ 305 -185 341 -230 395 -230 c 4
 EndSplineSet
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1EFF.sc
 Colour: ff00
@@ -92238,28 +92229,24 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-770 309 m 0
- 770 96 605 -30 410 -30 c 0
- 215 -30 50 96 50 309 c 0
- 50 522 215 648 410 648 c 0
- 605 648 770 522 770 309 c 0
-320 299 m 0
- 320 245 356 210 410 210 c 0
- 464 210 500 255 500 309 c 0
- 500 363 464 408 410 408 c 0
- 356 408 320 353 320 299 c 0
+410 408 m 0
+ 356 408 320 363 320 309 c 0
+ 320 255 356 210 410 210 c 0
+ 484 210 545 317 566 366 c 2
+ 917 1200 l 1
+ 1295 1200 l 1
+ 895 296 l 2
+ 773 22 564 -29 410 -30 c 0
+ 215 -30 50 106 50 319 c 0
+ 50 532 215 648 410 648 c 0
+ 639 648 l 13
+ 639 408 l 21
+ 410 408 l 0
 857 476 m 1
  618 245 l 1
  170 1200 l 1
  548 1200 l 1
  857 476 l 1
-895 296 m 2
- 773 22 564 -30 410 -30 c 0
- 410 210 l 4
- 484 210 545 317 566 366 c 2
- 917 1200 l 1
- 1295 1200 l 1
- 895 296 l 2
 EndSplineSet
 Colour: ff00
 EndChar
