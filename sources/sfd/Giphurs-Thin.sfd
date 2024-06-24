@@ -24,7 +24,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1655845567
-ModificationTime: 1717883751
+ModificationTime: 1719166419
 PfmFamily: 33
 TTFWeight: 100
 TTFWidth: 5
@@ -90,7 +90,7 @@ Lookup: 1 0 0 "'pnum' Proportional Numbers" { "'pnum' Proportional Numbers looku
 Lookup: 1 0 0 "'tnum' Tabular Numbers" { "'tnum' Tabular Numbers lookups0-1"  } ['tnum' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 4 0 1 "'liga' Standard Ligatures lookup0" { "'liga' Soft Dotted i j"  "'liga' Arrows"  "'liga' Standard Ligatures for ss06"  } ['liga' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 258 0 0 "'kern' Cr+AOkA-nage horizontal lookups2" { "'kern' Cr+AOkA-nage horizontal lookups2-1" [307,0,6] } ['kern' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
-Lookup: 260 0 0 "'mark' Positionnement de signe lookups1" { "'mark' Positionnement de signe lookups1-1"  } ['mark' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 260 0 0 "'mark' Positionnement de signe lookups1" { "'mark' Positionnement de signe lookups1-1"  "'mark' Positionnement de signe lookups1-2"  "'mark' Positionnement de signe lookups1-3"  "'mark' Positionnement de signe lookups1-4"  "'mark' Positionnement de signe lookups1-5"  "'mark' Positionnement de signe lookups1-6"  "'mark' Positionnement de signe lookups1-7"  "'mark' Positionnement de signe lookups1-8"  "'mark' Positionnement de signe lookups1-9"  "'mark' Positionnement de signe lookups1-10"  "'mark' Positionnement de signe lookups1-11"  "'mark' Positionnement de signe lookups1-12"  "'mark' Positionnement de signe lookups1-13"  } ['mark' ('DFLT' <'dflt' > 'copt' <'dflt' > 'cyrl' <'dflt' > 'grek' <'dflt' > 'latn' <'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
 KernClass2: 63 45 "'kern' Cr+AOkA-nage horizontal lookups2-1"
@@ -217,7 +217,7 @@ NameList: Adobe Glyph List
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 7904 19 4
+WinInfo: 42911 11 4
 BeginPrivate: 5
 BlueValues 27 [-10 0 1040 1050 1480 1490]
 StemSnapV 10 [30 40 42]
@@ -345,8 +345,8 @@ Grid
   Named: "2122"
 EndSplineSet
 TeXData: 1 0 0 307200 153600 102400 532480 -1048576 102400 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
-AnchorClass2: "top_center_1F"""  "bottom_ypogegrammeni" "'mark' Positionnement de signe lookups1-1" "top_left_O2" "'mark' Positionnement de signe lookups1-1" "top_left_O1" "'mark' Positionnement de signe lookups1-1" "circumflex_right" "'mark' Positionnement de signe lookups1-1" "circumflex_left" "'mark' Positionnement de signe lookups1-1" "bottom_cedilla" "'mark' Positionnement de signe lookups1-1" "top_left" "'mark' Positionnement de signe lookups1-1" "dieresis_center" "'mark' Positionnement de signe lookups1-1" "stack_u0303"""  "top_right" "'mark' Positionnement de signe lookups1-1" "bottom_right" "'mark' Positionnement de signe lookups1-1" "bottom_center" "'mark' Positionnement de signe lookups1-1" "top_center" "'mark' Positionnement de signe lookups1-1" "Top"""  "min_top_1"""  "aaaa""" 
-BeginChars: 67081 4021
+AnchorClass2: "top_center_1F" "'mark' Positionnement de signe lookups1-1" "bottom_ypogegrammeni" "'mark' Positionnement de signe lookups1-2" "top_left_O2" "'mark' Positionnement de signe lookups1-3" "top_left_O1" "'mark' Positionnement de signe lookups1-4" "circumflex_right" "'mark' Positionnement de signe lookups1-5" "circumflex_left" "'mark' Positionnement de signe lookups1-6" "bottom_cedilla" "'mark' Positionnement de signe lookups1-7" "top_left" "'mark' Positionnement de signe lookups1-8" "dieresis_center" "'mark' Positionnement de signe lookups1-9" "top_right" "'mark' Positionnement de signe lookups1-10" "bottom_right" "'mark' Positionnement de signe lookups1-11" "bottom_center" "'mark' Positionnement de signe lookups1-12" "top_center" "'mark' Positionnement de signe lookups1-13"
+BeginChars: 67117 4087
 
 StartChar: o
 Encoding: 111 111 0
@@ -452,17 +452,17 @@ SplineSet
  385 1010 185 856 185 520 c 0
  185 184 385 30 560 30 c 0
  735 30 935 184 935 520 c 1
-972 208 m 1
- 972 110 984 0 984 0 c 1
- 939 0 l 1
- 939 0 927 110 927 260 c 1
+972 208 m 5
+ 972 110 984 0 984 0 c 5
+ 939 0 l 5
+ 939 0 927 110 927 260 c 5
  896 144 770 -10 560 -10 c 0
  313 -10 140 208 140 520 c 0
  140 832 313 1050 560 1050 c 0
  760 1050 896 896 927 780 c 1
  927 1480 l 1
  972 1480 l 1
- 972 208 l 1
+ 972 208 l 5
 EndSplineSet
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" d.sc
 Colour: ff00
@@ -1639,17 +1639,17 @@ AnchorPoint: "top_center" 757 1380 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-1256 1097 m 5
- 1149 1332 940 1448 757 1448 c 4
- 497 1448 186 1215 186 740 c 4
+1256 1097 m 1
+ 1149 1332 940 1448 757 1448 c 0
+ 497 1448 186 1215 186 740 c 0
  186 265 497 32 757 32 c 0
  940 32 1149 148 1256 383 c 1
  1296 360 l 1
  1192 132 992 -10 757 -10 c 0
- 409 -10 140 301 140 740 c 4
- 140 1179 409 1490 757 1490 c 4
- 992 1490 1192 1348 1296 1120 c 5
- 1256 1097 l 5
+ 409 -10 140 301 140 740 c 0
+ 140 1179 409 1490 757 1490 c 0
+ 992 1490 1192 1348 1296 1120 c 1
+ 1256 1097 l 1
 EndSplineSet
 Substitution2: "sous-table 'c2sc' Capitales vers petites capitales dans Latin lookup 0" c.sc
 Colour: ffff
@@ -8963,20 +8963,23 @@ StartChar: uni0186
 Encoding: 390 390 370
 Width: 1436
 Flags: HMW
+AnchorPoint: "bottom_cedilla" 679 -20 basechar 0
+AnchorPoint: "bottom_center" 679 0 basechar 0
+AnchorPoint: "top_center" 679 1380 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-180 1097 m 5
- 287 1332 496 1448 679 1448 c 4
+180 1097 m 1
+ 287 1332 496 1448 679 1448 c 0
  939 1448 1250 1215 1250 740 c 0
  1250 265 939 32 679 32 c 0
  496 32 287 148 180 383 c 1
  140 360 l 1
  244 132 444 -10 679 -10 c 0
  1027 -10 1296 301 1296 740 c 0
- 1296 1179 1027 1490 679 1490 c 4
- 444 1490 244 1348 140 1120 c 5
- 180 1097 l 5
+ 1296 1179 1027 1490 679 1490 c 0
+ 444 1490 244 1348 140 1120 c 1
+ 180 1097 l 1
 EndSplineSet
 Colour: ffff
 EndChar
@@ -9038,7 +9041,7 @@ SplineSet
  331 -10 140 208 140 520 c 0
  140 832 331 1050 578 1050 c 0
  745 1050 887 950 961 788 c 5
- 922 766 l 5
+ 922 766 l 1
  846 932 698 1010 578 1010 c 0
  410 1010 185 856 185 520 c 0
 EndSplineSet
@@ -9245,10 +9248,12 @@ Encoding: 400 400 380
 Width: 1176
 VWidth: 1000
 Flags: HMW
+AnchorPoint: "bottom_center" 591 0 basechar 0
+AnchorPoint: "top_center" 591 1380 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-591 796 m 6
+591 796 m 2
  391 796 238 927 238 1122 c 0
  238 1327 391 1448 591 1448 c 0
  816 1448 971 1319 971 1086 c 0
@@ -9265,7 +9270,7 @@ SplineSet
  186 627 405 756 591 756 c 2
  675 756 l 25
  675 796 l 25
- 591 796 l 6
+ 591 796 l 2
 EndSplineSet
 Colour: ffff
 EndChar
@@ -10325,15 +10330,15 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-1231 996 m 1
- 1227 998 1224 1000 1220 1001 c 1
+1231 996 m 5
+ 1227 998 1224 1000 1220 1001 c 5
  1195 1008 1169 1011 1145 1011 c 4
- 1026 1011 937 933 894 808 c 1
- 850 820 l 1
- 898 962 1006 1051 1143 1051 c 0
- 1171 1051 1200 1047 1230 1039 c 1
- 1234 1038 1237 1037 1241 1035 c 1
- 1231 996 l 1
+ 1026 1011 937 933 894 808 c 5
+ 850 820 l 5
+ 898 962 1006 1051 1143 1051 c 4
+ 1171 1051 1200 1047 1230 1039 c 5
+ 1234 1038 1237 1037 1241 1035 c 5
+ 1231 996 l 5
 483 -312 m 1
  450 -401 381 -450 265 -450 c 0
  216 -450 160 -436 120 -418 c 1
@@ -10344,8 +10349,8 @@ SplineSet
  168 1040 l 1
  216 1040 l 1
  573 56 l 1
- 850 820 l 1
- 894 808 l 1
+ 850 820 l 5
+ 894 808 l 5
  598 0 l 1
  483 -312 l 1
 EndSplineSet
@@ -10521,6 +10526,7 @@ SplineSet
  1000 998 l 5
  1000 1040 l 5
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni01B9.sc
 Colour: ffff
 EndChar
 
@@ -11402,6 +11408,7 @@ SplineSet
  176 998 l 5
  176 1040 l 5
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0292.sc
 Colour: ffff
 EndChar
 
@@ -13111,8 +13118,8 @@ SplineSet
  125 -450 95 -443 70 -426 c 1
  81 -384 l 1
 EndSplineSet
-LCarets2: 1 0
 Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0249.sc
+LCarets2: 1 0
 Ligature2: "'liga' Soft Dotted i j" j uni0307
 Colour: ff00
 EndChar
@@ -13351,6 +13358,7 @@ SplineSet
  402 -10 231 92 231 442 c 9
  231 810 l 2
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0250.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni0250.ss04
 Colour: ff00
 EndChar
@@ -13380,6 +13388,7 @@ SplineSet
  960 1040 l 5
  960 208 l 1
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0251.sc
 Colour: ff00
 EndChar
 
@@ -13440,6 +13449,7 @@ SplineSet
  180 208 l 1
  180 358 180 1180 180 1180 c 5
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0253.sc
 Colour: ff00
 EndChar
 
@@ -13448,21 +13458,25 @@ Encoding: 596 596 570
 Width: 1101
 VWidth: 1000
 Flags: HMW
+AnchorPoint: "bottom_cedilla" 523 -20 basechar 0
+AnchorPoint: "top_center" 523 1040 basechar 0
+AnchorPoint: "bottom_center" 523 0 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-916 520 m 0
- 916 184 691 30 523 30 c 0
- 403 30 255 108 179 274 c 1
- 140 252 l 1
- 214 90 356 -10 523 -10 c 0
- 770 -10 961 208 961 520 c 0
- 961 832 770 1050 523 1050 c 0
- 356 1050 214 950 140 788 c 1
- 179 766 l 1
- 255 932 403 1010 523 1010 c 0
- 691 1010 916 856 916 520 c 0
+916 520 m 4
+ 916 184 691 30 523 30 c 4
+ 403 30 255 108 179 274 c 5
+ 140 252 l 5
+ 214 90 356 -10 523 -10 c 4
+ 770 -10 961 208 961 520 c 4
+ 961 832 770 1050 523 1050 c 4
+ 356 1050 214 950 140 788 c 5
+ 179 766 l 5
+ 255 932 403 1010 523 1010 c 4
+ 691 1010 916 856 916 520 c 4
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0254.sc
 Colour: ff00
 EndChar
 
@@ -13523,6 +13537,7 @@ SplineSet
  185 856 385 1010 560 1010 c 4
  735 1010 935 856 935 520 c 5
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0256.sc
 Colour: ff00
 EndChar
 
@@ -13555,6 +13570,7 @@ SplineSet
  185 184 385 30 560 30 c 0
  735 30 935 184 935 520 c 1
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0257.sc
 Colour: ff00
 EndChar
 
@@ -13615,6 +13631,7 @@ SplineSet
  971 856 746 1010 578 1010 c 0
  432 1010 280 932 204 766 c 1
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0259.sc
 Colour: ff00
 EndChar
 
@@ -13659,10 +13676,13 @@ StartChar: uni025B
 Encoding: 603 603 577
 Width: 994
 Flags: HMW
+AnchorPoint: "top_center_1F" 497 1040 basechar 0
+AnchorPoint: "top_center" 497 1040 basechar 0
+AnchorPoint: "bottom_center" 497 0 basechar 0
 LayerCount: 4
 Fore
 SplineSet
-497 568 m 5
+497 568 m 1
  297 568 223 689 223 789 c 0
  223 899 307 1010 497 1010 c 0
  702 1010 773 858 773 776 c 0
@@ -13679,8 +13699,9 @@ SplineSet
  185 399 297 528 497 528 c 1
  540 528 554 528 554 528 c 25
  554 568 l 25
- 554 568 539 568 497 568 c 5
+ 554 568 539 568 497 568 c 1
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni025B.sc
 Colour: ff00
 EndChar
 
@@ -13846,6 +13867,7 @@ SplineSet
  185 856 385 1010 560 1010 c 0
  735 1010 935 856 935 520 c 1
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0260.sc
 Colour: ff00
 EndChar
 
@@ -13940,6 +13962,7 @@ SplineSet
  694 -410 769 -305 769 -207 c 0
  769 -143 750 -90 723 -43 c 1
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0263.sc
 Colour: ff00
 EndChar
 
@@ -13971,6 +13994,7 @@ SplineSet
  629 30 704 115 704 213 c 0
  704 277 691 300 658 347 c 1
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0264.sc
 Colour: ff00
 EndChar
 
@@ -14025,6 +14049,7 @@ SplineSet
  180 0 l 1
  180 1180 l 1
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0266.sc
 Colour: ff00
 EndChar
 
@@ -14088,6 +14113,7 @@ SplineSet
  290 0 l 1
  245 0 l 1
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0268.sc
 Colour: ff00
 EndChar
 
@@ -14098,6 +14124,7 @@ Flags: HMW
 LayerCount: 4
 Fore
 Refer: 718 953 N 1 0 0 1 0 0 3
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0269.sc
 Colour: 8000ff
 EndChar
 
@@ -14122,6 +14149,7 @@ SplineSet
  180 1000 l 5
  180 1040 l 5
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni026A.sc
 Colour: ff00
 EndChar
 
@@ -14299,6 +14327,7 @@ SplineSet
  824 1040 l 5
  870 1040 l 5
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni026F.sc
 Colour: ff00
 EndChar
 
@@ -14396,6 +14425,7 @@ SplineSet
  4 -310 8 -310 12 -310 c 4
  190 -310 322 -178 322 0 c 4
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0272.sc
 Colour: ff00
 EndChar
 
@@ -14474,6 +14504,7 @@ SplineSet
  1016 208 825 -10 578 -10 c 0
  331 -10 140 208 140 520 c 0
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0275.sc
 Colour: ff00
 EndChar
 
@@ -14719,6 +14750,7 @@ SplineSet
  498 -410 494 -410 490 -410 c 4
  335 -410 225 -295 225 -140 c 4
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni027D.sc
 Colour: ff00
 EndChar
 
@@ -14888,6 +14920,7 @@ SplineSet
  458 0 l 1
  458 1040 l 5
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0283.sc
 Colour: ff00
 EndChar
 
@@ -14964,21 +14997,21 @@ SplineSet
  212 -68 l 5
  792 -68 l 5
  792 -28 l 5
-423 -239 m 13
+423 -239 m 9
  423 1180 l 2
  423 1420 531 1450 621 1450 c 0
  659 1450 713 1443 752 1415 c 1
  766 1458 l 1
  726 1476 670 1490 621 1490 c 0
  445 1490 378 1380 378 1180 c 2
- 378 -239 l 21
+ 378 -239 l 17
  378 -339 312 -410 212 -410 c 4
  112 -410 45 -339 45 -239 c 4
  45 -139 112 -68 212 -68 c 4
  212 -28 l 4
  92 -28 0 -119 0 -239 c 4
  0 -359 92 -450 212 -450 c 4
- 332 -450 423 -359 423 -239 c 13
+ 332 -450 423 -359 423 -239 c 9
 EndSplineSet
 Colour: ff00
 EndChar
@@ -15040,6 +15073,7 @@ SplineSet
  632 -310 628 -310 624 -310 c 0
  446 -310 314 -178 314 0 c 8
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0288.sc
 Colour: ff00
 EndChar
 
@@ -15071,6 +15105,7 @@ SplineSet
  210 1040 l 1
  255 1040 l 1
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0289.sc
 Colour: ff00
 EndChar
 
@@ -15104,6 +15139,7 @@ SplineSet
  238 918 140 743 140 520 c 0
  140 208 331 -10 578 -10 c 0
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni028A.sc
 Colour: ff00
 EndChar
 
@@ -15183,6 +15219,7 @@ SplineSet
  635 1010 639 1010 643 1010 c 1
  798 1010 909 895 909 740 c 5
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni028B.sc
 Colour: ff00
 EndChar
 
@@ -15203,6 +15240,7 @@ SplineSet
  500 1040 l 1
  550 1040 l 5
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni028C.sc
 Colour: ff00
 EndChar
 
@@ -15512,6 +15550,7 @@ SplineSet
  1374 301 1105 -10 757 -10 c 0
  409 -10 140 301 140 740 c 0
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0298.sc
 Colour: ffff
 EndChar
 
@@ -15673,6 +15712,7 @@ SplineSet
  332 -450 423 -359 423 -239 c 9
  423 0 l 1
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni029D.sc
 Colour: ff00
 EndChar
 
@@ -20653,7 +20693,6 @@ AnchorPoint: "top_right" 909 1040 basechar 0
 LayerCount: 4
 Fore
 Refer: 23 97 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10065.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" afii10065.ss04
 Colour: bf80ff
 EndChar
@@ -20670,7 +20709,6 @@ AnchorPoint: "bottom_right" 681 0 basechar 0
 LayerCount: 4
 Fore
 Refer: 9 101 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10070.sc
 Colour: bf80ff
 EndChar
 
@@ -20683,7 +20721,6 @@ AnchorPoint: "bottom_center" 557 0 basechar 0
 LayerCount: 4
 Fore
 Refer: 719 954 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10076.sc
 Colour: bf80ff
 EndChar
 
@@ -20697,7 +20734,6 @@ AnchorPoint: "bottom_center" 578 0 basechar 0
 LayerCount: 4
 Fore
 Refer: 0 111 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10080.sc
 Colour: bf80ff
 EndChar
 
@@ -20722,7 +20758,6 @@ SplineSet
  180 0 l 1
  180 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10081.sc
 Colour: ff00
 EndChar
 
@@ -20737,7 +20772,6 @@ AnchorPoint: "bottom_center" 578 0 basechar 0
 LayerCount: 4
 Fore
 Refer: 10 99 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10083.sc
 Colour: bf80ff
 EndChar
 
@@ -20750,7 +20784,6 @@ AnchorPoint: "bottom_center" 499 0 basechar 0
 LayerCount: 4
 Fore
 Refer: 16 120 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10087.sc
 Colour: bf80ff
 EndChar
 
@@ -20786,7 +20819,6 @@ SplineSet
  331 -10 140 208 140 520 c 0
  140 832 331 1050 578 1050 c 0
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10066.sc
 Colour: ff00
 EndChar
 
@@ -20821,7 +20853,6 @@ SplineSet
  823 925 736 998 579 998 c 6
  225 998 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10067.sc
 Colour: ff00
 EndChar
 
@@ -20842,7 +20873,6 @@ SplineSet
  225 0 l 1
  180 0 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10068.sc
 Colour: ff00
 EndChar
 
@@ -20874,7 +20904,6 @@ SplineSet
  440 568 l 25
  440 568 455 568 497 568 c 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10073.sc
 Colour: ff00
 EndChar
 
@@ -20899,7 +20928,6 @@ SplineSet
  954 1040 l 1
  909 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10074.sc
 Colour: ff00
 EndChar
 
@@ -20924,7 +20952,6 @@ SplineSet
  296 1040 l 1
  824 1040 l 25
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10077.sc
 Colour: ff00
 EndChar
 
@@ -20956,7 +20983,6 @@ SplineSet
  225 1040 l 1
  180 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10078.sc
 Colour: ff00
 EndChar
 
@@ -20983,7 +21009,6 @@ SplineSet
  180 0 l 1
  180 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10079.sc
 Colour: ff00
 EndChar
 
@@ -21006,7 +21031,6 @@ SplineSet
  568 1000 l 5
  568 0 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10084.sc
 Colour: ff00
 EndChar
 
@@ -21040,7 +21064,6 @@ SplineSet
  140 832 371 1050 618 1050 c 0
  618 1010 l 0
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10086.sc
 Colour: ff00
 EndChar
 
@@ -21071,7 +21094,6 @@ SplineSet
  255 932 403 1010 523 1010 c 0
  691 1010 916 856 916 520 c 0
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10095.sc
 Colour: ff00
 EndChar
 
@@ -21102,7 +21124,6 @@ SplineSet
  189 903 337 1000 479 1000 c 2
  767 1000 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10097.sc
 Colour: ff00
 EndChar
 
@@ -21114,7 +21135,6 @@ LayerCount: 4
 Fore
 Refer: 224 774 N 1 0 0 1 -75 0 2
 Refer: 852 1080 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10075.sc
 Colour: ff
 EndChar
 
@@ -21146,7 +21166,6 @@ SplineSet
  338 0 l 1
  180 0 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10088.sc
 Colour: ff00
 EndChar
 
@@ -21179,7 +21198,6 @@ SplineSet
  1243 42 l 5
  1243 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10090.sc
 Colour: ff00
 EndChar
 
@@ -21219,7 +21237,6 @@ SplineSet
  1243 42 l 1
  1243 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10091.sc
 Colour: ff00
 EndChar
 
@@ -21253,7 +21270,6 @@ SplineSet
  225 500 l 5
  225 540 l 5
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10096.sc
 Colour: ff00
 EndChar
 
@@ -21265,7 +21281,6 @@ LayerCount: 4
 Fore
 Refer: 83 768 N 1 0 0 1 -64 0 2
 Refer: 842 1077 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0450.sc
 Colour: ff
 EndChar
 
@@ -21277,7 +21292,6 @@ LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 -64 0 2
 Refer: 842 1077 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10071.sc
 Colour: ff
 EndChar
 
@@ -21312,7 +21326,6 @@ SplineSet
  843 1050 980 892 980 572 c 1
  980 0 l 0
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10099.sc
 Colour: ff00
 EndChar
 
@@ -21340,7 +21353,6 @@ SplineSet
  882 0 l 25
  837 0 l 25
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10089.sc
 Colour: ff00
 EndChar
 
@@ -21373,7 +21385,6 @@ SplineSet
  297 1040 l 1
  297 592 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10092.sc
 Colour: ff00
 EndChar
 
@@ -21401,7 +21412,6 @@ SplineSet
  180 0 l 1
  180 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10094.sc
 Colour: ff00
 EndChar
 
@@ -21435,7 +21445,6 @@ SplineSet
  180 0 l 1
  180 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10093.sc
 Colour: ff00
 EndChar
 
@@ -21479,7 +21488,6 @@ SplineSet
  1314 0 l 1
  1262 0 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10072.sc
 Colour: ff00
 EndChar
 
@@ -21521,7 +21529,6 @@ SplineSet
  318 1040 l 1
  846 1040 l 25
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10069.sc
 Colour: ff00
 EndChar
 
@@ -21533,7 +21540,6 @@ LayerCount: 4
 Fore
 Refer: 84 769 N 1 0 0 1 -154 0 2
 Refer: 850 1075 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10100.sc
 Colour: ff
 EndChar
 
@@ -21545,7 +21551,6 @@ LayerCount: 4
 Fore
 Refer: 84 769 N 1 0 0 1 -85 0 2
 Refer: 843 1082 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10109.sc
 Colour: ff
 EndChar
 
@@ -21557,7 +21562,6 @@ LayerCount: 4
 Fore
 Refer: 83 768 N 1 0 0 1 -75 0 2
 Refer: 852 1080 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni045D.sc
 Colour: ff
 EndChar
 
@@ -21569,7 +21573,6 @@ LayerCount: 4
 Fore
 Refer: 224 774 N 1 0 0 1 -69 0 2
 Refer: 2465 1091 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10110.sc
 Colour: ff
 EndChar
 
@@ -21600,7 +21603,6 @@ SplineSet
  846 932 698 1010 578 1010 c 0
  410 1010 185 856 185 520 c 0
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10101.sc
 Colour: ff00
 EndChar
 
@@ -21614,7 +21616,6 @@ AnchorPoint: "top_center" 505 1040 basechar 0
 LayerCount: 4
 Fore
 Refer: 22 115 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10102.sc
 Colour: bf80ff
 EndChar
 
@@ -21628,7 +21629,6 @@ AnchorPoint: "bottom_right" 225 1 basechar 0
 LayerCount: 4
 Fore
 Refer: 18 105 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10103.sc
 Colour: bf80ff
 EndChar
 
@@ -21640,7 +21640,6 @@ LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 -439 0 2
 Refer: 141 305 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10104.sc
 Ligature2: "'liga' Soft Dotted i j" afii10103 uni0307
 Colour: ff
 EndChar
@@ -21654,7 +21653,6 @@ AnchorPoint: "top_center" 368 1040 basechar 0
 LayerCount: 4
 Fore
 Refer: 19 106 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10105.sc
 Colour: bf80ff
 EndChar
 
@@ -21688,7 +21686,6 @@ SplineSet
  296 1040 l 1
  824 1040 l 25
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10106.sc
 Colour: ff00
 EndChar
 
@@ -21724,7 +21721,6 @@ SplineSet
  180 0 l 1
  180 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10107.sc
 Colour: ff00
 EndChar
 
@@ -21755,7 +21751,6 @@ SplineSet
  210 1480 l 1
  255 1480 l 5
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10108.sc
 Colour: ff00
 EndChar
 
@@ -21783,7 +21778,6 @@ SplineSet
  338 0 l 1
  180 0 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10193.sc
 Colour: ff00
 EndChar
 
@@ -21844,7 +21838,6 @@ SplineSet
  958 30 888 249 888 468 c 2
  888 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0461.sc
 Colour: ff00
 EndChar
 
@@ -21905,7 +21898,6 @@ SplineSet
  210 0 l 1
  210 1480 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10194.sc
 Colour: ff00
 EndChar
 
@@ -21983,7 +21975,6 @@ SplineSet
  225 500 l 5
  225 540 l 5
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0465.sc
 Colour: ff00
 EndChar
 
@@ -22083,7 +22074,6 @@ SplineSet
  980 0 l 1
  574 986 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0467.sc
 Colour: ff00
 EndChar
 
@@ -22123,7 +22113,6 @@ SplineSet
  225 500 l 1
  225 540 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0469.sc
 Colour: ff00
 EndChar
 
@@ -22255,7 +22244,6 @@ SplineSet
  1069 1040 l 1
  665 511 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni046B.sc
 Colour: ff00
 EndChar
 
@@ -22306,7 +22294,6 @@ SplineSet
  1274 1040 l 5
  870 511 l 5
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni046D.sc
 Colour: ff00
 EndChar
 
@@ -22357,7 +22344,6 @@ SplineSet
  284 -410 186 -310 186 -210 c 4
  186 -110 285 -10 536 -10 c 4
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni046F.sc
 Colour: ff00
 EndChar
 
@@ -22432,7 +22418,6 @@ AnchorPoint: "bottom_center" 662 -360 basechar 0
 LayerCount: 4
 Fore
 Refer: 733 968 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0471.sc
 Colour: bf80ff
 EndChar
 
@@ -22479,7 +22464,6 @@ SplineSet
  1016 208 825 -10 578 -10 c 0
  331 -10 140 208 140 520 c 0
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10195.sc
 Colour: ff00
 EndChar
 
@@ -22552,7 +22536,6 @@ SplineSet
  1100 1004 1073 1010 1059 1010 c 4
  1017 1010 915 1005 881 907 c 5
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10196.sc
 Colour: ff00
 EndChar
 
@@ -22575,7 +22558,6 @@ LayerCount: 4
 Fore
 Refer: 498 783 N 1 0 0 1 -77 0 2
 Refer: 908 1141 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0477.sc
 Colour: ff
 EndChar
 
@@ -22718,7 +22700,6 @@ SplineSet
  180 832 371 1050 618 1050 c 0
  618 1010 l 0
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni047B.sc
 Colour: ff00
 EndChar
 
@@ -22748,7 +22729,6 @@ SplineSet
  296 1040 l 1
  824 1040 l 25
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni052F.sc
 Colour: ff00
 EndChar
 
@@ -22820,42 +22800,41 @@ SplineSet
  649 1257 749 1359 864 1359 c 0
  1046 1359 1070 1142 1281 1142 c 0
  1281 1104 l 0
-800 937 m 5
+800 937 m 1
  850 950 917 1011 917 1101 c 0
  917 1181 864 1214 864 1214 c 1
  864 1259 l 1
  926 1259 963 1181 963 1101 c 0
  963 991 880 915 812 895 c 1
- 800 937 l 5
+ 800 937 l 1
 800 1195 m 0
  800 1231 828 1259 864 1259 c 0
  900 1259 928 1231 928 1195 c 0
  928 1159 900 1131 864 1131 c 0
  828 1131 800 1159 800 1195 c 0
-1198 1050 m 0
- 1408 1050 1552 902 1552 572 c 2
- 1552 468 l 2
- 1552 138 1408 -10 1198 -10 c 0
- 1036 -10 914 77 866 268 c 1
- 818 77 696 -10 534 -10 c 0
- 324 -10 180 138 180 468 c 2
- 180 572 l 2
- 180 902 324 1050 534 1050 c 0
- 534 1010 l 0
- 294 1010 224 791 224 572 c 2
- 224 468 l 2
- 224 249 294 30 534 30 c 0
- 774 30 844 249 844 468 c 2
- 844 680 l 1
+534 1050 m 4
+ 324 1050 180 902 180 572 c 2
+ 180 468 l 2
+ 180 138 324 -10 534 -10 c 0
+ 696 -10 818 77 866 268 c 1
+ 914 77 1036 -10 1198 -10 c 0
+ 1408 -10 1552 138 1552 468 c 2
+ 1552 572 l 2
+ 1552 902 1408 1050 1198 1050 c 0
+ 1198 1010 l 0
+ 1438 1010 1508 791 1508 572 c 2
+ 1508 468 l 2
+ 1508 249 1438 30 1198 30 c 0
+ 958 30 888 249 888 468 c 2
  888 680 l 1
- 888 468 l 2
- 888 249 958 30 1198 30 c 0
- 1438 30 1508 249 1508 468 c 2
- 1508 572 l 2
- 1508 791 1438 1010 1198 1010 c 0
- 1198 1050 l 0
+ 844 680 l 1
+ 844 468 l 2
+ 844 249 774 30 534 30 c 0
+ 294 30 224 249 224 468 c 2
+ 224 572 l 2
+ 224 791 294 1010 534 1010 c 0
+ 534 1050 l 4
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni047D.sc
 Colour: ff00
 EndChar
 
@@ -22956,7 +22935,6 @@ SplineSet
  958 30 888 249 888 468 c 2
  888 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni047F.sc
 Colour: ff00
 EndChar
 
@@ -23008,7 +22986,6 @@ SplineSet
  185 184 410 30 578 30 c 0
  578 -10 l 0
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0481.sc
 Colour: ff00
 EndChar
 
@@ -23613,7 +23590,6 @@ SplineSet
  954 1040 l 1
  909 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni048B.sc
 Colour: ff00
 EndChar
 
@@ -23710,7 +23686,6 @@ SplineSet
  210 0 l 1
  210 1480 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni048D.sc
 Colour: ff00
 EndChar
 
@@ -23774,7 +23749,6 @@ SplineSet
  180 -440 l 1
  180 832 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni048F.sc
 Colour: ff00
 EndChar
 
@@ -23823,7 +23797,6 @@ SplineSet
  225 0 l 1
  180 0 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10098.sc
 Colour: ff00
 EndChar
 
@@ -23872,7 +23845,6 @@ SplineSet
  255 0 l 1
  210 0 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0493.sc
 Colour: ff00
 EndChar
 
@@ -23929,7 +23901,6 @@ SplineSet
  225 0 l 1
  180 0 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0495.sc
 Colour: ff00
 EndChar
 
@@ -24026,7 +23997,6 @@ SplineSet
  1314 0 l 1
  1262 0 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0497.sc
 Colour: ff00
 EndChar
 
@@ -24104,7 +24074,6 @@ SplineSet
  440 568 l 25
  440 568 455 568 497 568 c 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0499.sc
 Colour: ff00
 EndChar
 
@@ -24165,7 +24134,6 @@ SplineSet
  920 1040 872 1040 925 1040 c 1
  225 340 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni049B.sc
 Colour: ff00
 EndChar
 
@@ -24286,7 +24254,6 @@ SplineSet
  920 1040 872 1040 925 1040 c 1
  225 340 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni049D.sc
 Colour: ff00
 EndChar
 
@@ -24317,7 +24284,6 @@ SplineSet
  950 1040 902 1040 955 1040 c 1
  255 340 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni049F.sc
 Colour: ff00
 EndChar
 
@@ -24348,7 +24314,6 @@ SplineSet
  956 1040 908 1040 961 1040 c 1
  261 340 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04A1.sc
 Colour: ff00
 EndChar
 
@@ -24440,7 +24405,6 @@ SplineSet
  180 0 l 1
  180 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04A3.sc
 Colour: ff00
 EndChar
 
@@ -24470,7 +24434,6 @@ SplineSet
  180 0 l 1
  180 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04A5.sc
 Colour: ff00
 EndChar
 
@@ -24531,7 +24494,6 @@ SplineSet
  180 0 l 1
  180 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04A7.sc
 Colour: ff00
 EndChar
 
@@ -24634,7 +24596,6 @@ SplineSet
  842 905 l 4
  1025 905 1120 726 1120 516 c 4
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04A9.sc
 Colour: ff00
 EndChar
 
@@ -24646,7 +24607,6 @@ LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 -64 0 2
 Refer: 1033 1241 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04DB.sc
 Colour: ff
 EndChar
 
@@ -24710,7 +24670,6 @@ SplineSet
  419 -370 374 -357 332 -316 c 1
  353 -275 l 5
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04AB.sc
 Colour: ff00
 EndChar
 
@@ -24765,7 +24724,6 @@ SplineSet
  568 0 l 5
  524 0 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04AD.sc
 Colour: ff00
 EndChar
 
@@ -24788,7 +24746,6 @@ SplineSet
  547 -440 l 25
  547 0 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04AF.sc
 Colour: ff00
 EndChar
 
@@ -24834,7 +24791,6 @@ SplineSet
  190 -192 190 -208 190 -220 c 1
  859 -220 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04B1.sc
 Colour: ff00
 EndChar
 
@@ -24894,7 +24850,6 @@ SplineSet
  120 0 l 1
  460 520 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04B3.sc
 Colour: ff00
 EndChar
 
@@ -24962,7 +24917,6 @@ SplineSet
  912 1000 l 1
  569 1000 l 5
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04B5.sc
 Colour: ff00
 EndChar
 
@@ -25028,7 +24982,6 @@ SplineSet
  882 0 l 29
  837 0 l 25
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04B7.sc
 Colour: ff00
 EndChar
 
@@ -25090,7 +25043,6 @@ SplineSet
  882 0 l 25
  837 0 l 25
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04B9.sc
 Colour: ff00
 EndChar
 
@@ -25142,7 +25094,6 @@ SplineSet
  950 0 l 1
  905 0 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04BB.sc
 Colour: ff00
 EndChar
 
@@ -25216,7 +25167,6 @@ SplineSet
  355 184 580 30 748 30 c 0
  894 30 1046 108 1122 274 c 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04BD.sc
 Colour: ff00
 EndChar
 
@@ -25300,7 +25250,6 @@ SplineSet
  355 184 580 30 748 30 c 0
  894 30 1046 108 1122 274 c 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04BF.sc
 Colour: ff00
 EndChar
 
@@ -25323,7 +25272,6 @@ LayerCount: 4
 Fore
 Refer: 224 774 N 1 0 0 1 75 0 2
 Refer: 872 1078 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04C2.sc
 Colour: ff
 EndChar
 
@@ -25346,7 +25294,6 @@ LayerCount: 4
 Fore
 Refer: 224 774 N 1 0 0 1 -117 0 2
 Refer: 841 1072 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04D1.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni04D1.ss04
 Colour: ff
 EndChar
@@ -25370,7 +25317,6 @@ LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 -117 0 2
 Refer: 841 1072 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04D3.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni04D3.ss04
 Colour: ff
 EndChar
@@ -25394,7 +25340,6 @@ LayerCount: 4
 Fore
 Refer: 224 774 N 1 0 0 1 -64 0 2
 Refer: 842 1077 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04D7.sc
 Colour: ff
 EndChar
 
@@ -25417,7 +25362,6 @@ LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 75 0 2
 Refer: 872 1078 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04DD.sc
 Colour: ff
 EndChar
 
@@ -25440,7 +25384,6 @@ LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 -145 0 2
 Refer: 851 1079 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04DF.sc
 Colour: ff
 EndChar
 
@@ -25463,7 +25406,6 @@ LayerCount: 4
 Fore
 Refer: 221 772 N 1 0 0 1 -75 0 2
 Refer: 852 1080 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04E3.sc
 Colour: ff
 EndChar
 
@@ -25486,7 +25428,6 @@ LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 -75 0 2
 Refer: 852 1080 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04E5.sc
 Colour: ff
 EndChar
 
@@ -25509,7 +25450,6 @@ LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 -64 0 2
 Refer: 844 1086 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04E7.sc
 Colour: ff
 EndChar
 
@@ -25532,7 +25472,6 @@ LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 -119 0 2
 Refer: 858 1101 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04ED.sc
 Colour: ff
 EndChar
 
@@ -25555,7 +25494,6 @@ LayerCount: 4
 Fore
 Refer: 221 772 N 1 0 0 1 -69 0 2
 Refer: 2465 1091 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04EF.sc
 Colour: ff
 EndChar
 
@@ -25578,7 +25516,6 @@ LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 -69 0 2
 Refer: 2465 1091 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04F1.sc
 Colour: ff
 EndChar
 
@@ -25601,7 +25538,6 @@ LayerCount: 4
 Fore
 Refer: 342 779 N 1 0 0 1 -69 0 2
 Refer: 2465 1091 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04F3.sc
 Colour: ff
 EndChar
 
@@ -25624,7 +25560,6 @@ LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 -110 0 2
 Refer: 868 1095 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04F5.sc
 Colour: ff
 EndChar
 
@@ -25647,7 +25582,6 @@ LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 51 0 2
 Refer: 871 1099 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04F9.sc
 Colour: ff
 EndChar
 
@@ -25706,7 +25640,6 @@ SplineSet
  920 1040 872 1040 925 1040 c 1
  225 340 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04C4.sc
 Colour: ff00
 EndChar
 
@@ -25765,7 +25698,6 @@ SplineSet
  296 1040 l 1
  824 1040 l 25
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04C6.sc
 Colour: ff00
 EndChar
 
@@ -25824,7 +25756,6 @@ SplineSet
  635 -310 639 -310 643 -310 c 4
  821 -310 953 -178 953 0 c 4
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04C8.sc
 Colour: ff00
 EndChar
 
@@ -25887,7 +25818,6 @@ SplineSet
  180 0 l 1
  180 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04CA.sc
 Colour: ff00
 EndChar
 
@@ -25953,7 +25883,6 @@ SplineSet
  882 1040 l 25
  882 0 l 29
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04CC.sc
 Colour: ff00
 EndChar
 
@@ -26029,7 +25958,6 @@ SplineSet
  225 1040 l 1
  180 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04CE.sc
 Colour: ff00
 EndChar
 
@@ -26066,7 +25994,6 @@ Flags: HMW
 LayerCount: 4
 Fore
 Refer: 215 230 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04D5.sc
 Substitution2: "'ss04' Simplified a and g lookups0-1" uni04D5.ss04
 Colour: 8000ff
 EndChar
@@ -26100,7 +26027,6 @@ SplineSet
  971 856 746 1010 578 1010 c 0
  432 1010 280 932 204 766 c 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10846.sc
 Colour: ff00
 EndChar
 
@@ -26215,7 +26141,6 @@ SplineSet
  1016 208 825 -10 578 -10 c 0
  331 -10 140 208 140 520 c 0
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04E9.sc
 Colour: ff00
 EndChar
 
@@ -26238,7 +26163,6 @@ LayerCount: 4
 Fore
 Refer: 87 776 N 1 0 0 1 -64 0 2
 Refer: 1039 1257 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04EB.sc
 Colour: ff
 EndChar
 
@@ -26291,7 +26215,6 @@ SplineSet
  225 0 l 5
  180 0 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04F7.sc
 Colour: ff00
 EndChar
 
@@ -26362,7 +26285,6 @@ SplineSet
  255 998 l 1
  255 746 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04FB.sc
 Colour: ff00
 EndChar
 
@@ -26426,7 +26348,6 @@ SplineSet
  120 0 l 1
  460 520 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04FD.sc
 Colour: ff00
 EndChar
 
@@ -26486,7 +26407,6 @@ SplineSet
  120 0 l 1
  460 520 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni04FF.sc
 Colour: ff00
 EndChar
 
@@ -26537,7 +26457,6 @@ SplineSet
  881 0 l 1
  881 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0501.sc
 Colour: ff00
 EndChar
 
@@ -26610,7 +26529,6 @@ SplineSet
  836 592 l 1
  836 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0503.sc
 Colour: ff00
 EndChar
 
@@ -26684,7 +26602,6 @@ SplineSet
  780 949 650 1050 461 1050 c 0
  272 1050 158 937 140 788 c 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0505.sc
 Colour: ff00
 EndChar
 
@@ -26764,7 +26681,6 @@ SplineSet
  461 528 l 1
  679 528 783 419 783 299 c 5
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0507.sc
 Colour: ff00
 EndChar
 
@@ -26796,7 +26712,6 @@ SplineSet
  296 1040 l 1
  824 1040 l 25
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0521.sc
 Colour: ff00
 EndChar
 
@@ -26853,7 +26768,6 @@ SplineSet
  1370 138 1259 30 1097 30 c 0
  935 30 824 138 824 349 c 9
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0509.sc
 Colour: ff00
 EndChar
 
@@ -26914,7 +26828,6 @@ SplineSet
  1499 138 1388 30 1226 30 c 0
  1064 30 953 138 953 349 c 5
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni050B.sc
 Colour: ff00
 EndChar
 
@@ -26974,7 +26887,6 @@ SplineSet
  578 540 l 1
  578 500 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni050D.sc
 Colour: ff00
 EndChar
 
@@ -27027,7 +26939,6 @@ SplineSet
  1114 138 1003 30 841 30 c 0
  679 30 568 138 568 349 c 5
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni050F.sc
 Colour: ff00
 EndChar
 
@@ -27087,7 +26998,6 @@ SplineSet
  554 568 l 25
  554 568 539 568 497 568 c 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0511.sc
 Colour: ff00
 EndChar
 
@@ -27140,7 +27050,6 @@ SplineSet
  824 1040 l 1
  296 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0513.sc
 Colour: ff00
 EndChar
 
@@ -27243,7 +27152,6 @@ SplineSet
  180 -440 l 1
  180 832 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0517.sc
 Colour: ff00
 EndChar
 
@@ -27277,7 +27185,6 @@ SplineSet
  824 1040 l 1
  809 998 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0515.sc
 Colour: ff00
 EndChar
 
@@ -27304,7 +27211,6 @@ SplineSet
  474 0 l 25
  428 0 l 25
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni051D.sc
 Colour: ff00
 EndChar
 
@@ -27365,7 +27271,6 @@ SplineSet
  920 1040 872 1040 925 1040 c 1
  225 340 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni051F.sc
 Colour: ff00
 EndChar
 
@@ -27420,7 +27325,6 @@ SplineSet
  972 1040 l 1
  972 1040 972 930 972 832 c 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni051B.sc
 Colour: ff00
 EndChar
 
@@ -27536,7 +27440,6 @@ SplineSet
  189 903 337 1000 479 1000 c 2
  767 1000 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0519.sc
 Colour: ff00
 EndChar
 
@@ -27634,7 +27537,6 @@ SplineSet
  180 0 l 1
  180 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0523.sc
 Colour: ff00
 EndChar
 
@@ -27691,7 +27593,6 @@ SplineSet
  180 0 l 1
  180 1040 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0525.sc
 Colour: ff00
 EndChar
 
@@ -27757,7 +27658,6 @@ SplineSet
  950 0 l 1
  905 0 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0527.sc
 Colour: ff00
 EndChar
 
@@ -27814,7 +27714,6 @@ SplineSet
  1050 0 l 1
  1005 0 l 5
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni0529.sc
 Colour: ff00
 EndChar
 
@@ -27927,7 +27826,6 @@ SplineSet
  1902 1040 1854 1040 1907 1040 c 1
  1207 340 l 1
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni052B.sc
 Colour: ff00
 EndChar
 
@@ -28020,7 +27918,6 @@ SplineSet
  837 525 l 1
  837 525 691 397 486 397 c 0
 EndSplineSet
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni052D.sc
 Colour: ff00
 EndChar
 
@@ -29796,17 +29693,17 @@ Encoding: 814 814 1221
 Width: 0
 VWidth: 1000
 Flags: HMW
-AnchorPoint: "bottom_center" 642 0 mark 0
+AnchorPoint: "bottom_center" 642 -624 mark 0
 LayerCount: 4
 Fore
 SplineSet
-642 -184 m 4
- 510 -184 396 -300 396 -440 c 5
- 441 -440 l 5
- 441 -314 532 -224 642 -224 c 4
- 752 -224 843 -314 843 -440 c 5
- 888 -440 l 5
- 888 -300 774 -184 642 -184 c 4
+642 -440 m 4
+ 510 -440 396 -324 396 -184 c 5
+ 441 -184 l 5
+ 441 -310 532 -400 642 -400 c 4
+ 752 -400 843 -310 843 -184 c 5
+ 888 -184 l 5
+ 888 -324 774 -440 642 -440 c 4
 EndSplineSet
 Colour: ffff00
 EndChar
@@ -30498,6 +30395,7 @@ LayerCount: 4
 Fore
 Refer: 1203 817 N 1 0 0 1 -77 0 2
 Refer: 7 104 N 1 0 0 1 0 0 3
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1E96.sc
 Colour: ff
 EndChar
 
@@ -31991,7 +31889,7 @@ StartChar: uni1EFF
 Encoding: 7935 7935 1382
 Width: 1145
 VWidth: 1000
-Flags: HMWO
+Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
@@ -32383,11 +32281,11 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-81 1177 m 1
- 633 1177 l 1
- 633 1207 l 9
- 81 1207 l 1
- 81 1177 l 1
+81 1177 m 5
+ 633 1177 l 5
+ 633 1207 l 13
+ 81 1207 l 5
+ 81 1177 l 5
 EndSplineSet
 Colour: ff8000
 EndChar
@@ -33092,7 +32990,7 @@ EndChar
 
 StartChar: quotedblleft
 Encoding: 8220 8220 1430
-Width: 753
+Width: 756
 VWidth: 1000
 Flags: HMW
 LayerCount: 4
@@ -57960,20 +57858,20 @@ SplineSet
  174 81 375 -87 456 -120 c 9
  443 -151 l 1
  364 -119 140 58 140 429 c 0
-691 603 m 1
- 691 275 l 2
- 691 149 733 24 889 24 c 0
+691 603 m 5
+ 691 275 l 6
+ 691 149 733 24 889 24 c 4
  1045 24 1086 149 1086 275 c 6
- 1086 603 l 1
- 1120 603 l 1
- 1120 122 l 1
- 1120 65 1129 0 1129 0 c 1
- 1095 0 l 1
- 1095 0 1086 60 1086 125 c 1
- 1064 61 1016 -6 880 -6 c 0
- 739 -6 658 85 658 271 c 1
- 658 603 l 1
- 691 603 l 1
+ 1086 603 l 5
+ 1120 603 l 5
+ 1120 122 l 5
+ 1120 65 1129 0 1129 0 c 5
+ 1095 0 l 5
+ 1095 0 1086 60 1086 125 c 5
+ 1064 61 1016 -6 880 -6 c 4
+ 739 -6 658 85 658 271 c 5
+ 658 603 l 5
+ 691 603 l 5
 EndSplineSet
 Substitution2: "'ss05' Simplified u lookups0-1" uni24B0.ss05
 Colour: ff8000
@@ -62381,6 +62279,7 @@ SplineSet
  180 1480 l 1
  225 1480 l 25
 EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uniA78C.sc
 Colour: ff00
 EndChar
 
@@ -62477,7 +62376,6 @@ AnchorPoint: "bottom_center" 592 0 basechar 0
 LayerCount: 4
 Fore
 Refer: 5 112 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10082.sc
 Colour: bf80ff
 EndChar
 
@@ -62504,7 +62402,6 @@ AnchorPoint: "bottom_center" 330 -360 basechar 0
 LayerCount: 4
 Fore
 Refer: 17 121 N 1 0 0 1 0 0 3
-Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" afii10085.sc
 Colour: bf80ff
 EndChar
 
@@ -84414,22 +84311,22 @@ SplineSet
  649 -240 619 -233 594 -216 c 1
  605 -174 l 1
 215 10 m 5
- 180 32 l 1
- 878 1190 l 1
- 914 1168 l 1
+ 180 32 l 5
+ 878 1190 l 5
+ 914 1168 l 5
  215 10 l 5
 212 40 m 1
  914 40 l 1
  914 0 l 1
  650 0 444 0 180 0 c 1
- 180 32 l 1
+ 180 32 l 5
  212 40 l 1
-889 1160 m 1
- 194 1160 l 1
- 194 1200 l 1
- 458 1200 650 1200 914 1200 c 1
- 914 1168 l 1
- 889 1160 l 1
+889 1160 m 5
+ 194 1160 l 5
+ 194 1200 l 5
+ 458 1200 650 1200 914 1200 c 5
+ 914 1168 l 5
+ 889 1160 l 5
 EndSplineSet
 Colour: ff00
 EndChar
@@ -89591,7 +89488,7 @@ Flags: HMW
 LayerCount: 4
 Fore
 SplineSet
-892 0 m 8
+892 0 m 12
  892 1200 l 1
  745 1200 l 17
  411 1200 l 17
@@ -89603,11 +89500,11 @@ SplineSet
  306 1160 l 1
  847 1160 l 1
  847 0 l 4
- 847 -155 736 -270 581 -270 c 0
- 577 -270 573 -270 569 -269 c 1
- 569 -309 l 1
- 573 -310 577 -310 581 -310 c 0
- 759 -310 892 -178 892 0 c 8
+ 847 -155 736 -270 581 -270 c 4
+ 577 -270 573 -270 569 -269 c 5
+ 569 -309 l 5
+ 573 -310 577 -310 581 -310 c 4
+ 759 -310 892 -178 892 0 c 12
 EndSplineSet
 Colour: ff00
 EndChar
@@ -98920,6 +98817,1856 @@ SplineSet
  815 -19 700 412 350 412 c 0
  230 412 140 321 140 201 c 0
  140 81 231 -10 351 -10 c 4
+EndSplineSet
+Colour: ffff
+EndChar
+
+StartChar: uni02D7
+Encoding: 727 727 4021
+Width: 766
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+140 500 m 5
+ 140 540 l 5
+ 626 540 l 5
+ 626 500 l 5
+ 140 500 l 5
+EndSplineSet
+Colour: ffff00
+EndChar
+
+StartChar: uni02EE
+Encoding: 750 750 4022
+Width: 756
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+413 1426 m 0
+ 413 1462 441 1490 477 1490 c 0
+ 513 1490 541 1462 541 1426 c 0
+ 541 1390 513 1362 477 1362 c 0
+ 441 1362 413 1390 413 1426 c 0
+413 1168 m 1
+ 463 1181 530 1242 530 1332 c 0
+ 530 1412 477 1445 477 1445 c 1
+ 477 1490 l 1
+ 539 1490 576 1412 576 1332 c 0
+ 576 1222 493 1146 425 1126 c 1
+ 413 1168 l 1
+180 1426 m 4
+ 180 1462 208 1490 244 1490 c 0
+ 280 1490 308 1462 308 1426 c 0
+ 308 1390 280 1362 244 1362 c 0
+ 208 1362 180 1390 180 1426 c 4
+180 1168 m 1
+ 230 1181 297 1242 297 1332 c 0
+ 297 1412 244 1445 244 1445 c 1
+ 244 1490 l 1
+ 306 1490 343 1412 343 1332 c 0
+ 343 1222 260 1146 192 1126 c 1
+ 180 1168 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni030D
+Encoding: 781 781 4023
+Width: 0
+VWidth: 1000
+Flags: HW
+AnchorPoint: "top_center" 642 1040 mark 0
+LayerCount: 4
+Fore
+SplineSet
+664 1224 m 1
+ 620 1224 l 1
+ 620 1480 l 1
+ 664 1480 l 5
+ 664 1224 l 1
+EndSplineSet
+Colour: ffff00
+EndChar
+
+StartChar: uni032F
+Encoding: 815 815 4024
+Width: 0
+VWidth: 1000
+Flags: HW
+AnchorPoint: "bottom_center" 642 0 mark 0
+LayerCount: 4
+Fore
+SplineSet
+642 -184 m 4
+ 510 -184 396 -300 396 -440 c 5
+ 441 -440 l 5
+ 441 -314 532 -224 642 -224 c 4
+ 752 -224 843 -314 843 -440 c 5
+ 888 -440 l 5
+ 888 -300 774 -184 642 -184 c 4
+EndSplineSet
+EndChar
+
+StartChar: uni035F
+Encoding: 863 863 4025
+Width: 0
+VWidth: 1000
+Flags: HW
+AnchorPoint: "bottom_center" 642 0 mark 0
+LayerCount: 4
+Fore
+SplineSet
+642 -274 m 5
+ 106 -274 l 5
+ 106 -234 l 5
+ 642 -234 l 5
+ 1178 -234 l 5
+ 1178 -274 l 5
+ 642 -274 l 5
+EndSplineSet
+Colour: ffff00
+EndChar
+
+StartChar: uni1D43
+Encoding: 7491 7491 4026
+Width: 682
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+516 910 m 5
+ 476 838 392 804 309 804 c 4
+ 190 804 84 868 84 1007 c 4
+ 84 1147 196 1211 315 1211 c 4
+ 388 1211 472 1178 513 1108 c 5
+ 513 1345 429 1389 314 1389 c 4
+ 199 1389 125 1313 125 1313 c 5
+ 108 1342 l 5
+ 108 1342 184 1419 317 1419 c 4
+ 435 1419 546 1373 546 1105 c 6
+ 546 1046 l 5
+ 546 1027 l 5
+ 546 946 l 6
+ 546 878 578 845 610 834 c 5
+ 603 804 l 5
+ 555 817 525 853 516 910 c 5
+512 1007 m 4
+ 512 1101 437 1180 315 1180 c 4
+ 193 1180 117 1118 117 1007 c 4
+ 117 896 193 834 315 834 c 4
+ 437 834 512 913 512 1007 c 4
+EndSplineSet
+Colour: ff8000
+EndChar
+
+StartChar: uni1D49
+Encoding: 7497 7497 4027
+Width: 692
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+107 1124 m 5
+ 107 1094 l 5
+ 575 1094 l 5
+ 591 1124 l 5
+ 107 1124 l 5
+346 804 m 4
+ 461 804 554 869 596 971 c 5
+ 565 987 l 5
+ 523 882 428 834 346 834 c 4
+ 249 834 117 922 117 1112 c 4
+ 117 1302 249 1389 346 1389 c 4
+ 443 1389 575 1302 575 1112 c 4
+ 575 1106 575 1100 575 1094 c 5
+ 608 1094 l 5
+ 608 1100 608 1106 608 1112 c 4
+ 608 1293 494 1419 346 1419 c 4
+ 198 1419 84 1293 84 1112 c 4
+ 84 931 198 804 346 804 c 4
+EndSplineSet
+Colour: ff8000
+EndChar
+
+StartChar: uni1D4B
+Encoding: 7499 7499 4028
+Width: 599
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+295 1142 m 1
+ 179 1142 136 1210 136 1266 c 0
+ 136 1327 185 1389 295 1389 c 0
+ 414 1389 455 1304 455 1258 c 0
+ 488 1265 l 5
+ 477 1353 409 1419 295 1419 c 0
+ 181 1419 103 1360 103 1268 c 0
+ 103 1176 165 1136 216 1125 c 1
+ 145 1120 84 1052 84 969 c 0
+ 84 869 183 804 295 804 c 0
+ 410 804 501 878 515 981 c 5
+ 482 989 l 0
+ 472 903 397 834 295 834 c 0
+ 181 834 117 905 117 972 c 0
+ 117 1039 175 1111 295 1111 c 1
+ 320 1111 328 1111 328 1111 c 25
+ 328 1142 l 25
+ 328 1142 319 1142 295 1142 c 1
+EndSplineSet
+Colour: ff8000
+EndChar
+
+StartChar: uni1D52
+Encoding: 7506 7506 4029
+Width: 692
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+346 1419 m 4
+ 198 1419 84 1293 84 1112 c 4
+ 84 931 198 804 346 804 c 4
+ 494 804 608 931 608 1112 c 4
+ 608 1293 494 1419 346 1419 c 4
+346 834 m 4
+ 249 834 117 922 117 1112 c 4
+ 117 1302 249 1389 346 1389 c 4
+ 443 1389 575 1302 575 1112 c 4
+ 575 922 443 834 346 834 c 4
+EndSplineSet
+Colour: ff8000
+EndChar
+
+StartChar: uni1D53
+Encoding: 7507 7507 4030
+Width: 680
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+334 834 m 0
+ 431 834 563 921 563 1111 c 0
+ 563 1301 431 1389 334 1389 c 0
+ 252 1389 157 1341 115 1236 c 1
+ 84 1252 l 1
+ 126 1354 219 1419 334 1419 c 0
+ 482 1419 596 1292 596 1111 c 0
+ 596 930 482 804 334 804 c 0
+ 219 804 126 869 84 971 c 1
+ 115 987 l 1
+ 157 882 252 834 334 834 c 0
+EndSplineSet
+Colour: ff8000
+EndChar
+
+StartChar: uni1D58
+Encoding: 7512 7512 4031
+Width: 678
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+141 1413 m 1
+ 141 1085 l 2
+ 141 959 183 834 339 834 c 0
+ 495 834 536 959 536 1085 c 2
+ 536 1413 l 1
+ 570 1413 l 1
+ 570 932 l 1
+ 570 875 579 810 579 810 c 1
+ 545 810 l 1
+ 545 810 536 870 536 935 c 1
+ 514 871 466 804 330 804 c 0
+ 189 804 108 895 108 1081 c 1
+ 108 1413 l 1
+ 141 1413 l 1
+EndSplineSet
+Colour: ff8000
+EndChar
+
+StartChar: uni1DA4
+Encoding: 7588 7588 4032
+Width: 313
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+0 1097 m 1
+ 313 1097 l 5
+ 313 1127 l 13
+ 0 1127 l 1
+ 0 1097 l 1
+108 1583 m 0
+ 108 1610 129 1631 156 1631 c 0
+ 183 1631 204 1610 204 1583 c 0
+ 204 1556 183 1535 156 1535 c 0
+ 129 1535 108 1556 108 1583 c 0
+173 810 m 1
+ 173 1039 l 1
+ 173 1413 l 1
+ 140 1413 l 1
+ 140 1035 l 1
+ 140 810 l 1
+ 173 810 l 1
+EndSplineSet
+Colour: ff8000
+EndChar
+
+StartChar: uni1DB6
+Encoding: 7606 7606 4033
+Width: 702
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+0 1097 m 1
+ 0 1127 l 1
+ 702 1127 l 21
+ 702 1097 l 5
+ 0 1097 l 1
+153 1413 m 1
+ 153 1085 l 2
+ 153 959 195 834 351 834 c 0
+ 507 834 548 959 548 1085 c 2
+ 548 1413 l 1
+ 582 1413 l 1
+ 582 932 l 1
+ 582 875 591 810 591 810 c 1
+ 557 810 l 1
+ 557 810 548 870 548 935 c 1
+ 526 871 478 804 342 804 c 0
+ 201 804 120 895 120 1081 c 1
+ 120 1413 l 1
+ 153 1413 l 1
+EndSplineSet
+Colour: ff8000
+EndChar
+
+StartChar: uni1DC4
+Encoding: 7620 7620 4034
+Width: 0
+VWidth: 1000
+Flags: HW
+AnchorPoint: "top_center" 682 1040 mark 0
+LayerCount: 4
+Fore
+SplineSet
+821 1274 m 5
+ 777 1274 l 5
+ 963 1530 l 5
+ 1019 1530 l 5
+ 821 1274 l 5
+285 1274 m 5
+ 285 1314 l 5
+ 821 1314 l 5
+ 777 1274 l 5
+ 285 1274 l 5
+EndSplineSet
+Colour: ffff00
+EndChar
+
+StartChar: uni1DC5
+Encoding: 7621 7621 4035
+Width: 0
+VWidth: 1000
+Flags: HW
+AnchorPoint: "top_center" 682 1040 mark 0
+LayerCount: 4
+Fore
+SplineSet
+443 1274 m 5
+ 245 1530 l 5
+ 301 1530 l 5
+ 487 1274 l 5
+ 443 1274 l 5
+443 1314 m 5
+ 979 1314 l 5
+ 979 1274 l 5
+ 487 1274 l 5
+ 443 1314 l 5
+EndSplineSet
+Colour: ffff00
+EndChar
+
+StartChar: uni1DC6
+Encoding: 7622 7622 4036
+Width: 0
+VWidth: 1000
+Flags: HW
+AnchorPoint: "top_center" 682 1040 mark 0
+LayerCount: 4
+Fore
+SplineSet
+963 1224 m 5
+ 765 1480 l 5
+ 821 1480 l 5
+ 1007 1224 l 5
+ 963 1224 l 5
+285 1440 m 5
+ 285 1480 l 5
+ 765 1480 l 5
+ 821 1440 l 5
+ 285 1440 l 5
+EndSplineSet
+Colour: ffff00
+EndChar
+
+StartChar: uni1DC7
+Encoding: 7623 7623 4037
+Width: 0
+VWidth: 1000
+Flags: HW
+AnchorPoint: "top_center" 682 1040 mark 0
+LayerCount: 4
+Fore
+SplineSet
+289 1224 m 5
+ 245 1224 l 5
+ 431 1480 l 5
+ 487 1480 l 5
+ 289 1224 l 5
+431 1440 m 5
+ 487 1480 l 5
+ 967 1480 l 5
+ 967 1440 l 5
+ 431 1440 l 5
+EndSplineSet
+Colour: ffff00
+EndChar
+
+StartChar: uni2C63
+Encoding: 11363 11363 4038
+Width: 1184
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+591 1036 m 1
+ 0 1036 l 1
+ 0 1082 0 1032 0 1078 c 1
+ 591 1078 l 1
+ 591 1036 l 1
+256 1438 m 25
+ 256 676 l 25
+ 625 676 l 17
+ 850 676 998 857 998 1057 c 0
+ 998 1257 850 1438 625 1438 c 9
+ 256 1438 l 25
+210 0 m 1
+ 210 1480 l 1
+ 625 1480 l 1
+ 849 1480 1044 1312 1044 1057 c 0
+ 1044 802 849 634 625 634 c 1
+ 256 634 l 1
+ 256 0 l 25
+ 210 0 l 1
+EndSplineSet
+Colour: ffff
+EndChar
+
+StartChar: uni2C6D
+Encoding: 11373 11373 4039
+Width: 1484
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+1258 260 m 1
+ 1258 540 l 1
+ 1278 579 l 1
+ 1278 906 l 1
+ 1258 946 l 1
+ 1258 1480 l 1
+ 1304 1480 l 1
+ 1304 208 l 1
+ 1304 110 1316 0 1316 0 c 1
+ 1271 0 l 1
+ 1271 0 1258 110 1258 260 c 1
+186 740 m 0
+ 186 265 462 32 722 32 c 0
+ 982 32 1258 265 1258 740 c 0
+ 1258 1215 982 1448 722 1448 c 0
+ 462 1448 186 1215 186 740 c 0
+140 740 m 0
+ 140 1179 374 1490 722 1490 c 0
+ 1070 1490 1304 1179 1304 740 c 0
+ 1304 301 1070 -10 722 -10 c 0
+ 374 -10 140 301 140 740 c 0
+EndSplineSet
+Colour: ffff
+EndChar
+
+StartChar: uni2C72
+Encoding: 11378 11378 4040
+Width: 2016
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+1635 1259 m 1
+ 1673 1401 1781 1490 1918 1490 c 0
+ 1946 1490 1989.53808594 1479.11425781 2005 1475 c 1
+ 2009 1474 2012 1473 2016 1471 c 1
+ 2006 1432 l 1
+ 2002 1434 1999 1436 1995 1437 c 1
+ 1979.58984375 1441.30273438 1944 1450 1920 1450 c 0
+ 1801 1450 1712 1372 1679 1247 c 5
+ 1349 0 l 1
+ 1296 0 l 1
+ 931 1418 l 1
+ 566 0 l 1
+ 513 0 l 1
+ 120 1480 l 1
+ 169 1480 l 1
+ 540 72 l 1
+ 905 1480 l 1
+ 957 1480 l 1
+ 1323 72 l 1
+ 1635 1259 l 1
+EndSplineSet
+Colour: ffff
+EndChar
+
+StartChar: uni2C73
+Encoding: 11379 11379 4041
+Width: 1664
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+1327 807 m 21
+ 1360 932 1449 1010 1568 1010 c 4
+ 1592 1010 1618 1007 1643 1000 c 5
+ 1647 999 1650 997 1654 995 c 5
+ 1664 1034 l 5
+ 1660 1036 1657 1037 1653 1038 c 5
+ 1623 1046 1594 1050 1566 1050 c 4
+ 1429 1050 1321 961 1283 819 c 13
+ 1065 89 l 1
+ 782 1040 l 25
+ 734 1040 l 25
+ 451 89 l 25
+ 168 1040 l 25
+ 120 1040 l 25
+ 428 0 l 25
+ 474 0 l 25
+ 757 960 l 25
+ 1042 0 l 25
+ 1088 0 l 1
+ 1327 807 l 21
+EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni2C73.sc
+Colour: ff00
+EndChar
+
+StartChar: uniA789
+Encoding: 42889 42889 4042
+Width: 488
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+180 930 m 4
+ 180 966 208 994 244 994 c 4
+ 280 994 308 966 308 930 c 4
+ 308 894 280 866 244 866 c 4
+ 208 866 180 894 180 930 c 4
+180 54 m 0
+ 180 90 208 118 244 118 c 0
+ 280 118 308 90 308 54 c 0
+ 308 18 280 -10 244 -10 c 0
+ 208 -10 180 18 180 54 c 0
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uniA78A
+Encoding: 42890 42890 4043
+Width: 778
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+598 820 m 5
+ 598 780 l 5
+ 180 780 l 21
+ 180 820 l 5
+ 598 820 l 5
+180 500 m 5
+ 180 540 l 5
+ 598 540 l 21
+ 598 500 l 5
+ 180 500 l 5
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uniA7B6
+Encoding: 42934 42934 4044
+Width: 1698
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+526 1490 m 17
+ 288 1490 180 1332 180 1012 c 2
+ 180 468 l 2
+ 180 148 288 -10 516 -10 c 0
+ 688 -10 803 79 849 260 c 1
+ 895 79 1010 -10 1182 -10 c 0
+ 1410 -10 1518 148 1518 468 c 2
+ 1518 1012 l 2
+ 1518 1332 1410 1490 1172 1490 c 9
+ 1172 1448 l 17
+ 1422 1448 1472 1231 1472 1012 c 2
+ 1472 468 l 2
+ 1472 249 1422 32 1172 32 c 0
+ 952 32 872 249 872 468 c 2
+ 872 1012 l 1
+ 826 1012 l 1
+ 826 468 l 2
+ 826 249 746 32 526 32 c 0
+ 276 32 226 249 226 468 c 2
+ 226 1012 l 2
+ 226 1231 276 1448 526 1448 c 9
+ 526 1490 l 17
+EndSplineSet
+Colour: ffff
+EndChar
+
+StartChar: uniA7B7
+Encoding: 42935 42935 4045
+Width: 1732
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+534 1050 m 4
+ 324 1050 180 902 180 572 c 2
+ 180 468 l 2
+ 180 138 324 -10 534 -10 c 0
+ 696 -10 818 77 866 268 c 1
+ 914 77 1036 -10 1198 -10 c 0
+ 1408 -10 1552 138 1552 468 c 2
+ 1552 572 l 2
+ 1552 902 1408 1050 1198 1050 c 0
+ 1198 1010 l 0
+ 1438 1010 1508 791 1508 572 c 2
+ 1508 468 l 2
+ 1508 249 1438 30 1198 30 c 0
+ 958 30 888 249 888 468 c 2
+ 888 680 l 1
+ 844 680 l 1
+ 844 468 l 2
+ 844 249 774 30 534 30 c 0
+ 294 30 224 249 224 468 c 2
+ 224 572 l 2
+ 224 791 294 1010 534 1010 c 0
+ 534 1050 l 4
+EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uniA7B7.sc
+Colour: ff00
+EndChar
+
+StartChar: uniA7C7
+Encoding: 42951 42951 4046
+Width: 1352
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+1190 719 m 5
+ 1190 761 l 5
+ 230 761 l 1
+ 230 715 230 765 230 719 c 1
+ 1190 719 l 5
+256 1438 m 25
+ 626 1438 l 17
+ 864 1438 1166 1240 1166 740 c 0
+ 1166 240 864 42 626 42 c 9
+ 256 42 l 25
+ 256 1438 l 25
+626 0 m 1
+ 960 0 1212 290 1212 740 c 0
+ 1212 1190 960 1480 626 1480 c 1
+ 210 1480 l 1
+ 210 0 l 1
+ 377 0 l 25
+ 626 0 l 1
+EndSplineSet
+Colour: ffff
+EndChar
+
+StartChar: uniA7C8
+Encoding: 42952 42952 4047
+Width: 1152
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+945 498 m 1
+ 175 498 l 5
+ 175 544 175 494 175 540 c 5
+ 945 540 l 1
+ 945 498 l 1
+935 520 m 1
+ 935 856 735 1010 560 1010 c 0
+ 385 1010 185 856 185 520 c 0
+ 185 184 385 30 560 30 c 0
+ 735 30 935 184 935 520 c 1
+972 208 m 1
+ 972 110 984 0 984 0 c 1
+ 939 0 l 1
+ 939 0 927 110 927 260 c 1
+ 896 144 770 -10 560 -10 c 0
+ 313 -10 140 208 140 520 c 0
+ 140 832 313 1050 560 1050 c 0
+ 760 1050 896 896 927 780 c 1
+ 927 1480 l 1
+ 972 1480 l 1
+ 972 208 l 1
+EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uniA7C8.sc
+Colour: ff00
+EndChar
+
+StartChar: uni1D7D
+Encoding: 7549 7549 4048
+Width: 1252
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+1252 500 m 1
+ 0 500 l 5
+ 0 546 0 494 0 540 c 5
+ 1252 540 l 1
+ 1252 500 l 1
+247 520 m 1
+ 247 184 447 30 622 30 c 0
+ 797 30 997 184 997 520 c 0
+ 997 856 797 1010 622 1010 c 0
+ 447 1010 247 856 247 520 c 1
+210 832 m 1
+ 210 930 210 1040 210 1040 c 1
+ 255 1040 l 1
+ 255 780 l 1
+ 286 896 412 1050 622 1050 c 0
+ 869 1050 1042 832 1042 520 c 0
+ 1042 208 869 -10 622 -10 c 0
+ 422 -10 286 144 255 260 c 1
+ 255 -440 l 1
+ 210 -440 l 1
+ 210 832 l 1
+EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uni1D7D.sc
+Colour: ff00
+EndChar
+
+StartChar: uni01B9.sc
+Encoding: 67081 -1 4049
+Width: 1061
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+560 714 m 1
+ 595 736 l 1
+ 206 1190 l 1
+ 170 1168 l 1
+ 560 714 l 1
+195 1160 m 1
+ 876 1160 l 1
+ 876 1200 l 1
+ 612 1200 434 1200 170 1200 c 1
+ 170 1168 l 1
+ 195 1160 l 1
+595 702 m 13
+ 595 736 l 17
+ 571 741 547 742 529 742 c 0
+ 332 742 140 605 140 366 c 0
+ 140 127 313 -10 529 -10 c 0
+ 745 -10 910 123 921 327 c 1
+ 874 342 l 0
+ 874 144 710 30 529 30 c 4
+ 348 30 185 143 185 366 c 0
+ 185 589 368 702 529 702 c 0
+ 595 702 l 13
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0250.sc
+Encoding: 67082 -1 4050
+Width: 1163
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+294 757 m 1
+ 863 757 l 1
+ 863 797 l 1
+ 294 797 l 1
+ 294 757 l 1
+582 62 m 1
+ 168 1200 l 1
+ 120 1200 l 1
+ 558 0 l 1
+ 606 0 l 1
+ 1043 1200 l 1
+ 995 1200 l 1
+ 582 62 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0251.sc
+Encoding: 67083 -1 4051
+Width: 1256
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+608 30 m 0
+ 820 30 1031 241 1031 600 c 0
+ 1031 959 820 1170 608 1170 c 0
+ 396 1170 185 959 185 600 c 0
+ 185 241 396 30 608 30 c 0
+1031 420 m 1
+ 1031 444 l 1
+ 1041 480 l 5
+ 1041 774 l 1
+ 1031 798 l 1
+ 1031 1200 l 1
+ 1076 1200 l 1
+ 1076 208 l 1
+ 1076 110 1088 0 1088 0 c 1
+ 1043 0 l 1
+ 1043 0 1031 270 1031 420 c 1
+608 1210 m 0
+ 862 1210 1070 963 1070 600 c 0
+ 1070 237 862 -10 608 -10 c 0
+ 354 -10 140 237 140 600 c 0
+ 140 963 354 1210 608 1210 c 0
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0253.sc
+Encoding: 67084 -1 4052
+Width: 1249
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+46 878 m 5
+ 1 878 l 5
+ 0 882 0 886 0 890 c 4
+ 0 1068 132 1200 310 1200 c 4
+ 314 1200 318 1200 322 1199 c 5
+ 322 1159 l 5
+ 318 1160 314 1160 310 1160 c 4
+ 155 1160 45 1045 45 890 c 4
+ 45 886 45 882 46 878 c 5
+1056 922 m 0
+ 1056 739 908 644 738 644 c 1
+ 738 684 l 17
+ 898 684 1011 781 1011 922 c 0
+ 1011 1053 898 1160 738 1160 c 9
+ 337 1160 l 1
+ 337 1200 l 25
+ 738 1200 l 1
+ 908 1200 1056 1105 1056 922 c 0
+355 40 m 25
+ 738 40 l 17
+ 921 40 1064 180 1064 342 c 0
+ 1064 504 921 644 738 644 c 9
+ 355 644 l 25
+ 355 40 l 25
+310 0 m 1
+ 310 1200 l 5
+ 355 1200 l 25
+ 355 684 l 1
+ 738 684 l 1
+ 937 684 1109 541 1109 342 c 0
+ 1109 143 937 0 738 0 c 1
+ 310 0 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0254.sc
+Encoding: 67085 -1 4053
+Width: 1263
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+179 881 m 1
+ 264 1066 431 1170 600 1170 c 0
+ 841 1170 1078 959 1078 600 c 0
+ 1078 241 841 30 600 30 c 0
+ 431 30 264 134 179 319 c 1
+ 140 297 l 1
+ 229 105 402 -10 600 -10 c 0
+ 889 -10 1123 237 1123 600 c 0
+ 1123 963 889 1210 600 1210 c 0
+ 402 1210 229 1095 140 903 c 1
+ 179 881 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0256.sc
+Encoding: 67086 -1 4054
+Width: 1178
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+502 -269 m 5
+ 498 -270 494 -270 490 -270 c 4
+ 335 -270 225 -155 225 0 c 4
+ 180 0 l 4
+ 180 -178 312 -310 490 -310 c 4
+ 494 -310 498 -310 502 -309 c 5
+ 502 -269 l 5
+225 1160 m 25
+ 225 40 l 25
+ 540 40 l 17
+ 793 40 993 274 993 600 c 0
+ 993 926 793 1160 540 1160 c 9
+ 225 1160 l 25
+540 0 m 1
+ 325 0 l 25
+ 180 0 l 5
+ 180 1200 l 1
+ 540 1200 l 1
+ 824 1200 1038 945 1038 600 c 0
+ 1038 255 824 0 540 0 c 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0257.sc
+Encoding: 67087 -1 4055
+Width: 1308
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+46 878 m 5
+ 1 878 l 1
+ 0 882 0 886 0 890 c 0
+ 0 1068 132 1200 310 1200 c 0
+ 314 1200 318 1200 322 1199 c 1
+ 322 1159 l 1
+ 318 1160 314 1160 310 1160 c 0
+ 155 1160 45 1045 45 890 c 0
+ 45 886 45 882 46 878 c 5
+355 1160 m 25
+ 355 40 l 25
+ 670 40 l 17
+ 923 40 1123 274 1123 600 c 0
+ 1123 926 923 1160 670 1160 c 9
+ 355 1160 l 25
+670 0 m 1
+ 455 0 l 25
+ 310 0 l 1
+ 310 1200 l 1
+ 670 1200 l 1
+ 954 1200 1168 945 1168 600 c 0
+ 1168 255 954 0 670 0 c 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0259.sc
+Encoding: 67088 -1 4056
+Width: 1326
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+185 600 m 0
+ 185 241 422 30 663 30 c 0
+ 904 30 1141 241 1141 600 c 0
+ 1141 959 904 1170 663 1170 c 0
+ 494 1170 317 1066 232 881 c 1
+ 193 903 l 1
+ 282 1095 465 1210 663 1210 c 0
+ 952 1210 1186 963 1186 600 c 0
+ 1186 237 952 -10 663 -10 c 0
+ 374 -10 140 237 140 600 c 0
+ 140 607 140 613 141 620 c 1
+ 186 620 l 1
+ 185 613 185 607 185 600 c 0
+1161 579 m 1
+ 694 579 l 1
+ 155 579 l 1
+ 186 620 l 1
+ 694 620 l 1
+ 1161 620 l 1
+ 1161 579 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni025B.sc
+Encoding: 67089 -1 4057
+Width: 1062
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+530 648 m 2
+ 404 648 233 715 233 909 c 4
+ 233 1023 334 1170 530 1170 c 4
+ 675 1170 845 1056 845 858 c 0
+ 892 873 l 1
+ 881 1077 724 1210 530 1210 c 4
+ 295 1210 188 1036 188 912 c 4
+ 188 725 311 649 401 629 c 1
+ 288 604 140 497 140 311 c 0
+ 140 130 293 -10 530 -10 c 4
+ 724 -10 911 123 922 327 c 1
+ 875 342 l 0
+ 875 144 685 30 530 30 c 4
+ 351 30 185 130 185 320 c 0
+ 185 490 363 608 530 608 c 2
+ 598 608 l 25
+ 598 648 l 25
+ 530 648 l 2
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0260.sc
+Encoding: 67090 -1 4058
+Width: 1399
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+1399 1184 m 5
+ 1395 1185 1391 1185 1387 1185 c 0
+ 1232 1185 1122 1070 1122 915 c 0
+ 1122 911 1122 907 1123 903 c 1
+ 1078 903 l 1
+ 1077 907 1077 911 1077 915 c 0
+ 1077 1093 1209 1225 1387 1225 c 0
+ 1391 1225 1395 1225 1399 1224 c 1
+ 1399 1184 l 5
+663 30 m 0
+ 832 30 999 134 1084 319 c 1
+ 1113 297 l 1
+ 1024 105 861 -10 663 -10 c 0
+ 374 -10 140 237 140 600 c 0
+ 140 963 374 1210 663 1210 c 0
+ 861 1210 1034 1095 1123 903 c 1
+ 1084 881 l 1
+ 999 1066 832 1170 663 1170 c 0
+ 422 1170 185 959 185 600 c 0
+ 185 241 422 30 663 30 c 0
+652 600 m 25
+ 1117 600 l 25
+ 1117 0 l 25
+ 1072 0 l 17
+ 1072 257 l 1
+ 1072 276 l 1
+ 1072 560 l 9
+ 652 560 l 25
+ 652 600 l 25
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0263.sc
+Encoding: 67091 -1 4059
+Width: 948
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+680 365 m 1
+ 698 335 714 293 714 233 c 0
+ 714 103 632 -10 474 -10 c 0
+ 316 -10 234 103 234 233 c 0
+ 234 303 256 335 274 365 c 1
+ 440 632 l 5
+ 100 1200 l 1
+ 148 1200 l 1
+ 474 661 l 1
+ 800 1200 l 1
+ 848 1200 l 1
+ 508 632 l 1
+ 680 365 l 1
+613 397 m 1
+ 474 602 l 1
+ 341 397 l 1
+ 314 350 279 307 279 233 c 0
+ 279 135 344 30 474 30 c 0
+ 604 30 669 135 669 233 c 0
+ 669 307 640 350 613 397 c 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0264.sc
+Encoding: 67092 -1 4060
+Width: 948
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+680 365 m 1
+ 698 335 714 293 714 233 c 0
+ 714 103 632 -10 474 -10 c 0
+ 316 -10 234 103 234 233 c 0
+ 234 303 256 335 274 365 c 1
+ 440 632 l 5
+ 100 1200 l 1
+ 148 1200 l 1
+ 474 661 l 1
+ 800 1200 l 1
+ 848 1200 l 1
+ 508 632 l 1
+ 680 365 l 1
+613 397 m 1
+ 474 602 l 1
+ 341 397 l 1
+ 314 350 279 307 279 233 c 0
+ 279 135 344 30 474 30 c 0
+ 604 30 669 135 669 233 c 0
+ 669 307 640 350 613 397 c 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0266.sc
+Encoding: 67093 -1 4061
+Width: 1204
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+180 579 m 29
+ 180 1200 l 1
+ 225 1200 l 25
+ 225 620 l 25
+ 979 620 l 25
+ 979 1200 l 25
+ 1024 1200 l 25
+ 1024 0 l 25
+ 979 0 l 25
+ 979 579 l 29
+ 180 579 l 29
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0268.sc
+Encoding: 67094 -1 4062
+Width: 799
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+632 579 m 5
+ 167 579 l 1
+ 167 588 167 610 167 619 c 1
+ 632 619 l 5
+ 632 579 l 5
+180 1200 m 25
+ 619 1200 l 25
+ 619 1160 l 25
+ 422 1160 l 25
+ 422 40 l 25
+ 619 40 l 25
+ 619 0 l 25
+ 180 0 l 25
+ 180 40 l 25
+ 377 40 l 25
+ 377 1160 l 25
+ 180 1160 l 25
+ 180 1200 l 25
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0269.sc
+Encoding: 67095 -1 4063
+Width: 799
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+180 1200 m 25
+ 619 1200 l 25
+ 619 1160 l 25
+ 422 1160 l 25
+ 422 40 l 25
+ 619 40 l 25
+ 619 0 l 25
+ 180 0 l 25
+ 180 40 l 25
+ 377 40 l 25
+ 377 1160 l 25
+ 180 1160 l 25
+ 180 1200 l 25
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni026A.sc
+Encoding: 67096 -1 4064
+Width: 799
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+180 1200 m 25
+ 619 1200 l 25
+ 619 1160 l 25
+ 422 1160 l 25
+ 422 40 l 25
+ 619 40 l 25
+ 619 0 l 25
+ 180 0 l 25
+ 180 40 l 25
+ 377 40 l 25
+ 377 1160 l 25
+ 180 1160 l 25
+ 180 1200 l 25
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni026F.sc
+Encoding: 67097 -1 4065
+Width: 1338
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+669 988 m 1
+ 225 0 l 1
+ 188 37 l 1
+ 654 1070 l 1
+ 684 1070 l 1
+ 1150 37 l 1
+ 1113 0 l 1
+ 669 988 l 1
+1158 0 m 1
+ 1113 0 l 1
+ 1113 1200 l 1
+ 1158 1200 l 1
+ 1158 0 l 1
+180 0 m 1
+ 180 1200 l 1
+ 225 1200 l 1
+ 225 0 l 1
+ 180 0 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0272.sc
+Encoding: 67098 -1 4066
+Width: 1301
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+277 0 m 12
+ 277 1200 l 1
+ 322 1200 l 1
+ 1076 82 l 25
+ 1076 1200 l 1
+ 1121 1200 l 25
+ 1121 0 l 25
+ 1076 0 l 1
+ 322 1118 l 1
+ 322 0 l 4
+ 322 -178 190 -310 12 -310 c 4
+ 8 -310 4 -310 0 -309 c 5
+ 0 -269 l 5
+ 4 -270 8 -270 12 -270 c 4
+ 167 -270 277 -155 277 0 c 12
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0275.sc
+Encoding: 67099 -1 4067
+Width: 1326
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+165 620 m 1
+ 694 620 l 1
+ 1151 620 l 1
+ 1151 579 l 1
+ 694 579 l 1
+ 165 579 l 1
+ 165 620 l 1
+663 30 m 0
+ 904 30 1141 241 1141 600 c 0
+ 1141 959 904 1170 663 1170 c 0
+ 422 1170 185 959 185 600 c 0
+ 185 241 422 30 663 30 c 0
+663 1210 m 0
+ 952 1210 1186 963 1186 600 c 0
+ 1186 237 952 -10 663 -10 c 0
+ 374 -10 140 237 140 600 c 0
+ 140 963 374 1210 663 1210 c 0
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni027D.sc
+Encoding: 67100 -1 4068
+Width: 1047
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+225 0 m 12
+ 225 500 l 1
+ 539 500 l 1
+ 733 500 903 637 903 850 c 0
+ 903 1063 733 1200 539 1200 c 1
+ 180 1200 l 1
+ 180 0 l 4
+ 180 -178 312 -310 490 -310 c 4
+ 494 -310 498 -310 502 -309 c 5
+ 502 -269 l 5
+ 498 -270 494 -270 490 -270 c 4
+ 335 -270 225 -155 225 0 c 12
+573 518 m 1
+ 867 0 l 1
+ 927 0 l 1
+ 615 537 l 1
+ 573 518 l 1
+225 1160 m 25
+ 539 1160 l 17
+ 717 1160 858 1026 858 850 c 0
+ 858 674 717 540 539 540 c 9
+ 225 540 l 25
+ 225 1160 l 25
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0283.sc
+Encoding: 67101 -1 4069
+Width: 1022
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+600 600 m 1
+ 233 40 l 1
+ 842 40 l 1
+ 842 0 l 1
+ 180 0 l 17
+ 180 32 l 1
+ 552 600 l 1
+ 180 1168 l 1
+ 180 1200 l 1
+ 842 1200 l 17
+ 842 1160 l 1
+ 233 1160 l 1
+ 600 600 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0288.sc
+Encoding: 67102 -1 4070
+Width: 1204
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+568 0 m 8
+ 568 1160 l 1
+ 180 1160 l 25
+ 180 1200 l 25
+ 1001 1200 l 25
+ 1001 1160 l 25
+ 613 1160 l 1
+ 613 0 l 16
+ 613 -155 723 -270 878 -270 c 0
+ 882 -270 886 -270 890 -269 c 1
+ 890 -309 l 1
+ 886 -310 882 -310 878 -310 c 0
+ 700 -310 568 -178 568 0 c 8
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0289.sc
+Encoding: 67103 -1 4071
+Width: 1264
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+1264 579 m 1
+ 0 579 l 1
+ 0 588 0 610 0 619 c 1
+ 1264 619 l 1
+ 1264 579 l 1
+255 1200 m 25
+ 255 501 l 17
+ 255 194 413 34 632 34 c 0
+ 851 34 1009 184 1009 501 c 9
+ 1009 1200 l 25
+ 1054 1200 l 25
+ 1054 501 l 17
+ 1054 181 903 -6 632 -6 c 0
+ 361 -6 210 181 210 501 c 9
+ 210 1200 l 25
+ 255 1200 l 25
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni028A.sc
+Encoding: 67104 -1 4072
+Width: 1326
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+140 1210 m 1
+ 140 1170 l 1
+ 572 1170 l 1
+ 572 1210 l 1
+ 140 1210 l 1
+1186 1210 m 1
+ 754 1210 l 1
+ 754 1170 l 1
+ 1186 1170 l 1
+ 1186 1210 l 1
+140 610 m 0
+ 140 247 374 0 663 0 c 0
+ 952 0 1186 247 1186 610 c 0
+ 1186 876 1060 1080 879 1170 c 1
+ 754 1170 l 1
+ 960 1124 1141 924 1141 610 c 0
+ 1141 251 904 40 663 40 c 0
+ 422 40 185 251 185 610 c 0
+ 185 924 366 1123 572 1170 c 1
+ 447 1170 l 1
+ 266 1080 140 876 140 610 c 0
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni028B.sc
+Encoding: 67105 -1 4073
+Width: 1204
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+979 900 m 12
+ 979 501 l 1
+ 979 184 821 34 602 34 c 0
+ 383 34 225 194 225 501 c 9
+ 225 1200 l 25
+ 180 1200 l 25
+ 180 501 l 17
+ 180 181 331 -6 602 -6 c 0
+ 873 -6 1024 181 1024 501 c 1
+ 1024 900 l 16
+ 1024 1078 891 1210 713 1210 c 0
+ 709 1210 705 1210 701 1209 c 1
+ 701 1169 l 1
+ 705 1170 709 1170 713 1170 c 0
+ 868 1170 979 1055 979 900 c 12
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni028C.sc
+Encoding: 67106 -1 4074
+Width: 1163
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+582 1138 m 1
+ 168 0 l 1
+ 120 0 l 1
+ 558 1200 l 1
+ 606 1200 l 1
+ 1043 0 l 1
+ 995 0 l 1
+ 582 1138 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0292.sc
+Encoding: 67107 -1 4075
+Width: 1061
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+501 714 m 1
+ 466 736 l 1
+ 855 1190 l 1
+ 891 1168 l 1
+ 501 714 l 1
+866 1160 m 1
+ 185 1160 l 1
+ 185 1200 l 1
+ 449 1200 627 1200 891 1200 c 1
+ 891 1168 l 1
+ 866 1160 l 1
+466 702 m 13
+ 466 736 l 17
+ 490 741 514 742 532 742 c 0
+ 729 742 921 605 921 366 c 0
+ 921 127 748 -10 532 -10 c 0
+ 316 -10 151 123 140 327 c 1
+ 187 342 l 0
+ 187 144 351 30 532 30 c 4
+ 713 30 876 143 876 366 c 0
+ 876 589 693 702 532 702 c 0
+ 466 702 l 13
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni0298.sc
+Encoding: 67108 -1 4076
+Width: 1326
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+599 600 m 4
+ 599 636 627 664 663 664 c 4
+ 699 664 727 636 727 600 c 4
+ 727 564 699 536 663 536 c 4
+ 627 536 599 564 599 600 c 4
+663 30 m 0
+ 904 30 1141 241 1141 600 c 0
+ 1141 959 904 1170 663 1170 c 0
+ 422 1170 185 959 185 600 c 0
+ 185 241 422 30 663 30 c 0
+663 1210 m 0
+ 952 1210 1186 963 1186 600 c 0
+ 1186 237 952 -10 663 -10 c 0
+ 374 -10 140 237 140 600 c 0
+ 140 963 374 1210 663 1210 c 0
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni029D.sc
+Encoding: 67109 -1 4077
+Width: 932
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+932 412 m 1
+ 352 412 l 1
+ 352 372 l 1
+ 932 372 l 1
+ 932 412 l 1
+352 -10 m 0
+ 558 -10 706 122 706 371 c 1
+ 706 1200 l 1
+ 661 1200 l 1
+ 661 371 l 1
+ 661 151 530 30 352 30 c 0
+ 252 30 185 101 185 201 c 0
+ 185 301 252 372 352 372 c 0
+ 352 412 l 0
+ 232 412 140 321 140 201 c 0
+ 140 81 232 -10 352 -10 c 0
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni1D7D.sc
+Encoding: 67110 -1 4078
+Width: 1073
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+590 829 m 5
+ 0 829 l 5
+ 0 875 0 825 0 871 c 5
+ 590 871 l 5
+ 590 829 l 5
+255 1160 m 25
+ 255 540 l 25
+ 569 540 l 17
+ 747 540 888 674 888 850 c 0
+ 888 1026 747 1160 569 1160 c 9
+ 255 1160 l 25
+210 0 m 1
+ 210 1200 l 1
+ 569 1200 l 1
+ 763 1200 933 1063 933 850 c 0
+ 933 637 763 500 569 500 c 1
+ 255 500 l 1
+ 255 0 l 25
+ 210 0 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uni1E96.sc
+Encoding: 67111 -1 4079
+Width: 1204
+Flags: H
+LayerCount: 4
+Fore
+Refer: 1203 817 N 1 0 0 1 -40 0 2
+Refer: 3183 -1 N 1 0 0 1 0 0 3
+Colour: ff
+EndChar
+
+StartChar: uni2C73.sc
+Encoding: 67112 -1 4080
+Width: 1821
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+1440 979 m 1
+ 1478 1121 1586 1210 1723 1210 c 4
+ 1751 1210 1780 1206 1810 1198 c 5
+ 1814 1197 1817 1196 1821 1194 c 5
+ 1811 1155 l 5
+ 1807 1157 1804 1159 1800 1160 c 5
+ 1775 1167 1749 1170 1725 1170 c 4
+ 1606 1170 1517 1092 1484 967 c 1
+ 1210 0 l 1
+ 1155 0 l 1
+ 816 1200 l 1
+ 858 1200 l 1
+ 1182 60 l 1
+ 1440 979 l 1
+519 0 m 1
+ 464 0 l 1
+ 120 1200 l 1
+ 167 1200 l 1
+ 491 60 l 1
+ 816 1200 l 1
+ 858 1200 l 1
+ 519 0 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uniA78C.sc
+Encoding: 67113 -1 4081
+Width: 404
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+224 1200 m 25
+ 224 452 l 29
+ 180 452 l 5
+ 180 1200 l 1
+ 224 1200 l 25
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uniA7B5.sc
+Encoding: 67114 -1 4082
+Width: 1119
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+926 922 m 0
+ 926 739 778 644 608 644 c 1
+ 608 684 l 17
+ 768 684 881 781 881 922 c 0
+ 881 1053 768 1160 608 1160 c 9
+ 207 1160 l 1
+ 207 1200 l 25
+ 608 1200 l 1
+ 778 1200 926 1105 926 922 c 0
+225 40 m 25
+ 608 40 l 17
+ 791 40 934 180 934 342 c 0
+ 934 504 791 644 608 644 c 9
+ 225 644 l 25
+ 225 40 l 25
+180 1200 m 1
+ 225 1200 l 25
+ 225 684 l 1
+ 608 684 l 1
+ 807 684 979 541 979 342 c 0
+ 979 143 807 0 608 0 c 1
+ 225 0 l 5
+ 225 -440 l 5
+ 180 -440 l 1
+ 180 1200 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uniA7B7.sc
+Encoding: 67115 -1 4083
+Width: 1455
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+225 399 m 2
+ 225 101 341 30 465 30 c 0
+ 589 30 705 101 705 399 c 2
+ 705 800 l 1
+ 750 800 l 1
+ 750 399 l 2
+ 750 101 866 30 990 30 c 0
+ 1114 30 1230 101 1230 399 c 2
+ 1230 841 l 2
+ 1230 1139 1114 1210 990 1210 c 0
+ 990 1250 l 0
+ 1167 1250 1275 1152 1275 841 c 2
+ 1275 399 l 2
+ 1275 88 1167 -10 990 -10 c 0
+ 785 -10 735 151 728 227 c 1
+ 721 151 670 -10 465 -10 c 0
+ 288 -10 180 88 180 399 c 2
+ 180 841 l 2
+ 180 1152 288 1250 465 1250 c 0
+ 465 1210 l 0
+ 341 1210 225 1139 225 841 c 2
+ 225 399 l 2
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uniA7C8.sc
+Encoding: 67116 -1 4084
+Width: 1138
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+185 1160 m 25
+ 185 40 l 25
+ 500 40 l 17
+ 753 40 953 274 953 600 c 0
+ 953 926 753 1160 500 1160 c 9
+ 185 1160 l 25
+500 0 m 1
+ 285 0 l 25
+ 140 0 l 1
+ 140 1200 l 1
+ 500 1200 l 1
+ 784 1200 998 945 998 600 c 0
+ 998 255 784 0 500 0 c 1
+965 579 m 1
+ 170 579 l 1
+ 170 588 170 610 170 619 c 1
+ 965 619 l 1
+ 965 579 l 1
+EndSplineSet
+Colour: ff00
+EndChar
+
+StartChar: uniA7B5
+Encoding: 42933 42933 4085
+Width: 1186
+VWidth: 1000
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+629 -10 m 0
+ 892 -10 1046 136 1046 391 c 0
+ 1046 646 846 792 582 792 c 0
+ 582 752 l 0
+ 758 752 1001 657 1001 391 c 0
+ 1001 125 805 30 629 30 c 0
+ 431 30 222 215 222 215 c 1
+ 197 174 l 1
+ 197 174 385 -10 629 -10 c 0
+494 792 m 1
+ 494 752 l 1
+ 582 752 l 1
+ 582 792 l 1
+ 494 792 l 1
+225 1101 m 0
+ 225 1341 393 1450 573 1450 c 0
+ 753 1450 922 1341 922 1101 c 0
+ 922 861 714 792 582 792 c 0
+ 601 759 l 0
+ 783 759 967 866 967 1101 c 0
+ 967 1356 797 1490 573 1490 c 0
+ 349 1490 180 1356 180 1101 c 0
+ 180 846 180 -440 180 -440 c 9
+ 225 -440 l 17
+ 225 -440 225 943 225 1101 c 0
+EndSplineSet
+Substitution2: "sous-table 'smcp' Bas-de-casse vers petites capitales dans Latin lookup 0" uniA7B5.sc
+Colour: ff00
+EndChar
+
+StartChar: uniA7B4
+Encoding: 42932 42932 4086
+Width: 1154
+Flags: HW
+LayerCount: 4
+Fore
+SplineSet
+595 1480 m 1
+ 789 1480 957 1362 957 1142 c 0
+ 957 922 789 804 595 804 c 1
+ 595 846 l 1
+ 785 846 911 962 911 1142 c 0
+ 911 1322 785 1438 595 1438 c 9
+ 226 1438 l 1
+ 226 1480 l 25
+ 595 1480 l 1
+226 42 m 25
+ 595 42 l 17
+ 820 42 968 223 968 423 c 0
+ 968 623 820 804 595 804 c 9
+ 226 804 l 25
+ 226 42 l 25
+180 -440 m 1
+ 180 1480 l 1
+ 226 1480 l 25
+ 226 846 l 1
+ 595 846 l 1
+ 819 846 1014 678 1014 423 c 0
+ 1014 168 819 0 595 0 c 1
+ 226 0 l 5
+ 226 -440 l 5
+ 180 -440 l 1
 EndSplineSet
 Colour: ffff
 EndChar
