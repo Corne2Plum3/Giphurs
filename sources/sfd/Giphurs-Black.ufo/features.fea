@@ -5,9 +5,15 @@ languagesystem grek dflt;
 languagesystem hani dflt;
 languagesystem latn dflt;
 
+@CombiningTopAccents = [gravecomb acutecomb uni0302 tildecomb uni0304 uni0306 uni0307 uni0308 hookabovecomb uni030A uni030B uni030C uni030F uni0311 uni0312 uni0313 uni0314 uni0315 uni0340 uni0341 uni0342 uni0343 uni0357 uni0483 uni0484 uni0485 uni0486 uni0487];
+@CombiningBottomAccents = [dotbelowcomb uni0324 uni0325 uni0326 uni0327 uni0328 uni032E uni0330 uni0331];
 
 # GSUB 
-
+lookup centeredglyphs {
+    sub [asterisk]' by [asterisk.centered];
+    sub [colon]' by [colon.centered];
+    sub [x]' by [multiply];
+} centeredglyphs;
 
 lookup c2scCapitalesverspetitescapitalesdansLatinlookup0 {
   lookupflag 0;
@@ -4919,6 +4925,63 @@ lookup markPositionnementdesignelookups1 {
   pos base [\i.sc.ss03 \iota.sc.ss03 \uni0456.sc.ss03 ] <anchor 251 1200> mark @top_center;
 } markPositionnementdesignelookups1;
 
+lookup ccmpsoftdottedlookup1 {
+    # i with a dot above it
+    sub [i afii10103]' @CombiningTopAccents by [dotlessi dotlessi];
+    # i with something below and a dot above it
+    sub [i afii10103]' @CombiningBottomAccents @CombiningTopAccents by [dotlessi dotlessi];
+    # i stroke with a dot above it
+    sub [uni0268]' @CombiningTopAccents by [dotlessuni0268];
+    # i stroke with something below and a dot above it
+    sub [uni0268]' @CombiningBottomAccents @CombiningTopAccents by [dotlessuni0268];
+    # i with horn a dot above it
+    sub [i afii10103]' uni031B @CombiningTopAccents by [dotlessi dotlessi];
+    # i with horn and something below and a dot above it
+    sub [i afii10103]' uni031B @CombiningBottomAccents @CombiningTopAccents by [dotlessi dotlessi];
+    # i ogonek wih something above it
+    sub [iogonek]' @CombiningTopAccents by i uni0328;
+    # i tilde below
+    sub [uni1E2D]' @CombiningTopAccents by i uni0330;
+    # i dot below
+    sub [uni1ECB]' @CombiningTopAccents by i dotbelowcomb;
+    # j with a dot above it 
+    sub [j uni03F3 afii10105]' @CombiningTopAccents by [uni0237 uni0237 uni0237];
+    # j with something below and a dot above it
+    sub [j uni03F3 afii10105]' @CombiningBottomAccents @CombiningTopAccents by [uni0237 uni0237 uni0237];
+    # j stroke with a dot above it
+    sub [uni0249]' @CombiningTopAccents by [uni025F];
+    # j stroke with something below and a dot above it
+    sub [uni0249]' @CombiningBottomAccents @CombiningTopAccents by [uni025F];
+
+} ccmpsoftdottedlookup1;
+
+feature calt {
+    script DFLT;
+        language dflt;
+            sub [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189] colon' lookup centeredglyphs [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189];
+            sub [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189] asterisk' lookup centeredglyphs [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189];
+            sub [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189] [x]' lookup centeredglyphs [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189];
+
+    script latn;
+        language dflt;
+            sub [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189] colon' lookup centeredglyphs [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189];
+            sub [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189] asterisk' lookup centeredglyphs [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189];
+            sub [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189] [x]' lookup centeredglyphs [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189];
+        language CAT exclude_dflt;
+            sub [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189] colon' lookup centeredglyphs [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189];
+            sub [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189] asterisk' lookup centeredglyphs [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189];
+            sub [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189] [x]' lookup centeredglyphs [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189];
+        language MOL exclude_dflt;
+            sub [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189] colon' lookup centeredglyphs [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189];
+            sub [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189] asterisk' lookup centeredglyphs [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189];
+            sub [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189] [x]' lookup centeredglyphs [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189];
+        language ROM exclude_dflt;
+            sub [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189] colon' lookup centeredglyphs [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189];
+            sub [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189] asterisk' lookup centeredglyphs [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189];
+            sub [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189] [x]' lookup centeredglyphs [zero one two three four five six seven eight nine onequarter onehalf threequarters uni0250 uni0251 uni0252 onethird twothirds uni2155 uni2156 uni2157 uni2158 uni2159 uni215A oneeighth threeeighths fiveeighths seveneighths uni215F uni2189];
+} calt;
+
+
 feature kern {
 
  script DFLT;
@@ -4964,6 +5027,23 @@ feature mark {
      language dflt ;
       lookup markPositionnementdesignelookups1;
 } mark;
+
+feature ccmp {
+ script DFLT;
+     language dflt ;
+      lookup ccmpsoftdottedlookup1;
+
+ script latn;
+     language dflt ;
+      lookup ccmpsoftdottedlookup1;
+     language CAT  exclude_dflt;
+      lookup ccmpsoftdottedlookup1;
+     language MOL  exclude_dflt;
+      lookup ccmpsoftdottedlookup1;
+     language ROM  exclude_dflt;
+      lookup ccmpsoftdottedlookup1;
+} ccmp;
+
 #Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
