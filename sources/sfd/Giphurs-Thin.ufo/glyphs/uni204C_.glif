@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni204C" format="2">
+  <advance width="460"/>
+  <unicode hex="204C"/>
+  <note>Half of a bullet (U+2022) then a rectangle with the same height than the bullet.</note>
+  <outline>
+    <contour>
+      <point x="275" y="830" type="line"/>
+      <point x="320" y="830" type="line"/>
+      <point x="320" y="650" type="line"/>
+      <point x="275" y="650" type="line"/>
+    </contour>
+    <contour>
+      <point x="230" y="650" type="line" smooth="yes"/>
+      <point x="180" y="650"/>
+      <point x="140" y="690"/>
+      <point x="140" y="740" type="curve" smooth="yes"/>
+      <point x="140" y="790"/>
+      <point x="180" y="830"/>
+      <point x="230" y="830" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+</glyph>

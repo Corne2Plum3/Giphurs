@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni2296" format="2">
+  <advance width="1228"/>
+  <unicode hex="2296"/>
+  <note>Circle with same thickness than circled number/letters but smaller, with subscript minus sign inside</note>
+  <outline>
+    <contour>
+      <point x="338" y="600" type="line"/>
+      <point x="890" y="600" type="line"/>
+      <point x="890" y="720" type="line"/>
+      <point x="338" y="720" type="line"/>
+    </contour>
+    <contour>
+      <point x="614" y="1054" type="curve" smooth="yes"/>
+      <point x="837" y="1054"/>
+      <point x="1008" y="883"/>
+      <point x="1008" y="660" type="curve" smooth="yes"/>
+      <point x="1008" y="437"/>
+      <point x="837" y="266"/>
+      <point x="614" y="266" type="curve" smooth="yes"/>
+      <point x="391" y="266"/>
+      <point x="220" y="437"/>
+      <point x="220" y="660" type="curve" smooth="yes"/>
+      <point x="220" y="883"/>
+      <point x="391" y="1054"/>
+    </contour>
+    <contour>
+      <point x="614" y="1174" type="curve" smooth="yes"/>
+      <point x="324" y="1174"/>
+      <point x="100" y="950"/>
+      <point x="100" y="660" type="curve" smooth="yes"/>
+      <point x="100" y="370"/>
+      <point x="324" y="146"/>
+      <point x="614" y="146" type="curve" smooth="yes"/>
+      <point x="904" y="146"/>
+      <point x="1128" y="370"/>
+      <point x="1128" y="660" type="curve" smooth="yes"/>
+      <point x="1128" y="950"/>
+      <point x="904" y="1174"/>
+    </contour>
+  </outline>
+</glyph>
