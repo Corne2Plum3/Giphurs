@@ -1,14 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <designspace format="5.0">
   <axes>
-    <axis tag="wght" name="weight" minimum="100" maximum="900" default="400"/>
+    <axis tag="wght" name="weight" minimum="400" maximum="400" default="400"/>
   </axes>
   <sources>
-    <source filename="ufo/Giphurs-Thin.ufo" familyname="Giphurs" stylename="Thin">
-      <location>
-        <dimension name="weight" xvalue="100"/>
-      </location>
-    </source>
     <source filename="ufo/Giphurs-Regular.ufo" name="master.Giphurs.Regular.0" familyname="Giphurs" stylename="Regular">
       <lib copy="1"/>
       <groups copy="1"/>
@@ -18,72 +13,11 @@
         <dimension name="weight" xvalue="400"/>
       </location>
     </source>
-    <source filename="ufo/Giphurs-Black.ufo" familyname="Giphurs" stylename="Black">
-      <location>
-        <dimension name="weight" xvalue="900"/>
-      </location>
-    </source>
   </sources>
   <instances>
-    <instance filename="ufo/Giphurs-Thin.ufo" name="Giphurs Thin" familyname="Giphurs" stylename="Thin" stylemapfamilyname="Giphurs Thin" stylemapstylename="">
-      <location>
-        <dimension name="weight" xvalue="100"/>
-      </location>
-      <kerning/>
-      <info/>
-    </instance>
-    <instance filename="ufo/Giphurs-ExtraLight.ufo" name="Giphurs ExtraLight" familyname="Giphurs" stylename="ExtraLight" stylemapfamilyname="Giphurs ExtraLight" stylemapstylename="">
-      <location>
-        <dimension name="weight" xvalue="200"/>
-      </location>
-      <kerning/>
-      <info/>
-    </instance>
-    <instance filename="ufo/Giphurs-Light.ufo" name="Giphurs Light" familyname="Giphurs" stylename="Light" stylemapfamilyname="Giphurs Light" stylemapstylename="">
-      <location>
-        <dimension name="weight" xvalue="300"/>
-      </location>
-      <kerning/>
-      <info/>
-    </instance>
     <instance filename="ufo/Giphurs-Regular.ufo" name="Giphurs Regular" familyname="Giphurs" stylename="Regular" stylemapfamilyname="Giphurs Regular" stylemapstylename="">
       <location>
         <dimension name="weight" xvalue="400"/>
-      </location>
-      <kerning/>
-      <info/>
-    </instance>
-    <instance filename="ufo/Giphurs-Medium.ufo" name="Giphurs Medium" familyname="Giphurs" stylename="Medium" stylemapfamilyname="Giphurs Medium" stylemapstylename="">
-      <location>
-        <dimension name="weight" xvalue="500"/>
-      </location>
-      <kerning/>
-      <info/>
-    </instance>
-    <instance filename="ufo/Giphurs-SemiBold.ufo" name="Giphurs SemiBold" familyname="Giphurs" stylename="SemiBold" stylemapfamilyname="Giphurs SemiBold" stylemapstylename="">
-      <location>
-        <dimension name="weight" xvalue="600"/>
-      </location>
-      <kerning/>
-      <info/>
-    </instance>
-    <instance filename="ufo/Giphurs-Bold.ufo" name="Giphurs Bold" familyname="Giphurs" stylename="Bold" stylemapfamilyname="Giphurs Bold" stylemapstylename="">
-      <location>
-        <dimension name="weight" xvalue="700"/>
-      </location>
-      <kerning/>
-      <info/>
-    </instance>
-    <instance filename="ufo/Giphurs-ExtraBold.ufo" name="Giphurs ExtraBold" familyname="Giphurs" stylename="ExtraBold" stylemapfamilyname="Giphurs ExtraBold" stylemapstylename="">
-      <location>
-        <dimension name="weight" xvalue="800"/>
-      </location>
-      <kerning/>
-      <info/>
-    </instance>
-    <instance filename="ufo/Giphurs-Black.ufo" name="Giphurs Black" familyname="Giphurs" stylename="Black" stylemapfamilyname="Giphurs Black" stylemapstylename="">
-      <location>
-        <dimension name="weight" xvalue="900"/>
       </location>
       <kerning/>
       <info/>

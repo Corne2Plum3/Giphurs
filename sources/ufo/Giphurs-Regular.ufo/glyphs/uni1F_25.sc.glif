@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni1F25.sc" format="2">
   <advance width="1238"/>
-  <anchor x="619" y="-80" name="bottom_ypogegrammeni"/>
-  <anchor x="619" y="0" name="bottom_center"/>
-  <anchor x="230" y="-20" name="bottom_cedilla"/>
   <outline>
-    <component base="uni1FFE" xOffset="206" yOffset="180"/>
-    <component base="uni1FFD" xOffset="489" yOffset="190"/>
-    <component base="eta.sc"/>
+    <component base="acutecomb" xOffset="-12" yOffset="621"/>
+    <component base="uni1F21.sc"/>
   </outline>
 </glyph>
