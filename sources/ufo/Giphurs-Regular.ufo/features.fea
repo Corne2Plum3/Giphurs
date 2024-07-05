@@ -4054,8 +4054,8 @@ lookup ligaStandardLigatureslookup0 {
     sub \i \uni0307  by \i;
     sub \j \uni0307  by \j;
     sub \i \gravecomb  by \igrave;
-    sub \i \acutecomb  by \iacute;
     sub \uni0456 \acutecomb  by \iacute;
+    sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0308  by \idieresis;
     sub \i \uni030A  by \dotlessi;
@@ -6808,13 +6808,12 @@ lookup markPositionnementdesignelookups1 {
   markClass [\uni0327 ] <anchor 642 -20> @bottom_cedilla;
   markClass [\uni0328 ] <anchor 642 0> @bottom_right;
   markClass [\uni031B ] <anchor 0 1480> @top_right;
-  markClass [\uni0326 \uni0325 \dotbelowcomb \uni0331 \uni032D \uni0330 \uni0324 \uni032F \uni035F ] <anchor 642 0> @bottom_center;
-  markClass [\uni032E ] <anchor 642 -614> @bottom_center;
+  markClass [\uni0326 \uni0325 \dotbelowcomb \uni0331 \uni032D \uni0330 \uni032E \uni0324 \uni032F \uni035F ] <anchor 642 0> @bottom_center;
   markClass [\gravecomb \acutecomb \uni0302 \tildecomb \uni0308 \uni030A \uni0304 \uni0306 \uni0307 \uni030C \uni030B \uni030F \uni0311 \uni0314 \uni0315 \uni0485 \uni0486 \hookabovecomb \uni0313 \uni0312 \uni0340 \uni0341 \uni0343 \uni0342 \uni0357 \uni030D \uni1DC4 \uni1DC5 \uni1DC6 \uni1DC7 ] <anchor 642 1040> @top_center;
   markClass [\dieresistonos \uni1FED \uni1FEE ] <anchor 421 1040> @top_center;
   markClass [\uni1FC0 ] <anchor 411 1040> @top_center;
   markClass [\uni1FC1 ] <anchor 422 1040> @top_center;
-  pos base [\o \omicron ] <anchor 598 1040> mark @top_center
+  pos base [\o \uni043E \omicron ] <anchor 598 1040> mark @top_center
 	<anchor 598 0> mark @bottom_center
 	<anchor 1048 1040> mark @top_right
 	<anchor 738 0> mark @bottom_right;
@@ -6891,11 +6890,11 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 253 -38> mark @bottom_cedilla
 	<anchor 717 -18> mark @bottom_center
 	<anchor 717 1362> mark @top_center;
-  pos base [\O \uni041E ] <anchor 968 0> mark @bottom_right
+  pos base [\O \Omicron \uni041E ] <anchor 968 0> mark @bottom_right
 	<anchor 801 0> mark @bottom_center
 	<anchor 1380 1480> mark @top_right
 	<anchor 801 1380> mark @top_center;
-  pos base [\E \uni0415 ] <anchor 604 1380> mark @top_center
+  pos base [\E \Epsilon \uni0415 ] <anchor 604 1380> mark @top_center
 	<anchor 604 0> mark @bottom_center
 	<anchor 1068 0> mark @bottom_right
 	<anchor 604 -20> mark @bottom_cedilla;
@@ -6907,7 +6906,7 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 699 0> mark @bottom_center;
   pos base [\L ] <anchor 235 1380> mark @top_center
 	<anchor 604 0> mark @bottom_center;
-  pos base [\I \uni0406 ] <anchor 498 0> mark @bottom_right
+  pos base [\I \Iota \uni0406 ] <anchor 498 0> mark @bottom_right
 	<anchor 403 0> mark @bottom_center
 	<anchor 403 1380> mark @top_center;
   pos base [\D ] <anchor 662 1380> mark @top_center
@@ -6933,7 +6932,7 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 794 0> mark @bottom_center;
   pos base [\Z \Zeta ] <anchor 699 1380> mark @top_center
 	<anchor 696 0> mark @bottom_center;
-  pos base [\X \Y \Chi \uni0425 ] <anchor 696 0> mark @bottom_center
+  pos base [\X \Y \Upsilon \Chi \uni0425 ] <anchor 696 0> mark @bottom_center
 	<anchor 696 1380> mark @top_center;
   pos base [\W ] <anchor 992 1380> mark @top_center
 	<anchor 992 0> mark @bottom_center;
@@ -6941,8 +6940,6 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 564 0> mark @bottom_center;
   pos base [\S \uni01A7 ] <anchor 610 1380> mark @top_center
 	<anchor 610 0> mark @bottom_center;
-  pos base [\Otilde \uni022E ] <anchor 801 1720> mark @top_center;
-  pos base [\udieresis ] <anchor 577 1400> mark @top_center;
   pos base [\dotlessi \uni0456 \i.ss08 ] <anchor 230 1040> mark @top_center
 	<anchor 230 0> mark @bottom_center
 	<anchor 320 0> mark @bottom_right;
@@ -6950,7 +6947,7 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 1477 1380> mark @top_center;
   pos base [\ae ] <anchor 920 1040> mark @top_center
 	<anchor 920 0> mark @bottom_center;
-  pos base [\oslash \sigma1 \uni03DB \uni043E \uni0454 \uni04D9 \uni04E9 ] <anchor 598 1040> mark @top_center
+  pos base [\oslash \sigma1 \uni03DB \uni0454 \uni04D9 \uni04E9 ] <anchor 598 1040> mark @top_center
 	<anchor 598 0> mark @bottom_center;
   pos base [\longs ] <anchor 390 1400> mark @top_center
 	<anchor 230 0> mark @bottom_center;
@@ -6962,10 +6959,6 @@ lookup markPositionnementdesignelookups1 {
   pos base [\uni01A8 ] <anchor 506 1040> mark @top_center
 	<anchor 506 0> mark @bottom_center
 	<anchor 344 0> mark @bottom_right;
-  pos base [\uni01EA \uni1ECC ] <anchor 801 1380> mark @top_center;
-  pos base [\uni01EB \uni0229 \uni1EB9 \uni1ECD ] <anchor 598 1040> mark @top_center;
-  pos base [\uni0227 ] <anchor 540 1400> mark @top_center;
-  pos base [\uni022F \uni1E5A ] <anchor 598 1400> mark @top_center;
   pos base [\uni0254 ] <anchor 544 -20> mark @bottom_cedilla
 	<anchor 544 0> mark @bottom_center
 	<anchor 544 1040> mark @top_center;
@@ -6975,27 +6968,10 @@ lookup markPositionnementdesignelookups1 {
   pos base [\omega ] <anchor 790 -90> mark @bottom_ypogegrammeni
 	<anchor 790 1040> mark @top_center
 	<anchor 790 0> mark @bottom_center;
-  pos base [\Epsilon ] <anchor 604 -90> mark @bottom_ypogegrammeni
-	<anchor 604 -20> mark @bottom_cedilla
-	<anchor 1068 0> mark @bottom_right
-	<anchor 604 0> mark @bottom_center
-	<anchor 604 1380> mark @top_center;
   pos base [\Eta \uni041D ] <anchor 699 -90> mark @bottom_ypogegrammeni
 	<anchor 235 -20> mark @bottom_cedilla
 	<anchor 699 0> mark @bottom_center
 	<anchor 699 1380> mark @top_center;
-  pos base [\Iota ] <anchor 403 0> mark @bottom_center
-	<anchor 498 0> mark @bottom_right
-	<anchor 403 -90> mark @bottom_ypogegrammeni
-	<anchor 403 1380> mark @top_center;
-  pos base [\Omicron ] <anchor 801 0> mark @bottom_center
-	<anchor 968 0> mark @bottom_right
-	<anchor 801 -90> mark @bottom_ypogegrammeni
-	<anchor 1380 1480> mark @top_right
-	<anchor 801 1380> mark @top_center;
-  pos base [\Upsilon ] <anchor 696 0> mark @bottom_center
-	<anchor 696 -90> mark @bottom_ypogegrammeni
-	<anchor 696 1380> mark @top_center;
   pos base [\uni0394 ] <anchor 748 1380> mark @top_center
 	<anchor 748 0> mark @bottom_center;
   pos base [\Xi \Sigma ] <anchor 604 1380> mark @top_center
@@ -7124,31 +7100,31 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 678 0> mark @bottom_center;
   pos base [\uni0475 ] <anchor 575 1040> mark @top_center
 	<anchor 530 0> mark @bottom_center;
-  pos base [\uni1E5B ] <anchor 468 1040> mark @top_center;
-  pos base [\uni1E62 ] <anchor 610 1380> mark @top_center;
-  pos base [\uni1E63 ] <anchor 532 1040> mark @top_center;
   pos base [\uni1EA0 ] <anchor 678 1380> mark @top_center;
   pos base [\uni1EA1 ] <anchor 540 1040> mark @top_center;
   pos base [\uni1EB8 ] <anchor 604 1380> mark @top_center;
+  pos base [\uni1EB9 \uni1ECD ] <anchor 598 1040> mark @top_center;
+  pos base [\uni1ECC ] <anchor 801 1380> mark @top_center;
   pos base [\uni1EE4 ] <anchor 699 1380> mark @top_center;
   pos base [\uni1EE5 ] <anchor 578 1040> mark @top_center;
   pos base [\uni25CC ] <anchor 642 -90> mark @bottom_ypogegrammeni
 	<anchor 788 0> mark @bottom_right
 	<anchor 642 0> mark @bottom_center
 	<anchor 642 1040> mark @top_center;
-  pos base [\uniE02F \I.cv22 \Iota.cv22 \uni0406.cv22 ] <anchor 330 0> mark @bottom_right
+  pos base [\uniE02F \I.cv22 \Iota.cv22 \uni0406.cv22 \uni04C0.cv22 ] <anchor 330 0> mark @bottom_right
 	<anchor 235 0> mark @bottom_center
 	<anchor 235 1380> mark @top_center;
-  pos base [\uniE030 \a.cv23 \uni1E9A.cv23 ] <anchor 1064 0> mark @bottom_right
+  pos base [\uniE030 \a.cv23 \uni0430.cv23 \uni1E9A.cv23 ] <anchor 1064 0> mark @bottom_right
 	<anchor 608 0> mark @bottom_center
 	<anchor 608 1040> mark @top_center;
+  pos base [\uniE031 \ae.cv23 \uni04D5.cv23 ] <anchor 949 1040> mark @top_center;
   pos base [\uniE032 \g.cv24 ] <anchor 608 1040> mark @top_center
 	<anchor 608 -360> mark @bottom_center;
   pos base [\uniE033 \u.cv25 ] <anchor 578 1040> mark @top_center
 	<anchor 578 0> mark @bottom_center
 	<anchor 711 0> mark @bottom_right
 	<anchor 1016 1040> mark @top_right;
-  pos base [\uniE034 \a.sc \alpha.sc ] <anchor 595 1200> mark @top_center
+  pos base [\uniE034 \a.sc \alpha.sc \uni0430.sc ] <anchor 595 1200> mark @top_center
 	<anchor 595 -80> mark @bottom_ypogegrammeni
 	<anchor 1119 0> mark @bottom_right
 	<anchor 595 0> mark @bottom_center;
@@ -7159,7 +7135,7 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 529 -20> mark @bottom_cedilla
 	<anchor 918 0> mark @bottom_right
 	<anchor 529 0> mark @bottom_center;
-  pos base [\uniE037 \h.sc ] <anchor 619 -80> mark @bottom_ypogegrammeni
+  pos base [\uniE037 \h.sc \eta.sc \uni043D.sc ] <anchor 619 -80> mark @bottom_ypogegrammeni
 	<anchor 230 -20> mark @bottom_cedilla
 	<anchor 619 0> mark @bottom_center
 	<anchor 619 1200> mark @top_center;
@@ -7168,7 +7144,7 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 390 0> mark @bottom_center;
   pos base [\uniE039 \l.sc \ldot.sc ] <anchor 529 0> mark @bottom_center
 	<anchor 230 1200> mark @top_center;
-  pos base [\uniE03A \o.sc \omicron.sc ] <anchor 694 1200> mark @top_center
+  pos base [\uniE03A \o.sc \omicron.sc \uni043E.sc ] <anchor 694 1200> mark @top_center
 	<anchor 849 0> mark @bottom_right
 	<anchor 1188 1200> mark @top_right
 	<anchor 694 -20> mark @bottom_cedilla
@@ -7183,8 +7159,7 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 619 0> mark @bottom_center;
   pos base [\uniE03F \ae.sc ] <anchor 968 0> mark @bottom_center
 	<anchor 1249 1200> mark @top_center;
-  pos base [\uniE03E \y.sc ] <anchor 604 -80> mark @bottom_ypogegrammeni
-	<anchor 604 1200> mark @top_center
+  pos base [\uniE03E \x.sc \y.sc \uni024F.sc \upsilon.sc \chi.sc \uni0443.sc \uni0445.sc \uni04AF.sc \uni04B1.sc ] <anchor 604 1200> mark @top_center
 	<anchor 604 0> mark @bottom_center;
   pos base [\uniE040 \omega.sc ] <anchor 694 -80> mark @bottom_ypogegrammeni
 	<anchor 694 0> mark @bottom_center
@@ -7198,7 +7173,7 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 560 1200> mark @top_center;
   pos base [\f.sc \gamma.sc \uni03DD.sc \uni0433.sc ] <anchor 230 0> mark @bottom_center
 	<anchor 529 1200> mark @top_center;
-  pos base [\g.sc \q.sc \theta.sc \uni043E.sc \uni0473.sc \uni04D9.sc \uni04E9.sc ] <anchor 694 1200> mark @top_center
+  pos base [\g.sc \q.sc \theta.sc \uni0473.sc \uni04D9.sc \uni04E9.sc ] <anchor 694 1200> mark @top_center
 	<anchor 694 0> mark @bottom_center;
   pos base [\j.sc \uni0237.sc \uni0249.sc \uni03F3.sc \uni0458.sc ] <anchor 502 0> mark @bottom_center
 	<anchor 814 1200> mark @top_center;
@@ -7217,8 +7192,6 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 593 0> mark @bottom_center;
   pos base [\w.sc \uni051D.sc ] <anchor 886 0> mark @bottom_center
 	<anchor 886 1200> mark @top_center;
-  pos base [\x.sc \uni024F.sc \upsilon.sc \chi.sc \uni0443.sc \uni0445.sc \uni04AF.sc \uni04B1.sc ] <anchor 604 0> mark @bottom_center
-	<anchor 604 1200> mark @top_center;
   pos base [\z.sc \uni01B6.sc \zeta.sc ] <anchor 565 0> mark @bottom_center
 	<anchor 565 1200> mark @top_center;
   pos base [\lslash.sc ] <anchor 589 0> mark @bottom_center
@@ -7245,18 +7218,14 @@ lookup markPositionnementdesignelookups1 {
   pos base [\uni037B.sc \uni037D.sc \uni044D.sc ] <anchor 608 -20> mark @bottom_cedilla
 	<anchor 608 0> mark @bottom_center
 	<anchor 608 1200> mark @top_center;
-  pos base [\alphatonos.sc \lambda.sc \uni1E9A.sc ] <anchor 1119 0> mark @bottom_right
+  pos base [\alphatonos.sc \lambda.sc ] <anchor 1119 0> mark @bottom_right
 	<anchor 595 0> mark @bottom_center
 	<anchor 595 1200> mark @top_center;
-  pos base [\etatonos.sc \uni043D.sc ] <anchor 230 -20> mark @bottom_cedilla
+  pos base [\etatonos.sc ] <anchor 230 -20> mark @bottom_cedilla
 	<anchor 619 0> mark @bottom_center
 	<anchor 619 1200> mark @top_center;
   pos base [\delta.sc \uni1E9F.sc ] <anchor 663 1200> mark @top_center
 	<anchor 663 0> mark @bottom_center;
-  pos base [\eta.sc ] <anchor 620 -80> mark @bottom_ypogegrammeni
-	<anchor 230 -20> mark @bottom_cedilla
-	<anchor 619 0> mark @bottom_center
-	<anchor 619 1200> mark @top_center;
   pos base [\xi.sc \sigma.sc ] <anchor 529 0> mark @bottom_center
 	<anchor 529 1200> mark @top_center;
   pos base [\phi.sc \uni0444.sc ] <anchor 664 0> mark @bottom_right
@@ -7266,10 +7235,6 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 632 1200> mark @top_center;
   pos base [\uni03FC.sc ] <anchor 578 1200> mark @top_center
 	<anchor 260 0> mark @bottom_center;
-  pos base [\uni0430.sc ] <anchor 595 -90> mark @bottom_ypogegrammeni
-	<anchor 1119 0> mark @bottom_right
-	<anchor 595 0> mark @bottom_center
-	<anchor 595 1200> mark @top_center;
   pos base [\uni0434.sc ] <anchor 646 0> mark @bottom_center
 	<anchor 714 1200> mark @top_center;
   pos base [\uni0436.sc ] <anchor 845 1200> mark @top_center
@@ -7301,7 +7266,7 @@ lookup markPositionnementdesignelookups1 {
   pos base [\uni0501.sc ] <anchor 545 0> mark @bottom_center
 	<anchor 908 1200> mark @top_center;
   pos base [\uni1EB9.sc ] <anchor 529 1200> mark @top_center;
-  pos base [\i.sc.cv22 \iota.sc.cv22 \uni0456.sc.cv22 ] <anchor 320 0> mark @bottom_right
+  pos base [\i.sc.cv22 \iota.sc.cv22 \uni0456.sc.cv22 \uniE041 ] <anchor 320 0> mark @bottom_right
 	<anchor 231 0> mark @bottom_center
 	<anchor 231 1200> mark @top_center;
   pos base [\dotlessuni0268 ] <anchor 335 1040> mark @top_center
@@ -7383,7 +7348,6 @@ feature mark {
      language dflt ;
       lookup markPositionnementdesignelookups1;
 } mark;
-#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 
@@ -8400,7 +8364,7 @@ feature mark {
 	\uni2152.cv01.ss06.zero \uni2152.cv01.cv10.ss06.zero 
 	\uni2152.cv01.cv20.ss06.zero \uni2152.cv11.ss06.zero 
 	\uni2152.cv10.cv11.ss06.zero \uni2152.cv11.cv20.ss06.zero \colon.centered 
-	\asterisk.centered \dotlessuni0268 ];
+	\asterisk.centered \dotlessuni0268 \uniE041 ];
 @GDEF_Ligature = [\i \j \igrave \iacute \icircumflex \idieresis \dotlessi \itilde 
 	\imacron \ibreve \iogonek \jcircumflex \uni01D0 \uni0209 \uni020B \uni0249 
 	\uni0457 \uni1EC9 \arrowright \arrowleft \arrowboth \arrowdblright 
