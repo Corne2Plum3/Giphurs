@@ -6886,10 +6886,10 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 678 -90> mark @bottom_ypogegrammeni;
   pos base [\V \Lambda ] <anchor 678 1380> mark @top_center
 	<anchor 678 -0> mark @bottom_center;
-  pos base [\H ] <anchor 717 -108> mark @bottom_ypogegrammeni
-	<anchor 253 -38> mark @bottom_cedilla
-	<anchor 717 -18> mark @bottom_center
-	<anchor 717 1362> mark @top_center;
+  pos base [\H \Eta \uni041D ] <anchor 699 1380> mark @top_center
+	<anchor 699 0> mark @bottom_center
+	<anchor 235 -20> mark @bottom_cedilla
+	<anchor 699 -90> mark @bottom_ypogegrammeni;
   pos base [\O \Omicron \uni041E ] <anchor 968 0> mark @bottom_right
 	<anchor 801 0> mark @bottom_center
 	<anchor 1380 1480> mark @top_right
@@ -6932,13 +6932,13 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 794 0> mark @bottom_center;
   pos base [\Z \Zeta ] <anchor 699 1380> mark @top_center
 	<anchor 696 0> mark @bottom_center;
-  pos base [\X \Y \Upsilon \Chi \uni0425 ] <anchor 696 0> mark @bottom_center
+  pos base [\X \Y \Upsilon \Chi \uni0425 \uni04AE ] <anchor 696 0> mark @bottom_center
 	<anchor 696 1380> mark @top_center;
   pos base [\W ] <anchor 992 1380> mark @top_center
 	<anchor 992 0> mark @bottom_center;
   pos base [\J \uni037F ] <anchor 933 1380> mark @top_center
 	<anchor 564 0> mark @bottom_center;
-  pos base [\S \uni01A7 ] <anchor 610 1380> mark @top_center
+  pos base [\S \uni01A7 \uni0405 ] <anchor 610 1380> mark @top_center
 	<anchor 610 0> mark @bottom_center;
   pos base [\dotlessi \uni0456 \i.ss08 ] <anchor 230 1040> mark @top_center
 	<anchor 230 0> mark @bottom_center
@@ -6968,10 +6968,6 @@ lookup markPositionnementdesignelookups1 {
   pos base [\omega ] <anchor 790 -90> mark @bottom_ypogegrammeni
 	<anchor 790 1040> mark @top_center
 	<anchor 790 0> mark @bottom_center;
-  pos base [\Eta \uni041D ] <anchor 699 -90> mark @bottom_ypogegrammeni
-	<anchor 235 -20> mark @bottom_cedilla
-	<anchor 699 0> mark @bottom_center
-	<anchor 699 1380> mark @top_center;
   pos base [\uni0394 ] <anchor 748 1380> mark @top_center
 	<anchor 748 0> mark @bottom_center;
   pos base [\Xi \Sigma ] <anchor 604 1380> mark @top_center
@@ -7019,7 +7015,7 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 688 -360> mark @bottom_center;
   pos base [\etatonos ] <anchor 230 -90> mark @bottom_ypogegrammeni;
   pos base [\omegatonos \uni1FF6 ] <anchor 790 -90> mark @bottom_ypogegrammeni;
-  pos base [\Upsilon1 \uni04AE ] <anchor 696 1400> mark @top_center
+  pos base [\Upsilon1 ] <anchor 696 1400> mark @top_center
 	<anchor 696 0> mark @bottom_center;
   pos base [\phi1 ] <anchor 598 -360> mark @bottom_center
 	<anchor 598 1400> mark @top_center;

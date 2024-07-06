@@ -1,26 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="alpha.sc" format="2">
   <advance width="1163"/>
-  <anchor x="582" y="1200" name="top_center_1F"/>
   <anchor x="582" y="-80" name="bottom_ypogegrammeni"/>
+  <anchor x="582" y="1200" name="greek_t"/>
+  <anchor x="582" y="1200" name="greek_k"/>
+  <anchor x="582" y="1200" name="greek_kt"/>
+  <anchor x="582" y="1200" name="greek_v"/>
   <anchor x="1043" y="0" name="bottom_right"/>
   <anchor x="582" y="0" name="bottom_center"/>
   <anchor x="582" y="1200" name="top_center"/>
   <outline>
-    <contour>
-      <point x="294" y="443" type="line"/>
-      <point x="863" y="443" type="line"/>
-      <point x="863" y="403" type="line"/>
-      <point x="294" y="403" type="line"/>
-    </contour>
-    <contour>
-      <point x="582" y="1138" type="line"/>
-      <point x="168" y="0" type="line"/>
-      <point x="120" y="0" type="line"/>
-      <point x="558" y="1200" type="line"/>
-      <point x="606" y="1200" type="line"/>
-      <point x="1043" y="0" type="line"/>
-      <point x="995" y="0" type="line"/>
-    </contour>
+    <component base="uniE034"/>
   </outline>
 </glyph>

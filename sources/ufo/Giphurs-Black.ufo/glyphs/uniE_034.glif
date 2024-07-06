@@ -12,19 +12,19 @@
   <anchor x="665" y="1200" name="top_center"/>
   <outline>
     <contour>
-      <point x="300" y="583" type="line"/>
-      <point x="1007" y="583" type="line"/>
-      <point x="1007" y="263" type="line"/>
-      <point x="300" y="263" type="line"/>
+      <point x="300" y="583" type="line" smooth="yes"/>
+      <point x="1007" y="583" type="line" smooth="yes"/>
+      <point x="1007" y="263" type="line" smooth="yes"/>
+      <point x="300" y="263" type="line" smooth="yes"/>
     </contour>
     <contour>
-      <point x="665" y="778" type="line"/>
-      <point x="427" y="0" type="line"/>
-      <point x="35" y="0" type="line"/>
-      <point x="443" y="1200" type="line"/>
-      <point x="884" y="1200" type="line"/>
-      <point x="1293" y="0" type="line"/>
-      <point x="897" y="0" type="line"/>
+      <point x="665" y="778" type="line" smooth="yes"/>
+      <point x="427" y="0" type="line" smooth="yes"/>
+      <point x="35" y="0" type="line" smooth="yes"/>
+      <point x="443" y="1200" type="line" smooth="yes"/>
+      <point x="884" y="1200" type="line" smooth="yes"/>
+      <point x="1293" y="0" type="line" smooth="yes"/>
+      <point x="897" y="0" type="line" smooth="yes"/>
     </contour>
   </outline>
 </glyph>

@@ -6809,8 +6809,8 @@ lookup markPositionnementdesignelookups1 {
   markClass [\uni0328 ] <anchor 642 0> @bottom_right;
   markClass [\uni031B ] <anchor 0 1480> @top_right;
   markClass [\uni0326 \uni0325 \dotbelowcomb \uni0331 \uni032D \uni0330 \uni032E \uni0324 \uni032F \uni035F ] <anchor 642 0> @bottom_center;
-  markClass [\gravecomb \acutecomb \uni0302 \tildecomb \uni0308 \uni030A \uni0306 \uni0307 \uni030C \uni030B \uni030F \uni0311 \uni0314 \uni0315 \uni0485 \uni0486 \hookabovecomb \uni0313 \uni0312 \uni0340 \uni0341 \uni0343 \uni0342 \uni0357 \uni030D \uni1DC4 \uni1DC5 \uni1DC6 \uni1DC7 ] <anchor 642 1040> @top_center;
-  markClass [\uni0304 ] <anchor 643 1040> @top_center;
+  markClass [\gravecomb \acutecomb \uni0302 \tildecomb \uni0308 \uni030A \uni0306 \uni0307 \uni030C \uni030B \uni030F \uni0311 \uni0314 \uni0315 \uni0485 \uni0486 \hookabovecomb \uni0313 \uni0312 \uni0340 \uni0341 \uni0343 \uni0342 \uni0357 \uni030D ] <anchor 642 1040> @top_center;
+  markClass [\uni0304 \uni1DC4 \uni1DC5 \uni1DC6 \uni1DC7 ] <anchor 643 1040> @top_center;
   markClass [\dieresistonos \uni1FC1 \uni1FED \uni1FEE ] <anchor 552 1040> @top_center;
   markClass [\uni1FC0 ] <anchor 398 1040> @top_center;
   pos base [\o \uni043E \omicron ] <anchor 791 0> mark @bottom_right
@@ -6940,7 +6940,7 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 1025 1380> mark @top_center;
   pos base [\K \Kappa \Pi \Psi \uni041A \uni041F \uni0426 \uni0470 ] <anchor 741 0> mark @bottom_center
 	<anchor 741 1380> mark @top_center;
-  pos base [\S ] <anchor 662 0> mark @bottom_center
+  pos base [\S \uni0405 ] <anchor 662 0> mark @bottom_center
 	<anchor 662 1380> mark @top_center;
   pos base [\AE ] <anchor 1564 1380> mark @top_center
 	<anchor 1167 0> mark @bottom_center;
