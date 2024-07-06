@@ -18,8 +18,9 @@ fonts: sources/ufo
 
 # clean all generated files from the scripts
 clean:
-	rm -rf sources/py/
-	rm -rf sources/ufo_cleaned/
-	rm -f sources/-backup*
+	rm -rf sources/instance_ufos
+	rm -f sources/*.ninja
 	rm -f sources/.fuse_hidden*
+	rm -f sources/.ninja_log
+	rm -f sources/build.ninja
 	rm -f *.zip
