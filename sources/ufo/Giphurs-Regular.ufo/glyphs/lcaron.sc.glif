@@ -2,7 +2,43 @@
 <glyph name="lcaron.sc" format="2">
   <advance width="1058"/>
   <outline>
-    <component base="uni0315" xOffset="-412" yOffset="160"/>
-    <component base="l.sc"/>
+    <contour>
+      <point x="320" y="1200" type="line"/>
+      <point x="320" y="160" type="line"/>
+      <point x="918" y="160" type="line"/>
+      <point x="918" y="0" type="line"/>
+      <point x="140" y="0" type="line"/>
+      <point x="140" y="1200" type="line"/>
+    </contour>
+    <contour>
+      <point x="500" y="1107" type="curve" smooth="yes"/>
+      <point x="500" y="1165"/>
+      <point x="542" y="1210"/>
+      <point x="600" y="1210" type="curve" smooth="yes"/>
+      <point x="656" y="1210"/>
+      <point x="701" y="1165"/>
+      <point x="701" y="1107" type="curve" smooth="yes"/>
+      <point x="701" y="1049"/>
+      <point x="658" y="1005"/>
+      <point x="600" y="1005" type="curve" smooth="yes"/>
+      <point x="542" y="1005"/>
+      <point x="500" y="1049"/>
+    </contour>
+    <contour>
+      <point x="512" y="892" type="line"/>
+      <point x="558" y="902"/>
+      <point x="629" y="941"/>
+      <point x="629" y="1037" type="curve" smooth="yes"/>
+      <point x="629" y="1059"/>
+      <point x="601" y="1107"/>
+      <point x="601" y="1107" type="curve"/>
+      <point x="600" y="1210" type="line"/>
+      <point x="656" y="1210"/>
+      <point x="730" y="1173"/>
+      <point x="730" y="1037" type="curve" smooth="yes"/>
+      <point x="730" y="893"/>
+      <point x="598" y="816"/>
+      <point x="536" y="800" type="curve"/>
+    </contour>
   </outline>
 </glyph>
