@@ -6785,17 +6785,17 @@ lookup mkmkMarktoMarklookups2 {
   pos mark [\uni0308 ] <anchor 642 1480> mark @mark_anchor_left
 	<anchor 642 1480> mark @mark_anchor_right
 	<anchor 642 1641> mark @mark_anchor_top
-	<anchor 642 1525> mark @mark_anchor_center;
+	<anchor 642 1526> mark @mark_anchor_center;
   pos mark [\uni030A ] <anchor 904 1400> mark @mark_anchor_right
 	<anchor 381 1400> mark @mark_anchor_left;
-  pos mark [\uni0304 ] <anchor 642 1504> mark @mark_anchor_top
-	<anchor 642 1504> mark @mark_anchor_right
-	<anchor 642 1504> mark @mark_anchor_left
+  pos mark [\uni0304 ] <anchor 642 1556> mark @mark_anchor_top
+	<anchor 642 1556> mark @mark_anchor_right
+	<anchor 642 1556> mark @mark_anchor_left
 	<anchor 642 1654> mark @mark_anchor_center;
   pos mark [\uni0306 ] <anchor 642 1460> mark @mark_anchor_right
 	<anchor 642 1460> mark @mark_anchor_left
 	<anchor 642 1506> mark @mark_anchor_top;
-  pos mark [\uni0307 ] <anchor 642 1580> mark @mark_anchor_top;
+  pos mark [\uni0307 ] <anchor 642 1641> mark @mark_anchor_top;
   pos mark [\uni030C ] <anchor 642 1654> mark @mark_anchor_center;
 } mkmkMarktoMarklookups2;
 
@@ -6810,7 +6810,7 @@ lookup markPositionnementdesignelookups1 {
   markClass [\gravecomb \acutecomb \uni0302 \tildecomb \uni0308 \uni030A \uni0304 \uni0306 \uni0307 \uni030C \uni030B \uni030F \uni0311 \uni0314 \uni0315 \uni0485 \uni0486 \hookabovecomb \uni0313 \uni0312 \uni0340 \uni0341 \uni0343 \uni0342 \uni0357 \uni030D ] <anchor 642 1040> @top_center;
   markClass [\dieresistonos \uni1FEE ] <anchor 343 1040> @top_center;
   markClass [\uni1FC0 ] <anchor 421 1040> @top_center;
-  markClass [\uni1FC1 ] <anchor 416 1040> @top_center;
+  markClass [\uni1FC1 ] <anchor 344 1040> @top_center;
   markClass [\uni1FED ] <anchor 345 1040> @top_center;
   markClass [\uni1DC4 \uni1DC5 \uni1DC6 \uni1DC7 ] <anchor 682 1040> @top_center;
   pos base [\o \uni043E \omicron ] <anchor 578 1040> mark @top_center
@@ -7108,8 +7108,8 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 605 1040> mark @top_center
 	<anchor 605 0> mark @bottom_center;
   pos base [\uniE031 \ae.cv23 \uni04D5.cv23 ] <anchor 950 1040> mark @top_center;
-  pos base [\uniE032 ] <anchor 605 -360> mark @bottom_center
-	<anchor 605 1040> mark @top_center;
+  pos base [\uniE032 ] <anchor 560 -360> mark @bottom_center
+	<anchor 560 1040> mark @top_center;
   pos base [\uniE033 \u.cv25 ] <anchor 578 1040> mark @top_center
 	<anchor 578 0> mark @bottom_center
 	<anchor 676 0> mark @bottom_right
@@ -7277,8 +7277,8 @@ lookup markPositionnementdesignelookups1 {
   pos base [\i.sc.cv22 \iota.sc.cv22 \uni0456.sc.cv22 \uniE041 ] <anchor 224 0> mark @bottom_right
 	<anchor 202 0> mark @bottom_center
 	<anchor 202 1200> mark @top_center;
-  pos base [\g.cv24 ] <anchor 654 -360> mark @bottom_center
-	<anchor 654 1040> mark @top_center;
+  pos base [\g.cv24 ] <anchor 605 1040> mark @top_center
+	<anchor 605 -360> mark @bottom_center;
   pos base [\i.ss08 ] <anchor 204 1040> mark @top_center
 	<anchor 204 0> mark @bottom_center
 	<anchor 225 0> mark @bottom_right;

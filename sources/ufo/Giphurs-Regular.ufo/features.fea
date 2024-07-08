@@ -4052,8 +4052,8 @@ lookup ligaStandardLigatureslookup0 {
     sub \i \uni0307  by \i;
     sub \j \uni0307  by \j;
     sub \i \gravecomb  by \igrave;
-    sub \i \acutecomb  by \iacute;
     sub \uni0456 \acutecomb  by \iacute;
+    sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0308  by \idieresis;
     sub \i \uni030A  by \dotlessi;
@@ -6782,8 +6782,8 @@ lookup mkmkMarktoMarklookups2 {
 	<anchor 642 1641> mark @mark_anchor_top
 	<anchor 642 1526> mark @mark_anchor_left
 	<anchor 642 1526> mark @mark_anchor_right;
-  pos mark [\uni0308 ] <anchor 642 1525> mark @mark_anchor_center
-	<anchor 642 1641> mark @mark_anchor_top
+  pos mark [\uni0308 ] <anchor 642 1526> mark @mark_anchor_center
+	<anchor 642 1642> mark @mark_anchor_top
 	<anchor 642 1480> mark @mark_anchor_right
 	<anchor 642 1480> mark @mark_anchor_left;
   pos mark [\uni030A ] <anchor 321 1400> mark @mark_anchor_left
@@ -6795,7 +6795,7 @@ lookup mkmkMarktoMarklookups2 {
   pos mark [\uni0306 ] <anchor 642 1506> mark @mark_anchor_top
 	<anchor 642 1460> mark @mark_anchor_left
 	<anchor 642 1460> mark @mark_anchor_right;
-  pos mark [\uni0307 ] <anchor 642 1580> mark @mark_anchor_top;
+  pos mark [\uni0307 ] <anchor 642 1642> mark @mark_anchor_top;
   pos mark [\uni030C ] <anchor 642 1654> mark @mark_anchor_center;
 } mkmkMarktoMarklookups2;
 
