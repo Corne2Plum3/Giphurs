@@ -10,18 +10,19 @@ cd sources/
 UFO_DIR="ufo/"  # where the ufo source files are (don't forget the '/' at the end!)
 UFO_LIST=$(ls $UFO_DIR)  # list of all files inside UFO_DIR
 
-# Copy lib.plist into UFO sources
-echo "Loading lib.plist into ufo_files..."
+# Applying some change to ufo file
 for dst in $UFO_LIST
 do
+    echo "Applying some changes on $UFO_DIR$dst"
+    echo "Copying lib.plist into $UFO_DIR$dst"
     cp -f lib.plist $UFO_DIR$dst
+    python3 ufo_use_typo_metrics.py $UFO_DIR$dst
 done
-echo "Done."
-
-# build automatically glyphs based on numbers
 python3 numbers_glyphs.py 100 ufo/Giphurs-Thin.ufo
 python3 numbers_glyphs.py 400 ufo/Giphurs-Regular.ufo
 python3 numbers_glyphs.py 900 ufo/Giphurs-Black.ufo
+
+echo "Done editing UFO files."
 
 # Build the font (the touch command is needed otherwhise I dunno why some glyphs above the )
 touch Giphurs.designspace && gftools builder config.yaml
