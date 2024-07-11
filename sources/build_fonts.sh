@@ -18,6 +18,11 @@ do
 done
 echo "Done."
 
+# build automatically glyphs based on numbers
+python3 numbers_glyphs.py 100 ufo/Giphurs-Thin.ufo
+python3 numbers_glyphs.py 400 ufo/Giphurs-Regular.ufo
+python3 numbers_glyphs.py 900 ufo/Giphurs-Black.ufo
+
 # Build the font (the touch command is needed otherwhise I dunno why some glyphs above the )
 touch Giphurs.designspace && gftools builder config.yaml
 

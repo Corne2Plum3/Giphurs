@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<glyph name="seven.subscript.pnum" format="2">
-  <advance width="766"/>
-  <outline>
-    <contour>
-      <point x="60" y="550" type="line"/>
-      <point x="60" y="670" type="line"/>
-      <point x="706" y="670" type="line"/>
-      <point x="706" y="561" type="line"/>
-      <point x="706" y="561"/>
-      <point x="406" y="284"/>
-      <point x="364" y="-188" type="curve"/>
-      <point x="322" y="-188"/>
-      <point x="270" y="-188"/>
-      <point x="228" y="-188" type="curve"/>
-      <point x="272" y="284"/>
-      <point x="551" y="550"/>
-      <point x="551" y="550" type="curve"/>
-    </contour>
-  </outline>
-</glyph>
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="seven.subscript.pnum" format="2"><advance width="766" /><outline><component base="seven.superior" xOffset="-15" yOffset="-998" /></outline></glyph>
