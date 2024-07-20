@@ -1,11 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="etatonos.sc" format="2">
-  <advance width="1290"/>
-  <anchor x="230" y="-20" name="bottom_cedilla"/>
-  <anchor x="619" y="0" name="bottom_center"/>
-  <anchor x="619" y="1200" name="top_center"/>
+  <advance width="1290" />
   <outline>
-    <component base="tonos" xOffset="319" yOffset="98"/>
-    <component base="eta.sc"/>
+    <component base="tonos" xOffset="319" yOffset="98" />
+    <component base="eta.sc" />
   </outline>
 </glyph>
