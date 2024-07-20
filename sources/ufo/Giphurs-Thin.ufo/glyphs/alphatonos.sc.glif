@@ -1,8 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="alphatonos.sc" format="2">
-  <advance width="1163" />
+  <advance width="1163"/>
+  <anchor x="595" y="1200" name="top_center"/>
+  <anchor x="595" y="0" name="bottom_center"/>
+  <anchor x="1119" y="0" name="bottom_right"/>
   <outline>
-    <component base="tonos" xOffset="440" yOffset="160" />
-    <component base="alpha.sc" />
+    <component base="tonos" xOffset="440" yOffset="160"/>
+    <component base="alpha.sc"/>
   </outline>
 </glyph>
