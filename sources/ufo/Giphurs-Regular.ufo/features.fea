@@ -4053,8 +4053,8 @@ lookup ligaStandardLigatureslookup0 {
     sub \i \uni0307  by \i;
     sub \j \uni0307  by \j;
     sub \i \gravecomb  by \igrave;
-    sub \i \acutecomb  by \iacute;
     sub \uni0456 \acutecomb  by \iacute;
+    sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0308  by \idieresis;
     sub \i \uni030A  by \dotlessi;
@@ -5442,7 +5442,15 @@ lookup kernCrnagehorizontallookups2 {
 	\uni0516 \uni1E8A \uni1E8C ];
     @kc92_first_4 = [\D \Dcaron \Dcroat \Eth \uni0189 \uni018A \uni1E0A \uni1E0C \uni1E0E \uni1E10 
 	\uni1E12 \uni216E ];
-    @kc92_first_5 = [\G.cv21 \Gbreve.cv21 \Gcaron.cv21 \Gcircumflex.cv21 \Gcommaaccent.cv21 
+    @kc92_first_5 = [\Eta \Etatonos \H \Hbar \Hcircumflex \M \Mu \N \Nacute \Ncaron \Ncommaaccent 
+	\Ntilde \Nu \Pi \uni019C \uni019D \uni021E \uni0376 \uni03FA \uni0418 
+	\uni0419 \uni041B \uni041C \uni041D \uni041F \uni0427 \uni0428 \uni04E2 
+	\uni04E4 \uni1E22 \uni1E24 \uni1E26 \uni1E28 \uni1E2A \uni1E3E \uni1E40 
+	\uni1E42 \uni1E44 \uni1E46 \uni1E48 \uni1E4A \uni1F28 \uni1F29 \uni1F2A 
+	\uni1F2B \uni1F2C \uni1F2D \uni1F2E \uni1F2F \uni1F98 \uni1F99 \uni1F9A 
+	\uni1F9B \uni1F9C \uni1F9D \uni1F9E \uni1F9F \uni1FCA \uni1FCB \uni1FCC 
+	\uni216F ];
+    @kc92_first_6 = [\G.cv21 \Gbreve.cv21 \Gcaron.cv21 \Gcircumflex.cv21 \Gcommaaccent.cv21 
 	\Gdotaccent.cv21 \O \Oacute \Obreve \Ocircumflex \Odieresis \Ograve 
 	\Ohungarumlaut \Omacron \Omicron \Omicrontonos \Otilde \Q 
 	\uni0193.cv21 \uni01D1 \uni01E4.cv21 \uni01EA \uni01EC \uni01F4.cv21 
@@ -5453,15 +5461,7 @@ lookup kernCrnagehorizontallookups2 {
 	\uni1ECC \uni1ECE \uni1ED0 \uni1ED2 \uni1ED4 \uni1ED6 \uni1ED8 \uni1EDA 
 	\uni1EDC \uni1EDE \uni1EE0 \uni1EE2 \uni1F48 \uni1F49 \uni1F4A \uni1F4B 
 	\uni1F4C \uni1F4D \uni2141 \uni2183 ];
-    @kc92_first_6 = [\Gamma \uni0403 \uni0413 \uni0490 \uni0492 \uni04A4 \uni04F6 \uni04FA ];
-    @kc92_first_7 = [\H \M \N \Ntilde \Hcircumflex \Hbar \Nacute \Ncommaaccent \Ncaron \uni019C 
-	\uni019D \uni021E \uni0376 \Etatonos \Eta \Mu \Nu \Pi \uni03FA \uni0418 
-	\uni0419 \uni041B \uni041C \uni041D \uni041F \uni0427 \uni0428 \uni04E2 
-	\uni04E4 \uni1E22 \uni1E24 \uni1E26 \uni1E28 \uni1E2A \uni1E3E \uni1E40 
-	\uni1E42 \uni1E44 \uni1E46 \uni1E48 \uni1E4A \uni1F28 \uni1F29 \uni1F2A 
-	\uni1F2B \uni1F2C \uni1F2D \uni1F2E \uni1F2F \uni1F98 \uni1F99 \uni1F9A 
-	\uni1F9B \uni1F9C \uni1F9D \uni1F9E \uni1F9F \uni1FCA \uni1FCB \uni1FCC 
-	\uni216F ];
+    @kc92_first_7 = [\Gamma \uni0403 \uni0413 \uni0490 \uni0492 \uni04A4 \uni04F6 \uni04FA ];
     @kc92_first_8 = [\I \Iacute \Ibreve \Icircumflex \Idieresis \Idotaccent \Igrave \Imacron \Iogonek 
 	\Iotadieresis \Iotatonos \Itilde \uni0208 \uni020A \uni0406 \uni0407 
 	\uni04C0 \uni1E2C \uni1E2E \uni1EC8 \uni1ECA \uni1F38 \uni1F39 \uni1F3A 
@@ -6074,45 +6074,45 @@ lookup kernCrnagehorizontallookups2 {
     pos @kc92_first_4 @kc92_second_27 -70;
     pos @kc92_first_4 @kc92_second_32 -35;
     pos @kc92_first_4 @kc92_second_44 -35;
-    pos @kc92_first_5 @kc92_second_1 -70;
-    pos @kc92_first_5 @kc92_second_4 -70;
-    pos @kc92_first_5 @kc92_second_6 -70;
-    pos @kc92_first_5 @kc92_second_7 -70;
-    pos @kc92_first_5 @kc92_second_8 -70;
-    pos @kc92_first_5 @kc92_second_9 -35;
-    pos @kc92_first_5 @kc92_second_10 -35;
-    pos @kc92_first_5 @kc92_second_12 -35;
-    pos @kc92_first_5 @kc92_second_15 -35;
-    pos @kc92_first_5 @kc92_second_16 -140;
-    pos @kc92_first_5 @kc92_second_20 -35;
-    pos @kc92_first_5 @kc92_second_27 -70;
-    pos @kc92_first_6 @kc92_second_1 -280;
-    pos @kc92_first_6 @kc92_second_2 -560;
-    pos @kc92_first_6 @kc92_second_3 -140;
-    pos @kc92_first_6 @kc92_second_5 -210;
-    pos @kc92_first_6 @kc92_second_11 -210;
-    pos @kc92_first_6 @kc92_second_12 -350;
-    pos @kc92_first_6 @kc92_second_13 -630;
-    pos @kc92_first_6 @kc92_second_17 -210;
-    pos @kc92_first_6 @kc92_second_18 -140;
-    pos @kc92_first_6 @kc92_second_21 -210;
-    pos @kc92_first_6 @kc92_second_22 -50;
-    pos @kc92_first_6 @kc92_second_23 -210;
-    pos @kc92_first_6 @kc92_second_24 -140;
-    pos @kc92_first_6 @kc92_second_28 -280;
-    pos @kc92_first_6 @kc92_second_29 -175;
-    pos @kc92_first_6 @kc92_second_30 -140;
-    pos @kc92_first_6 @kc92_second_31 -175;
-    pos @kc92_first_6 @kc92_second_32 -70;
-    pos @kc92_first_6 @kc92_second_35 -350;
-    pos @kc92_first_6 @kc92_second_36 -140;
-    pos @kc92_first_6 @kc92_second_37 -280;
-    pos @kc92_first_6 @kc92_second_38 -210;
-    pos @kc92_first_6 @kc92_second_39 -210;
-    pos @kc92_first_6 @kc92_second_41 -70;
-    pos @kc92_first_6 @kc92_second_42 -105;
-    pos @kc92_first_6 @kc92_second_43 -35;
-    pos @kc92_first_7 @kc92_second_22 -35;
+    pos @kc92_first_5 @kc92_second_22 -35;
+    pos @kc92_first_6 @kc92_second_1 -70;
+    pos @kc92_first_6 @kc92_second_4 -70;
+    pos @kc92_first_6 @kc92_second_6 -70;
+    pos @kc92_first_6 @kc92_second_7 -70;
+    pos @kc92_first_6 @kc92_second_8 -70;
+    pos @kc92_first_6 @kc92_second_9 -35;
+    pos @kc92_first_6 @kc92_second_10 -35;
+    pos @kc92_first_6 @kc92_second_12 -35;
+    pos @kc92_first_6 @kc92_second_15 -35;
+    pos @kc92_first_6 @kc92_second_16 -140;
+    pos @kc92_first_6 @kc92_second_20 -35;
+    pos @kc92_first_6 @kc92_second_27 -70;
+    pos @kc92_first_7 @kc92_second_1 -280;
+    pos @kc92_first_7 @kc92_second_2 -560;
+    pos @kc92_first_7 @kc92_second_3 -140;
+    pos @kc92_first_7 @kc92_second_5 -210;
+    pos @kc92_first_7 @kc92_second_11 -210;
+    pos @kc92_first_7 @kc92_second_12 -350;
+    pos @kc92_first_7 @kc92_second_13 -630;
+    pos @kc92_first_7 @kc92_second_17 -210;
+    pos @kc92_first_7 @kc92_second_18 -140;
+    pos @kc92_first_7 @kc92_second_21 -210;
+    pos @kc92_first_7 @kc92_second_22 -50;
+    pos @kc92_first_7 @kc92_second_23 -210;
+    pos @kc92_first_7 @kc92_second_24 -140;
+    pos @kc92_first_7 @kc92_second_28 -280;
+    pos @kc92_first_7 @kc92_second_29 -175;
+    pos @kc92_first_7 @kc92_second_30 -140;
+    pos @kc92_first_7 @kc92_second_31 -175;
+    pos @kc92_first_7 @kc92_second_32 -70;
+    pos @kc92_first_7 @kc92_second_35 -350;
+    pos @kc92_first_7 @kc92_second_36 -140;
+    pos @kc92_first_7 @kc92_second_37 -280;
+    pos @kc92_first_7 @kc92_second_38 -210;
+    pos @kc92_first_7 @kc92_second_39 -210;
+    pos @kc92_first_7 @kc92_second_41 -70;
+    pos @kc92_first_7 @kc92_second_42 -105;
+    pos @kc92_first_7 @kc92_second_43 -35;
     pos @kc92_first_8 @kc92_second_3 -70;
     pos @kc92_first_8 @kc92_second_5 -70;
     pos @kc92_first_8 @kc92_second_11 -70;
@@ -7393,7 +7393,6 @@ feature mark {
      language dflt ;
       lookup markPositionnementdesignelookups1;
 } mark;
-#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 
