@@ -4053,8 +4053,8 @@ lookup ligaStandardLigatureslookup0 {
     sub \i \uni0307  by \i;
     sub \j \uni0307  by \j;
     sub \i \gravecomb  by \igrave;
-    sub \uni0456 \acutecomb  by \iacute;
     sub \i \acutecomb  by \iacute;
+    sub \uni0456 \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0308  by \idieresis;
     sub \i \uni030A  by \dotlessi;
@@ -6970,6 +6970,10 @@ lookup markPositionnementdesignelookups1 {
   pos base [\uni01A8 ] <anchor 389 0> mark @bottom_right
 	<anchor 497 0> mark @bottom_center
 	<anchor 497 1040> mark @top_center;
+  pos base [\uni01B7 ] <anchor 585 0> mark @bottom_center
+	<anchor 585 1380> mark @top_center;
+  pos base [\uni0292 ] <anchor 585 1040> mark @top_center
+	<anchor 585 -360> mark @bottom_center;
   pos base [\uni0254 ] <anchor 523 -20> mark @bottom_cedilla
 	<anchor 523 1040> mark @top_center
 	<anchor 523 0> mark @bottom_center;
@@ -7237,19 +7241,19 @@ lookup markPositionnementdesignelookups1 {
   pos base [\uni037B.sc \uni037D.sc \uni044D.sc ] <anchor 600 -20> mark @bottom_cedilla
 	<anchor 600 0> mark @bottom_center
 	<anchor 600 1200> mark @top_center;
-  pos base [\alphatonos.sc ] <anchor 1119 0> mark @bottom_right
+  pos base [\alphatonos.sc ] <anchor 595 1200> mark @top_center
 	<anchor 595 0> mark @bottom_center
-	<anchor 595 1200> mark @top_center;
-  pos base [\epsilontonos.sc ] <anchor 529 -20> mark @bottom_cedilla
-	<anchor 918 0> mark @bottom_right
+	<anchor 1119 0> mark @bottom_right;
+  pos base [\epsilontonos.sc ] <anchor 529 0> mark @bottom_center
 	<anchor 529 1200> mark @top_center
-	<anchor 529 0> mark @bottom_center;
-  pos base [\etatonos.sc ] <anchor 230 -20> mark @bottom_cedilla
+	<anchor 918 0> mark @bottom_right
+	<anchor 529 -20> mark @bottom_cedilla;
+  pos base [\etatonos.sc ] <anchor 619 1200> mark @top_center
 	<anchor 619 0> mark @bottom_center
-	<anchor 619 1200> mark @top_center;
-  pos base [\iotatonos.sc ] <anchor 479 0> mark @bottom_right
+	<anchor 230 -20> mark @bottom_cedilla;
+  pos base [\iotatonos.sc ] <anchor 390 1200> mark @top_center
 	<anchor 390 0> mark @bottom_center
-	<anchor 390 1200> mark @top_center;
+	<anchor 479 0> mark @bottom_right;
   pos base [\kappa.sc \uni043A.sc ] <anchor 598 1200> mark @top_center
 	<anchor 598 0> mark @bottom_center;
   pos base [\lambda.sc ] <anchor 1043 0> mark @bottom_right
