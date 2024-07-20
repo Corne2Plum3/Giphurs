@@ -4053,8 +4053,8 @@ lookup ligaStandardLigatureslookup0 {
     sub \i \uni0307  by \i;
     sub \j \uni0307  by \j;
     sub \i \gravecomb  by \igrave;
-    sub \uni0456 \acutecomb  by \iacute;
     sub \i \acutecomb  by \iacute;
+    sub \uni0456 \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0308  by \idieresis;
     sub \i \uni030A  by \dotlessi;
@@ -7263,19 +7263,19 @@ lookup markPositionnementdesignelookups1 {
   pos base [\uni037B.sc \uni037D.sc \uni044D.sc ] <anchor 615 -20> mark @bottom_cedilla
 	<anchor 615 0> mark @bottom_center
 	<anchor 615 1200> mark @top_center;
-  pos base [\alphatonos.sc ] <anchor 595 1200> mark @top_center
+  pos base [\alphatonos.sc ] <anchor 1119 0> mark @bottom_right
 	<anchor 595 0> mark @bottom_center
-	<anchor 1119 0> mark @bottom_right;
-  pos base [\epsilontonos.sc \epsilon.sc \uni0435.sc ] <anchor 529 0> mark @bottom_center
-	<anchor 529 1200> mark @top_center
+	<anchor 595 1200> mark @top_center;
+  pos base [\epsilontonos.sc \epsilon.sc \uni0435.sc ] <anchor 529 -20> mark @bottom_cedilla
 	<anchor 918 0> mark @bottom_right
-	<anchor 529 -20> mark @bottom_cedilla;
-  pos base [\etatonos.sc ] <anchor 619 1200> mark @top_center
+	<anchor 529 1200> mark @top_center
+	<anchor 529 0> mark @bottom_center;
+  pos base [\etatonos.sc ] <anchor 230 -20> mark @bottom_cedilla
 	<anchor 619 0> mark @bottom_center
-	<anchor 230 -20> mark @bottom_cedilla;
-  pos base [\iotatonos.sc ] <anchor 390 1200> mark @top_center
+	<anchor 619 1200> mark @top_center;
+  pos base [\iotatonos.sc ] <anchor 479 0> mark @bottom_right
 	<anchor 390 0> mark @bottom_center
-	<anchor 479 0> mark @bottom_right;
+	<anchor 390 1200> mark @top_center;
   pos base [\lambda.sc ] <anchor 1293 0> mark @bottom_right
 	<anchor 665 0> mark @bottom_center
 	<anchor 665 1200> mark @top_center;
