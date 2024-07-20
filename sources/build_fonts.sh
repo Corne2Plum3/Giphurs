@@ -16,11 +16,9 @@ do
     echo "Applying some changes on $UFO_DIR$dst"
     echo "Copying lib.plist into $UFO_DIR$dst"
     cp -f lib.plist $UFO_DIR$dst
+    echo "Setting bit 7 of openTypeOS2Selection in fontinfo.plist"
     python3 ufo_use_typo_metrics.py $UFO_DIR$dst
 done
-python3 numbers_glyphs.py 100 ufo/Giphurs-Thin.ufo
-python3 numbers_glyphs.py 400 ufo/Giphurs-Regular.ufo
-python3 numbers_glyphs.py 900 ufo/Giphurs-Black.ufo
 
 echo "Done editing UFO files."
 

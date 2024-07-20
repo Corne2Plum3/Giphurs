@@ -1,5 +1,6 @@
 """
 Set the bit 7 ("use typo metrics") of fsSelection in an ufo file.
+
 Note: Doesn't do anything if openTypeOS2Selection is already here, regardless its value
 """
 

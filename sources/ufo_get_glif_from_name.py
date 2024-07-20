@@ -1,3 +1,14 @@
+"""
+Reads the glyphs/contents.plist and retrive the path of the .glif file associated with the glyph
+with the name specified.
+
+Usage: get_glif_from_name(glyph_name, ufo_dir)
+* glyph_name: The name of the glyph
+* ufo_dir: The ufo directory.
+
+Note: All glyphs must be located to a folder called "glyphs" to work correctly.
+"""
+
 import sys
 import xml.etree.ElementTree as ET
 

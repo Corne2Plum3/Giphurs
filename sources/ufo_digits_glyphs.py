@@ -1,3 +1,25 @@
+"""
+This Python script generate .glif file of some glyphs that are based on digits, and with all of
+their alternatives form (cv01-20, ss06-07, zero), by using components.
+
+The components are the following:
+* All digits 0-9, including cv01-20, ss06-07, zero
+* Superior (sups) versions of all digits above
+* Parenthesis (U+0028 and U+0029)
+* White circle (U+25EF)
+* Black circle (U+25CF)
+* Double circle (currently on U+E02D)
+* Fraction bar (U+2044)
+
+And thus are built:
+* Fractions
+* Superior numbers with pnum and tnum
+* subscript, numerators and denominators (+ pnum and tnum versions)
+* U+2460-U+24FF and U+2776-U+277F as long they have numbers
+
+The program takes 2 parameters: the weight value (100,400,900) and the ufo directory location.
+"""
+
 import sys
 import xml.etree.ElementTree as ET
 
@@ -513,7 +535,7 @@ def main():
         print(f"Usage: {sys.argv[0]} <weight> <ufo_directory>")
     else:
         build_weight(sys.argv[1], sys.argv[2])
-    print("Done.")
+        print("Done.")
 
 if __name__ == "__main__":
     main()

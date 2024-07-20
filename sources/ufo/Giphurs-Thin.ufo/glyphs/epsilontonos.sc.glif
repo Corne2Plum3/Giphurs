@@ -1,12 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="epsilontonos.sc" format="2">
-  <advance width="1044"/>
-  <anchor x="529" y="-20" name="bottom_cedilla"/>
-  <anchor x="918" y="0" name="bottom_right"/>
-  <anchor x="529" y="1200" name="top_center"/>
-  <anchor x="529" y="0" name="bottom_center"/>
+  <advance width="1044" />
   <outline>
-    <component base="tonos" xOffset="380" yOffset="160"/>
-    <component base="epsilon.sc"/>
+    <component base="tonos" xOffset="380" yOffset="160" />
+    <component base="epsilon.sc" />
   </outline>
 </glyph>

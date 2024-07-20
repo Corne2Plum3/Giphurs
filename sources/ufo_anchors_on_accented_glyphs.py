@@ -1,3 +1,13 @@
+"""
+Add anchors points on accented glyphs, as long they're built using components (aka references to
+other glyphs). The list of glyphs where to do this information must be manually specified, and
+it's on a text file called ACCENTED_GLYPHS_LIST (see below in the code)
+
+It modify the .glif file of those glyphs, overwriting all existing anchors on them.
+"""
+
+ACCENTED_GLYPHS_LIST = "sources/accented_glyphs_list.txt"
+
 import sys
 from ufo_get_glif_from_name import get_glif_from_name
 import xml.etree.ElementTree as ET
@@ -29,7 +39,7 @@ def set_anchor_points_on_accented_glyph(glyph_name, ufo_dir):
     xml_anchor_list = root.findall("anchor")
     for element in xml_anchor_list:
         root.remove(element)
-
+    
     # read the anchors from each component
     for component in xml_component_list:
         x_offset = 0
@@ -70,7 +80,9 @@ def main():
         print(f"{sys.argv[0]}: Not enough parameters.")
         print(f"Usage: {sys.argv[0]} <ufo_directory>")
     else:
-        with open("accented_glyphs_list.txt") as file:
+        print(f"{sys.argv[0]}: Working on {sys.argv[1]}")
+        glyphs_counter = 0
+        with open(ACCENTED_GLYPHS_LIST, "r") as file:
             for glyph in file:
                 glyph_name_cleaned = glyph.strip().replace(" ", "")
                 if glyph_name_cleaned != "":
@@ -78,7 +90,8 @@ def main():
                         pass  # get_glif_from_name already print a warning
                     else:
                         set_anchor_points_on_accented_glyph(glyph_name_cleaned, sys.argv[1])
-        print("Done.")
+                        glyphs_counter += 1
+        print(f"Done ({glyphs_counter} glyphs affected).")
 
 if __name__ == "__main__":
     main()
