@@ -4201,8 +4201,8 @@ lookup ligaStandardLigatureslookup0 {
     sub \i \uni0307  by \i;
     sub \j \uni0307  by \j;
     sub \i \gravecomb  by \igrave;
-    sub \uni0456 \acutecomb  by \iacute;
     sub \i \acutecomb  by \iacute;
+    sub \uni0456 \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0308  by \idieresis;
     sub \i \uni030A  by \dotlessi;
@@ -6993,6 +6993,7 @@ lookup mkmkMarktoMarklookups2 {
   markClass [\uni0308 \uni0307 ] <anchor 642 1372> @mark_anchor_center;
   markClass [\uni030C ] <anchor 642 1224> @mark_anchor_center;
   markClass [\tildecomb \uni0304 ] <anchor 642 1224> @mark_anchor_top;
+  markClass [\uni0487 ] <anchor 642 1370> @mark_anchor_top;
   markClass [\acutecomb ] <anchor 642 1224> @mark_anchor_right;
   markClass [\hookabovecomb ] <anchor 642 1236> @mark_anchor_right;
   markClass [\gravecomb ] <anchor 642 1224> @mark_anchor_left;
@@ -7018,6 +7019,7 @@ lookup mkmkMarktoMarklookups2 {
 	<anchor 642 1506> mark @mark_anchor_top;
   pos mark [\uni0307 ] <anchor 642 1592> mark @mark_anchor_top;
   pos mark [\uni030C ] <anchor 642 1602> mark @mark_anchor_center;
+  pos mark [\uni0485 \uni0486 ] <anchor 642 1642> mark @mark_anchor_top;
 } mkmkMarktoMarklookups2;
 
 lookup markPositionnementdesignelookups1 {
@@ -7025,7 +7027,7 @@ lookup markPositionnementdesignelookups1 {
   markClass [\uni0345 ] <anchor 642 -90> @bottom_ypogegrammeni;
   markClass [\uni1FBE ] <anchor 169 -90> @bottom_ypogegrammeni;
   markClass [\uni0327 ] <anchor 704 -20> @bottom_cedilla;
-  markClass [\gravecomb \acutecomb \uni0302 \tildecomb \uni0308 \uni030A \uni0306 \uni0307 \uni030C \uni030B \uni030F \uni0311 \uni0314 \uni0315 \uni0485 \uni0486 \hookabovecomb \uni0313 \uni0312 \uni0340 \uni0341 \uni0343 \uni0342 \uni0357 \uni030D ] <anchor 642 1040> @top_center;
+  markClass [\gravecomb \acutecomb \uni0302 \tildecomb \uni0308 \uni030A \uni0306 \uni0307 \uni030C \uni030B \uni030F \uni0311 \uni0483 \uni0484 \uni0314 \uni0315 \uni0485 \uni0486 \uni0487 \hookabovecomb \uni0313 \uni0312 \uni0340 \uni0341 \uni0343 \uni0342 \uni0357 \uni030D ] <anchor 642 1040> @top_center;
   markClass [\uni0304 \uni1DC4 \uni1DC5 \uni1DC6 \uni1DC7 ] <anchor 643 1040> @top_center;
   markClass [\dieresistonos \uni1FC1 \uni1FED \uni1FEE ] <anchor 552 1040> @top_center;
   markClass [\uni1FC0 ] <anchor 398 1040> @top_center;
@@ -7368,6 +7370,10 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 788 0> mark @bottom_right
 	<anchor 642 0> mark @bottom_center
 	<anchor 642 1040> mark @top_center;
+  pos base [\uniA7B6 ] <anchor 935 1380> mark @top_center
+	<anchor 935 0> mark @bottom_center;
+  pos base [\uniA7B7 ] <anchor 907 0> mark @bottom_center
+	<anchor 907 1040> mark @top_center;
   pos base [\uniE02F \I.cv22 \Iota.cv22 \uni0406.cv22 \uni04C0.cv22 ] <anchor 450 0> mark @bottom_right
 	<anchor 260 0> mark @bottom_center
 	<anchor 260 1380> mark @top_center;
@@ -7631,7 +7637,6 @@ feature mark {
      language dflt ;
       lookup markPositionnementdesignelookups1;
 } mark;
-#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 
@@ -7692,49 +7697,48 @@ feature mark {
 	\uni0206 \uni0207 \uni020A \uni020E \uni020F \uni0212 \uni0213 \uni0216 \uni0217 
 	\Scommaaccent \scommaaccent \uni021A \uni021B \uni021C \uni021D \uni0220 
 	\uni0221 \uni0223 \uni0222 \uni0224 \uni0225 \uni0234 \uni0235 \uni0236 \uni0238 
-	\uni0239 \uni0338 \uni0337 \uni023A \uni023B \uni023C \uni023D \uni023E \uni023F 
-	\uni0240 \uni0241 \uni0242 \uni0243 \uni0244 \uni0245 \uni0246 \uni0247 \uni0248 
-	\uni024A \uni024B \uni024C \uni024D \uni024E \uni024F \uni0250 \uni0251 \uni0252 
-	\uni0253 \uni0254 \uni0255 \uni0256 \uni0257 \uni0258 \uni0259 \uni025A \uni025B 
-	\uni025C \uni025D \uni025E \uni025F \uni0260 \uni0261 \uni0262 \uni0263 \uni0264 
-	\uni0265 \uni0266 \uni0267 \uni0268 \uni0269 \uni026A \uni026B \uni026C \uni026D 
-	\uni026E \uni026F \uni0270 \uni0271 \uni0272 \uni0273 \uni0274 \uni0275 \uni0276 
-	\uni0277 \omega \uni0278 \uni0279 \uni027A \uni027B \uni027C \uni027D \uni027E 
-	\uni027F \uni0280 \uni0281 \uni0282 \uni0283 \uni0284 \uni0285 \uni0286 \uni0287 
-	\uni0288 \uni0289 \uni028A \uni02A4 \uni028B \uni028C \uni028D \uni028E \uni028F 
-	\uni0290 \uni0291 \uni0293 \uni0294 \uni0295 \uni0296 \uni0297 \uni0298 \uni0299 
-	\uni029A \uni029B \uni029C \uni029D \uni029E \uni029F \uni02A0 \uni02A1 \uni02A2 
-	\uni02A3 \uni02A5 \uni02A6 \uni02A7 \uni02A8 \uni02A9 \uni02AA \uni02AB \uni02AC 
-	\uni02AD \uni02AE \uni02AF \uni0371 \uni0372 \uni0370 \uni0373 \uni0374 \uni0375 
-	\uni0376 \uni0377 \uni037B \uni037D \uni037C \uni037E \uni037A \Alpha \Epsilon 
-	\Zeta \Eta \Iota \Kappa \Mu \Nu \Omicron \Rho \Tau \Upsilon \Chi \uni037F \Gamma 
-	\uni0394 \Theta \Lambda \Xi \Pi \Sigma \Phi \Psi \uni03A9 \Iotadieresis 
-	\Upsilondieresis \anoteleia \Alphatonos \Epsilontonos \Etatonos \Iotatonos 
-	\Omicrontonos \Upsilontonos \Omegatonos \alpha \lambda \beta \gamma \epsilon 
-	\eta \theta \iota \kappa \uni03BC \nu \xi \zeta \delta \pi \rho \sigma1 \sigma \tau 
-	\upsilon \phi \chi \psi \alphatonos \epsilontonos \etatonos \iotatonos 
-	\upsilondieresistonos \iotadieresis \upsilondieresis \omicrontonos 
-	\upsilontonos \omegatonos \iotadieresistonos \uni03CF \uni03D0 \theta1 
-	\Upsilon1 \uni03D3 \uni03D4 \phi1 \omega1 \uni03D7 \uni03F0 \uni03D8 \uni03D9 
-	\uni03DA \uni03DB \uni03DC \uni03DD \uni03DE \uni03DF \uni03E0 \uni03E1 \uni03E3 
-	\uni03E2 \uni03E4 \uni03E5 \uni03E6 \uni03E7 \uni03E8 \uni03E9 \uni03EA \uni03EB 
-	\uni03EC \uni03ED \uni03EE \uni03EF \uni03F1 \uni03F2 \uni03F3 \uni03F4 \uni03F5 
-	\uni03F6 \uni03F7 \uni03F8 \uni03F9 \uni03FA \uni03FB \uni03FC \uni03FD \uni03FE 
-	\uni03FF \uni0410 \uni0413 \uni0415 \uni041A \uni041C \uni041D \uni041E \uni041F 
-	\uni0420 \uni0421 \uni0422 \uni0424 \uni0425 \uni0400 \uni0401 \uni0403 \uni040C 
-	\uni0402 \uni0404 \uni0405 \uni0406 \uni0407 \uni0408 \uni041B \uni0409 \uni040A 
-	\uni040B \uni0418 \uni0411 \uni0416 \uni0417 \uni0423 \uni0426 \uni0427 \uni0429 
-	\uni0428 \uni042A \uni0414 \uni042C \uni042B \uni042D \uni042E \uni042F \uni040D 
-	\uni040E \uni0419 \uni040F \uni0430 \uni0435 \uni043A \uni043E \uni043F \uni0441 
-	\uni0445 \uni0431 \uni0432 \uni0433 \uni0437 \uni0438 \uni043B \uni043C \uni043D 
-	\uni0442 \uni0444 \uni044D \uni044F \uni0439 \uni0446 \uni0448 \uni0449 \uni044E 
-	\uni0450 \uni0451 \uni0452 \uni0447 \uni044A \uni044C \uni044B \uni0436 \uni0434 
-	\uni0453 \uni045C \uni045D \uni045E \uni0454 \uni0455 \uni0456 \uni0458 \uni0459 
-	\uni045A \uni045B \uni045F \uni0460 \uni0461 \uni0462 \uni0463 \uni0464 \uni0465 
-	\uni0466 \uni0468 \uni0467 \uni0469 \uni046A \uni046C \uni046B \uni046D \uni046F 
-	\uni046E \uni0470 \uni0471 \uni0472 \uni0473 \uni0474 \uni0475 \uni0476 \uni0477 
-	\uni0478 \uni0479 \uni047A \uni047B \uni052F \uni047C \uni047D \uni047E \uni047F 
-	\uni0480 \uni0481 \uni0482 \uni0483 \uni0484 \uni0487 \uni0488 \uni0489 \uni04AE 
+	\uni0239 \uni023A \uni023B \uni023C \uni023D \uni023E \uni023F \uni0240 \uni0241 
+	\uni0242 \uni0243 \uni0244 \uni0245 \uni0246 \uni0247 \uni0248 \uni024A \uni024B 
+	\uni024C \uni024D \uni024E \uni024F \uni0250 \uni0251 \uni0252 \uni0253 \uni0254 
+	\uni0255 \uni0256 \uni0257 \uni0258 \uni0259 \uni025A \uni025B \uni025C \uni025D 
+	\uni025E \uni025F \uni0260 \uni0261 \uni0262 \uni0263 \uni0264 \uni0265 \uni0266 
+	\uni0267 \uni0268 \uni0269 \uni026A \uni026B \uni026C \uni026D \uni026E \uni026F 
+	\uni0270 \uni0271 \uni0272 \uni0273 \uni0274 \uni0275 \uni0276 \uni0277 \omega 
+	\uni0278 \uni0279 \uni027A \uni027B \uni027C \uni027D \uni027E \uni027F \uni0280 
+	\uni0281 \uni0282 \uni0283 \uni0284 \uni0285 \uni0286 \uni0287 \uni0288 \uni0289 
+	\uni028A \uni02A4 \uni028B \uni028C \uni028D \uni028E \uni028F \uni0290 \uni0291 
+	\uni0293 \uni0294 \uni0295 \uni0296 \uni0297 \uni0298 \uni0299 \uni029A \uni029B 
+	\uni029C \uni029D \uni029E \uni029F \uni02A0 \uni02A1 \uni02A2 \uni02A3 \uni02A5 
+	\uni02A6 \uni02A7 \uni02A8 \uni02A9 \uni02AA \uni02AB \uni02AC \uni02AD \uni02AE 
+	\uni02AF \uni0371 \uni0372 \uni0370 \uni0373 \uni0374 \uni0375 \uni0376 \uni0377 
+	\uni037B \uni037D \uni037C \uni037E \uni037A \Alpha \Epsilon \Zeta \Eta \Iota 
+	\Kappa \Mu \Nu \Omicron \Rho \Tau \Upsilon \Chi \uni037F \Gamma \uni0394 \Theta 
+	\Lambda \Xi \Pi \Sigma \Phi \Psi \uni03A9 \Iotadieresis \Upsilondieresis 
+	\anoteleia \Alphatonos \Epsilontonos \Etatonos \Iotatonos \Omicrontonos 
+	\Upsilontonos \Omegatonos \alpha \lambda \beta \gamma \epsilon \eta \theta \iota 
+	\kappa \uni03BC \nu \xi \zeta \delta \pi \rho \sigma1 \sigma \tau \upsilon \phi \chi 
+	\psi \alphatonos \epsilontonos \etatonos \iotatonos \upsilondieresistonos 
+	\iotadieresis \upsilondieresis \omicrontonos \upsilontonos \omegatonos 
+	\iotadieresistonos \uni03CF \uni03D0 \theta1 \Upsilon1 \uni03D3 \uni03D4 \phi1 
+	\omega1 \uni03D7 \uni03F0 \uni03D8 \uni03D9 \uni03DA \uni03DB \uni03DC \uni03DD 
+	\uni03DE \uni03DF \uni03E0 \uni03E1 \uni03E3 \uni03E2 \uni03E4 \uni03E5 \uni03E6 
+	\uni03E7 \uni03E8 \uni03E9 \uni03EA \uni03EB \uni03EC \uni03ED \uni03EE \uni03EF 
+	\uni03F1 \uni03F2 \uni03F3 \uni03F4 \uni03F5 \uni03F6 \uni03F7 \uni03F8 \uni03F9 
+	\uni03FA \uni03FB \uni03FC \uni03FD \uni03FE \uni03FF \uni0410 \uni0413 \uni0415 
+	\uni041A \uni041C \uni041D \uni041E \uni041F \uni0420 \uni0421 \uni0422 \uni0424 
+	\uni0425 \uni0400 \uni0401 \uni0403 \uni040C \uni0402 \uni0404 \uni0405 \uni0406 
+	\uni0407 \uni0408 \uni041B \uni0409 \uni040A \uni040B \uni0418 \uni0411 \uni0416 
+	\uni0417 \uni0423 \uni0426 \uni0427 \uni0429 \uni0428 \uni042A \uni0414 \uni042C 
+	\uni042B \uni042D \uni042E \uni042F \uni040D \uni040E \uni0419 \uni040F \uni0430 
+	\uni0435 \uni043A \uni043E \uni043F \uni0441 \uni0445 \uni0431 \uni0432 \uni0433 
+	\uni0437 \uni0438 \uni043B \uni043C \uni043D \uni0442 \uni0444 \uni044D \uni044F 
+	\uni0439 \uni0446 \uni0448 \uni0449 \uni044E \uni0450 \uni0451 \uni0452 \uni0447 
+	\uni044A \uni044C \uni044B \uni0436 \uni0434 \uni0453 \uni045C \uni045D \uni045E 
+	\uni0454 \uni0455 \uni0456 \uni0458 \uni0459 \uni045A \uni045B \uni045F \uni0460 
+	\uni0461 \uni0462 \uni0463 \uni0464 \uni0465 \uni0466 \uni0468 \uni0467 \uni0469 
+	\uni046A \uni046C \uni046B \uni046D \uni046F \uni046E \uni0470 \uni0471 \uni0472 
+	\uni0473 \uni0474 \uni0475 \uni0476 \uni0477 \uni0478 \uni0479 \uni047A \uni047B 
+	\uni052F \uni047C \uni047D \uni047E \uni047F \uni0480 \uni0481 \uni0482 \uni04AE 
 	\uni048B \uni048A \uni048C \uni048D \uni048E \uni048F \uni0490 \uni0491 \uni0492 
 	\uni0493 \uni0494 \uni0495 \uni0496 \uni0497 \uni0498 \uni0499 \uni049A \uni049B 
 	\uni049C \uni049E \uni04A0 \uni049D \uni049F \uni04A1 \uni04A2 \uni04A4 \uni04A3 
@@ -8657,12 +8661,13 @@ feature mark {
 	\f_j.ss08 \f_l.ss08 \f_t.ss08 ];
 @GDEF_Mark = [\gravecomb \acutecomb \uni0302 \tildecomb \uni0308 \uni030A \uni0327 
 	\uni0304 \uni0306 \uni0328 \uni0307 \uni030C \uni030B \uni031B \uni030F \uni0311 
-	\uni0326 \tonos \dieresistonos \uni0314 \uni0315 \uni0485 \uni0486 \uni0325 
-	\dotbelowcomb \uni0331 \uni032D \uni0330 \uni032E \uni0324 \hookabovecomb 
-	\uni0313 \uni0312 \uni0340 \uni0341 \uni0343 \uni0342 \uni1FCD \uni1FCE \uni1FDD 
-	\uni1FDE \uni1FCF \uni1FDF \uni0345 \uni1FBD \uni1FC0 \uni1FC1 \uni1FBE \uni1FBF 
-	\uni1FED \uni1FEE \uni1FEF \uni1FFD \uni1FFE \uni0357 \uni030D \uni032F \uni035F 
-	\uni1DC4 \uni1DC5 \uni1DC6 \uni1DC7 ];
+	\uni0326 \uni0338 \uni0337 \tonos \dieresistonos \uni0483 \uni0484 \uni0314 
+	\uni0315 \uni0485 \uni0486 \uni0487 \uni0488 \uni0489 \uni0325 \dotbelowcomb 
+	\uni0331 \uni032D \uni0330 \uni032E \uni0324 \hookabovecomb \uni0313 \uni0312 
+	\uni0340 \uni0341 \uni0343 \uni0342 \uni1FCD \uni1FCE \uni1FDD \uni1FDE \uni1FCF 
+	\uni1FDF \uni0345 \uni1FBD \uni1FC0 \uni1FC1 \uni1FBE \uni1FBF \uni1FED \uni1FEE 
+	\uni1FEF \uni1FFD \uni1FFE \uni0357 \uni030D \uni032F \uni035F \uni1DC4 \uni1DC5 
+	\uni1DC6 \uni1DC7 ];
 
 table GDEF {
   GlyphClassDef @GDEF_Simple, @GDEF_Ligature, @GDEF_Mark, ;
