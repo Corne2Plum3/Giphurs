@@ -28,9 +28,9 @@ echo "Done editing UFO files."
 echo -e "\x1b[0;36mBuilding the fonts (weight 100-900)\x1b[0;0m"
 touch Giphurs.designspace && gftools builder config.yaml
 
-# Rebuild weight 1000
+# Rebuild weight 1000 (non-SC)
 echo -e "\x1b[0;36mRebuilding font binaries for weight 1000\x1b[0;0m"
-WEIGHT_1000_BINARY_NAME=$(echo $WEIGHT_1000_SRC | cut -d '.' -f 1)
+WEIGHT_1000_BINARY_NAME=$(echo $WEIGHT_1000_SRC | cut -d '.' -f 1) # no extention
 TEMP_OTF_PATH="/tmp/"$WEIGHT_1000_BINARY_NAME"_temp.otf"
 TEMP_TTF_PATH="/tmp/"$WEIGHT_1000_BINARY_NAME"_temp.ttf"
 TEMP_WOFF2_PATH="/tmp/"$WEIGHT_1000_BINARY_NAME"_temp.woff2"
@@ -40,6 +40,10 @@ fontmake -u $UFO_DIR/$WEIGHT_1000_SRC -o ttf --output-path $TEMP_TTF_PATH
 gftools fix-font $TEMP_TTF_PATH -o ../fonts/ttf/$WEIGHT_1000_BINARY_NAME.ttf
 fonttools ttLib.woff2 compress ../fonts/ttf/$WEIGHT_1000_BINARY_NAME.ttf -o $TEMP_WOFF2_PATH
 gftools fix-font $TEMP_WOFF2_PATH -o ../fonts/webfonts/$WEIGHT_1000_BINARY_NAME.woff2
+
+# Remove weight 1000 for SC (TODO: implement it)
+rm ../fonts/otf/GiphursSC-ExtraBlack.otf
+rm ../fonts/ttf/GiphursSC-ExtraBlack.ttf
 
 # Add hinting
 echo -e "\x1b[0;36mRebuilding font binaries for weight 1000\x1b[0;0m"
