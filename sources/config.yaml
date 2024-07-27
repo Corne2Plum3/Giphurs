@@ -1,12 +1,15 @@
 
+autohintOTF: true
+autohintTTF: true
 axisOrder:
   - wght
+buildSmallCap: true
 buildStatic: true
+buildVariable: true
 decomposeTransformedComponents: true
 familyName: Giphurs
 outputDir: '../fonts'
 includeSourceFixes: true
-interpolate: true
 sources:
   - Giphurs.designspace
 stat:
@@ -34,3 +37,5 @@ stat:
       value: 800
     - name: Black
       value: 900
+    - name: ExtraBlack
+      value: 1000

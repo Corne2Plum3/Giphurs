@@ -24,20 +24,20 @@ fonts: sources/ufo
 ufo_anchors_on_accented_glyphs: sources/ufo
 	python3 sources/ufo_anchors_on_accented_glyphs.py sources/ufo/Giphurs-Thin.ufo
 	python3 sources/ufo_anchors_on_accented_glyphs.py sources/ufo/Giphurs-Regular.ufo
-	python3 sources/ufo_anchors_on_accented_glyphs.py sources/ufo/Giphurs-Black.ufo
+	python3 sources/ufo_anchors_on_accented_glyphs.py sources/ufo/Giphurs-ExtraBlack.ufo
 
 # build number based glyphs
 ufo_digits_glyphs: sources/ufo
 	python3 sources/ufo_digits_glyphs.py 100 sources/ufo/Giphurs-Thin.ufo
 	python3 sources/ufo_digits_glyphs.py 400 sources/ufo/Giphurs-Regular.ufo
-	python3 sources/ufo_digits_glyphs.py 900 sources/ufo/Giphurs-Black.ufo
+	python3 sources/ufo_digits_glyphs.py 1000 sources/ufo/Giphurs-ExtraBlack.ufo
 
 # edit fontinfo.plist to set the bit 7 of openTypeOS2Selection ("use typo metrics")
 # Note: This is currently automatically run when building fonts
 ufo_use_typo_metrics: sources/ufo
 	python3 ufo_use_typo_metrics.py sources/ufo/Giphurs-Thin.ufo
 	python3 ufo_use_typo_metrics.py sources/ufo/Giphurs-Regular.ufo
-	python3 ufo_use_typo_metrics.py sources/ufo/Giphurs-Black.ufo
+	python3 ufo_use_typo_metrics.py sources/ufo/Giphurs-ExtraBlack.ufo
 
 # clean all generated files from the scripts
 clean:

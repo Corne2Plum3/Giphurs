@@ -17,7 +17,7 @@ And thus are built:
 * subscript, numerators and denominators (+ pnum and tnum versions)
 * U+2460-U+24FF and U+2776-U+277F as long they have numbers
 
-The program takes 2 parameters: the weight value (100,400,900) and the ufo directory location.
+The program takes 2 parameters: the weight value (100,400,1000) and the ufo directory location.
 """
 
 import sys
@@ -160,7 +160,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
     DEFAULT_KERN = {
         "100": 140,
         "400": 100,
-        "900": 50
+        "1000": 50
     }
     PNUM_SUPS_KERN = {
         "100": {
@@ -171,7 +171,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
             "1": (50,120),
             "other": (60,60)
         },
-        "900": {
+        "1000": {
             "1": (50,84),
             "other": (50,50)
         }
@@ -179,17 +179,17 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
     TNUM_WIDTH = {
         "100": 1198,
         "400": 1232,
-        "900": 1278
+        "1000": 1278
     }
     TWO_DIGITS_WIDTH_COEF = {
         "100": 0.80,
         "400": 0.75,
-        "900": 0.70
+        "1000": 0.70
     }
     TWO_DIGITS_OVERLAP = {  # for NORMAL size without TWO_DIGITS_WIDTH_COEF applied
         "100": 80,
         "400": 120,
-        "900": 140
+        "1000": 140
     }
     DIGITS_HEIGHT = 1480
     SUPS_HEIGHT = 858
