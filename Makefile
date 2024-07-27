@@ -5,6 +5,7 @@ font_version := $(shell echo "0"$(shell echo "scale=3;("$(shell echo $(shell fc-
 help:
 	@echo "Available make commands:"
 	@echo "  * make clean        : Remove temporary and useless generated files, including UFO sources."
+	@echo "  * make clean_fonts  : Empties the current fonts/ folder."
 	@echo "  * make export_fonts : Export fonts/ directory into a zip file."
 	@echo "  * make fonts        : Generate font binaries from UFO sources."
 	@echo "UFO sources scripts"
@@ -47,3 +48,8 @@ clean:
 	rm -f sources/.fuse_hidden*
 	rm -f sources/.ninja_log
 	rm -f *.zip
+
+clean_fonts:
+	rm -rf fonts/
+	mkdir fonts
+	cd fonts/ && mkdir otf ttf variable webfonts
