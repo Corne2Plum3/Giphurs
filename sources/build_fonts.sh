@@ -31,16 +31,44 @@ touch Giphurs.designspace && gftools builder config.yaml
 # Rebuild weight 1000
 echo -e "\x1b[0;36mRebuilding font binaries for weight 1000\x1b[0;0m"
 WEIGHT_1000_BINARY_NAME=$(echo $WEIGHT_1000_SRC | cut -d '.' -f 1)
-fontmake -u $UFO_DIR/$WEIGHT_1000_SRC -o otf --output-path "/tmp/"$WEIGHT_1000_BINARY_NAME"_temp.otf"
-gftools fix-font "/tmp/"$WEIGHT_1000_BINARY_NAME"_temp.otf" -o ../fonts/otf/$WEIGHT_1000_BINARY_NAME.otf
-fontmake -u $UFO_DIR/$WEIGHT_1000_SRC -o ttf --output-path "/tmp/"$WEIGHT_1000_BINARY_NAME"_temp.ttf"
-gftools fix-font "/tmp/"$WEIGHT_1000_BINARY_NAME"_temp.ttf" -o "/tmp/"$WEIGHT_1000_BINARY_NAME"_temp_2.ttf"
-gftools autohint "/tmp/"$WEIGHT_1000_BINARY_NAME"_temp_2.ttf" -o ../fonts/ttf/$WEIGHT_1000_BINARY_NAME.ttf
-fonttools ttLib.woff2 compress ../fonts/ttf/$WEIGHT_1000_BINARY_NAME.ttf -o "/tmp/"$WEIGHT_1000_BINARY_NAME"_temp.woff2"
-gftools fix-font "/tmp/"$WEIGHT_1000_BINARY_NAME"_temp.woff2" -o ../fonts/webfonts/$WEIGHT_1000_BINARY_NAME.woff2
+TEMP_OTF_PATH="/tmp/"$WEIGHT_1000_BINARY_NAME"_temp.otf"
+TEMP_TTF_PATH="/tmp/"$WEIGHT_1000_BINARY_NAME"_temp.ttf"
+TEMP_WOFF2_PATH="/tmp/"$WEIGHT_1000_BINARY_NAME"_temp.woff2"
+fontmake -u $UFO_DIR/$WEIGHT_1000_SRC -o otf --output-path $TEMP_OTF_PATH
+gftools fix-font $TEMP_OTF_PATH -o ../fonts/otf/$WEIGHT_1000_BINARY_NAME.otf
+fontmake -u $UFO_DIR/$WEIGHT_1000_SRC -o ttf --output-path $TEMP_TTF_PATH
+gftools fix-font $TEMP_TTF_PATH -o ../fonts/ttf/$WEIGHT_1000_BINARY_NAME.ttf
+fonttools ttLib.woff2 compress ../fonts/ttf/$WEIGHT_1000_BINARY_NAME.ttf -o $TEMP_WOFF2_PATH
+gftools fix-font $TEMP_WOFF2_PATH -o ../fonts/webfonts/$WEIGHT_1000_BINARY_NAME.woff2
+
+# Add hinting
+echo -e "\x1b[0;36mRebuilding font binaries for weight 1000\x1b[0;0m"
+OTF_LIST=$(ls ../fonts/otf)
+for font in $OTF_LIST
+do
+    gftools fix-nonhinting ../fonts/otf/$font ../fonts/otf/$font
+done
+TTF_LIST=$(ls ../fonts/ttf)
+for font in $TTF_LIST
+do
+    gftools fix-nonhinting ../fonts/ttf/$font ../fonts/ttf/$font
+done
+WOFF2_LIST=$(ls ../fonts/webfonts)
+for font in $WOFF2_LIST
+do
+    gftools fix-nonhinting ../fonts/webfonts/$font ../fonts/webfonts/$font
+done
+
+# clean backup files
+cd ../fonts/otf
+ls | grep backup | xargs rm
+cd ../ttf
+ls | grep backup | xargs rm
+cd ../webfonts
+ls | grep backup | xargs rm
 
 # Go back to where we come from
-cd ..
+cd ../..
 
 # sucess message
 COMPILATION_END_TIME=$(date +%s)  # when the compilation finished
