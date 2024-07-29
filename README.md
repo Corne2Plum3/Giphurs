@@ -93,5 +93,5 @@ This font is under the [SIL Open Font License, Version 1.1](https://scripts.sil.
 
 # Credits
 
-Some glyphs (very complicated to draw) in thr `U+21xx` range are stolen from [DejaVu Sans](https://github.com/dejavu-fonts/dejavu-fonts) and [Noto Sans](https://github.com/notofonts/notofonts.github.io), 
+Some glyphs (very complicated to draw) in the `U+21xx` range are stolen from [DejaVu Sans](https://github.com/dejavu-fonts/dejavu-fonts) and [Noto Sans](https://github.com/notofonts/notofonts.github.io), 
 
