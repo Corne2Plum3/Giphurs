@@ -46,22 +46,24 @@ rm ../fonts/otf/GiphursSC-ExtraBlack.otf
 rm ../fonts/ttf/GiphursSC-ExtraBlack.ttf
 
 # Add hinting
-echo -e "\x1b[0;36mRebuilding font binaries for weight 1000\x1b[0;0m"
+echo -e "\x1b[0;36mAdd hinting on font binaries\x1b[0;0m"
 OTF_LIST=$(ls ../fonts/otf)
 for font in $OTF_LIST
 do
-    gftools fix-nonhinting ../fonts/otf/$font ../fonts/otf/$font
+    gftools fix-nonhinting ../fonts/otf/$font ../fonts/otf/$font &
 done
 TTF_LIST=$(ls ../fonts/ttf)
 for font in $TTF_LIST
 do
-    gftools fix-nonhinting ../fonts/ttf/$font ../fonts/ttf/$font
+    gftools fix-nonhinting ../fonts/ttf/$font ../fonts/ttf/$font &
 done
 WOFF2_LIST=$(ls ../fonts/webfonts)
 for font in $WOFF2_LIST
 do
-    gftools fix-nonhinting ../fonts/webfonts/$font ../fonts/webfonts/$font
+    gftools fix-nonhinting ../fonts/webfonts/$font ../fonts/webfonts/$font &
 done
+
+wait
 
 # clean backup files
 cd ../fonts/otf
