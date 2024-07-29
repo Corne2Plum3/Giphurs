@@ -2,8 +2,37 @@
 <glyph name="uni24F1.cv11.cv17" format="2">
   <advance width="1720"/>
   <outline>
-    <component base="H18533"/>
-    <component base="uniE01B" xScale="0.75" xOffset="326.426" yOffset="-499"/>
-    <component base="uniE021" xScale="0.75" xOffset="819.074" yOffset="-499"/>
+    <contour>
+      <point x="939.074" y="311" type="line"/>
+      <point x="1045.57" y="311" type="line"/>
+      <point x="1348.57" y="1060" type="line"/>
+      <point x="1348.57" y="1169" type="line"/>
+      <point x="864.074" y="1169" type="line"/>
+      <point x="864.074" y="1049" type="line"/>
+      <point x="1244.32" y="1049" type="line"/>
+    </contour>
+    <contour>
+      <point x="617.426" y="1169" type="line"/>
+      <point x="449.426" y="1036" type="line"/>
+      <point x="494.426" y="929" type="line"/>
+      <point x="612.176" y="1023" type="line"/>
+      <point x="612.176" y="311" type="line"/>
+      <point x="713.426" y="311" type="line"/>
+      <point x="713.426" y="1169" type="line"/>
+    </contour>
+    <contour>
+      <point x="100" y="740" type="curve" smooth="yes"/>
+      <point x="100" y="1160"/>
+      <point x="440" y="1500"/>
+      <point x="860" y="1500" type="curve" smooth="yes"/>
+      <point x="1280" y="1500"/>
+      <point x="1620" y="1160"/>
+      <point x="1620" y="740" type="curve" smooth="yes"/>
+      <point x="1620" y="320"/>
+      <point x="1280" y="-20"/>
+      <point x="860" y="-20" type="curve" smooth="yes"/>
+      <point x="440" y="-20"/>
+      <point x="100" y="320"/>
+    </contour>
   </outline>
 </glyph>

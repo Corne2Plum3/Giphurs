@@ -18,6 +18,12 @@ And thus are built:
 * U+2460-U+24FF and U+2776-U+277F as long they have numbers
 
 The program takes 2 parameters: the weight value (100,400,1000) and the ufo directory location.
+
+VERY IMPORTANT NOTE: For the black circled numbers the components must be unlinked manually,
+otherwise the numbers won't be visible after compilation. There must be a way to automate this but
+the problem is that when compiling to ttf, the nested components are kept, and as the direction of
+numbers outline are set to clockwise, removing the ability of the numbers to make a "hole" in the
+black circle.
 """
 
 import sys
