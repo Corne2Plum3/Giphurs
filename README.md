@@ -77,7 +77,7 @@ Everything that you will need will be installed on a virtual environment (so Deb
 
 ## 2. Build the font
 
-Once all dependencies are ready, you can build the fonts using.
+Once all dependencies are ready, you can build the fonts using the following command (add `-B` if you want to build the font and that it says that "fonts" is already up to date):
 
 ```sh
 make fonts
