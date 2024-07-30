@@ -5,13 +5,14 @@
 .vscode/
 misc
 py
+sources/__pycache__
 sources/instance_ufos/
 sources/sfd_cleaned/
 sources/sfd_unused/
-sources/ufo/
 sources/-backup*
 sources/.fuse_hidden*
 sources/py/
+sources/ufo/*/lib.plist
 temp
 ufo_built.stamp
 venv

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <designspace format="5.0">
   <axes>
-    <axis tag="wght" name="weight" minimum="100" maximum="900" default="400"/>
+    <axis tag="wght" name="weight" minimum="100" maximum="1000" default="400"/>
   </axes>
   <sources>
     <source filename="ufo/Giphurs-Thin.ufo" familyname="Giphurs" stylename="Thin">
@@ -18,9 +18,9 @@
         <dimension name="weight" xvalue="400"/>
       </location>
     </source>
-    <source filename="ufo/Giphurs-Black.ufo" familyname="Giphurs" stylename="Black">
+    <source filename="ufo/Giphurs-ExtraBlack.ufo" familyname="Giphurs" stylename="ExtraBlack">
       <location>
-        <dimension name="weight" xvalue="900"/>
+        <dimension name="weight" xvalue="1000"/>
       </location>
     </source>
   </sources>
@@ -84,6 +84,13 @@
     <instance filename="ufo/Giphurs-Black.ufo" name="Giphurs Black" familyname="Giphurs" stylename="Black" stylemapfamilyname="Giphurs Black" stylemapstylename="">
       <location>
         <dimension name="weight" xvalue="900"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance filename="ufo/Giphurs-ExtraBlack.ufo" name="Giphurs ExtraBlack" familyname="Giphurs" stylename="ExtraBlack" stylemapfamilyname="Giphurs ExtraBlack" stylemapstylename="" >
+      <location>
+        <dimension name="weight" xvalue="1000"/>
       </location>
       <kerning/>
       <info/>
