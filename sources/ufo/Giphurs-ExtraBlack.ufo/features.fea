@@ -2790,6 +2790,7 @@ lookup ss05StyleSet5lookups57 {
   lookupflag 0;
     sub \dollar by \dollar.ss05 ;
     sub \cent by \cent.ss05 ;
+    sub \sterling by \sterling.ss05 ;
     sub \lira by \lira.ss05 ;
     sub \peseta by \peseta.ss05 ;
     sub \uni20AA by \uni20AA.ss05 ;
@@ -4201,8 +4202,8 @@ lookup ligaStandardLigatureslookup0 {
     sub \i \uni0307  by \i;
     sub \j \uni0307  by \j;
     sub \i \gravecomb  by \igrave;
-    sub \i \acutecomb  by \iacute;
     sub \uni0456 \acutecomb  by \iacute;
+    sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0308  by \idieresis;
     sub \i \uni030A  by \dotlessi;
@@ -7678,6 +7679,7 @@ feature mark {
      language dflt ;
       lookup markPositionnementdesignelookups1;
 } mark;
+#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 
@@ -8694,7 +8696,7 @@ feature mark {
 	\uni2152.cv01.cv20.ss06.zero \uni2152.cv11.ss06.zero 
 	\uni2152.cv10.cv11.ss06.zero \uni2152.cv11.cv20.ss06.zero \colon.centered 
 	\asterisk.centered \dotlessuni0268 \uniE041 \dotlessuni029D \dotlessuni02B2 
-	\dotlessuni1DA4 \dotlessuni2071 ];
+	\dotlessuni1DA4 \dotlessuni2071 \sterling.ss05 ];
 @GDEF_Ligature = [\i \j \igrave \iacute \icircumflex \idieresis \dotlessi \itilde 
 	\imacron \ibreve \iogonek \jcircumflex \uni01D0 \uni0209 \uni020B \uni0249 
 	\uni0457 \uni1EC9 \arrowright \arrowleft \arrowboth \arrowdblright 

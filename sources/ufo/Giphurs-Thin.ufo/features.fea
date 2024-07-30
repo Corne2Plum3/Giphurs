@@ -2790,6 +2790,7 @@ lookup ss05StyleSet5lookups57 {
   lookupflag 0;
     sub \dollar by \dollar.ss05 ;
     sub \cent by \cent.ss05 ;
+    sub \sterling by \sterling.ss05 ;
     sub \lira by \lira.ss05 ;
     sub \peseta by \peseta.ss05 ;
     sub \uni20AA by \uni20AA.ss05 ;
@@ -7654,6 +7655,7 @@ feature mark {
      language dflt ;
       lookup markPositionnementdesignelookups1;
 } mark;
+#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 
@@ -8370,36 +8372,36 @@ feature mark {
 	\uni1E77.cv25 \uni1E79.cv25 \uni1E7B.cv25 \uni1EE5.cv25 \uni1EE7.cv25 
 	\uni1EE9.cv25 \uni1EEB.cv25 \uni1EED.cv25 \uni1EEF.cv25 \uni1EF1.cv25 
 	\uni2106.cv25 \uni24B0.cv25 \uni24E4.cv25 \ampersand.cv26 \dollar.ss05 
-	\cent.ss05 \lira.ss05 \peseta.ss05 \uni20AA.ss05 \Euro.ss05 \uni20B2.ss05 
-	\one.ss06 \one.ss06.pnum \one.ss06.tnum \one.ss06.onum \one.ss06.onum.tnum 
-	\one.ss06.superior \one.ss06.superior.pnum \one.ss06.superior.tnum 
-	\one.ss06.subscript \one.ss06.subscript.pnum \one.ss06.subscript.tnum 
-	\one.ss06.numr \one.ss06.numr.pnum \one.ss06.numr.tnum \one.ss06.dnom 
-	\one.ss06.dnom.pnum \one.ss06.dnom.tnum \one.cv01.ss06 \one.cv01.ss06.pnum 
-	\one.cv01.ss06.tnum \one.cv01.ss06.onum \one.cv01.ss06.onum.tnum 
-	\one.cv01.ss06.superior \one.cv01.ss06.superior.pnum 
-	\one.cv01.ss06.superior.tnum \one.cv01.ss06.subscript 
-	\one.cv01.ss06.subscript.pnum \one.cv01.ss06.subscript.tnum 
-	\one.cv01.ss06.numr \one.cv01.ss06.numr.pnum \one.cv01.ss06.numr.tnum 
-	\one.cv01.ss06.dnom \one.cv01.ss06.dnom.pnum \one.cv01.ss06.dnom.tnum 
-	\one.cv11.ss06 \one.cv11.ss06.pnum \one.cv11.ss06.tnum \one.cv11.ss06.onum 
-	\one.cv11.ss06.onum.tnum \one.cv11.ss06.superior 
-	\one.cv11.ss06.superior.pnum \one.cv11.ss06.superior.tnum 
-	\one.cv11.ss06.subscript \one.cv11.ss06.subscript.pnum 
-	\one.cv11.ss06.subscript.tnum \one.cv11.ss06.numr \one.cv11.ss06.numr.pnum 
-	\one.cv11.ss06.numr.tnum \one.cv11.ss06.dnom \one.cv11.ss06.dnom.pnum 
-	\one.cv11.ss06.dnom.tnum \uni2460.ss06 \uni2460.cv01.ss06 
-	\uni2460.cv11.ss06 \uni2469.ss06 \uni2469.cv10.ss06 \uni2469.cv20.ss06 
-	\uni2469.cv01.ss06 \uni2469.cv01.cv10.ss06 \uni2469.cv01.cv20.ss06 
-	\uni2469.cv11.ss06 \uni2469.cv10.cv11.ss06 \uni2469.cv11.cv20.ss06 
-	\uni246A.ss06 \uni246A.cv01.ss06 \uni246A.cv11.ss06 \uni246B.ss06 
-	\uni246B.cv02.ss06 \uni246B.cv12.ss06 \uni246B.cv01.ss06 
-	\uni246B.cv01.cv02.ss06 \uni246B.cv01.cv12.ss06 \uni246B.cv11.ss06 
-	\uni246B.cv02.cv11.ss06 \uni246B.cv11.cv12.ss06 \uni246C.ss06 
-	\uni246C.cv03.ss06 \uni246C.cv13.ss06 \uni246C.cv01.ss06 
-	\uni246C.cv01.cv03.ss06 \uni246C.cv01.cv13.ss06 \uni246C.cv11.ss06 
-	\uni246C.cv03.cv11.ss06 \uni246C.cv11.cv13.ss06 \uni246D.ss06 
-	\uni246D.cv04.ss06 \uni246D.cv14.ss06 \uni246D.cv01.ss06 
+	\cent.ss05 \sterling.ss05 \lira.ss05 \peseta.ss05 \uni20AA.ss05 \Euro.ss05 
+	\uni20B2.ss05 \one.ss06 \one.ss06.pnum \one.ss06.tnum \one.ss06.onum 
+	\one.ss06.onum.tnum \one.ss06.superior \one.ss06.superior.pnum 
+	\one.ss06.superior.tnum \one.ss06.subscript \one.ss06.subscript.pnum 
+	\one.ss06.subscript.tnum \one.ss06.numr \one.ss06.numr.pnum 
+	\one.ss06.numr.tnum \one.ss06.dnom \one.ss06.dnom.pnum \one.ss06.dnom.tnum 
+	\one.cv01.ss06 \one.cv01.ss06.pnum \one.cv01.ss06.tnum \one.cv01.ss06.onum 
+	\one.cv01.ss06.onum.tnum \one.cv01.ss06.superior 
+	\one.cv01.ss06.superior.pnum \one.cv01.ss06.superior.tnum 
+	\one.cv01.ss06.subscript \one.cv01.ss06.subscript.pnum 
+	\one.cv01.ss06.subscript.tnum \one.cv01.ss06.numr \one.cv01.ss06.numr.pnum 
+	\one.cv01.ss06.numr.tnum \one.cv01.ss06.dnom \one.cv01.ss06.dnom.pnum 
+	\one.cv01.ss06.dnom.tnum \one.cv11.ss06 \one.cv11.ss06.pnum 
+	\one.cv11.ss06.tnum \one.cv11.ss06.onum \one.cv11.ss06.onum.tnum 
+	\one.cv11.ss06.superior \one.cv11.ss06.superior.pnum 
+	\one.cv11.ss06.superior.tnum \one.cv11.ss06.subscript 
+	\one.cv11.ss06.subscript.pnum \one.cv11.ss06.subscript.tnum 
+	\one.cv11.ss06.numr \one.cv11.ss06.numr.pnum \one.cv11.ss06.numr.tnum 
+	\one.cv11.ss06.dnom \one.cv11.ss06.dnom.pnum \one.cv11.ss06.dnom.tnum 
+	\uni2460.ss06 \uni2460.cv01.ss06 \uni2460.cv11.ss06 \uni2469.ss06 
+	\uni2469.cv10.ss06 \uni2469.cv20.ss06 \uni2469.cv01.ss06 
+	\uni2469.cv01.cv10.ss06 \uni2469.cv01.cv20.ss06 \uni2469.cv11.ss06 
+	\uni2469.cv10.cv11.ss06 \uni2469.cv11.cv20.ss06 \uni246A.ss06 
+	\uni246A.cv01.ss06 \uni246A.cv11.ss06 \uni246B.ss06 \uni246B.cv02.ss06 
+	\uni246B.cv12.ss06 \uni246B.cv01.ss06 \uni246B.cv01.cv02.ss06 
+	\uni246B.cv01.cv12.ss06 \uni246B.cv11.ss06 \uni246B.cv02.cv11.ss06 
+	\uni246B.cv11.cv12.ss06 \uni246C.ss06 \uni246C.cv03.ss06 \uni246C.cv13.ss06 
+	\uni246C.cv01.ss06 \uni246C.cv01.cv03.ss06 \uni246C.cv01.cv13.ss06 
+	\uni246C.cv11.ss06 \uni246C.cv03.cv11.ss06 \uni246C.cv11.cv13.ss06 
+	\uni246D.ss06 \uni246D.cv04.ss06 \uni246D.cv14.ss06 \uni246D.cv01.ss06 
 	\uni246D.cv01.cv04.ss06 \uni246D.cv01.cv14.ss06 \uni246D.cv11.ss06 
 	\uni246D.cv04.cv11.ss06 \uni246D.cv11.cv14.ss06 \uni246E.ss06 
 	\uni246E.cv05.ss06 \uni246E.cv15.ss06 \uni246E.cv01.ss06 

@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="lira.ss05" format="2">
+<glyph name="sterling.ss05" format="2">
   <advance width="1615"/>
   <outline>
-    <contour>
-      <point x="493" y="470" type="line"/>
-      <point x="1016" y="470" type="line"/>
-      <point x="1016" y="710" type="line"/>
-      <point x="396" y="710" type="line"/>
-      <point x="100" y="710" type="line"/>
-      <point x="100" y="664"/>
-      <point x="100" y="516"/>
-      <point x="100" y="470" type="curve"/>
-    </contour>
-    <contour>
-      <point x="493" y="770" type="line"/>
-      <point x="1016" y="770" type="line"/>
-      <point x="1016" y="1010" type="line"/>
-      <point x="396" y="1010" type="line"/>
-      <point x="100" y="1010" type="line"/>
-      <point x="100" y="964"/>
-      <point x="100" y="816"/>
-      <point x="100" y="770" type="curve"/>
-    </contour>
     <contour>
       <point x="352" y="951" type="curve"/>
       <point x="352" y="96" type="line"/>
@@ -48,6 +28,16 @@
       <point x="1515" y="336" type="line"/>
       <point x="100" y="336" type="line"/>
       <point x="100" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="528" y="560" type="line"/>
+      <point x="1016" y="560" type="line"/>
+      <point x="1016" y="880" type="line"/>
+      <point x="528" y="880" type="line"/>
+      <point x="100" y="880" type="line"/>
+      <point x="100" y="834"/>
+      <point x="100" y="606"/>
+      <point x="100" y="560" type="curve"/>
     </contour>
   </outline>
 </glyph>
