@@ -31,9 +31,6 @@ def set_anchor_points_on_accented_glyph(glyph_name, ufo_dir):
     tree = ET.parse(get_glif_from_name(glyph_name, ufo_dir))
     root = tree.getroot()
     xml_component_list = root.find("outline").findall("component")
-    anchors_list_names = []
-    anchors_list_pos = []
-    anchors_mark_list_names = []
 
     # remove the existing anchors
     xml_anchor_list = root.findall("anchor")
@@ -41,7 +38,11 @@ def set_anchor_points_on_accented_glyph(glyph_name, ufo_dir):
         root.remove(element)
     
     # read the anchors from each component
+    anchors_full_list = []  # each anchor is a dict with the keys "name", "source", "component_order", "x", "y"
+    component_order = 0
+    component_count = len(xml_component_list)
     for component in xml_component_list:
+        component_order += 1
         x_offset = 0
         y_offset = 0
         if "xOffset" in component.attrib:
@@ -49,31 +50,68 @@ def set_anchor_points_on_accented_glyph(glyph_name, ufo_dir):
         if "yOffset" in component.attrib:
             y_offset = int(component.attrib["yOffset"])
         component_anchors_dict = get_anchor_points(component.attrib["base"], ufo_dir)
-        for anchor in component_anchors_dict:  # anchor already here from another components -> we remove the anchor completly later and don't add the new one
-            if anchor[0] == "_":  # add without the _ (they will get removed)
-                anchors_mark_list_names.append(anchor[1:])
-            else:
-                anchors_list_names.append(anchor)
-                anchors_list_pos.append((component_anchors_dict[anchor][0] + x_offset, component_anchors_dict[anchor][1] + y_offset))
+        for anchor in component_anchors_dict:
+            new_anchor_entry = {}
+            new_anchor_entry["name"] = anchor
+            new_anchor_entry["source"] = component.attrib["base"]
+            new_anchor_entry["component_order"] = component_order
+            new_anchor_entry["x"] = component_anchors_dict[anchor][0] + x_offset
+            new_anchor_entry["y"] = component_anchors_dict[anchor][1] + y_offset
+            anchors_full_list.append(new_anchor_entry)
 
-    # remove the duplicate anchor
-    for anchor in anchors_mark_list_names:
-        if anchor in anchors_list_names:
-            index = anchors_list_names.index(anchor)
-            anchors_list_names.pop(index)
-            anchors_list_pos.pop(index)
+    # separate the base and mark anchors into 2 lists
+    anchors_base_list = []  # [{"name": str, "component_order": str, "x": int, "y": int}]
+    anchors_mark_list = []  # [{"name": str, "component_order": str, "x": int, "y": int}]
+    for anchor in anchors_full_list:
+        if anchor["name"][0] == "_":
+            anchors_mark_list.append(anchor)
+        else:
+            anchors_base_list.append(anchor)
+    
+    # remove 2 anchors at the same place used to place components
+    for anchor_mark in anchors_mark_list:
+        i = 0
+        while i < len(anchors_base_list):
+            anchor_base = anchors_base_list[i]
+            if anchor_mark["name"][1:] == anchor_base["name"] and anchor_mark["source"] != anchor_base["source"]:
+                anchors_base_list.pop(i)
+            i += 1
 
-    # add the anchor sto the xml tree
-    for anchor_index in range(len(anchors_list_names)):
+    # remove anchors starting with "mark_" of components between 2 components (result in anchors_base_list)
+    i = 0
+    while i < len(anchors_base_list):
+        anchor = anchors_base_list[i] 
+        if "mark_" in anchor["name"] and anchor["component_order"] != 1 and anchor["component_order"] != component_count:  # for example with 3 components, remove the "mark_" anchors for the component 2
+            anchors_base_list.pop(i)
+        else:
+            i += 1
+
+    # remove duplicate base anchors (result in anchors_final_list)
+    anchors_final_list = []  # [{"name": str, "component_order": str, "x": int, "y": int}]
+    anchors_final_names = {}  # {"name": <pos_in_anchors_final_list>}
+    for anchor in anchors_base_list:
+        if anchor["name"] in anchors_final_names:  # anchor already here
+            already_existing_anchor_index = anchors_final_names[anchor["name"]]
+            already_existing_anchor = anchors_final_list[already_existing_anchor_index]
+            if anchor["component_order"] < already_existing_anchor["component_order"]:  # keep the one wirth the lowest component_order value
+                anchors_final_list.pop(already_existing_anchor_index)
+                anchors_final_list.append(anchor)
+                anchors_final_names[anchor["name"]] = len(anchors_final_list) - 1
+        else:
+            anchors_final_list.append(anchor)
+            anchors_final_names[anchor["name"]] = len(anchors_final_list) - 1
+
+    # add the anchor to the xml tree (the mark signs are all ignored)
+    for anchor in anchors_final_list:
         new_element_attribs = {
-            "x": str(anchors_list_pos[anchor_index][0]),
-            "y": str(anchors_list_pos[anchor_index][1]),
-            "name": anchors_list_names[anchor_index]
+            "x": str(anchor["x"]),
+            "y": str(anchor["y"]),
+            "name": anchor["name"]
         }
         ET.SubElement(root, "anchor", new_element_attribs)
     
     # save
-    tree.write(get_glif_from_name(glyph_name, ufo_dir))
+    tree.write(get_glif_from_name(glyph_name, ufo_dir), encoding='utf-8', xml_declaration=True)
 
 def main():
     if len(sys.argv) < 2:
@@ -87,7 +125,7 @@ def main():
                 glyph_name_cleaned = glyph.strip().replace(" ", "")
                 if glyph_name_cleaned != "":
                     if get_glif_from_name(glyph_name_cleaned, sys.argv[1]) == "":
-                        pass  # get_glif_from_name already print a warning
+                        pass  # get_glif_from_name already prints a warning
                     else:
                         set_anchor_points_on_accented_glyph(glyph_name_cleaned, sys.argv[1])
                         glyphs_counter += 1

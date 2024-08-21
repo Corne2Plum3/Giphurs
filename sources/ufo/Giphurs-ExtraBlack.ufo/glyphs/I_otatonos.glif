@@ -2,6 +2,12 @@
 <glyph name="Iotatonos" format="2">
   <advance width="1466"/>
   <unicode hex="038A"/>
+  <anchor x="153" y="1040" name="greek_kt"/>
+  <anchor x="344" y="1040" name="greek_k"/>
+  <anchor x="404" y="1040" name="greek_v"/>
+  <anchor x="1004" y="1380" name="top_center"/>
+  <anchor x="1004" y="0" name="bottom_center"/>
+  <anchor x="1194" y="0" name="bottom_right"/>
   <outline>
     <component base="tonos" xOffset="-35"/>
     <component base="Iota" xOffset="542"/>

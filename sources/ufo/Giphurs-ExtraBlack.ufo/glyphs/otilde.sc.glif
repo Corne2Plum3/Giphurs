@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="otilde.sc" format="2">
   <advance width="1360"/>
+  <anchor x="680" y="1686" name="mark_anchor_right"/>
+  <anchor x="680" y="1686" name="mark_anchor_left"/>
+  <anchor x="680" y="1752" name="mark_anchor_top"/>
+  <anchor x="680" y="1762" name="mark_anchor_center"/>
+  <anchor x="680" y="1200" name="greek_v"/>
+  <anchor x="680" y="1200" name="greek_kt"/>
+  <anchor x="680" y="1200" name="greek_k"/>
+  <anchor x="680" y="1200" name="greek_t"/>
+  <anchor x="894" y="0" name="bottom_right"/>
+  <anchor x="1233" y="1200" name="top_right"/>
+  <anchor x="680" y="-20" name="bottom_cedilla"/>
+  <anchor x="680" y="0" name="bottom_center"/>
   <outline>
     <component base="tildecomb" xOffset="38" yOffset="160"/>
     <component base="o.sc"/>

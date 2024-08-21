@@ -2,6 +2,16 @@
 <glyph name="Ebreve" format="2">
   <advance width="1208"/>
   <unicode hex="0114"/>
+  <anchor x="604" y="1846" name="mark_anchor_top"/>
+  <anchor x="604" y="1800" name="mark_anchor_left"/>
+  <anchor x="604" y="1800" name="mark_anchor_right"/>
+  <anchor x="-40" y="1040" name="greek_v"/>
+  <anchor x="-244" y="1040" name="greek_t"/>
+  <anchor x="-118" y="1040" name="greek_k"/>
+  <anchor x="-284" y="1040" name="greek_kt"/>
+  <anchor x="604" y="0" name="bottom_center"/>
+  <anchor x="1068" y="0" name="bottom_right"/>
+  <anchor x="604" y="-20" name="bottom_cedilla"/>
   <outline>
     <component base="uni0306" xOffset="-38" yOffset="340"/>
     <component base="E"/>

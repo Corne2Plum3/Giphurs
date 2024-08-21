@@ -2,6 +2,12 @@
 <glyph name="imacron" format="2">
   <advance width="500"/>
   <unicode hex="012B"/>
+  <anchor x="249" y="1504" name="mark_anchor_top"/>
+  <anchor x="249" y="1504" name="mark_anchor_right"/>
+  <anchor x="249" y="1504" name="mark_anchor_left"/>
+  <anchor x="249" y="1654" name="mark_anchor_center"/>
+  <anchor x="250" y="0" name="bottom_center"/>
+  <anchor x="430" y="0" name="bottom_right"/>
   <outline>
     <component base="uni0304" xOffset="-393"/>
     <component base="dotlessi"/>

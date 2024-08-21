@@ -2,6 +2,14 @@
 <glyph name="Umacron" format="2">
   <advance width="1398"/>
   <unicode hex="016A"/>
+  <anchor x="699" y="1994" name="mark_anchor_center"/>
+  <anchor x="699" y="1844" name="mark_anchor_left"/>
+  <anchor x="699" y="1844" name="mark_anchor_right"/>
+  <anchor x="699" y="1844" name="mark_anchor_top"/>
+  <anchor x="699" y="-20" name="bottom_cedilla"/>
+  <anchor x="861" y="0" name="bottom_right"/>
+  <anchor x="699" y="0" name="bottom_center"/>
+  <anchor x="1258" y="1480" name="top_right"/>
   <outline>
     <component base="uni0304" xOffset="57" yOffset="340"/>
     <component base="U"/>

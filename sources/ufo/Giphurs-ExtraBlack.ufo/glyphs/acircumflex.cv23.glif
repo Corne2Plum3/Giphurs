@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="acircumflex.cv23" format="2">
   <advance width="1250"/>
+  <anchor x="303" y="1400" name="mark_anchor_left"/>
+  <anchor x="1005" y="1400" name="mark_anchor_right"/>
+  <anchor x="654" y="1506" name="mark_anchor_top"/>
+  <anchor x="1204" y="0" name="bottom_right"/>
+  <anchor x="654" y="0" name="bottom_center"/>
   <outline>
     <component base="uni0302" xOffset="12"/>
     <component base="a.cv23"/>

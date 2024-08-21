@@ -11,7 +11,7 @@ help:
 	@echo "  * make export_fonts : Export fonts/ directory into a zip file."
 	@echo "  * make fonts        : Generate font binaries from UFO sources."
 	@echo "UFO sources scripts"
-	@echo "  * make ufo_anchors_on_accented_glyphs : Place anchors points on accented glyphs. (DOES NOT WORK AND PREVENTS COMPILATION!!!)."
+	@echo "  * make ufo_anchors_on_accented_glyphs : Place anchors points on accented glyphs (the UFO files must be opened and exported throught Fontforge after)."
 	@echo "  * make ufo_digits_glyphs              : Build digits based glyphs."
 	@echo "  * make ufo_use_typo_metrics           : Enable bit 7 ("use typo metrics") of openTypeOS2Selection in fontinfo.plist"
 
@@ -28,6 +28,7 @@ ufo_anchors_on_accented_glyphs: sources/ufo
 	python3 sources/ufo_anchors_on_accented_glyphs.py sources/ufo/Giphurs-Thin.ufo
 	python3 sources/ufo_anchors_on_accented_glyphs.py sources/ufo/Giphurs-Regular.ufo
 	python3 sources/ufo_anchors_on_accented_glyphs.py sources/ufo/Giphurs-ExtraBlack.ufo
+	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
 
 # build number based glyphs
 ufo_digits_glyphs: sources/ufo

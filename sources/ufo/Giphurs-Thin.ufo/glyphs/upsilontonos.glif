@@ -2,6 +2,11 @@
 <glyph name="upsilontonos" format="2">
   <advance width="1090"/>
   <unicode hex="03CD"/>
+  <anchor x="505" y="1040" name="greek_v"/>
+  <anchor x="505" y="1040" name="greek_kt"/>
+  <anchor x="505" y="1040" name="greek_k"/>
+  <anchor x="565" y="0" name="bottom_center"/>
+  <anchor x="505" y="1040" name="top_center"/>
   <outline>
     <component base="tonos" xOffset="363"/>
     <component base="upsilon"/>

@@ -2,6 +2,11 @@
 <glyph name="scircumflex" format="2">
   <advance width="1020"/>
   <unicode hex="015D"/>
+  <anchor x="514" y="1506" name="mark_anchor_top"/>
+  <anchor x="805" y="1400" name="mark_anchor_right"/>
+  <anchor x="223" y="1400" name="mark_anchor_left"/>
+  <anchor x="676" y="0" name="bottom_right"/>
+  <anchor x="514" y="0" name="bottom_center"/>
   <outline>
     <component base="uni0302" xOffset="-128"/>
     <component base="s"/>

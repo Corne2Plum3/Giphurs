@@ -2,6 +2,12 @@
 <glyph name="ecircumflex" format="2">
   <advance width="1196"/>
   <unicode hex="00EA"/>
+  <anchor x="598" y="1506" name="mark_anchor_top"/>
+  <anchor x="889" y="1400" name="mark_anchor_right"/>
+  <anchor x="307" y="1400" name="mark_anchor_left"/>
+  <anchor x="598" y="0" name="bottom_center"/>
+  <anchor x="752" y="0" name="bottom_right"/>
+  <anchor x="598" y="-20" name="bottom_cedilla"/>
   <outline>
     <component base="uni0302" xOffset="-44"/>
     <component base="e"/>

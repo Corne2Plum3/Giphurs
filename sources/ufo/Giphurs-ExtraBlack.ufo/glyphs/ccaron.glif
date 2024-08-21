@@ -2,6 +2,9 @@
 <glyph name="ccaron" format="2">
   <advance width="1139"/>
   <unicode hex="010D"/>
+  <anchor x="600" y="1602" name="mark_anchor_center"/>
+  <anchor x="602" y="0" name="bottom_center"/>
+  <anchor x="602" y="-20" name="bottom_cedilla"/>
   <outline>
     <component base="uni030C" xOffset="-42"/>
     <component base="c"/>

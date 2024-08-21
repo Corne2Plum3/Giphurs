@@ -2,6 +2,13 @@
 <glyph name="Epsilontonos" format="2">
   <advance width="1552"/>
   <unicode hex="0388"/>
+  <anchor x="304" y="1040" name="greek_v"/>
+  <anchor x="226" y="1040" name="greek_k"/>
+  <anchor x="60" y="1040" name="greek_kt"/>
+  <anchor x="948" y="1380" name="top_center"/>
+  <anchor x="948" y="0" name="bottom_center"/>
+  <anchor x="1412" y="0" name="bottom_right"/>
+  <anchor x="948" y="-20" name="bottom_cedilla"/>
   <outline>
     <component base="tonos" xOffset="-70"/>
     <component base="Epsilon" xOffset="344"/>

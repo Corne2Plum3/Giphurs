@@ -2,6 +2,16 @@
 <glyph name="Ocircumflex" format="2">
   <advance width="1514"/>
   <unicode hex="00D4"/>
+  <anchor x="586" y="1740" name="mark_anchor_left"/>
+  <anchor x="928" y="1740" name="mark_anchor_right"/>
+  <anchor x="757" y="1846" name="mark_anchor_top"/>
+  <anchor x="-93" y="1040" name="greek_kt"/>
+  <anchor x="67" y="1040" name="greek_k"/>
+  <anchor x="-54" y="1040" name="greek_t"/>
+  <anchor x="124" y="1040" name="greek_v"/>
+  <anchor x="863" y="0" name="bottom_right"/>
+  <anchor x="757" y="0" name="bottom_center"/>
+  <anchor x="1267" y="1480" name="top_right"/>
   <outline>
     <component base="uni0302" xOffset="115" yOffset="340"/>
     <component base="O"/>

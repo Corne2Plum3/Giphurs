@@ -2,6 +2,17 @@
 <glyph name="Odieresis" format="2">
   <advance width="1602"/>
   <unicode hex="00D6"/>
+  <anchor x="801" y="1866" name="mark_anchor_center"/>
+  <anchor x="801" y="1982" name="mark_anchor_top"/>
+  <anchor x="801" y="1820" name="mark_anchor_right"/>
+  <anchor x="801" y="1820" name="mark_anchor_left"/>
+  <anchor x="-65" y="1040" name="greek_t"/>
+  <anchor x="61" y="1040" name="greek_k"/>
+  <anchor x="-105" y="1040" name="greek_kt"/>
+  <anchor x="139" y="1040" name="greek_v"/>
+  <anchor x="968" y="0" name="bottom_right"/>
+  <anchor x="801" y="0" name="bottom_center"/>
+  <anchor x="1380" y="1480" name="top_right"/>
   <outline>
     <component base="uni0308" xOffset="159" yOffset="340"/>
     <component base="O"/>

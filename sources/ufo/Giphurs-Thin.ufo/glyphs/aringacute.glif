@@ -2,6 +2,10 @@
 <glyph name="aringacute" format="2">
   <advance width="1141"/>
   <unicode hex="01FB"/>
+  <anchor x="515" y="-10" name="bottom_cedilla"/>
+  <anchor x="909" y="1040" name="top_right"/>
+  <anchor x="1011" y="0" name="bottom_right"/>
+  <anchor x="525" y="0" name="bottom_center"/>
   <outline>
     <component base="acutecomb" xOffset="145" yOffset="176"/>
     <component base="uni030A" xOffset="-117"/>

@@ -2,6 +2,9 @@
 <glyph name="cdotaccent" format="2">
   <advance width="1139"/>
   <unicode hex="010B"/>
+  <anchor x="600" y="1592" name="mark_anchor_top"/>
+  <anchor x="602" y="0" name="bottom_center"/>
+  <anchor x="602" y="-20" name="bottom_cedilla"/>
   <outline>
     <component base="uni0307" xOffset="-42"/>
     <component base="c"/>
