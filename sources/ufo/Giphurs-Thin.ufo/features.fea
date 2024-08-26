@@ -4247,8 +4247,8 @@ lookup ligaStandardLigatureslookup0 {
     sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
-    sub \i \uni0307  by \idieresis;
     sub \i \uni0308  by \idieresis;
+    sub \i \uni0307  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
@@ -4307,8 +4307,8 @@ lookup ligaStandardLigatureslookup0 {
     sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \i \uni0328  by \iogonek;
     sub \iogonek \gravecomb  by \iogonek;
+    sub \i \uni0328  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4397,13 +4397,13 @@ lookup ligaStandardLigatureslookup0 {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \A \uni030A \acutecomb  by \uni01DC;
-    sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni0308 \uni0304  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \Oslash \acutecomb  by \uni01E0;
+    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -4509,8 +4509,8 @@ lookup ligaStandardLigatureslookup0 {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0456 \uni0307  by \uni0457;
+    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -5607,27 +5607,33 @@ lookup MultipleSubstitutionlookup52 {
 
 lookup ccmpsoftdottedlookup1 {
   lookupflag 0;
-    sub [\i \uni0268 \uni0456 \j \uni0249 \uni03F3 \uni0458 \uni02B2 \uni1DA4 \uni2071 ]' [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
+    sub [\i \uni0268 \uni0456 \uni2148 \j \uni0249 \uni03F3 \uni0458 \uni02B2 \uni1DA4 
+	\uni2071 \uni2149 ]' [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
 	\hookabovecomb \uni030A \uni030B \uni030C \uni030D \uni030F \uni0311 
 	\uni0312 \uni0313 \uni0314 \uni0315 \uni0340 \uni0341 \uni0342 \uni0343 
 	\uni0357 \uni0483 \uni0484 \uni0485 \uni0486 \uni0487 \uni1DC4 \uni1DC5 
-	\uni1DC6 \uni1DC7 ]  by [\dotlessi \dotlessuni0268 \dotlessi \uni0237 
-	\uni025F \uni0237 \uni0237 \dotlessuni02B2 \dotlessuni1DA4 \dotlessuni2071 ];
-    sub [\i \uni0268 \uni0456 \j \uni0249 \uni03F3 \uni0458 \uni02B2 \uni1DA4 \uni2071 ]' [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
+	\uni1DC6 \uni1DC7 ]  by [\dotlessi \dotlessuni0268 \dotlessi 
+	\dotlessuni2148 \uni0237 \uni025F \uni0237 \uni0237 \dotlessuni02B2 
+	\dotlessuni1DA4 \dotlessuni2071 \dotlessuni2149 ];
+    sub [\i \uni0268 \uni0456 \uni2148 \j \uni0249 \uni03F3 \uni0458 \uni02B2 \uni1DA4 
+	\uni2071 \uni2149 ]' [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
 	\uni032E \uni032F \uni0330 \uni0331 \uni0337 \uni0338 \uni0345 \uni035F ] [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
 	\hookabovecomb \uni030A \uni030B \uni030C \uni030D \uni030F \uni0311 
 	\uni0312 \uni0313 \uni0314 \uni0315 \uni0340 \uni0341 \uni0342 \uni0343 
 	\uni0357 \uni0483 \uni0484 \uni0485 \uni0486 \uni0487 \uni1DC4 \uni1DC5 
-	\uni1DC6 \uni1DC7 ]  by [\dotlessi \dotlessuni0268 \dotlessi \uni0237 
-	\uni025F \uni0237 \uni0237 \dotlessuni02B2 \dotlessuni1DA4 \dotlessuni2071 ];
-    sub [\i \uni0268 \uni0456 \j \uni0249 \uni03F3 \uni0458 \uni02B2 \uni1DA4 \uni2071 ]' [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
+	\uni1DC6 \uni1DC7 ]  by [\dotlessi \dotlessuni0268 \dotlessi 
+	\dotlessuni2148 \uni0237 \uni025F \uni0237 \uni0237 \dotlessuni02B2 
+	\dotlessuni1DA4 \dotlessuni2071 \dotlessuni2149 ];
+    sub [\i \uni0268 \uni0456 \uni2148 \j \uni0249 \uni03F3 \uni0458 \uni02B2 \uni1DA4 
+	\uni2071 \uni2149 ]' [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
 	\uni032E \uni032F \uni0330 \uni0331 \uni0337 \uni0338 \uni0345 \uni035F ] [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
 	\uni032E \uni032F \uni0330 \uni0331 \uni0337 \uni0338 \uni0345 \uni035F ] [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
 	\hookabovecomb \uni030A \uni030B \uni030C \uni030D \uni030F \uni0311 
 	\uni0312 \uni0313 \uni0314 \uni0315 \uni0340 \uni0341 \uni0342 \uni0343 
 	\uni0357 \uni0483 \uni0484 \uni0485 \uni0486 \uni0487 \uni1DC4 \uni1DC5 
-	\uni1DC6 \uni1DC7 ]  by [\dotlessi \dotlessuni0268 \dotlessi \uni0237 
-	\uni025F \uni0237 \uni0237 \dotlessuni02B2 \dotlessuni1DA4 \dotlessuni2071 ];
+	\uni1DC6 \uni1DC7 ]  by [\dotlessi \dotlessuni0268 \dotlessi 
+	\dotlessuni2148 \uni0237 \uni025F \uni0237 \uni0237 \dotlessuni02B2 
+	\dotlessuni1DA4 \dotlessuni2071 \dotlessuni2149 ];
     sub [\iogonek ]'lookup MultipleSubstitutionlookup49  [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
 	\hookabovecomb \uni030A \uni030B \uni030C \uni030D \uni030F \uni0311 
 	\uni0312 \uni0313 \uni0314 \uni0315 \uni0340 \uni0341 \uni0342 \uni0343 
@@ -6930,6 +6936,14 @@ feature liga {
 feature ccmp {
 
  script DFLT;
+     language dflt ;
+      lookup ccmpsoftdottedlookup1;
+
+ script cyrl;
+     language dflt ;
+      lookup ccmpsoftdottedlookup1;
+
+ script grek;
      language dflt ;
       lookup ccmpsoftdottedlookup1;
 
@@ -10414,6 +10428,11 @@ lookup markPositionnementdesignelookups1 {
   pos base [\dotlessuni0268 ] <anchor 290 0> mark @bottom_right
 	<anchor 268 0> mark @bottom_center
 	<anchor 268 1040> mark @top_center;
+  pos base [\dotlessuni2148 ] <anchor 555 1039> mark @top_center
+	<anchor 319 0> mark @bottom_center
+	<anchor 498 0> mark @bottom_right
+	<anchor 319 -20> mark @bottom_cedilla;
+  pos base [\dotlessuni2149 ] <anchor 781 1039> mark @top_center;
 } markPositionnementdesignelookups1;
 
 feature kern {
@@ -10490,7 +10509,6 @@ feature mark {
      language dflt ;
       lookup markPositionnementdesignelookups1;
 } mark;
-#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 
@@ -11509,7 +11527,7 @@ feature mark {
 	\uni2152.cv01.cv20.ss06.zero \uni2152.cv11.ss06.zero 
 	\uni2152.cv10.cv11.ss06.zero \uni2152.cv11.cv20.ss06.zero \colon.centered 
 	\asterisk.centered \dotlessuni0268 \dotlessuni029D \dotlessuni02B2 
-	\dotlessuni1DA4 \dotlessuni2071 ];
+	\dotlessuni1DA4 \dotlessuni2071 \dotlessuni2148 \dotlessuni2149 ];
 @GDEF_Ligature = [\i \j \igrave \iacute \icircumflex \idieresis \dotlessi \itilde 
 	\imacron \ibreve \iogonek \jcircumflex \uni01D0 \uni0209 \uni020B \uni0249 
 	\uni0457 \uni1EC9 \arrowright \arrowleft \arrowboth \arrowdblright 
