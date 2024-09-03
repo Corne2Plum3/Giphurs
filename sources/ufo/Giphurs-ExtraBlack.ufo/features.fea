@@ -48,7 +48,7 @@ languagesystem latn WLF ;
 # GSUB 
 
 
-lookup c2sc_CapitalesverspetitescapitalesdansLatinlookup0 {
+lookup c2sc_Small_caps_from_caps {
   lookupflag 0;
     sub \A by \a.sc ;
     sub \V by \v.sc ;
@@ -521,9 +521,9 @@ lookup c2sc_CapitalesverspetitescapitalesdansLatinlookup0 {
     sub \uniA7B6 by \uniA7B7.sc ;
     sub \uniA7C7 by \uniA7C8.sc ;
     sub \uniA7B4 by \uniA7B5.sc ;
-} c2sc_CapitalesverspetitescapitalesdansLatinlookup0;
+} c2sc_Small_caps_from_caps;
 
-lookup smcpBasdecasseverspetitescapitalesdansLatinlookup0 {
+lookup smcp_Small_caps {
   lookupflag 0;
     sub \o by \o.sc ;
     sub \n by \n.sc ;
@@ -1236,9 +1236,9 @@ lookup smcpBasdecasseverspetitescapitalesdansLatinlookup0 {
     sub \uniA7C8 by \uniA7C8.sc ;
     sub \uni1D7D by \uni1D7D.sc ;
     sub \uniA7B5 by \uniA7B5.sc ;
-} smcpBasdecasseverspetitescapitalesdansLatinlookup0;
+} smcp_Small_caps;
 
-lookup cv01Alternativedigit11 {
+lookup cv01_Alternative_digit_1_A {
   lookupflag 0;
     sub \one by \one.cv01 ;
     sub \onequarter by \onequarter.cv01 ;
@@ -1297,9 +1297,9 @@ lookup cv01Alternativedigit11 {
     sub \uni2486 by \uni2486.cv01 ;
     sub \uni24F5 by \uni24F5.cv01 ;
     sub \uni24FE by \uni24FE.cv01 ;
-} cv01Alternativedigit11;
+} cv01_Alternative_digit_1_A;
 
-lookup cv02Alternativedigit21 {
+lookup cv02_Alternative_digit_2_A {
   lookupflag 0;
     sub \two by \two.cv02 ;
     sub \onehalf by \onehalf.cv02 ;
@@ -1323,9 +1323,9 @@ lookup cv02Alternativedigit21 {
     sub \uni2493.cv01 by \uni2493.cv01.cv02 ;
     sub \uni24EC.cv01 by \uni24EC.cv01.cv02 ;
     sub \onehalf.cv01 by \onehalf.cv01.cv02 ;
-} cv02Alternativedigit21;
+} cv02_Alternative_digit_2_A;
 
-lookup cv03Alternativedigit31 {
+lookup cv03_Alternative_digit_3_A {
   lookupflag 0;
     sub \three by \three.cv03 ;
     sub \threequarters by \threequarters.cv03 ;
@@ -1349,9 +1349,9 @@ lookup cv03Alternativedigit31 {
     sub \uni24ED.cv01 by \uni24ED.cv01.cv03 ;
     sub \onethird.cv01 by \onethird.cv01.cv03 ;
     sub \twothirds.cv02 by \twothirds.cv02.cv03 ;
-} cv03Alternativedigit31;
+} cv03_Alternative_digit_3_A;
 
-lookup cv04Alternativedigit41 {
+lookup cv04_Alternative_digit_4_A {
   lookupflag 0;
     sub \four by \four.cv04 ;
     sub \threequarters by \threequarters.cv04 ;
@@ -1372,9 +1372,9 @@ lookup cv04Alternativedigit41 {
     sub \uni24EE.cv01 by \uni24EE.cv01.cv04 ;
     sub \onequarter.cv01 by \onequarter.cv01.cv04 ;
     sub \threequarters.cv03 by \threequarters.cv03.cv04 ;
-} cv04Alternativedigit41;
+} cv04_Alternative_digit_4_A;
 
-lookup cv05Alternativedigit51 {
+lookup cv05_Alternative_digit_5_A {
   lookupflag 0;
     sub \five by \five.cv05 ;
     sub \uni2156 by \uni2156.cv05 ;
@@ -1400,9 +1400,9 @@ lookup cv05Alternativedigit51 {
     sub \uni2156.cv02 by \uni2156.cv02.cv05 ;
     sub \uni2157.cv03 by \uni2157.cv03.cv05 ;
     sub \uni2158.cv04 by \uni2158.cv04.cv05 ;
-} cv05Alternativedigit51;
+} cv05_Alternative_digit_5_A;
 
-lookup cv06Alternativedigit61 {
+lookup cv06_Alternative_digit_6_A {
   lookupflag 0;
     sub \six by \six.cv06 ;
     sub \uni2159 by \uni2159.cv06 ;
@@ -1422,9 +1422,9 @@ lookup cv06Alternativedigit61 {
     sub \uni24F0.cv01 by \uni24F0.cv01.cv06 ;
     sub \uni2159.cv01 by \uni2159.cv01.cv06 ;
     sub \uni215A.cv05 by \uni215A.cv05.cv06 ;
-} cv06Alternativedigit61;
+} cv06_Alternative_digit_6_A;
 
-lookup cv07Alternativedigit71 {
+lookup cv07_Alternative_digit_7_A {
   lookupflag 0;
     sub \seven by \seven.cv07 ;
     sub \uni2150 by \uni2150.cv07 ;
@@ -1443,9 +1443,9 @@ lookup cv07Alternativedigit71 {
     sub \uni2498.cv01 by \uni2498.cv01.cv07 ;
     sub \uni24F1.cv01 by \uni24F1.cv01.cv07 ;
     sub \uni2150.cv01 by \uni2150.cv01.cv07 ;
-} cv07Alternativedigit71;
+} cv07_Alternative_digit_7_A;
 
-lookup cv08Alternativedigit81 {
+lookup cv08_Alternative_digit_8_A {
   lookupflag 0;
     sub \eight by \eight.cv08 ;
     sub \oneeighth by \oneeighth.cv08 ;
@@ -1469,9 +1469,9 @@ lookup cv08Alternativedigit81 {
     sub \threeeighths.cv03 by \threeeighths.cv03.cv08 ;
     sub \fiveeighths.cv05 by \fiveeighths.cv05.cv08 ;
     sub \seveneighths.cv07 by \seveneighths.cv07.cv08 ;
-} cv08Alternativedigit81;
+} cv08_Alternative_digit_8_A;
 
-lookup cv09Alternativedigit91 {
+lookup cv09_Alternative_digit_9_A {
   lookupflag 0;
     sub \nine by \nine.cv09 ;
     sub \uni2151 by \uni2151.cv09 ;
@@ -1489,9 +1489,9 @@ lookup cv09Alternativedigit91 {
     sub \uni249A.cv01 by \uni249A.cv01.cv09 ;
     sub \uni24F3.cv01 by \uni24F3.cv01.cv09 ;
     sub \uni2151.cv01 by \uni2151.cv01.cv09 ;
-} cv09Alternativedigit91;
+} cv09_Alternative_digit_9_A;
 
-lookup cv10Alternativedigit01 {
+lookup cv10_Alternative_digit_0_A {
   lookupflag 0;
     sub \zero by \zero.cv10 ;
     sub \uni2152 by \uni2152.cv10 ;
@@ -1518,9 +1518,9 @@ lookup cv10Alternativedigit01 {
     sub \uni24FE.cv01 by \uni24FE.cv01.cv10 ;
     sub \uni2189.cv03 by \uni2189.cv03.cv10 ;
     sub \uni2152.cv01 by \uni2152.cv01.cv10 ;
-} cv10Alternativedigit01;
+} cv10_Alternative_digit_0_A;
 
-lookup cv11Alternativedigit12 {
+lookup cv11_Alternative_digit_1_B {
   lookupflag 0;
     sub \one by \one.cv11 ;
     sub \onequarter by \onequarter.cv11 ;
@@ -1625,9 +1625,9 @@ lookup cv11Alternativedigit12 {
     sub \oneeighth.cv08 by \oneeighth.cv08.cv11 ;
     sub \uni2151.cv09 by \uni2151.cv09.cv11 ;
     sub \uni2152.cv10 by \uni2152.cv10.cv11 ;
-} cv11Alternativedigit12;
+} cv11_Alternative_digit_1_B;
 
-lookup cv12Alternativedigit22 {
+lookup cv12_Alternative_digit_2_B {
   lookupflag 0;
     sub \two by \two.cv12 ;
     sub \onehalf by \onehalf.cv12 ;
@@ -1662,9 +1662,9 @@ lookup cv12Alternativedigit22 {
     sub \onehalf.cv11 by \onehalf.cv11.cv12 ;
     sub \twothirds.cv03 by \twothirds.cv03.cv12 ;
     sub \uni2156.cv05 by \uni2156.cv05.cv12 ;
-} cv12Alternativedigit22;
+} cv12_Alternative_digit_2_B;
 
-lookup cv13Alternativedigit32 {
+lookup cv13_Alternative_digit_3_B {
   lookupflag 0;
     sub \three by \three.cv13 ;
     sub \threequarters by \threequarters.cv13 ;
@@ -1698,9 +1698,9 @@ lookup cv13Alternativedigit32 {
     sub \threequarters.cv04 by \threequarters.cv04.cv13 ;
     sub \uni2157.cv05 by \uni2157.cv05.cv13 ;
     sub \threeeighths.cv08 by \threeeighths.cv08.cv13 ;
-} cv13Alternativedigit32;
+} cv13_Alternative_digit_3_B;
 
-lookup cv14Alternativedigit42 {
+lookup cv14_Alternative_digit_4_B {
   lookupflag 0;
     sub \four by \four.cv14 ;
     sub \threequarters by \threequarters.cv14 ;
@@ -1728,9 +1728,9 @@ lookup cv14Alternativedigit42 {
     sub \threequarters.cv03 by \threequarters.cv03.cv14 ;
     sub \threequarters.cv13 by \threequarters.cv13.cv14 ;
     sub \uni2158.cv05 by \uni2158.cv05.cv14 ;
-} cv14Alternativedigit42;
+} cv14_Alternative_digit_4_B;
 
-lookup cv15Alternativedigit52 {
+lookup cv15_Alternative_digit_5_B {
   lookupflag 0;
     sub \five by \five.cv15 ;
     sub \uni2156 by \uni2156.cv15 ;
@@ -1766,9 +1766,9 @@ lookup cv15Alternativedigit52 {
     sub \uni2158.cv14 by \uni2158.cv14.cv15 ;
     sub \uni215A.cv06 by \uni215A.cv06.cv15 ;
     sub \fiveeighths.cv08 by \fiveeighths.cv08.cv15 ;
-} cv15Alternativedigit52;
+} cv15_Alternative_digit_5_B;
 
-lookup cv16Alternativedigit62 {
+lookup cv16_Alternative_digit_6_B {
   lookupflag 0;
     sub \six by \six.cv16 ;
     sub \uni2159 by \uni2159.cv16 ;
@@ -1794,9 +1794,9 @@ lookup cv16Alternativedigit62 {
     sub \uni2159.cv11 by \uni2159.cv11.cv16 ;
     sub \uni215A.cv05 by \uni215A.cv05.cv16 ;
     sub \uni215A.cv15 by \uni215A.cv15.cv16 ;
-} cv16Alternativedigit62;
+} cv16_Alternative_digit_6_B;
 
-lookup cv17Alternativedigit72 {
+lookup cv17_Alternative_digit_7_B {
   lookupflag 0;
     sub \seven by \seven.cv17 ;
     sub \uni2150 by \uni2150.cv17 ;
@@ -1821,9 +1821,9 @@ lookup cv17Alternativedigit72 {
     sub \uni2150.cv01 by \uni2150.cv01.cv17 ;
     sub \uni2150.cv11 by \uni2150.cv11.cv17 ;
     sub \seveneighths.cv08 by \seveneighths.cv08.cv17 ;
-} cv17Alternativedigit72;
+} cv17_Alternative_digit_7_B;
 
-lookup cv18Alternativedigit82 {
+lookup cv18_Alternative_digit_8_B {
   lookupflag 0;
     sub \eight by \eight.cv18 ;
     sub \oneeighth by \oneeighth.cv18 ;
@@ -1855,9 +1855,9 @@ lookup cv18Alternativedigit82 {
     sub \fiveeighths.cv15 by \fiveeighths.cv15.cv18 ;
     sub \seveneighths.cv07 by \seveneighths.cv07.cv18 ;
     sub \seveneighths.cv17 by \seveneighths.cv17.cv18 ;
-} cv18Alternativedigit82;
+} cv18_Alternative_digit_8_B;
 
-lookup cv19Alternativedigit92 {
+lookup cv19_Alternative_digit_9_B {
   lookupflag 0;
     sub \nine by \nine.cv19 ;
     sub \uni2151 by \uni2151.cv19 ;
@@ -1880,9 +1880,9 @@ lookup cv19Alternativedigit92 {
     sub \uni24F3.cv11 by \uni24F3.cv11.cv19 ;
     sub \uni2151.cv01 by \uni2151.cv01.cv19 ;
     sub \uni2151.cv11 by \uni2151.cv11.cv19 ;
-} cv19Alternativedigit92;
+} cv19_Alternative_digit_9_B;
 
-lookup cv20Alternativedigit02 {
+lookup cv20_Alternative_digit_0_B {
   lookupflag 0;
     sub \zero by \zero.cv20 ;
     sub \uni2152 by \uni2152.cv20 ;
@@ -1920,9 +1920,9 @@ lookup cv20Alternativedigit02 {
     sub \uni2189.cv13 by \uni2189.cv13.cv20 ;
     sub \uni2152.cv01 by \uni2152.cv01.cv20 ;
     sub \uni2152.cv11 by \uni2152.cv11.cv20 ;
-} cv20Alternativedigit02;
+} cv20_Alternative_digit_0_B;
 
-lookup cv21CharacterVariants21lookups62 {
+lookup cv21_Alternative_letter_G {
   lookupflag 0;
     sub \G by \G.cv21 ;
     sub \Gcommaaccent by \Gcommaaccent.cv21 ;
@@ -1944,9 +1944,9 @@ lookup cv21CharacterVariants21lookups62 {
     sub \gcaron.sc by \gcaron.sc.cv21 ;
     sub \uni01F5.sc by \uni01F5.sc.cv21 ;
     sub \uni1E21.sc by \uni1E21.sc.cv21 ;
-} cv21CharacterVariants21lookups62;
+} cv21_Alternative_letter_G;
 
-lookup cv22CharacterVariants22lookups63 {
+lookup cv22_Alternative_letter_I {
   lookupflag 0;
     sub \I by \I.cv22 ;
     sub \Igrave by \Igrave.cv22 ;
@@ -2027,9 +2027,9 @@ lookup cv22CharacterVariants22lookups63 {
     sub \uni1FD3.sc by \uni1FD3.sc.cv22 ;
     sub \uni1FD6.sc by \uni1FD6.sc.cv22 ;
     sub \uni1FD7.sc by \uni1FD7.sc.cv22 ;
-} cv22CharacterVariants22lookups63;
+} cv22_Alternative_letter_I;
 
-lookup cv23CharacterVariants23lookups64 {
+lookup cv23_Alternative_small_letter_a {
   lookupflag 0;
     sub \a by \a.cv23 ;
     sub \agrave by \agrave.cv23 ;
@@ -2077,9 +2077,9 @@ lookup cv23CharacterVariants23lookups64 {
     sub \uni24D0 by \uni24D0.cv23 ;
     sub \uni249C by \uni249C.cv23 ;
     sub \uni1D43 by \uni1D43.cv23 ;
-} cv23CharacterVariants23lookups64;
+} cv23_Alternative_small_letter_a;
 
-lookup cv24CharacterVariants24lookups65 {
+lookup cv24_Alternative_small_letter_g {
   lookupflag 0;
     sub \g by \g.cv24 ;
     sub \gcircumflex by \gcircumflex.cv24 ;
@@ -2092,9 +2092,9 @@ lookup cv24CharacterVariants24lookups65 {
     sub \uni1E21 by \uni1E21.cv24 ;
     sub \uni24D6 by \uni24D6.cv24 ;
     sub \uni24A2 by \uni24A2.cv24 ;
-} cv24CharacterVariants24lookups65;
+} cv24_Alternative_small_letter_g;
 
-lookup cv25CharacterVariants25lookups66 {
+lookup cv25_Alternative_small_letter_u {
   lookupflag 0;
     sub \u by \u.cv25 ;
     sub \ugrave by \ugrave.cv25 ;
@@ -2131,14 +2131,14 @@ lookup cv25CharacterVariants25lookups66 {
     sub \uni24E4 by \uni24E4.cv25 ;
     sub \uni24B0 by \uni24B0.cv25 ;
     sub \uni1D58 by \uni1D58.cv25 ;
-} cv25CharacterVariants25lookups66;
+} cv25_Alternative_small_letter_u;
 
-lookup cv26CharacterVariants26lookups67 {
+lookup cv26_Alternative_ampersand {
   lookupflag 0;
     sub \ampersand by \ampersand.cv26 ;
-} cv26CharacterVariants26lookups67;
+} cv26_Alternative_ampersand;
 
-lookup ss01Alternativenumbersset1 {
+lookup ss01_Alternative_digits_set_A {
   lookupflag 0;
     sub \eight by \eight.cv08 ;
     sub \six by \six.cv06 ;
@@ -2322,9 +2322,9 @@ lookup ss01Alternativenumbersset1 {
     sub \seveneighths.cv07 by \seveneighths.cv07.cv08 ;
     sub \uni2151.cv01 by \uni2151.cv01.cv09 ;
     sub \uni2152.cv01 by \uni2152.cv01.cv10 ;
-} ss01Alternativenumbersset1;
+} ss01_Alternative_digits_set_A;
 
-lookup ss02Alternativenumbersset2 {
+lookup ss02_Alternative_digits_set_B {
   lookupflag 0;
     sub \eight by \eight.cv18 ;
     sub \six by \six.cv16 ;
@@ -2628,9 +2628,9 @@ lookup ss02Alternativenumbersset2 {
     sub \uni2152.cv10 by \uni2152.cv10.cv11 ;
     sub \uni2152.cv01 by \uni2152.cv01.cv20 ;
     sub \uni2152.cv11 by \uni2152.cv11.cv20 ;
-} ss02Alternativenumbersset2;
+} ss02_Alternative_digits_set_B;
 
-lookup ss03StyleSet3lookups55 {
+lookup ss03_Alternative_uppercase_characters {
   lookupflag 0;
     sub \I by \I.cv22 ;
     sub \G by \G.cv21 ;
@@ -2728,9 +2728,9 @@ lookup ss03StyleSet3lookups55 {
     sub \uni1FD3.sc by \uni1FD3.sc.cv22 ;
     sub \uni1FD6.sc by \uni1FD6.sc.cv22 ;
     sub \uni1FD7.sc by \uni1FD7.sc.cv22 ;
-} ss03StyleSet3lookups55;
+} ss03_Alternative_uppercase_characters;
 
-lookup ss04StyleSet4lookups56 {
+lookup ss04_Alternative_lowercase_characters {
   lookupflag 0;
     sub \u by \u.cv25 ;
     sub \a by \a.cv23 ;
@@ -2824,9 +2824,9 @@ lookup ss04StyleSet4lookups56 {
     sub \uni24B0 by \uni24B0.cv25 ;
     sub \uni1D43 by \uni1D43.cv23 ;
     sub \uni1D58 by \uni1D58.cv25 ;
-} ss04StyleSet4lookups56;
+} ss04_Alternative_lowercase_characters;
 
-lookup ss05StyleSet5lookups57 {
+lookup ss05_Alternative_currency_signs {
   lookupflag 0;
     sub \dollar by \dollar.ss05 ;
     sub \cent by \cent.ss05 ;
@@ -2836,9 +2836,9 @@ lookup ss05StyleSet5lookups57 {
     sub \uni20AA by \uni20AA.ss05 ;
     sub \Euro by \Euro.ss05 ;
     sub \uni20B2 by \uni20B2.ss05 ;
-} ss05StyleSet5lookups57;
+} ss05_Alternative_currency_signs;
 
-lookup ss06StyleSet6lookups58 {
+lookup ss06_Serif_on_digit_1 {
   lookupflag 0;
     sub \one by \one.ss06 ;
     sub \onequarter by \onequarter.ss06 ;
@@ -3287,9 +3287,9 @@ lookup ss06StyleSet6lookups58 {
     sub \uni2152.cv11 by \uni2152.cv11.ss06 ;
     sub \uni2152.cv10.cv11 by \uni2152.cv10.cv11.ss06 ;
     sub \uni2152.cv11.cv20 by \uni2152.cv11.cv20.ss06 ;
-} ss06StyleSet6lookups58;
+} ss06_Serif_on_digit_1;
 
-lookup ss07StyleSet7lookups59 {
+lookup ss07_Serif_on_digit_7 {
   lookupflag 0;
     sub \seven by \seven.ss07 ;
     sub \uni2150 by \uni2150.ss07 ;
@@ -3408,18 +3408,18 @@ lookup ss07StyleSet7lookups59 {
     sub \uni2150.cv11.ss06 by \uni2150.cv11.ss06.ss07 ;
     sub \uni2150.cv07.cv11.ss06 by \uni2150.cv07.cv11.ss06.ss07 ;
     sub \uni2150.cv11.cv17.ss06 by \uni2150.cv11.cv17.ss06.ss07 ;
-} ss07StyleSet7lookups59;
+} ss07_Serif_on_digit_7;
 
-lookup ss08StyleSet8lookups60 {
+lookup ss08_f_ligatures {
   lookupflag 0;
     sub \f by \f.ss08 ;
     sub \t by \t.ss08 ;
     sub \i by \i.ss08 ;
     sub \j by \j.ss08 ;
     sub \l by \l.ss08 ;
-} ss08StyleSet8lookups60;
+} ss08_f_ligatures;
 
-lookup zeroSlashedZerolookups61 {
+lookup zero_Slashed_zero {
   lookupflag 0;
     sub \zero by \zero.zero ;
     sub \uni2152 by \uni2152.zero ;
@@ -3583,9 +3583,9 @@ lookup zeroSlashedZerolookups61 {
     sub \uni2152.cv11.ss06 by \uni2152.cv11.ss06.zero ;
     sub \uni2152.cv10.cv11.ss06 by \uni2152.cv10.cv11.ss06.zero ;
     sub \uni2152.cv11.cv20.ss06 by \uni2152.cv11.cv20.ss06.zero ;
-} zeroSlashedZerolookups61;
+} zero_Slashed_zero;
 
-lookup supsSupscriptnumbers {
+lookup sups_Supscript_numbers {
   lookupflag 0;
     sub \eight by \eight.superior ;
     sub \six by \six.superior ;
@@ -3626,9 +3626,9 @@ lookup supsSupscriptnumbers {
     sub \zero.zero by \zero.zero.superior ;
     sub \zero.cv10.zero by \zero.cv10.zero.superior ;
     sub \zero.cv20.zero by \zero.cv20.zero.superior ;
-} supsSupscriptnumbers;
+} sups_Supscript_numbers;
 
-lookup subsSubscriptnumbers {
+lookup subs_Subscript_numbers {
   lookupflag 0;
     sub \eight by \eight.subscript ;
     sub \six by \six.subscript ;
@@ -3669,9 +3669,9 @@ lookup subsSubscriptnumbers {
     sub \zero.zero by \zero.zero.subscript ;
     sub \zero.cv10.zero by \zero.cv10.zero.subscript ;
     sub \zero.cv20.zero by \zero.cv20.zero.subscript ;
-} subsSubscriptnumbers;
+} subs_Subscript_numbers;
 
-lookup onumOldstyleFigures {
+lookup onum_Oldstyle_figures {
   lookupflag 0;
     sub \eight by \eight.onum ;
     sub \six by \six.onum ;
@@ -3712,9 +3712,9 @@ lookup onumOldstyleFigures {
     sub \zero.zero by \zero.zero.onum ;
     sub \zero.cv10.zero by \zero.cv10.zero.onum ;
     sub \zero.cv20.zero by \zero.cv20.zero.onum ;
-} onumOldstyleFigures;
+} onum_Oldstyle_figures;
 
-lookup numrNumerators {
+lookup numr_Numerators {
   lookupflag 0;
     sub \eight by \eight.numr ;
     sub \six by \six.numr ;
@@ -3755,9 +3755,9 @@ lookup numrNumerators {
     sub \zero.zero by \zero.zero.numr ;
     sub \zero.cv10.zero by \zero.cv10.zero.numr ;
     sub \zero.cv20.zero by \zero.cv20.zero.numr ;
-} numrNumerators;
+} numr_Numerators;
 
-lookup dnomDenominators {
+lookup dnom_Denominators {
   lookupflag 0;
     sub \eight by \eight.dnom ;
     sub \six by \six.dnom ;
@@ -3798,9 +3798,9 @@ lookup dnomDenominators {
     sub \zero.zero by \zero.zero.dnom ;
     sub \zero.cv10.zero by \zero.cv10.zero.dnom ;
     sub \zero.cv20.zero by \zero.cv20.zero.dnom ;
-} dnomDenominators;
+} dnom_Denominators;
 
-lookup pnumProportionalNumbers {
+lookup pnum_Proportional_figures {
   lookupflag 0;
     sub \eight by \eight.pnum ;
     sub \six by \six.pnum ;
@@ -3997,9 +3997,9 @@ lookup pnumProportionalNumbers {
     sub \zero.cv20.zero.subscript by \zero.cv20.zero.subscript.pnum ;
     sub \zero.cv20.zero.numr by \zero.cv20.zero.numr.pnum ;
     sub \zero.cv20.zero.dnom by \zero.cv20.zero.dnom.pnum ;
-} pnumProportionalNumbers;
+} pnum_Proportional_figures;
 
-lookup tnumTabularNumbers {
+lookup tnum_Tabular_figures {
   lookupflag 0;
     sub \eight by \eight.tnum ;
     sub \six by \six.tnum ;
@@ -4235,9 +4235,9 @@ lookup tnumTabularNumbers {
     sub \zero.cv20.zero.subscript by \zero.cv20.zero.subscript.tnum ;
     sub \zero.cv20.zero.numr by \zero.cv20.zero.numr.tnum ;
     sub \zero.cv20.zero.dnom by \zero.cv20.zero.dnom.tnum ;
-} tnumTabularNumbers;
+} tnum_Tabular_figures;
 
-lookup ligaStandardLigatureslookup0 {
+lookup liga_Standard_ligatures {
   lookupflag 0;
     sub \hyphen \greater  by \arrowright;
     sub \less \hyphen  by \arrowleft;
@@ -4260,34 +4260,34 @@ lookup ligaStandardLigatureslookup0 {
     sub \f.ss08 \j.ss08  by \f_j.ss08;
     sub \f.ss08 \l.ss08  by \f_l.ss08;
     sub \f.ss08 \t.ss08  by \f_t.ss08;
-} ligaStandardLigatureslookup0;
+} liga_Standard_ligatures;
 
-lookup loclLocalizedFormslookups62 {
+lookup locl_Localized_Eng {
   lookupflag 0;
     sub \Eng by \Eng.locl ;
-} loclLocalizedFormslookups62;
+} locl_Localized_Eng;
 
-lookup MultipleSubstitutionlookup49 {
+lookup ccmp_Soft_dotted_iogonek {
   lookupflag 0;
     sub \iogonek by \dotlessi \uni0328 ;
-} MultipleSubstitutionlookup49;
+} ccmp_Soft_dotted_iogonek;
 
-lookup MultipleSubstitutionlookup50 {
+lookup ccmp_Soft_dotted_uni1E2D {
   lookupflag 0;
     sub \uni1E2D by \dotlessi \uni0330 ;
-} MultipleSubstitutionlookup50;
+} ccmp_Soft_dotted_uni1E2D;
 
-lookup MultipleSubstitutionlookup51 {
+lookup ccmp_Soft_dotted_uni1ECB {
   lookupflag 0;
     sub \uni1ECB by \dotlessi \dotbelowcomb ;
-} MultipleSubstitutionlookup51;
+} ccmp_Soft_dotted_uni1ECB;
 
-lookup MultipleSubstitutionlookup52 {
+lookup ccmp_Soft_dotted_uni029D {
   lookupflag 0;
     sub \uni029D by \dotlessuni029D \dotbelowcomb ;
-} MultipleSubstitutionlookup52;
+} ccmp_Soft_dotted_uni029D;
 
-lookup ccmpsoftdottedlookup1 {
+lookup ccmp_Soft_dotted_i_j {
   lookupflag 0;
     sub [\i \uni0268 \uni0456 \uni2148 \j \uni0249 \uni03F3 \uni0458 \uni02B2 \uni1DA4 
 	\uni2071 \uni2149 ]' [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
@@ -4316,79 +4316,79 @@ lookup ccmpsoftdottedlookup1 {
 	\uni1DC6 \uni1DC7 ]  by [\dotlessi \dotlessuni0268 \dotlessi 
 	\dotlessuni2148 \uni0237 \uni025F \uni0237 \uni0237 \dotlessuni02B2 
 	\dotlessuni1DA4 \dotlessuni2071 \dotlessuni2149 ];
-    sub [\iogonek ]'lookup MultipleSubstitutionlookup49  [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
+    sub [\iogonek ]'lookup ccmp_Soft_dotted_iogonek  [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
 	\hookabovecomb \uni030A \uni030B \uni030C \uni030D \uni030F \uni0311 
 	\uni0312 \uni0313 \uni0314 \uni0315 \uni0340 \uni0341 \uni0342 \uni0343 
 	\uni0357 \uni0483 \uni0484 \uni0485 \uni0486 \uni0487 \uni1DC4 \uni1DC5 
 	\uni1DC6 \uni1DC7 ] ;
-    sub [\iogonek ]'lookup MultipleSubstitutionlookup49  [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
+    sub [\iogonek ]'lookup ccmp_Soft_dotted_iogonek  [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
 	\uni032E \uni032F \uni0330 \uni0331 \uni0337 \uni0338 \uni0345 \uni035F ] [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
 	\hookabovecomb \uni030A \uni030B \uni030C \uni030D \uni030F \uni0311 
 	\uni0312 \uni0313 \uni0314 \uni0315 \uni0340 \uni0341 \uni0342 \uni0343 
 	\uni0357 \uni0483 \uni0484 \uni0485 \uni0486 \uni0487 \uni1DC4 \uni1DC5 
 	\uni1DC6 \uni1DC7 ] ;
-    sub [\iogonek ]'lookup MultipleSubstitutionlookup49  [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
+    sub [\iogonek ]'lookup ccmp_Soft_dotted_iogonek  [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
 	\uni032E \uni032F \uni0330 \uni0331 \uni0337 \uni0338 \uni0345 \uni035F ] [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
 	\uni032E \uni032F \uni0330 \uni0331 \uni0337 \uni0338 \uni0345 \uni035F ] [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
 	\hookabovecomb \uni030A \uni030B \uni030C \uni030D \uni030F \uni0311 
 	\uni0312 \uni0313 \uni0314 \uni0315 \uni0340 \uni0341 \uni0342 \uni0343 
 	\uni0357 \uni0483 \uni0484 \uni0485 \uni0486 \uni0487 \uni1DC4 \uni1DC5 
 	\uni1DC6 \uni1DC7 ] ;
-    sub [\uni1E2D ]'lookup MultipleSubstitutionlookup50  [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
+    sub [\uni1E2D ]'lookup ccmp_Soft_dotted_uni1E2D  [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
 	\hookabovecomb \uni030A \uni030B \uni030C \uni030D \uni030F \uni0311 
 	\uni0312 \uni0313 \uni0314 \uni0315 \uni0340 \uni0341 \uni0342 \uni0343 
 	\uni0357 \uni0483 \uni0484 \uni0485 \uni0486 \uni0487 \uni1DC4 \uni1DC5 
 	\uni1DC6 \uni1DC7 ] ;
-    sub [\uni1E2D ]'lookup MultipleSubstitutionlookup50  [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
+    sub [\uni1E2D ]'lookup ccmp_Soft_dotted_uni1E2D  [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
 	\uni032E \uni032F \uni0330 \uni0331 \uni0337 \uni0338 \uni0345 \uni035F ] [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
 	\hookabovecomb \uni030A \uni030B \uni030C \uni030D \uni030F \uni0311 
 	\uni0312 \uni0313 \uni0314 \uni0315 \uni0340 \uni0341 \uni0342 \uni0343 
 	\uni0357 \uni0483 \uni0484 \uni0485 \uni0486 \uni0487 \uni1DC4 \uni1DC5 
 	\uni1DC6 \uni1DC7 ] ;
-    sub [\uni1E2D ]'lookup MultipleSubstitutionlookup50  [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
+    sub [\uni1E2D ]'lookup ccmp_Soft_dotted_uni1E2D  [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
 	\uni032E \uni032F \uni0330 \uni0331 \uni0337 \uni0338 \uni0345 \uni035F ] [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
 	\uni032E \uni032F \uni0330 \uni0331 \uni0337 \uni0338 \uni0345 \uni035F ] [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
 	\hookabovecomb \uni030A \uni030B \uni030C \uni030D \uni030F \uni0311 
 	\uni0312 \uni0313 \uni0314 \uni0315 \uni0340 \uni0341 \uni0342 \uni0343 
 	\uni0357 \uni0483 \uni0484 \uni0485 \uni0486 \uni0487 \uni1DC4 \uni1DC5 
 	\uni1DC6 \uni1DC7 ] ;
-    sub [\uni1ECB ]'lookup MultipleSubstitutionlookup51  [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
+    sub [\uni1ECB ]'lookup ccmp_Soft_dotted_uni1ECB  [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
 	\hookabovecomb \uni030A \uni030B \uni030C \uni030D \uni030F \uni0311 
 	\uni0312 \uni0313 \uni0314 \uni0315 \uni0340 \uni0341 \uni0342 \uni0343 
 	\uni0357 \uni0483 \uni0484 \uni0485 \uni0486 \uni0487 \uni1DC4 \uni1DC5 
 	\uni1DC6 \uni1DC7 ] ;
-    sub [\uni1ECB ]'lookup MultipleSubstitutionlookup51  [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
+    sub [\uni1ECB ]'lookup ccmp_Soft_dotted_uni1ECB  [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
 	\uni032E \uni032F \uni0330 \uni0331 \uni0337 \uni0338 \uni0345 \uni035F ] [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
 	\hookabovecomb \uni030A \uni030B \uni030C \uni030D \uni030F \uni0311 
 	\uni0312 \uni0313 \uni0314 \uni0315 \uni0340 \uni0341 \uni0342 \uni0343 
 	\uni0357 \uni0483 \uni0484 \uni0485 \uni0486 \uni0487 \uni1DC4 \uni1DC5 
 	\uni1DC6 \uni1DC7 ] ;
-    sub [\uni1ECB ]'lookup MultipleSubstitutionlookup51  [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
+    sub [\uni1ECB ]'lookup ccmp_Soft_dotted_uni1ECB  [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
 	\uni032E \uni032F \uni0330 \uni0331 \uni0337 \uni0338 \uni0345 \uni035F ] [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
 	\uni032E \uni032F \uni0330 \uni0331 \uni0337 \uni0338 \uni0345 \uni035F ] [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
 	\hookabovecomb \uni030A \uni030B \uni030C \uni030D \uni030F \uni0311 
 	\uni0312 \uni0313 \uni0314 \uni0315 \uni0340 \uni0341 \uni0342 \uni0343 
 	\uni0357 \uni0483 \uni0484 \uni0485 \uni0486 \uni0487 \uni1DC4 \uni1DC5 
 	\uni1DC6 \uni1DC7 ] ;
-    sub [\uni029D ]'lookup MultipleSubstitutionlookup52  [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
+    sub [\uni029D ]'lookup ccmp_Soft_dotted_uni029D  [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
 	\hookabovecomb \uni030A \uni030B \uni030C \uni030D \uni030F \uni0311 
 	\uni0312 \uni0313 \uni0314 \uni0315 \uni0340 \uni0341 \uni0342 \uni0343 
 	\uni0357 \uni0483 \uni0484 \uni0485 \uni0486 \uni0487 \uni1DC4 \uni1DC5 
 	\uni1DC6 \uni1DC7 ] ;
-    sub [\uni029D ]'lookup MultipleSubstitutionlookup52  [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
+    sub [\uni029D ]'lookup ccmp_Soft_dotted_uni029D  [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
 	\uni032E \uni032F \uni0330 \uni0331 \uni0337 \uni0338 \uni0345 \uni035F ] [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
 	\hookabovecomb \uni030A \uni030B \uni030C \uni030D \uni030F \uni0311 
 	\uni0312 \uni0313 \uni0314 \uni0315 \uni0340 \uni0341 \uni0342 \uni0343 
 	\uni0357 \uni0483 \uni0484 \uni0485 \uni0486 \uni0487 \uni1DC4 \uni1DC5 
 	\uni1DC6 \uni1DC7 ] ;
-    sub [\uni029D ]'lookup MultipleSubstitutionlookup52  [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
+    sub [\uni029D ]'lookup ccmp_Soft_dotted_uni029D  [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
 	\uni032E \uni032F \uni0330 \uni0331 \uni0337 \uni0338 \uni0345 \uni035F ] [\uni031B \dotbelowcomb \uni0324 \uni0325 \uni0326 \uni0327 \uni0328 \uni032D 
 	\uni032E \uni032F \uni0330 \uni0331 \uni0337 \uni0338 \uni0345 \uni035F ] [\gravecomb \acutecomb \uni0302 \tildecomb \uni0304 \uni0306 \uni0307 \uni0308 
 	\hookabovecomb \uni030A \uni030B \uni030C \uni030D \uni030F \uni0311 
 	\uni0312 \uni0313 \uni0314 \uni0315 \uni0340 \uni0341 \uni0342 \uni0343 
 	\uni0357 \uni0483 \uni0484 \uni0485 \uni0486 \uni0487 \uni1DC4 \uni1DC5 
 	\uni1DC6 \uni1DC7 ] ;
-} ccmpsoftdottedlookup1;
+} ccmp_Soft_dotted_i_j;
 
 lookup ccmp_latn {
   lookupflag 0;
@@ -4437,8 +4437,8 @@ lookup ccmp_latn {
     sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
-    sub \i \uni0308  by \idieresis;
     sub \i \uni0307  by \idieresis;
+    sub \i \uni0308  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
@@ -4497,8 +4497,8 @@ lookup ccmp_latn {
     sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \iogonek \gravecomb  by \iogonek;
     sub \i \uni0328  by \iogonek;
+    sub \iogonek \gravecomb  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4587,13 +4587,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \u \uni0308 \gravecomb  by \uni01DC;
-    sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \AE \acutecomb  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \Oslash \acutecomb  by \uni01E0;
     sub \A \uni0307 \uni0304  by \uni01E0;
+    sub \Oslash \acutecomb  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5548,8 +5548,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0456 \uni0308  by \uni0457;
+    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -5766,796 +5766,696 @@ lookup ccmp_cv {
     sub \u.cv25 \uni031B \dotbelowcomb  by \uni1EF1.cv25;
 } ccmp_cv;
 
-lookup centeredglyphs {
+lookup calt_Centered_glyphs {
   lookupflag 0;
     sub [\asterisk ]'  by [\asterisk.centered ];
     sub [\colon ]'  by [\colon.centered ];
     sub [\x ]'  by [\multiply ];
-} centeredglyphs;
+} calt_Centered_glyphs;
 
-lookup caltContextualAlternateslookup58 {
+lookup calt_Contextual_Alternates {
   lookupflag 0;
     sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
 	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
 	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\colon ]'lookup centeredglyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
+	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\colon ]'lookup calt_Centered_glyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
 	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
 	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
 	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
     sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
 	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
 	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\asterisk ]'lookup centeredglyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
+	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\asterisk ]'lookup calt_Centered_glyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
 	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
 	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
 	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
     sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
 	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
 	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\x ]'lookup centeredglyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
+	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\x ]'lookup calt_Centered_glyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
 	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
 	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
 	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
-} caltContextualAlternateslookup58;
-
-lookup caltContextualAlternatesinLatinlookup59 {
-  lookupflag 0;
-    sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\colon ]'lookup centeredglyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
-    sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\asterisk ]'lookup centeredglyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
-    sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\x ]'lookup centeredglyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
-} caltContextualAlternatesinLatinlookup59;
-
-lookup caltContextualAlternatesinLatinlookup60 {
-  lookupflag 0;
-    sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\colon ]'lookup centeredglyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
-    sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\asterisk ]'lookup centeredglyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
-    sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\x ]'lookup centeredglyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
-} caltContextualAlternatesinLatinlookup60;
-
-lookup caltContextualAlternatesinLatinlookup61 {
-  lookupflag 0;
-    sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\colon ]'lookup centeredglyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
-    sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\asterisk ]'lookup centeredglyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
-    sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\x ]'lookup centeredglyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
-} caltContextualAlternatesinLatinlookup61;
-
-lookup caltContextualAlternatesinLatinlookup62 {
-  lookupflag 0;
-    sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\colon ]'lookup centeredglyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
-    sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\asterisk ]'lookup centeredglyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
-    sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\x ]'lookup centeredglyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
-	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
-} caltContextualAlternatesinLatinlookup62;
+} calt_Contextual_Alternates;
 
 feature c2sc {
 
  script grek;
      language dflt ;
-      lookup c2sc_CapitalesverspetitescapitalesdansLatinlookup0;
+      lookup c2sc_Small_caps_from_caps;
 
  script latn;
      language dflt ;
-      lookup c2sc_CapitalesverspetitescapitalesdansLatinlookup0;
+      lookup c2sc_Small_caps_from_caps;
 } c2sc;
 
 feature smcp {
 
  script cyrl;
      language dflt ;
-      lookup smcpBasdecasseverspetitescapitalesdansLatinlookup0;
+      lookup smcp_Small_caps;
 
  script grek;
      language dflt ;
-      lookup smcpBasdecasseverspetitescapitalesdansLatinlookup0;
+      lookup smcp_Small_caps;
 
  script latn;
      language dflt ;
-      lookup smcpBasdecasseverspetitescapitalesdansLatinlookup0;
+      lookup smcp_Small_caps;
 } smcp;
 
 feature cv01 {
 
  script DFLT;
      language dflt ;
-      lookup cv01Alternativedigit11;
+      lookup cv01_Alternative_digit_1_A;
 
  script copt;
      language dflt ;
-      lookup cv01Alternativedigit11;
+      lookup cv01_Alternative_digit_1_A;
 
  script cyrl;
      language dflt ;
-      lookup cv01Alternativedigit11;
+      lookup cv01_Alternative_digit_1_A;
 
  script grek;
      language dflt ;
-      lookup cv01Alternativedigit11;
+      lookup cv01_Alternative_digit_1_A;
 
  script latn;
      language dflt ;
-      lookup cv01Alternativedigit11;
+      lookup cv01_Alternative_digit_1_A;
 } cv01;
 
 feature cv02 {
 
  script DFLT;
      language dflt ;
-      lookup cv02Alternativedigit21;
+      lookup cv02_Alternative_digit_2_A;
 
  script copt;
      language dflt ;
-      lookup cv02Alternativedigit21;
+      lookup cv02_Alternative_digit_2_A;
 
  script cyrl;
      language dflt ;
-      lookup cv02Alternativedigit21;
+      lookup cv02_Alternative_digit_2_A;
 
  script grek;
      language dflt ;
-      lookup cv02Alternativedigit21;
+      lookup cv02_Alternative_digit_2_A;
 
  script latn;
      language dflt ;
-      lookup cv02Alternativedigit21;
+      lookup cv02_Alternative_digit_2_A;
 } cv02;
 
 feature cv03 {
 
  script DFLT;
      language dflt ;
-      lookup cv03Alternativedigit31;
+      lookup cv03_Alternative_digit_3_A;
 
  script copt;
      language dflt ;
-      lookup cv03Alternativedigit31;
+      lookup cv03_Alternative_digit_3_A;
 
  script cyrl;
      language dflt ;
-      lookup cv03Alternativedigit31;
+      lookup cv03_Alternative_digit_3_A;
 
  script grek;
      language dflt ;
-      lookup cv03Alternativedigit31;
+      lookup cv03_Alternative_digit_3_A;
 
  script latn;
      language dflt ;
-      lookup cv03Alternativedigit31;
+      lookup cv03_Alternative_digit_3_A;
 } cv03;
 
 feature cv04 {
 
  script DFLT;
      language dflt ;
-      lookup cv04Alternativedigit41;
+      lookup cv04_Alternative_digit_4_A;
 
  script copt;
      language dflt ;
-      lookup cv04Alternativedigit41;
+      lookup cv04_Alternative_digit_4_A;
 
  script cyrl;
      language dflt ;
-      lookup cv04Alternativedigit41;
+      lookup cv04_Alternative_digit_4_A;
 
  script grek;
      language dflt ;
-      lookup cv04Alternativedigit41;
+      lookup cv04_Alternative_digit_4_A;
 
  script latn;
      language dflt ;
-      lookup cv04Alternativedigit41;
+      lookup cv04_Alternative_digit_4_A;
 } cv04;
 
 feature cv05 {
 
  script DFLT;
      language dflt ;
-      lookup cv05Alternativedigit51;
+      lookup cv05_Alternative_digit_5_A;
 
  script copt;
      language dflt ;
-      lookup cv05Alternativedigit51;
+      lookup cv05_Alternative_digit_5_A;
 
  script cyrl;
      language dflt ;
-      lookup cv05Alternativedigit51;
+      lookup cv05_Alternative_digit_5_A;
 
  script grek;
      language dflt ;
-      lookup cv05Alternativedigit51;
+      lookup cv05_Alternative_digit_5_A;
 
  script latn;
      language dflt ;
-      lookup cv05Alternativedigit51;
+      lookup cv05_Alternative_digit_5_A;
 } cv05;
 
 feature cv06 {
 
  script DFLT;
      language dflt ;
-      lookup cv06Alternativedigit61;
+      lookup cv06_Alternative_digit_6_A;
 
  script copt;
      language dflt ;
-      lookup cv06Alternativedigit61;
+      lookup cv06_Alternative_digit_6_A;
 
  script cyrl;
      language dflt ;
-      lookup cv06Alternativedigit61;
+      lookup cv06_Alternative_digit_6_A;
 
  script grek;
      language dflt ;
-      lookup cv06Alternativedigit61;
+      lookup cv06_Alternative_digit_6_A;
 
  script latn;
      language dflt ;
-      lookup cv06Alternativedigit61;
+      lookup cv06_Alternative_digit_6_A;
 } cv06;
 
 feature cv07 {
 
  script DFLT;
      language dflt ;
-      lookup cv07Alternativedigit71;
+      lookup cv07_Alternative_digit_7_A;
 
  script copt;
      language dflt ;
-      lookup cv07Alternativedigit71;
+      lookup cv07_Alternative_digit_7_A;
 
  script cyrl;
      language dflt ;
-      lookup cv07Alternativedigit71;
+      lookup cv07_Alternative_digit_7_A;
 
  script grek;
      language dflt ;
-      lookup cv07Alternativedigit71;
+      lookup cv07_Alternative_digit_7_A;
 
  script latn;
      language dflt ;
-      lookup cv07Alternativedigit71;
+      lookup cv07_Alternative_digit_7_A;
 } cv07;
 
 feature cv08 {
 
  script DFLT;
      language dflt ;
-      lookup cv08Alternativedigit81;
+      lookup cv08_Alternative_digit_8_A;
 
  script copt;
      language dflt ;
-      lookup cv08Alternativedigit81;
+      lookup cv08_Alternative_digit_8_A;
 
  script cyrl;
      language dflt ;
-      lookup cv08Alternativedigit81;
+      lookup cv08_Alternative_digit_8_A;
 
  script grek;
      language dflt ;
-      lookup cv08Alternativedigit81;
+      lookup cv08_Alternative_digit_8_A;
 
  script latn;
      language dflt ;
-      lookup cv08Alternativedigit81;
+      lookup cv08_Alternative_digit_8_A;
 } cv08;
 
 feature cv09 {
 
  script DFLT;
      language dflt ;
-      lookup cv09Alternativedigit91;
+      lookup cv09_Alternative_digit_9_A;
 
  script copt;
      language dflt ;
-      lookup cv09Alternativedigit91;
+      lookup cv09_Alternative_digit_9_A;
 
  script cyrl;
      language dflt ;
-      lookup cv09Alternativedigit91;
+      lookup cv09_Alternative_digit_9_A;
 
  script grek;
      language dflt ;
-      lookup cv09Alternativedigit91;
+      lookup cv09_Alternative_digit_9_A;
 
  script latn;
      language dflt ;
-      lookup cv09Alternativedigit91;
+      lookup cv09_Alternative_digit_9_A;
 } cv09;
 
 feature cv10 {
 
  script DFLT;
      language dflt ;
-      lookup cv10Alternativedigit01;
+      lookup cv10_Alternative_digit_0_A;
 
  script copt;
      language dflt ;
-      lookup cv10Alternativedigit01;
+      lookup cv10_Alternative_digit_0_A;
 
  script cyrl;
      language dflt ;
-      lookup cv10Alternativedigit01;
+      lookup cv10_Alternative_digit_0_A;
 
  script grek;
      language dflt ;
-      lookup cv10Alternativedigit01;
+      lookup cv10_Alternative_digit_0_A;
 
  script latn;
      language dflt ;
-      lookup cv10Alternativedigit01;
+      lookup cv10_Alternative_digit_0_A;
 } cv10;
 
 feature cv11 {
 
  script DFLT;
      language dflt ;
-      lookup cv11Alternativedigit12;
+      lookup cv11_Alternative_digit_1_B;
 
  script copt;
      language dflt ;
-      lookup cv11Alternativedigit12;
+      lookup cv11_Alternative_digit_1_B;
 
  script cyrl;
      language dflt ;
-      lookup cv11Alternativedigit12;
+      lookup cv11_Alternative_digit_1_B;
 
  script grek;
      language dflt ;
-      lookup cv11Alternativedigit12;
+      lookup cv11_Alternative_digit_1_B;
 
  script latn;
      language dflt ;
-      lookup cv11Alternativedigit12;
+      lookup cv11_Alternative_digit_1_B;
 } cv11;
 
 feature cv12 {
 
  script DFLT;
      language dflt ;
-      lookup cv12Alternativedigit22;
+      lookup cv12_Alternative_digit_2_B;
 
  script copt;
      language dflt ;
-      lookup cv12Alternativedigit22;
+      lookup cv12_Alternative_digit_2_B;
 
  script cyrl;
      language dflt ;
-      lookup cv12Alternativedigit22;
+      lookup cv12_Alternative_digit_2_B;
 
  script grek;
      language dflt ;
-      lookup cv12Alternativedigit22;
+      lookup cv12_Alternative_digit_2_B;
 
  script latn;
      language dflt ;
-      lookup cv12Alternativedigit22;
+      lookup cv12_Alternative_digit_2_B;
 } cv12;
 
 feature cv13 {
 
  script DFLT;
      language dflt ;
-      lookup cv13Alternativedigit32;
+      lookup cv13_Alternative_digit_3_B;
 
  script copt;
      language dflt ;
-      lookup cv13Alternativedigit32;
+      lookup cv13_Alternative_digit_3_B;
 
  script cyrl;
      language dflt ;
-      lookup cv13Alternativedigit32;
+      lookup cv13_Alternative_digit_3_B;
 
  script grek;
      language dflt ;
-      lookup cv13Alternativedigit32;
+      lookup cv13_Alternative_digit_3_B;
 
  script latn;
      language dflt ;
-      lookup cv13Alternativedigit32;
+      lookup cv13_Alternative_digit_3_B;
 } cv13;
 
 feature cv14 {
 
  script DFLT;
      language dflt ;
-      lookup cv14Alternativedigit42;
+      lookup cv14_Alternative_digit_4_B;
 
  script copt;
      language dflt ;
-      lookup cv14Alternativedigit42;
+      lookup cv14_Alternative_digit_4_B;
 
  script cyrl;
      language dflt ;
-      lookup cv14Alternativedigit42;
+      lookup cv14_Alternative_digit_4_B;
 
  script grek;
      language dflt ;
-      lookup cv14Alternativedigit42;
+      lookup cv14_Alternative_digit_4_B;
 
  script latn;
      language dflt ;
-      lookup cv14Alternativedigit42;
+      lookup cv14_Alternative_digit_4_B;
 } cv14;
 
 feature cv15 {
 
  script DFLT;
      language dflt ;
-      lookup cv15Alternativedigit52;
+      lookup cv15_Alternative_digit_5_B;
 
  script copt;
      language dflt ;
-      lookup cv15Alternativedigit52;
+      lookup cv15_Alternative_digit_5_B;
 
  script cyrl;
      language dflt ;
-      lookup cv15Alternativedigit52;
+      lookup cv15_Alternative_digit_5_B;
 
  script grek;
      language dflt ;
-      lookup cv15Alternativedigit52;
+      lookup cv15_Alternative_digit_5_B;
 
  script latn;
      language dflt ;
-      lookup cv15Alternativedigit52;
+      lookup cv15_Alternative_digit_5_B;
 } cv15;
 
 feature cv16 {
 
  script DFLT;
      language dflt ;
-      lookup cv16Alternativedigit62;
+      lookup cv16_Alternative_digit_6_B;
 
  script copt;
      language dflt ;
-      lookup cv16Alternativedigit62;
+      lookup cv16_Alternative_digit_6_B;
 
  script cyrl;
      language dflt ;
-      lookup cv16Alternativedigit62;
+      lookup cv16_Alternative_digit_6_B;
 
  script grek;
      language dflt ;
-      lookup cv16Alternativedigit62;
+      lookup cv16_Alternative_digit_6_B;
 
  script latn;
      language dflt ;
-      lookup cv16Alternativedigit62;
+      lookup cv16_Alternative_digit_6_B;
 } cv16;
 
 feature cv17 {
 
  script DFLT;
      language dflt ;
-      lookup cv17Alternativedigit72;
+      lookup cv17_Alternative_digit_7_B;
 
  script copt;
      language dflt ;
-      lookup cv17Alternativedigit72;
+      lookup cv17_Alternative_digit_7_B;
 
  script cyrl;
      language dflt ;
-      lookup cv17Alternativedigit72;
+      lookup cv17_Alternative_digit_7_B;
 
  script grek;
      language dflt ;
-      lookup cv17Alternativedigit72;
+      lookup cv17_Alternative_digit_7_B;
 
  script latn;
      language dflt ;
-      lookup cv17Alternativedigit72;
+      lookup cv17_Alternative_digit_7_B;
 } cv17;
 
 feature cv18 {
 
  script DFLT;
      language dflt ;
-      lookup cv18Alternativedigit82;
+      lookup cv18_Alternative_digit_8_B;
 
  script copt;
      language dflt ;
-      lookup cv18Alternativedigit82;
+      lookup cv18_Alternative_digit_8_B;
 
  script cyrl;
      language dflt ;
-      lookup cv18Alternativedigit82;
+      lookup cv18_Alternative_digit_8_B;
 
  script grek;
      language dflt ;
-      lookup cv18Alternativedigit82;
+      lookup cv18_Alternative_digit_8_B;
 
  script latn;
      language dflt ;
-      lookup cv18Alternativedigit82;
+      lookup cv18_Alternative_digit_8_B;
 } cv18;
 
 feature cv19 {
 
  script DFLT;
      language dflt ;
-      lookup cv19Alternativedigit92;
+      lookup cv19_Alternative_digit_9_B;
 
  script copt;
      language dflt ;
-      lookup cv19Alternativedigit92;
+      lookup cv19_Alternative_digit_9_B;
 
  script cyrl;
      language dflt ;
-      lookup cv19Alternativedigit92;
+      lookup cv19_Alternative_digit_9_B;
 
  script grek;
      language dflt ;
-      lookup cv19Alternativedigit92;
+      lookup cv19_Alternative_digit_9_B;
 
  script latn;
      language dflt ;
-      lookup cv19Alternativedigit92;
+      lookup cv19_Alternative_digit_9_B;
 } cv19;
 
 feature cv20 {
 
  script DFLT;
      language dflt ;
-      lookup cv20Alternativedigit02;
+      lookup cv20_Alternative_digit_0_B;
 
  script copt;
      language dflt ;
-      lookup cv20Alternativedigit02;
+      lookup cv20_Alternative_digit_0_B;
 
  script cyrl;
      language dflt ;
-      lookup cv20Alternativedigit02;
+      lookup cv20_Alternative_digit_0_B;
 
  script grek;
      language dflt ;
-      lookup cv20Alternativedigit02;
+      lookup cv20_Alternative_digit_0_B;
 
  script latn;
      language dflt ;
-      lookup cv20Alternativedigit02;
+      lookup cv20_Alternative_digit_0_B;
 } cv20;
 
 feature cv21 {
 
  script DFLT;
      language dflt ;
-      lookup cv21CharacterVariants21lookups62;
+      lookup cv21_Alternative_letter_G;
 
  script copt;
      language dflt ;
-      lookup cv21CharacterVariants21lookups62;
+      lookup cv21_Alternative_letter_G;
 
  script cyrl;
      language dflt ;
-      lookup cv21CharacterVariants21lookups62;
+      lookup cv21_Alternative_letter_G;
 
  script grek;
      language dflt ;
-      lookup cv21CharacterVariants21lookups62;
+      lookup cv21_Alternative_letter_G;
 
  script latn;
      language dflt ;
-      lookup cv21CharacterVariants21lookups62;
+      lookup cv21_Alternative_letter_G;
      language CAT  exclude_dflt;
-      lookup cv21CharacterVariants21lookups62;
+      lookup cv21_Alternative_letter_G;
      language MOL  exclude_dflt;
-      lookup cv21CharacterVariants21lookups62;
+      lookup cv21_Alternative_letter_G;
      language ROM  exclude_dflt;
-      lookup cv21CharacterVariants21lookups62;
+      lookup cv21_Alternative_letter_G;
 } cv21;
 
 feature cv22 {
 
  script DFLT;
      language dflt ;
-      lookup cv22CharacterVariants22lookups63;
+      lookup cv22_Alternative_letter_I;
 
  script copt;
      language dflt ;
-      lookup cv22CharacterVariants22lookups63;
+      lookup cv22_Alternative_letter_I;
 
  script cyrl;
      language dflt ;
-      lookup cv22CharacterVariants22lookups63;
+      lookup cv22_Alternative_letter_I;
 
  script grek;
      language dflt ;
-      lookup cv22CharacterVariants22lookups63;
+      lookup cv22_Alternative_letter_I;
 
  script latn;
      language dflt ;
-      lookup cv22CharacterVariants22lookups63;
+      lookup cv22_Alternative_letter_I;
      language CAT  exclude_dflt;
-      lookup cv22CharacterVariants22lookups63;
+      lookup cv22_Alternative_letter_I;
      language MOL  exclude_dflt;
-      lookup cv22CharacterVariants22lookups63;
+      lookup cv22_Alternative_letter_I;
      language ROM  exclude_dflt;
-      lookup cv22CharacterVariants22lookups63;
+      lookup cv22_Alternative_letter_I;
 } cv22;
 
 feature cv23 {
 
  script DFLT;
      language dflt ;
-      lookup cv23CharacterVariants23lookups64;
+      lookup cv23_Alternative_small_letter_a;
 
  script copt;
      language dflt ;
-      lookup cv23CharacterVariants23lookups64;
+      lookup cv23_Alternative_small_letter_a;
 
  script cyrl;
      language dflt ;
-      lookup cv23CharacterVariants23lookups64;
+      lookup cv23_Alternative_small_letter_a;
 
  script grek;
      language dflt ;
-      lookup cv23CharacterVariants23lookups64;
+      lookup cv23_Alternative_small_letter_a;
 
  script latn;
      language dflt ;
-      lookup cv23CharacterVariants23lookups64;
+      lookup cv23_Alternative_small_letter_a;
      language CAT  exclude_dflt;
-      lookup cv23CharacterVariants23lookups64;
+      lookup cv23_Alternative_small_letter_a;
      language MOL  exclude_dflt;
-      lookup cv23CharacterVariants23lookups64;
+      lookup cv23_Alternative_small_letter_a;
      language ROM  exclude_dflt;
-      lookup cv23CharacterVariants23lookups64;
+      lookup cv23_Alternative_small_letter_a;
 } cv23;
 
 feature cv24 {
 
  script DFLT;
      language dflt ;
-      lookup cv24CharacterVariants24lookups65;
+      lookup cv24_Alternative_small_letter_g;
 
  script copt;
      language dflt ;
-      lookup cv24CharacterVariants24lookups65;
+      lookup cv24_Alternative_small_letter_g;
 
  script cyrl;
      language dflt ;
-      lookup cv24CharacterVariants24lookups65;
+      lookup cv24_Alternative_small_letter_g;
 
  script grek;
      language dflt ;
-      lookup cv24CharacterVariants24lookups65;
+      lookup cv24_Alternative_small_letter_g;
 
  script latn;
      language dflt ;
-      lookup cv24CharacterVariants24lookups65;
+      lookup cv24_Alternative_small_letter_g;
      language CAT  exclude_dflt;
-      lookup cv24CharacterVariants24lookups65;
+      lookup cv24_Alternative_small_letter_g;
      language MOL  exclude_dflt;
-      lookup cv24CharacterVariants24lookups65;
+      lookup cv24_Alternative_small_letter_g;
      language ROM  exclude_dflt;
-      lookup cv24CharacterVariants24lookups65;
+      lookup cv24_Alternative_small_letter_g;
 } cv24;
 
 feature cv25 {
 
  script DFLT;
      language dflt ;
-      lookup cv25CharacterVariants25lookups66;
+      lookup cv25_Alternative_small_letter_u;
 
  script copt;
      language dflt ;
-      lookup cv25CharacterVariants25lookups66;
+      lookup cv25_Alternative_small_letter_u;
 
  script cyrl;
      language dflt ;
-      lookup cv25CharacterVariants25lookups66;
+      lookup cv25_Alternative_small_letter_u;
 
  script grek;
      language dflt ;
-      lookup cv25CharacterVariants25lookups66;
+      lookup cv25_Alternative_small_letter_u;
 
  script latn;
      language dflt ;
-      lookup cv25CharacterVariants25lookups66;
+      lookup cv25_Alternative_small_letter_u;
      language CAT  exclude_dflt;
-      lookup cv25CharacterVariants25lookups66;
+      lookup cv25_Alternative_small_letter_u;
      language MOL  exclude_dflt;
-      lookup cv25CharacterVariants25lookups66;
+      lookup cv25_Alternative_small_letter_u;
      language ROM  exclude_dflt;
-      lookup cv25CharacterVariants25lookups66;
+      lookup cv25_Alternative_small_letter_u;
 } cv25;
 
 feature cv26 {
 
  script DFLT;
      language dflt ;
-      lookup cv26CharacterVariants26lookups67;
+      lookup cv26_Alternative_ampersand;
 
  script copt;
      language dflt ;
-      lookup cv26CharacterVariants26lookups67;
+      lookup cv26_Alternative_ampersand;
 
  script cyrl;
      language dflt ;
-      lookup cv26CharacterVariants26lookups67;
+      lookup cv26_Alternative_ampersand;
 
  script grek;
      language dflt ;
-      lookup cv26CharacterVariants26lookups67;
+      lookup cv26_Alternative_ampersand;
 
  script latn;
      language dflt ;
-      lookup cv26CharacterVariants26lookups67;
+      lookup cv26_Alternative_ampersand;
      language CAT  exclude_dflt;
-      lookup cv26CharacterVariants26lookups67;
+      lookup cv26_Alternative_ampersand;
      language MOL  exclude_dflt;
-      lookup cv26CharacterVariants26lookups67;
+      lookup cv26_Alternative_ampersand;
      language ROM  exclude_dflt;
-      lookup cv26CharacterVariants26lookups67;
+      lookup cv26_Alternative_ampersand;
 } cv26;
 
 feature ss01 {
@@ -6565,23 +6465,23 @@ feature ss01 {
 
  script DFLT;
      language dflt ;
-      lookup ss01Alternativenumbersset1;
+      lookup ss01_Alternative_digits_set_A;
 
  script copt;
      language dflt ;
-      lookup ss01Alternativenumbersset1;
+      lookup ss01_Alternative_digits_set_A;
 
  script cyrl;
      language dflt ;
-      lookup ss01Alternativenumbersset1;
+      lookup ss01_Alternative_digits_set_A;
 
  script grek;
      language dflt ;
-      lookup ss01Alternativenumbersset1;
+      lookup ss01_Alternative_digits_set_A;
 
  script latn;
      language dflt ;
-      lookup ss01Alternativenumbersset1;
+      lookup ss01_Alternative_digits_set_A;
 } ss01;
 
 feature ss02 {
@@ -6591,23 +6491,23 @@ feature ss02 {
 
  script DFLT;
      language dflt ;
-      lookup ss02Alternativenumbersset2;
+      lookup ss02_Alternative_digits_set_B;
 
  script copt;
      language dflt ;
-      lookup ss02Alternativenumbersset2;
+      lookup ss02_Alternative_digits_set_B;
 
  script cyrl;
      language dflt ;
-      lookup ss02Alternativenumbersset2;
+      lookup ss02_Alternative_digits_set_B;
 
  script grek;
      language dflt ;
-      lookup ss02Alternativenumbersset2;
+      lookup ss02_Alternative_digits_set_B;
 
  script latn;
      language dflt ;
-      lookup ss02Alternativenumbersset2;
+      lookup ss02_Alternative_digits_set_B;
 } ss02;
 
 feature ss03 {
@@ -6617,29 +6517,29 @@ feature ss03 {
 
  script DFLT;
      language dflt ;
-      lookup ss03StyleSet3lookups55;
+      lookup ss03_Alternative_uppercase_characters;
 
  script copt;
      language dflt ;
-      lookup ss03StyleSet3lookups55;
+      lookup ss03_Alternative_uppercase_characters;
 
  script cyrl;
      language dflt ;
-      lookup ss03StyleSet3lookups55;
+      lookup ss03_Alternative_uppercase_characters;
 
  script grek;
      language dflt ;
-      lookup ss03StyleSet3lookups55;
+      lookup ss03_Alternative_uppercase_characters;
 
  script latn;
      language dflt ;
-      lookup ss03StyleSet3lookups55;
+      lookup ss03_Alternative_uppercase_characters;
      language CAT  exclude_dflt;
-      lookup ss03StyleSet3lookups55;
+      lookup ss03_Alternative_uppercase_characters;
      language MOL  exclude_dflt;
-      lookup ss03StyleSet3lookups55;
+      lookup ss03_Alternative_uppercase_characters;
      language ROM  exclude_dflt;
-      lookup ss03StyleSet3lookups55;
+      lookup ss03_Alternative_uppercase_characters;
 } ss03;
 
 feature ss04 {
@@ -6649,29 +6549,29 @@ feature ss04 {
 
  script DFLT;
      language dflt ;
-      lookup ss04StyleSet4lookups56;
+      lookup ss04_Alternative_lowercase_characters;
 
  script copt;
      language dflt ;
-      lookup ss04StyleSet4lookups56;
+      lookup ss04_Alternative_lowercase_characters;
 
  script cyrl;
      language dflt ;
-      lookup ss04StyleSet4lookups56;
+      lookup ss04_Alternative_lowercase_characters;
 
  script grek;
      language dflt ;
-      lookup ss04StyleSet4lookups56;
+      lookup ss04_Alternative_lowercase_characters;
 
  script latn;
      language dflt ;
-      lookup ss04StyleSet4lookups56;
+      lookup ss04_Alternative_lowercase_characters;
      language CAT  exclude_dflt;
-      lookup ss04StyleSet4lookups56;
+      lookup ss04_Alternative_lowercase_characters;
      language MOL  exclude_dflt;
-      lookup ss04StyleSet4lookups56;
+      lookup ss04_Alternative_lowercase_characters;
      language ROM  exclude_dflt;
-      lookup ss04StyleSet4lookups56;
+      lookup ss04_Alternative_lowercase_characters;
 } ss04;
 
 feature ss05 {
@@ -6681,29 +6581,29 @@ feature ss05 {
 
  script DFLT;
      language dflt ;
-      lookup ss05StyleSet5lookups57;
+      lookup ss05_Alternative_currency_signs;
 
  script copt;
      language dflt ;
-      lookup ss05StyleSet5lookups57;
+      lookup ss05_Alternative_currency_signs;
 
  script cyrl;
      language dflt ;
-      lookup ss05StyleSet5lookups57;
+      lookup ss05_Alternative_currency_signs;
 
  script grek;
      language dflt ;
-      lookup ss05StyleSet5lookups57;
+      lookup ss05_Alternative_currency_signs;
 
  script latn;
      language dflt ;
-      lookup ss05StyleSet5lookups57;
+      lookup ss05_Alternative_currency_signs;
      language CAT  exclude_dflt;
-      lookup ss05StyleSet5lookups57;
+      lookup ss05_Alternative_currency_signs;
      language MOL  exclude_dflt;
-      lookup ss05StyleSet5lookups57;
+      lookup ss05_Alternative_currency_signs;
      language ROM  exclude_dflt;
-      lookup ss05StyleSet5lookups57;
+      lookup ss05_Alternative_currency_signs;
 } ss05;
 
 feature ss06 {
@@ -6713,29 +6613,29 @@ feature ss06 {
 
  script DFLT;
      language dflt ;
-      lookup ss06StyleSet6lookups58;
+      lookup ss06_Serif_on_digit_1;
 
  script copt;
      language dflt ;
-      lookup ss06StyleSet6lookups58;
+      lookup ss06_Serif_on_digit_1;
 
  script cyrl;
      language dflt ;
-      lookup ss06StyleSet6lookups58;
+      lookup ss06_Serif_on_digit_1;
 
  script grek;
      language dflt ;
-      lookup ss06StyleSet6lookups58;
+      lookup ss06_Serif_on_digit_1;
 
  script latn;
      language dflt ;
-      lookup ss06StyleSet6lookups58;
+      lookup ss06_Serif_on_digit_1;
      language CAT  exclude_dflt;
-      lookup ss06StyleSet6lookups58;
+      lookup ss06_Serif_on_digit_1;
      language MOL  exclude_dflt;
-      lookup ss06StyleSet6lookups58;
+      lookup ss06_Serif_on_digit_1;
      language ROM  exclude_dflt;
-      lookup ss06StyleSet6lookups58;
+      lookup ss06_Serif_on_digit_1;
 } ss06;
 
 feature ss07 {
@@ -6745,29 +6645,29 @@ feature ss07 {
 
  script DFLT;
      language dflt ;
-      lookup ss07StyleSet7lookups59;
+      lookup ss07_Serif_on_digit_7;
 
  script copt;
      language dflt ;
-      lookup ss07StyleSet7lookups59;
+      lookup ss07_Serif_on_digit_7;
 
  script cyrl;
      language dflt ;
-      lookup ss07StyleSet7lookups59;
+      lookup ss07_Serif_on_digit_7;
 
  script grek;
      language dflt ;
-      lookup ss07StyleSet7lookups59;
+      lookup ss07_Serif_on_digit_7;
 
  script latn;
      language dflt ;
-      lookup ss07StyleSet7lookups59;
+      lookup ss07_Serif_on_digit_7;
      language CAT  exclude_dflt;
-      lookup ss07StyleSet7lookups59;
+      lookup ss07_Serif_on_digit_7;
      language MOL  exclude_dflt;
-      lookup ss07StyleSet7lookups59;
+      lookup ss07_Serif_on_digit_7;
      language ROM  exclude_dflt;
-      lookup ss07StyleSet7lookups59;
+      lookup ss07_Serif_on_digit_7;
 } ss07;
 
 feature ss08 {
@@ -6777,304 +6677,304 @@ feature ss08 {
 
  script DFLT;
      language dflt ;
-      lookup ss08StyleSet8lookups60;
+      lookup ss08_f_ligatures;
 
  script copt;
      language dflt ;
-      lookup ss08StyleSet8lookups60;
+      lookup ss08_f_ligatures;
 
  script cyrl;
      language dflt ;
-      lookup ss08StyleSet8lookups60;
+      lookup ss08_f_ligatures;
 
  script grek;
      language dflt ;
-      lookup ss08StyleSet8lookups60;
+      lookup ss08_f_ligatures;
 
  script latn;
      language dflt ;
-      lookup ss08StyleSet8lookups60;
+      lookup ss08_f_ligatures;
      language CAT  exclude_dflt;
-      lookup ss08StyleSet8lookups60;
+      lookup ss08_f_ligatures;
      language MOL  exclude_dflt;
-      lookup ss08StyleSet8lookups60;
+      lookup ss08_f_ligatures;
      language ROM  exclude_dflt;
-      lookup ss08StyleSet8lookups60;
+      lookup ss08_f_ligatures;
 } ss08;
 
 feature zero {
 
  script DFLT;
      language dflt ;
-      lookup zeroSlashedZerolookups61;
+      lookup zero_Slashed_zero;
 
  script copt;
      language dflt ;
-      lookup zeroSlashedZerolookups61;
+      lookup zero_Slashed_zero;
 
  script cyrl;
      language dflt ;
-      lookup zeroSlashedZerolookups61;
+      lookup zero_Slashed_zero;
 
  script grek;
      language dflt ;
-      lookup zeroSlashedZerolookups61;
+      lookup zero_Slashed_zero;
 
  script latn;
      language dflt ;
-      lookup zeroSlashedZerolookups61;
+      lookup zero_Slashed_zero;
      language CAT  exclude_dflt;
-      lookup zeroSlashedZerolookups61;
+      lookup zero_Slashed_zero;
      language MOL  exclude_dflt;
-      lookup zeroSlashedZerolookups61;
+      lookup zero_Slashed_zero;
      language ROM  exclude_dflt;
-      lookup zeroSlashedZerolookups61;
+      lookup zero_Slashed_zero;
 } zero;
 
 feature sups {
 
  script DFLT;
      language dflt ;
-      lookup supsSupscriptnumbers;
+      lookup sups_Supscript_numbers;
 
  script latn;
      language dflt ;
-      lookup supsSupscriptnumbers;
+      lookup sups_Supscript_numbers;
 } sups;
 
 feature subs {
 
  script DFLT;
      language dflt ;
-      lookup subsSubscriptnumbers;
+      lookup subs_Subscript_numbers;
 
  script latn;
      language dflt ;
-      lookup subsSubscriptnumbers;
+      lookup subs_Subscript_numbers;
 } subs;
 
 feature onum {
 
  script DFLT;
      language dflt ;
-      lookup onumOldstyleFigures;
+      lookup onum_Oldstyle_figures;
 
  script copt;
      language dflt ;
-      lookup onumOldstyleFigures;
+      lookup onum_Oldstyle_figures;
 
  script cyrl;
      language dflt ;
-      lookup onumOldstyleFigures;
+      lookup onum_Oldstyle_figures;
 
  script grek;
      language dflt ;
-      lookup onumOldstyleFigures;
+      lookup onum_Oldstyle_figures;
 
  script latn;
      language dflt ;
-      lookup onumOldstyleFigures;
+      lookup onum_Oldstyle_figures;
 } onum;
 
 feature numr {
 
  script DFLT;
      language dflt ;
-      lookup numrNumerators;
+      lookup numr_Numerators;
 
  script copt;
      language dflt ;
-      lookup numrNumerators;
+      lookup numr_Numerators;
 
  script cyrl;
      language dflt ;
-      lookup numrNumerators;
+      lookup numr_Numerators;
 
  script grek;
      language dflt ;
-      lookup numrNumerators;
+      lookup numr_Numerators;
 
  script latn;
      language dflt ;
-      lookup numrNumerators;
+      lookup numr_Numerators;
 } numr;
 
 feature dnom {
 
  script DFLT;
      language dflt ;
-      lookup dnomDenominators;
+      lookup dnom_Denominators;
 
  script copt;
      language dflt ;
-      lookup dnomDenominators;
+      lookup dnom_Denominators;
 
  script cyrl;
      language dflt ;
-      lookup dnomDenominators;
+      lookup dnom_Denominators;
 
  script grek;
      language dflt ;
-      lookup dnomDenominators;
+      lookup dnom_Denominators;
 
  script latn;
      language dflt ;
-      lookup dnomDenominators;
+      lookup dnom_Denominators;
 } dnom;
 
 feature pnum {
 
  script DFLT;
      language dflt ;
-      lookup pnumProportionalNumbers;
+      lookup pnum_Proportional_figures;
 
  script copt;
      language dflt ;
-      lookup pnumProportionalNumbers;
+      lookup pnum_Proportional_figures;
 
  script cyrl;
      language dflt ;
-      lookup pnumProportionalNumbers;
+      lookup pnum_Proportional_figures;
 
  script grek;
      language dflt ;
-      lookup pnumProportionalNumbers;
+      lookup pnum_Proportional_figures;
 
  script latn;
      language dflt ;
-      lookup pnumProportionalNumbers;
+      lookup pnum_Proportional_figures;
 } pnum;
 
 feature tnum {
 
  script DFLT;
      language dflt ;
-      lookup tnumTabularNumbers;
+      lookup tnum_Tabular_figures;
 
  script copt;
      language dflt ;
-      lookup tnumTabularNumbers;
+      lookup tnum_Tabular_figures;
 
  script cyrl;
      language dflt ;
-      lookup tnumTabularNumbers;
+      lookup tnum_Tabular_figures;
 
  script grek;
      language dflt ;
-      lookup tnumTabularNumbers;
+      lookup tnum_Tabular_figures;
 
  script latn;
      language dflt ;
-      lookup tnumTabularNumbers;
+      lookup tnum_Tabular_figures;
 } tnum;
 
 feature liga {
 
  script DFLT;
      language dflt ;
-      lookup ligaStandardLigatureslookup0;
+      lookup liga_Standard_ligatures;
 
  script copt;
      language dflt ;
-      lookup ligaStandardLigatureslookup0;
+      lookup liga_Standard_ligatures;
 
  script cyrl;
      language dflt ;
-      lookup ligaStandardLigatureslookup0;
+      lookup liga_Standard_ligatures;
 
  script grek;
      language dflt ;
-      lookup ligaStandardLigatureslookup0;
+      lookup liga_Standard_ligatures;
 
  script latn;
      language dflt ;
-      lookup ligaStandardLigatureslookup0;
+      lookup liga_Standard_ligatures;
 } liga;
 
 feature locl {
 
  script latn;
      language ACH  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language AVN  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language BAD0 exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language BMB  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language BML  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language BTI  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language DAG  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language DJR  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language DNJ  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language DNK  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language EMK  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language EWE  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language FAN0 exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language FMP  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language FTA  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language FUV  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language GAD  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language GKP  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language IBO  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language KIS  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language LAM  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language LUG  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language MAW  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language MBO  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language MND  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language MNK  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language MOR  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language NYM  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language NZA  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language PIL  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language SIG  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language SRR  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language TMH  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language TMN  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language TOD0 exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language WCI  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
      language WLF  exclude_dflt;
-      lookup loclLocalizedFormslookups62;
+      lookup locl_Localized_Eng;
 } locl;
 
 feature ccmp {
 
  script DFLT;
      language dflt ;
-      lookup ccmpsoftdottedlookup1;
+      lookup ccmp_Soft_dotted_i_j;
       lookup ccmp_latn;
       lookup ccmp_grek;
       lookup ccmp_cyrl;
@@ -7082,7 +6982,7 @@ feature ccmp {
 
  script cyrl;
      language dflt ;
-      lookup ccmpsoftdottedlookup1;
+      lookup ccmp_Soft_dotted_i_j;
       lookup ccmp_latn;
       lookup ccmp_grek;
       lookup ccmp_cyrl;
@@ -7090,7 +6990,7 @@ feature ccmp {
 
  script grek;
      language dflt ;
-      lookup ccmpsoftdottedlookup1;
+      lookup ccmp_Soft_dotted_i_j;
       lookup ccmp_latn;
       lookup ccmp_grek;
       lookup ccmp_cyrl;
@@ -7098,25 +6998,25 @@ feature ccmp {
 
  script latn;
      language dflt ;
-      lookup ccmpsoftdottedlookup1;
+      lookup ccmp_Soft_dotted_i_j;
       lookup ccmp_latn;
       lookup ccmp_grek;
       lookup ccmp_cyrl;
       lookup ccmp_cv;
      language CAT  exclude_dflt;
-      lookup ccmpsoftdottedlookup1;
+      lookup ccmp_Soft_dotted_i_j;
       lookup ccmp_latn;
       lookup ccmp_grek;
       lookup ccmp_cyrl;
       lookup ccmp_cv;
      language MOL  exclude_dflt;
-      lookup ccmpsoftdottedlookup1;
+      lookup ccmp_Soft_dotted_i_j;
       lookup ccmp_latn;
       lookup ccmp_grek;
       lookup ccmp_cyrl;
       lookup ccmp_cv;
      language ROM  exclude_dflt;
-      lookup ccmpsoftdottedlookup1;
+      lookup ccmp_Soft_dotted_i_j;
       lookup ccmp_latn;
       lookup ccmp_grek;
       lookup ccmp_cyrl;
@@ -7127,25 +7027,31 @@ feature calt {
 
  script DFLT;
      language dflt ;
-      lookup caltContextualAlternateslookup58;
+      lookup calt_Contextual_Alternates;
+
+ script copt;
+     language dflt ;
+      lookup calt_Contextual_Alternates;
+
+ script cyrl;
+     language dflt ;
+      lookup calt_Contextual_Alternates;
+
+ script grek;
+     language dflt ;
+      lookup calt_Contextual_Alternates;
 
  script latn;
      language dflt ;
-      lookup caltContextualAlternatesinLatinlookup59;
-     language CAT  exclude_dflt;
-      lookup caltContextualAlternatesinLatinlookup60;
-     language MOL  exclude_dflt;
-      lookup caltContextualAlternatesinLatinlookup61;
-     language ROM  exclude_dflt;
-      lookup caltContextualAlternatesinLatinlookup62;
+      lookup calt_Contextual_Alternates;
 } calt;
 
 # GPOS 
 
 
-lookup kernCrnagehorizontallookups2 {
+lookup kern_Horizontal_kerning {
   lookupflag 0;
-    @kc93_first_1 = [\A \Aacute \Abreve \Acircumflex \Adieresis \Agrave \Alpha \Alphatonos \Amacron 
+    @kc81_first_1 = [\A \Aacute \Abreve \Acircumflex \Adieresis \Agrave \Alpha \Alphatonos \Amacron 
 	\Aogonek \Aring \Aringacute \Atilde \Lambda \uni01CD \uni01DE \uni01E0 
 	\uni0200 \uni0202 \uni0226 \uni0245 \uni0394 \uni0410 \uni0466 \uni0468 
 	\uni04D0 \uni04D2 \uni1E00 \uni1EA0 \uni1EA2 \uni1EA4 \uni1EA6 \uni1EA8 
@@ -7153,13 +7059,13 @@ lookup kernCrnagehorizontallookups2 {
 	\uni1F09 \uni1F0A \uni1F0B \uni1F0C \uni1F0D \uni1F0E \uni1F0F \uni1F88 
 	\uni1F89 \uni1F8A \uni1F8B \uni1F8C \uni1F8D \uni1F8E \uni1F8F \uni1FB8 
 	\uni1FB9 \uni1FBA \uni1FBB \uni1FBC ];
-    @kc93_first_2 = [\C \Cacute \Ccaron \Ccedilla \Ccircumflex \Cdotaccent \uni0187 \uni023B \uni03F9 
+    @kc81_first_2 = [\C \Cacute \Ccaron \Ccedilla \Ccircumflex \Cdotaccent \uni0187 \uni023B \uni03F9 
 	\uni03FE \uni0421 \uni0464 \uni0480 \uni04AA \uni1E08 \uni2103 \uni216D ];
-    @kc93_first_3 = [\Chi \X \uni0416 \uni0425 \uni04B2 \uni04C1 \uni04DC \uni04FC \uni04FE \uni0514 
+    @kc81_first_3 = [\Chi \X \uni0416 \uni0425 \uni04B2 \uni04C1 \uni04DC \uni04FC \uni04FE \uni0514 
 	\uni0516 \uni1E8A \uni1E8C ];
-    @kc93_first_4 = [\D \Dcaron \Dcroat \Eth \uni0189 \uni018A \uni1E0A \uni1E0C \uni1E0E \uni1E10 
+    @kc81_first_4 = [\D \Dcaron \Dcroat \Eth \uni0189 \uni018A \uni1E0A \uni1E0C \uni1E0E \uni1E10 
 	\uni1E12 \uni216E ];
-    @kc93_first_5 = [\Eta \Etatonos \H \Hbar \Hcircumflex \M \Mu \N \Nacute \Ncaron \Ncommaaccent 
+    @kc81_first_5 = [\Eta \Etatonos \H \Hbar \Hcircumflex \M \Mu \N \Nacute \Ncaron \Ncommaaccent 
 	\Ntilde \Nu \Pi \uni019C \uni019D \uni021E \uni0376 \uni03FA \uni0418 
 	\uni0419 \uni041B \uni041C \uni041D \uni041F \uni0427 \uni0428 \uni04E2 
 	\uni04E4 \uni1E22 \uni1E24 \uni1E26 \uni1E28 \uni1E2A \uni1E3E \uni1E40 
@@ -7167,7 +7073,7 @@ lookup kernCrnagehorizontallookups2 {
 	\uni1F2B \uni1F2C \uni1F2D \uni1F2E \uni1F2F \uni1F98 \uni1F99 \uni1F9A 
 	\uni1F9B \uni1F9C \uni1F9D \uni1F9E \uni1F9F \uni1FCA \uni1FCB \uni1FCC 
 	\uni216F ];
-    @kc93_first_6 = [\G.cv21 \Gbreve.cv21 \Gcaron.cv21 \Gcircumflex.cv21 \Gcommaaccent.cv21 
+    @kc81_first_6 = [\G.cv21 \Gbreve.cv21 \Gcaron.cv21 \Gcircumflex.cv21 \Gcommaaccent.cv21 
 	\Gdotaccent.cv21 \O \Oacute \Obreve \Ocircumflex \Odieresis \Ograve 
 	\Ohungarumlaut \Omacron \Omicron \Omicrontonos \Otilde \Q 
 	\uni0193.cv21 \uni01D1 \uni01E4.cv21 \uni01EA \uni01EC \uni01F4.cv21 
@@ -7178,35 +7084,35 @@ lookup kernCrnagehorizontallookups2 {
 	\uni1ECC \uni1ECE \uni1ED0 \uni1ED2 \uni1ED4 \uni1ED6 \uni1ED8 \uni1EDA 
 	\uni1EDC \uni1EDE \uni1EE0 \uni1EE2 \uni1F48 \uni1F49 \uni1F4A \uni1F4B 
 	\uni1F4C \uni1F4D \uni2141 \uni2183 ];
-    @kc93_first_7 = [\Gamma \uni0403 \uni0413 \uni0490 \uni0492 \uni04A4 \uni04F6 \uni04FA ];
-    @kc93_first_8 = [\I \Iacute \Ibreve \Icircumflex \Idieresis \Idotaccent \Igrave \Imacron \Iogonek 
+    @kc81_first_7 = [\Gamma \uni0403 \uni0413 \uni0490 \uni0492 \uni04A4 \uni04F6 \uni04FA ];
+    @kc81_first_8 = [\I \Iacute \Ibreve \Icircumflex \Idieresis \Idotaccent \Igrave \Imacron \Iogonek 
 	\Iotadieresis \Iotatonos \Itilde \uni0208 \uni020A \uni0406 \uni0407 
 	\uni04C0 \uni1E2C \uni1E2E \uni1EC8 \uni1ECA \uni1F38 \uni1F39 \uni1F3A 
 	\uni1F3B \uni1F3C \uni1F3D \uni1F3E \uni1F3F \uni2160 \uni2161 \uni2162 
 	\uni2165 \uni2166 \uni2167 \uni216A \uni216B ];
-    @kc93_first_9 = [\K \Kappa \Kcommaaccent \uni0198 \uni01E8 \uni051E \uni052A \uni1E30 \uni1E32 
+    @kc81_first_9 = [\K \Kappa \Kcommaaccent \uni0198 \uni01E8 \uni051E \uni052A \uni1E30 \uni1E32 
 	\uni1E34 \uni212A ];
-    @kc93_first_10 = [\L \Lacute \Lcaron \Lcommaaccent \Ldot \uni1E36 \uni1E38 \uni1E3A \uni1E3C 
+    @kc81_first_10 = [\L \Lacute \Lcaron \Lcommaaccent \Ldot \uni1E36 \uni1E38 \uni1E3A \uni1E3C 
 	\uni216C ];
-    @kc93_first_11 = [\Omega \Omegatonos \uni03A9 \uni1F68 \uni1F69 \uni1F6A \uni1F6B \uni1F6C 
+    @kc81_first_11 = [\Omega \Omegatonos \uni03A9 \uni1F68 \uni1F69 \uni1F6A \uni1F6B \uni1F6C 
 	\uni1F6D \uni1F6E \uni1F6F \uni1FA8 \uni1FA9 \uni1FAA \uni1FAB \uni1FAC 
 	\uni1FAD \uni1FAE \uni1FAF \uni1FFA \uni1FFB \uni1FFC ];
-    @kc93_first_12 = [\P \Rho \uni01A4 \uni0420 \uni1E54 \uni1E56 ];
-    @kc93_first_13 = [\T \Tbar \Tcaron \uni0162 \uni01AC \uni01AE \uni021A \uni023E \uni04AC \uni1E6A 
+    @kc81_first_12 = [\P \Rho \uni01A4 \uni0420 \uni1E54 \uni1E56 ];
+    @kc81_first_13 = [\T \Tbar \Tcaron \uni0162 \uni01AC \uni01AE \uni021A \uni023E \uni04AC \uni1E6A 
 	\uni1E6C \uni1E6E \uni1E70 ];
-    @kc93_first_14 = [\Thorn \uni03F7 ];
-    @kc93_first_15 = [\Upsilon1 \Upsilondieresis \Upsilontonos \Y \Yacute \Ycircumflex \Ydieresis 
+    @kc81_first_14 = [\Thorn \uni03F7 ];
+    @kc81_first_15 = [\Upsilon1 \Upsilondieresis \Upsilontonos \Y \Yacute \Ycircumflex \Ydieresis 
 	\Ygrave \uni0232 \uni03D3 \uni03D4 \uni04AE \uni04B0 \uni1E8E \uni1EF4 
 	\uni1EF6 \uni1EF8 \uni1F59 \uni1F5B \uni1F5D \uni1F5F \uni1FE8 \uni1FE9 
 	\uni1FEA \uni1FEB ];
-    @kc93_first_16 = [\V \uni0474 \uni0476 \uni0477 \uni1E7C \uni1E7E ];
-    @kc93_first_17 = [\W \Wacute \Wcircumflex \Wdieresis \Wgrave \uni1E86 \uni1E88 ];
-    @kc93_first_18 = [\Z \Zacute \Zcaron \Zdotaccent \Zeta \uni1E90 \uni1E92 \uni1E94 ];
-    @kc93_first_19 = [\a \aacute \abreve \acircumflex \adieresis \agrave \amacron \aogonek \aring 
+    @kc81_first_16 = [\V \uni0474 \uni0476 \uni0477 \uni1E7C \uni1E7E ];
+    @kc81_first_17 = [\W \Wacute \Wcircumflex \Wdieresis \Wgrave \uni1E86 \uni1E88 ];
+    @kc81_first_18 = [\Z \Zacute \Zcaron \Zdotaccent \Zeta \uni1E90 \uni1E92 \uni1E94 ];
+    @kc81_first_19 = [\a \aacute \abreve \acircumflex \adieresis \agrave \amacron \aogonek \aring 
 	\aringacute \atilde \uni01CE \uni01DF \uni01E1 \uni0201 \uni0227 
 	\uni0430 \uni04D1 \uni04D3 \uni1E01 \uni1EA1 \uni1EA3 \uni1EA5 \uni1EA7 
 	\uni1EA9 \uni1EAB \uni1EAD \uni1EAF \uni1EB1 \uni1EB3 \uni1EB5 \uni1EB7 ];
-    @kc93_first_20 = [\a.sc \aacute.sc \abreve.sc \acircumflex.sc \adieresis.sc \agrave.sc \alpha.sc 
+    @kc81_first_20 = [\a.sc \aacute.sc \abreve.sc \acircumflex.sc \adieresis.sc \agrave.sc \alpha.sc 
 	\alphatonos.sc \amacron.sc \aogonek.sc \aring.sc \aringacute.sc 
 	\atilde.sc \delta.sc \lambda.sc \uni01DF.sc \uni01E1.sc \uni0201.sc 
 	\uni0203.sc \uni0227.sc \uni04D1.sc \uni04D3.sc \uni1E01.sc 
@@ -7218,20 +7124,20 @@ lookup kernCrnagehorizontallookups2 {
 	\uni1F83.sc \uni1F84.sc \uni1F85.sc \uni1F86.sc \uni1F87.sc 
 	\uni1FB0.sc \uni1FB1.sc \uni1FB2.sc \uni1FB3.sc \uni1FB4.sc 
 	\uni1FB6.sc \uni1FB7.sc ];
-    @kc93_first_21 = [\b \p \rho \thorn \uni0180 \uni0185 \uni01A5 \uni01BF \uni0238 \uni0239 \uni0253 
+    @kc81_first_21 = [\b \p \rho \thorn \uni0180 \uni0185 \uni01A5 \uni01BF \uni0238 \uni0239 \uni0253 
 	\uni03F1 \uni03FC \uni0440 \uni048F \uni1E03 \uni1E05 \uni1E07 \uni1E55 
 	\uni1E57 ];
-    @kc93_first_22 = [\backslash ];
-    @kc93_first_23 = [\bracketleft ];
-    @kc93_first_24 = [\c \cacute \ccaron \ccedilla \ccircumflex \cdotaccent \sigma1 \uni0188 \uni0255 
+    @kc81_first_22 = [\backslash ];
+    @kc81_first_23 = [\bracketleft ];
+    @kc81_first_24 = [\c \cacute \ccaron \ccedilla \ccircumflex \cdotaccent \sigma1 \uni0188 \uni0255 
 	\uni03F5 \uni0441 \uni0481 \uni04AB \uni1E09 \uni217D ];
-    @kc93_first_25 = [\c.sc \cacute.sc \ccaron.sc \ccircumflex.sc \cdotaccent.sc \uni0188.sc 
+    @kc81_first_25 = [\c.sc \cacute.sc \ccaron.sc \ccircumflex.sc \cdotaccent.sc \uni0188.sc 
 	\uni037C.sc \uni03F2.sc \uni0441.sc \uni0454.sc \uni0465.sc 
 	\uni04AB.sc \uni1E09.sc \uni217D.sc ];
-    @kc93_first_26 = [\chi ];
-    @kc93_first_27 = [\chi.sc \uni0436.sc \uni0445.sc \uni04C2.sc \uni04DD.sc \uni04FD.sc 
+    @kc81_first_26 = [\chi ];
+    @kc81_first_27 = [\chi.sc \uni0436.sc \uni0445.sc \uni04C2.sc \uni04DD.sc \uni04FD.sc 
 	\uni04FF.sc \uni0515.sc \uni0517.sc \uni1E8B.sc \uni1E8D.sc \x.sc ];
-    @kc93_first_28 = [\comma \eight.cv08.dnom \eight.cv08.dnom.pnum \eight.cv08.dnom.tnum 
+    @kc81_first_28 = [\comma \eight.cv08.dnom \eight.cv08.dnom.pnum \eight.cv08.dnom.tnum 
 	\eight.cv08.subscript \eight.cv08.subscript.pnum 
 	\eight.cv08.subscript.tnum \eight.cv18.dnom \eight.cv18.dnom.pnum 
 	\eight.cv18.dnom.tnum \eight.cv18.subscript 
@@ -7337,9 +7243,9 @@ lookup kernCrnagehorizontallookups2 {
 	\zero.subscript.tnum \zero.zero.dnom \zero.zero.dnom.pnum 
 	\zero.zero.dnom.tnum \zero.zero.subscript 
 	\zero.zero.subscript.pnum \zero.zero.subscript.tnum ];
-    @kc93_first_29 = [\d.sc \dcaron.sc \dcroat.sc \uni1E0B.sc \uni1E0D.sc \uni1E0F.sc \uni1E11.sc 
+    @kc81_first_29 = [\d.sc \dcaron.sc \dcroat.sc \uni1E0B.sc \uni1E0D.sc \uni1E0F.sc \uni1E11.sc 
 	\uni1E13.sc \uni217E.sc ];
-    @kc93_first_30 = [\e \eacute \ebreve \ecircumflex \edieresis \edotaccent \egrave \emacron \eogonek 
+    @kc81_first_30 = [\e \eacute \ebreve \ecircumflex \edieresis \edotaccent \egrave \emacron \eogonek 
 	\o \oacute \obreve \ocircumflex \odieresis \ograve \ohorn 
 	\ohungarumlaut \omacron \omicron \omicrontonos \oslash \otilde 
 	\uni01D2 \uni0205 \uni0207 \uni020D \uni020F \uni0229 \uni022B \uni022D 
@@ -7349,7 +7255,7 @@ lookup kernCrnagehorizontallookups2 {
 	\uni1EBF \uni1EC1 \uni1EC3 \uni1EC5 \uni1ECD \uni1ECF \uni1ED1 \uni1ED3 
 	\uni1ED5 \uni1ED7 \uni1ED9 \uni1EDB \uni1EDD \uni1EDF \uni1EE1 \uni1EE3 
 	\uni1F40 \uni1F41 \uni1F42 \uni1F43 \uni1F44 \uni1F45 ];
-    @kc93_first_31 = [\g.sc.cv21 \gbreve.sc.cv21 \gcaron.sc.cv21 \gcircumflex.sc.cv21 
+    @kc81_first_31 = [\g.sc.cv21 \gbreve.sc.cv21 \gcaron.sc.cv21 \gcircumflex.sc.cv21 
 	\gcommaaccent.sc.cv21 \gdotaccent.sc.cv21 \o.sc \oacute.sc 
 	\obreve.sc \ocircumflex.sc \odieresis.sc \ograve.sc \ohorn.sc 
 	\ohungarumlaut.sc \omacron.sc \omicron.sc \omicrontonos.sc 
@@ -7364,44 +7270,44 @@ lookup kernCrnagehorizontallookups2 {
 	\uni1EDD.sc \uni1EDF.sc \uni1EE1.sc \uni1EE3.sc \uni1F40.sc 
 	\uni1F41.sc \uni1F42.sc \uni1F43.sc \uni1F44.sc \uni1F45.sc 
 	\uni1F78.sc \uni1F79.sc ];
-    @kc93_first_32 = [\gamma \uni04AF \uni04B1 ];
-    @kc93_first_33 = [\gamma.sc \uni0433.sc \uni0453.sc \uni0491.sc \uni0493.sc \uni04A5.sc 
+    @kc81_first_32 = [\gamma \uni04AF \uni04B1 ];
+    @kc81_first_33 = [\gamma.sc \uni0433.sc \uni0453.sc \uni0491.sc \uni0493.sc \uni04A5.sc 
 	\uni04F7.sc \uni04FB.sc ];
-    @kc93_first_34 = [\h \hbar \hcircumflex \m \n \nacute \napostrophe \ncaron \ncommaaccent \uni0266 
+    @kc81_first_34 = [\h \hbar \hcircumflex \m \n \nacute \napostrophe \ncaron \ncommaaccent \uni0266 
 	\uni0439 \uni045B \uni04F5 \uni1E23 \uni1E25 \uni1E27 \uni1E29 \uni1E2B 
 	\uni217F ];
-    @kc93_first_35 = [\i \ibreve \imacron \iogonek \itilde \uni01D0 \uni020B \uni0456 \uni1E2D \uni1E2F 
+    @kc81_first_35 = [\i \ibreve \imacron \iogonek \itilde \uni01D0 \uni020B \uni0456 \uni1E2D \uni1E2F 
 	\uni1EC9 \uni1ECB ];
-    @kc93_first_36 = [\iota \iotadieresis \iotadieresistonos \iotatonos \uni0269 \uni1F30 \uni1F31 
+    @kc81_first_36 = [\iota \iotadieresis \iotadieresistonos \iotatonos \uni0269 \uni1F30 \uni1F31 
 	\uni1F32 \uni1F33 \uni1F34 \uni1F35 \uni1F36 \uni1F37 \uni1F76 \uni1F77 
 	\uni1FD0 \uni1FD1 \uni1FD2 \uni1FD3 \uni1FD6 \uni1FD7 ];
-    @kc93_first_37 = [\k \kappa \kcommaaccent \kgreenlandic \uni043A \uni045C \uni049B \uni049D 
+    @kc81_first_37 = [\k \kappa \kcommaaccent \kgreenlandic \uni043A \uni045C \uni049B \uni049D 
 	\uni049F \uni04A1 \uni052B \uni1E31 \uni1E33 \uni1E35 ];
-    @kc93_first_38 = [\k.sc \kappa.sc \uni043A.sc \uni045C.sc \uni0497.sc \uni049D.sc \uni049F.sc 
+    @kc81_first_38 = [\k.sc \kappa.sc \uni043A.sc \uni045C.sc \uni0497.sc \uni049D.sc \uni049F.sc 
 	\uni04A1.sc \uni051F.sc \uni052B.sc \uni1E31.sc \uni1E33.sc 
 	\uni1E35.sc ];
-    @kc93_first_39 = [\l \lacute \lcommaaccent \lslash \uni1E37 \uni1E39 \uni1E3B \uni1E3D \uni217C ];
-    @kc93_first_40 = [\l.sc \lacute.sc \lcaron.sc \lcommaaccent.sc \ldot.sc \lslash.sc \uni1E37.sc 
+    @kc81_first_39 = [\l \lacute \lcommaaccent \lslash \uni1E37 \uni1E39 \uni1E3B \uni1E3D \uni217C ];
+    @kc81_first_40 = [\l.sc \lacute.sc \lcaron.sc \lcommaaccent.sc \ldot.sc \lslash.sc \uni1E37.sc 
 	\uni1E39.sc \uni1E3B.sc \uni1E3D.sc ];
-    @kc93_first_41 = [\lambda \uni019B ];
-    @kc93_first_42 = [\nu \uni0475 \uni1E7D \uni1E7F \v ];
-    @kc93_first_43 = [\omega.sc \uni1F60.sc \uni1F61.sc \uni1F62.sc \uni1F63.sc \uni1F64.sc 
+    @kc81_first_41 = [\lambda \uni019B ];
+    @kc81_first_42 = [\nu \uni0475 \uni1E7D \uni1E7F \v ];
+    @kc81_first_43 = [\omega.sc \uni1F60.sc \uni1F61.sc \uni1F62.sc \uni1F63.sc \uni1F64.sc 
 	\uni1F65.sc \uni1F66.sc \uni1F67.sc \uni1F7C.sc \uni1F7D.sc 
 	\uni1FA0.sc \uni1FA1.sc \uni1FA2.sc \uni1FA3.sc \uni1FA4.sc 
 	\uni1FA5.sc \uni1FA6.sc \uni1FA7.sc \uni1FF2.sc \uni1FF3.sc 
 	\uni1FF4.sc \uni1FF6.sc \uni1FF7.sc ];
-    @kc93_first_44 = [\p.sc \rho.sc \uni0440.sc \uni1E55.sc \uni1E57.sc ];
-    @kc93_first_45 = [\parenleft \uni27E8 \uni27EA ];
-    @kc93_first_46 = [\parenright \uni27E9 \uni27EB ];
-    @kc93_first_47 = [\r \racute \rcaron \rcommaaccent \uni024D \uni027C \uni027D \uni1E59 \uni1E5B 
+    @kc81_first_44 = [\p.sc \rho.sc \uni0440.sc \uni1E55.sc \uni1E57.sc ];
+    @kc81_first_45 = [\parenleft \uni27E8 \uni27EA ];
+    @kc81_first_46 = [\parenright \uni27E9 \uni27EB ];
+    @kc81_first_47 = [\r \racute \rcaron \rcommaaccent \uni024D \uni027C \uni027D \uni1E59 \uni1E5B 
 	\uni1E5D \uni1E5F ];
-    @kc93_first_48 = [\slash ];
-    @kc93_first_49 = [\t.sc \tau.sc \tbar.sc \tcaron.sc \uni0163.sc \uni01AB.sc \uni01AD.sc 
+    @kc81_first_48 = [\slash ];
+    @kc81_first_49 = [\t.sc \tau.sc \tbar.sc \tcaron.sc \uni0163.sc \uni01AB.sc \uni01AD.sc 
 	\uni021B.sc \uni0442.sc \uni0452.sc \uni045B.sc \uni04AD.sc 
 	\uni1E6B.sc \uni1E6D.sc \uni1E6F.sc \uni1E71.sc ];
-    @kc93_first_50 = [\tau \uni0442 \uni04AD ];
-    @kc93_first_51 = [\thorn.sc \uni01A5.sc ];
-    @kc93_first_52 = [\uni01B4.sc \uni024F.sc \uni0443.sc \uni045E.sc \uni04AF.sc \uni04B1.sc 
+    @kc81_first_50 = [\tau \uni0442 \uni04AD ];
+    @kc81_first_51 = [\thorn.sc \uni01A5.sc ];
+    @kc81_first_52 = [\uni01B4.sc \uni024F.sc \uni0443.sc \uni045E.sc \uni04AF.sc \uni04B1.sc 
 	\uni04EF.sc \uni04F1.sc \uni04F3.sc \uni1E8F.sc \uni1EF5.sc 
 	\uni1EF7.sc \uni1EF9.sc \uni1F50.sc \uni1F51.sc \uni1F52.sc 
 	\uni1F53.sc \uni1F54.sc \uni1F55.sc \uni1F56.sc \uni1F57.sc 
@@ -7409,31 +7315,31 @@ lookup kernCrnagehorizontallookups2 {
 	\uni1FE3.sc \uni1FE6.sc \uni1FE7.sc \upsilon.sc 
 	\upsilondieresistonos.sc \y.sc \yacute.sc \ycircumflex.sc 
 	\ydieresis.sc \ygrave.sc ];
-    @kc93_first_53 = [\uni0233 \uni0443 \uni04EF \uni04F1 \uni04F3 \uni1E8F \uni1EF5 \uni1EF7 \uni1EF9 
+    @kc81_first_53 = [\uni0233 \uni0443 \uni04EF \uni04F1 \uni04F3 \uni1E8F \uni1EF5 \uni1EF7 \uni1EF9 
 	\y \ycircumflex \ydieresis \ygrave ];
-    @kc93_first_54 = [\uni0240 \uni0290 \uni0291 \uni1E91 \uni1E93 \uni1E95 \z \zacute \zcaron 
+    @kc81_first_54 = [\uni0240 \uni0290 \uni0291 \uni1E91 \uni1E93 \uni1E95 \z \zacute \zcaron 
 	\zdotaccent ];
-    @kc93_first_55 = [\uni028C \uni028D \uni028E ];
-    @kc93_first_56 = [\uni0409 \uni040A \uni042A \uni042C \uni048C ];
-    @kc93_first_57 = [\uni0433 \uni0491 \uni0493 \uni04A5 \uni04F7 \uni04FB ];
-    @kc93_first_58 = [\uni0445 \uni0497 \uni04B3 \uni04DD \uni04FD \uni04FF \uni0515 \uni0517 \uni1E8B 
+    @kc81_first_55 = [\uni028C \uni028D \uni028E ];
+    @kc81_first_56 = [\uni0409 \uni040A \uni042A \uni042C \uni048C ];
+    @kc81_first_57 = [\uni0433 \uni0491 \uni0493 \uni04A5 \uni04F7 \uni04FB ];
+    @kc81_first_58 = [\uni0445 \uni0497 \uni04B3 \uni04DD \uni04FD \uni04FF \uni0515 \uni0517 \uni1E8B 
 	\uni1E8D \x ];
-    @kc93_first_59 = [\uni044A \uni044C \uni0459 \uni045A \uni0463 ];
-    @kc93_first_60 = [\uni044A.sc \uni044C.sc \uni0459.sc \uni045A.sc \uni048D.sc ];
-    @kc93_first_61 = [\uni0475.sc \uni0477.sc \uni1E7D.sc \uni1E7F.sc \v.sc ];
-    @kc93_first_62 = [\uni1E87 \uni1E89 \w \wacute \wcircumflex \wdieresis \wgrave ];
-    @kc93_first_63 = [\uni1E87.sc \uni1E89.sc \w.sc \wacute.sc \wcircumflex.sc \wdieresis.sc 
+    @kc81_first_59 = [\uni044A \uni044C \uni0459 \uni045A \uni0463 ];
+    @kc81_first_60 = [\uni044A.sc \uni044C.sc \uni0459.sc \uni045A.sc \uni048D.sc ];
+    @kc81_first_61 = [\uni0475.sc \uni0477.sc \uni1E7D.sc \uni1E7F.sc \v.sc ];
+    @kc81_first_62 = [\uni1E87 \uni1E89 \w \wacute \wcircumflex \wdieresis \wgrave ];
+    @kc81_first_63 = [\uni1E87.sc \uni1E89.sc \w.sc \wacute.sc \wcircumflex.sc \wdieresis.sc 
 	\wgrave.sc ];
-    @kc93_first_64 = [\uni1E91.sc \uni1E93.sc \uni1E95.sc \z.sc \zacute.sc \zcaron.sc \zdotaccent.sc 
+    @kc81_first_64 = [\uni1E91.sc \uni1E93.sc \uni1E95.sc \z.sc \zacute.sc \zcaron.sc \zdotaccent.sc 
 	\zeta.sc ];
-    @kc93_second_1 = [\A \Aacute \Abreve \Acircumflex \Adieresis \Agrave \Alpha \Amacron \Aogonek 
+    @kc81_second_1 = [\A \Aacute \Abreve \Acircumflex \Adieresis \Agrave \Alpha \Amacron \Aogonek 
 	\Aring \Aringacute \Atilde \Lambda \uni01CD \uni01DE \uni01E0 \uni0200 
 	\uni0202 \uni0226 \uni0245 \uni0394 \uni0410 \uni0466 \uni0468 \uni04D0 
 	\uni04D2 \uni1E00 \uni1EA0 \uni1EA2 \uni1EA4 \uni1EA6 \uni1EA8 \uni1EAA 
 	\uni1EAC \uni1EAE \uni1EB0 \uni1EB2 \uni1EB4 \uni1EB6 \uni1FB8 \uni1FB9 
 	\uni1FBC ];
-    @kc93_second_2 = [\AE \uni01E2 \uni04D4 ];
-    @kc93_second_3 = [\C \Cacute \Ccaron \Ccedilla \Ccircumflex \Cdotaccent \G \G.cv21 \Gbreve 
+    @kc81_second_2 = [\AE \uni01E2 \uni04D4 ];
+    @kc81_second_3 = [\C \Cacute \Ccaron \Ccedilla \Ccircumflex \Cdotaccent \G \G.cv21 \Gbreve 
 	\Gbreve.cv21 \Gcaron.cv21 \Gcircumflex \Gcircumflex.cv21 
 	\Gcommaaccent \Gcommaaccent.cv21 \Gdotaccent \Gdotaccent.cv21 \O 
 	\Oacute \Obreve \Ocircumflex \Odieresis \Ograve \Ohorn \Ohungarumlaut 
@@ -7447,19 +7353,19 @@ lookup kernCrnagehorizontallookups2 {
 	\uni1E52 \uni1ECC \uni1ECE \uni1ED0 \uni1ED2 \uni1ED4 \uni1ED6 \uni1ED8 
 	\uni1EDA \uni1EDC \uni1EDE \uni1EE0 \uni1EE2 \uni1F48 \uni1F49 \uni1F4A 
 	\uni1F4B \uni1F4C \uni1F4D \uni2103 \uni2141 \uni216D \uni2183 ];
-    @kc93_second_4 = [\Chi \X \uni0416 \uni0425 \uni0496 \uni04B2 \uni04C1 \uni04FC \uni04FE \uni1E8A 
+    @kc81_second_4 = [\Chi \X \uni0416 \uni0425 \uni0496 \uni04B2 \uni04C1 \uni04FC \uni04FE \uni1E8A 
 	\uni1E8C ];
-    @kc93_second_5 = [\J \Jcircumflex \uni037F ];
-    @kc93_second_6 = [\T \Tbar \Tcaron \uni0162 \uni01AC \uni01AE \uni021A \uni023E \uni04AC \uni1E6A 
+    @kc81_second_5 = [\J \Jcircumflex \uni037F ];
+    @kc81_second_6 = [\T \Tbar \Tcaron \uni0162 \uni01AC \uni01AE \uni021A \uni023E \uni04AC \uni1E6A 
 	\uni1E6C \uni1E6E \uni1E70 ];
-    @kc93_second_7 = [\Upsilon1 \Upsilondieresis \Upsilontonos \Y \Yacute \Ycircumflex \Ydieresis 
+    @kc81_second_7 = [\Upsilon1 \Upsilondieresis \Upsilontonos \Y \Yacute \Ycircumflex \Ydieresis 
 	\Ygrave \uni0232 \uni03D3 \uni03D4 \uni04AE \uni04B0 \uni1E8E \uni1EF4 
 	\uni1EF6 \uni1EF8 \uni1F59 \uni1F5B \uni1F5D \uni1F5F \uni1FE8 \uni1FE9 
 	\uni1FEA \uni1FEB ];
-    @kc93_second_8 = [\V \uni0474 \uni0476 \uni0477 \uni1E7C \uni1E7E ];
-    @kc93_second_9 = [\W \Wacute \Wcircumflex \Wdieresis \Wgrave \uni1E86 \uni1E88 ];
-    @kc93_second_10 = [\Z \Zacute \Zcaron \Zdotaccent \Zeta \uni1E90 \uni1E92 \uni1E94 ];
-    @kc93_second_11 = [\a.cv23 \aacute.cv23 \abreve.cv23 \acircumflex.cv23 \adieresis.cv23 \ae.cv23 
+    @kc81_second_8 = [\V \uni0474 \uni0476 \uni0477 \uni1E7C \uni1E7E ];
+    @kc81_second_9 = [\W \Wacute \Wcircumflex \Wdieresis \Wgrave \uni1E86 \uni1E88 ];
+    @kc81_second_10 = [\Z \Zacute \Zcaron \Zdotaccent \Zeta \uni1E90 \uni1E92 \uni1E94 ];
+    @kc81_second_11 = [\a.cv23 \aacute.cv23 \abreve.cv23 \acircumflex.cv23 \adieresis.cv23 \ae.cv23 
 	\aeacute.cv23 \agrave.cv23 \alpha \alphatonos \amacron.cv23 
 	\aogonek.cv23 \aring.cv23 \aringacute.cv23 \atilde.cv23 \d \dcaron 
 	\dcroat \g.cv24 \gbreve.cv24 \gcaron.cv24 \gcircumflex.cv24 
@@ -7476,7 +7382,7 @@ lookup kernCrnagehorizontallookups2 {
 	\uni1F04 \uni1F05 \uni1F06 \uni1F07 \uni1F80 \uni1F81 \uni1F82 \uni1F83 
 	\uni1F84 \uni1F85 \uni1F86 \uni1F87 \uni1FB0 \uni1FB1 \uni1FB2 \uni1FB3 
 	\uni1FB4 \uni1FB6 \uni1FB7 \uni217E ];
-    @kc93_second_12 = [\a.sc \aacute.sc \abreve.sc \acircumflex.sc \adieresis.sc \agrave.sc \alpha.sc 
+    @kc81_second_12 = [\a.sc \aacute.sc \abreve.sc \acircumflex.sc \adieresis.sc \agrave.sc \alpha.sc 
 	\alphatonos.sc \amacron.sc \aogonek.sc \aring.sc \aringacute.sc 
 	\atilde.sc \delta.sc \lambda.sc \uni01DF.sc \uni01E1.sc \uni0201.sc 
 	\uni0203.sc \uni0227.sc \uni04D1.sc \uni04D3.sc \uni1E01.sc 
@@ -7488,8 +7394,8 @@ lookup kernCrnagehorizontallookups2 {
 	\uni1F83.sc \uni1F84.sc \uni1F85.sc \uni1F86.sc \uni1F87.sc 
 	\uni1FB0.sc \uni1FB1.sc \uni1FB2.sc \uni1FB3.sc \uni1FB4.sc 
 	\uni1FB6.sc \uni1FB7.sc ];
-    @kc93_second_13 = [\ae.sc \uni01E3.sc \uni04D5.sc ];
-    @kc93_second_14 = [\asciicircum \asterisk \degree \eight.cv08.numr \eight.cv08.numr.pnum 
+    @kc81_second_13 = [\ae.sc \uni01E3.sc \uni04D5.sc ];
+    @kc81_second_14 = [\asciicircum \asterisk \degree \eight.cv08.numr \eight.cv08.numr.pnum 
 	\eight.cv08.numr.tnum \eight.cv08.superior 
 	\eight.cv08.superior.pnum \eight.cv08.superior.tnum 
 	\eight.cv18.numr \eight.cv18.numr.pnum \eight.cv18.numr.tnum 
@@ -7572,9 +7478,9 @@ lookup kernCrnagehorizontallookups2 {
 	\zero.superior.tnum \zero.zero.numr \zero.zero.numr.pnum 
 	\zero.zero.numr.tnum \zero.zero.superior \zero.zero.superior.pnum 
 	\zero.zero.superior.tnum ];
-    @kc93_second_15 = [\backslash ];
-    @kc93_second_16 = [\bracketright ];
-    @kc93_second_17 = [\c \cacute \ccaron \ccircumflex \cdotaccent \e \ebreve \ecaron \edotaccent 
+    @kc81_second_15 = [\backslash ];
+    @kc81_second_16 = [\bracketright ];
+    @kc81_second_17 = [\c \cacute \ccaron \ccircumflex \cdotaccent \e \ebreve \ecaron \edotaccent 
 	\emacron \eogonek \o \obreve \oe \ohorn \ohungarumlaut \omacron \omicron 
 	\omicrontonos \oslashacute \sigma1 \uni0188 \uni018D \uni01D2 \uni01EB 
 	\uni01ED \uni020D \uni020F \uni022B \uni022D \uni022F \uni0231 \uni0255 
@@ -7585,7 +7491,7 @@ lookup kernCrnagehorizontallookups2 {
 	\uni1EC3 \uni1EC5 \uni1EC7 \uni1ECD \uni1ECF \uni1ED1 \uni1ED3 \uni1ED5 
 	\uni1ED7 \uni1ED9 \uni1EDB \uni1EDD \uni1EDF \uni1EE1 \uni1EE3 \uni1F40 
 	\uni1F41 \uni1F42 \uni1F43 \uni1F44 \uni1F45 ];
-    @kc93_second_18 = [\c.sc \cacute.sc \ccaron.sc \ccedilla.sc \ccircumflex.sc \cdotaccent.sc \g.sc 
+    @kc81_second_18 = [\c.sc \cacute.sc \ccaron.sc \ccedilla.sc \ccircumflex.sc \cdotaccent.sc \g.sc 
 	\g.sc.cv21 \gbreve.sc \gbreve.sc.cv21 \gcaron.sc.cv21 
 	\gcircumflex.sc \gcircumflex.sc.cv21 \gcommaaccent.sc 
 	\gcommaaccent.sc.cv21 \gdotaccent.sc \gdotaccent.sc.cv21 \o.sc 
@@ -7602,10 +7508,10 @@ lookup kernCrnagehorizontallookups2 {
 	\uni1EDF.sc \uni1EE1.sc \uni1EE3.sc \uni1F40.sc \uni1F41.sc 
 	\uni1F42.sc \uni1F43.sc \uni1F44.sc \uni1F45.sc \uni1F78.sc 
 	\uni1F79.sc ];
-    @kc93_second_19 = [\chi ];
-    @kc93_second_20 = [\chi.sc \uni0436.sc \uni0445.sc \uni04C2.sc \uni04DD.sc \uni04FD.sc 
+    @kc81_second_19 = [\chi ];
+    @kc81_second_20 = [\chi.sc \uni0436.sc \uni0445.sc \uni04C2.sc \uni04DD.sc \uni04FD.sc 
 	\uni04FF.sc \uni1E8B.sc \uni1E8D.sc \x.sc ];
-    @kc93_second_21 = [\comma \eight.cv08.dnom \eight.cv08.dnom.pnum \eight.cv08.dnom.tnum 
+    @kc81_second_21 = [\comma \eight.cv08.dnom \eight.cv08.dnom.pnum \eight.cv08.dnom.tnum 
 	\eight.cv08.subscript \eight.cv08.subscript.pnum 
 	\eight.cv08.subscript.tnum \eight.cv18.dnom \eight.cv18.dnom.pnum 
 	\eight.cv18.dnom.tnum \eight.cv18.subscript 
@@ -7714,24 +7620,24 @@ lookup kernCrnagehorizontallookups2 {
 	\zero.subscript.tnum \zero.zero.dnom \zero.zero.dnom.pnum 
 	\zero.zero.dnom.tnum \zero.zero.subscript 
 	\zero.zero.subscript.pnum \zero.zero.subscript.tnum ];
-    @kc93_second_22 = [\j \jcircumflex \uni03F3 ];
-    @kc93_second_23 = [\j.sc \uni01F0.sc ];
-    @kc93_second_24 = [\nu \uni0475 \uni1E7D \uni1E7F \v ];
-    @kc93_second_25 = [\omega.sc \uni1F60.sc \uni1F61.sc \uni1F62.sc \uni1F63.sc \uni1F64.sc 
+    @kc81_second_22 = [\j \jcircumflex \uni03F3 ];
+    @kc81_second_23 = [\j.sc \uni01F0.sc ];
+    @kc81_second_24 = [\nu \uni0475 \uni1E7D \uni1E7F \v ];
+    @kc81_second_25 = [\omega.sc \uni1F60.sc \uni1F61.sc \uni1F62.sc \uni1F63.sc \uni1F64.sc 
 	\uni1F65.sc \uni1F66.sc \uni1F67.sc \uni1F7C.sc \uni1F7D.sc 
 	\uni1FA0.sc \uni1FA1.sc \uni1FA2.sc \uni1FA3.sc \uni1FA4.sc 
 	\uni1FA5.sc \uni1FA6.sc \uni1FA7.sc \uni1FF2.sc \uni1FF3.sc 
 	\uni1FF4.sc \uni1FF6.sc \uni1FF7.sc ];
-    @kc93_second_26 = [\parenleft ];
-    @kc93_second_27 = [\parenright \uni27E9 \uni27EB ];
-    @kc93_second_28 = [\slash ];
-    @kc93_second_29 = [\t \tcaron \uni0163 \uni02A6 \uni02A7 \uni02A8 \uni1E6B \uni1E6D \uni1E6F 
+    @kc81_second_26 = [\parenleft ];
+    @kc81_second_27 = [\parenright \uni27E9 \uni27EB ];
+    @kc81_second_28 = [\slash ];
+    @kc81_second_29 = [\t \tcaron \uni0163 \uni02A6 \uni02A7 \uni02A8 \uni1E6B \uni1E6D \uni1E6F 
 	\uni1E71 ];
-    @kc93_second_30 = [\t.sc \tau.sc \tbar.sc \tcaron.sc \uni0163.sc \uni01AB.sc \uni01AD.sc 
+    @kc81_second_30 = [\t.sc \tau.sc \tbar.sc \tcaron.sc \uni0163.sc \uni01AB.sc \uni01AD.sc 
 	\uni021B.sc \uni0442.sc \uni0452.sc \uni045B.sc \uni04AD.sc 
 	\uni1E6B.sc \uni1E6D.sc \uni1E6F.sc \uni1E71.sc ];
-    @kc93_second_31 = [\tau \uni0442 \uni04AD ];
-    @kc93_second_32 = [\uni01B4.sc \uni024F.sc \uni0443.sc \uni045E.sc \uni04AF.sc \uni04B1.sc 
+    @kc81_second_31 = [\tau \uni0442 \uni04AD ];
+    @kc81_second_32 = [\uni01B4.sc \uni024F.sc \uni0443.sc \uni045E.sc \uni04AF.sc \uni04B1.sc 
 	\uni04EF.sc \uni04F1.sc \uni04F3.sc \uni1E8F.sc \uni1EF5.sc 
 	\uni1EF7.sc \uni1EF9.sc \uni1F50.sc \uni1F51.sc \uni1F52.sc 
 	\uni1F53.sc \uni1F54.sc \uni1F55.sc \uni1F56.sc \uni1F57.sc 
@@ -7739,821 +7645,821 @@ lookup kernCrnagehorizontallookups2 {
 	\uni1FE3.sc \uni1FE6.sc \uni1FE7.sc \upsilon.sc 
 	\upsilondieresistonos.sc \y.sc \yacute.sc \ycircumflex.sc 
 	\ydieresis.sc \ygrave.sc ];
-    @kc93_second_33 = [\uni0233 \uni0443 \uni04EF \uni04F1 \uni04F3 \uni1E8F \uni1EF5 \uni1EF7 \uni1EF9 
+    @kc81_second_33 = [\uni0233 \uni0443 \uni04EF \uni04F1 \uni04F3 \uni1E8F \uni1EF5 \uni1EF7 \uni1EF9 
 	\y \ycircumflex \ydieresis \ygrave ];
-    @kc93_second_34 = [\uni0240 \uni0290 \uni0291 \uni1E91 \uni1E93 \uni1E95 \z \zacute \zcaron 
+    @kc81_second_34 = [\uni0240 \uni0290 \uni0291 \uni1E91 \uni1E93 \uni1E95 \z \zacute \zcaron 
 	\zdotaccent ];
-    @kc93_second_35 = [\uni028C \uni028D ];
-    @kc93_second_36 = [\uni03A9 \uni1FFC ];
-    @kc93_second_37 = [\uni0409 \uni0414 \uni041B \uni04C5 \uni0508 \uni0512 \uni0514 \uni0520 \uni052A 
+    @kc81_second_35 = [\uni028C \uni028D ];
+    @kc81_second_36 = [\uni03A9 \uni1FFC ];
+    @kc81_second_37 = [\uni0409 \uni0414 \uni041B \uni04C5 \uni0508 \uni0512 \uni0514 \uni0520 \uni052A 
 	\uni052E ];
-    @kc93_second_38 = [\uni0434 \uni043B \uni0459 \uni04C6 \uni0509 \uni0513 \uni0521 \uni052B \uni052D 
+    @kc81_second_38 = [\uni0434 \uni043B \uni0459 \uni04C6 \uni0509 \uni0513 \uni0521 \uni052B \uni052D 
 	\uni052F ];
-    @kc93_second_39 = [\uni0434.sc \uni043B.sc \uni0459.sc \uni04C6.sc \uni0513.sc \uni0515.sc 
+    @kc81_second_39 = [\uni0434.sc \uni043B.sc \uni0459.sc \uni04C6.sc \uni0513.sc \uni0515.sc 
 	\uni0521.sc \uni052B.sc \uni052F.sc ];
-    @kc93_second_40 = [\uni0445 \uni0497 \uni04B3 \uni04DD \uni04FD \uni04FF \uni1E8B \uni1E8D \x ];
-    @kc93_second_41 = [\uni0475.sc \uni0477.sc \uni1E7D.sc \uni1E7F.sc \v.sc ];
-    @kc93_second_42 = [\uni1E87 \uni1E89 \w \wacute \wcircumflex \wdieresis \wgrave ];
-    @kc93_second_43 = [\uni1E87.sc \uni1E89.sc \w.sc \wacute.sc \wcircumflex.sc \wdieresis.sc 
+    @kc81_second_40 = [\uni0445 \uni0497 \uni04B3 \uni04DD \uni04FD \uni04FF \uni1E8B \uni1E8D \x ];
+    @kc81_second_41 = [\uni0475.sc \uni0477.sc \uni1E7D.sc \uni1E7F.sc \v.sc ];
+    @kc81_second_42 = [\uni1E87 \uni1E89 \w \wacute \wcircumflex \wdieresis \wgrave ];
+    @kc81_second_43 = [\uni1E87.sc \uni1E89.sc \w.sc \wacute.sc \wcircumflex.sc \wdieresis.sc 
 	\wgrave.sc ];
-    @kc93_second_44 = [\uni1E91.sc \uni1E93.sc \uni1E95.sc \z.sc \zacute.sc \zcaron.sc \zdotaccent.sc 
+    @kc81_second_44 = [\uni1E91.sc \uni1E93.sc \uni1E95.sc \z.sc \zacute.sc \zcaron.sc \zdotaccent.sc 
 	\zeta.sc ];
-    pos @kc93_first_1 @kc93_second_3 -70;
-    pos @kc93_first_1 @kc93_second_6 -280;
-    pos @kc93_first_1 @kc93_second_7 -280;
-    pos @kc93_first_1 @kc93_second_8 -280;
-    pos @kc93_first_1 @kc93_second_9 -210;
-    pos @kc93_first_1 @kc93_second_15 -280;
-    pos @kc93_first_1 @kc93_second_18 -35;
-    pos @kc93_first_1 @kc93_second_22 -140;
-    pos @kc93_first_1 @kc93_second_24 -140;
-    pos @kc93_first_1 @kc93_second_29 -70;
-    pos @kc93_first_1 @kc93_second_30 -210;
-    pos @kc93_first_1 @kc93_second_31 -140;
-    pos @kc93_first_1 @kc93_second_32 -210;
-    pos @kc93_first_1 @kc93_second_33 -140;
-    pos @kc93_first_1 @kc93_second_41 -210;
-    pos @kc93_first_1 @kc93_second_42 -140;
-    pos @kc93_first_1 @kc93_second_43 -175;
-    pos @kc93_first_2 @kc93_second_4 -35;
-    pos @kc93_first_2 @kc93_second_7 -70;
-    pos @kc93_first_2 @kc93_second_16 -70;
-    pos @kc93_first_2 @kc93_second_22 -105;
-    pos @kc93_first_3 @kc93_second_3 -70;
-    pos @kc93_first_3 @kc93_second_11 -70;
-    pos @kc93_first_3 @kc93_second_17 -70;
-    pos @kc93_first_3 @kc93_second_18 -70;
-    pos @kc93_first_3 @kc93_second_22 -140;
-    pos @kc93_first_4 @kc93_second_4 -70;
-    pos @kc93_first_4 @kc93_second_6 -70;
-    pos @kc93_first_4 @kc93_second_7 -140;
-    pos @kc93_first_4 @kc93_second_8 -35;
-    pos @kc93_first_4 @kc93_second_10 -70;
-    pos @kc93_first_4 @kc93_second_15 -35;
-    pos @kc93_first_4 @kc93_second_16 -140;
-    pos @kc93_first_4 @kc93_second_22 -140;
-    pos @kc93_first_4 @kc93_second_27 -70;
-    pos @kc93_first_4 @kc93_second_32 -35;
-    pos @kc93_first_4 @kc93_second_44 -35;
-    pos @kc93_first_5 @kc93_second_22 -140;
-    pos @kc93_first_6 @kc93_second_1 -70;
-    pos @kc93_first_6 @kc93_second_4 -70;
-    pos @kc93_first_6 @kc93_second_6 -70;
-    pos @kc93_first_6 @kc93_second_7 -70;
-    pos @kc93_first_6 @kc93_second_8 -70;
-    pos @kc93_first_6 @kc93_second_9 -35;
-    pos @kc93_first_6 @kc93_second_10 -35;
-    pos @kc93_first_6 @kc93_second_12 -35;
-    pos @kc93_first_6 @kc93_second_15 -35;
-    pos @kc93_first_6 @kc93_second_16 -140;
-    pos @kc93_first_6 @kc93_second_20 -35;
-    pos @kc93_first_6 @kc93_second_22 -105;
-    pos @kc93_first_6 @kc93_second_27 -70;
-    pos @kc93_first_7 @kc93_second_1 -280;
-    pos @kc93_first_7 @kc93_second_2 -560;
-    pos @kc93_first_7 @kc93_second_3 -140;
-    pos @kc93_first_7 @kc93_second_5 -210;
-    pos @kc93_first_7 @kc93_second_11 -210;
-    pos @kc93_first_7 @kc93_second_12 -350;
-    pos @kc93_first_7 @kc93_second_13 -630;
-    pos @kc93_first_7 @kc93_second_17 -210;
-    pos @kc93_first_7 @kc93_second_18 -140;
-    pos @kc93_first_7 @kc93_second_21 -210;
-    pos @kc93_first_7 @kc93_second_22 -105;
-    pos @kc93_first_7 @kc93_second_23 -210;
-    pos @kc93_first_7 @kc93_second_24 -140;
-    pos @kc93_first_7 @kc93_second_28 -280;
-    pos @kc93_first_7 @kc93_second_29 -175;
-    pos @kc93_first_7 @kc93_second_30 -140;
-    pos @kc93_first_7 @kc93_second_31 -175;
-    pos @kc93_first_7 @kc93_second_32 -70;
-    pos @kc93_first_7 @kc93_second_35 -350;
-    pos @kc93_first_7 @kc93_second_36 -140;
-    pos @kc93_first_7 @kc93_second_37 -280;
-    pos @kc93_first_7 @kc93_second_38 -210;
-    pos @kc93_first_7 @kc93_second_39 -210;
-    pos @kc93_first_7 @kc93_second_41 -70;
-    pos @kc93_first_7 @kc93_second_42 -105;
-    pos @kc93_first_7 @kc93_second_43 -35;
-    pos @kc93_first_8 @kc93_second_3 -70;
-    pos @kc93_first_8 @kc93_second_11 -70;
-    pos @kc93_first_8 @kc93_second_17 -70;
-    pos @kc93_first_8 @kc93_second_18 -70;
-    pos @kc93_first_8 @kc93_second_19 -70;
-    pos @kc93_first_8 @kc93_second_22 -140;
-    pos @kc93_first_8 @kc93_second_23 -70;
-    pos @kc93_first_8 @kc93_second_24 -70;
-    pos @kc93_first_8 @kc93_second_29 -70;
-    pos @kc93_first_8 @kc93_second_30 -70;
-    pos @kc93_first_8 @kc93_second_31 -70;
-    pos @kc93_first_8 @kc93_second_42 -70;
-    pos @kc93_first_9 @kc93_second_3 -70;
-    pos @kc93_first_9 @kc93_second_11 -70;
-    pos @kc93_first_9 @kc93_second_17 -70;
-    pos @kc93_first_9 @kc93_second_18 -70;
-    pos @kc93_first_9 @kc93_second_22 -105;
-    pos @kc93_first_10 @kc93_second_3 -140;
-    pos @kc93_first_10 @kc93_second_6 -280;
-    pos @kc93_first_10 @kc93_second_7 -280;
-    pos @kc93_first_10 @kc93_second_8 -280;
-    pos @kc93_first_10 @kc93_second_9 -210;
-    pos @kc93_first_10 @kc93_second_11 -70;
-    pos @kc93_first_10 @kc93_second_14 -210;
-    pos @kc93_first_10 @kc93_second_15 -280;
-    pos @kc93_first_10 @kc93_second_16 -210;
-    pos @kc93_first_10 @kc93_second_17 -70;
-    pos @kc93_first_10 @kc93_second_18 -105;
-    pos @kc93_first_10 @kc93_second_22 -120;
-    pos @kc93_first_10 @kc93_second_24 -140;
-    pos @kc93_first_10 @kc93_second_29 -175;
-    pos @kc93_first_10 @kc93_second_30 -280;
-    pos @kc93_first_10 @kc93_second_31 -280;
-    pos @kc93_first_10 @kc93_second_32 -210;
-    pos @kc93_first_10 @kc93_second_33 -140;
-    pos @kc93_first_10 @kc93_second_41 -210;
-    pos @kc93_first_10 @kc93_second_42 -140;
-    pos @kc93_first_10 @kc93_second_43 -175;
-    pos @kc93_first_11 @kc93_second_6 -140;
-    pos @kc93_first_11 @kc93_second_7 -70;
-    pos @kc93_first_11 @kc93_second_8 -70;
-    pos @kc93_first_11 @kc93_second_9 -35;
-    pos @kc93_first_11 @kc93_second_15 -35;
-    pos @kc93_first_11 @kc93_second_16 -140;
-    pos @kc93_first_11 @kc93_second_22 -70;
-    pos @kc93_first_11 @kc93_second_27 -70;
-    pos @kc93_first_11 @kc93_second_41 -70;
-    pos @kc93_first_12 @kc93_second_1 -140;
-    pos @kc93_first_12 @kc93_second_2 -280;
-    pos @kc93_first_12 @kc93_second_4 -70;
-    pos @kc93_first_12 @kc93_second_5 -140;
-    pos @kc93_first_12 @kc93_second_10 -70;
-    pos @kc93_first_12 @kc93_second_12 -140;
-    pos @kc93_first_12 @kc93_second_13 -280;
-    pos @kc93_first_12 @kc93_second_16 -70;
-    pos @kc93_first_12 @kc93_second_22 -70;
-    pos @kc93_first_12 @kc93_second_23 -140;
-    pos @kc93_first_12 @kc93_second_27 -70;
-    pos @kc93_first_12 @kc93_second_28 -140;
-    pos @kc93_first_12 @kc93_second_35 -105;
-    pos @kc93_first_12 @kc93_second_37 -175;
-    pos @kc93_first_12 @kc93_second_38 -140;
-    pos @kc93_first_12 @kc93_second_39 -105;
-    pos @kc93_first_13 @kc93_second_1 -280;
-    pos @kc93_first_13 @kc93_second_2 -350;
-    pos @kc93_first_13 @kc93_second_3 -70;
-    pos @kc93_first_13 @kc93_second_5 -210;
-    pos @kc93_first_13 @kc93_second_11 -140;
-    pos @kc93_first_13 @kc93_second_12 -280;
-    pos @kc93_first_13 @kc93_second_13 -420;
-    pos @kc93_first_13 @kc93_second_17 -210;
-    pos @kc93_first_13 @kc93_second_18 -140;
-    pos @kc93_first_13 @kc93_second_21 -175;
-    pos @kc93_first_13 @kc93_second_22 -140;
-    pos @kc93_first_13 @kc93_second_23 -210;
-    pos @kc93_first_13 @kc93_second_24 -175;
-    pos @kc93_first_13 @kc93_second_25 -140;
-    pos @kc93_first_13 @kc93_second_28 -280;
-    pos @kc93_first_13 @kc93_second_29 -175;
-    pos @kc93_first_13 @kc93_second_30 -140;
-    pos @kc93_first_13 @kc93_second_31 -175;
-    pos @kc93_first_13 @kc93_second_32 -70;
-    pos @kc93_first_13 @kc93_second_33 -175;
-    pos @kc93_first_13 @kc93_second_34 -175;
-    pos @kc93_first_13 @kc93_second_35 -210;
-    pos @kc93_first_13 @kc93_second_36 -70;
-    pos @kc93_first_13 @kc93_second_37 -210;
-    pos @kc93_first_13 @kc93_second_38 -210;
-    pos @kc93_first_13 @kc93_second_39 -210;
-    pos @kc93_first_13 @kc93_second_40 -175;
-    pos @kc93_first_13 @kc93_second_41 -70;
-    pos @kc93_first_13 @kc93_second_42 -175;
-    pos @kc93_first_13 @kc93_second_43 -35;
-    pos @kc93_first_14 @kc93_second_4 -105;
-    pos @kc93_first_14 @kc93_second_6 -140;
-    pos @kc93_first_14 @kc93_second_7 -140;
-    pos @kc93_first_14 @kc93_second_8 -35;
-    pos @kc93_first_14 @kc93_second_10 -35;
-    pos @kc93_first_14 @kc93_second_15 -70;
-    pos @kc93_first_14 @kc93_second_16 -140;
-    pos @kc93_first_14 @kc93_second_20 -35;
-    pos @kc93_first_14 @kc93_second_22 -120;
-    pos @kc93_first_14 @kc93_second_27 -140;
-    pos @kc93_first_14 @kc93_second_32 -35;
-    pos @kc93_first_14 @kc93_second_44 -35;
-    pos @kc93_first_15 @kc93_second_1 -280;
-    pos @kc93_first_15 @kc93_second_2 -350;
-    pos @kc93_first_15 @kc93_second_3 -70;
-    pos @kc93_first_15 @kc93_second_5 -210;
-    pos @kc93_first_15 @kc93_second_11 -210;
-    pos @kc93_first_15 @kc93_second_12 -280;
-    pos @kc93_first_15 @kc93_second_13 -420;
-    pos @kc93_first_15 @kc93_second_17 -210;
-    pos @kc93_first_15 @kc93_second_18 -140;
-    pos @kc93_first_15 @kc93_second_21 -175;
-    pos @kc93_first_15 @kc93_second_22 -140;
-    pos @kc93_first_15 @kc93_second_23 -210;
-    pos @kc93_first_15 @kc93_second_28 -280;
-    pos @kc93_first_15 @kc93_second_35 -210;
-    pos @kc93_first_15 @kc93_second_36 -70;
-    pos @kc93_first_15 @kc93_second_37 -210;
-    pos @kc93_first_15 @kc93_second_38 -210;
-    pos @kc93_first_15 @kc93_second_39 -210;
-    pos @kc93_first_16 @kc93_second_1 -280;
-    pos @kc93_first_16 @kc93_second_2 -280;
-    pos @kc93_first_16 @kc93_second_3 -70;
-    pos @kc93_first_16 @kc93_second_5 -140;
-    pos @kc93_first_16 @kc93_second_11 -140;
-    pos @kc93_first_16 @kc93_second_12 -280;
-    pos @kc93_first_16 @kc93_second_13 -280;
-    pos @kc93_first_16 @kc93_second_17 -140;
-    pos @kc93_first_16 @kc93_second_18 -105;
-    pos @kc93_first_16 @kc93_second_21 -70;
-    pos @kc93_first_16 @kc93_second_22 -140;
-    pos @kc93_first_16 @kc93_second_23 -140;
-    pos @kc93_first_16 @kc93_second_28 -280;
-    pos @kc93_first_16 @kc93_second_35 -210;
-    pos @kc93_first_16 @kc93_second_36 -70;
-    pos @kc93_first_16 @kc93_second_37 -210;
-    pos @kc93_first_16 @kc93_second_38 -140;
-    pos @kc93_first_16 @kc93_second_39 -140;
-    pos @kc93_first_17 @kc93_second_1 -210;
-    pos @kc93_first_17 @kc93_second_2 -210;
-    pos @kc93_first_17 @kc93_second_3 -35;
-    pos @kc93_first_17 @kc93_second_5 -70;
-    pos @kc93_first_17 @kc93_second_11 -70;
-    pos @kc93_first_17 @kc93_second_12 -210;
-    pos @kc93_first_17 @kc93_second_13 -210;
-    pos @kc93_first_17 @kc93_second_17 -105;
-    pos @kc93_first_17 @kc93_second_18 -70;
-    pos @kc93_first_17 @kc93_second_21 -35;
-    pos @kc93_first_17 @kc93_second_22 -120;
-    pos @kc93_first_17 @kc93_second_23 -70;
-    pos @kc93_first_17 @kc93_second_28 -210;
-    pos @kc93_first_17 @kc93_second_35 -140;
-    pos @kc93_first_17 @kc93_second_36 -35;
-    pos @kc93_first_17 @kc93_second_37 -140;
-    pos @kc93_first_17 @kc93_second_38 -140;
-    pos @kc93_first_17 @kc93_second_39 -140;
-    pos @kc93_first_18 @kc93_second_3 -35;
-    pos @kc93_first_18 @kc93_second_11 -35;
-    pos @kc93_first_18 @kc93_second_17 -35;
-    pos @kc93_first_18 @kc93_second_18 -35;
-    pos @kc93_first_18 @kc93_second_22 -140;
-    pos @kc93_first_19 @kc93_second_6 -210;
-    pos @kc93_first_19 @kc93_second_7 -210;
-    pos @kc93_first_19 @kc93_second_8 -105;
-    pos @kc93_first_19 @kc93_second_9 -70;
-    pos @kc93_first_19 @kc93_second_15 -140;
-    pos @kc93_first_19 @kc93_second_22 -140;
-    pos @kc93_first_19 @kc93_second_24 -35;
-    pos @kc93_first_19 @kc93_second_29 -35;
-    pos @kc93_first_19 @kc93_second_30 -70;
-    pos @kc93_first_19 @kc93_second_31 -70;
-    pos @kc93_first_19 @kc93_second_32 -70;
-    pos @kc93_first_19 @kc93_second_33 -35;
-    pos @kc93_first_19 @kc93_second_41 -70;
-    pos @kc93_first_19 @kc93_second_42 -35;
-    pos @kc93_first_19 @kc93_second_43 -35;
-    pos @kc93_first_20 @kc93_second_3 -70;
-    pos @kc93_first_20 @kc93_second_6 -280;
-    pos @kc93_first_20 @kc93_second_7 -280;
-    pos @kc93_first_20 @kc93_second_8 -280;
-    pos @kc93_first_20 @kc93_second_9 -210;
-    pos @kc93_first_20 @kc93_second_15 -280;
-    pos @kc93_first_20 @kc93_second_18 -35;
-    pos @kc93_first_20 @kc93_second_22 -140;
-    pos @kc93_first_20 @kc93_second_24 -140;
-    pos @kc93_first_20 @kc93_second_29 -70;
-    pos @kc93_first_20 @kc93_second_30 -210;
-    pos @kc93_first_20 @kc93_second_31 -140;
-    pos @kc93_first_20 @kc93_second_32 -210;
-    pos @kc93_first_20 @kc93_second_33 -140;
-    pos @kc93_first_20 @kc93_second_41 -210;
-    pos @kc93_first_20 @kc93_second_42 -140;
-    pos @kc93_first_20 @kc93_second_43 -175;
-    pos @kc93_first_21 @kc93_second_6 -140;
-    pos @kc93_first_21 @kc93_second_7 -210;
-    pos @kc93_first_21 @kc93_second_8 -140;
-    pos @kc93_first_21 @kc93_second_9 -70;
-    pos @kc93_first_21 @kc93_second_15 -140;
-    pos @kc93_first_21 @kc93_second_22 -140;
-    pos @kc93_first_21 @kc93_second_30 -70;
-    pos @kc93_first_21 @kc93_second_31 -70;
-    pos @kc93_first_21 @kc93_second_32 -105;
-    pos @kc93_first_21 @kc93_second_41 -70;
-    pos @kc93_first_21 @kc93_second_43 -35;
-    pos @kc93_first_22 @kc93_second_3 -70;
-    pos @kc93_first_22 @kc93_second_6 -280;
-    pos @kc93_first_22 @kc93_second_7 -280;
-    pos @kc93_first_22 @kc93_second_8 -280;
-    pos @kc93_first_22 @kc93_second_9 -210;
-    pos @kc93_first_22 @kc93_second_15 -420;
-    pos @kc93_first_22 @kc93_second_18 -35;
-    pos @kc93_first_22 @kc93_second_24 -140;
-    pos @kc93_first_22 @kc93_second_29 -70;
-    pos @kc93_first_22 @kc93_second_30 -210;
-    pos @kc93_first_22 @kc93_second_31 -140;
-    pos @kc93_first_22 @kc93_second_32 -210;
-    pos @kc93_first_22 @kc93_second_33 -140;
-    pos @kc93_first_22 @kc93_second_41 -210;
-    pos @kc93_first_22 @kc93_second_42 -140;
-    pos @kc93_first_22 @kc93_second_43 -175;
-    pos @kc93_first_23 @kc93_second_3 -140;
-    pos @kc93_first_23 @kc93_second_11 -140;
-    pos @kc93_first_23 @kc93_second_17 -140;
-    pos @kc93_first_23 @kc93_second_18 -140;
-    pos @kc93_first_23 @kc93_second_26 -140;
-    pos @kc93_first_24 @kc93_second_6 -175;
-    pos @kc93_first_24 @kc93_second_15 -70;
-    pos @kc93_first_24 @kc93_second_16 -70;
-    pos @kc93_first_24 @kc93_second_22 -120;
-    pos @kc93_first_24 @kc93_second_27 -70;
-    pos @kc93_first_24 @kc93_second_30 -70;
-    pos @kc93_first_25 @kc93_second_4 -70;
-    pos @kc93_first_25 @kc93_second_6 -105;
-    pos @kc93_first_25 @kc93_second_15 -35;
-    pos @kc93_first_25 @kc93_second_16 -70;
-    pos @kc93_first_25 @kc93_second_20 -35;
-    pos @kc93_first_25 @kc93_second_22 -120;
-    pos @kc93_first_25 @kc93_second_27 -70;
-    pos @kc93_first_25 @kc93_second_30 -35;
-    pos @kc93_first_26 @kc93_second_1 -140;
-    pos @kc93_first_26 @kc93_second_2 -140;
-    pos @kc93_first_26 @kc93_second_5 -70;
-    pos @kc93_first_26 @kc93_second_6 -175;
-    pos @kc93_first_26 @kc93_second_11 -70;
-    pos @kc93_first_26 @kc93_second_12 -140;
-    pos @kc93_first_26 @kc93_second_13 -210;
-    pos @kc93_first_26 @kc93_second_15 -70;
-    pos @kc93_first_26 @kc93_second_17 -70;
-    pos @kc93_first_26 @kc93_second_23 -70;
-    pos @kc93_first_26 @kc93_second_35 -140;
-    pos @kc93_first_27 @kc93_second_11 -70;
-    pos @kc93_first_27 @kc93_second_17 -70;
-    pos @kc93_first_27 @kc93_second_18 -35;
-    pos @kc93_first_28 @kc93_second_6 -175;
-    pos @kc93_first_28 @kc93_second_7 -175;
-    pos @kc93_first_28 @kc93_second_8 -70;
-    pos @kc93_first_28 @kc93_second_9 -35;
-    pos @kc93_first_28 @kc93_second_15 -35;
-    pos @kc93_first_28 @kc93_second_22 -140;
-    pos @kc93_first_28 @kc93_second_30 -70;
-    pos @kc93_first_28 @kc93_second_32 -70;
-    pos @kc93_first_28 @kc93_second_41 -35;
-    pos @kc93_first_29 @kc93_second_4 -35;
-    pos @kc93_first_29 @kc93_second_6 -140;
-    pos @kc93_first_29 @kc93_second_7 -140;
-    pos @kc93_first_29 @kc93_second_8 -70;
-    pos @kc93_first_29 @kc93_second_9 -70;
-    pos @kc93_first_29 @kc93_second_15 -70;
-    pos @kc93_first_29 @kc93_second_16 -140;
-    pos @kc93_first_29 @kc93_second_20 -70;
-    pos @kc93_first_29 @kc93_second_22 -140;
-    pos @kc93_first_29 @kc93_second_27 -140;
-    pos @kc93_first_29 @kc93_second_30 -70;
-    pos @kc93_first_29 @kc93_second_32 -70;
-    pos @kc93_first_29 @kc93_second_40 -35;
-    pos @kc93_first_29 @kc93_second_43 -35;
-    pos @kc93_first_29 @kc93_second_44 -35;
-    pos @kc93_first_30 @kc93_second_6 -210;
-    pos @kc93_first_30 @kc93_second_7 -210;
-    pos @kc93_first_30 @kc93_second_8 -140;
-    pos @kc93_first_30 @kc93_second_9 -105;
-    pos @kc93_first_30 @kc93_second_15 -105;
-    pos @kc93_first_30 @kc93_second_16 -140;
-    pos @kc93_first_30 @kc93_second_20 -35;
-    pos @kc93_first_30 @kc93_second_22 -140;
-    pos @kc93_first_30 @kc93_second_24 -70;
-    pos @kc93_first_30 @kc93_second_27 -140;
-    pos @kc93_first_30 @kc93_second_29 -50;
-    pos @kc93_first_30 @kc93_second_30 -105;
-    pos @kc93_first_30 @kc93_second_31 -70;
-    pos @kc93_first_30 @kc93_second_32 -140;
-    pos @kc93_first_30 @kc93_second_33 -70;
-    pos @kc93_first_30 @kc93_second_34 -35;
-    pos @kc93_first_30 @kc93_second_40 -45;
-    pos @kc93_first_30 @kc93_second_41 -70;
-    pos @kc93_first_30 @kc93_second_42 -70;
-    pos @kc93_first_30 @kc93_second_43 -70;
-    pos @kc93_first_30 @kc93_second_44 -35;
-    pos @kc93_first_31 @kc93_second_1 -35;
-    pos @kc93_first_31 @kc93_second_4 -70;
-    pos @kc93_first_31 @kc93_second_6 -140;
-    pos @kc93_first_31 @kc93_second_7 -140;
-    pos @kc93_first_31 @kc93_second_8 -105;
-    pos @kc93_first_31 @kc93_second_9 -70;
-    pos @kc93_first_31 @kc93_second_10 -35;
-    pos @kc93_first_31 @kc93_second_12 -35;
-    pos @kc93_first_31 @kc93_second_15 -70;
-    pos @kc93_first_31 @kc93_second_16 -140;
-    pos @kc93_first_31 @kc93_second_20 -70;
-    pos @kc93_first_31 @kc93_second_22 -120;
-    pos @kc93_first_31 @kc93_second_27 -140;
-    pos @kc93_first_31 @kc93_second_30 -70;
-    pos @kc93_first_31 @kc93_second_32 -70;
-    pos @kc93_first_31 @kc93_second_41 -35;
-    pos @kc93_first_31 @kc93_second_43 -35;
-    pos @kc93_first_31 @kc93_second_44 -35;
-    pos @kc93_first_32 @kc93_second_1 -140;
-    pos @kc93_first_32 @kc93_second_2 -140;
-    pos @kc93_first_32 @kc93_second_5 -70;
-    pos @kc93_first_32 @kc93_second_12 -140;
-    pos @kc93_first_32 @kc93_second_13 -175;
-    pos @kc93_first_32 @kc93_second_15 -35;
-    pos @kc93_first_32 @kc93_second_17 -70;
-    pos @kc93_first_32 @kc93_second_22 -120;
-    pos @kc93_first_32 @kc93_second_23 -70;
-    pos @kc93_first_32 @kc93_second_28 -140;
-    pos @kc93_first_32 @kc93_second_35 -140;
-    pos @kc93_first_32 @kc93_second_37 -105;
-    pos @kc93_first_32 @kc93_second_38 -70;
-    pos @kc93_first_32 @kc93_second_39 -70;
-    pos @kc93_first_33 @kc93_second_1 -140;
-    pos @kc93_first_33 @kc93_second_2 -280;
-    pos @kc93_first_33 @kc93_second_5 -140;
-    pos @kc93_first_33 @kc93_second_11 -70;
-    pos @kc93_first_33 @kc93_second_12 -140;
-    pos @kc93_first_33 @kc93_second_13 -420;
-    pos @kc93_first_33 @kc93_second_22 -105;
-    pos @kc93_first_33 @kc93_second_23 -140;
-    pos @kc93_first_33 @kc93_second_28 -140;
-    pos @kc93_first_33 @kc93_second_35 -140;
-    pos @kc93_first_33 @kc93_second_37 -210;
-    pos @kc93_first_33 @kc93_second_38 -140;
-    pos @kc93_first_33 @kc93_second_39 -140;
-    pos @kc93_first_34 @kc93_second_6 -140;
-    pos @kc93_first_34 @kc93_second_7 -210;
-    pos @kc93_first_34 @kc93_second_8 -70;
-    pos @kc93_first_34 @kc93_second_9 -70;
-    pos @kc93_first_34 @kc93_second_15 -140;
-    pos @kc93_first_34 @kc93_second_22 -140;
-    pos @kc93_first_34 @kc93_second_24 -35;
-    pos @kc93_first_34 @kc93_second_30 -140;
-    pos @kc93_first_34 @kc93_second_31 -70;
-    pos @kc93_first_34 @kc93_second_32 -70;
-    pos @kc93_first_34 @kc93_second_33 -35;
-    pos @kc93_first_34 @kc93_second_41 -70;
-    pos @kc93_first_34 @kc93_second_43 -35;
-    pos @kc93_first_35 @kc93_second_22 -140;
-    pos @kc93_first_36 @kc93_second_6 -140;
-    pos @kc93_first_36 @kc93_second_7 -210;
-    pos @kc93_first_36 @kc93_second_8 -70;
-    pos @kc93_first_36 @kc93_second_9 -35;
-    pos @kc93_first_36 @kc93_second_15 -70;
-    pos @kc93_first_36 @kc93_second_17 -20;
-    pos @kc93_first_36 @kc93_second_22 -140;
-    pos @kc93_first_36 @kc93_second_32 -35;
-    pos @kc93_first_37 @kc93_second_6 -175;
-    pos @kc93_first_37 @kc93_second_11 -35;
-    pos @kc93_first_37 @kc93_second_17 -35;
-    pos @kc93_first_37 @kc93_second_22 -140;
-    pos @kc93_first_38 @kc93_second_11 -70;
-    pos @kc93_first_38 @kc93_second_17 -70;
-    pos @kc93_first_38 @kc93_second_18 -70;
-    pos @kc93_first_38 @kc93_second_22 -140;
-    pos @kc93_first_39 @kc93_second_17 -20;
-    pos @kc93_first_39 @kc93_second_22 -140;
-    pos @kc93_first_39 @kc93_second_32 -35;
-    pos @kc93_first_40 @kc93_second_3 -140;
-    pos @kc93_first_40 @kc93_second_6 -280;
-    pos @kc93_first_40 @kc93_second_7 -280;
-    pos @kc93_first_40 @kc93_second_8 -280;
-    pos @kc93_first_40 @kc93_second_9 -280;
-    pos @kc93_first_40 @kc93_second_14 -175;
-    pos @kc93_first_40 @kc93_second_15 -280;
-    pos @kc93_first_40 @kc93_second_17 -70;
-    pos @kc93_first_40 @kc93_second_18 -105;
-    pos @kc93_first_40 @kc93_second_19 -70;
-    pos @kc93_first_40 @kc93_second_22 -140;
-    pos @kc93_first_40 @kc93_second_24 -210;
-    pos @kc93_first_40 @kc93_second_29 -175;
-    pos @kc93_first_40 @kc93_second_30 -280;
-    pos @kc93_first_40 @kc93_second_31 -280;
-    pos @kc93_first_40 @kc93_second_32 -210;
-    pos @kc93_first_40 @kc93_second_33 -210;
-    pos @kc93_first_40 @kc93_second_41 -210;
-    pos @kc93_first_40 @kc93_second_42 -140;
-    pos @kc93_first_40 @kc93_second_43 -210;
-    pos @kc93_first_41 @kc93_second_3 -70;
-    pos @kc93_first_41 @kc93_second_6 -280;
-    pos @kc93_first_41 @kc93_second_7 -280;
-    pos @kc93_first_41 @kc93_second_8 -280;
-    pos @kc93_first_41 @kc93_second_9 -280;
-    pos @kc93_first_41 @kc93_second_15 -280;
-    pos @kc93_first_41 @kc93_second_18 -35;
-    pos @kc93_first_41 @kc93_second_22 -140;
-    pos @kc93_first_41 @kc93_second_24 -210;
-    pos @kc93_first_41 @kc93_second_29 -140;
-    pos @kc93_first_41 @kc93_second_30 -280;
-    pos @kc93_first_41 @kc93_second_31 -280;
-    pos @kc93_first_41 @kc93_second_32 -210;
-    pos @kc93_first_41 @kc93_second_33 -210;
-    pos @kc93_first_41 @kc93_second_41 -210;
-    pos @kc93_first_41 @kc93_second_42 -140;
-    pos @kc93_first_41 @kc93_second_43 -210;
-    pos @kc93_first_42 @kc93_second_1 -140;
-    pos @kc93_first_42 @kc93_second_2 -140;
-    pos @kc93_first_42 @kc93_second_5 -35;
-    pos @kc93_first_42 @kc93_second_6 -175;
-    pos @kc93_first_42 @kc93_second_12 -140;
-    pos @kc93_first_42 @kc93_second_13 -210;
-    pos @kc93_first_42 @kc93_second_15 -35;
-    pos @kc93_first_42 @kc93_second_17 -70;
-    pos @kc93_first_42 @kc93_second_22 -140;
-    pos @kc93_first_42 @kc93_second_23 -35;
-    pos @kc93_first_42 @kc93_second_28 -140;
-    pos @kc93_first_42 @kc93_second_35 -140;
-    pos @kc93_first_42 @kc93_second_37 -70;
-    pos @kc93_first_42 @kc93_second_38 -70;
-    pos @kc93_first_43 @kc93_second_6 -140;
-    pos @kc93_first_43 @kc93_second_7 -140;
-    pos @kc93_first_43 @kc93_second_8 -105;
-    pos @kc93_first_43 @kc93_second_9 -70;
-    pos @kc93_first_43 @kc93_second_15 -70;
-    pos @kc93_first_43 @kc93_second_22 -140;
-    pos @kc93_first_43 @kc93_second_30 -70;
-    pos @kc93_first_43 @kc93_second_32 -70;
-    pos @kc93_first_43 @kc93_second_41 -35;
-    pos @kc93_first_43 @kc93_second_43 -35;
-    pos @kc93_first_44 @kc93_second_1 -70;
-    pos @kc93_first_44 @kc93_second_2 -210;
-    pos @kc93_first_44 @kc93_second_4 -105;
-    pos @kc93_first_44 @kc93_second_5 -70;
-    pos @kc93_first_44 @kc93_second_6 -105;
-    pos @kc93_first_44 @kc93_second_10 -35;
-    pos @kc93_first_44 @kc93_second_12 -140;
-    pos @kc93_first_44 @kc93_second_13 -210;
-    pos @kc93_first_44 @kc93_second_16 -140;
-    pos @kc93_first_44 @kc93_second_20 -70;
-    pos @kc93_first_44 @kc93_second_22 -140;
-    pos @kc93_first_44 @kc93_second_23 -70;
-    pos @kc93_first_44 @kc93_second_27 -140;
-    pos @kc93_first_44 @kc93_second_28 -105;
-    pos @kc93_first_44 @kc93_second_30 -70;
-    pos @kc93_first_44 @kc93_second_34 -35;
-    pos @kc93_first_44 @kc93_second_35 -70;
-    pos @kc93_first_44 @kc93_second_37 -175;
-    pos @kc93_first_44 @kc93_second_38 -140;
-    pos @kc93_first_44 @kc93_second_39 -140;
-    pos @kc93_first_44 @kc93_second_40 -35;
-    pos @kc93_first_44 @kc93_second_44 -35;
-    pos @kc93_first_45 @kc93_second_3 -70;
-    pos @kc93_first_45 @kc93_second_11 -140;
-    pos @kc93_first_45 @kc93_second_17 -140;
-    pos @kc93_first_45 @kc93_second_18 -140;
-    pos @kc93_first_45 @kc93_second_26 -210;
-    pos @kc93_first_45 @kc93_second_36 -70;
-    pos @kc93_first_46 @kc93_second_4 -35;
-    pos @kc93_first_46 @kc93_second_16 -140;
-    pos @kc93_first_46 @kc93_second_27 -210;
-    pos @kc93_first_47 @kc93_second_1 -140;
-    pos @kc93_first_47 @kc93_second_2 -210;
-    pos @kc93_first_47 @kc93_second_5 -70;
-    pos @kc93_first_47 @kc93_second_6 -70;
-    pos @kc93_first_47 @kc93_second_12 -140;
-    pos @kc93_first_47 @kc93_second_13 -280;
-    pos @kc93_first_47 @kc93_second_15 -35;
-    pos @kc93_first_47 @kc93_second_17 -70;
-    pos @kc93_first_47 @kc93_second_22 -140;
-    pos @kc93_first_47 @kc93_second_23 -70;
-    pos @kc93_first_47 @kc93_second_28 -140;
-    pos @kc93_first_47 @kc93_second_35 -140;
-    pos @kc93_first_47 @kc93_second_37 -105;
-    pos @kc93_first_47 @kc93_second_38 -70;
-    pos @kc93_first_47 @kc93_second_39 -70;
-    pos @kc93_first_48 @kc93_second_1 -280;
-    pos @kc93_first_48 @kc93_second_2 -280;
-    pos @kc93_first_48 @kc93_second_3 -35;
-    pos @kc93_first_48 @kc93_second_5 -140;
-    pos @kc93_first_48 @kc93_second_11 -140;
-    pos @kc93_first_48 @kc93_second_12 -280;
-    pos @kc93_first_48 @kc93_second_13 -280;
-    pos @kc93_first_48 @kc93_second_17 -140;
-    pos @kc93_first_48 @kc93_second_18 -70;
-    pos @kc93_first_48 @kc93_second_21 -35;
-    pos @kc93_first_48 @kc93_second_22 -210;
-    pos @kc93_first_48 @kc93_second_23 -140;
-    pos @kc93_first_48 @kc93_second_25 -70;
-    pos @kc93_first_48 @kc93_second_28 -420;
-    pos @kc93_first_48 @kc93_second_35 -210;
-    pos @kc93_first_48 @kc93_second_36 -35;
-    pos @kc93_first_48 @kc93_second_37 -210;
-    pos @kc93_first_48 @kc93_second_38 -140;
-    pos @kc93_first_48 @kc93_second_39 -210;
-    pos @kc93_first_49 @kc93_second_1 -210;
-    pos @kc93_first_49 @kc93_second_2 -280;
-    pos @kc93_first_49 @kc93_second_5 -140;
-    pos @kc93_first_49 @kc93_second_11 -70;
-    pos @kc93_first_49 @kc93_second_12 -210;
-    pos @kc93_first_49 @kc93_second_13 -350;
-    pos @kc93_first_49 @kc93_second_17 -105;
-    pos @kc93_first_49 @kc93_second_18 -70;
-    pos @kc93_first_49 @kc93_second_21 -70;
-    pos @kc93_first_49 @kc93_second_22 -140;
-    pos @kc93_first_49 @kc93_second_23 -140;
-    pos @kc93_first_49 @kc93_second_28 -210;
-    pos @kc93_first_49 @kc93_second_35 -175;
-    pos @kc93_first_49 @kc93_second_37 -210;
-    pos @kc93_first_49 @kc93_second_38 -140;
-    pos @kc93_first_49 @kc93_second_39 -210;
-    pos @kc93_first_50 @kc93_second_1 -140;
-    pos @kc93_first_50 @kc93_second_2 -140;
-    pos @kc93_first_50 @kc93_second_5 -105;
-    pos @kc93_first_50 @kc93_second_6 -175;
-    pos @kc93_first_50 @kc93_second_12 -140;
-    pos @kc93_first_50 @kc93_second_13 -210;
-    pos @kc93_first_50 @kc93_second_15 -35;
-    pos @kc93_first_50 @kc93_second_17 -70;
-    pos @kc93_first_50 @kc93_second_22 -140;
-    pos @kc93_first_50 @kc93_second_23 -105;
-    pos @kc93_first_50 @kc93_second_28 -210;
-    pos @kc93_first_50 @kc93_second_35 -140;
-    pos @kc93_first_50 @kc93_second_37 -140;
-    pos @kc93_first_50 @kc93_second_38 -105;
-    pos @kc93_first_50 @kc93_second_39 -140;
-    pos @kc93_first_51 @kc93_second_4 -140;
-    pos @kc93_first_51 @kc93_second_6 -140;
-    pos @kc93_first_51 @kc93_second_7 -210;
-    pos @kc93_first_51 @kc93_second_8 -105;
-    pos @kc93_first_51 @kc93_second_9 -70;
-    pos @kc93_first_51 @kc93_second_15 -70;
-    pos @kc93_first_51 @kc93_second_16 -140;
-    pos @kc93_first_51 @kc93_second_20 -70;
-    pos @kc93_first_51 @kc93_second_22 -140;
-    pos @kc93_first_51 @kc93_second_24 -35;
-    pos @kc93_first_51 @kc93_second_27 -140;
-    pos @kc93_first_51 @kc93_second_32 -70;
-    pos @kc93_first_51 @kc93_second_40 -70;
-    pos @kc93_first_51 @kc93_second_41 -35;
-    pos @kc93_first_51 @kc93_second_43 -35;
-    pos @kc93_first_51 @kc93_second_44 -35;
-    pos @kc93_first_52 @kc93_second_1 -210;
-    pos @kc93_first_52 @kc93_second_2 -245;
-    pos @kc93_first_52 @kc93_second_5 -140;
-    pos @kc93_first_52 @kc93_second_11 -105;
-    pos @kc93_first_52 @kc93_second_12 -210;
-    pos @kc93_first_52 @kc93_second_13 -270;
-    pos @kc93_first_52 @kc93_second_17 -140;
-    pos @kc93_first_52 @kc93_second_18 -70;
-    pos @kc93_first_52 @kc93_second_21 -70;
-    pos @kc93_first_52 @kc93_second_22 -105;
-    pos @kc93_first_52 @kc93_second_23 -140;
-    pos @kc93_first_52 @kc93_second_28 -210;
-    pos @kc93_first_52 @kc93_second_35 -175;
-    pos @kc93_first_52 @kc93_second_37 -210;
-    pos @kc93_first_52 @kc93_second_38 -140;
-    pos @kc93_first_52 @kc93_second_39 -105;
-    pos @kc93_first_53 @kc93_second_1 -140;
-    pos @kc93_first_53 @kc93_second_2 -175;
-    pos @kc93_first_53 @kc93_second_5 -70;
-    pos @kc93_first_53 @kc93_second_6 -175;
-    pos @kc93_first_53 @kc93_second_12 -140;
-    pos @kc93_first_53 @kc93_second_13 -210;
-    pos @kc93_first_53 @kc93_second_17 -70;
-    pos @kc93_first_53 @kc93_second_22 -140;
-    pos @kc93_first_53 @kc93_second_23 -70;
-    pos @kc93_first_53 @kc93_second_28 -140;
-    pos @kc93_first_53 @kc93_second_35 -140;
-    pos @kc93_first_53 @kc93_second_37 -105;
-    pos @kc93_first_53 @kc93_second_38 -70;
-    pos @kc93_first_53 @kc93_second_39 -70;
-    pos @kc93_first_54 @kc93_second_6 -175;
-    pos @kc93_first_54 @kc93_second_15 -35;
-    pos @kc93_first_54 @kc93_second_17 -35;
-    pos @kc93_first_55 @kc93_second_6 -210;
-    pos @kc93_first_55 @kc93_second_7 -210;
-    pos @kc93_first_55 @kc93_second_8 -210;
-    pos @kc93_first_55 @kc93_second_9 -140;
-    pos @kc93_first_55 @kc93_second_15 -210;
-    pos @kc93_first_55 @kc93_second_22 -140;
-    pos @kc93_first_55 @kc93_second_24 -140;
-    pos @kc93_first_55 @kc93_second_29 -70;
-    pos @kc93_first_55 @kc93_second_30 -175;
-    pos @kc93_first_55 @kc93_second_31 -140;
-    pos @kc93_first_55 @kc93_second_32 -175;
-    pos @kc93_first_55 @kc93_second_33 -140;
-    pos @kc93_first_55 @kc93_second_41 -140;
-    pos @kc93_first_55 @kc93_second_42 -140;
-    pos @kc93_first_55 @kc93_second_43 -105;
-    pos @kc93_first_56 @kc93_second_6 -210;
-    pos @kc93_first_56 @kc93_second_7 -210;
-    pos @kc93_first_56 @kc93_second_8 -140;
-    pos @kc93_first_56 @kc93_second_9 -70;
-    pos @kc93_first_56 @kc93_second_15 -140;
-    pos @kc93_first_56 @kc93_second_22 -140;
-    pos @kc93_first_56 @kc93_second_29 -70;
-    pos @kc93_first_56 @kc93_second_30 -140;
-    pos @kc93_first_56 @kc93_second_31 -70;
-    pos @kc93_first_56 @kc93_second_32 -105;
-    pos @kc93_first_56 @kc93_second_33 -35;
-    pos @kc93_first_56 @kc93_second_41 -70;
-    pos @kc93_first_56 @kc93_second_42 -35;
-    pos @kc93_first_56 @kc93_second_43 -35;
-    pos @kc93_first_57 @kc93_second_1 -140;
-    pos @kc93_first_57 @kc93_second_2 -280;
-    pos @kc93_first_57 @kc93_second_5 -140;
-    pos @kc93_first_57 @kc93_second_6 -175;
-    pos @kc93_first_57 @kc93_second_11 -70;
-    pos @kc93_first_57 @kc93_second_12 -140;
-    pos @kc93_first_57 @kc93_second_13 -420;
-    pos @kc93_first_57 @kc93_second_15 -35;
-    pos @kc93_first_57 @kc93_second_17 -70;
-    pos @kc93_first_57 @kc93_second_18 -35;
-    pos @kc93_first_57 @kc93_second_22 -140;
-    pos @kc93_first_57 @kc93_second_23 -140;
-    pos @kc93_first_57 @kc93_second_28 -140;
-    pos @kc93_first_57 @kc93_second_35 -210;
-    pos @kc93_first_57 @kc93_second_37 -105;
-    pos @kc93_first_57 @kc93_second_38 -140;
-    pos @kc93_first_57 @kc93_second_39 -140;
-    pos @kc93_first_58 @kc93_second_6 -175;
-    pos @kc93_first_58 @kc93_second_11 -35;
-    pos @kc93_first_58 @kc93_second_17 -45;
-    pos @kc93_first_58 @kc93_second_18 -35;
-    pos @kc93_first_58 @kc93_second_22 -140;
-    pos @kc93_first_59 @kc93_second_6 -210;
-    pos @kc93_first_59 @kc93_second_7 -210;
-    pos @kc93_first_59 @kc93_second_8 -140;
-    pos @kc93_first_59 @kc93_second_9 -70;
-    pos @kc93_first_59 @kc93_second_15 -140;
-    pos @kc93_first_59 @kc93_second_19 -70;
-    pos @kc93_first_59 @kc93_second_22 -140;
-    pos @kc93_first_59 @kc93_second_24 -70;
-    pos @kc93_first_59 @kc93_second_29 -70;
-    pos @kc93_first_59 @kc93_second_30 -140;
-    pos @kc93_first_59 @kc93_second_31 -70;
-    pos @kc93_first_59 @kc93_second_32 -105;
-    pos @kc93_first_59 @kc93_second_33 -70;
-    pos @kc93_first_59 @kc93_second_41 -70;
-    pos @kc93_first_59 @kc93_second_42 -70;
-    pos @kc93_first_59 @kc93_second_43 -35;
-    pos @kc93_first_60 @kc93_second_6 -210;
-    pos @kc93_first_60 @kc93_second_7 -210;
-    pos @kc93_first_60 @kc93_second_8 -140;
-    pos @kc93_first_60 @kc93_second_9 -70;
-    pos @kc93_first_60 @kc93_second_15 -140;
-    pos @kc93_first_60 @kc93_second_19 -70;
-    pos @kc93_first_60 @kc93_second_22 -140;
-    pos @kc93_first_60 @kc93_second_29 -70;
-    pos @kc93_first_60 @kc93_second_30 -140;
-    pos @kc93_first_60 @kc93_second_31 -70;
-    pos @kc93_first_60 @kc93_second_32 -105;
-    pos @kc93_first_60 @kc93_second_33 -70;
-    pos @kc93_first_60 @kc93_second_41 -70;
-    pos @kc93_first_60 @kc93_second_42 -70;
-    pos @kc93_first_60 @kc93_second_43 -35;
-    pos @kc93_first_61 @kc93_second_1 -210;
-    pos @kc93_first_61 @kc93_second_2 -210;
-    pos @kc93_first_61 @kc93_second_5 -70;
-    pos @kc93_first_61 @kc93_second_11 -70;
-    pos @kc93_first_61 @kc93_second_12 -210;
-    pos @kc93_first_61 @kc93_second_13 -210;
-    pos @kc93_first_61 @kc93_second_17 -70;
-    pos @kc93_first_61 @kc93_second_18 -35;
-    pos @kc93_first_61 @kc93_second_21 -35;
-    pos @kc93_first_61 @kc93_second_22 -140;
-    pos @kc93_first_61 @kc93_second_23 -70;
-    pos @kc93_first_61 @kc93_second_28 -210;
-    pos @kc93_first_61 @kc93_second_35 -140;
-    pos @kc93_first_61 @kc93_second_37 -140;
-    pos @kc93_first_61 @kc93_second_38 -105;
-    pos @kc93_first_61 @kc93_second_39 -70;
-    pos @kc93_first_62 @kc93_second_1 -140;
-    pos @kc93_first_62 @kc93_second_2 -140;
-    pos @kc93_first_62 @kc93_second_5 -70;
-    pos @kc93_first_62 @kc93_second_6 -175;
-    pos @kc93_first_62 @kc93_second_12 -140;
-    pos @kc93_first_62 @kc93_second_13 -175;
-    pos @kc93_first_62 @kc93_second_15 -35;
-    pos @kc93_first_62 @kc93_second_17 -70;
-    pos @kc93_first_62 @kc93_second_22 -140;
-    pos @kc93_first_62 @kc93_second_23 -70;
-    pos @kc93_first_62 @kc93_second_28 -140;
-    pos @kc93_first_62 @kc93_second_35 -140;
-    pos @kc93_first_62 @kc93_second_37 -70;
-    pos @kc93_first_62 @kc93_second_38 -70;
-    pos @kc93_first_62 @kc93_second_39 -70;
-    pos @kc93_first_63 @kc93_second_1 -175;
-    pos @kc93_first_63 @kc93_second_2 -140;
-    pos @kc93_first_63 @kc93_second_5 -35;
-    pos @kc93_first_63 @kc93_second_11 -35;
-    pos @kc93_first_63 @kc93_second_12 -175;
-    pos @kc93_first_63 @kc93_second_13 -140;
-    pos @kc93_first_63 @kc93_second_17 -70;
-    pos @kc93_first_63 @kc93_second_18 -35;
-    pos @kc93_first_63 @kc93_second_22 -140;
-    pos @kc93_first_63 @kc93_second_23 -35;
-    pos @kc93_first_63 @kc93_second_28 -175;
-    pos @kc93_first_63 @kc93_second_35 -105;
-    pos @kc93_first_63 @kc93_second_37 -105;
-    pos @kc93_first_63 @kc93_second_38 -105;
-    pos @kc93_first_63 @kc93_second_39 -70;
-    pos @kc93_first_64 @kc93_second_17 -35;
-    pos @kc93_first_64 @kc93_second_18 -35;
-    pos @kc93_first_64 @kc93_second_22 -140;
-} kernCrnagehorizontallookups2;
+    pos @kc81_first_1 @kc81_second_3 -70;
+    pos @kc81_first_1 @kc81_second_6 -280;
+    pos @kc81_first_1 @kc81_second_7 -280;
+    pos @kc81_first_1 @kc81_second_8 -280;
+    pos @kc81_first_1 @kc81_second_9 -210;
+    pos @kc81_first_1 @kc81_second_15 -280;
+    pos @kc81_first_1 @kc81_second_18 -35;
+    pos @kc81_first_1 @kc81_second_22 -140;
+    pos @kc81_first_1 @kc81_second_24 -140;
+    pos @kc81_first_1 @kc81_second_29 -70;
+    pos @kc81_first_1 @kc81_second_30 -210;
+    pos @kc81_first_1 @kc81_second_31 -140;
+    pos @kc81_first_1 @kc81_second_32 -210;
+    pos @kc81_first_1 @kc81_second_33 -140;
+    pos @kc81_first_1 @kc81_second_41 -210;
+    pos @kc81_first_1 @kc81_second_42 -140;
+    pos @kc81_first_1 @kc81_second_43 -175;
+    pos @kc81_first_2 @kc81_second_4 -35;
+    pos @kc81_first_2 @kc81_second_7 -70;
+    pos @kc81_first_2 @kc81_second_16 -70;
+    pos @kc81_first_2 @kc81_second_22 -105;
+    pos @kc81_first_3 @kc81_second_3 -70;
+    pos @kc81_first_3 @kc81_second_11 -70;
+    pos @kc81_first_3 @kc81_second_17 -70;
+    pos @kc81_first_3 @kc81_second_18 -70;
+    pos @kc81_first_3 @kc81_second_22 -140;
+    pos @kc81_first_4 @kc81_second_4 -70;
+    pos @kc81_first_4 @kc81_second_6 -70;
+    pos @kc81_first_4 @kc81_second_7 -140;
+    pos @kc81_first_4 @kc81_second_8 -35;
+    pos @kc81_first_4 @kc81_second_10 -70;
+    pos @kc81_first_4 @kc81_second_15 -35;
+    pos @kc81_first_4 @kc81_second_16 -140;
+    pos @kc81_first_4 @kc81_second_22 -140;
+    pos @kc81_first_4 @kc81_second_27 -70;
+    pos @kc81_first_4 @kc81_second_32 -35;
+    pos @kc81_first_4 @kc81_second_44 -35;
+    pos @kc81_first_5 @kc81_second_22 -140;
+    pos @kc81_first_6 @kc81_second_1 -70;
+    pos @kc81_first_6 @kc81_second_4 -70;
+    pos @kc81_first_6 @kc81_second_6 -70;
+    pos @kc81_first_6 @kc81_second_7 -70;
+    pos @kc81_first_6 @kc81_second_8 -70;
+    pos @kc81_first_6 @kc81_second_9 -35;
+    pos @kc81_first_6 @kc81_second_10 -35;
+    pos @kc81_first_6 @kc81_second_12 -35;
+    pos @kc81_first_6 @kc81_second_15 -35;
+    pos @kc81_first_6 @kc81_second_16 -140;
+    pos @kc81_first_6 @kc81_second_20 -35;
+    pos @kc81_first_6 @kc81_second_22 -105;
+    pos @kc81_first_6 @kc81_second_27 -70;
+    pos @kc81_first_7 @kc81_second_1 -280;
+    pos @kc81_first_7 @kc81_second_2 -560;
+    pos @kc81_first_7 @kc81_second_3 -140;
+    pos @kc81_first_7 @kc81_second_5 -210;
+    pos @kc81_first_7 @kc81_second_11 -210;
+    pos @kc81_first_7 @kc81_second_12 -350;
+    pos @kc81_first_7 @kc81_second_13 -630;
+    pos @kc81_first_7 @kc81_second_17 -210;
+    pos @kc81_first_7 @kc81_second_18 -140;
+    pos @kc81_first_7 @kc81_second_21 -210;
+    pos @kc81_first_7 @kc81_second_22 -105;
+    pos @kc81_first_7 @kc81_second_23 -210;
+    pos @kc81_first_7 @kc81_second_24 -140;
+    pos @kc81_first_7 @kc81_second_28 -280;
+    pos @kc81_first_7 @kc81_second_29 -175;
+    pos @kc81_first_7 @kc81_second_30 -140;
+    pos @kc81_first_7 @kc81_second_31 -175;
+    pos @kc81_first_7 @kc81_second_32 -70;
+    pos @kc81_first_7 @kc81_second_35 -350;
+    pos @kc81_first_7 @kc81_second_36 -140;
+    pos @kc81_first_7 @kc81_second_37 -280;
+    pos @kc81_first_7 @kc81_second_38 -210;
+    pos @kc81_first_7 @kc81_second_39 -210;
+    pos @kc81_first_7 @kc81_second_41 -70;
+    pos @kc81_first_7 @kc81_second_42 -105;
+    pos @kc81_first_7 @kc81_second_43 -35;
+    pos @kc81_first_8 @kc81_second_3 -70;
+    pos @kc81_first_8 @kc81_second_11 -70;
+    pos @kc81_first_8 @kc81_second_17 -70;
+    pos @kc81_first_8 @kc81_second_18 -70;
+    pos @kc81_first_8 @kc81_second_19 -70;
+    pos @kc81_first_8 @kc81_second_22 -140;
+    pos @kc81_first_8 @kc81_second_23 -70;
+    pos @kc81_first_8 @kc81_second_24 -70;
+    pos @kc81_first_8 @kc81_second_29 -70;
+    pos @kc81_first_8 @kc81_second_30 -70;
+    pos @kc81_first_8 @kc81_second_31 -70;
+    pos @kc81_first_8 @kc81_second_42 -70;
+    pos @kc81_first_9 @kc81_second_3 -70;
+    pos @kc81_first_9 @kc81_second_11 -70;
+    pos @kc81_first_9 @kc81_second_17 -70;
+    pos @kc81_first_9 @kc81_second_18 -70;
+    pos @kc81_first_9 @kc81_second_22 -105;
+    pos @kc81_first_10 @kc81_second_3 -140;
+    pos @kc81_first_10 @kc81_second_6 -280;
+    pos @kc81_first_10 @kc81_second_7 -280;
+    pos @kc81_first_10 @kc81_second_8 -280;
+    pos @kc81_first_10 @kc81_second_9 -210;
+    pos @kc81_first_10 @kc81_second_11 -70;
+    pos @kc81_first_10 @kc81_second_14 -210;
+    pos @kc81_first_10 @kc81_second_15 -280;
+    pos @kc81_first_10 @kc81_second_16 -210;
+    pos @kc81_first_10 @kc81_second_17 -70;
+    pos @kc81_first_10 @kc81_second_18 -105;
+    pos @kc81_first_10 @kc81_second_22 -120;
+    pos @kc81_first_10 @kc81_second_24 -140;
+    pos @kc81_first_10 @kc81_second_29 -175;
+    pos @kc81_first_10 @kc81_second_30 -280;
+    pos @kc81_first_10 @kc81_second_31 -280;
+    pos @kc81_first_10 @kc81_second_32 -210;
+    pos @kc81_first_10 @kc81_second_33 -140;
+    pos @kc81_first_10 @kc81_second_41 -210;
+    pos @kc81_first_10 @kc81_second_42 -140;
+    pos @kc81_first_10 @kc81_second_43 -175;
+    pos @kc81_first_11 @kc81_second_6 -140;
+    pos @kc81_first_11 @kc81_second_7 -70;
+    pos @kc81_first_11 @kc81_second_8 -70;
+    pos @kc81_first_11 @kc81_second_9 -35;
+    pos @kc81_first_11 @kc81_second_15 -35;
+    pos @kc81_first_11 @kc81_second_16 -140;
+    pos @kc81_first_11 @kc81_second_22 -70;
+    pos @kc81_first_11 @kc81_second_27 -70;
+    pos @kc81_first_11 @kc81_second_41 -70;
+    pos @kc81_first_12 @kc81_second_1 -140;
+    pos @kc81_first_12 @kc81_second_2 -280;
+    pos @kc81_first_12 @kc81_second_4 -70;
+    pos @kc81_first_12 @kc81_second_5 -140;
+    pos @kc81_first_12 @kc81_second_10 -70;
+    pos @kc81_first_12 @kc81_second_12 -140;
+    pos @kc81_first_12 @kc81_second_13 -280;
+    pos @kc81_first_12 @kc81_second_16 -70;
+    pos @kc81_first_12 @kc81_second_22 -70;
+    pos @kc81_first_12 @kc81_second_23 -140;
+    pos @kc81_first_12 @kc81_second_27 -70;
+    pos @kc81_first_12 @kc81_second_28 -140;
+    pos @kc81_first_12 @kc81_second_35 -105;
+    pos @kc81_first_12 @kc81_second_37 -175;
+    pos @kc81_first_12 @kc81_second_38 -140;
+    pos @kc81_first_12 @kc81_second_39 -105;
+    pos @kc81_first_13 @kc81_second_1 -280;
+    pos @kc81_first_13 @kc81_second_2 -350;
+    pos @kc81_first_13 @kc81_second_3 -70;
+    pos @kc81_first_13 @kc81_second_5 -210;
+    pos @kc81_first_13 @kc81_second_11 -140;
+    pos @kc81_first_13 @kc81_second_12 -280;
+    pos @kc81_first_13 @kc81_second_13 -420;
+    pos @kc81_first_13 @kc81_second_17 -210;
+    pos @kc81_first_13 @kc81_second_18 -140;
+    pos @kc81_first_13 @kc81_second_21 -175;
+    pos @kc81_first_13 @kc81_second_22 -140;
+    pos @kc81_first_13 @kc81_second_23 -210;
+    pos @kc81_first_13 @kc81_second_24 -175;
+    pos @kc81_first_13 @kc81_second_25 -140;
+    pos @kc81_first_13 @kc81_second_28 -280;
+    pos @kc81_first_13 @kc81_second_29 -175;
+    pos @kc81_first_13 @kc81_second_30 -140;
+    pos @kc81_first_13 @kc81_second_31 -175;
+    pos @kc81_first_13 @kc81_second_32 -70;
+    pos @kc81_first_13 @kc81_second_33 -175;
+    pos @kc81_first_13 @kc81_second_34 -175;
+    pos @kc81_first_13 @kc81_second_35 -210;
+    pos @kc81_first_13 @kc81_second_36 -70;
+    pos @kc81_first_13 @kc81_second_37 -210;
+    pos @kc81_first_13 @kc81_second_38 -210;
+    pos @kc81_first_13 @kc81_second_39 -210;
+    pos @kc81_first_13 @kc81_second_40 -175;
+    pos @kc81_first_13 @kc81_second_41 -70;
+    pos @kc81_first_13 @kc81_second_42 -175;
+    pos @kc81_first_13 @kc81_second_43 -35;
+    pos @kc81_first_14 @kc81_second_4 -105;
+    pos @kc81_first_14 @kc81_second_6 -140;
+    pos @kc81_first_14 @kc81_second_7 -140;
+    pos @kc81_first_14 @kc81_second_8 -35;
+    pos @kc81_first_14 @kc81_second_10 -35;
+    pos @kc81_first_14 @kc81_second_15 -70;
+    pos @kc81_first_14 @kc81_second_16 -140;
+    pos @kc81_first_14 @kc81_second_20 -35;
+    pos @kc81_first_14 @kc81_second_22 -120;
+    pos @kc81_first_14 @kc81_second_27 -140;
+    pos @kc81_first_14 @kc81_second_32 -35;
+    pos @kc81_first_14 @kc81_second_44 -35;
+    pos @kc81_first_15 @kc81_second_1 -280;
+    pos @kc81_first_15 @kc81_second_2 -350;
+    pos @kc81_first_15 @kc81_second_3 -70;
+    pos @kc81_first_15 @kc81_second_5 -210;
+    pos @kc81_first_15 @kc81_second_11 -210;
+    pos @kc81_first_15 @kc81_second_12 -280;
+    pos @kc81_first_15 @kc81_second_13 -420;
+    pos @kc81_first_15 @kc81_second_17 -210;
+    pos @kc81_first_15 @kc81_second_18 -140;
+    pos @kc81_first_15 @kc81_second_21 -175;
+    pos @kc81_first_15 @kc81_second_22 -140;
+    pos @kc81_first_15 @kc81_second_23 -210;
+    pos @kc81_first_15 @kc81_second_28 -280;
+    pos @kc81_first_15 @kc81_second_35 -210;
+    pos @kc81_first_15 @kc81_second_36 -70;
+    pos @kc81_first_15 @kc81_second_37 -210;
+    pos @kc81_first_15 @kc81_second_38 -210;
+    pos @kc81_first_15 @kc81_second_39 -210;
+    pos @kc81_first_16 @kc81_second_1 -280;
+    pos @kc81_first_16 @kc81_second_2 -280;
+    pos @kc81_first_16 @kc81_second_3 -70;
+    pos @kc81_first_16 @kc81_second_5 -140;
+    pos @kc81_first_16 @kc81_second_11 -140;
+    pos @kc81_first_16 @kc81_second_12 -280;
+    pos @kc81_first_16 @kc81_second_13 -280;
+    pos @kc81_first_16 @kc81_second_17 -140;
+    pos @kc81_first_16 @kc81_second_18 -105;
+    pos @kc81_first_16 @kc81_second_21 -70;
+    pos @kc81_first_16 @kc81_second_22 -140;
+    pos @kc81_first_16 @kc81_second_23 -140;
+    pos @kc81_first_16 @kc81_second_28 -280;
+    pos @kc81_first_16 @kc81_second_35 -210;
+    pos @kc81_first_16 @kc81_second_36 -70;
+    pos @kc81_first_16 @kc81_second_37 -210;
+    pos @kc81_first_16 @kc81_second_38 -140;
+    pos @kc81_first_16 @kc81_second_39 -140;
+    pos @kc81_first_17 @kc81_second_1 -210;
+    pos @kc81_first_17 @kc81_second_2 -210;
+    pos @kc81_first_17 @kc81_second_3 -35;
+    pos @kc81_first_17 @kc81_second_5 -70;
+    pos @kc81_first_17 @kc81_second_11 -70;
+    pos @kc81_first_17 @kc81_second_12 -210;
+    pos @kc81_first_17 @kc81_second_13 -210;
+    pos @kc81_first_17 @kc81_second_17 -105;
+    pos @kc81_first_17 @kc81_second_18 -70;
+    pos @kc81_first_17 @kc81_second_21 -35;
+    pos @kc81_first_17 @kc81_second_22 -120;
+    pos @kc81_first_17 @kc81_second_23 -70;
+    pos @kc81_first_17 @kc81_second_28 -210;
+    pos @kc81_first_17 @kc81_second_35 -140;
+    pos @kc81_first_17 @kc81_second_36 -35;
+    pos @kc81_first_17 @kc81_second_37 -140;
+    pos @kc81_first_17 @kc81_second_38 -140;
+    pos @kc81_first_17 @kc81_second_39 -140;
+    pos @kc81_first_18 @kc81_second_3 -35;
+    pos @kc81_first_18 @kc81_second_11 -35;
+    pos @kc81_first_18 @kc81_second_17 -35;
+    pos @kc81_first_18 @kc81_second_18 -35;
+    pos @kc81_first_18 @kc81_second_22 -140;
+    pos @kc81_first_19 @kc81_second_6 -210;
+    pos @kc81_first_19 @kc81_second_7 -210;
+    pos @kc81_first_19 @kc81_second_8 -105;
+    pos @kc81_first_19 @kc81_second_9 -70;
+    pos @kc81_first_19 @kc81_second_15 -140;
+    pos @kc81_first_19 @kc81_second_22 -140;
+    pos @kc81_first_19 @kc81_second_24 -35;
+    pos @kc81_first_19 @kc81_second_29 -35;
+    pos @kc81_first_19 @kc81_second_30 -70;
+    pos @kc81_first_19 @kc81_second_31 -70;
+    pos @kc81_first_19 @kc81_second_32 -70;
+    pos @kc81_first_19 @kc81_second_33 -35;
+    pos @kc81_first_19 @kc81_second_41 -70;
+    pos @kc81_first_19 @kc81_second_42 -35;
+    pos @kc81_first_19 @kc81_second_43 -35;
+    pos @kc81_first_20 @kc81_second_3 -70;
+    pos @kc81_first_20 @kc81_second_6 -280;
+    pos @kc81_first_20 @kc81_second_7 -280;
+    pos @kc81_first_20 @kc81_second_8 -280;
+    pos @kc81_first_20 @kc81_second_9 -210;
+    pos @kc81_first_20 @kc81_second_15 -280;
+    pos @kc81_first_20 @kc81_second_18 -35;
+    pos @kc81_first_20 @kc81_second_22 -140;
+    pos @kc81_first_20 @kc81_second_24 -140;
+    pos @kc81_first_20 @kc81_second_29 -70;
+    pos @kc81_first_20 @kc81_second_30 -210;
+    pos @kc81_first_20 @kc81_second_31 -140;
+    pos @kc81_first_20 @kc81_second_32 -210;
+    pos @kc81_first_20 @kc81_second_33 -140;
+    pos @kc81_first_20 @kc81_second_41 -210;
+    pos @kc81_first_20 @kc81_second_42 -140;
+    pos @kc81_first_20 @kc81_second_43 -175;
+    pos @kc81_first_21 @kc81_second_6 -140;
+    pos @kc81_first_21 @kc81_second_7 -210;
+    pos @kc81_first_21 @kc81_second_8 -140;
+    pos @kc81_first_21 @kc81_second_9 -70;
+    pos @kc81_first_21 @kc81_second_15 -140;
+    pos @kc81_first_21 @kc81_second_22 -140;
+    pos @kc81_first_21 @kc81_second_30 -70;
+    pos @kc81_first_21 @kc81_second_31 -70;
+    pos @kc81_first_21 @kc81_second_32 -105;
+    pos @kc81_first_21 @kc81_second_41 -70;
+    pos @kc81_first_21 @kc81_second_43 -35;
+    pos @kc81_first_22 @kc81_second_3 -70;
+    pos @kc81_first_22 @kc81_second_6 -280;
+    pos @kc81_first_22 @kc81_second_7 -280;
+    pos @kc81_first_22 @kc81_second_8 -280;
+    pos @kc81_first_22 @kc81_second_9 -210;
+    pos @kc81_first_22 @kc81_second_15 -420;
+    pos @kc81_first_22 @kc81_second_18 -35;
+    pos @kc81_first_22 @kc81_second_24 -140;
+    pos @kc81_first_22 @kc81_second_29 -70;
+    pos @kc81_first_22 @kc81_second_30 -210;
+    pos @kc81_first_22 @kc81_second_31 -140;
+    pos @kc81_first_22 @kc81_second_32 -210;
+    pos @kc81_first_22 @kc81_second_33 -140;
+    pos @kc81_first_22 @kc81_second_41 -210;
+    pos @kc81_first_22 @kc81_second_42 -140;
+    pos @kc81_first_22 @kc81_second_43 -175;
+    pos @kc81_first_23 @kc81_second_3 -140;
+    pos @kc81_first_23 @kc81_second_11 -140;
+    pos @kc81_first_23 @kc81_second_17 -140;
+    pos @kc81_first_23 @kc81_second_18 -140;
+    pos @kc81_first_23 @kc81_second_26 -140;
+    pos @kc81_first_24 @kc81_second_6 -175;
+    pos @kc81_first_24 @kc81_second_15 -70;
+    pos @kc81_first_24 @kc81_second_16 -70;
+    pos @kc81_first_24 @kc81_second_22 -120;
+    pos @kc81_first_24 @kc81_second_27 -70;
+    pos @kc81_first_24 @kc81_second_30 -70;
+    pos @kc81_first_25 @kc81_second_4 -70;
+    pos @kc81_first_25 @kc81_second_6 -105;
+    pos @kc81_first_25 @kc81_second_15 -35;
+    pos @kc81_first_25 @kc81_second_16 -70;
+    pos @kc81_first_25 @kc81_second_20 -35;
+    pos @kc81_first_25 @kc81_second_22 -120;
+    pos @kc81_first_25 @kc81_second_27 -70;
+    pos @kc81_first_25 @kc81_second_30 -35;
+    pos @kc81_first_26 @kc81_second_1 -140;
+    pos @kc81_first_26 @kc81_second_2 -140;
+    pos @kc81_first_26 @kc81_second_5 -70;
+    pos @kc81_first_26 @kc81_second_6 -175;
+    pos @kc81_first_26 @kc81_second_11 -70;
+    pos @kc81_first_26 @kc81_second_12 -140;
+    pos @kc81_first_26 @kc81_second_13 -210;
+    pos @kc81_first_26 @kc81_second_15 -70;
+    pos @kc81_first_26 @kc81_second_17 -70;
+    pos @kc81_first_26 @kc81_second_23 -70;
+    pos @kc81_first_26 @kc81_second_35 -140;
+    pos @kc81_first_27 @kc81_second_11 -70;
+    pos @kc81_first_27 @kc81_second_17 -70;
+    pos @kc81_first_27 @kc81_second_18 -35;
+    pos @kc81_first_28 @kc81_second_6 -175;
+    pos @kc81_first_28 @kc81_second_7 -175;
+    pos @kc81_first_28 @kc81_second_8 -70;
+    pos @kc81_first_28 @kc81_second_9 -35;
+    pos @kc81_first_28 @kc81_second_15 -35;
+    pos @kc81_first_28 @kc81_second_22 -140;
+    pos @kc81_first_28 @kc81_second_30 -70;
+    pos @kc81_first_28 @kc81_second_32 -70;
+    pos @kc81_first_28 @kc81_second_41 -35;
+    pos @kc81_first_29 @kc81_second_4 -35;
+    pos @kc81_first_29 @kc81_second_6 -140;
+    pos @kc81_first_29 @kc81_second_7 -140;
+    pos @kc81_first_29 @kc81_second_8 -70;
+    pos @kc81_first_29 @kc81_second_9 -70;
+    pos @kc81_first_29 @kc81_second_15 -70;
+    pos @kc81_first_29 @kc81_second_16 -140;
+    pos @kc81_first_29 @kc81_second_20 -70;
+    pos @kc81_first_29 @kc81_second_22 -140;
+    pos @kc81_first_29 @kc81_second_27 -140;
+    pos @kc81_first_29 @kc81_second_30 -70;
+    pos @kc81_first_29 @kc81_second_32 -70;
+    pos @kc81_first_29 @kc81_second_40 -35;
+    pos @kc81_first_29 @kc81_second_43 -35;
+    pos @kc81_first_29 @kc81_second_44 -35;
+    pos @kc81_first_30 @kc81_second_6 -210;
+    pos @kc81_first_30 @kc81_second_7 -210;
+    pos @kc81_first_30 @kc81_second_8 -140;
+    pos @kc81_first_30 @kc81_second_9 -105;
+    pos @kc81_first_30 @kc81_second_15 -105;
+    pos @kc81_first_30 @kc81_second_16 -140;
+    pos @kc81_first_30 @kc81_second_20 -35;
+    pos @kc81_first_30 @kc81_second_22 -140;
+    pos @kc81_first_30 @kc81_second_24 -70;
+    pos @kc81_first_30 @kc81_second_27 -140;
+    pos @kc81_first_30 @kc81_second_29 -50;
+    pos @kc81_first_30 @kc81_second_30 -105;
+    pos @kc81_first_30 @kc81_second_31 -70;
+    pos @kc81_first_30 @kc81_second_32 -140;
+    pos @kc81_first_30 @kc81_second_33 -70;
+    pos @kc81_first_30 @kc81_second_34 -35;
+    pos @kc81_first_30 @kc81_second_40 -45;
+    pos @kc81_first_30 @kc81_second_41 -70;
+    pos @kc81_first_30 @kc81_second_42 -70;
+    pos @kc81_first_30 @kc81_second_43 -70;
+    pos @kc81_first_30 @kc81_second_44 -35;
+    pos @kc81_first_31 @kc81_second_1 -35;
+    pos @kc81_first_31 @kc81_second_4 -70;
+    pos @kc81_first_31 @kc81_second_6 -140;
+    pos @kc81_first_31 @kc81_second_7 -140;
+    pos @kc81_first_31 @kc81_second_8 -105;
+    pos @kc81_first_31 @kc81_second_9 -70;
+    pos @kc81_first_31 @kc81_second_10 -35;
+    pos @kc81_first_31 @kc81_second_12 -35;
+    pos @kc81_first_31 @kc81_second_15 -70;
+    pos @kc81_first_31 @kc81_second_16 -140;
+    pos @kc81_first_31 @kc81_second_20 -70;
+    pos @kc81_first_31 @kc81_second_22 -120;
+    pos @kc81_first_31 @kc81_second_27 -140;
+    pos @kc81_first_31 @kc81_second_30 -70;
+    pos @kc81_first_31 @kc81_second_32 -70;
+    pos @kc81_first_31 @kc81_second_41 -35;
+    pos @kc81_first_31 @kc81_second_43 -35;
+    pos @kc81_first_31 @kc81_second_44 -35;
+    pos @kc81_first_32 @kc81_second_1 -140;
+    pos @kc81_first_32 @kc81_second_2 -140;
+    pos @kc81_first_32 @kc81_second_5 -70;
+    pos @kc81_first_32 @kc81_second_12 -140;
+    pos @kc81_first_32 @kc81_second_13 -175;
+    pos @kc81_first_32 @kc81_second_15 -35;
+    pos @kc81_first_32 @kc81_second_17 -70;
+    pos @kc81_first_32 @kc81_second_22 -120;
+    pos @kc81_first_32 @kc81_second_23 -70;
+    pos @kc81_first_32 @kc81_second_28 -140;
+    pos @kc81_first_32 @kc81_second_35 -140;
+    pos @kc81_first_32 @kc81_second_37 -105;
+    pos @kc81_first_32 @kc81_second_38 -70;
+    pos @kc81_first_32 @kc81_second_39 -70;
+    pos @kc81_first_33 @kc81_second_1 -140;
+    pos @kc81_first_33 @kc81_second_2 -280;
+    pos @kc81_first_33 @kc81_second_5 -140;
+    pos @kc81_first_33 @kc81_second_11 -70;
+    pos @kc81_first_33 @kc81_second_12 -140;
+    pos @kc81_first_33 @kc81_second_13 -420;
+    pos @kc81_first_33 @kc81_second_22 -105;
+    pos @kc81_first_33 @kc81_second_23 -140;
+    pos @kc81_first_33 @kc81_second_28 -140;
+    pos @kc81_first_33 @kc81_second_35 -140;
+    pos @kc81_first_33 @kc81_second_37 -210;
+    pos @kc81_first_33 @kc81_second_38 -140;
+    pos @kc81_first_33 @kc81_second_39 -140;
+    pos @kc81_first_34 @kc81_second_6 -140;
+    pos @kc81_first_34 @kc81_second_7 -210;
+    pos @kc81_first_34 @kc81_second_8 -70;
+    pos @kc81_first_34 @kc81_second_9 -70;
+    pos @kc81_first_34 @kc81_second_15 -140;
+    pos @kc81_first_34 @kc81_second_22 -140;
+    pos @kc81_first_34 @kc81_second_24 -35;
+    pos @kc81_first_34 @kc81_second_30 -140;
+    pos @kc81_first_34 @kc81_second_31 -70;
+    pos @kc81_first_34 @kc81_second_32 -70;
+    pos @kc81_first_34 @kc81_second_33 -35;
+    pos @kc81_first_34 @kc81_second_41 -70;
+    pos @kc81_first_34 @kc81_second_43 -35;
+    pos @kc81_first_35 @kc81_second_22 -140;
+    pos @kc81_first_36 @kc81_second_6 -140;
+    pos @kc81_first_36 @kc81_second_7 -210;
+    pos @kc81_first_36 @kc81_second_8 -70;
+    pos @kc81_first_36 @kc81_second_9 -35;
+    pos @kc81_first_36 @kc81_second_15 -70;
+    pos @kc81_first_36 @kc81_second_17 -20;
+    pos @kc81_first_36 @kc81_second_22 -140;
+    pos @kc81_first_36 @kc81_second_32 -35;
+    pos @kc81_first_37 @kc81_second_6 -175;
+    pos @kc81_first_37 @kc81_second_11 -35;
+    pos @kc81_first_37 @kc81_second_17 -35;
+    pos @kc81_first_37 @kc81_second_22 -140;
+    pos @kc81_first_38 @kc81_second_11 -70;
+    pos @kc81_first_38 @kc81_second_17 -70;
+    pos @kc81_first_38 @kc81_second_18 -70;
+    pos @kc81_first_38 @kc81_second_22 -140;
+    pos @kc81_first_39 @kc81_second_17 -20;
+    pos @kc81_first_39 @kc81_second_22 -140;
+    pos @kc81_first_39 @kc81_second_32 -35;
+    pos @kc81_first_40 @kc81_second_3 -140;
+    pos @kc81_first_40 @kc81_second_6 -280;
+    pos @kc81_first_40 @kc81_second_7 -280;
+    pos @kc81_first_40 @kc81_second_8 -280;
+    pos @kc81_first_40 @kc81_second_9 -280;
+    pos @kc81_first_40 @kc81_second_14 -175;
+    pos @kc81_first_40 @kc81_second_15 -280;
+    pos @kc81_first_40 @kc81_second_17 -70;
+    pos @kc81_first_40 @kc81_second_18 -105;
+    pos @kc81_first_40 @kc81_second_19 -70;
+    pos @kc81_first_40 @kc81_second_22 -140;
+    pos @kc81_first_40 @kc81_second_24 -210;
+    pos @kc81_first_40 @kc81_second_29 -175;
+    pos @kc81_first_40 @kc81_second_30 -280;
+    pos @kc81_first_40 @kc81_second_31 -280;
+    pos @kc81_first_40 @kc81_second_32 -210;
+    pos @kc81_first_40 @kc81_second_33 -210;
+    pos @kc81_first_40 @kc81_second_41 -210;
+    pos @kc81_first_40 @kc81_second_42 -140;
+    pos @kc81_first_40 @kc81_second_43 -210;
+    pos @kc81_first_41 @kc81_second_3 -70;
+    pos @kc81_first_41 @kc81_second_6 -280;
+    pos @kc81_first_41 @kc81_second_7 -280;
+    pos @kc81_first_41 @kc81_second_8 -280;
+    pos @kc81_first_41 @kc81_second_9 -280;
+    pos @kc81_first_41 @kc81_second_15 -280;
+    pos @kc81_first_41 @kc81_second_18 -35;
+    pos @kc81_first_41 @kc81_second_22 -140;
+    pos @kc81_first_41 @kc81_second_24 -210;
+    pos @kc81_first_41 @kc81_second_29 -140;
+    pos @kc81_first_41 @kc81_second_30 -280;
+    pos @kc81_first_41 @kc81_second_31 -280;
+    pos @kc81_first_41 @kc81_second_32 -210;
+    pos @kc81_first_41 @kc81_second_33 -210;
+    pos @kc81_first_41 @kc81_second_41 -210;
+    pos @kc81_first_41 @kc81_second_42 -140;
+    pos @kc81_first_41 @kc81_second_43 -210;
+    pos @kc81_first_42 @kc81_second_1 -140;
+    pos @kc81_first_42 @kc81_second_2 -140;
+    pos @kc81_first_42 @kc81_second_5 -35;
+    pos @kc81_first_42 @kc81_second_6 -175;
+    pos @kc81_first_42 @kc81_second_12 -140;
+    pos @kc81_first_42 @kc81_second_13 -210;
+    pos @kc81_first_42 @kc81_second_15 -35;
+    pos @kc81_first_42 @kc81_second_17 -70;
+    pos @kc81_first_42 @kc81_second_22 -140;
+    pos @kc81_first_42 @kc81_second_23 -35;
+    pos @kc81_first_42 @kc81_second_28 -140;
+    pos @kc81_first_42 @kc81_second_35 -140;
+    pos @kc81_first_42 @kc81_second_37 -70;
+    pos @kc81_first_42 @kc81_second_38 -70;
+    pos @kc81_first_43 @kc81_second_6 -140;
+    pos @kc81_first_43 @kc81_second_7 -140;
+    pos @kc81_first_43 @kc81_second_8 -105;
+    pos @kc81_first_43 @kc81_second_9 -70;
+    pos @kc81_first_43 @kc81_second_15 -70;
+    pos @kc81_first_43 @kc81_second_22 -140;
+    pos @kc81_first_43 @kc81_second_30 -70;
+    pos @kc81_first_43 @kc81_second_32 -70;
+    pos @kc81_first_43 @kc81_second_41 -35;
+    pos @kc81_first_43 @kc81_second_43 -35;
+    pos @kc81_first_44 @kc81_second_1 -70;
+    pos @kc81_first_44 @kc81_second_2 -210;
+    pos @kc81_first_44 @kc81_second_4 -105;
+    pos @kc81_first_44 @kc81_second_5 -70;
+    pos @kc81_first_44 @kc81_second_6 -105;
+    pos @kc81_first_44 @kc81_second_10 -35;
+    pos @kc81_first_44 @kc81_second_12 -140;
+    pos @kc81_first_44 @kc81_second_13 -210;
+    pos @kc81_first_44 @kc81_second_16 -140;
+    pos @kc81_first_44 @kc81_second_20 -70;
+    pos @kc81_first_44 @kc81_second_22 -140;
+    pos @kc81_first_44 @kc81_second_23 -70;
+    pos @kc81_first_44 @kc81_second_27 -140;
+    pos @kc81_first_44 @kc81_second_28 -105;
+    pos @kc81_first_44 @kc81_second_30 -70;
+    pos @kc81_first_44 @kc81_second_34 -35;
+    pos @kc81_first_44 @kc81_second_35 -70;
+    pos @kc81_first_44 @kc81_second_37 -175;
+    pos @kc81_first_44 @kc81_second_38 -140;
+    pos @kc81_first_44 @kc81_second_39 -140;
+    pos @kc81_first_44 @kc81_second_40 -35;
+    pos @kc81_first_44 @kc81_second_44 -35;
+    pos @kc81_first_45 @kc81_second_3 -70;
+    pos @kc81_first_45 @kc81_second_11 -140;
+    pos @kc81_first_45 @kc81_second_17 -140;
+    pos @kc81_first_45 @kc81_second_18 -140;
+    pos @kc81_first_45 @kc81_second_26 -210;
+    pos @kc81_first_45 @kc81_second_36 -70;
+    pos @kc81_first_46 @kc81_second_4 -35;
+    pos @kc81_first_46 @kc81_second_16 -140;
+    pos @kc81_first_46 @kc81_second_27 -210;
+    pos @kc81_first_47 @kc81_second_1 -140;
+    pos @kc81_first_47 @kc81_second_2 -210;
+    pos @kc81_first_47 @kc81_second_5 -70;
+    pos @kc81_first_47 @kc81_second_6 -70;
+    pos @kc81_first_47 @kc81_second_12 -140;
+    pos @kc81_first_47 @kc81_second_13 -280;
+    pos @kc81_first_47 @kc81_second_15 -35;
+    pos @kc81_first_47 @kc81_second_17 -70;
+    pos @kc81_first_47 @kc81_second_22 -140;
+    pos @kc81_first_47 @kc81_second_23 -70;
+    pos @kc81_first_47 @kc81_second_28 -140;
+    pos @kc81_first_47 @kc81_second_35 -140;
+    pos @kc81_first_47 @kc81_second_37 -105;
+    pos @kc81_first_47 @kc81_second_38 -70;
+    pos @kc81_first_47 @kc81_second_39 -70;
+    pos @kc81_first_48 @kc81_second_1 -280;
+    pos @kc81_first_48 @kc81_second_2 -280;
+    pos @kc81_first_48 @kc81_second_3 -35;
+    pos @kc81_first_48 @kc81_second_5 -140;
+    pos @kc81_first_48 @kc81_second_11 -140;
+    pos @kc81_first_48 @kc81_second_12 -280;
+    pos @kc81_first_48 @kc81_second_13 -280;
+    pos @kc81_first_48 @kc81_second_17 -140;
+    pos @kc81_first_48 @kc81_second_18 -70;
+    pos @kc81_first_48 @kc81_second_21 -35;
+    pos @kc81_first_48 @kc81_second_22 -210;
+    pos @kc81_first_48 @kc81_second_23 -140;
+    pos @kc81_first_48 @kc81_second_25 -70;
+    pos @kc81_first_48 @kc81_second_28 -420;
+    pos @kc81_first_48 @kc81_second_35 -210;
+    pos @kc81_first_48 @kc81_second_36 -35;
+    pos @kc81_first_48 @kc81_second_37 -210;
+    pos @kc81_first_48 @kc81_second_38 -140;
+    pos @kc81_first_48 @kc81_second_39 -210;
+    pos @kc81_first_49 @kc81_second_1 -210;
+    pos @kc81_first_49 @kc81_second_2 -280;
+    pos @kc81_first_49 @kc81_second_5 -140;
+    pos @kc81_first_49 @kc81_second_11 -70;
+    pos @kc81_first_49 @kc81_second_12 -210;
+    pos @kc81_first_49 @kc81_second_13 -350;
+    pos @kc81_first_49 @kc81_second_17 -105;
+    pos @kc81_first_49 @kc81_second_18 -70;
+    pos @kc81_first_49 @kc81_second_21 -70;
+    pos @kc81_first_49 @kc81_second_22 -140;
+    pos @kc81_first_49 @kc81_second_23 -140;
+    pos @kc81_first_49 @kc81_second_28 -210;
+    pos @kc81_first_49 @kc81_second_35 -175;
+    pos @kc81_first_49 @kc81_second_37 -210;
+    pos @kc81_first_49 @kc81_second_38 -140;
+    pos @kc81_first_49 @kc81_second_39 -210;
+    pos @kc81_first_50 @kc81_second_1 -140;
+    pos @kc81_first_50 @kc81_second_2 -140;
+    pos @kc81_first_50 @kc81_second_5 -105;
+    pos @kc81_first_50 @kc81_second_6 -175;
+    pos @kc81_first_50 @kc81_second_12 -140;
+    pos @kc81_first_50 @kc81_second_13 -210;
+    pos @kc81_first_50 @kc81_second_15 -35;
+    pos @kc81_first_50 @kc81_second_17 -70;
+    pos @kc81_first_50 @kc81_second_22 -140;
+    pos @kc81_first_50 @kc81_second_23 -105;
+    pos @kc81_first_50 @kc81_second_28 -210;
+    pos @kc81_first_50 @kc81_second_35 -140;
+    pos @kc81_first_50 @kc81_second_37 -140;
+    pos @kc81_first_50 @kc81_second_38 -105;
+    pos @kc81_first_50 @kc81_second_39 -140;
+    pos @kc81_first_51 @kc81_second_4 -140;
+    pos @kc81_first_51 @kc81_second_6 -140;
+    pos @kc81_first_51 @kc81_second_7 -210;
+    pos @kc81_first_51 @kc81_second_8 -105;
+    pos @kc81_first_51 @kc81_second_9 -70;
+    pos @kc81_first_51 @kc81_second_15 -70;
+    pos @kc81_first_51 @kc81_second_16 -140;
+    pos @kc81_first_51 @kc81_second_20 -70;
+    pos @kc81_first_51 @kc81_second_22 -140;
+    pos @kc81_first_51 @kc81_second_24 -35;
+    pos @kc81_first_51 @kc81_second_27 -140;
+    pos @kc81_first_51 @kc81_second_32 -70;
+    pos @kc81_first_51 @kc81_second_40 -70;
+    pos @kc81_first_51 @kc81_second_41 -35;
+    pos @kc81_first_51 @kc81_second_43 -35;
+    pos @kc81_first_51 @kc81_second_44 -35;
+    pos @kc81_first_52 @kc81_second_1 -210;
+    pos @kc81_first_52 @kc81_second_2 -245;
+    pos @kc81_first_52 @kc81_second_5 -140;
+    pos @kc81_first_52 @kc81_second_11 -105;
+    pos @kc81_first_52 @kc81_second_12 -210;
+    pos @kc81_first_52 @kc81_second_13 -270;
+    pos @kc81_first_52 @kc81_second_17 -140;
+    pos @kc81_first_52 @kc81_second_18 -70;
+    pos @kc81_first_52 @kc81_second_21 -70;
+    pos @kc81_first_52 @kc81_second_22 -105;
+    pos @kc81_first_52 @kc81_second_23 -140;
+    pos @kc81_first_52 @kc81_second_28 -210;
+    pos @kc81_first_52 @kc81_second_35 -175;
+    pos @kc81_first_52 @kc81_second_37 -210;
+    pos @kc81_first_52 @kc81_second_38 -140;
+    pos @kc81_first_52 @kc81_second_39 -105;
+    pos @kc81_first_53 @kc81_second_1 -140;
+    pos @kc81_first_53 @kc81_second_2 -175;
+    pos @kc81_first_53 @kc81_second_5 -70;
+    pos @kc81_first_53 @kc81_second_6 -175;
+    pos @kc81_first_53 @kc81_second_12 -140;
+    pos @kc81_first_53 @kc81_second_13 -210;
+    pos @kc81_first_53 @kc81_second_17 -70;
+    pos @kc81_first_53 @kc81_second_22 -140;
+    pos @kc81_first_53 @kc81_second_23 -70;
+    pos @kc81_first_53 @kc81_second_28 -140;
+    pos @kc81_first_53 @kc81_second_35 -140;
+    pos @kc81_first_53 @kc81_second_37 -105;
+    pos @kc81_first_53 @kc81_second_38 -70;
+    pos @kc81_first_53 @kc81_second_39 -70;
+    pos @kc81_first_54 @kc81_second_6 -175;
+    pos @kc81_first_54 @kc81_second_15 -35;
+    pos @kc81_first_54 @kc81_second_17 -35;
+    pos @kc81_first_55 @kc81_second_6 -210;
+    pos @kc81_first_55 @kc81_second_7 -210;
+    pos @kc81_first_55 @kc81_second_8 -210;
+    pos @kc81_first_55 @kc81_second_9 -140;
+    pos @kc81_first_55 @kc81_second_15 -210;
+    pos @kc81_first_55 @kc81_second_22 -140;
+    pos @kc81_first_55 @kc81_second_24 -140;
+    pos @kc81_first_55 @kc81_second_29 -70;
+    pos @kc81_first_55 @kc81_second_30 -175;
+    pos @kc81_first_55 @kc81_second_31 -140;
+    pos @kc81_first_55 @kc81_second_32 -175;
+    pos @kc81_first_55 @kc81_second_33 -140;
+    pos @kc81_first_55 @kc81_second_41 -140;
+    pos @kc81_first_55 @kc81_second_42 -140;
+    pos @kc81_first_55 @kc81_second_43 -105;
+    pos @kc81_first_56 @kc81_second_6 -210;
+    pos @kc81_first_56 @kc81_second_7 -210;
+    pos @kc81_first_56 @kc81_second_8 -140;
+    pos @kc81_first_56 @kc81_second_9 -70;
+    pos @kc81_first_56 @kc81_second_15 -140;
+    pos @kc81_first_56 @kc81_second_22 -140;
+    pos @kc81_first_56 @kc81_second_29 -70;
+    pos @kc81_first_56 @kc81_second_30 -140;
+    pos @kc81_first_56 @kc81_second_31 -70;
+    pos @kc81_first_56 @kc81_second_32 -105;
+    pos @kc81_first_56 @kc81_second_33 -35;
+    pos @kc81_first_56 @kc81_second_41 -70;
+    pos @kc81_first_56 @kc81_second_42 -35;
+    pos @kc81_first_56 @kc81_second_43 -35;
+    pos @kc81_first_57 @kc81_second_1 -140;
+    pos @kc81_first_57 @kc81_second_2 -280;
+    pos @kc81_first_57 @kc81_second_5 -140;
+    pos @kc81_first_57 @kc81_second_6 -175;
+    pos @kc81_first_57 @kc81_second_11 -70;
+    pos @kc81_first_57 @kc81_second_12 -140;
+    pos @kc81_first_57 @kc81_second_13 -420;
+    pos @kc81_first_57 @kc81_second_15 -35;
+    pos @kc81_first_57 @kc81_second_17 -70;
+    pos @kc81_first_57 @kc81_second_18 -35;
+    pos @kc81_first_57 @kc81_second_22 -140;
+    pos @kc81_first_57 @kc81_second_23 -140;
+    pos @kc81_first_57 @kc81_second_28 -140;
+    pos @kc81_first_57 @kc81_second_35 -210;
+    pos @kc81_first_57 @kc81_second_37 -105;
+    pos @kc81_first_57 @kc81_second_38 -140;
+    pos @kc81_first_57 @kc81_second_39 -140;
+    pos @kc81_first_58 @kc81_second_6 -175;
+    pos @kc81_first_58 @kc81_second_11 -35;
+    pos @kc81_first_58 @kc81_second_17 -45;
+    pos @kc81_first_58 @kc81_second_18 -35;
+    pos @kc81_first_58 @kc81_second_22 -140;
+    pos @kc81_first_59 @kc81_second_6 -210;
+    pos @kc81_first_59 @kc81_second_7 -210;
+    pos @kc81_first_59 @kc81_second_8 -140;
+    pos @kc81_first_59 @kc81_second_9 -70;
+    pos @kc81_first_59 @kc81_second_15 -140;
+    pos @kc81_first_59 @kc81_second_19 -70;
+    pos @kc81_first_59 @kc81_second_22 -140;
+    pos @kc81_first_59 @kc81_second_24 -70;
+    pos @kc81_first_59 @kc81_second_29 -70;
+    pos @kc81_first_59 @kc81_second_30 -140;
+    pos @kc81_first_59 @kc81_second_31 -70;
+    pos @kc81_first_59 @kc81_second_32 -105;
+    pos @kc81_first_59 @kc81_second_33 -70;
+    pos @kc81_first_59 @kc81_second_41 -70;
+    pos @kc81_first_59 @kc81_second_42 -70;
+    pos @kc81_first_59 @kc81_second_43 -35;
+    pos @kc81_first_60 @kc81_second_6 -210;
+    pos @kc81_first_60 @kc81_second_7 -210;
+    pos @kc81_first_60 @kc81_second_8 -140;
+    pos @kc81_first_60 @kc81_second_9 -70;
+    pos @kc81_first_60 @kc81_second_15 -140;
+    pos @kc81_first_60 @kc81_second_19 -70;
+    pos @kc81_first_60 @kc81_second_22 -140;
+    pos @kc81_first_60 @kc81_second_29 -70;
+    pos @kc81_first_60 @kc81_second_30 -140;
+    pos @kc81_first_60 @kc81_second_31 -70;
+    pos @kc81_first_60 @kc81_second_32 -105;
+    pos @kc81_first_60 @kc81_second_33 -70;
+    pos @kc81_first_60 @kc81_second_41 -70;
+    pos @kc81_first_60 @kc81_second_42 -70;
+    pos @kc81_first_60 @kc81_second_43 -35;
+    pos @kc81_first_61 @kc81_second_1 -210;
+    pos @kc81_first_61 @kc81_second_2 -210;
+    pos @kc81_first_61 @kc81_second_5 -70;
+    pos @kc81_first_61 @kc81_second_11 -70;
+    pos @kc81_first_61 @kc81_second_12 -210;
+    pos @kc81_first_61 @kc81_second_13 -210;
+    pos @kc81_first_61 @kc81_second_17 -70;
+    pos @kc81_first_61 @kc81_second_18 -35;
+    pos @kc81_first_61 @kc81_second_21 -35;
+    pos @kc81_first_61 @kc81_second_22 -140;
+    pos @kc81_first_61 @kc81_second_23 -70;
+    pos @kc81_first_61 @kc81_second_28 -210;
+    pos @kc81_first_61 @kc81_second_35 -140;
+    pos @kc81_first_61 @kc81_second_37 -140;
+    pos @kc81_first_61 @kc81_second_38 -105;
+    pos @kc81_first_61 @kc81_second_39 -70;
+    pos @kc81_first_62 @kc81_second_1 -140;
+    pos @kc81_first_62 @kc81_second_2 -140;
+    pos @kc81_first_62 @kc81_second_5 -70;
+    pos @kc81_first_62 @kc81_second_6 -175;
+    pos @kc81_first_62 @kc81_second_12 -140;
+    pos @kc81_first_62 @kc81_second_13 -175;
+    pos @kc81_first_62 @kc81_second_15 -35;
+    pos @kc81_first_62 @kc81_second_17 -70;
+    pos @kc81_first_62 @kc81_second_22 -140;
+    pos @kc81_first_62 @kc81_second_23 -70;
+    pos @kc81_first_62 @kc81_second_28 -140;
+    pos @kc81_first_62 @kc81_second_35 -140;
+    pos @kc81_first_62 @kc81_second_37 -70;
+    pos @kc81_first_62 @kc81_second_38 -70;
+    pos @kc81_first_62 @kc81_second_39 -70;
+    pos @kc81_first_63 @kc81_second_1 -175;
+    pos @kc81_first_63 @kc81_second_2 -140;
+    pos @kc81_first_63 @kc81_second_5 -35;
+    pos @kc81_first_63 @kc81_second_11 -35;
+    pos @kc81_first_63 @kc81_second_12 -175;
+    pos @kc81_first_63 @kc81_second_13 -140;
+    pos @kc81_first_63 @kc81_second_17 -70;
+    pos @kc81_first_63 @kc81_second_18 -35;
+    pos @kc81_first_63 @kc81_second_22 -140;
+    pos @kc81_first_63 @kc81_second_23 -35;
+    pos @kc81_first_63 @kc81_second_28 -175;
+    pos @kc81_first_63 @kc81_second_35 -105;
+    pos @kc81_first_63 @kc81_second_37 -105;
+    pos @kc81_first_63 @kc81_second_38 -105;
+    pos @kc81_first_63 @kc81_second_39 -70;
+    pos @kc81_first_64 @kc81_second_17 -35;
+    pos @kc81_first_64 @kc81_second_18 -35;
+    pos @kc81_first_64 @kc81_second_22 -140;
+} kern_Horizontal_kerning;
 
-lookup mkmkMarktoMarklookups2 {
+lookup mkmk_Mark_to_Mark {
   lookupflag 0;
   markClass [\uni0308 \uni0307 ] <anchor 642 1372> @mark_anchor_center;
   markClass [\uni030C ] <anchor 642 1224> @mark_anchor_center;
@@ -9443,9 +9349,9 @@ lookup mkmkMarktoMarklookups2 {
 	<anchor 654 1808> mark @mark_anchor_left
 	<anchor 654 1874> mark @mark_anchor_top
 	<anchor 654 1884> mark @mark_anchor_center;
-} mkmkMarktoMarklookups2;
+} mkmk_Mark_to_Mark;
 
-lookup markPositionnementdesignelookups1 {
+lookup mark_Mark_positioning {
   lookupflag 0;
   markClass [\uni0345 ] <anchor 642 -90> @bottom_ypogegrammeni;
   markClass [\uni1FBE ] <anchor 169 -90> @bottom_ypogegrammeni;
@@ -10806,81 +10712,81 @@ lookup markPositionnementdesignelookups1 {
 	<anchor 498 0> mark @bottom_right
 	<anchor 319 -20> mark @bottom_cedilla;
   pos base [\dotlessuni2149 ] <anchor 781 1039> mark @top_center;
-} markPositionnementdesignelookups1;
+} mark_Mark_positioning;
 
 feature kern {
 
  script DFLT;
      language dflt ;
-      lookup kernCrnagehorizontallookups2;
+      lookup kern_Horizontal_kerning;
 
  script copt;
      language dflt ;
-      lookup kernCrnagehorizontallookups2;
+      lookup kern_Horizontal_kerning;
 
  script cyrl;
      language dflt ;
-      lookup kernCrnagehorizontallookups2;
+      lookup kern_Horizontal_kerning;
 
  script grek;
      language dflt ;
-      lookup kernCrnagehorizontallookups2;
+      lookup kern_Horizontal_kerning;
 
  script latn;
      language dflt ;
-      lookup kernCrnagehorizontallookups2;
+      lookup kern_Horizontal_kerning;
 } kern;
 
 feature mkmk {
 
  script DFLT;
      language dflt ;
-      lookup mkmkMarktoMarklookups2;
+      lookup mkmk_Mark_to_Mark;
 
  script copt;
      language dflt ;
-      lookup mkmkMarktoMarklookups2;
+      lookup mkmk_Mark_to_Mark;
 
  script cyrl;
      language dflt ;
-      lookup mkmkMarktoMarklookups2;
+      lookup mkmk_Mark_to_Mark;
 
  script grek;
      language dflt ;
-      lookup mkmkMarktoMarklookups2;
+      lookup mkmk_Mark_to_Mark;
 
  script latn;
      language dflt ;
-      lookup mkmkMarktoMarklookups2;
+      lookup mkmk_Mark_to_Mark;
      language CAT  exclude_dflt;
-      lookup mkmkMarktoMarklookups2;
+      lookup mkmk_Mark_to_Mark;
      language MOL  exclude_dflt;
-      lookup mkmkMarktoMarklookups2;
+      lookup mkmk_Mark_to_Mark;
      language ROM  exclude_dflt;
-      lookup mkmkMarktoMarklookups2;
+      lookup mkmk_Mark_to_Mark;
 } mkmk;
 
 feature mark {
 
  script DFLT;
      language dflt ;
-      lookup markPositionnementdesignelookups1;
+      lookup mark_Mark_positioning;
 
  script copt;
      language dflt ;
-      lookup markPositionnementdesignelookups1;
+      lookup mark_Mark_positioning;
 
  script cyrl;
      language dflt ;
-      lookup markPositionnementdesignelookups1;
+      lookup mark_Mark_positioning;
 
  script grek;
      language dflt ;
-      lookup markPositionnementdesignelookups1;
+      lookup mark_Mark_positioning;
 
  script latn;
      language dflt ;
-      lookup markPositionnementdesignelookups1;
+      lookup mark_Mark_positioning;
 } mark;
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
