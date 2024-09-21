@@ -6,10 +6,10 @@ COMPILATION_START_TIME=$(date +%s)  # when the compilation started
 # move to sources folder
 cd sources/
 
+FONTS_DIR="../fonts"
 UFO_DIR="ufo/"  # where the ufo source files are (don't forget the '/' at the end!)
 UFO_LIST=$(ls $UFO_DIR)  # list of all files inside UFO_DIR
 FONTNAME="Giphurs"
-WEIGHT_1000_SRC="Giphurs-ExtraBlack.ufo"
 
 # Applying some change to ufo file
 echo -e "\x1b[0;36mApplying some changes to the ufo sources.\x1b[0;0m"
@@ -24,49 +24,44 @@ done
 
 echo "Done editing UFO files."
 
-# Build the font (the touch command is needed otherwhise I dunno why some glyphs above th
-echo -e "\x1b[0;36mBuilding the fonts (weight 100-900)\x1b[0;0m"
+# Build the font (the touch command is needed otherwhise I dunno why some non-encoded glyphs don't get updated...
+echo -e "\x1b[0;36mBuilding the fonts\x1b[0;0m"
 touch Giphurs.designspace && gftools builder config.yaml
 
-# Rebuild weight 1000 (non-SC)
-echo -e "\x1b[0;36mRebuilding font binaries for weight 1000\x1b[0;0m"
-WEIGHT_1000_BINARY_NAME=$(echo $WEIGHT_1000_SRC | cut -d '.' -f 1) # no extention
-TEMP_OTF_PATH="/tmp/"$WEIGHT_1000_BINARY_NAME"_temp.otf"
-TEMP_TTF_PATH="/tmp/"$WEIGHT_1000_BINARY_NAME"_temp.ttf"
-TEMP_WOFF2_PATH="/tmp/"$WEIGHT_1000_BINARY_NAME"_temp.woff2"
-fontmake -u $UFO_DIR/$WEIGHT_1000_SRC -o otf --output-path $TEMP_OTF_PATH
-gftools fix-font $TEMP_OTF_PATH -o ../fonts/otf/$WEIGHT_1000_BINARY_NAME.otf
-fontmake -u $UFO_DIR/$WEIGHT_1000_SRC -o ttf --output-path $TEMP_TTF_PATH
-gftools fix-font $TEMP_TTF_PATH -o ../fonts/ttf/$WEIGHT_1000_BINARY_NAME.ttf
-fonttools ttLib.woff2 compress ../fonts/ttf/$WEIGHT_1000_BINARY_NAME.ttf -o $TEMP_WOFF2_PATH
-gftools fix-font $TEMP_WOFF2_PATH -o ../fonts/webfonts/$WEIGHT_1000_BINARY_NAME.woff2
-
-# Remove weight 1000 for SC (TODO: implement it)
-rm ../fonts/otf/GiphursSC-ExtraBlack.otf
-rm ../fonts/ttf/GiphursSC-ExtraBlack.ttf
+# Fix incorrect name of the weight 1000
+WEIGHT_1000_OLD_NAME="Giphurs-ExtraBlack"
+WEIGHT_1000_NEW_NAME="GiphursExtraBlack-Regular"
+WEIGHT_1000_SC_OLD_NAME="GiphursSC-ExtraBlack"
+WEIGHT_1000_SC_NEW_NAME="GiphursSCExtraBlack-Regular"
+mv $FONTS_DIR/otf/$WEIGHT_1000_OLD_NAME.otf $FONTS_DIR/otf/$WEIGHT_1000_NEW_NAME.otf 
+mv $FONTS_DIR/ttf/$WEIGHT_1000_OLD_NAME.ttf $FONTS_DIR/ttf/$WEIGHT_1000_NEW_NAME.ttf 
+mv $FONTS_DIR/webfonts/$WEIGHT_1000_OLD_NAME.woff2 $FONTS_DIR/webfonts/$WEIGHT_1000_NEW_NAME.woff2 
+mv $FONTS_DIR/otf/$WEIGHT_1000_SC_OLD_NAME.otf $FONTS_DIR/otf/$WEIGHT_1000_SC_NEW_NAME.otf 
+mv $FONTS_DIR/ttf/$WEIGHT_1000_SC_OLD_NAME.ttf $FONTS_DIR/ttf/$WEIGHT_1000_SC_NEW_NAME.ttf 
 
 # Add hinting
 echo -e "\x1b[0;36mAdd hinting on font binaries\x1b[0;0m"
-OTF_LIST=$(ls ../fonts/otf)
+OTF_LIST=$(ls $FONTS_DIR/otf)
 for font in $OTF_LIST
 do
-    gftools fix-nonhinting ../fonts/otf/$font ../fonts/otf/$font &
+    gftools fix-nonhinting $FONTS_DIR/otf/$font $FONTS_DIR/otf/$font &
 done
-TTF_LIST=$(ls ../fonts/ttf)
+TTF_LIST=$(ls $FONTS_DIR/ttf)
 for font in $TTF_LIST
 do
-    gftools fix-nonhinting ../fonts/ttf/$font ../fonts/ttf/$font &
+    gftools fix-nonhinting $FONTS_DIR/ttf/$font $FONTS_DIR/ttf/$font &
 done
-WOFF2_LIST=$(ls ../fonts/webfonts)
+WOFF2_LIST=$(ls $FONTS_DIR/webfonts)
 for font in $WOFF2_LIST
 do
-    gftools fix-nonhinting ../fonts/webfonts/$font ../fonts/webfonts/$font &
+    gftools fix-nonhinting $FONTS_DIR/webfonts/$font $FONTS_DIR/webfonts/$font &
 done
 
 wait
 
-# clean backup files
-cd ../fonts/otf
+# Clean backup files
+echo -e "\x1b[0;36mRemoving backup files\x1b[0;0m"
+cd $FONTS_DIR/otf
 ls | grep backup | xargs rm
 cd ../ttf
 ls | grep backup | xargs rm
@@ -76,7 +71,7 @@ ls | grep backup | xargs rm
 # Go back to where we come from
 cd ../..
 
-# sucess message
+# Sucess message
 COMPILATION_END_TIME=$(date +%s)  # when the compilation finished
 COMPILATION_DURATION=$(($COMPILATION_END_TIME-$COMPILATION_START_TIME))
 echo -e "\x1b[1;32mFonts built succesfully in "$COMPILATION_DURATION" second(s) UwU\x1b[0;0m"
