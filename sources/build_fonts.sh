@@ -13,6 +13,11 @@ UFO_DIR="ufo/"  # where the ufo source files are (don't forget the '/' at the en
 UFO_LIST=$(ls $UFO_DIR)  # list of all files inside UFO_DIR
 FONTNAME="Giphurs"
 
+# Empty the fonts folder (for real making a copy of it)
+echo -e "\x1b[0;36mCleaning the fonts folder\x1b[0;0m"
+mv $FONTS_DIR "${FONTS_DIR}-backup"
+mkdir $FONTS_DIR
+echo "Done."
 
 # Applying some change to ufo file
 echo -e "\x1b[0;36mApplying some changes to the ufo sources.\x1b[0;0m"
@@ -87,6 +92,7 @@ wait
 
 # Clean backup files
 echo -e "\x1b[0;36mRemoving backup files\x1b[0;0m"
+rm -r "${FONTS_DIR}-backup"
 cd $FONTS_DIR/otf
 ls | grep backup | xargs rm
 cd ../ttf
