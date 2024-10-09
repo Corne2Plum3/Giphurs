@@ -9377,7 +9377,7 @@ lookup mark_Mark_positioning {
   pos base [\C \uni0421 ] <anchor 801 1380> mark @top_center
 	<anchor 801 0> mark @bottom_center
 	<anchor 801 -20> mark @bottom_cedilla;
-  pos base [\G \Q \Ccedilla \Oslash \uni01B1 \Theta \uni04D8 \uni04E8 \uni1FFC \uniE02E \G.cv21 ] <anchor 801 0> mark @bottom_center
+  pos base [\G \Q \Ccedilla \Oslash \uni01B1 \Theta \uni0424 \uni04D8 \uni04E8 \uni1FFC \uniE02E \G.cv21 ] <anchor 801 0> mark @bottom_center
 	<anchor 801 1380> mark @top_center;
   pos base [\U ] <anchor 699 -20> mark @bottom_cedilla
 	<anchor 861 0> mark @bottom_right
@@ -9642,7 +9642,7 @@ lookup mark_Mark_positioning {
 	<anchor 748 0> mark @bottom_center;
   pos base [\Xi \Sigma ] <anchor 604 1380> mark @top_center
 	<anchor 604 0> mark @bottom_center;
-  pos base [\Phi \uni0424 ] <anchor 608 1380> mark @top_center
+  pos base [\Phi ] <anchor 608 1380> mark @top_center
 	<anchor 608 0> mark @bottom_center;
   pos base [\uni03A9 \uni1F6D ] <anchor 801 -90> mark @bottom_ypogegrammeni
 	<anchor 801 1380> mark @top_center
@@ -9763,8 +9763,8 @@ lookup mark_Mark_positioning {
 	<anchor 646 1040> mark @top_center;
   pos base [\uni0442 ] <anchor 556 1040> mark @top_center
 	<anchor 556 0> mark @bottom_center;
-  pos base [\uni0444 \uni0471 ] <anchor 688 1400> mark @top_center
-	<anchor 688 -360> mark @bottom_center;
+  pos base [\uni0444 ] <anchor 966 1400> mark @top_center
+	<anchor 966 -360> mark @bottom_center;
   pos base [\uni044D ] <anchor 544 0> mark @bottom_center
 	<anchor 544 1040> mark @top_center;
   pos base [\uni044F ] <anchor 480 0> mark @bottom_center
@@ -9792,6 +9792,8 @@ lookup mark_Mark_positioning {
 	<anchor 532 1040> mark @top_center;
   pos base [\uni0470 ] <anchor 699 1400> mark @top_center
 	<anchor 699 0> mark @bottom_center;
+  pos base [\uni0471 ] <anchor 688 1400> mark @top_center
+	<anchor 688 -360> mark @bottom_center;
   pos base [\uni0474 ] <anchor 723 1400> mark @top_center
 	<anchor 678 0> mark @bottom_center;
   pos base [\uni0475 ] <anchor 575 1040> mark @top_center
@@ -10599,7 +10601,6 @@ feature mark {
      language dflt ;
       lookup mark_Mark_positioning;
 } mark;
-#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 
