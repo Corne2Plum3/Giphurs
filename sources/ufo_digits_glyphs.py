@@ -183,9 +183,9 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         }
     }
     TNUM_WIDTH = {
-        "100": 1198,
+        "100": 1232,
         "400": 1232,
-        "1000": 1278
+        "1000": 1232
     }
     TWO_DIGITS_WIDTH_COEF = {
         "100": 0.80,
