@@ -156,7 +156,7 @@ def get_glyph_metrics(glyph_name: str, ufo_dir: str):
 # create a .glif file in the {ufo_dir}/glyphs/{new_file_name} directory
 def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: int, cv_d1: int, ss_d1: str, digit_2: int, cv_d2: int, ss_d2: str):
     global DIGITS_NAMES_ENGLISH, SUPS_NAMES, FRAC_NAMES, SS_GLYPH_NAMES
-    
+
     # constants
     SUPS_Y = 810
     SUBS_Y = -188
@@ -183,9 +183,9 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         }
     }
     TNUM_WIDTH = {
-        "100": 1198,
+        "100": 1232,
         "400": 1232,
-        "1000": 1278
+        "1000": 1232
     }
     TWO_DIGITS_WIDTH_COEF = {
         "100": 0.80,
@@ -193,9 +193,9 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         "1000": 0.70
     }
     TWO_DIGITS_OVERLAP = {  # for NORMAL size without TWO_DIGITS_WIDTH_COEF applied
-        "100": 80,
+        "100": 140,
         "400": 120,
-        "1000": 140
+        "1000": 80
     }
     DIGITS_HEIGHT = 1480
     SUPS_HEIGHT = 858
@@ -254,8 +254,9 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
                 width = base_2_x_metrics["glyph_width"] + PNUM_SUPS_KERN[weight]["other"][0] + PNUM_SUPS_KERN[weight]["other"][1]
         elif type.split("_")[1] == "tnum":
             additional_kern = TNUM_WIDTH[weight] - base_2_x_metrics["total_width"]
-            lk = int(base_2_x_metrics["left_kern"] + additional_kern * (base_2_x_metrics["left_kern"] / (base_2_x_metrics["left_kern"] + base_2_x_metrics["right_kern"])))
-            x_offset = lk - base_2_x_metrics["left_kern"]
+            if (base_2_x_metrics["left_kern"] + base_2_x_metrics["right_kern"]) != 0:  # keep 0 if it is already 0
+                lk = int(base_2_x_metrics["left_kern"] + additional_kern * (base_2_x_metrics["left_kern"] / (base_2_x_metrics["left_kern"] + base_2_x_metrics["right_kern"])))
+                x_offset = lk - base_2_x_metrics["left_kern"]
             width = TNUM_WIDTH[weight]
 
         # calculate the y metrics
