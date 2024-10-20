@@ -193,7 +193,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         "1000": 0.70
     }
     TWO_DIGITS_OVERLAP = {  # for NORMAL size without TWO_DIGITS_WIDTH_COEF applied
-        "100": 80,
+        "100": 140,
         "400": 120,
         "1000": 80
     }
