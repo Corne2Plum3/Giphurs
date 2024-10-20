@@ -4437,8 +4437,8 @@ lookup ccmp_latn {
     sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
-    sub \i \uni0308  by \idieresis;
     sub \i \uni0307  by \idieresis;
+    sub \i \uni0308  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
@@ -4497,8 +4497,8 @@ lookup ccmp_latn {
     sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \iogonek \gravecomb  by \iogonek;
     sub \i \uni0328  by \iogonek;
+    sub \iogonek \gravecomb  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4587,13 +4587,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \u \uni0308 \gravecomb  by \uni01DC;
-    sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \AE \acutecomb  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \Oslash \acutecomb  by \uni01E0;
     sub \A \uni0307 \uni0304  by \uni01E0;
+    sub \Oslash \acutecomb  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5548,8 +5548,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0456 \uni0308  by \uni0457;
+    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -9479,7 +9479,7 @@ lookup mark_Mark_positioning {
   pos base [\C \uni0421 ] <anchor 810 -20> mark @bottom_cedilla
 	<anchor 810 0> mark @bottom_center
 	<anchor 810 1380> mark @top_center;
-  pos base [\G \Q \Ccedilla \uni01B1 \Theta \uni04D8 \uni04E8 \uniE02E ] <anchor 810 1380> mark @top_center
+  pos base [\G \Q \Ccedilla \uni01B1 \Theta \uni0424 \uni04D8 \uni04E8 \uniE02E ] <anchor 810 1380> mark @top_center
 	<anchor 810 0> mark @bottom_center;
   pos base [\U ] <anchor 741 -20> mark @bottom_cedilla
 	<anchor 741 1380> mark @top_center
@@ -9766,7 +9766,7 @@ lookup mark_Mark_positioning {
 	<anchor 769 0> mark @bottom_center;
   pos base [\Xi \Sigma ] <anchor 627 1380> mark @top_center
 	<anchor 627 0> mark @bottom_center;
-  pos base [\Phi \uni0424 ] <anchor 660 1380> mark @top_center
+  pos base [\Phi ] <anchor 660 1380> mark @top_center
 	<anchor 660 0> mark @bottom_center;
   pos base [\uni03A9 ] <anchor 827 -80> mark @bottom_ypogegrammeni
 	<anchor 827 -23> mark @bottom_center
@@ -10496,7 +10496,7 @@ lookup mark_Mark_positioning {
 	<anchor 537 1200> mark @top_center;
   pos base [\sigma.sc ] <anchor 534 0> mark @bottom_center
 	<anchor 534 1200> mark @top_center;
-  pos base [\phi.sc \uni0444.sc ] <anchor 780 0> mark @bottom_right
+  pos base [\phi.sc ] <anchor 780 0> mark @bottom_right
 	<anchor 601 0> mark @bottom_center
 	<anchor 601 1200> mark @top_center;
   pos base [\psi.sc \uni0471.sc ] <anchor 660 0> mark @bottom_center
@@ -10511,6 +10511,9 @@ lookup mark_Mark_positioning {
 	<anchor 619 1200> mark @top_center;
   pos base [\uni043B.sc ] <anchor 723 1200> mark @top_center
 	<anchor 641 0> mark @bottom_center;
+  pos base [\uni0444.sc ] <anchor 860 0> mark @bottom_right
+	<anchor 681 0> mark @bottom_center
+	<anchor 681 1200> mark @top_center;
   pos base [\uni0447.sc ] <anchor 930 0> mark @bottom_center
 	<anchor 590 1200> mark @top_center;
   pos base [\uni0448.sc \uni0449.sc ] <anchor 927 0> mark @bottom_center
@@ -10788,6 +10791,7 @@ feature mark {
      language dflt ;
       lookup mark_Mark_positioning;
 } mark;
+#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 
