@@ -3,7 +3,7 @@
 *.ninja_log
 *.zip
 .vscode/
-misc
+_misc
 py
 sources/__pycache__
 sources/instance_ufos/
@@ -14,5 +14,6 @@ sources/.fuse_hidden*
 sources/py/
 sources/ufo/*/lib.plist
 temp
+tests_results
 ufo_built.stamp
 venv
