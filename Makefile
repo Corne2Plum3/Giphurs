@@ -19,6 +19,7 @@ help:
 	@echo "  * make clean_fonts  : Empties the current fonts/ folder."
 	@echo "  * make export_fonts : Export fonts/ directory into a zip file."
 	@echo "  * make fonts        : Generate font binaries from UFO sources."
+	@echo "  * make tests -i     : Runs automated tests (output at the $(tests_output_dir)/ folder ). -i option is mandatory."
 	@echo "UFO sources scripts"
 	@echo "  * make ufo_anchors_on_accented_glyphs : Place anchors points on accented glyphs (the UFO files must be opened and exported throught Fontforge after)."
 	@echo "  * make ufo_digits_glyphs              : Build digits based glyphs."
