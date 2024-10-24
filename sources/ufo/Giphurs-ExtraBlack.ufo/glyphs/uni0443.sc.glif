@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni0443.sc" format="2">
-  <advance width="1357"/>
-  <anchor x="679" y="1200" name="greek_v"/>
-  <anchor x="679" y="1200" name="greek_kt"/>
-  <anchor x="679" y="1200" name="greek_k"/>
-  <anchor x="679" y="1200" name="greek_t"/>
-  <anchor x="679" y="0" name="bottom_center"/>
-  <anchor x="679" y="1200" name="top_center"/>
+  <advance width="1265"/>
   <outline>
-    <component base="uniE03E"/>
+    <contour>
+      <point x="343" y="290" type="curve" smooth="yes"/>
+      <point x="417" y="290"/>
+      <point x="450.283" y="322.538"/>
+      <point x="486" y="408" type="curve" smooth="yes"/>
+      <point x="817" y="1200" type="line"/>
+      <point x="1195" y="1200" type="line"/>
+      <point x="795" y="296" type="line" smooth="yes"/>
+      <point x="673.637" y="21.7188"/>
+      <point x="497" y="-29"/>
+      <point x="343" y="-30" type="curve" smooth="yes"/>
+      <point x="222" y="-30"/>
+      <point x="132" y="1"/>
+      <point x="76" y="25" type="curve"/>
+      <point x="172" y="345" type="line"/>
+      <point x="204" y="313"/>
+      <point x="283" y="290"/>
+    </contour>
+    <contour>
+      <point x="757" y="476" type="line"/>
+      <point x="518" y="245" type="line"/>
+      <point x="70" y="1200" type="line"/>
+      <point x="448" y="1200" type="line"/>
+    </contour>
   </outline>
 </glyph>
