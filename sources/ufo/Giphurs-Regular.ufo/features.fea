@@ -4437,8 +4437,8 @@ lookup ccmp_latn {
     sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
-    sub \i \uni0308  by \idieresis;
     sub \i \uni0307  by \idieresis;
+    sub \i \uni0308  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
@@ -4497,8 +4497,8 @@ lookup ccmp_latn {
     sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \iogonek \gravecomb  by \iogonek;
     sub \i \uni0328  by \iogonek;
+    sub \iogonek \gravecomb  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4587,13 +4587,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \u \uni0308 \gravecomb  by \uni01DC;
-    sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \AE \acutecomb  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \Oslash \acutecomb  by \uni01E0;
     sub \A \uni0307 \uni0304  by \uni01E0;
+    sub \Oslash \acutecomb  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5548,8 +5548,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0456 \uni0308  by \uni0457;
+    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -7255,7 +7255,7 @@ lookup kern_Horizontal_kerning {
 	\uni1EBF \uni1EC1 \uni1EC3 \uni1EC5 \uni1ECD \uni1ECF \uni1ED1 \uni1ED3 
 	\uni1ED5 \uni1ED7 \uni1ED9 \uni1EDB \uni1EDD \uni1EDF \uni1EE1 \uni1EE3 
 	\uni1F40 \uni1F41 \uni1F42 \uni1F43 \uni1F44 \uni1F45 ];
-    @kc81_first_31 = [\f \florin \uni03DD \uni1E1F \uni1E9D \f.ss08 \f_f.ss08 ];
+    @kc81_first_31 = [\f \f.ss08 \f_f.ss08 \florin \uni03DD \uni1E1F \uni1E9D ];
     @kc81_first_32 = [\g.sc.cv21 \gbreve.sc.cv21 \gcaron.sc.cv21 \gcircumflex.sc.cv21 
 	\gcommaaccent.sc.cv21 \gdotaccent.sc.cv21 \o.sc \oacute.sc 
 	\obreve.sc \ocircumflex.sc \odieresis.sc \ograve.sc \ohorn.sc 
@@ -7621,8 +7621,8 @@ lookup kern_Horizontal_kerning {
 	\zero.subscript.tnum \zero.zero.dnom \zero.zero.dnom.pnum 
 	\zero.zero.dnom.tnum \zero.zero.subscript 
 	\zero.zero.subscript.pnum \zero.zero.subscript.tnum ];
-    @kc81_second_22 = [\f \florin \uni1E1F \uni1E9D \f.ss08 \f_f.ss08 \f_f_i.ss08 \f_f_j.ss08 
-	\f_f_l.ss08 \f_f_t.ss08 \f_i.ss08 \f_j.ss08 \f_l.ss08 \f_t.ss08 ];
+    @kc81_second_22 = [\f \f.ss08 \f_f.ss08 \f_f_i.ss08 \f_f_j.ss08 \f_f_l.ss08 \f_f_t.ss08 \f_i.ss08 
+	\f_j.ss08 \f_l.ss08 \f_t.ss08 \florin \uni1E1F \uni1E9D ];
     @kc81_second_23 = [\j \jcircumflex \uni03F3 ];
     @kc81_second_24 = [\j.sc \uni01F0.sc ];
     @kc81_second_25 = [\nu \uni0475 \uni1E7D \uni1E7F \v ];
@@ -8049,6 +8049,7 @@ lookup kern_Horizontal_kerning {
     pos @kc81_first_31 @kc81_second_13 -210;
     pos @kc81_first_31 @kc81_second_17 -70;
     pos @kc81_first_31 @kc81_second_21 -210;
+    pos @kc81_first_31 @kc81_second_22 35;
     pos @kc81_first_31 @kc81_second_24 -210;
     pos @kc81_first_31 @kc81_second_29 -210;
     pos @kc81_first_31 @kc81_second_36 -140;
@@ -10638,7 +10639,6 @@ feature mark {
      language dflt ;
       lookup mark_Mark_positioning;
 } mark;
-#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 
