@@ -8,6 +8,7 @@ It modify the .glif file of those glyphs, overwriting all existing anchors on th
 
 ACCENTED_GLYPHS_LIST = "sources/accented_glyphs_list.txt"
 
+
 import sys
 from ufo_get_glif_from_name import get_glif_from_name
 import xml.etree.ElementTree as ET
@@ -23,6 +24,8 @@ def get_anchor_points(glyph_name, ufo_dir):
 
 # Place the anchor points on an accented glyph
 def set_anchor_points_on_accented_glyph(glyph_name, ufo_dir):
+    #print(f"### {glyph_name} ###")
+
     # remove "/" at the end of the ufo_dir if here
     if ufo_dir[-1] == "/" or ufo_dir[-1] == "\\":
         ufo_dir = ufo_dir[:-1]
@@ -37,72 +40,90 @@ def set_anchor_points_on_accented_glyph(glyph_name, ufo_dir):
     for element in xml_anchor_list:
         root.remove(element)
     
-    # read the anchors from each component
-    anchors_full_list = []  # each anchor is a dict with the keys "name", "source", "component_order", "x", "y"
-    component_order = 0
+    # Read the anchors from each component
+    # Each anchor will be a dict with the keys "name", "source", "x", "y"
+    glyph_anchor_list = []  # List of the list of anchors of each component
+    # Order: (mark_2), mark_1, base_glyph (order is important)
+    # Example [ [{<anchor_1}, {<anchor_2}] , [{<_anchor_1}] ]
     component_count = len(xml_component_list)
     for component in xml_component_list:
-        component_order += 1
+        #print(component.attrib["base"])
+        component_anchor_list = []
+        # apply offset if the components isn't at (0,0)
         x_offset = 0
         y_offset = 0
         if "xOffset" in component.attrib:
             x_offset = int(component.attrib["xOffset"])
         if "yOffset" in component.attrib:
             y_offset = int(component.attrib["yOffset"])
+        # Read each anchor
         component_anchors_dict = get_anchor_points(component.attrib["base"], ufo_dir)
         for anchor in component_anchors_dict:
             new_anchor_entry = {}
             new_anchor_entry["name"] = anchor
             new_anchor_entry["source"] = component.attrib["base"]
-            new_anchor_entry["component_order"] = component_order
             new_anchor_entry["x"] = component_anchors_dict[anchor][0] + x_offset
             new_anchor_entry["y"] = component_anchors_dict[anchor][1] + y_offset
-            anchors_full_list.append(new_anchor_entry)
+            component_anchor_list.append(new_anchor_entry)
+        # Add the component's list to the glyph list
+        glyph_anchor_list.append(component_anchor_list)
+    #print(glyph_anchor_list)
 
-    # separate the base and mark anchors into 2 lists
-    anchors_base_list = []  # [{"name": str, "component_order": str, "x": int, "y": int}]
-    anchors_mark_list = []  # [{"name": str, "component_order": str, "x": int, "y": int}]
-    for anchor in anchors_full_list:
-        if anchor["name"][0] == "_":
-            anchors_mark_list.append(anchor)
-        else:
-            anchors_base_list.append(anchor)
-    
-    # remove 2 anchors at the same place used to place components
-    for anchor_mark in anchors_mark_list:
-        i = 0
-        while i < len(anchors_base_list):
-            anchor_base = anchors_base_list[i]
-            if anchor_mark["name"][1:] == anchor_base["name"] and anchor_mark["source"] != anchor_base["source"]:
-                anchors_base_list.pop(i)
-            i += 1
+    # Remove the achors used to attach 2 glyphs
+    for i in range(0, component_count-1, 1):
+        # mark_anchor_list = glyph_anchor_list[i]
+        # base_anchor_list = glyph_anchor_list[i+1]
+        im = 0  # index of the base component inside the mark's anchor list
+        while im < len(glyph_anchor_list[i]):
+            ib = 0  # index of the base component inside the glyphs's anchor list
+            while im < len(glyph_anchor_list[i]) and ib < len(glyph_anchor_list[i+1]):
+                #print(f"{glyph_anchor_list[i][im]["name"]} and {glyph_anchor_list[i+1][ib]["name"]}")
+                if glyph_anchor_list[i][im]["name"][0] == "_" and glyph_anchor_list[i][im]["name"][1:] == glyph_anchor_list[i+1][ib]["name"]:  # attached anchors
+                    glyph_anchor_list[i].pop(im)
+                    glyph_anchor_list[i+1].pop(ib)
+                    #print(f"Removing {glyph_anchor_list[i].pop(im)} and {glyph_anchor_list[i+1].pop(ib)}")
+                    ib = 0
+                else:
+                    ib += 1
+            im += 1
 
-    # remove anchors starting with "mark_" of components between 2 components (result in anchors_base_list)
+    # Remove the anchors of intermediate components
+    while len(glyph_anchor_list) > 2:
+        glyph_anchor_list.pop(1)
+    #print(glyph_anchor_list)
+
+    # Merge into a single list with the anchors we're going to keep
+    glyph_anchor_list_merged = []
+    for component in glyph_anchor_list:
+        for anchor in component:
+            glyph_anchor_list_merged.append(anchor)
+
+    # Convert the 'mkmk' anchors into 'mark' (base to mark) anchors
+    mkmk_convert = {
+        "mkmk_top_center": "top_center"
+    }
+    for anchor in glyph_anchor_list_merged:
+        if anchor["name"] in mkmk_convert.keys():
+            #print(f"Renaming {anchor["name"]} -> {mkmk_convert[anchor["name"]]}")
+            anchor["name"] = mkmk_convert[anchor["name"]]
+
+    # Remove duplicates and remaining mark glyphs
+    glyph_anchor_list_merged_names = []
     i = 0
-    while i < len(anchors_base_list):
-        anchor = anchors_base_list[i] 
-        if "mark_" in anchor["name"] and anchor["component_order"] != 1 and anchor["component_order"] != component_count:  # for example with 3 components, remove the "mark_" anchors for the component 2
-            anchors_base_list.pop(i)
+    while i < len(glyph_anchor_list_merged):
+        if glyph_anchor_list_merged[i]["name"] in glyph_anchor_list_merged_names:  # duplicate found, remove
+            glyph_anchor_list_merged.pop(i)
+            #print(f"Removing {glyph_anchor_list_merged.pop(i)}")
+        elif glyph_anchor_list_merged[i]["name"][0] == "_":  # delete mark anchor
+            glyph_anchor_list_merged.pop(i)
+            #print(f"Removing {glyph_anchor_list_merged.pop(i)}")
         else:
+            glyph_anchor_list_merged_names.append(glyph_anchor_list_merged[i]["name"])
             i += 1
-
-    # remove duplicate base anchors (result in anchors_final_list)
-    anchors_final_list = []  # [{"name": str, "component_order": str, "x": int, "y": int}]
-    anchors_final_names = {}  # {"name": <pos_in_anchors_final_list>}
-    for anchor in anchors_base_list:
-        if anchor["name"] in anchors_final_names:  # anchor already here
-            already_existing_anchor_index = anchors_final_names[anchor["name"]]
-            already_existing_anchor = anchors_final_list[already_existing_anchor_index]
-            if anchor["component_order"] < already_existing_anchor["component_order"]:  # keep the one wirth the lowest component_order value
-                anchors_final_list.pop(already_existing_anchor_index)
-                anchors_final_list.append(anchor)
-                anchors_final_names[anchor["name"]] = len(anchors_final_list) - 1
-        else:
-            anchors_final_list.append(anchor)
-            anchors_final_names[anchor["name"]] = len(anchors_final_list) - 1
+    #print(glyph_anchor_list_merged)
 
     # add the anchor to the xml tree (the mark signs are all ignored)
-    for anchor in anchors_final_list:
+    for anchor in glyph_anchor_list_merged:
         new_element_attribs = {
             "x": str(anchor["x"]),
             "y": str(anchor["y"]),
