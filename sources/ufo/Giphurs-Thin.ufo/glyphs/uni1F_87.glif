@@ -4,13 +4,12 @@
   <unicode hex="1F87"/>
   <anchor x="613" y="1040" name="greek_v"/>
   <anchor x="613" y="1040" name="greek_kt"/>
-  <anchor x="613" y="1040" name="greek_k"/>
   <anchor x="613" y="1040" name="greek_t"/>
   <anchor x="578" y="0" name="bottom_center"/>
   <anchor x="613" y="1040" name="top_center"/>
   <outline>
-    <component base="uni1FDF" xOffset="176"/>
-    <component base="uni1FBE" xOffset="475"/>
     <component base="alpha"/>
+    <component base="uni1FBE" xOffset="475"/>
+    <component base="uni1FDF" xOffset="176"/>
   </outline>
 </glyph>

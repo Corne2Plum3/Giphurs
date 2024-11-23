@@ -2,7 +2,6 @@
 <glyph name="uni1ED8" format="2">
   <advance width="1602"/>
   <unicode hex="1ED8"/>
-  <anchor x="801" y="1716" name="top_center"/>
   <anchor x="801" y="-20" name="bottom_cedilla"/>
   <anchor x="-65" y="1040" name="greek_t"/>
   <anchor x="61" y="1040" name="greek_k"/>
@@ -10,9 +9,11 @@
   <anchor x="139" y="1040" name="greek_v"/>
   <anchor x="968" y="0" name="bottom_right"/>
   <anchor x="1380" y="1480" name="top_right"/>
+  <anchor x="801" y="-336" name="bottom_center"/>
+  <anchor x="801" y="1716" name="top_center"/>
   <outline>
-    <component base="uni0302" xOffset="159" yOffset="340"/>
-    <component base="dotbelowcomb" xOffset="159"/>
     <component base="O"/>
+    <component base="dotbelowcomb" xOffset="159"/>
+    <component base="uni0302" xOffset="159" yOffset="340"/>
   </outline>
 </glyph>

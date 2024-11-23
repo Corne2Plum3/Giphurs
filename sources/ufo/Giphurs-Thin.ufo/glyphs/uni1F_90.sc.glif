@@ -3,14 +3,13 @@
   <advance width="1204"/>
   <anchor x="602" y="1200" name="greek_v"/>
   <anchor x="602" y="1200" name="greek_kt"/>
-  <anchor x="602" y="1200" name="greek_k"/>
   <anchor x="602" y="1200" name="greek_t"/>
   <anchor x="203" y="-20" name="bottom_cedilla"/>
   <anchor x="602" y="0" name="bottom_center"/>
   <anchor x="602" y="1200" name="top_center"/>
   <outline>
-    <component base="uni1FBF" xOffset="399" yOffset="160"/>
+    <component base="eta.sc"/>
     <component base="uni1FBE" xOffset="460" yOffset="10"/>
-    <component base="uniE037"/>
+    <component base="uni1FBF" xOffset="399" yOffset="160"/>
   </outline>
 </glyph>

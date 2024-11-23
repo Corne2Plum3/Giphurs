@@ -2,7 +2,6 @@
 <glyph name="uni1FB4.sc" format="2">
   <advance width="1328"/>
   <anchor x="1096" y="-20" name="bottom_cedilla"/>
-  <anchor x="665" y="1200" name="greek_t"/>
   <anchor x="665" y="1200" name="greek_k"/>
   <anchor x="665" y="1200" name="greek_kt"/>
   <anchor x="665" y="1200" name="greek_v"/>
@@ -10,8 +9,8 @@
   <anchor x="665" y="0" name="bottom_center"/>
   <anchor x="665" y="1200" name="top_center"/>
   <outline>
+    <component base="alpha.sc"/>
+    <component base="uni1FBE" xOffset="496" yOffset="10"/>
     <component base="uni1FFD" xOffset="423" yOffset="160"/>
-    <component base="uni0345" xOffset="23" yOffset="10"/>
-    <component base="uniE034"/>
   </outline>
 </glyph>

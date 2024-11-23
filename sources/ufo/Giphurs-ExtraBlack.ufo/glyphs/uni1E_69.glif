@@ -2,11 +2,12 @@
 <glyph name="uni1E69" format="2">
   <advance width="1066"/>
   <unicode hex="1E69"/>
-  <anchor x="529" y="1440" name="top_center"/>
   <anchor x="750" y="0" name="bottom_right"/>
+  <anchor x="529" y="-400" name="bottom_center"/>
+  <anchor x="529" y="1440" name="top_center"/>
   <outline>
-    <component base="uni0307" xOffset="-113"/>
-    <component base="dotbelowcomb" xOffset="-113"/>
     <component base="s"/>
+    <component base="dotbelowcomb" xOffset="-113"/>
+    <component base="uni0307" xOffset="-113"/>
   </outline>
 </glyph>

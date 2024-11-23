@@ -2,7 +2,6 @@
 <glyph name="uni1E50" format="2">
   <advance width="1620"/>
   <unicode hex="1E50"/>
-  <anchor x="809" y="1996" name="top_center"/>
   <anchor x="810" y="-20" name="bottom_cedilla"/>
   <anchor x="24" y="1040" name="greek_v"/>
   <anchor x="-220" y="1040" name="greek_kt"/>
@@ -11,9 +10,10 @@
   <anchor x="1424" y="1480" name="top_right"/>
   <anchor x="810" y="0" name="bottom_center"/>
   <anchor x="1042" y="0" name="bottom_right"/>
+  <anchor x="810" y="1986" name="top_center"/>
   <outline>
-    <component base="gravecomb" xOffset="167" yOffset="620"/>
-    <component base="uni0304" xOffset="167" yOffset="340"/>
     <component base="O"/>
+    <component base="uni0304" xOffset="167" yOffset="340"/>
+    <component base="gravecomb" xOffset="168" yOffset="610"/>
   </outline>
 </glyph>

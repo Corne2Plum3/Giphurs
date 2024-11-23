@@ -2,17 +2,17 @@
 <glyph name="uni01EC" format="2">
   <advance width="1514"/>
   <unicode hex="01EC"/>
-  <anchor x="757" y="1581" name="top_center"/>
   <anchor x="757" y="-20" name="bottom_cedilla"/>
   <anchor x="-93" y="1040" name="greek_kt"/>
   <anchor x="67" y="1040" name="greek_k"/>
   <anchor x="-54" y="1040" name="greek_t"/>
   <anchor x="124" y="1040" name="greek_v"/>
-  <anchor x="757" y="0" name="bottom_center"/>
+  <anchor x="792" y="-350" name="bottom_center"/>
   <anchor x="1267" y="1480" name="top_right"/>
+  <anchor x="757" y="1581" name="top_center"/>
   <outline>
-    <component base="uni0304" xOffset="115" yOffset="340"/>
-    <component base="uni0328" xOffset="236"/>
     <component base="O"/>
+    <component base="uni0328" xOffset="150"/>
+    <component base="uni0304" xOffset="115" yOffset="340"/>
   </outline>
 </glyph>
