@@ -47,6 +47,13 @@ tests:
 	wait
 	@echo "Done"
 
+# build accented glyphs
+ufo_accented_glyphs: sources/ufo
+	python3 sources/ufo_build_accented_glyphs.py sources/ufo/Giphurs-Thin.ufo
+	python3 sources/ufo_build_accented_glyphs.py sources/ufo/Giphurs-Regular.ufo
+	python3 sources/ufo_build_accented_glyphs.py sources/ufo/Giphurs-ExtraBlack.ufo
+	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
+
 # place anchors points on accented glyphs
 ufo_anchors_on_accented_glyphs: sources/ufo
 	python3 sources/ufo_anchors_on_accented_glyphs.py sources/ufo/Giphurs-Thin.ufo
