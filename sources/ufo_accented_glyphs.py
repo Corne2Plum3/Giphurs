@@ -317,7 +317,6 @@ def main():
                         glyphs_list.append(csv_line.split(";")[0].strip())
             # act on each glyph
             for glyph in glyphs_list:
-                print(glyph)
                 build_accented_glyph(glyph, sys.argv[1])
             print(f"Done with {sys.argv[1]} ({len(glyphs_list)} files changed)")
         else:
