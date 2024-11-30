@@ -189,11 +189,11 @@ def build_accented_glyph(glyph_name, ufo_dir):
         while i < len(csv_lines) and csv_lines[i].split(COMPONENTS_LIST_DELIM)[0] != glyph_name:  # find the glyph on the list
             i += 1
         if i == len(csv_lines):  # not found
-            print(f"ERROR: Glyph {glyph_name} not found on {COMPONENTS_LIST}")
+            print(f"ERROR: Glyph {glyph_name} not found on {COMPONENTS_LIST} (line {i})")
             return
         csv_entry = csv_lines[i].split(COMPONENTS_LIST_DELIM)
         if len(csv_entry) < 4:
-            print(f"ERROR: No components found for glyph {glyph_name} at line {i}")
+            print(f"ERROR: No components found for glyph {glyph_name} (line {i})")
             return
         j = 3
         while j < len(csv_entry):
@@ -201,6 +201,9 @@ def build_accented_glyph(glyph_name, ufo_dir):
             if component != "":
                 components_list.append(component)
             j += 1
+        if glyph_name in components_list:  # avoid infinite recursion
+            print(f"ERROR: Glyph {glyph_name} contains itself as component (line {i})")
+            return
     
     # Retrieve parameters
     allow_left_overflow = bool(int(csv_lines[i].split(COMPONENTS_LIST_DELIM)[1].strip()))
@@ -294,12 +297,12 @@ def build_accented_glyph(glyph_name, ufo_dir):
     if (not allow_left_overflow) and current_glyph_metrics["x_min"] < 0:
         move_glyph(glyph_name, ufo_dir, abs(current_glyph_metrics["x_min"]), 0, True, True, False)
 
-    print(f"Done with {glyph_name} ({len(glyph_component)} components, {len(glyph_anchors)} anchors)")
+    #print(f"Done with {glyph_name} ({len(glyph_component)} components, {len(glyph_anchors)} anchors)")
     return
 
 def main():
     if len(sys.argv) < 2:
-        print(f"{sys.argv[0]}: Not enough parameters.")
+        print(f"ERROR: {sys.argv[0]}: Not enough parameters.")
         print(f"Usage: {sys.argv[0]} <ufo_directory> [<glyph_name>]")
     else:
         if len(sys.argv) == 2:  # no specific glyph -> do all
@@ -314,6 +317,7 @@ def main():
                         glyphs_list.append(csv_line.split(";")[0].strip())
             # act on each glyph
             for glyph in glyphs_list:
+                print(glyph)
                 build_accented_glyph(glyph, sys.argv[1])
             print(f"Done with {sys.argv[1]} ({len(glyphs_list)} files changed)")
         else:
