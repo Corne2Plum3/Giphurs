@@ -2,12 +2,12 @@
 <glyph name="imacron" format="2">
   <advance width="500"/>
   <unicode hex="012B"/>
-  <anchor x="250" y="1310" name="top_center"/>
   <anchor x="250" y="-20" name="bottom_cedilla"/>
   <anchor x="250" y="0" name="bottom_center"/>
   <anchor x="430" y="0" name="bottom_right"/>
+  <anchor x="250" y="1310" name="top_center"/>
   <outline>
-    <component base="uni0304" xOffset="-393"/>
     <component base="dotlessi"/>
+    <component base="uni0304" xOffset="-393"/>
   </outline>
 </glyph>

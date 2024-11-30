@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni1EB1.cv23" format="2">
   <advance width="1250"/>
-  <anchor x="654" y="1612" name="top_center"/>
   <anchor x="1204" y="0" name="bottom_right"/>
   <anchor x="654" y="0" name="bottom_center"/>
+  <anchor x="654" y="1632" name="top_center"/>
   <outline>
-    <component base="gravecomb" xOffset="12" yOffset="236"/>
-    <component base="uni0306" xOffset="12"/>
-    <component base="uniE030"/>
+    <component base="a.cv23"/>
+    <component base="uni0306_gravecomb" xOffset="12"/>
   </outline>
 </glyph>

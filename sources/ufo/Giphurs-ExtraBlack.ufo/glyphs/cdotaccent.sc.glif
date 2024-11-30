@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="cdotaccent.sc" format="2">
   <advance width="1295"/>
-  <anchor x="680" y="1600" name="top_center"/>
   <anchor x="680" y="-20" name="bottom_cedilla"/>
   <anchor x="680" y="0" name="bottom_center"/>
+  <anchor x="680" y="1600" name="top_center"/>
   <outline>
-    <component base="uni0307" xOffset="38" yOffset="160"/>
     <component base="c.sc"/>
+    <component base="uni0307" xOffset="38" yOffset="160"/>
   </outline>
 </glyph>

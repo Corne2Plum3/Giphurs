@@ -2,11 +2,11 @@
 <glyph name="iogonek" format="2">
   <advance width="460"/>
   <unicode hex="012F"/>
-  <anchor x="230" y="1376" name="top_center"/>
   <anchor x="231" y="-20" name="bottom_cedilla"/>
-  <anchor x="230" y="0" name="bottom_center"/>
+  <anchor x="230" y="1040" name="top_center"/>
+  <anchor x="183" y="-336" name="bottom_center"/>
   <outline>
-    <component base="uni0328" xOffset="-322"/>
-    <component base="i"/>
+    <component base="dotlessi"/>
+    <component base="uni0328" xOffset="-459"/>
   </outline>
 </glyph>

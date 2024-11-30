@@ -2,7 +2,6 @@
 <glyph name="uni0400" format="2">
   <advance width="1176"/>
   <unicode hex="0400"/>
-  <anchor x="627" y="1716" name="top_center"/>
   <anchor x="-179" y="1040" name="greek_kt"/>
   <anchor x="-19" y="1040" name="greek_k"/>
   <anchor x="-140" y="1040" name="greek_t"/>
@@ -10,8 +9,9 @@
   <anchor x="588" y="0" name="bottom_center"/>
   <anchor x="996" y="0" name="bottom_right"/>
   <anchor x="588" y="-20" name="bottom_cedilla"/>
+  <anchor x="588" y="1716" name="top_center"/>
   <outline>
-    <component base="gravecomb" xOffset="-15" yOffset="340"/>
     <component base="uni0415"/>
+    <component base="gravecomb" xOffset="-54" yOffset="340"/>
   </outline>
 </glyph>

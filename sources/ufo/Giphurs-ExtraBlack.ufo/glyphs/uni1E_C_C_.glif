@@ -10,8 +10,9 @@
   <anchor x="810" y="1380" name="top_center"/>
   <anchor x="1424" y="1480" name="top_right"/>
   <anchor x="1042" y="0" name="bottom_right"/>
+  <anchor x="810" y="-400" name="bottom_center"/>
   <outline>
-    <component base="dotbelowcomb" xOffset="168"/>
     <component base="O"/>
+    <component base="dotbelowcomb" xOffset="168"/>
   </outline>
 </glyph>

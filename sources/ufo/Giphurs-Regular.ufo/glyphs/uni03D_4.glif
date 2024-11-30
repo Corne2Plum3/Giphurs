@@ -2,14 +2,14 @@
 <glyph name="uni03D4" format="2">
   <advance width="1486"/>
   <unicode hex="03D4"/>
-  <anchor x="696" y="1736" name="top_center"/>
   <anchor x="-284" y="1040" name="greek_t"/>
   <anchor x="-158" y="1040" name="greek_k"/>
   <anchor x="-324" y="1040" name="greek_kt"/>
   <anchor x="-80" y="1040" name="greek_v"/>
   <anchor x="696" y="0" name="bottom_center"/>
+  <anchor x="696" y="1736" name="top_center"/>
   <outline>
-    <component base="uni0308" xOffset="54" yOffset="360"/>
     <component base="Upsilon1"/>
+    <component base="uni0308" xOffset="54" yOffset="360"/>
   </outline>
 </glyph>

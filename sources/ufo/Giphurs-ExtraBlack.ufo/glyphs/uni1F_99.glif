@@ -2,15 +2,15 @@
 <glyph name="uni1F99" format="2">
   <advance width="1820"/>
   <unicode hex="1F99"/>
-  <anchor x="260" y="-20" name="bottom_cedilla"/>
-  <anchor x="743" y="0" name="bottom_center"/>
-  <anchor x="743" y="1380" name="top_center"/>
-  <anchor x="-138" y="1040" name="greek_v"/>
-  <anchor x="-389" y="1040" name="greek_kt"/>
-  <anchor x="-354" y="1040" name="greek_t"/>
+  <anchor x="598" y="-20" name="bottom_cedilla"/>
+  <anchor x="1081" y="0" name="bottom_center"/>
+  <anchor x="1081" y="1380" name="top_center"/>
+  <anchor x="200" y="1040" name="greek_v"/>
+  <anchor x="-51" y="1040" name="greek_kt"/>
+  <anchor x="-16" y="1040" name="greek_t"/>
   <outline>
-    <component base="Eta"/>
-    <component base="uni1FBE" xOffset="574"/>
-    <component base="uni1FFE" xOffset="-388"/>
+    <component base="Eta" xOffset="338"/>
+    <component base="uni1FBE" xOffset="912"/>
+    <component base="uni1FFE" xOffset="-50"/>
   </outline>
 </glyph>

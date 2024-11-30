@@ -2,12 +2,12 @@
 <glyph name="igrave" format="2">
   <advance width="500"/>
   <unicode hex="00EC"/>
-  <anchor x="250" y="1376" name="top_center"/>
   <anchor x="250" y="-20" name="bottom_cedilla"/>
   <anchor x="250" y="0" name="bottom_center"/>
   <anchor x="430" y="0" name="bottom_right"/>
+  <anchor x="250" y="1376" name="top_center"/>
   <outline>
-    <component base="gravecomb" xOffset="-392"/>
     <component base="dotlessi"/>
+    <component base="gravecomb" xOffset="-392"/>
   </outline>
 </glyph>

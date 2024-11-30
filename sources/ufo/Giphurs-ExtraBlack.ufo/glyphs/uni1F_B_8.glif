@@ -2,7 +2,6 @@
 <glyph name="uni1FB8" format="2">
   <advance width="1530"/>
   <unicode hex="1FB8"/>
-  <anchor x="769" y="1716" name="top_center"/>
   <anchor x="241" y="1040" name="greek_v"/>
   <anchor x="25" y="1040" name="greek_t"/>
   <anchor x="181" y="1040" name="greek_k"/>
@@ -10,8 +9,9 @@
   <anchor x="1495" y="0" name="bottom_right"/>
   <anchor x="769" y="0" name="bottom_center"/>
   <anchor x="769" y="-90" name="bottom_ypogegrammeni"/>
+  <anchor x="769" y="1716" name="top_center"/>
   <outline>
-    <component base="uni0306" xOffset="127" yOffset="340"/>
     <component base="Alpha"/>
+    <component base="uni0306" xOffset="127" yOffset="340"/>
   </outline>
 </glyph>

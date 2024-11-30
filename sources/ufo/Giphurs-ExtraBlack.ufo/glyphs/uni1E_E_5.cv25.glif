@@ -4,8 +4,9 @@
   <anchor x="1122" y="1040" name="top_right"/>
   <anchor x="807" y="0" name="bottom_right"/>
   <anchor x="596" y="1040" name="top_center"/>
+  <anchor x="596" y="-400" name="bottom_center"/>
   <outline>
-    <component base="dotbelowcomb" xOffset="-46"/>
     <component base="u.cv25"/>
+    <component base="dotbelowcomb" xOffset="-46"/>
   </outline>
 </glyph>

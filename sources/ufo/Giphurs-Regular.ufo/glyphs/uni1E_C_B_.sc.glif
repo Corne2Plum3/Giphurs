@@ -7,9 +7,11 @@
   <anchor x="390" y="1200" name="greek_k"/>
   <anchor x="390" y="1200" name="greek_t"/>
   <anchor x="479" y="0" name="bottom_right"/>
-  <anchor x="390" y="1200" name="top_center"/>
+  <anchor x="390" y="-336" name="bottom_center"/>
+  <anchor x="390" y="1536" name="top_center"/>
   <outline>
-    <component base="dotbelowcomb" xOffset="-252"/>
     <component base="i.sc"/>
+    <component base="dotbelowcomb" xOffset="-252"/>
+    <component base="uni0307" xOffset="-252" yOffset="160"/>
   </outline>
 </glyph>

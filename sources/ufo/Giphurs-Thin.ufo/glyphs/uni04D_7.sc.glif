@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni04D7.sc" format="2">
   <advance width="1044"/>
-  <anchor x="522" y="1536" name="top_center"/>
   <anchor x="522" y="1200" name="greek_v"/>
   <anchor x="522" y="1200" name="greek_kt"/>
   <anchor x="522" y="1200" name="greek_k"/>
@@ -9,8 +8,9 @@
   <anchor x="522" y="-20" name="bottom_cedilla"/>
   <anchor x="864" y="0" name="bottom_right"/>
   <anchor x="522" y="0" name="bottom_center"/>
+  <anchor x="522" y="1536" name="top_center"/>
   <outline>
-    <component base="uni0306" xOffset="-120" yOffset="160"/>
     <component base="uni0435.sc"/>
+    <component base="uni0306" xOffset="-120" yOffset="160"/>
   </outline>
 </glyph>
