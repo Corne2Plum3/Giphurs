@@ -1,5 +1,18 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni1E16" format="2">
-  <advance width="1208" />
-  <unicode hex="1E16" />
-  <anchor x="-40" y="1040" name="greek_v" /><anchor x="-244" y="1040" name="greek_t" /><anchor x="-118" y="1040" name="greek_k" /><anchor x="-284" y="1040" name="greek_kt" /><anchor x="604" y="0" name="bottom_center" /><anchor x="1068" y="0" name="bottom_right" /><anchor x="604" y="-20" name="bottom_cedilla" /><anchor x="604" y="1936" name="top_center" /><outline><component base="E" /><component base="uni0304" xOffset="-38" yOffset="340" /><component base="acutecomb" xOffset="-38" yOffset="560" /></outline></glyph>
+  <advance width="1208"/>
+  <unicode hex="1E16"/>
+  <anchor x="-40" y="1040" name="greek_v"/>
+  <anchor x="-244" y="1040" name="greek_t"/>
+  <anchor x="-118" y="1040" name="greek_k"/>
+  <anchor x="-284" y="1040" name="greek_kt"/>
+  <anchor x="604" y="0" name="bottom_center"/>
+  <anchor x="1068" y="0" name="bottom_right"/>
+  <anchor x="604" y="-20" name="bottom_cedilla"/>
+  <anchor x="604" y="1936" name="top_center"/>
+  <outline>
+    <component base="E"/>
+    <component base="uni0304" xOffset="-38" yOffset="340"/>
+    <component base="acutecomb" xOffset="-38" yOffset="560"/>
+  </outline>
+</glyph>

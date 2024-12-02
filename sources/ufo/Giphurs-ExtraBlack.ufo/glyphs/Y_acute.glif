@@ -1,5 +1,15 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Yacute" format="2">
-  <advance width="1572" />
-  <unicode hex="00DD" />
-  <anchor x="-404" y="1040" name="greek_kt" /><anchor x="-213" y="1040" name="greek_k" /><anchor x="-369" y="1040" name="greek_t" /><anchor x="-153" y="1040" name="greek_v" /><anchor x="786" y="0" name="bottom_center" /><anchor x="786" y="1716" name="top_center" /><outline><component base="Y" /><component base="acutecomb" xOffset="144" yOffset="340" /></outline></glyph>
+  <advance width="1572"/>
+  <unicode hex="00DD"/>
+  <anchor x="-404" y="1040" name="greek_kt"/>
+  <anchor x="-213" y="1040" name="greek_k"/>
+  <anchor x="-369" y="1040" name="greek_t"/>
+  <anchor x="-153" y="1040" name="greek_v"/>
+  <anchor x="786" y="0" name="bottom_center"/>
+  <anchor x="786" y="1716" name="top_center"/>
+  <outline>
+    <component base="Y"/>
+    <component base="acutecomb" xOffset="144" yOffset="340"/>
+  </outline>
+</glyph>

@@ -1,4 +1,12 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uogonek.sc" format="2">
-  <advance width="1290" />
-  <anchor x="645" y="-20" name="bottom_cedilla" /><anchor x="1220" y="1200" name="top_right" /><anchor x="645" y="1200" name="top_center" /><anchor x="712" y="-380" name="bottom_center" /><outline><component base="u.sc" /><component base="uni0328" xOffset="70" yOffset="0" /></outline></glyph>
+  <advance width="1290"/>
+  <anchor x="645" y="-20" name="bottom_cedilla"/>
+  <anchor x="1220" y="1200" name="top_right"/>
+  <anchor x="645" y="1200" name="top_center"/>
+  <anchor x="712" y="-380" name="bottom_center"/>
+  <outline>
+    <component base="u.sc"/>
+    <component base="uni0328" xOffset="70"/>
+  </outline>
+</glyph>

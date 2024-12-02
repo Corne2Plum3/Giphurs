@@ -1,5 +1,13 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="igrave" format="2">
-  <advance width="405" />
-  <unicode hex="00EC" />
-  <anchor x="203" y="-20" name="bottom_cedilla" /><anchor x="203" y="0" name="bottom_center" /><anchor x="225" y="0" name="bottom_right" /><anchor x="203" y="1376" name="top_center" /><outline><component base="dotlessi" /><component base="gravecomb" xOffset="-439" yOffset="0" /></outline></glyph>
+  <advance width="405"/>
+  <unicode hex="00EC"/>
+  <anchor x="203" y="-20" name="bottom_cedilla"/>
+  <anchor x="203" y="0" name="bottom_center"/>
+  <anchor x="225" y="0" name="bottom_right"/>
+  <anchor x="203" y="1376" name="top_center"/>
+  <outline>
+    <component base="dotlessi"/>
+    <component base="gravecomb" xOffset="-439"/>
+  </outline>
+</glyph>

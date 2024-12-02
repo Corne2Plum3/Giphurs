@@ -1,4 +1,12 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni1F37.sc.cv22" format="2">
-  <advance width="404" />
-  <anchor x="202" y="-20" name="bottom_cedilla" /><anchor x="224" y="0" name="bottom_right" /><anchor x="202" y="0" name="bottom_center" /><anchor x="202" y="1911" name="top_center" /><outline><component base="iota.sc.cv22" /><component base="uni1FDF" xOffset="-215" yOffset="160" /></outline></glyph>
+  <advance width="404"/>
+  <anchor x="202" y="-20" name="bottom_cedilla"/>
+  <anchor x="224" y="0" name="bottom_right"/>
+  <anchor x="202" y="0" name="bottom_center"/>
+  <anchor x="202" y="1911" name="top_center"/>
+  <outline>
+    <component base="iota.sc.cv22"/>
+    <component base="uni1FDF" xOffset="-215" yOffset="160"/>
+  </outline>
+</glyph>
