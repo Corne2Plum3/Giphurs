@@ -256,16 +256,27 @@ def build_accented_glyph(glyph_name, ufo_dir):
             y = new_component_anchors[new_anchor][1] + y_offset
             glyph_anchors[new_anchor] = (x, y)  # replace if already here
 
+    # Create a list with the name of all anchors
+    glyph_anchors_keys = list(glyph_anchors.keys())
+
+    # greek_* anchors : either we keep all of them or remove them all (greek_kt, greek_t, greek_k, greek_v)
+    greek_anchors_count = 0
+    for anchor in glyph_anchors_keys:  # This loop just counts them
+        if anchor[0:6] == "greek_":
+            greek_anchors_count += 1
+
     # Clean the anchors (delete/replace)
     i = 0
-    glyph_anchors_keys = list(glyph_anchors.keys())
     while i < len(glyph_anchors_keys):
         anchor = glyph_anchors_keys[i]
         if anchor[0] == "_":  # get rid of mark anchors
             glyph_anchors.pop(anchor)
-            glyph_anchors_keys = list(glyph_anchors.keys())
+            glyph_anchors_keys = list(glyph_anchors.keys())  # we have to update this to keep track of the list of used anchors
         elif anchor in MKMK_ANCHORS_REPLACE:  # replace mkmk anchor
             glyph_anchors[MKMK_ANCHORS_REPLACE[anchor]] = glyph_anchors[anchor]
+            glyph_anchors.pop(anchor)
+            glyph_anchors_keys = list(glyph_anchors.keys())
+        elif anchor[0:6] == "greek_" and greek_anchors_count > 0 and greek_anchors_count < 4:  # delete greek accents (see above)
             glyph_anchors.pop(anchor)
             glyph_anchors_keys = list(glyph_anchors.keys())
         else:
