@@ -1,11 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <glyph name="uni1E63.sc" format="2">
-  <advance width="1090"/>
-  <anchor x="545" y="-20" name="bottom_cedilla"/>
-  <anchor x="547" y="1200" name="top_center"/>
-  <anchor x="545" y="-336" name="bottom_center"/>
-  <outline>
-    <component base="s.sc"/>
-    <component base="dotbelowcomb" xOffset="-97"/>
-  </outline>
-</glyph>
+  <advance width="1090" />
+  <anchor x="545" y="-20" name="bottom_cedilla" /><anchor x="547" y="1200" name="top_center" /><anchor x="545" y="-336" name="bottom_center" /><outline><component base="s.sc" /><component base="dotbelowcomb" xOffset="-97" yOffset="0" /></outline></glyph>

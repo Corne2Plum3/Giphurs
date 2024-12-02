@@ -1,17 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <glyph name="Imacron" format="2">
-  <advance width="822"/>
-  <unicode hex="012A"/>
-  <anchor x="411" y="-20" name="bottom_cedilla"/>
-  <anchor x="-179" y="1040" name="greek_kt"/>
-  <anchor x="-19" y="1040" name="greek_k"/>
-  <anchor x="-140" y="1040" name="greek_t"/>
-  <anchor x="38" y="1040" name="greek_v"/>
-  <anchor x="435" y="0" name="bottom_right"/>
-  <anchor x="411" y="0" name="bottom_center"/>
-  <anchor x="411" y="1581" name="top_center"/>
-  <outline>
-    <component base="I"/>
-    <component base="uni0304" xOffset="-231" yOffset="340"/>
-  </outline>
-</glyph>
+  <advance width="822" />
+  <unicode hex="012A" />
+  <anchor x="411" y="-20" name="bottom_cedilla" /><anchor x="-179" y="1040" name="greek_kt" /><anchor x="-19" y="1040" name="greek_k" /><anchor x="-140" y="1040" name="greek_t" /><anchor x="38" y="1040" name="greek_v" /><anchor x="435" y="0" name="bottom_right" /><anchor x="411" y="0" name="bottom_center" /><anchor x="411" y="1581" name="top_center" /><outline><component base="I" /><component base="uni0304" xOffset="-231" yOffset="340" /></outline></glyph>

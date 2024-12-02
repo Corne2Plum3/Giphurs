@@ -1,16 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="Etatonos" format="2">
-  <advance width="1506"/>
-  <unicode hex="0389"/>
-  <anchor x="-17" y="1040" name="greek_kt"/>
-  <anchor x="143" y="1040" name="greek_k"/>
-  <anchor x="200" y="1040" name="greek_v"/>
-  <anchor x="850" y="-88" name="bottom_ypogegrammeni"/>
-  <anchor x="365" y="-18" name="bottom_cedilla"/>
-  <anchor x="850" y="2" name="bottom_center"/>
-  <anchor x="850" y="1382" name="top_center"/>
-  <outline>
-    <component base="Eta" xOffset="162"/>
-    <component base="tonos" xOffset="-120"/>
-  </outline>
-</glyph>
+  <advance width="1506" />
+  <unicode hex="0389" />
+  <anchor x="850" y="-88" name="bottom_ypogegrammeni" /><anchor x="365" y="-18" name="bottom_cedilla" /><anchor x="850" y="2" name="bottom_center" /><anchor x="850" y="1382" name="top_center" /><outline><component base="Eta" xOffset="162" yOffset="0" /><component base="tonos" xOffset="-120" yOffset="0" /></outline></glyph>

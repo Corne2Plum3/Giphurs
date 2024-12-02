@@ -1,15 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <glyph name="uni1FE0" format="2">
-  <advance width="1090"/>
-  <unicode hex="1FE0"/>
-  <anchor x="505" y="1040" name="greek_v"/>
-  <anchor x="505" y="1040" name="greek_kt"/>
-  <anchor x="505" y="1040" name="greek_k"/>
-  <anchor x="505" y="1040" name="greek_t"/>
-  <anchor x="565" y="0" name="bottom_center"/>
-  <anchor x="505" y="1376" name="top_center"/>
-  <outline>
-    <component base="upsilon"/>
-    <component base="uni0306" xOffset="-137"/>
-  </outline>
-</glyph>
+  <advance width="1090" />
+  <unicode hex="1FE0" />
+  <anchor x="505" y="1040" name="greek_v" /><anchor x="505" y="1040" name="greek_kt" /><anchor x="505" y="1040" name="greek_k" /><anchor x="505" y="1040" name="greek_t" /><anchor x="565" y="0" name="bottom_center" /><anchor x="505" y="1376" name="top_center" /><outline><component base="upsilon" /><component base="uni0306" xOffset="-137" yOffset="0" /></outline></glyph>

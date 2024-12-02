@@ -1,11 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <glyph name="kcommaaccent" format="2">
-  <advance width="1059"/>
-  <unicode hex="0137"/>
-  <anchor x="230" y="1380" name="top_center"/>
-  <anchor x="568" y="-409" name="bottom_center"/>
-  <outline>
-    <component base="k"/>
-    <component base="uni0326" xOffset="-74"/>
-  </outline>
-</glyph>
+  <advance width="1059" />
+  <unicode hex="0137" />
+  <anchor x="230" y="1380" name="top_center" /><anchor x="568" y="-409" name="bottom_center" /><outline><component base="k" /><component base="uni0326" xOffset="-74" yOffset="0" /></outline></glyph>

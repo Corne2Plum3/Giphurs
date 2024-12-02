@@ -1,13 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <glyph name="uogonek" format="2">
-  <advance width="1156"/>
-  <unicode hex="0173"/>
-  <anchor x="538" y="-20" name="bottom_cedilla"/>
-  <anchor x="1016" y="1040" name="top_right"/>
-  <anchor x="899" y="-336" name="bottom_center"/>
-  <anchor x="578" y="1040" name="top_center"/>
-  <outline>
-    <component base="u"/>
-    <component base="uni0328" xOffset="257"/>
-  </outline>
-</glyph>
+  <advance width="1156" />
+  <unicode hex="0173" />
+  <anchor x="538" y="-20" name="bottom_cedilla" /><anchor x="1016" y="1040" name="top_right" /><anchor x="899" y="-336" name="bottom_center" /><anchor x="578" y="1040" name="top_center" /><outline><component base="u" /><component base="uni0328" xOffset="257" yOffset="0" /></outline></glyph>

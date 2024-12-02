@@ -1,13 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <glyph name="uhungarumlaut.sc" format="2">
-  <advance width="1238"/>
-  <anchor x="619" y="-20" name="bottom_cedilla"/>
-  <anchor x="1098" y="1200" name="top_right"/>
-  <anchor x="761" y="0" name="bottom_right"/>
-  <anchor x="619" y="0" name="bottom_center"/>
-  <anchor x="619" y="1536" name="top_center"/>
-  <outline>
-    <component base="u.sc"/>
-    <component base="uni030B" xOffset="-23" yOffset="160"/>
-  </outline>
-</glyph>
+  <advance width="1238" />
+  <anchor x="619" y="-20" name="bottom_cedilla" /><anchor x="1098" y="1200" name="top_right" /><anchor x="761" y="0" name="bottom_right" /><anchor x="619" y="0" name="bottom_center" /><anchor x="619" y="1536" name="top_center" /><outline><component base="u.sc" /><component base="uni030B" xOffset="-23" yOffset="160" /></outline></glyph>

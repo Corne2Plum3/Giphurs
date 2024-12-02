@@ -21,7 +21,8 @@ COMPONENTS_LIST = "sources/custom_components.csv"
 COMPONENTS_LIST_DELIM = ";"
 MKMK_ANCHORS_REPLACE = {
     "mkmk_top_center": "top_center",
-    "mkmk_bottom_center": "bottom_center"
+    "mkmk_bottom_center": "bottom_center",
+    "mkmk_greek_top_center": "top_center"  # under special conditions replaces mkmk_top_center
 }
 
 def get_glyph_anchor_points(glyph_name, ufo_dir):
@@ -264,6 +265,15 @@ def build_accented_glyph(glyph_name, ufo_dir):
     for anchor in glyph_anchors_keys:  # This loop just counts them
         if anchor[0:6] == "greek_":
             greek_anchors_count += 1
+
+    # Keep only mkmk_greek_top_center on lowercase and top_center on uppercase if both are here (detected by the x-coordinates of these 2 anchors if they are here) for U+1Fxx glyphs
+    if "mkmk_greek_top_center" in glyph_anchors_keys and "top_center" in glyph_anchors_keys:
+        if abs(glyph_anchors["mkmk_greek_top_center"][0] - glyph_anchors["top_center"][0]) < 5:  # lowercase
+            del glyph_anchors["top_center"]
+            glyph_anchors_keys.pop(glyph_anchors_keys.index("top_center")) 
+        else:  # uppercase
+            del glyph_anchors["mkmk_greek_top_center"]
+            glyph_anchors_keys.pop(glyph_anchors_keys.index("mkmk_greek_top_center")) 
 
     # Clean the anchors (delete/replace)
     i = 0

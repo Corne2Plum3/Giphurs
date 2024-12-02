@@ -1,14 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <glyph name="iotadieresistonos" format="2">
-  <advance width="540"/>
-  <unicode hex="0390"/>
-  <anchor x="203" y="1040" name="greek_v"/>
-  <anchor x="203" y="1040" name="greek_kt"/>
-  <anchor x="203" y="1040" name="greek_k"/>
-  <anchor x="203" y="1040" name="greek_t"/>
-  <anchor x="312" y="0" name="bottom_center"/>
-  <outline>
-    <component base="iota"/>
-    <component base="dieresistonos" xOffset="-140"/>
-  </outline>
-</glyph>
+  <advance width="540" />
+  <unicode hex="0390" />
+  <anchor x="203" y="1040" name="greek_v" /><anchor x="203" y="1040" name="greek_kt" /><anchor x="203" y="1040" name="greek_k" /><anchor x="203" y="1040" name="greek_t" /><anchor x="312" y="0" name="bottom_center" /><anchor x="203" y="1632" name="top_center" /><outline><component base="iota" /><component base="dieresistonos" xOffset="-141" yOffset="0" /></outline></glyph>

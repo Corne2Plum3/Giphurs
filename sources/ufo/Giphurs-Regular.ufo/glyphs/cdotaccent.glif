@@ -1,12 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <glyph name="cdotaccent" format="2">
-  <advance width="1142"/>
-  <unicode hex="010B"/>
-  <anchor x="598" y="-20" name="bottom_cedilla"/>
-  <anchor x="598" y="0" name="bottom_center"/>
-  <anchor x="598" y="1376" name="top_center"/>
-  <outline>
-    <component base="c"/>
-    <component base="uni0307" xOffset="-44"/>
-  </outline>
-</glyph>
+  <advance width="1142" />
+  <unicode hex="010B" />
+  <anchor x="598" y="-20" name="bottom_cedilla" /><anchor x="598" y="0" name="bottom_center" /><anchor x="598" y="1376" name="top_center" /><outline><component base="c" /><component base="uni0307" xOffset="-44" yOffset="0" /></outline></glyph>

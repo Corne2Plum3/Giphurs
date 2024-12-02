@@ -1,15 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <glyph name="Iogonek.cv22" format="2">
-  <advance width="470"/>
-  <anchor x="235" y="-20" name="bottom_cedilla"/>
-  <anchor x="-40" y="1040" name="greek_v"/>
-  <anchor x="-284" y="1040" name="greek_kt"/>
-  <anchor x="-118" y="1040" name="greek_k"/>
-  <anchor x="-244" y="1040" name="greek_t"/>
-  <anchor x="193" y="-336" name="bottom_center"/>
-  <anchor x="235" y="1380" name="top_center"/>
-  <outline>
-    <component base="I.cv22"/>
-    <component base="uni0328" xOffset="-449"/>
-  </outline>
-</glyph>
+  <advance width="470" />
+  <anchor x="235" y="-20" name="bottom_cedilla" /><anchor x="-40" y="1040" name="greek_v" /><anchor x="-284" y="1040" name="greek_kt" /><anchor x="-118" y="1040" name="greek_k" /><anchor x="-244" y="1040" name="greek_t" /><anchor x="193" y="-336" name="bottom_center" /><anchor x="235" y="1380" name="top_center" /><outline><component base="I.cv22" /><component base="uni0328" xOffset="-449" yOffset="0" /></outline></glyph>

@@ -1,15 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <glyph name="uni1F37.sc.cv22" format="2">
-  <advance width="460"/>
-  <anchor x="231" y="-20" name="bottom_cedilla"/>
-  <anchor x="231" y="1200" name="greek_t"/>
-  <anchor x="231" y="1200" name="greek_kt"/>
-  <anchor x="231" y="1200" name="greek_v"/>
-  <anchor x="320" y="0" name="bottom_right"/>
-  <anchor x="231" y="0" name="bottom_center"/>
-  <anchor x="231" y="1200" name="top_center"/>
-  <outline>
-    <component base="iota.sc.cv22"/>
-    <component base="uni1FDF" xOffset="-196" yOffset="160"/>
-  </outline>
-</glyph>
+  <advance width="460" />
+  <anchor x="231" y="-20" name="bottom_cedilla" /><anchor x="320" y="0" name="bottom_right" /><anchor x="231" y="0" name="bottom_center" /><anchor x="231" y="1911" name="top_center" /><outline><component base="iota.sc.cv22" /><component base="uni1FDF" xOffset="-176" yOffset="160" /></outline></glyph>

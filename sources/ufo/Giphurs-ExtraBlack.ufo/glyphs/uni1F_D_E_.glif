@@ -2,9 +2,44 @@
 <glyph name="uni1FDE" format="2">
   <advance width="978"/>
   <unicode hex="1FDE"/>
+  <anchor x="489" y="1480" name="mkmk_greek_top_center"/>
   <anchor x="489" y="1040" name="_greek_kt"/>
   <outline>
-    <component base="uni1FFD" xOffset="282"/>
-    <component base="uni1FFE" yOffset="-9"/>
+    <contour>
+      <point x="329" y="1434" type="curve" smooth="yes"/>
+      <point x="329" y="1501"/>
+      <point x="276" y="1554"/>
+      <point x="209" y="1554" type="curve" smooth="yes"/>
+      <point x="142" y="1554"/>
+      <point x="89" y="1501"/>
+      <point x="89" y="1434" type="curve" smooth="yes"/>
+      <point x="89" y="1367"/>
+      <point x="142" y="1314"/>
+      <point x="209" y="1314" type="curve" smooth="yes"/>
+      <point x="276" y="1314"/>
+      <point x="329" y="1367"/>
+    </contour>
+    <contour>
+      <point x="320" y="1237" type="line"/>
+      <point x="243" y="1249"/>
+      <point x="184" y="1298"/>
+      <point x="184" y="1351" type="curve" smooth="yes"/>
+      <point x="184" y="1377"/>
+      <point x="208" y="1434"/>
+      <point x="208" y="1434" type="curve"/>
+      <point x="209" y="1554" type="line"/>
+      <point x="141" y="1554"/>
+      <point x="50" y="1511"/>
+      <point x="50" y="1351" type="curve" smooth="yes"/>
+      <point x="50" y="1224"/>
+      <point x="189" y="1126"/>
+      <point x="284" y="1109" type="curve"/>
+    </contour>
+    <contour>
+      <point x="702" y="1224" type="line"/>
+      <point x="928" y="1480" type="line"/>
+      <point x="524" y="1480" type="line"/>
+      <point x="346" y="1224" type="line"/>
+    </contour>
   </outline>
 </glyph>
