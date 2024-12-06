@@ -1,5 +1,13 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="idieresis" format="2">
-  <advance width="500" />
-  <unicode hex="00EF" />
-  <anchor x="250" y="-20" name="bottom_cedilla" /><anchor x="250" y="0" name="bottom_center" /><anchor x="430" y="0" name="bottom_right" /><anchor x="250" y="1440" name="top_center" /><outline><component base="dotlessi" /><component base="uni0308" xOffset="-392" yOffset="0" /></outline></glyph>
+  <advance width="500"/>
+  <unicode hex="00EF"/>
+  <anchor x="250" y="-20" name="bottom_cedilla"/>
+  <anchor x="250" y="0" name="bottom_center"/>
+  <anchor x="430" y="0" name="bottom_right"/>
+  <anchor x="250" y="1440" name="top_center"/>
+  <outline>
+    <component base="dotlessi"/>
+    <component base="uni0308" xOffset="-392"/>
+  </outline>
+</glyph>

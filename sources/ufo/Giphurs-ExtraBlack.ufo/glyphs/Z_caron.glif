@@ -1,5 +1,11 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Zcaron" format="2">
-  <advance width="1374" />
-  <unicode hex="017D" />
-  <anchor x="687" y="0" name="bottom_center" /><anchor x="690" y="1716" name="top_center" /><outline><component base="Z" /><component base="uni030C" xOffset="48" yOffset="340" /></outline></glyph>
+  <advance width="1374"/>
+  <unicode hex="017D"/>
+  <anchor x="687" y="0" name="bottom_center"/>
+  <anchor x="690" y="1716" name="top_center"/>
+  <outline>
+    <component base="Z"/>
+    <component base="uni030C" xOffset="48" yOffset="340"/>
+  </outline>
+</glyph>

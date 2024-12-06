@@ -1,5 +1,11 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zdotaccent" format="2">
-  <advance width="1032" />
-  <unicode hex="017C" />
-  <anchor x="516" y="0" name="bottom_center" /><anchor x="516" y="1440" name="top_center" /><outline><component base="z" /><component base="uni0307" xOffset="-126" yOffset="0" /></outline></glyph>
+  <advance width="1032"/>
+  <unicode hex="017C"/>
+  <anchor x="516" y="0" name="bottom_center"/>
+  <anchor x="516" y="1440" name="top_center"/>
+  <outline>
+    <component base="z"/>
+    <component base="uni0307" xOffset="-126"/>
+  </outline>
+</glyph>
