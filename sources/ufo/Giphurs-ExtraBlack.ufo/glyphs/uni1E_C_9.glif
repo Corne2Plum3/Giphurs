@@ -1,13 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <glyph name="uni1EC9" format="2">
-  <advance width="500"/>
-  <unicode hex="1EC9"/>
-  <anchor x="250" y="-20" name="bottom_cedilla"/>
-  <anchor x="250" y="0" name="bottom_center"/>
-  <anchor x="430" y="0" name="bottom_right"/>
-  <anchor x="250" y="1480" name="top_center"/>
-  <outline>
-    <component base="dotlessi"/>
-    <component base="hookabovecomb" xOffset="-392"/>
-  </outline>
-</glyph>
+  <advance width="500" />
+  <unicode hex="1EC9" />
+  <anchor x="250" y="-20" name="bottom_cedilla" /><anchor x="250" y="0" name="bottom_center" /><anchor x="430" y="0" name="bottom_right" /><anchor x="250" y="1480" name="top_center" /><outline><component base="dotlessi" /><component base="hookabovecomb" xOffset="-392" yOffset="0" /></outline></glyph>

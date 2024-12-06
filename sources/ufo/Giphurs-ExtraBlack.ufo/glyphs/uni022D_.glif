@@ -1,15 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <glyph name="uni022D" format="2">
-  <advance width="1200"/>
-  <unicode hex="022D"/>
-  <anchor x="602" y="-20" name="bottom_cedilla"/>
-  <anchor x="791" y="0" name="bottom_right"/>
-  <anchor x="1092" y="1040" name="top_right"/>
-  <anchor x="600" y="0" name="bottom_center"/>
-  <anchor x="600" y="1646" name="top_center"/>
-  <outline>
-    <component base="o"/>
-    <component base="tildecomb" xOffset="-42"/>
-    <component base="uni0304" xOffset="-43" yOffset="336"/>
-  </outline>
-</glyph>
+  <advance width="1200" />
+  <unicode hex="022D" />
+  <anchor x="602" y="-20" name="bottom_cedilla" /><anchor x="791" y="0" name="bottom_right" /><anchor x="1092" y="1040" name="top_right" /><anchor x="600" y="0" name="bottom_center" /><anchor x="600" y="1720" name="top_center" /><outline><component base="o" /><component base="tildecomb" xOffset="-42" yOffset="0" /><component base="uni0304" xOffset="-43" yOffset="336" /></outline></glyph>

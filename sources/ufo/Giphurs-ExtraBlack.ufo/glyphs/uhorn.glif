@@ -1,13 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <glyph name="uhorn" format="2">
-  <advance width="1192"/>
-  <unicode hex="01B0"/>
-  <anchor x="500" y="-20" name="bottom_cedilla"/>
-  <anchor x="596" y="1040" name="top_center"/>
-  <anchor x="596" y="0" name="bottom_center"/>
-  <anchor x="1146" y="0" name="bottom_right"/>
-  <outline>
-    <component base="u"/>
-    <component base="uni031B" xOffset="1122" yOffset="-440"/>
-  </outline>
-</glyph>
+  <advance width="1192" />
+  <unicode hex="01B0" />
+  <anchor x="500" y="-20" name="bottom_cedilla" /><anchor x="596" y="1040" name="top_center" /><anchor x="596" y="0" name="bottom_center" /><anchor x="1146" y="0" name="bottom_right" /><outline><component base="u" /><component base="uni031B" xOffset="1122" yOffset="-440" /></outline></glyph>

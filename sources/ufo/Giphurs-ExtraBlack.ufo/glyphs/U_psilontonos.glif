@@ -1,11 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="Upsilontonos" format="2">
-  <advance width="2129"/>
-  <unicode hex="038E"/>
-  <anchor x="1343" y="1380" name="top_center"/>
-  <anchor x="1343" y="0" name="bottom_center"/>
-  <outline>
-    <component base="Upsilon" xOffset="557"/>
-    <component base="tonos" xOffset="-35"/>
-  </outline>
-</glyph>
+  <advance width="2129" />
+  <unicode hex="038E" />
+  <anchor x="1343" y="1380" name="top_center" /><anchor x="1343" y="0" name="bottom_center" /><outline><component base="Upsilon" xOffset="557" yOffset="0" /><component base="tonos" xOffset="-35" yOffset="0" /></outline></glyph>

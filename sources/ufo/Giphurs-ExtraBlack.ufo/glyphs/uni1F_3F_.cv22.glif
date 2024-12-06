@@ -1,12 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="uni1F3F.cv22" format="2">
-  <advance width="1097"/>
-  <anchor x="817" y="-20" name="bottom_cedilla"/>
-  <anchor x="1007" y="0" name="bottom_right"/>
-  <anchor x="817" y="0" name="bottom_center"/>
-  <anchor x="817" y="1380" name="top_center"/>
-  <outline>
-    <component base="Iota.cv22" xOffset="557"/>
-    <component base="uni1FDF" xOffset="-50"/>
-  </outline>
-</glyph>
+  <advance width="1097" />
+  <anchor x="817" y="-20" name="bottom_cedilla" /><anchor x="1007" y="0" name="bottom_right" /><anchor x="817" y="0" name="bottom_center" /><anchor x="817" y="1380" name="top_center" /><outline><component base="Iota.cv22" xOffset="557" yOffset="0" /><component base="uni1FDF" xOffset="-50" yOffset="0" /></outline></glyph>

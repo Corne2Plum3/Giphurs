@@ -1,11 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <glyph name="scommaaccent.sc" format="2">
-  <advance width="1168"/>
-  <anchor x="584" y="-20" name="bottom_cedilla"/>
-  <anchor x="586" y="1200" name="top_center"/>
-  <anchor x="584" y="-440" name="bottom_center"/>
-  <outline>
-    <component base="s.sc"/>
-    <component base="uni0326" xOffset="-58"/>
-  </outline>
-</glyph>
+  <advance width="1168" />
+  <anchor x="584" y="-20" name="bottom_cedilla" /><anchor x="586" y="1200" name="top_center" /><anchor x="584" y="-440" name="bottom_center" /><outline><component base="s.sc" /><component base="uni0326" xOffset="-58" yOffset="0" /></outline></glyph>

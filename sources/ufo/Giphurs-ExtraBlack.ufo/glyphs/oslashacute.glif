@@ -1,11 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <glyph name="oslashacute" format="2">
-  <advance width="1180"/>
-  <unicode hex="01FF"/>
-  <anchor x="590" y="0" name="bottom_center"/>
-  <anchor x="590" y="1376" name="top_center"/>
-  <outline>
-    <component base="oslash"/>
-    <component base="acutecomb" xOffset="-52"/>
-  </outline>
-</glyph>
+  <advance width="1180" />
+  <unicode hex="01FF" />
+  <anchor x="590" y="0" name="bottom_center" /><anchor x="590" y="1376" name="top_center" /><outline><component base="oslash" /><component base="acutecomb" xOffset="-52" yOffset="0" /></outline></glyph>
