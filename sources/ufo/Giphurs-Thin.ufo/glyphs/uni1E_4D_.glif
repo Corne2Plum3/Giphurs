@@ -6,10 +6,10 @@
   <anchor x="578" y="0" name="bottom_center"/>
   <anchor x="974" y="1040" name="top_right"/>
   <anchor x="667" y="0" name="bottom_right"/>
-  <anchor x="578" y="1712" name="top_center"/>
+  <anchor x="578" y="1588" name="top_center"/>
   <outline>
     <component base="o"/>
-    <component base="tildecomb" xOffset="-64"/>
-    <component base="acutecomb" xOffset="-64" yOffset="336"/>
+    <component base="tildecomb.case" xOffset="-64"/>
+    <component base="acutecomb.case" xOffset="-64" yOffset="272"/>
   </outline>
 </glyph>

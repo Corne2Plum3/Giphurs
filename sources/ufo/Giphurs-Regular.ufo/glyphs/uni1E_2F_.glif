@@ -5,10 +5,9 @@
   <anchor x="231" y="-20" name="bottom_cedilla"/>
   <anchor x="230" y="0" name="bottom_center"/>
   <anchor x="320" y="0" name="bottom_right"/>
-  <anchor x="230" y="1712" name="top_center"/>
+  <anchor x="230" y="1632" name="top_center"/>
   <outline>
     <component base="dotlessi"/>
-    <component base="uni0308" xOffset="-412"/>
-    <component base="acutecomb" xOffset="-412" yOffset="336"/>
+    <component base="uni0308_acutecomb" xOffset="-192"/>
   </outline>
 </glyph>
