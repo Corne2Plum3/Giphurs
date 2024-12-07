@@ -17,16 +17,11 @@ And thus are built:
 * subscript, numerators and denominators (+ pnum and tnum versions)
 * U+2460-U+24FF and U+2776-U+277F as long they have numbers
 
-The program takes 2 parameters: the weight value (100,400,1000) and the ufo directory location.
-
-VERY IMPORTANT NOTE: For the black circled numbers the components must be unlinked manually,
-otherwise the numbers won't be visible after compilation. There must be a way to automate this but
-the problem is that when compiling to ttf, the nested components are kept, and as the direction of
-numbers outline are set to clockwise, removing the ability of the numbers to make a "hole" in the
-black circle.
+The program takes 2 parameters: the weight value (100, 400, 1000) and the ufo directory location.
 """
 
 import sys
+from ufo_utils import *
 import xml.etree.ElementTree as ET
 
 DIGITS_NAMES_ENGLISH = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
@@ -195,7 +190,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
     TWO_DIGITS_OVERLAP = {  # for NORMAL size without TWO_DIGITS_WIDTH_COEF applied
         "100": 140,
         "400": 120,
-        "1000": 35
+        "1000": 40
     }
     DIGITS_HEIGHT = 1480
     SUPS_HEIGHT = 858
@@ -411,6 +406,10 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
     tree = ET.ElementTree(xml_root)
     tree.write(f"{ufo_dir}/glyphs/{new_file_name}", encoding="UTF-8", xml_declaration=True)
     #print(f"{glyph_name}, {base_1}, {base_2}")
+
+    # Unlink reference for black circles
+    if type == "black_circle":
+        unlink_references(glyph_name, ufo_dir)
 
     return
 

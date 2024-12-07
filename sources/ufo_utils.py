@@ -56,36 +56,6 @@ def get_glyph_anchor_points(glyph_name, ufo_dir):
         anchor_dict[anchor.attrib["name"]] = (int(anchor.attrib["x"]), int(anchor.attrib["y"]))
     return anchor_dict
 
-def get_glyph_component_list(glyph_name):
-    """
-    Reads the list of components of glyph_name from COMPONENTS_LIST
-    
-    Returns `None` if the glyph is not found.
-    """
-    global COMPONENTS_LIST, COMPONENTS_LIST_DELIM
-    with open(COMPONENTS_LIST, "r") as csv_file:
-        csv_lines = csv_file.readlines()
-        i = 1
-        components_list = []
-
-        while i < len(csv_lines) and csv_lines[i].split(COMPONENTS_LIST_DELIM)[0] != glyph_name:  # find the glyph on the list
-            i += 1
-            
-        if csv_lines[i].split(COMPONENTS_LIST_DELIM)[0] == glyph_name:  # if found
-            csv_entry = csv_lines[i].split(COMPONENTS_LIST_DELIM)
-            j = 1
-            while j < len(csv_entry):
-                component = csv_lines[i].split(COMPONENTS_LIST_DELIM)[j].strip()
-                if component != "":
-                    components_list.append(component)
-                j += 1
-            
-            #print(f"Found {len(components_list)} components for {glyph_name} at line {i+1}: {components_list}")
-            return components_list
-        
-        # We're here if the glyph hasn't been found
-        return None
-
 def get_glyph_metrics(glyph_name, ufo_dir):
     """
     Returns a dict with some informations about the metrics of the glyph:
@@ -151,6 +121,39 @@ def get_glyph_width(glyph_name, ufo_dir):
     xml_tree = ET.parse(get_glif_from_name(glyph_name, ufo_dir))
     return int(xml_tree.getroot().find("advance").attrib["width"])
 
+def get_glyph_xml_points(glyph_name, ufo_dir, x_offset=0, y_offset=0, x_scale=1.0, y_scale=1.0):
+    """
+    Returns a list of all points (as xml <point> node).
+    If a component is found, their points is also returned, recursively.
+
+    Returns a list of list: a list of all contours, and for each contours, the xml <point> nodes.
+
+    User shouldn't set x_offset and y_offset and keep these at 0.
+    """
+    xml_tree = ET.parse(get_glif_from_name(glyph_name, ufo_dir))
+    xml_outline = xml_tree.getroot().find("outline")
+    xml_contour_nodes = []
+    for element in xml_outline:
+        if element.tag == "contour":
+            xml_contour_points = element.findall("point")
+            xml_contour_points_with_offset = []
+            for point in xml_contour_points:
+                point.attrib["x"] = str(int(float(point.attrib["x"]) * x_scale) + x_offset)
+                point.attrib["y"] = str(int(float(point.attrib["y"]) * y_scale) + y_offset)
+                xml_contour_points_with_offset.append(point)
+            xml_contour_nodes.append(xml_contour_points_with_offset)
+        elif element.tag == "component":
+            # calculate offset
+            x_offset = 0
+            if "xOffset" in element.attrib:
+                x_offset = int(element.attrib["xOffset"])
+            y_offset = 0
+            if "yOffset" in element.attrib:
+                y_offset = int(element.attrib["yOffset"])
+            xml_contour_nodes += get_glyph_xml_points(element.attrib["base"], ufo_dir, x_offset, y_offset)
+
+    return xml_contour_nodes
+
 def move_glyph(glyph_name, ufo_dir, x, y, move_points=True, move_anchors=True, move_width=False):
     """
     Translate all elements of the glyphs by (x, y). The parameter `move_width`, if set to True,
@@ -187,4 +190,54 @@ def move_glyph(glyph_name, ufo_dir, x, y, move_points=True, move_anchors=True, m
                         outline_element.attrib["yOffset"] = str(y)
         # ignore other type of elements, keeping them as is
     xml_tree.write(filename, encoding="UTF-8", xml_declaration=True)
+    return
+
+def unlink_references(glyph_name, ufo_dir):
+    """
+    Replace all components of a glyph (references towards other glyphs) by points.
+
+    Changes UFO file.
+
+    Returns nothing.
+    """
+
+    # Load file to edit
+    file_name = get_glif_from_name(glyph_name, ufo_dir)
+    xml_tree = ET.parse(file_name)
+    xml_root = xml_tree.getroot()
+    xml_outline = xml_root.find("outline")
+
+    # Find all <components> node
+    components_nodes = xml_outline.findall("component")
+
+    # Get points from components_nodes
+    xml_contours_list = []
+    for component in components_nodes:
+        x_offset = 0
+        y_offset = 0
+        x_scale = 1.0
+        y_scale = 1.0
+        if "xOffset" in component.attrib:
+            x_offset = int(float(component.attrib["xOffset"]))
+        if "yOffset" in component.attrib:
+            y_offset = int(float(component.attrib["yOffset"]))
+        if "xScale" in component.attrib:
+            x_scale = float(component.attrib["xScale"])
+        if "yScale" in component.attrib:
+            y_scale = float(component.attrib["yScale"])
+        xml_contours_list += get_glyph_xml_points(component.attrib["base"], ufo_dir, x_offset, y_offset, x_scale, y_scale)
+
+    # Delete components nodes
+    for node in xml_outline.findall("component"):
+        xml_outline.remove(node)
+
+    # Inject the new contours
+    for contour in xml_contours_list:
+        new_node = ET.SubElement(xml_outline, "contour", {})
+        for point in contour:
+            ET.SubElement(new_node, point.tag, point.attrib)
+
+    # Save
+    xml_tree.write(file_name, encoding="UTF-8", xml_declaration=True)
+    
     return
