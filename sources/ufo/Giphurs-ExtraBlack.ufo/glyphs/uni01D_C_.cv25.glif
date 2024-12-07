@@ -4,10 +4,9 @@
   <anchor x="1122" y="1040" name="top_right"/>
   <anchor x="807" y="0" name="bottom_right"/>
   <anchor x="596" y="0" name="bottom_center"/>
-  <anchor x="596" y="1776" name="top_center"/>
+  <anchor x="596" y="1632" name="top_center"/>
   <outline>
     <component base="u.cv25"/>
-    <component base="uni0308" xOffset="-46"/>
-    <component base="gravecomb" xOffset="-46" yOffset="400"/>
+    <component base="uni0308_gravecomb" xOffset="46"/>
   </outline>
 </glyph>
