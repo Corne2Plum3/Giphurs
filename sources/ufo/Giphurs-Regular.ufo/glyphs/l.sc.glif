@@ -4,6 +4,13 @@
   <anchor x="529" y="0" name="bottom_center"/>
   <anchor x="230" y="1200" name="top_center"/>
   <outline>
-    <component base="uniE039"/>
+    <contour>
+      <point x="320" y="1200" type="line"/>
+      <point x="320" y="160" type="line"/>
+      <point x="918" y="160" type="line"/>
+      <point x="918" y="0" type="line"/>
+      <point x="140" y="0" type="line"/>
+      <point x="140" y="1200" type="line"/>
+    </contour>
   </outline>
 </glyph>

@@ -4437,8 +4437,8 @@ lookup ccmp_latn {
     sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
-    sub \i \uni0308  by \idieresis;
     sub \i \uni0307  by \idieresis;
+    sub \i \uni0308  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
@@ -4497,8 +4497,8 @@ lookup ccmp_latn {
     sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \iogonek \gravecomb  by \iogonek;
     sub \i \uni0328  by \iogonek;
+    sub \iogonek \gravecomb  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4587,13 +4587,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \u \uni0308 \gravecomb  by \uni01DC;
-    sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \AE \acutecomb  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \Oslash \acutecomb  by \uni01E0;
     sub \A \uni0307 \uni0304  by \uni01E0;
+    sub \Oslash \acutecomb  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5548,8 +5548,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0456 \uni0308  by \uni0457;
+    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -9863,7 +9863,7 @@ lookup mark_Mark_positioning {
 	<anchor 605 1040> mark @top_center
 	<anchor 605 0> mark @bottom_center;
   pos base [\uniE031 \ae.cv23 \uni04D5.cv23 ] <anchor 950 1040> mark @top_center;
-  pos base [\uniE032 ] <anchor 560 -360> mark @bottom_center
+  pos base [\uniE032 \g.cv24 ] <anchor 560 -360> mark @bottom_center
 	<anchor 560 1040> mark @top_center;
   pos base [\uniE033 \u.cv25 ] <anchor 578 1040> mark @top_center
 	<anchor 578 0> mark @bottom_center
@@ -9898,7 +9898,7 @@ lookup mark_Mark_positioning {
 	<anchor 663 1200> mark @top_center;
   pos base [\uniE03B \r.sc ] <anchor 539 1200> mark @top_center
 	<anchor 539 0> mark @bottom_center;
-  pos base [\uniE03C \s.sc ] <anchor 532 -20> mark @bottom_cedilla
+  pos base [\uniE03C \s.sc \uni0455.sc ] <anchor 532 -20> mark @bottom_cedilla
 	<anchor 532 0> mark @bottom_center
 	<anchor 534 1200> mark @top_center;
   pos base [\uniE03D \u.sc ] <anchor 602 -20> mark @bottom_cedilla
@@ -9906,7 +9906,7 @@ lookup mark_Mark_positioning {
 	<anchor 682 0> mark @bottom_right
 	<anchor 602 1200> mark @top_center
 	<anchor 602 0> mark @bottom_center;
-  pos base [\uniE03F ] <anchor 857 0> mark @bottom_center
+  pos base [\uniE03F \ae.sc \uni04D5.sc ] <anchor 857 0> mark @bottom_center
 	<anchor 1029 1200> mark @top_center;
   pos base [\uniE03E \y.sc \uni024F.sc \upsilon.sc \uni0443.sc \uni04AF.sc \uni04B1.sc ] <anchor 589 1200> mark @top_center
 	<anchor 588 0> mark @bottom_center;
@@ -9959,8 +9959,6 @@ lookup mark_Mark_positioning {
 	<anchor 1043 0> mark @bottom_right
 	<anchor 582 0> mark @bottom_center
 	<anchor 582 1640> mark @top_center;
-  pos base [\ae.sc ] <anchor 968 0> mark @bottom_center
-	<anchor 1249 1200> mark @top_center;
   pos base [\ccedilla.sc ] <anchor 678 -350> mark @bottom_center
 	<anchor 663 1200> mark @top_center;
   pos base [\egrave.sc \eacute.sc \ecircumflex.sc \edieresis.sc \emacron.sc \ebreve.sc \edotaccent.sc \ecaron.sc \uni0205.sc \uni0207.sc \epsilontonos.sc \uni0450.sc \uni0451.sc \uni04D7.sc \uni1EBD.sc \uni1EBF.sc \uni1EC1.sc \uni1EC3.sc \uni1F72.sc \uni1F73.sc ] <anchor 522 -20> mark @bottom_cedilla
@@ -10194,8 +10192,6 @@ lookup mark_Mark_positioning {
 	<anchor 544 0> mark @bottom_center;
   pos base [\uni0453.sc \uni1E1F.sc ] <anchor 203 0> mark @bottom_center
 	<anchor 522 1536> mark @top_center;
-  pos base [\uni0455.sc ] <anchor 532 0> mark @bottom_center
-	<anchor 534 1200> mark @top_center;
   pos base [\uni045C.sc ] <anchor 598 0> mark @bottom_center
 	<anchor 598 1536> mark @top_center;
   pos base [\uni0463.sc \uni048D.sc ] <anchor 608 0> mark @bottom_center
@@ -10601,8 +10597,6 @@ lookup mark_Mark_positioning {
   pos base [\uni1EB3.cv23 ] <anchor 984 0> mark @bottom_right
 	<anchor 605 0> mark @bottom_center
 	<anchor 605 1724> mark @top_center;
-  pos base [\g.cv24 ] <anchor 605 1040> mark @top_center
-	<anchor 605 -360> mark @bottom_center;
   pos base [\gcircumflex.cv24 \gbreve.cv24 \gdotaccent.cv24 \gcaron.cv24 \uni01F5.cv24 \uni1E21.cv24 ] <anchor 605 -360> mark @bottom_center
 	<anchor 605 1376> mark @top_center;
   pos base [\gcommaaccent.cv24 ] <anchor 605 -360> mark @bottom_center
@@ -11949,7 +11943,8 @@ feature mkmk {
 	\uni2152.cv01.cv20.ss06.zero \uni2152.cv11.ss06.zero 
 	\uni2152.cv10.cv11.ss06.zero \uni2152.cv11.cv20.ss06.zero \colon.centered 
 	\asterisk.centered \dotlessuni0268 \dotlessuni029D \dotlessuni02B2 
-	\dotlessuni1DA4 \dotlessuni2071 \dotlessuni2148 \dotlessuni2149 \Eng.locl ];
+	\dotlessuni1DA4 \dotlessuni2071 \dotlessuni2148 \dotlessuni2149 \Eng.locl 
+	\double_circle_empty ];
 @GDEF_Ligature = [\i \j \igrave \iacute \icircumflex \idieresis \dotlessi \itilde 
 	\imacron \ibreve \iogonek \jcircumflex \uni01D0 \uni0209 \uni020B \uni0249 
 	\uni0457 \uni1EC9 \arrowright \arrowleft \arrowboth \arrowdblright 
