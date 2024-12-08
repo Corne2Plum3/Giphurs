@@ -2,14 +2,15 @@
 <glyph name="uni0208.cv22" format="2">
   <advance width="520"/>
   <anchor x="260" y="-20" name="bottom_cedilla"/>
-  <anchor x="-138" y="1040" name="greek_v"/>
-  <anchor x="-354" y="1040" name="greek_t"/>
-  <anchor x="-198" y="1040" name="greek_k"/>
   <anchor x="-389" y="1040" name="greek_kt"/>
+  <anchor x="-198" y="1040" name="greek_k"/>
+  <anchor x="-354" y="1040" name="greek_t"/>
+  <anchor x="-138" y="1040" name="greek_v"/>
   <anchor x="450" y="0" name="bottom_right"/>
   <anchor x="260" y="0" name="bottom_center"/>
+  <anchor x="260" y="1716" name="top_center"/>
   <outline>
-    <component base="uni030F" xOffset="-382" yOffset="340"/>
     <component base="I.cv22"/>
+    <component base="uni030F" xOffset="-382" yOffset="340"/>
   </outline>
 </glyph>

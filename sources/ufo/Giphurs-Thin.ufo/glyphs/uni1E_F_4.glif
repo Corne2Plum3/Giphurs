@@ -7,8 +7,9 @@
   <anchor x="-99" y="1040" name="greek_k"/>
   <anchor x="-259" y="1040" name="greek_kt"/>
   <anchor x="671" y="1380" name="top_center"/>
+  <anchor x="671" y="-336" name="bottom_center"/>
   <outline>
-    <component base="dotbelowcomb" xOffset="29"/>
     <component base="Y"/>
+    <component base="dotbelowcomb" xOffset="29"/>
   </outline>
 </glyph>

@@ -2,15 +2,14 @@
 <glyph name="uni1ED9" format="2">
   <advance width="1156"/>
   <unicode hex="1ED9"/>
-  <anchor x="407" y="1400" name="mark_anchor_left"/>
-  <anchor x="749" y="1400" name="mark_anchor_right"/>
-  <anchor x="578" y="1506" name="mark_anchor_top"/>
   <anchor x="578" y="-20" name="bottom_cedilla"/>
   <anchor x="974" y="1040" name="top_right"/>
   <anchor x="667" y="0" name="bottom_right"/>
+  <anchor x="578" y="-336" name="bottom_center"/>
+  <anchor x="578" y="1376" name="top_center"/>
   <outline>
-    <component base="uni0302" xOffset="-64"/>
-    <component base="dotbelowcomb" xOffset="-64"/>
     <component base="o"/>
+    <component base="dotbelowcomb" xOffset="-64"/>
+    <component base="uni0302" xOffset="-64"/>
   </outline>
 </glyph>

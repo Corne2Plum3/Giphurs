@@ -21,8 +21,8 @@ help:
 	@echo "  * make fonts        : Generate font binaries from UFO sources."
 	@echo "  * make tests -i     : Runs automated tests (output at the $(tests_output_dir)/ folder ). -i option is mandatory."
 	@echo "UFO sources scripts"
-	@echo "  * make ufo_anchors_on_accented_glyphs : Place anchors points on accented glyphs (the UFO files must be opened and exported throught Fontforge after)."
-	@echo "  * make ufo_digits_glyphs              : Build digits based glyphs."
+	@echo "  * make ufo_accented_glyphs            : Build accented glyphs (the UFO files must be opened and exported throught Fontforge after)."
+	@echo "  * make ufo_digits_glyphs              : Build digits based glyphs (the UFO files must be opened and exported throught Fontforge after)."
 	@echo "  * make ufo_use_typo_metrics           : Enable bit 7 ("use typo metrics") of openTypeOS2Selection in fontinfo.plist"
 
 # make a zip archive of the font folder
@@ -47,11 +47,11 @@ tests:
 	wait
 	@echo "Done"
 
-# place anchors points on accented glyphs
-ufo_anchors_on_accented_glyphs: sources/ufo
-	python3 sources/ufo_anchors_on_accented_glyphs.py sources/ufo/Giphurs-Thin.ufo
-	python3 sources/ufo_anchors_on_accented_glyphs.py sources/ufo/Giphurs-Regular.ufo
-	python3 sources/ufo_anchors_on_accented_glyphs.py sources/ufo/Giphurs-ExtraBlack.ufo
+# build accented glyphs
+ufo_accented_glyphs: sources/ufo
+	python3 sources/ufo_accented_glyphs.py sources/ufo/Giphurs-Thin.ufo
+	python3 sources/ufo_accented_glyphs.py sources/ufo/Giphurs-Regular.ufo
+	python3 sources/ufo_accented_glyphs.py sources/ufo/Giphurs-ExtraBlack.ufo
 	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
 
 # build number based glyphs
@@ -59,6 +59,7 @@ ufo_digits_glyphs: sources/ufo
 	python3 sources/ufo_digits_glyphs.py 100 sources/ufo/Giphurs-Thin.ufo
 	python3 sources/ufo_digits_glyphs.py 400 sources/ufo/Giphurs-Regular.ufo
 	python3 sources/ufo_digits_glyphs.py 1000 sources/ufo/Giphurs-ExtraBlack.ufo
+	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
 
 # edit fontinfo.plist to set the bit 7 of openTypeOS2Selection ("use typo metrics")
 # Note: This is currently automatically run when building fonts

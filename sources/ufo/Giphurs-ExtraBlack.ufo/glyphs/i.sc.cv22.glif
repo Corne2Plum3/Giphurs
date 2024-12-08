@@ -10,6 +10,15 @@
   <anchor x="252" y="0" name="bottom_center"/>
   <anchor x="252" y="1200" name="top_center"/>
   <outline>
-    <component base="uniE041"/>
+    <contour>
+      <point x="430" y="160" type="line"/>
+      <point x="430" y="0" type="line"/>
+      <point x="70" y="0" type="line"/>
+      <point x="70" y="160" type="line"/>
+      <point x="70" y="1040" type="line"/>
+      <point x="70" y="1200" type="line"/>
+      <point x="430" y="1200" type="line"/>
+      <point x="430" y="1040" type="line"/>
+    </contour>
   </outline>
 </glyph>

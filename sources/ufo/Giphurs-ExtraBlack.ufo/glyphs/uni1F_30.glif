@@ -2,13 +2,10 @@
 <glyph name="uni1F30" format="2">
   <advance width="665"/>
   <unicode hex="1F30"/>
-  <anchor x="250" y="1040" name="greek_t"/>
-  <anchor x="250" y="1040" name="greek_kt"/>
-  <anchor x="250" y="1040" name="greek_v"/>
-  <anchor x="250" y="1040" name="top_center"/>
   <anchor x="321" y="0" name="bottom_center"/>
+  <anchor x="250" y="1480" name="top_center"/>
   <outline>
-    <component base="uni1FBF" xOffset="61"/>
     <component base="iota"/>
+    <component base="uni1FBF" xOffset="60"/>
   </outline>
 </glyph>

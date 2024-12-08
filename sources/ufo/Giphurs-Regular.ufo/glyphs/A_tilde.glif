@@ -2,10 +2,6 @@
 <glyph name="Atilde" format="2">
   <advance width="1356"/>
   <unicode hex="00C3"/>
-  <anchor x="678" y="1994" name="mark_anchor_center"/>
-  <anchor x="678" y="1981" name="mark_anchor_top"/>
-  <anchor x="678" y="1866" name="mark_anchor_left"/>
-  <anchor x="678" y="1866" name="mark_anchor_right"/>
   <anchor x="1188" y="-20" name="bottom_cedilla"/>
   <anchor x="310" y="1040" name="greek_v"/>
   <anchor x="66" y="1040" name="greek_kt"/>
@@ -14,8 +10,9 @@
   <anchor x="1286" y="0" name="bottom_right"/>
   <anchor x="678" y="0" name="bottom_center"/>
   <anchor x="678" y="-90" name="bottom_ypogegrammeni"/>
+  <anchor x="678" y="1716" name="top_center"/>
   <outline>
-    <component base="tildecomb" xOffset="36" yOffset="340"/>
     <component base="A"/>
+    <component base="tildecomb" xOffset="36" yOffset="340"/>
   </outline>
 </glyph>

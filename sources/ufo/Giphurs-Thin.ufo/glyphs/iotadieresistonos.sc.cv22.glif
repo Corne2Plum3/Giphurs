@@ -8,8 +8,9 @@
   <anchor x="202" y="1200" name="greek_t"/>
   <anchor x="224" y="0" name="bottom_right"/>
   <anchor x="202" y="0" name="bottom_center"/>
+  <anchor x="202" y="1792" name="top_center"/>
   <outline>
-    <component base="dieresistonos" xOffset="-141" yOffset="160"/>
     <component base="iota.sc.cv22"/>
+    <component base="dieresistonos" xOffset="-142" yOffset="160"/>
   </outline>
 </glyph>

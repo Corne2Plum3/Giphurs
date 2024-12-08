@@ -3,14 +3,11 @@
   <advance width="1328"/>
   <anchor x="1096" y="-20" name="bottom_cedilla"/>
   <anchor x="665" y="-80" name="bottom_ypogegrammeni"/>
-  <anchor x="665" y="1200" name="greek_t"/>
-  <anchor x="665" y="1200" name="greek_k"/>
-  <anchor x="665" y="1200" name="greek_kt"/>
   <anchor x="1293" y="0" name="bottom_right"/>
   <anchor x="665" y="0" name="bottom_center"/>
-  <anchor x="665" y="1200" name="top_center"/>
+  <anchor x="665" y="1536" name="top_center"/>
   <outline>
-    <component base="uni1FEF" xOffset="221" yOffset="160"/>
     <component base="alpha.sc"/>
+    <component base="uni1FEF" xOffset="221" yOffset="160"/>
   </outline>
 </glyph>

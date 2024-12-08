@@ -2,13 +2,10 @@
 <glyph name="uni1F5B" format="2">
   <advance width="2415"/>
   <unicode hex="1F5B"/>
-  <anchor x="690" y="1040" name="greek_v"/>
-  <anchor x="474" y="1040" name="greek_t"/>
-  <anchor x="630" y="1040" name="greek_k"/>
-  <anchor x="1629" y="1380" name="top_center"/>
-  <anchor x="1629" y="0" name="bottom_center"/>
+  <anchor x="1343" y="1380" name="top_center"/>
+  <anchor x="1343" y="0" name="bottom_center"/>
   <outline>
-    <component base="uni1FDD" xOffset="-50"/>
-    <component base="Upsilon" xOffset="843"/>
+    <component base="Upsilon" xOffset="557"/>
+    <component base="uni1FFD" xOffset="-35"/>
   </outline>
 </glyph>

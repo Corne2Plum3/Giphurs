@@ -2,13 +2,10 @@
 <glyph name="Upsilontonos" format="2">
   <advance width="2129"/>
   <unicode hex="038E"/>
-  <anchor x="404" y="1040" name="greek_v"/>
-  <anchor x="344" y="1040" name="greek_k"/>
-  <anchor x="153" y="1040" name="greek_kt"/>
   <anchor x="1343" y="1380" name="top_center"/>
   <anchor x="1343" y="0" name="bottom_center"/>
   <outline>
-    <component base="tonos" xOffset="-35"/>
     <component base="Upsilon" xOffset="557"/>
+    <component base="tonos" xOffset="-35"/>
   </outline>
 </glyph>

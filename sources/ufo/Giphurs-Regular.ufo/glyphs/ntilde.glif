@@ -2,13 +2,10 @@
 <glyph name="ntilde" format="2">
   <advance width="1156"/>
   <unicode hex="00F1"/>
-  <anchor x="578" y="1654" name="mark_anchor_center"/>
-  <anchor x="578" y="1641" name="mark_anchor_top"/>
-  <anchor x="578" y="1526" name="mark_anchor_left"/>
-  <anchor x="578" y="1526" name="mark_anchor_right"/>
   <anchor x="578" y="0" name="bottom_center"/>
+  <anchor x="578" y="1376" name="top_center"/>
   <outline>
-    <component base="tildecomb" xOffset="-64"/>
     <component base="n"/>
+    <component base="tildecomb" xOffset="-64"/>
   </outline>
 </glyph>

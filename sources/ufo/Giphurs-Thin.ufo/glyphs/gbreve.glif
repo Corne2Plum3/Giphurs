@@ -2,12 +2,10 @@
 <glyph name="gbreve" format="2">
   <advance width="1125"/>
   <unicode hex="011F"/>
-  <anchor x="543" y="1450" name="mark_anchor_right"/>
-  <anchor x="543" y="1450" name="mark_anchor_left"/>
-  <anchor x="543" y="1496" name="mark_anchor_top"/>
   <anchor x="543" y="-361" name="bottom_center"/>
+  <anchor x="543" y="1366" name="top_center"/>
   <outline>
-    <component base="uni0306" xOffset="-99" yOffset="-10"/>
     <component base="g"/>
+    <component base="uni0306" xOffset="-99" yOffset="-10"/>
   </outline>
 </glyph>

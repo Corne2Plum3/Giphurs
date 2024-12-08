@@ -2,9 +2,6 @@
 <glyph name="Hcircumflex" format="2">
   <advance width="1344"/>
   <unicode hex="0124"/>
-  <anchor x="517" y="1742" name="mark_anchor_left"/>
-  <anchor x="859" y="1742" name="mark_anchor_right"/>
-  <anchor x="688" y="1848" name="mark_anchor_top"/>
   <anchor x="-179" y="1040" name="greek_kt"/>
   <anchor x="-19" y="1040" name="greek_k"/>
   <anchor x="-140" y="1040" name="greek_t"/>
@@ -12,8 +9,9 @@
   <anchor x="688" y="-88" name="bottom_ypogegrammeni"/>
   <anchor x="203" y="-18" name="bottom_cedilla"/>
   <anchor x="688" y="0" name="bottom_center"/>
+  <anchor x="688" y="1718" name="top_center"/>
   <outline>
-    <component base="uni0302" xOffset="46" yOffset="342"/>
     <component base="H"/>
+    <component base="uni0302" xOffset="46" yOffset="342"/>
   </outline>
 </glyph>

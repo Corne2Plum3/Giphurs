@@ -2,16 +2,13 @@
 <glyph name="Umacron" format="2">
   <advance width="1344"/>
   <unicode hex="016A"/>
-  <anchor x="672" y="1896" name="mark_anchor_top"/>
-  <anchor x="672" y="1896" name="mark_anchor_right"/>
-  <anchor x="672" y="1896" name="mark_anchor_left"/>
-  <anchor x="672" y="1994" name="mark_anchor_center"/>
   <anchor x="672" y="-10" name="bottom_cedilla"/>
   <anchor x="787" y="0" name="bottom_right"/>
   <anchor x="672" y="0" name="bottom_center"/>
   <anchor x="1164" y="1480" name="top_right"/>
+  <anchor x="672" y="1716" name="top_center"/>
   <outline>
-    <component base="uni0304" xOffset="30" yOffset="340"/>
     <component base="U"/>
+    <component base="uni0304" xOffset="30" yOffset="340"/>
   </outline>
 </glyph>

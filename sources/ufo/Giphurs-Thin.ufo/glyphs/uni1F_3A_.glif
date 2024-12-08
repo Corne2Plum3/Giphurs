@@ -2,14 +2,11 @@
 <glyph name="uni1F3A" format="2">
   <advance width="1320"/>
   <unicode hex="1F3A"/>
-  <anchor x="479" y="1040" name="greek_k"/>
-  <anchor x="358" y="1040" name="greek_t"/>
-  <anchor x="536" y="1040" name="greek_v"/>
-  <anchor x="933" y="0" name="bottom_right"/>
-  <anchor x="909" y="0" name="bottom_center"/>
-  <anchor x="909" y="1380" name="top_center"/>
+  <anchor x="873" y="0" name="bottom_right"/>
+  <anchor x="849" y="0" name="bottom_center"/>
+  <anchor x="849" y="1380" name="top_center"/>
   <outline>
+    <component base="Iota" xOffset="438"/>
     <component base="uni1FCD" xOffset="-120"/>
-    <component base="Iota" xOffset="498"/>
   </outline>
 </glyph>

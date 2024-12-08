@@ -8,8 +8,9 @@
   <anchor x="522" y="-20" name="bottom_cedilla"/>
   <anchor x="864" y="0" name="bottom_right"/>
   <anchor x="522" y="0" name="bottom_center"/>
+  <anchor x="522" y="1536" name="top_center"/>
   <outline>
-    <component base="gravecomb" xOffset="-120" yOffset="160"/>
     <component base="uni0435.sc"/>
+    <component base="gravecomb" xOffset="-120" yOffset="160"/>
   </outline>
 </glyph>

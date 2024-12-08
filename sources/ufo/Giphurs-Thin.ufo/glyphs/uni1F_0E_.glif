@@ -2,15 +2,12 @@
 <glyph name="uni1F0E" format="2">
   <advance width="1265"/>
   <unicode hex="1F0E"/>
-  <anchor x="373" y="1040" name="greek_v"/>
-  <anchor x="195" y="1040" name="greek_t"/>
-  <anchor x="156" y="1040" name="greek_kt"/>
-  <anchor x="1145" y="0" name="bottom_right"/>
-  <anchor x="610" y="-90" name="bottom_ypogegrammeni"/>
-  <anchor x="610" y="1380" name="top_center"/>
-  <anchor x="610" y="0" name="bottom_center"/>
+  <anchor x="1248" y="0" name="bottom_right"/>
+  <anchor x="713" y="-90" name="bottom_ypogegrammeni"/>
+  <anchor x="713" y="1380" name="top_center"/>
+  <anchor x="713" y="0" name="bottom_center"/>
   <outline>
-    <component base="uni1FCF" xOffset="-120"/>
-    <component base="Alpha" xOffset="-45"/>
+    <component base="Alpha" xOffset="58"/>
+    <component base="uni1FCE" xOffset="-120"/>
   </outline>
 </glyph>

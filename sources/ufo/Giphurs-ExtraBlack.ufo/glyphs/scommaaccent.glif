@@ -2,10 +2,12 @@
 <glyph name="scommaaccent" format="2">
   <advance width="1066"/>
   <unicode hex="0219"/>
+  <anchor x="529" y="-20" name="bottom_cedilla"/>
   <anchor x="529" y="1040" name="top_center"/>
   <anchor x="750" y="0" name="bottom_right"/>
+  <anchor x="529" y="-440" name="bottom_center"/>
   <outline>
-    <component base="uni0326" xOffset="-113"/>
     <component base="s"/>
+    <component base="uni0326" xOffset="-113"/>
   </outline>
 </glyph>

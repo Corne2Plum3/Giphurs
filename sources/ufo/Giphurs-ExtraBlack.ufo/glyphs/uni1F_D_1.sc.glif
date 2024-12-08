@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni1FD1.sc" format="2">
   <advance width="820"/>
-  <anchor x="410" y="1664" name="mark_anchor_top"/>
-  <anchor x="410" y="1664" name="mark_anchor_right"/>
-  <anchor x="410" y="1664" name="mark_anchor_left"/>
-  <anchor x="410" y="1814" name="mark_anchor_center"/>
   <anchor x="411" y="-20" name="bottom_cedilla"/>
-  <anchor x="411" y="1200" name="greek_t"/>
-  <anchor x="411" y="1200" name="greek_k"/>
-  <anchor x="411" y="1200" name="greek_kt"/>
   <anchor x="411" y="1200" name="greek_v"/>
+  <anchor x="411" y="1200" name="greek_kt"/>
+  <anchor x="411" y="1200" name="greek_k"/>
+  <anchor x="411" y="1200" name="greek_t"/>
   <anchor x="590" y="0" name="bottom_right"/>
   <anchor x="411" y="0" name="bottom_center"/>
+  <anchor x="411" y="1544" name="top_center"/>
   <outline>
-    <component base="uni0304" xOffset="-232" yOffset="160"/>
     <component base="iota.sc"/>
+    <component base="uni0304" xOffset="-232" yOffset="160"/>
   </outline>
 </glyph>

@@ -2,12 +2,11 @@
 <glyph name="Scircumflex" format="2">
   <advance width="1220"/>
   <unicode hex="015C"/>
-  <anchor x="610" y="1846" name="mark_anchor_top"/>
-  <anchor x="901" y="1740" name="mark_anchor_right"/>
-  <anchor x="319" y="1740" name="mark_anchor_left"/>
+  <anchor x="610" y="-20" name="bottom_cedilla"/>
   <anchor x="610" y="0" name="bottom_center"/>
+  <anchor x="610" y="1716" name="top_center"/>
   <outline>
-    <component base="uni0302" xOffset="-32" yOffset="340"/>
     <component base="S"/>
+    <component base="uni0302" xOffset="-32" yOffset="340"/>
   </outline>
 </glyph>

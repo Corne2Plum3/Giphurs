@@ -2,10 +2,10 @@
 <glyph name="gcaron" format="2">
   <advance width="1085"/>
   <unicode hex="01E7"/>
-  <anchor x="520" y="1654" name="mark_anchor_center"/>
   <anchor x="520" y="-361" name="bottom_center"/>
+  <anchor x="520" y="1376" name="top_center"/>
   <outline>
-    <component base="uni030C" xOffset="-122"/>
     <component base="g"/>
+    <component base="uni030C" xOffset="-122"/>
   </outline>
 </glyph>

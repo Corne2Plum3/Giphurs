@@ -6,11 +6,8 @@
   <anchor x="802" y="-20" name="bottom_cedilla"/>
   <anchor x="1285" y="0" name="bottom_center"/>
   <anchor x="1285" y="1380" name="top_center"/>
-  <anchor x="404" y="1040" name="greek_v"/>
-  <anchor x="153" y="1040" name="greek_kt"/>
-  <anchor x="344" y="1040" name="greek_k"/>
   <outline>
-    <component base="tonos" xOffset="-35"/>
     <component base="Eta" xOffset="542"/>
+    <component base="tonos" xOffset="-35"/>
   </outline>
 </glyph>

@@ -4,9 +4,10 @@
   <anchor x="645" y="-20" name="bottom_cedilla"/>
   <anchor x="849" y="0" name="bottom_right"/>
   <anchor x="645" y="0" name="bottom_center"/>
+  <anchor x="645" y="1536" name="top_center"/>
   <outline>
-    <component base="gravecomb" xOffset="3" yOffset="160"/>
+    <component base="u.sc"/>
     <component base="uni031B" xOffset="1220" yOffset="-280"/>
-    <component base="uniE03D"/>
+    <component base="gravecomb" xOffset="3" yOffset="160"/>
   </outline>
 </glyph>

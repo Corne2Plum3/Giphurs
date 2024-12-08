@@ -2,9 +2,6 @@
 <glyph name="uni01DE" format="2">
   <advance width="1356"/>
   <unicode hex="01DE"/>
-  <anchor x="678" y="2262" name="mark_anchor_left"/>
-  <anchor x="678" y="2262" name="mark_anchor_right"/>
-  <anchor x="678" y="2262" name="mark_anchor_top"/>
   <anchor x="1188" y="-20" name="bottom_cedilla"/>
   <anchor x="310" y="1040" name="greek_v"/>
   <anchor x="66" y="1040" name="greek_kt"/>
@@ -13,9 +10,10 @@
   <anchor x="1286" y="0" name="bottom_right"/>
   <anchor x="678" y="0" name="bottom_center"/>
   <anchor x="678" y="-90" name="bottom_ypogegrammeni"/>
+  <anchor x="678" y="1916" name="top_center"/>
   <outline>
-    <component base="uni0304" xOffset="36" yOffset="758"/>
-    <component base="uni0308" xOffset="36" yOffset="340"/>
     <component base="A"/>
+    <component base="uni0308.case" xOffset="36" yOffset="340"/>
+    <component base="uni0304.case" xOffset="36" yOffset="636"/>
   </outline>
 </glyph>

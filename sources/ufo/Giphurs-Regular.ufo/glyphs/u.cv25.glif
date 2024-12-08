@@ -6,6 +6,25 @@
   <anchor x="711" y="0" name="bottom_right"/>
   <anchor x="1016" y="1040" name="top_right"/>
   <outline>
-    <component base="uniE033"/>
+    <contour>
+      <point x="320" y="1040" type="line"/>
+      <point x="320" y="467" type="line" smooth="yes"/>
+      <point x="320" y="277"/>
+      <point x="388" y="146"/>
+      <point x="578" y="146" type="curve" smooth="yes"/>
+      <point x="768" y="146"/>
+      <point x="836" y="277"/>
+      <point x="836" y="467" type="curve" smooth="yes"/>
+      <point x="836" y="1040" type="line"/>
+      <point x="1016" y="1040" type="line"/>
+      <point x="1016" y="467" type="line" smooth="yes"/>
+      <point x="1016" y="167"/>
+      <point x="878" y="-14"/>
+      <point x="578" y="-14" type="curve" smooth="yes"/>
+      <point x="278" y="-14"/>
+      <point x="140" y="167"/>
+      <point x="140" y="467" type="curve" smooth="yes"/>
+      <point x="140" y="1040" type="line"/>
+    </contour>
   </outline>
 </glyph>

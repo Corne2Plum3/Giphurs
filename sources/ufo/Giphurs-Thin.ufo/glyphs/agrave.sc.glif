@@ -9,8 +9,9 @@
   <anchor x="582" y="1200" name="greek_v"/>
   <anchor x="1043" y="0" name="bottom_right"/>
   <anchor x="582" y="0" name="bottom_center"/>
+  <anchor x="582" y="1536" name="top_center"/>
   <outline>
-    <component base="gravecomb" xOffset="-60" yOffset="160"/>
     <component base="a.sc"/>
+    <component base="gravecomb" xOffset="-60" yOffset="160"/>
   </outline>
 </glyph>

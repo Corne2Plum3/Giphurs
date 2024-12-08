@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="amacron.cv23" format="2">
   <advance width="1250"/>
-  <anchor x="653" y="1504" name="mark_anchor_top"/>
-  <anchor x="653" y="1504" name="mark_anchor_right"/>
-  <anchor x="653" y="1504" name="mark_anchor_left"/>
-  <anchor x="653" y="1654" name="mark_anchor_center"/>
   <anchor x="1204" y="0" name="bottom_right"/>
   <anchor x="654" y="0" name="bottom_center"/>
+  <anchor x="654" y="1384" name="top_center"/>
   <outline>
-    <component base="uni0304" xOffset="11"/>
     <component base="a.cv23"/>
+    <component base="uni0304" xOffset="11"/>
   </outline>
 </glyph>

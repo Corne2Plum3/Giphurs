@@ -2,15 +2,12 @@
 <glyph name="uni1F48" format="2">
   <advance width="1530"/>
   <unicode hex="1F48"/>
-  <anchor x="140" y="1040" name="greek_v"/>
-  <anchor x="-38" y="1040" name="greek_t"/>
-  <anchor x="-77" y="1040" name="greek_kt"/>
-  <anchor x="879" y="0" name="bottom_right"/>
-  <anchor x="773" y="0" name="bottom_center"/>
-  <anchor x="1283" y="1480" name="top_right"/>
-  <anchor x="773" y="1380" name="top_center"/>
+  <anchor x="878" y="0" name="bottom_right"/>
+  <anchor x="772" y="0" name="bottom_center"/>
+  <anchor x="1282" y="1480" name="top_right"/>
+  <anchor x="772" y="1380" name="top_center"/>
   <outline>
+    <component base="Omicron" xOffset="15"/>
     <component base="uni1FBF" xOffset="-120"/>
-    <component base="Omicron" xOffset="16"/>
   </outline>
 </glyph>

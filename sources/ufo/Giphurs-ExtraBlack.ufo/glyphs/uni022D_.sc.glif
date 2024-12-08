@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni022D.sc" format="2">
   <advance width="1360"/>
-  <anchor x="680" y="2032" name="mark_anchor_right"/>
-  <anchor x="680" y="2032" name="mark_anchor_left"/>
-  <anchor x="680" y="2182" name="mark_anchor_center"/>
   <anchor x="680" y="1200" name="greek_v"/>
   <anchor x="680" y="1200" name="greek_kt"/>
   <anchor x="680" y="1200" name="greek_k"/>
@@ -12,9 +9,10 @@
   <anchor x="1233" y="1200" name="top_right"/>
   <anchor x="680" y="-20" name="bottom_cedilla"/>
   <anchor x="680" y="0" name="bottom_center"/>
+  <anchor x="680" y="1880" name="top_center"/>
   <outline>
-    <component base="uni0304" xOffset="38" yOffset="528"/>
+    <component base="o.sc"/>
     <component base="tildecomb" xOffset="38" yOffset="160"/>
-    <component base="uniE03A"/>
+    <component base="uni0304" xOffset="37" yOffset="496"/>
   </outline>
 </glyph>

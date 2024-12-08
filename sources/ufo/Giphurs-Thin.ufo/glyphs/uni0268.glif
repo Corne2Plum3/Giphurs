@@ -2,37 +2,12 @@
 <glyph name="uni0268" format="2">
   <advance width="535"/>
   <unicode hex="0268"/>
+  <anchor x="268" y="-20" name="bottom_cedilla"/>
   <anchor x="290" y="0" name="bottom_right"/>
   <anchor x="268" y="0" name="bottom_center"/>
-  <anchor x="268" y="-20" name="bottom_cedilla"/>
+  <anchor x="268" y="1376" name="top_center"/>
   <outline>
-    <contour>
-      <point x="0" y="500" type="line"/>
-      <point x="0" y="512"/>
-      <point x="0" y="528"/>
-      <point x="0" y="540" type="curve"/>
-      <point x="535" y="540" type="line"/>
-      <point x="535" y="500" type="line"/>
-    </contour>
-    <contour>
-      <point x="204" y="1426" type="curve" smooth="yes"/>
-      <point x="204" y="1462"/>
-      <point x="232" y="1490"/>
-      <point x="268" y="1490" type="curve" smooth="yes"/>
-      <point x="304" y="1490"/>
-      <point x="332" y="1462"/>
-      <point x="332" y="1426" type="curve" smooth="yes"/>
-      <point x="332" y="1390"/>
-      <point x="304" y="1362"/>
-      <point x="268" y="1362" type="curve" smooth="yes"/>
-      <point x="232" y="1362"/>
-      <point x="204" y="1390"/>
-    </contour>
-    <contour>
-      <point x="245" y="0" type="line"/>
-      <point x="245" y="1040" type="line"/>
-      <point x="290" y="1040" type="line"/>
-      <point x="290" y="0" type="line"/>
-    </contour>
+    <component base="dotlessuni0268"/>
+    <component base="uni0307" xOffset="-374"/>
   </outline>
 </glyph>

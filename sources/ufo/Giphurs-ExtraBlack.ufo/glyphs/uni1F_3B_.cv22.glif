@@ -2,14 +2,11 @@
 <glyph name="uni1F3B.cv22" format="2">
   <advance width="1348"/>
   <anchor x="1088" y="-20" name="bottom_cedilla"/>
-  <anchor x="630" y="1040" name="greek_k"/>
-  <anchor x="474" y="1040" name="greek_t"/>
-  <anchor x="690" y="1040" name="greek_v"/>
   <anchor x="1278" y="0" name="bottom_right"/>
   <anchor x="1088" y="0" name="bottom_center"/>
   <anchor x="1088" y="1380" name="top_center"/>
   <outline>
+    <component base="Iota.cv22" xOffset="828"/>
     <component base="uni1FDD" xOffset="-50"/>
-    <component base="uniE02F" xOffset="828"/>
   </outline>
 </glyph>

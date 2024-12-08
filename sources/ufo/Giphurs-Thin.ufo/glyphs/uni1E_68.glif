@@ -2,10 +2,12 @@
 <glyph name="uni1E68" format="2">
   <advance width="1175"/>
   <unicode hex="1E68"/>
-  <anchor x="586" y="1981" name="mark_anchor_top"/>
+  <anchor x="586" y="-20" name="bottom_cedilla"/>
+  <anchor x="586" y="-336" name="bottom_center"/>
+  <anchor x="586" y="1716" name="top_center"/>
   <outline>
-    <component base="uni0307" xOffset="-56" yOffset="340"/>
-    <component base="dotbelowcomb" xOffset="-56"/>
     <component base="S"/>
+    <component base="dotbelowcomb" xOffset="-56"/>
+    <component base="uni0307" xOffset="-56" yOffset="340"/>
   </outline>
 </glyph>

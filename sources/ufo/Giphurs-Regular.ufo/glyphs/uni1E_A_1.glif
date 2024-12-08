@@ -6,8 +6,9 @@
   <anchor x="1033" y="0" name="bottom_right"/>
   <anchor x="540" y="1040" name="top_center"/>
   <anchor x="980" y="1040" name="top_right"/>
+  <anchor x="540" y="-336" name="bottom_center"/>
   <outline>
-    <component base="dotbelowcomb" xOffset="-102"/>
     <component base="a"/>
+    <component base="dotbelowcomb" xOffset="-102"/>
   </outline>
 </glyph>

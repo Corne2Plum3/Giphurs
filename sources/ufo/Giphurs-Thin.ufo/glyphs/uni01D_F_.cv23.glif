@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni01DF.cv23" format="2">
   <advance width="1152"/>
-  <anchor x="605" y="1973" name="mark_anchor_top"/>
-  <anchor x="605" y="1973" name="mark_anchor_right"/>
-  <anchor x="605" y="1973" name="mark_anchor_left"/>
   <anchor x="984" y="0" name="bottom_right"/>
   <anchor x="605" y="0" name="bottom_center"/>
+  <anchor x="605" y="1712" name="top_center"/>
   <outline>
-    <component base="uni0304" xOffset="-37" yOffset="417"/>
+    <component base="a.cv23"/>
     <component base="uni0308" xOffset="-37"/>
-    <component base="uniE030"/>
+    <component base="uni0304" xOffset="-37" yOffset="336"/>
   </outline>
 </glyph>

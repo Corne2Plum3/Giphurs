@@ -9,9 +9,10 @@
   <anchor x="604" y="0" name="bottom_center"/>
   <anchor x="1068" y="0" name="bottom_right"/>
   <anchor x="604" y="-20" name="bottom_cedilla"/>
+  <anchor x="604" y="1884" name="top_center"/>
   <outline>
-    <component base="acutecomb" xOffset="-38" yOffset="620"/>
-    <component base="uni0304" xOffset="-38" yOffset="340"/>
     <component base="E"/>
+    <component base="uni0304.case" xOffset="-38" yOffset="340"/>
+    <component base="acutecomb.case" xOffset="-38" yOffset="580"/>
   </outline>
 </glyph>

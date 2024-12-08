@@ -17,16 +17,11 @@ And thus are built:
 * subscript, numerators and denominators (+ pnum and tnum versions)
 * U+2460-U+24FF and U+2776-U+277F as long they have numbers
 
-The program takes 2 parameters: the weight value (100,400,1000) and the ufo directory location.
-
-VERY IMPORTANT NOTE: For the black circled numbers the components must be unlinked manually,
-otherwise the numbers won't be visible after compilation. There must be a way to automate this but
-the problem is that when compiling to ttf, the nested components are kept, and as the direction of
-numbers outline are set to clockwise, removing the ability of the numbers to make a "hole" in the
-black circle.
+The program takes 2 parameters: the weight value (100, 400, 1000) and the ufo directory location.
 """
 
 import sys
+from ufo_utils import *
 import xml.etree.ElementTree as ET
 
 DIGITS_NAMES_ENGLISH = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
@@ -39,8 +34,8 @@ DIGITS_NAMES = {
 
 SUPS_NAMES = {
     "def": [ f"{DIGITS_NAMES_ENGLISH[i]}.superior" for i in range(10) ],
-    "ss01": [ f"uniE0{hex(0x10 + i).upper()[2:]}" for i in range(10) ],  # cv01-cv10
-    "ss02": [ f"uniE0{hex(0x1A + i).upper()[2:]}" for i in range(10) ]   # cv11-20
+    "ss01": [ "zero.cv10.superior" ] + [ DIGITS_NAMES_ENGLISH[i] + ".cv" + str(i).zfill(2) + ".superior" for i in range(1,10,1)],
+    "ss02": [ "zero.cv20.superior" ] + [ DIGITS_NAMES_ENGLISH[i%10] + ".cv" + str(i).zfill(2) + ".superior" for i in range(11,20,1)]
 }
 
 UNICODE_VALUES = {  # index = number
@@ -89,25 +84,25 @@ SS_GLYPH_NAMES = {
         "digit_def": "one.ss06",
         "digit_ss01": "one.cv01.ss06",
         "digit_ss02": "one.cv11.ss06",
-        "sups_def": "uniE024",
-        "sups_ss01": "uniE025",
-        "sups_ss02": "uniE026"
+        "sups_def": "one.ss06.superior",
+        "sups_ss01": "one.cv01.ss06.superior",
+        "sups_ss02": "one.cv11.ss06.superior"
     },
     "ss07": {
         "digit_def": "seven.ss07",
         "digit_ss01": "seven.cv07.ss07",
         "digit_ss02": "seven.cv17.ss07",
-        "sups_def": "uniE027",
-        "sups_ss01": "uniE028",
-        "sups_ss02": "uniE029"
+        "sups_def": "seven.ss07.superior",
+        "sups_ss01": "seven.cv07.ss07.superior",
+        "sups_ss02": "seven.cv17.ss07.superior"
     },
     "zero": {
         "digit_def": "zero.zero",
         "digit_ss01": "zero.cv10.zero",
         "digit_ss02": "zero.cv20.zero",
-        "sups_def": "uniE02A",
-        "sups_ss01": "uniE02B",
-        "sups_ss02": "uniE02C"
+        "sups_def": "zero.zero.superior",
+        "sups_ss01": "zero.cv10.zero.superior",
+        "sups_ss02": "zero.cv20.zero.superior"
     }
 }
 SS_LIST = ["ss06","ss07","zero"]
@@ -178,7 +173,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
             "other": (60,60)
         },
         "1000": {
-            "1": (50,84),
+            "1": (60,84),
             "other": (50,50)
         }
     }
@@ -188,14 +183,14 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         "1000": 1232
     }
     TWO_DIGITS_WIDTH_COEF = {
-        "100": 0.80,
-        "400": 0.75,
-        "1000": 0.70
+        "100": 4/5,
+        "400": 3/4,
+        "1000": 2/3
     }
     TWO_DIGITS_OVERLAP = {  # for NORMAL size without TWO_DIGITS_WIDTH_COEF applied
         "100": 140,
         "400": 120,
-        "1000": 80
+        "1000": 40
     }
     DIGITS_HEIGHT = 1480
     SUPS_HEIGHT = 858
@@ -284,7 +279,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         elif type == "black_circle":
             base_circle = "H18533"
         else:  # double_circle
-            base_circle = "uniE02D"
+            base_circle = "double_circle_empty"
         base_circle_x_metrics = get_glyph_metrics(base_circle, ufo_dir)
         width = base_circle_x_metrics["total_width"]
 
@@ -412,6 +407,10 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
     tree.write(f"{ufo_dir}/glyphs/{new_file_name}", encoding="UTF-8", xml_declaration=True)
     #print(f"{glyph_name}, {base_1}, {base_2}")
 
+    # Unlink reference for black circles
+    if type == "black_circle":
+        unlink_references(glyph_name, ufo_dir)
+
     return
 
 # create some glif files inside a ufo
@@ -482,7 +481,7 @@ def build_weight(weight: str, ufo_dir: str):
                 # sups / subs / numr / dnom (on d2)
                 if i == 0 or (i != 0 and i < 10 and cv_values_list[cv_index][0] == 0 and ss_values_list[ss_index][0] == ""):
                     for type in ["superior", "subscript", "numr", "dnom"]:
-                        if not(type == "superior" and cv_suffix == "" and ss_suffix == ""):
+                        if not(type == "superior"):
                             build_glyph(type, ufo_dir, f"{DIGITS_NAMES_ENGLISH[i]}{cv_suffix}{ss_suffix}.{type}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                         build_glyph(type + "_pnum", ufo_dir, f"{DIGITS_NAMES_ENGLISH[i]}{cv_suffix}{ss_suffix}.{type}.pnum", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                         build_glyph(type + "_tnum", ufo_dir, f"{DIGITS_NAMES_ENGLISH[i]}{cv_suffix}{ss_suffix}.{type}.tnum", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])

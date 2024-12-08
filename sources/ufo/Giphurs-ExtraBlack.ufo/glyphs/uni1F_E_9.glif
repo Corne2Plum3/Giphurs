@@ -2,17 +2,14 @@
 <glyph name="uni1FE9" format="2">
   <advance width="1572"/>
   <unicode hex="1FE9"/>
-  <anchor x="785" y="1844" name="mark_anchor_top"/>
-  <anchor x="785" y="1844" name="mark_anchor_right"/>
-  <anchor x="785" y="1844" name="mark_anchor_left"/>
-  <anchor x="785" y="1994" name="mark_anchor_center"/>
   <anchor x="-153" y="1040" name="greek_v"/>
   <anchor x="-369" y="1040" name="greek_t"/>
   <anchor x="-213" y="1040" name="greek_k"/>
   <anchor x="-404" y="1040" name="greek_kt"/>
   <anchor x="786" y="0" name="bottom_center"/>
+  <anchor x="786" y="1724" name="top_center"/>
   <outline>
-    <component base="uni0304" xOffset="143" yOffset="340"/>
     <component base="Upsilon"/>
+    <component base="uni0304" xOffset="143" yOffset="340"/>
   </outline>
 </glyph>

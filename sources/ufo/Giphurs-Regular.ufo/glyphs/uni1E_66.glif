@@ -2,11 +2,11 @@
 <glyph name="uni1E66" format="2">
   <advance width="1220"/>
   <unicode hex="1E66"/>
-  <anchor x="610" y="2264" name="mark_anchor_top"/>
+  <anchor x="610" y="-20" name="bottom_cedilla"/>
   <anchor x="610" y="0" name="bottom_center"/>
+  <anchor x="610" y="1924" name="top_center"/>
   <outline>
-    <component base="uni0307" xOffset="-32" yOffset="622"/>
-    <component base="uni030C" xOffset="-32" yOffset="340"/>
     <component base="S"/>
+    <component base="uni030C_uni0307.case" xOffset="-32" yOffset="340"/>
   </outline>
 </glyph>

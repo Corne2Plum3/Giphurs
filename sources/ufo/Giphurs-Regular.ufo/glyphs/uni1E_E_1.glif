@@ -2,16 +2,13 @@
 <glyph name="uni1EE1" format="2">
   <advance width="1196"/>
   <unicode hex="1EE1"/>
-  <anchor x="598" y="1654" name="mark_anchor_center"/>
-  <anchor x="598" y="1641" name="mark_anchor_top"/>
-  <anchor x="598" y="1526" name="mark_anchor_left"/>
-  <anchor x="598" y="1526" name="mark_anchor_right"/>
   <anchor x="598" y="-20" name="bottom_cedilla"/>
   <anchor x="598" y="0" name="bottom_center"/>
   <anchor x="738" y="0" name="bottom_right"/>
+  <anchor x="598" y="1376" name="top_center"/>
   <outline>
-    <component base="tildecomb" xOffset="-44"/>
-    <component base="uni031B" xOffset="1048" yOffset="-440"/>
     <component base="o"/>
+    <component base="uni031B" xOffset="1048" yOffset="-440"/>
+    <component base="tildecomb" xOffset="-44"/>
   </outline>
 </glyph>

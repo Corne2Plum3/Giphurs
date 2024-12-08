@@ -6,9 +6,9 @@
   <anchor x="578" y="0" name="bottom_center"/>
   <anchor x="974" y="1040" name="top_right"/>
   <anchor x="667" y="0" name="bottom_right"/>
+  <anchor x="578" y="1376" name="top_center"/>
   <outline>
-    <component base="hookabovecomb" xOffset="107" yOffset="164"/>
-    <component base="uni0302" xOffset="-64"/>
     <component base="o"/>
+    <component base="uni0302_hookabovecomb" xOffset="-64"/>
   </outline>
 </glyph>

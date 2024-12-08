@@ -6,9 +6,9 @@
   <anchor x="787" y="0" name="bottom_right"/>
   <anchor x="672" y="0" name="bottom_center"/>
   <anchor x="1164" y="1480" name="top_right"/>
+  <anchor x="672" y="1972" name="top_center"/>
   <outline>
-    <component base="uni030C" xOffset="30" yOffset="642"/>
-    <component base="uni0308" xOffset="30" yOffset="340"/>
     <component base="U"/>
+    <component base="uni0308_uni030C" xOffset="328" yOffset="340"/>
   </outline>
 </glyph>

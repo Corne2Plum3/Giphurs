@@ -3,9 +3,10 @@
   <advance width="1192"/>
   <anchor x="807" y="0" name="bottom_right"/>
   <anchor x="596" y="1040" name="top_center"/>
+  <anchor x="596" y="-400" name="bottom_center"/>
   <outline>
+    <component base="u.cv25"/>
     <component base="dotbelowcomb" xOffset="-46"/>
     <component base="uni031B" xOffset="1122" yOffset="-440"/>
-    <component base="uniE033"/>
   </outline>
 </glyph>

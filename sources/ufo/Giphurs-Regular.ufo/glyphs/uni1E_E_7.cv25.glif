@@ -4,8 +4,9 @@
   <anchor x="578" y="0" name="bottom_center"/>
   <anchor x="711" y="0" name="bottom_right"/>
   <anchor x="1016" y="1040" name="top_right"/>
+  <anchor x="578" y="1434" name="top_center"/>
   <outline>
-    <component base="hookabovecomb" xOffset="-64"/>
     <component base="u.cv25"/>
+    <component base="hookabovecomb" xOffset="-64"/>
   </outline>
 </glyph>

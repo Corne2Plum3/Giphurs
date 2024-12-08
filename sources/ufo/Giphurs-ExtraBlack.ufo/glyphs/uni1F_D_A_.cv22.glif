@@ -2,14 +2,11 @@
 <glyph name="uni1FDA.cv22" format="2">
   <advance width="1052"/>
   <anchor x="792" y="-20" name="bottom_cedilla"/>
-  <anchor x="178" y="1040" name="greek_t"/>
-  <anchor x="334" y="1040" name="greek_k"/>
-  <anchor x="143" y="1040" name="greek_kt"/>
   <anchor x="982" y="0" name="bottom_right"/>
   <anchor x="792" y="0" name="bottom_center"/>
   <anchor x="792" y="1380" name="top_center"/>
   <outline>
-    <component base="uni1FEF" xOffset="-50"/>
     <component base="Iota.cv22" xOffset="532"/>
+    <component base="uni1FEF" xOffset="-50"/>
   </outline>
 </glyph>

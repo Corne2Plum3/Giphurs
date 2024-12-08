@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="gcircumflex.sc" format="2">
   <advance width="1303"/>
-  <anchor x="492" y="1560" name="mark_anchor_left"/>
-  <anchor x="834" y="1560" name="mark_anchor_right"/>
-  <anchor x="663" y="1666" name="mark_anchor_top"/>
   <anchor x="663" y="0" name="bottom_center"/>
+  <anchor x="663" y="1536" name="top_center"/>
   <outline>
-    <component base="uni0302" xOffset="21" yOffset="160"/>
     <component base="g.sc"/>
+    <component base="uni0302" xOffset="21" yOffset="160"/>
   </outline>
 </glyph>

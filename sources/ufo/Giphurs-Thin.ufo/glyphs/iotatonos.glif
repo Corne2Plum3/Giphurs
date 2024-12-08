@@ -2,13 +2,10 @@
 <glyph name="iotatonos" format="2">
   <advance width="540"/>
   <unicode hex="03AF"/>
-  <anchor x="203" y="1040" name="greek_v"/>
-  <anchor x="203" y="1040" name="greek_kt"/>
-  <anchor x="203" y="1040" name="greek_k"/>
-  <anchor x="203" y="1040" name="top_center"/>
   <anchor x="312" y="0" name="bottom_center"/>
+  <anchor x="203" y="1376" name="top_center"/>
   <outline>
-    <component base="tonos" xOffset="61"/>
     <component base="iota"/>
+    <component base="tonos" xOffset="61"/>
   </outline>
 </glyph>

@@ -2,9 +2,11 @@
 <glyph name="Sacute" format="2">
   <advance width="1220"/>
   <unicode hex="015A"/>
+  <anchor x="610" y="-20" name="bottom_cedilla"/>
   <anchor x="610" y="0" name="bottom_center"/>
+  <anchor x="610" y="1716" name="top_center"/>
   <outline>
-    <component base="acutecomb" xOffset="-32" yOffset="340"/>
     <component base="S"/>
+    <component base="acutecomb" xOffset="-32" yOffset="340"/>
   </outline>
 </glyph>

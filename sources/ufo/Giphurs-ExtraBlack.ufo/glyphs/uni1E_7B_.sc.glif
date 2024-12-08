@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni1E7B.sc" format="2">
   <advance width="1290"/>
-  <anchor x="644" y="1922" name="mark_anchor_left"/>
-  <anchor x="644" y="1922" name="mark_anchor_right"/>
-  <anchor x="644" y="1968" name="mark_anchor_center"/>
   <anchor x="645" y="-20" name="bottom_cedilla"/>
   <anchor x="1220" y="1200" name="top_right"/>
   <anchor x="849" y="0" name="bottom_right"/>
   <anchor x="645" y="0" name="bottom_center"/>
+  <anchor x="645" y="1944" name="top_center"/>
   <outline>
-    <component base="uni0308" xOffset="2" yOffset="442"/>
+    <component base="u.sc"/>
     <component base="uni0304" xOffset="2" yOffset="160"/>
-    <component base="uniE03D"/>
+    <component base="uni0308" xOffset="3" yOffset="504"/>
   </outline>
 </glyph>

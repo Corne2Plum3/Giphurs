@@ -2,8 +2,15 @@
 <glyph name="Iotadieresis" format="2">
   <advance width="822"/>
   <unicode hex="03AA"/>
+  <anchor x="-179" y="1040" name="greek_kt"/>
+  <anchor x="-19" y="1040" name="greek_k"/>
+  <anchor x="-140" y="1040" name="greek_t"/>
+  <anchor x="38" y="1040" name="greek_v"/>
+  <anchor x="435" y="0" name="bottom_right"/>
+  <anchor x="411" y="0" name="bottom_center"/>
+  <anchor x="411" y="1716" name="top_center"/>
   <outline>
-    <component base="uni0308" xOffset="-231" yOffset="340"/>
     <component base="Iota"/>
+    <component base="uni0308" xOffset="-231" yOffset="340"/>
   </outline>
 </glyph>

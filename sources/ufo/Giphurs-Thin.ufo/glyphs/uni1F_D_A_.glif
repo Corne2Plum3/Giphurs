@@ -2,14 +2,11 @@
 <glyph name="uni1FDA" format="2">
   <advance width="1004"/>
   <unicode hex="1FDA"/>
-  <anchor x="3" y="1040" name="greek_kt"/>
-  <anchor x="163" y="1040" name="greek_k"/>
-  <anchor x="42" y="1040" name="greek_t"/>
   <anchor x="617" y="0" name="bottom_right"/>
   <anchor x="593" y="0" name="bottom_center"/>
   <anchor x="593" y="1380" name="top_center"/>
   <outline>
-    <component base="uni1FEF" xOffset="-120"/>
     <component base="Iota" xOffset="182"/>
+    <component base="uni1FEF" xOffset="-120"/>
   </outline>
 </glyph>
