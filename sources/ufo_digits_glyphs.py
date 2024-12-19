@@ -268,7 +268,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         if type == "subscript" and cv_d1 == 0 and cv_d2 == 0 and ss_d1 == "" and ss_d2 == "":
             ET.SubElement(xml_root, "unicode", {"hex": hex(UNICODE_VALUES["subscript"][digit_2]).upper()[2:]})
         xml_outline = ET.SubElement(xml_root, "outline")
-        ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(x_offset), "yOffset": str(y_offset)})
+        ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x_offset)), "yOffset": str(int(y_offset))})
 
     elif type in ["circle", "black_circle", "double_circle"]:  # ATTENTION: for 2 digits : dozens = digit_1 and units = digit_2 !!!
 
@@ -295,13 +295,13 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         middle = base_circle_x_metrics["left_kern"] + base_circle_x_metrics["glyph_width"] / 2
         if digit_1 == 0:  # one digit : digit_2
             x2 = middle - base_2_x_metrics["total_width"] / 2
-            ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(x2), "yOffset": str(y_offset)})
+            ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x2)), "yOffset": str(int(y_offset))})
         else:  # two digits : dozens = digit_1 and units = digit_2 (!)
             both_digits_length = (base_1_x_metrics["total_width"] + base_2_x_metrics["total_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
             x1 = middle - both_digits_length / 2 + TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] * (SUPS_HEIGHT / DIGITS_HEIGHT) 
             x2 = middle + both_digits_length / 2 - TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] * (SUPS_HEIGHT / DIGITS_HEIGHT) - base_2_x_metrics["total_width"] * TWO_DIGITS_WIDTH_COEF[weight]
-            ET.SubElement(xml_outline, "component", {"base": base_1, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(x1), "yOffset": str(y_offset)})
-            ET.SubElement(xml_outline, "component", {"base": base_2, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(x2), "yOffset": str(y_offset)})
+            ET.SubElement(xml_outline, "component", {"base": base_1, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x1)), "yOffset": str(int(y_offset))})
+            ET.SubElement(xml_outline, "component", {"base": base_2, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x2)), "yOffset": str(int(y_offset))})
 
     elif type == "parenthezed":
         base_pl = "parenleft"
@@ -320,8 +320,8 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
 
         xl = DEFAULT_KERN[weight] - base_pl_x_metrics["left_kern"] * TWO_DIGITS_WIDTH_COEF[weight]
         xr = width - DEFAULT_KERN[weight] - (base_pr_x_metrics["left_kern"] + base_pr_x_metrics["glyph_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
-        ET.SubElement(xml_outline, "component", {"base": base_pl, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(xl), "yOffset": "0"})
-        ET.SubElement(xml_outline, "component", {"base": base_pr, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(xr), "yOffset": "0"})
+        ET.SubElement(xml_outline, "component", {"base": base_pl, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(xl)), "yOffset": "0"})
+        ET.SubElement(xml_outline, "component", {"base": base_pr, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(xr)), "yOffset": "0"})
 
         if digit_1 == 0:
             x2 = DEFAULT_KERN[weight] + ((width - 2*DEFAULT_KERN[weight]) - base_2_x_metrics["total_width"]) * 0.5
@@ -330,8 +330,8 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
             middle = width / 2
             x1 = middle - both_digits_length / 2 + TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2
             x2 = middle + both_digits_length / 2 - TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2 - base_2_x_metrics["total_width"] * TWO_DIGITS_WIDTH_COEF[weight]
-            ET.SubElement(xml_outline, "component", {"base": base_1, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(x1), "yOffset": "0"})
-            ET.SubElement(xml_outline, "component", {"base": base_2, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(x2), "yOffset": "0"})
+            ET.SubElement(xml_outline, "component", {"base": base_1, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x1)), "yOffset": "0"})
+            ET.SubElement(xml_outline, "component", {"base": base_2, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x2)), "yOffset": "0"})
     
     elif type == "full_stop":
         base_period = "period"
@@ -347,7 +347,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         xml_outline = ET.SubElement(xml_root, "outline")
 
         xp = width - base_period_x_metrics["left_kern"] - base_period_x_metrics["glyph_width"] - DEFAULT_KERN[weight]
-        ET.SubElement(xml_outline, "component", {"base": base_period, "xOffset": str(xp), "yOffset": "0"})
+        ET.SubElement(xml_outline, "component", {"base": base_period, "xOffset": str(int(xp)), "yOffset": "0"})
 
         middle = (width - base_period_x_metrics["total_width"]) / 2 + DEFAULT_KERN[weight]
         if digit_1 == 0:
@@ -385,7 +385,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         digit_1_middle = base_frac_x_metrics["left_kern"] - DEFAULT_KERN[weight] * 1.5
         x1 = digit_1_middle - base_1_x_metrics["total_width"] / 2
         y1 = NUMR_Y - SUPS_Y
-        ET.SubElement(xml_outline, "component", {"base": base_1, "xOffset": str(int(x1)), "yOffset": str(y1)})
+        ET.SubElement(xml_outline, "component", {"base": base_1, "xOffset": str(int(x1)), "yOffset": str(int(y1))})
 
         # dnom
         y2 = DNOM_Y - SUPS_Y
@@ -395,12 +395,12 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
             digit_21_middle = base_frac_x_metrics["left_kern"] + base_frac_x_metrics["glyph_width"]
             x21 = digit_21_middle - base_1_x_metrics["total_width"] / 2
             x22 = x21 + base_1_x_metrics["total_width"] - base_2_x_metrics["left_kern"] - TWO_DIGITS_OVERLAP[weight]
-            ET.SubElement(xml_outline, "component", {"base": base_1, "xOffset": str(int(x21)), "yOffset": str(y2)})
-            ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x22)), "yOffset": str(y2)})
+            ET.SubElement(xml_outline, "component", {"base": base_1, "xOffset": str(int(x21)), "yOffset": str(int(y2))})
+            ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x22)), "yOffset": str(int(y2))})
         else:
             digit_2_middle = base_frac_x_metrics["left_kern"] + base_frac_x_metrics["glyph_width"] + DEFAULT_KERN[weight] * 1.5
             x2 = digit_2_middle - base_2_x_metrics["total_width"] / 2
-            ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x2)), "yOffset": str(y2)})
+            ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x2)), "yOffset": str(int(y2))})
 
     # save
     tree = ET.ElementTree(xml_root)
