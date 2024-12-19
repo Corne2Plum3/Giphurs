@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="amacron" format="2">
+  <advance width="1140"/>
+  <unicode hex="0101"/>
+  <anchor x="500" y="-20" name="bottom_cedilla"/>
+  <anchor x="1033" y="0" name="bottom_right"/>
+  <anchor x="540" y="0" name="bottom_center"/>
+  <anchor x="980" y="1040" name="top_right"/>
+  <anchor x="540" y="1260" name="top_center"/>
+  <outline>
+    <component base="a"/>
+    <component base="uni0304" xOffset="-102"/>
+  </outline>
+</glyph>

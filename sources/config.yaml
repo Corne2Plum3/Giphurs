@@ -3,6 +3,7 @@ autohintOTF: false
 autohintTTF: false
 axisOrder:
   - wght
+  - ital
 buildSmallCap: false
 buildStatic: true
 buildVariable: true
@@ -12,6 +13,7 @@ outputDir: '../fonts'
 includeSourceFixes: true
 sources:
   - Giphurs.designspace
+  - Giphurs-Italic.designspace
 stat:
   Giphurs[wght].ttf:
   - name: Weight
@@ -25,8 +27,8 @@ stat:
       value: 300
     - name: Regular
       value: 400
-      flags: 2
       linkedValue: 700
+      flags: 2
     - name: Medium
       value: 500
     - name: SemiBold
@@ -39,3 +41,41 @@ stat:
       value: 900
     - name: ExtraBlack
       value: 1000
+  - name: Italic
+    tag: ital
+    values:
+    - name: Roman
+      value: 0
+      linkedValue: 1
+      flags: 2
+  Giphurs-Italic[wght].ttf:
+    - name: Weight
+      tag: wght
+      values:
+      - name: Thin
+        value: 100
+      - name: ExtraLight
+        value: 200
+      - name: Light
+        value: 300
+      - name: Regular
+        value: 400
+        linkedValue: 700
+        flags: 2
+      - name: Medium
+        value: 500
+      - name: SemiBold
+        value: 600
+      - name: Bold
+        value: 700
+      - name: ExtraBold
+        value: 800
+      - name: Black
+        value: 900
+      - name: ExtraBlack
+        value: 1000
+    - name: Italic
+      tag: ital
+      values:
+      - name: Italic
+        value: 1

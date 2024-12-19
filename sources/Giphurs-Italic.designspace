@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="wght" name="weight" minimum="100" maximum="1000" default="400"/>
+  </axes>
+  <sources>
+    <source filename="ufo/Giphurs-ThinItalic.ufo" familyname="Giphurs" stylename="Thin Italic">
+      <location>
+        <dimension name="weight" xvalue="100"/>
+      </location>
+    </source>
+    <source filename="ufo/Giphurs-Italic.ufo" name="master.Giphurs.Italic.0" familyname="Giphurs" stylename="Italic">
+      <lib copy="1"/>
+      <groups copy="1"/>
+      <features copy="1"/>
+      <info copy="1"/>
+      <location>
+        <dimension name="weight" xvalue="400"/>
+      </location>
+    </source>
+    <source filename="ufo/Giphurs-ExtraBlackItalic.ufo" familyname="Giphurs" stylename="ExtraBlack Italic">
+      <location>
+        <dimension name="weight" xvalue="1000"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance filename="ufo/Giphurs-ThinItalic.ufo" name="Giphurs Thin Italic" familyname="Giphurs" stylename="Thin Italic" stylemapfamilyname="Giphurs Thin Italic" stylemapstylename="">
+      <location>
+        <dimension name="weight" xvalue="100"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance filename="ufo/Giphurs-ExtraLightItalic.ufo" name="Giphurs ExtraLight Italic" familyname="Giphurs" stylename="ExtraLight Italic" stylemapfamilyname="Giphurs ExtraLight Italic" stylemapstylename="">
+      <location>
+        <dimension name="weight" xvalue="200"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance filename="ufo/Giphurs-LightItalic.ufo" name="Giphurs Light Italic" familyname="Giphurs" stylename="Light Italic" stylemapfamilyname="Giphurs Light Italic" stylemapstylename="">
+      <location>
+        <dimension name="weight" xvalue="300"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance filename="ufo/Giphurs-Italic.ufo" name="Giphurs Italic" familyname="Giphurs" stylename="Italic" stylemapfamilyname="Giphurs  Italic" stylemapstylename="">
+      <location>
+        <dimension name="weight" xvalue="400"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance filename="ufo/Giphurs-MediumItalic.ufo" name="Giphurs Medium Italic" familyname="Giphurs" stylename="Medium Italic" stylemapfamilyname="Giphurs Medium Italic" stylemapstylename="">
+      <location>
+        <dimension name="weight" xvalue="500"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance filename="ufo/Giphurs-SemiBoldItalic.ufo" name="Giphurs SemiBold Italic" familyname="Giphurs" stylename="SemiBold Italic" stylemapfamilyname="Giphurs SemiBold Italic" stylemapstylename="">
+      <location>
+        <dimension name="weight" xvalue="600"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance filename="ufo/Giphurs-BoldItalic.ufo" name="Giphurs Bold Italic" familyname="Giphurs" stylename="Bold Italic" stylemapfamilyname="Giphurs Bold Italic" stylemapstylename="">
+      <location>
+        <dimension name="weight" xvalue="700"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance filename="ufo/Giphurs-ExtraBoldItalic.ufo" name="Giphurs ExtraBold Italic" familyname="Giphurs" stylename="ExtraBold Italic" stylemapfamilyname="Giphurs ExtraBold Italic" stylemapstylename="">
+      <location>
+        <dimension name="weight" xvalue="800"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance filename="ufo/Giphurs-BlackItalic.ufo" name="Giphurs Black Italic" familyname="Giphurs" stylename="Black Italic" stylemapfamilyname="Giphurs Black Italic" stylemapstylename="">
+      <location>
+        <dimension name="weight" xvalue="900"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance filename="ufo/Giphurs-ExtraBlackItalic.ufo" name="Giphurs ExtraBlack Italic" familyname="Giphurs ExtraBlack" stylename=" Italic" stylemapfamilyname="Giphurs ExtraBlack Italic" stylemapstylename="" >
+      <location>
+        <dimension name="weight" xvalue="1000"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+  </instances>
+</designspace>

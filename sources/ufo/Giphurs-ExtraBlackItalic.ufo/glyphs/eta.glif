@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="eta" format="2">
+  <advance width="1192"/>
+  <unicode hex="03B7"/>
+  <anchor x="596" y="1040" name="top_center"/>
+  <anchor x="596" y="1040" name="greek_t"/>
+  <anchor x="596" y="1040" name="greek_k"/>
+  <anchor x="596" y="1040" name="greek_kt"/>
+  <anchor x="596" y="1040" name="greek_v"/>
+  <anchor x="250" y="-90" name="bottom_ypogegrammeni"/>
+  <anchor x="942" y="-360" name="bottom_center"/>
+  <outline>
+    <contour>
+      <point x="762" y="-440" type="line"/>
+      <point x="762" y="572" type="line" smooth="yes"/>
+      <point x="762" y="682"/>
+      <point x="726" y="750"/>
+      <point x="596" y="750" type="curve" smooth="yes"/>
+      <point x="466" y="750"/>
+      <point x="430" y="682"/>
+      <point x="430" y="572" type="curve" smooth="yes"/>
+      <point x="430" y="0" type="line"/>
+      <point x="70" y="0" type="line"/>
+      <point x="70" y="1040" type="line"/>
+      <point x="418" y="1040" type="line"/>
+      <point x="418" y="920" type="line"/>
+      <point x="453" y="981"/>
+      <point x="542" y="1070"/>
+      <point x="692" y="1070" type="curve" smooth="yes"/>
+      <point x="956" y="1070"/>
+      <point x="1122" y="892"/>
+      <point x="1122" y="572" type="curve"/>
+      <point x="1122" y="-440" type="line"/>
+    </contour>
+  </outline>
+</glyph>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="igrave.sc.cv22" format="2">
+  <advance width="500"/>
+  <anchor x="252" y="-20" name="bottom_cedilla"/>
+  <anchor x="252" y="1200" name="greek_v"/>
+  <anchor x="252" y="1200" name="greek_kt"/>
+  <anchor x="252" y="1200" name="greek_k"/>
+  <anchor x="252" y="1200" name="greek_t"/>
+  <anchor x="430" y="0" name="bottom_right"/>
+  <anchor x="252" y="0" name="bottom_center"/>
+  <anchor x="252" y="1536" name="top_center"/>
+  <outline>
+    <component base="i.sc.cv22"/>
+    <component base="gravecomb" xOffset="-390" yOffset="160"/>
+  </outline>
+</glyph>

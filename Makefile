@@ -44,6 +44,9 @@ tests:
 	fontbakery check-googlefonts -F fonts/ttf/$(font_name)-Regular.ttf > $(tests_output_dir)/fontbakery_ttf_400.log & \
 	fontbakery check-googlefonts -F fonts/ttf/$(font_name)ExtraBlack-Regular.ttf > $(tests_output_dir)/fontbakery_ttf_1000.log & \
 	fontbakery check-googlefonts -F fonts/variable/$(font_name)\[wght\].ttf > $(tests_output_dir)/fontbakery_ttf_var.log & \
+	fontbakery check-googlefonts -F fonts/otf/$(font_name)-Italic.otf > $(tests_output_dir)/fontbakery_otf_i_400.log & \
+	fontbakery check-googlefonts -F fonts/otf/$(font_name)ExtraBlack-Italic.otf > $(tests_output_dir)/fontbakery_otf_i_1000.log & \
+	fontbakery check-googlefonts -F fonts/variable/$(font_name)-Italic\[wght\].ttf > $(tests_output_dir)/fontbakery_ttf_i_var.log & \
 	wait
 	@echo "Done"
 
