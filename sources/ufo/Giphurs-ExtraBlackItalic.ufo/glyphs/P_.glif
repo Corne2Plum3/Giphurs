@@ -2,36 +2,36 @@
 <glyph name="P" format="2">
   <advance width="1258"/>
   <unicode hex="0050"/>
-  <anchor x="-85" y="1040" name="greek_v"/>
-  <anchor x="-301" y="1040" name="greek_t"/>
-  <anchor x="-145" y="1040" name="greek_k"/>
-  <anchor x="-336" y="1040" name="greek_kt"/>
-  <anchor x="732" y="1380" name="top_center"/>
-  <anchor x="130" y="0" name="bottom_center"/>
+  <anchor x="45" y="1040" name="greek_v"/>
+  <anchor x="-171" y="1040" name="greek_t"/>
+  <anchor x="-15" y="1040" name="greek_k"/>
+  <anchor x="-206" y="1040" name="greek_kt"/>
+  <anchor x="862" y="1380" name="top_center"/>
+  <anchor x="260" y="0" name="bottom_center"/>
   <outline>
     <contour>
-      <point x="521" y="1144" type="line"/>
-      <point x="465" y="824" type="line"/>
-      <point x="652" y="824" type="line"/>
-      <point x="772" y="824"/>
-      <point x="852" y="874"/>
-      <point x="871" y="984" type="curve" smooth="yes"/>
-      <point x="890" y="1094"/>
-      <point x="828" y="1144"/>
-      <point x="708" y="1144" type="curve"/>
+      <point x="782" y="824" type="line" smooth="yes"/>
+      <point x="835" y="824"/>
+      <point x="1005" y="838"/>
+      <point x="1005" y="1021" type="curve" smooth="yes"/>
+      <point x="1005" y="1105"/>
+      <point x="944" y="1144"/>
+      <point x="839" y="1144" type="curve" smooth="yes"/>
+      <point x="652" y="1144" type="line"/>
+      <point x="595" y="824" type="line"/>
     </contour>
     <contour>
-      <point x="-60" y="0" type="line"/>
-      <point x="200" y="1480" type="line"/>
-      <point x="767" y="1480" type="line"/>
-      <point x="1153" y="1480"/>
-      <point x="1296" y="1239"/>
-      <point x="1251" y="984" type="curve" smooth="yes"/>
-      <point x="1206" y="729"/>
-      <point x="979" y="488"/>
-      <point x="593" y="488" type="curve"/>
-      <point x="406" y="488" type="line"/>
-      <point x="320" y="0" type="line"/>
+      <point x="1389" y="1073" type="curve" smooth="yes"/>
+      <point x="1389" y="800"/>
+      <point x="1164" y="488"/>
+      <point x="723" y="488" type="curve" smooth="yes"/>
+      <point x="536" y="488" type="line"/>
+      <point x="450" y="0" type="line"/>
+      <point x="70" y="0" type="line"/>
+      <point x="331" y="1480" type="line"/>
+      <point x="898" y="1480" type="line" smooth="yes"/>
+      <point x="1239" y="1480"/>
+      <point x="1389" y="1292"/>
     </contour>
   </outline>
 </glyph>

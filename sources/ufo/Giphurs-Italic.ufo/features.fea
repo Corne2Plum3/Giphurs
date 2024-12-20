@@ -8491,145 +8491,143 @@ lookup mark_Mark_positioning {
   markClass [\uni1FC0 ] <anchor 407 1040> @top_center;
   markClass [\uni030C.case ] <anchor 642 1016> @top_center;
   markClass [\uni0327 ] <anchor 627 -20> @bottom_cedilla;
-  pos base [\o ] <anchor 503 -20> mark @bottom_cedilla
-	<anchor 690 1040> mark @top_center
-	<anchor 506 0> mark @bottom_center
-	<anchor 1140 1040> mark @top_right
-	<anchor 646 0> mark @bottom_right;
-  pos base [\n ] <anchor 668 1040> mark @top_center
-	<anchor 485 0> mark @bottom_center;
-  pos base [\u ] <anchor 445 -20> mark @bottom_cedilla
-	<anchor 946 0> mark @bottom_right
-	<anchor 1109 1040> mark @top_right
-	<anchor 488 0> mark @bottom_center
-	<anchor 671 1040> mark @top_center;
-  pos base [\d ] <anchor 1176 1480> mark @top_right
-	<anchor 1069 1380> mark @top_center
-	<anchor 449 0> mark @bottom_center
-	<anchor 446 -20> mark @bottom_cedilla;
-  pos base [\b ] <anchor 345 1380> mark @top_center
-	<anchor 477 0> mark @bottom_center;
-  pos base [\p ] <anchor 735 1040> mark @top_center
-	<anchor 112 -360> mark @bottom_center;
-  pos base [\q ] <anchor 707 1040> mark @top_center
-	<anchor 836 -360> mark @bottom_center;
-  pos base [\h ] <anchor 343 1380> mark @top_center
-	<anchor 468 0> mark @bottom_center
-	<anchor 96 -20> mark @bottom_cedilla;
-  pos base [\m ] <anchor 926 1040> mark @top_center
-	<anchor 743 0> mark @bottom_center;
-  pos base [\e ] <anchor 690 1040> mark @top_center
-	<anchor 506 0> mark @bottom_center
-	<anchor 660 0> mark @bottom_right
-	<anchor 503 -20> mark @bottom_cedilla;
-  pos base [\c ] <anchor 503 -20> mark @bottom_cedilla
-	<anchor 506 0> mark @bottom_center
-	<anchor 690 1040> mark @top_center;
-  pos base [\f ] <anchor 218 0> mark @bottom_center
-	<anchor 621 1380> mark @top_center;
-  pos base [\r ] <anchor 578 1040> mark @top_center
-	<anchor 137 0> mark @bottom_center;
-  pos base [\t ] <anchor 479 1380> mark @top_center
-	<anchor 365 0> mark @bottom_center
-	<anchor 415 -20> mark @bottom_cedilla;
-  pos base [\v ] <anchor 622 1040> mark @top_center
-	<anchor 438 0> mark @bottom_center;
-  pos base [\w ] <anchor 888 1040> mark @top_center
-	<anchor 704 0> mark @bottom_center;
-  pos base [\x ] <anchor 638 1040> mark @top_center
-	<anchor 454 0> mark @bottom_center;
-  pos base [\y ] <anchor 662 1040> mark @top_center
-	<anchor 179 -360> mark @bottom_center;
+  pos base [\o ] <anchor 594 -20> mark @bottom_cedilla
+	<anchor 781 1040> mark @top_center
+	<anchor 598 0> mark @bottom_center
+	<anchor 1231 1040> mark @top_right
+	<anchor 738 0> mark @bottom_right;
+  pos base [\n ] <anchor 761 1040> mark @top_center
+	<anchor 578 0> mark @bottom_center;
+  pos base [\u ] <anchor 534 -20> mark @bottom_cedilla
+	<anchor 1036 0> mark @bottom_right
+	<anchor 1199 1040> mark @top_right
+	<anchor 578 0> mark @bottom_center
+	<anchor 761 1040> mark @top_center;
+  pos base [\d ] <anchor 1305 1480> mark @top_right
+	<anchor 1197 1380> mark @top_center
+	<anchor 578 0> mark @bottom_center
+	<anchor 574 -20> mark @bottom_cedilla;
+  pos base [\b ] <anchor 473 1380> mark @top_center
+	<anchor 606 0> mark @bottom_center;
+  pos base [\p ] <anchor 789 1040> mark @top_center
+	<anchor 167 -360> mark @bottom_center;
+  pos base [\q ] <anchor 761 1040> mark @top_center
+	<anchor 891 -360> mark @bottom_center;
+  pos base [\h ] <anchor 473 1380> mark @top_center
+	<anchor 598 0> mark @bottom_center
+	<anchor 226 -20> mark @bottom_cedilla;
+  pos base [\m ] <anchor 1019 1040> mark @top_center
+	<anchor 836 0> mark @bottom_center;
+  pos base [\e ] <anchor 781 1040> mark @top_center
+	<anchor 598 0> mark @bottom_center
+	<anchor 752 0> mark @bottom_right
+	<anchor 594 -20> mark @bottom_cedilla;
+  pos base [\c ] <anchor 594 -20> mark @bottom_cedilla
+	<anchor 598 0> mark @bottom_center
+	<anchor 781 1040> mark @top_center;
+  pos base [\f ] <anchor 350 0> mark @bottom_center
+	<anchor 753 1380> mark @top_center;
+  pos base [\r ] <anchor 671 1040> mark @top_center
+	<anchor 230 0> mark @bottom_center;
+  pos base [\t ] <anchor 593 1380> mark @top_center
+	<anchor 480 0> mark @bottom_center
+	<anchor 529 -20> mark @bottom_cedilla;
+  pos base [\v ] <anchor 713 1040> mark @top_center
+	<anchor 530 0> mark @bottom_center;
+  pos base [\w ] <anchor 979 1040> mark @top_center
+	<anchor 796 0> mark @bottom_center;
+  pos base [\x ] <anchor 729 1040> mark @top_center
+	<anchor 546 0> mark @bottom_center;
+  pos base [\y ] <anchor 713 1040> mark @top_center
+	<anchor 231 -360> mark @bottom_center;
   pos base [\i \igrave \iacute \icircumflex \idieresis \itilde \ibreve \uni01D0 \uni0209 \uni020B \uni0456 \uni0457 \i.ss08 ] <anchor 231 -20> mark @bottom_cedilla
 	<anchor 230 0> mark @bottom_center
 	<anchor 320 0> mark @bottom_right
 	<anchor 230 1376> mark @top_center;
   pos base [\j \jcircumflex \uni01F0 \uni0458 \j.ss08 ] <anchor 219 -360> mark @bottom_center
 	<anchor 279 1376> mark @top_center;
-  pos base [\l ] <anchor 345 1380> mark @top_center
-	<anchor 161 0> mark @bottom_center;
-  pos base [\k ] <anchor 343 1380> mark @top_center
-	<anchor 438 0> mark @bottom_center;
-  pos base [\s ] <anchor 419 -20> mark @bottom_cedilla
-	<anchor 584 0> mark @bottom_right
-	<anchor 422 0> mark @bottom_center
-	<anchor 606 1040> mark @top_center;
-  pos base [\a ] <anchor 405 -20> mark @bottom_cedilla
-	<anchor 941 0> mark @bottom_right
-	<anchor 632 1040> mark @top_center
-	<anchor 448 0> mark @bottom_center
-	<anchor 1072 1040> mark @top_right;
-  pos base [\g ] <anchor 649 1040> mark @top_center
-	<anchor 402 -361> mark @bottom_center;
-  pos base [\z ] <anchor 604 1040> mark @top_center
-	<anchor 420 0> mark @bottom_center;
-  pos base [\A ] <anchor 1054 -20> mark @bottom_cedilla
-	<anchor 1156 0> mark @bottom_right
-	<anchor 791 1380> mark @top_center
-	<anchor 548 0> mark @bottom_center
-	<anchor 532 -90> mark @bottom_ypogegrammeni;
-  pos base [\V ] <anchor 791 1380> mark @top_center
-	<anchor 548 0> mark @bottom_center;
-  pos base [\H ] <anchor 812 1380> mark @top_center
-	<anchor 569 0> mark @bottom_center
-	<anchor 101 -20> mark @bottom_cedilla
-	<anchor 553 -90> mark @bottom_ypogegrammeni;
-  pos base [\O ] <anchor 667 -20> mark @bottom_cedilla
-	<anchor 838 0> mark @bottom_right
-	<anchor 671 0> mark @bottom_center
-	<anchor 1510 1480> mark @top_right
-	<anchor 914 1380> mark @top_center;
-  pos base [\E ] <anchor 717 1380> mark @top_center
-	<anchor 474 0> mark @bottom_center
-	<anchor 938 0> mark @bottom_right
-	<anchor 470 -20> mark @bottom_cedilla;
-  pos base [\F ] <anchor 717 1380> mark @top_center
-	<anchor 105 0> mark @bottom_center;
-  pos base [\P ] <anchor 105 0> mark @bottom_center
-	<anchor 711 1380> mark @top_center;
-  pos base [\N \K ] <anchor 812 1380> mark @top_center
-	<anchor 569 0> mark @bottom_center;
-  pos base [\L ] <anchor 348 1380> mark @top_center
-	<anchor 474 0> mark @bottom_center;
-  pos base [\I ] <anchor 269 -20> mark @bottom_cedilla
-	<anchor 368 0> mark @bottom_right
-	<anchor 273 0> mark @bottom_center
-	<anchor 516 1380> mark @top_center;
-  pos base [\D ] <anchor 775 1380> mark @top_center
-	<anchor 532 0> mark @bottom_center
-	<anchor 433 -20> mark @bottom_cedilla;
-  pos base [\B ] <anchor 741 1380> mark @top_center
-	<anchor 498 0> mark @bottom_center;
-  pos base [\T ] <anchor 812 1380> mark @top_center
-	<anchor 569 0> mark @bottom_center
-	<anchor 565 -20> mark @bottom_cedilla;
-  pos base [\R ] <anchor 711 1380> mark @top_center
-	<anchor 468 0> mark @bottom_center;
-  pos base [\C ] <anchor 914 1380> mark @top_center
-	<anchor 671 0> mark @bottom_center
-	<anchor 667 -20> mark @bottom_cedilla;
-  pos base [\G ] <anchor 671 0> mark @bottom_center
-	<anchor 914 1380> mark @top_center;
-  pos base [\Q ] <anchor 674 0> mark @bottom_center
-	<anchor 918 1380> mark @top_center;
-  pos base [\U ] <anchor 567 -20> mark @bottom_cedilla
-	<anchor 732 0> mark @bottom_right
-	<anchor 570 0> mark @bottom_center
-	<anchor 1390 1480> mark @top_right
-	<anchor 814 1380> mark @top_center;
-  pos base [\M ] <anchor 907 1380> mark @top_center
-	<anchor 664 0> mark @bottom_center;
-  pos base [\Z ] <anchor 762 1380> mark @top_center
-	<anchor 516 0> mark @bottom_center;
-  pos base [\X \Y ] <anchor 566 0> mark @bottom_center
-	<anchor 809 1380> mark @top_center;
-  pos base [\W ] <anchor 1105 1380> mark @top_center
-	<anchor 862 0> mark @bottom_center;
-  pos base [\J ] <anchor 1048 1380> mark @top_center
-	<anchor 435 0> mark @bottom_center;
-  pos base [\S ] <anchor 476 -20> mark @bottom_cedilla
-	<anchor 723 1380> mark @top_center
-	<anchor 480 0> mark @bottom_center;
+  pos base [\l ] <anchor 473 1380> mark @top_center
+	<anchor 290 0> mark @bottom_center;
+  pos base [\k ] <anchor 473 1380> mark @top_center
+	<anchor 568 0> mark @bottom_center;
+  pos base [\s ] <anchor 510 -20> mark @bottom_cedilla
+	<anchor 676 0> mark @bottom_right
+	<anchor 514 0> mark @bottom_center
+	<anchor 697 1040> mark @top_center;
+  pos base [\a ] <anchor 496 -20> mark @bottom_cedilla
+	<anchor 1033 0> mark @bottom_right
+	<anchor 723 1040> mark @top_center
+	<anchor 540 0> mark @bottom_center
+	<anchor 1163 1040> mark @top_right;
+  pos base [\g ] <anchor 703 1040> mark @top_center
+	<anchor 456 -361> mark @bottom_center;
+  pos base [\z ] <anchor 695 1040> mark @top_center
+	<anchor 512 0> mark @bottom_center;
+  pos base [\A ] <anchor 1184 -20> mark @bottom_cedilla
+	<anchor 1286 0> mark @bottom_right
+	<anchor 921 1380> mark @top_center
+	<anchor 678 0> mark @bottom_center
+	<anchor 662 -90> mark @bottom_ypogegrammeni;
+  pos base [\V ] <anchor 921 1380> mark @top_center
+	<anchor 678 0> mark @bottom_center;
+  pos base [\H ] <anchor 942 1380> mark @top_center
+	<anchor 699 0> mark @bottom_center
+	<anchor 231 -20> mark @bottom_cedilla
+	<anchor 683 -90> mark @bottom_ypogegrammeni;
+  pos base [\O ] <anchor 797 -20> mark @bottom_cedilla
+	<anchor 968 0> mark @bottom_right
+	<anchor 801 0> mark @bottom_center
+	<anchor 1641 1480> mark @top_right
+	<anchor 1044 1380> mark @top_center;
+  pos base [\E ] <anchor 847 1380> mark @top_center
+	<anchor 604 0> mark @bottom_center
+	<anchor 1068 0> mark @bottom_right
+	<anchor 600 -20> mark @bottom_cedilla;
+  pos base [\F ] <anchor 847 1380> mark @top_center
+	<anchor 235 0> mark @bottom_center;
+  pos base [\P ] <anchor 235 0> mark @bottom_center
+	<anchor 841 1380> mark @top_center;
+  pos base [\N \K ] <anchor 942 1380> mark @top_center
+	<anchor 699 0> mark @bottom_center;
+  pos base [\L ] <anchor 478 1380> mark @top_center
+	<anchor 604 0> mark @bottom_center;
+  pos base [\I ] <anchor 399 -20> mark @bottom_cedilla
+	<anchor 498 0> mark @bottom_right
+	<anchor 403 0> mark @bottom_center
+	<anchor 646 1380> mark @top_center;
+  pos base [\D ] <anchor 905 1380> mark @top_center
+	<anchor 662 0> mark @bottom_center
+	<anchor 563 -20> mark @bottom_cedilla;
+  pos base [\B ] <anchor 871 1380> mark @top_center
+	<anchor 628 0> mark @bottom_center;
+  pos base [\T ] <anchor 942 1380> mark @top_center
+	<anchor 699 0> mark @bottom_center
+	<anchor 695 -20> mark @bottom_cedilla;
+  pos base [\R ] <anchor 841 1380> mark @top_center
+	<anchor 598 0> mark @bottom_center;
+  pos base [\C ] <anchor 1044 1380> mark @top_center
+	<anchor 801 0> mark @bottom_center
+	<anchor 797 -20> mark @bottom_cedilla;
+  pos base [\G \Q ] <anchor 801 0> mark @bottom_center
+	<anchor 1044 1380> mark @top_center;
+  pos base [\U ] <anchor 695 -20> mark @bottom_cedilla
+	<anchor 861 0> mark @bottom_right
+	<anchor 699 0> mark @bottom_center
+	<anchor 1519 1480> mark @top_right
+	<anchor 942 1380> mark @top_center;
+  pos base [\M ] <anchor 1037 1380> mark @top_center
+	<anchor 794 0> mark @bottom_center;
+  pos base [\Z ] <anchor 892 1380> mark @top_center
+	<anchor 646 0> mark @bottom_center;
+  pos base [\X \Y ] <anchor 696 0> mark @bottom_center
+	<anchor 939 1380> mark @top_center;
+  pos base [\W ] <anchor 1235 1380> mark @top_center
+	<anchor 992 0> mark @bottom_center;
+  pos base [\J ] <anchor 1176 1380> mark @top_center
+	<anchor 564 0> mark @bottom_center;
+  pos base [\S ] <anchor 606 -20> mark @bottom_cedilla
+	<anchor 853 1380> mark @top_center
+	<anchor 610 0> mark @bottom_center;
   pos base [\Agrave \Aacute \Acircumflex \Atilde \Adieresis \Abreve \uni01CD \uni0226 \uni0200 \uni0202 \uni1EA4 \uni1EA6 \uni1EA8 ] <anchor 1188 -20> mark @bottom_cedilla
 	<anchor 1286 0> mark @bottom_right
 	<anchor 678 0> mark @bottom_center
@@ -8694,10 +8692,10 @@ lookup mark_Mark_positioning {
 	<anchor 578 1376> mark @top_center;
   pos base [\yacute \ydieresis \ycircumflex \uni045E \uni04F1 \uni04F3 \uni1E8F \ygrave \uni1EF9 ] <anchor 294 -360> mark @bottom_center
 	<anchor 530 1376> mark @top_center;
-  pos base [\dotlessi ] <anchor 136 -20> mark @bottom_cedilla
-	<anchor 322 1040> mark @top_center
-	<anchor 138 0> mark @bottom_center
-	<anchor 228 0> mark @bottom_right;
+  pos base [\dotlessi ] <anchor 227 -20> mark @bottom_cedilla
+	<anchor 413 1040> mark @top_center
+	<anchor 230 0> mark @bottom_center
+	<anchor 320 0> mark @bottom_right;
   pos base [\AE ] <anchor 1117 0> mark @bottom_center
 	<anchor 1477 1380> mark @top_center;
   pos base [\Oslash \uni01B1 \Theta \uni0424 \uni04D8 \uni04E8 \uni1FFC \G.cv21 ] <anchor 801 1380> mark @top_center
@@ -8841,8 +8839,8 @@ lookup mark_Mark_positioning {
 	<anchor 649 1716> mark @top_center;
   pos base [\zacute \zdotaccent \zcaron \uni1E91 ] <anchor 512 0> mark @bottom_center
 	<anchor 512 1376> mark @top_center;
-  pos base [\uni0237 ] <anchor 411 1040> mark @top_center
-	<anchor 104 -360> mark @bottom_center;
+  pos base [\uni0237 ] <anchor 462 1040> mark @top_center
+	<anchor 156 -360> mark @bottom_center;
   pos base [\oe ] <anchor 1006 0> mark @bottom_center
 	<anchor 1006 1200> mark @top_center;
   pos base [\OE ] <anchor 1312 1380> mark @top_center
