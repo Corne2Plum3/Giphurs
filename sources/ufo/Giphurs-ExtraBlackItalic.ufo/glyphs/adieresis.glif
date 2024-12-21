@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="adieresis" format="2">
-  <advance width="1249"/>
+  <advance width="1250"/>
   <unicode hex="00E4"/>
   <anchor x="530" y="-30" name="bottom_cedilla"/>
   <anchor x="1106" y="1040" name="top_right"/>
@@ -8,7 +8,7 @@
   <anchor x="1142" y="0" name="bottom_right"/>
   <anchor x="618" y="1440" name="top_center"/>
   <outline>
+    <component base="uni0308" xOffset="11.6201"/>
     <component base="a"/>
-    <component base="uni0307" xOffset="-24"/>
   </outline>
 </glyph>
