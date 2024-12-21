@@ -55,6 +55,9 @@ ufo_accented_glyphs: sources/ufo
 	python3 sources/ufo_accented_glyphs.py sources/ufo/Giphurs-Thin.ufo
 	python3 sources/ufo_accented_glyphs.py sources/ufo/Giphurs-Regular.ufo
 	python3 sources/ufo_accented_glyphs.py sources/ufo/Giphurs-ExtraBlack.ufo
+	python3 sources/ufo_accented_glyphs.py sources/ufo/Giphurs-ThinItalic.ufo
+	python3 sources/ufo_accented_glyphs.py sources/ufo/Giphurs-Italic.ufo
+	python3 sources/ufo_accented_glyphs.py sources/ufo/Giphurs-ExtraBlackItalic.ufo
 	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
 
 # build number based glyphs
