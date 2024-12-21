@@ -5,9 +5,9 @@
   <anchor x="1220" y="1200" name="top_right"/>
   <anchor x="849" y="0" name="bottom_right"/>
   <anchor x="645" y="0" name="bottom_center"/>
-  <anchor x="645" y="1640" name="top_center"/>
+  <anchor x="723" y="1640" name="top_center"/>
   <outline>
     <component base="u.sc"/>
-    <component base="hookabovecomb" xOffset="3" yOffset="160"/>
+    <component base="hookabovecomb" xOffset="-180" yOffset="160"/>
   </outline>
 </glyph>

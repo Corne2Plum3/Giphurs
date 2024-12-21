@@ -2,13 +2,13 @@
 <glyph name="Udieresis" format="2">
   <advance width="1398"/>
   <unicode hex="00DC"/>
-  <anchor x="699" y="-20" name="bottom_cedilla"/>
+  <anchor x="695" y="-20" name="bottom_cedilla"/>
   <anchor x="861" y="0" name="bottom_right"/>
   <anchor x="699" y="0" name="bottom_center"/>
-  <anchor x="1258" y="1480" name="top_right"/>
-  <anchor x="699" y="1716" name="top_center"/>
+  <anchor x="1519" y="1480" name="top_right"/>
+  <anchor x="1002" y="1716" name="top_center"/>
   <outline>
-    <component base="uni0308" xOffset="117" yOffset="340"/>
     <component base="U"/>
+    <component base="uni0308" xOffset="117" yOffset="340"/>
   </outline>
 </glyph>

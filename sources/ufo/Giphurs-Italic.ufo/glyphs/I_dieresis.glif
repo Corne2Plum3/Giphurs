@@ -2,16 +2,16 @@
 <glyph name="Idieresis" format="2">
   <advance width="806"/>
   <unicode hex="00CF"/>
-  <anchor x="403" y="-20" name="bottom_cedilla"/>
-  <anchor x="-40" y="1040" name="greek_v"/>
-  <anchor x="-284" y="1040" name="greek_kt"/>
-  <anchor x="-118" y="1040" name="greek_k"/>
-  <anchor x="-244" y="1040" name="greek_t"/>
+  <anchor x="399" y="-20" name="bottom_cedilla"/>
+  <anchor x="143" y="1040" name="greek_v"/>
+  <anchor x="-101" y="1040" name="greek_kt"/>
+  <anchor x="65" y="1040" name="greek_k"/>
+  <anchor x="-61" y="1040" name="greek_t"/>
   <anchor x="498" y="0" name="bottom_right"/>
   <anchor x="403" y="0" name="bottom_center"/>
-  <anchor x="403" y="1716" name="top_center"/>
+  <anchor x="706" y="1716" name="top_center"/>
   <outline>
-    <component base="uni0308" xOffset="-179" yOffset="340"/>
     <component base="I"/>
+    <component base="uni0308" xOffset="-179" yOffset="340"/>
   </outline>
 </glyph>
