@@ -65,6 +65,9 @@ ufo_digits_glyphs: sources/ufo
 	python3 sources/ufo_digits_glyphs.py 100 sources/ufo/Giphurs-Thin.ufo
 	python3 sources/ufo_digits_glyphs.py 400 sources/ufo/Giphurs-Regular.ufo
 	python3 sources/ufo_digits_glyphs.py 1000 sources/ufo/Giphurs-ExtraBlack.ufo
+	python3 sources/ufo_digits_glyphs.py 100 sources/ufo/Giphurs-ThinItalic.ufo
+	python3 sources/ufo_digits_glyphs.py 400 sources/ufo/Giphurs-Italic.ufo
+	python3 sources/ufo_digits_glyphs.py 1000 sources/ufo/Giphurs-ExtraBlackItalic.ufo
 	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
 
 # edit fontinfo.plist to set the bit 7 of openTypeOS2Selection ("use typo metrics")
