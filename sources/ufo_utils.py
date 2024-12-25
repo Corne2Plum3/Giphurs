@@ -60,8 +60,9 @@ def get_glyph_metrics(glyph_name, ufo_dir):
     """
     Returns a dict with some informations about the metrics of the glyph:
 
-    `{"glyph_width": int, "left_kern": int, "right_kern": int, "x_min": int, "x_max": int", 
-    "y_min": int, "y_max": int}`
+    `{"glyph_width": int, "left_kern": int, "right_kern": int, 
+    "raw_width": int, "raw_height": int,
+    "x_min": int, "x_max": int", "y_min": int, "y_max": int}`
     """
     glyph_width = get_glyph_width(glyph_name, ufo_dir)
     points_list = get_glyph_points_coordinates(glyph_name, ufo_dir)
@@ -70,6 +71,8 @@ def get_glyph_metrics(glyph_name, ufo_dir):
             "glyph_width": glyph_width,
             "left_kern": 0,
             "right_kern": glyph_width,
+            "raw_width": 0,
+            "raw_height": 0,
             "x_min": 0,
             "x_max": 0,
             "y_min": 0,
@@ -79,13 +82,15 @@ def get_glyph_metrics(glyph_name, ufo_dir):
         x_points = [ p[0] for p in points_list ]
         y_points = [ p[1] for p in points_list ]
         return {
-            "glyph_width": glyph_width,
+            "glyph_width": glyph_width,  # advance value
             "left_kern": min(x_points),
             "right_kern": glyph_width - max(x_points),
+            "raw_width": abs(max(x_points) - min(x_points)),  # distance between x min and max
+            "raw_height": abs(max(y_points) - min(y_points)),
             "x_min": min(x_points),
             "x_max": max(x_points),
             "y_min": min(y_points),
-            "y_max": max(y_points)
+            "y_max": max(y_points),
         }
 
 def get_glyph_points_coordinates(glyph_name, ufo_dir):

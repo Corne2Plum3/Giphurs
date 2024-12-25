@@ -107,47 +107,6 @@ SS_GLYPH_NAMES = {
 }
 SS_LIST = ["ss06","ss07","zero"]
 
-# get the .glif file name from glyph name
-def get_glif_file_from_name(name: str):
-    res = name
-    i = 0
-    while i < len(res):
-        if res[i] in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":  # uppercase in name: add _ next to the letter
-            i += 1
-            res = res[:i] + "_" + res[i:]
-        i += 1
-    res += ".glif"
-    return res
-
-# format (dict) {"total_width": int, "left_kern": int, "glyph_width": int, "right_kern", int}
-def get_glyph_metrics(glyph_name: str, ufo_dir: str):
-    xml_tree = ET.parse(f"{ufo_dir}/glyphs/{get_glif_file_from_name(glyph_name)}")
-    xml_root = xml_tree.getroot()
-    total_width = int(xml_root.find("advance").attrib["width"])
-    xml_contour_list = xml_root.find("outline").findall("contour")
-
-    min_x = None
-    max_x = None
-    for contour in xml_contour_list:
-        for point in contour.findall("point"):
-            if min_x == None:
-                min_x = int(point.attrib["x"])
-                max_x = int(point.attrib["x"])
-            elif int(point.attrib["x"]) < min_x:
-                min_x = int(point.attrib["x"])
-            elif int(point.attrib["x"]) > max_x:
-                max_x = int(point.attrib["x"])
-    if min_x == None or max_x == None:
-        print(f"Warning: No point found for {glyph_name}")
-        return None
-    else:
-        return {
-            "total_width": total_width,
-            "left_kern": min_x,
-            "glyph_width": max_x - min_x,   # excludes kerning
-            "right_kern": total_width - max_x
-        }
-
 # create a .glif file in the {ufo_dir}/glyphs/{new_file_name} directory
 def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: int, cv_d1: int, ss_d1: str, digit_2: int, cv_d2: int, ss_d2: str):
     global DIGITS_NAMES_ENGLISH, SUPS_NAMES, FRAC_NAMES, SS_GLYPH_NAMES
@@ -230,7 +189,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
 
     # start to build the xml (output)
     xml_root = ET.Element("glyph", {"name": glyph_name, "format": "2"})
-    new_file_name = get_glif_file_from_name(glyph_name)
+    new_file_name = get_glif_from_name(glyph_name, ufo_dir)
 
     # draw
     if type.split("_")[0] in ["superior", "subscript", "numr", "dnom"]:  # sups/subs/numr/dnom with eventually pnum/tnum on digit_2 !!!!!! 
@@ -239,20 +198,18 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         width = 0
         if len(type.split("_")) == 1:  # no pnum nor tnum
             x_offset = 0
-            width = base_2_x_metrics["total_width"]
+            width = base_2_x_metrics["glyph_width"]
         elif type.split("_")[1] == "pnum":
             if digit_1 == 1:
                 x_offset = PNUM_SUPS_KERN[weight]["1"][0] - base_2_x_metrics["left_kern"]
-                width = base_2_x_metrics["glyph_width"] + PNUM_SUPS_KERN[weight]["1"][0] + PNUM_SUPS_KERN[weight]["1"][1]
+                width = base_2_x_metrics["raw_width"] + PNUM_SUPS_KERN[weight]["1"][0] + PNUM_SUPS_KERN[weight]["1"][1]
             else:
                 x_offset = PNUM_SUPS_KERN[weight]["other"][0] - base_2_x_metrics["left_kern"]
-                width = base_2_x_metrics["glyph_width"] + PNUM_SUPS_KERN[weight]["other"][0] + PNUM_SUPS_KERN[weight]["other"][1]
+                width = base_2_x_metrics["raw_width"] + PNUM_SUPS_KERN[weight]["other"][0] + PNUM_SUPS_KERN[weight]["other"][1]
         elif type.split("_")[1] == "tnum":
-            additional_kern = TNUM_WIDTH[weight] - base_2_x_metrics["total_width"]
-            if (base_2_x_metrics["left_kern"] + base_2_x_metrics["right_kern"]) != 0:  # keep 0 if it is already 0
-                lk = int(base_2_x_metrics["left_kern"] + additional_kern * (base_2_x_metrics["left_kern"] / (base_2_x_metrics["left_kern"] + base_2_x_metrics["right_kern"])))
-                x_offset = lk - base_2_x_metrics["left_kern"]
             width = TNUM_WIDTH[weight]
+            additional_kern = width - base_2_x_metrics["glyph_width"]
+            x_offset = int(base_2_x_metrics["left_kern"] + additional_kern / 2)
 
         # calculate the y metrics
         y_offset = 0  # value for superior
@@ -281,7 +238,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         else:  # double_circle
             base_circle = "double_circle_empty"
         base_circle_x_metrics = get_glyph_metrics(base_circle, ufo_dir)
-        width = base_circle_x_metrics["total_width"]
+        width = base_circle_x_metrics["glyph_width"]
 
         # start building the xml (base)
         ET.SubElement(xml_root, "advance", {"width": str(width)})
@@ -292,14 +249,14 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
 
         # add numbers
         y_offset = CENTER_Y - SUPS_Y
-        middle = base_circle_x_metrics["left_kern"] + base_circle_x_metrics["glyph_width"] / 2
+        middle = base_circle_x_metrics["left_kern"] + base_circle_x_metrics["raw_width"] / 2
         if digit_1 == 0:  # one digit : digit_2
-            x2 = middle - base_2_x_metrics["total_width"] / 2
+            x2 = middle - base_2_x_metrics["glyph_width"] / 2
             ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x2)), "yOffset": str(int(y_offset))})
         else:  # two digits : dozens = digit_1 and units = digit_2 (!)
-            both_digits_length = (base_1_x_metrics["total_width"] + base_2_x_metrics["total_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
+            both_digits_length = (base_1_x_metrics["glyph_width"] + base_2_x_metrics["glyph_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
             x1 = middle - both_digits_length / 2 + TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] * (SUPS_HEIGHT / DIGITS_HEIGHT) 
-            x2 = middle + both_digits_length / 2 - TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] * (SUPS_HEIGHT / DIGITS_HEIGHT) - base_2_x_metrics["total_width"] * TWO_DIGITS_WIDTH_COEF[weight]
+            x2 = middle + both_digits_length / 2 - TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] * (SUPS_HEIGHT / DIGITS_HEIGHT) - base_2_x_metrics["glyph_width"] * TWO_DIGITS_WIDTH_COEF[weight]
             ET.SubElement(xml_outline, "component", {"base": base_1, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x1)), "yOffset": str(int(y_offset))})
             ET.SubElement(xml_outline, "component", {"base": base_2, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x2)), "yOffset": str(int(y_offset))})
 
@@ -310,8 +267,8 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         base_pr_x_metrics = get_glyph_metrics(base_pr, ufo_dir)
 
         # width calculation
-        both_digits_length = (base_1_x_metrics["total_width"] + base_2_x_metrics["total_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
-        width = (base_pl_x_metrics["glyph_width"] + base_pr_x_metrics["glyph_width"]) * TWO_DIGITS_WIDTH_COEF[weight] + both_digits_length - TWO_DIGITS_OVERLAP[weight]
+        both_digits_length = (base_1_x_metrics["glyph_width"] + base_2_x_metrics["glyph_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
+        width = (base_pl_x_metrics["raw_width"] + base_pr_x_metrics["raw_width"]) * TWO_DIGITS_WIDTH_COEF[weight] + both_digits_length - TWO_DIGITS_OVERLAP[weight]
 
         ET.SubElement(xml_root, "advance", {"width": str(width)})
         if cv_d1 == 0 and cv_d2 == 0 and ss_d1 == "" and ss_d2 == "":
@@ -319,17 +276,17 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         xml_outline = ET.SubElement(xml_root, "outline")
 
         xl = DEFAULT_KERN[weight] - base_pl_x_metrics["left_kern"] * TWO_DIGITS_WIDTH_COEF[weight]
-        xr = width - DEFAULT_KERN[weight] - (base_pr_x_metrics["left_kern"] + base_pr_x_metrics["glyph_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
+        xr = width - DEFAULT_KERN[weight] - (base_pr_x_metrics["left_kern"] + base_pr_x_metrics["raw_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
         ET.SubElement(xml_outline, "component", {"base": base_pl, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(xl)), "yOffset": "0"})
         ET.SubElement(xml_outline, "component", {"base": base_pr, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(xr)), "yOffset": "0"})
 
         if digit_1 == 0:
-            x2 = DEFAULT_KERN[weight] + ((width - 2*DEFAULT_KERN[weight]) - base_2_x_metrics["total_width"]) * 0.5
+            x2 = DEFAULT_KERN[weight] + ((width - 2*DEFAULT_KERN[weight]) - base_2_x_metrics["glyph_width"]) * 0.5
             ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(x2), "yOffset": "0"})
         else:
             middle = width / 2
             x1 = middle - both_digits_length / 2 + TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2
-            x2 = middle + both_digits_length / 2 - TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2 - base_2_x_metrics["total_width"] * TWO_DIGITS_WIDTH_COEF[weight]
+            x2 = middle + both_digits_length / 2 - TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2 - base_2_x_metrics["glyph_width"] * TWO_DIGITS_WIDTH_COEF[weight]
             ET.SubElement(xml_outline, "component", {"base": base_1, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x1)), "yOffset": "0"})
             ET.SubElement(xml_outline, "component", {"base": base_2, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x2)), "yOffset": "0"})
     
@@ -338,24 +295,24 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         base_period_x_metrics = get_glyph_metrics(base_period, ufo_dir)
 
         # width calculation
-        both_digits_length = (base_1_x_metrics["total_width"] + base_2_x_metrics["total_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
-        width = DEFAULT_KERN[weight] / 2 + both_digits_length + base_period_x_metrics["glyph_width"] + DEFAULT_KERN[weight] - TWO_DIGITS_OVERLAP[weight]
+        both_digits_length = (base_1_x_metrics["glyph_width"] + base_2_x_metrics["glyph_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
+        width = DEFAULT_KERN[weight] / 2 + both_digits_length + base_period_x_metrics["raw_width"] + DEFAULT_KERN[weight] - TWO_DIGITS_OVERLAP[weight]
 
         ET.SubElement(xml_root, "advance", {"width": str(width)})
         if cv_d1 == 0 and cv_d2 == 0 and ss_d1 == "" and ss_d2 == "":
             ET.SubElement(xml_root, "unicode", {"hex": hex(UNICODE_VALUES[type][digit_1 * 10 + digit_2]).upper()[2:]})
         xml_outline = ET.SubElement(xml_root, "outline")
 
-        xp = width - base_period_x_metrics["left_kern"] - base_period_x_metrics["glyph_width"] - DEFAULT_KERN[weight]
+        xp = width - base_period_x_metrics["left_kern"] - base_period_x_metrics["raw_width"] - DEFAULT_KERN[weight]
         ET.SubElement(xml_outline, "component", {"base": base_period, "xOffset": str(int(xp)), "yOffset": "0"})
 
-        middle = (width - base_period_x_metrics["total_width"]) / 2 + DEFAULT_KERN[weight]
+        middle = (width - base_period_x_metrics["glyph_width"]) / 2 + DEFAULT_KERN[weight]
         if digit_1 == 0:
-            x2 = middle - base_2_x_metrics["total_width"] / 2 + DEFAULT_KERN[weight]
+            x2 = middle - base_2_x_metrics["glyph_width"] / 2 + DEFAULT_KERN[weight]
             ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x2)), "yOffset": "0"})
         else:
             x1 = middle - both_digits_length / 2 + TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2
-            x2 = middle + both_digits_length / 2 - TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2 - base_2_x_metrics["total_width"] * TWO_DIGITS_WIDTH_COEF[weight]
+            x2 = middle + both_digits_length / 2 - TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2 - base_2_x_metrics["glyph_width"] * TWO_DIGITS_WIDTH_COEF[weight]
             ET.SubElement(xml_outline, "component", {"base": base_1, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x1)), "yOffset": "0"})
             ET.SubElement(xml_outline, "component", {"base": base_2, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x2)), "yOffset": "0"})
     
@@ -365,12 +322,12 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
 
         if digit_2 == 10:
             # based on where the denominators are located
-            width = base_frac_x_metrics["left_kern"] + base_frac_x_metrics["glyph_width"]
-            width -= base_1_x_metrics["total_width"] / 2
-            width += base_1_x_metrics["total_width"] - TWO_DIGITS_OVERLAP[weight]
-            width += base_2_x_metrics["left_kern"] + base_2_x_metrics["glyph_width"] + DEFAULT_KERN[weight]
+            width = base_frac_x_metrics["left_kern"] + base_frac_x_metrics["raw_width"]
+            width -= base_1_x_metrics["glyph_width"] / 2
+            width += base_1_x_metrics["glyph_width"] - TWO_DIGITS_OVERLAP[weight]
+            width += base_2_x_metrics["left_kern"] + base_2_x_metrics["raw_width"] + DEFAULT_KERN[weight]
         else:  # denominator = 0 => same than normal fractions
-            width = base_frac_x_metrics["total_width"]
+            width = base_frac_x_metrics["glyph_width"]
 
         # unicode value
         ET.SubElement(xml_root, "advance", {"width": str(int(width))})
@@ -383,7 +340,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
 
         # numr
         digit_1_middle = base_frac_x_metrics["left_kern"] - DEFAULT_KERN[weight] * 1.5
-        x1 = digit_1_middle - base_1_x_metrics["total_width"] / 2
+        x1 = digit_1_middle - base_1_x_metrics["glyph_width"] / 2
         y1 = NUMR_Y - SUPS_Y
         ET.SubElement(xml_outline, "component", {"base": base_1, "xOffset": str(int(x1)), "yOffset": str(int(y1))})
 
@@ -392,19 +349,19 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         if digit_2 == 0:
             pass
         elif digit_2 == 10:
-            digit_21_middle = base_frac_x_metrics["left_kern"] + base_frac_x_metrics["glyph_width"]
-            x21 = digit_21_middle - base_1_x_metrics["total_width"] / 2
-            x22 = x21 + base_1_x_metrics["total_width"] - base_2_x_metrics["left_kern"] - TWO_DIGITS_OVERLAP[weight]
+            digit_21_middle = base_frac_x_metrics["left_kern"] + base_frac_x_metrics["raw_width"]
+            x21 = digit_21_middle - base_1_x_metrics["glyph_width"] / 2
+            x22 = x21 + base_1_x_metrics["glyph_width"] - base_2_x_metrics["left_kern"] - TWO_DIGITS_OVERLAP[weight]
             ET.SubElement(xml_outline, "component", {"base": base_1, "xOffset": str(int(x21)), "yOffset": str(int(y2))})
             ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x22)), "yOffset": str(int(y2))})
         else:
-            digit_2_middle = base_frac_x_metrics["left_kern"] + base_frac_x_metrics["glyph_width"] + DEFAULT_KERN[weight] * 1.5
-            x2 = digit_2_middle - base_2_x_metrics["total_width"] / 2
+            digit_2_middle = base_frac_x_metrics["left_kern"] + base_frac_x_metrics["raw_width"] + DEFAULT_KERN[weight] * 1.5
+            x2 = digit_2_middle - base_2_x_metrics["glyph_width"] / 2
             ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x2)), "yOffset": str(int(y2))})
 
     # save
     tree = ET.ElementTree(xml_root)
-    tree.write(f"{ufo_dir}/glyphs/{new_file_name}", encoding="UTF-8", xml_declaration=True)
+    tree.write(new_file_name, encoding="UTF-8", xml_declaration=True)
     #print(f"{glyph_name}, {base_1}, {base_2}")
 
     # Unlink reference for black circles
@@ -423,6 +380,8 @@ def build_weight(weight: str, ufo_dir: str):
     ]
     SS_LIST_NAMES = [ ss_data[0] for ss_data in SS_LIST ]
     SS_LIST_DIGITS = [ ss_data[1] for ss_data in SS_LIST ]
+    
+    glyphs_count = 0
     for i in range(100):
         # calculate the digits (0-9)
         d1 = i // 10
@@ -483,31 +442,39 @@ def build_weight(weight: str, ufo_dir: str):
                     for type in ["superior", "subscript", "numr", "dnom"]:
                         if not(type == "superior"):
                             build_glyph(type, ufo_dir, f"{DIGITS_NAMES_ENGLISH[i]}{cv_suffix}{ss_suffix}.{type}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
+                            glyphs_count += 1
                         build_glyph(type + "_pnum", ufo_dir, f"{DIGITS_NAMES_ENGLISH[i]}{cv_suffix}{ss_suffix}.{type}.pnum", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                         build_glyph(type + "_tnum", ufo_dir, f"{DIGITS_NAMES_ENGLISH[i]}{cv_suffix}{ss_suffix}.{type}.tnum", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
+                        glyphs_count += 2
                 # circled numbers etc. (d1 = dozens, d2 = units)
                 if i == 0 or (i != 0 and i < 10 and cv_values_list[cv_index][0] == 0 and ss_values_list[ss_index][0] == ""):  # one digit (0-9)
                     build_glyph("circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                     build_glyph("black_circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["black_circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
+                    glyphs_count += 2
                     if i >= 1:
                         build_glyph("parenthezed", ufo_dir, f"uni{str(hex(UNICODE_VALUES["parenthezed"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                         build_glyph("full_stop", ufo_dir, f"uni{str(hex(UNICODE_VALUES["full_stop"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                         build_glyph("double_circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["double_circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
+                        glyphs_count += 3
                 elif i >= 10 and i <= 20:  # two digits
                     if d1 != d2:  # disable building for 2 same digits that are the same if digit one has a non-null cv or ss to avoid duplicates 
                         build_glyph("circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                         build_glyph("black_circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["black_circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
+                        glyphs_count += 2
                         if i >= 1: # 1-20
                             build_glyph("parenthezed", ufo_dir, f"uni{str(hex(UNICODE_VALUES["parenthezed"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                             build_glyph("full_stop", ufo_dir, f"uni{str(hex(UNICODE_VALUES["full_stop"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
+                            glyphs_count += 2
                     elif d1 == d2:
                         build_glyph("circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                         build_glyph("black_circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["black_circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                         build_glyph("parenthezed", ufo_dir, f"uni{str(hex(UNICODE_VALUES["parenthezed"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                         build_glyph("full_stop", ufo_dir, f"uni{str(hex(UNICODE_VALUES["full_stop"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                        
+                        glyphs_count += 4
+
                     if i == 10:  # 10
                         build_glyph("double_circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["double_circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
+                        glyphs_count += 1
                 # fractions (digit_1 = numerator, digits_2 = denominator)
                 if i == 1:  # as 0/1 doesn't exists, let's put the 1/10 here
                     glyph_name = ""
@@ -516,7 +483,7 @@ def build_weight(weight: str, ufo_dir: str):
                     else:
                         glyph_name = f"uni{str(hex(UNICODE_VALUES["frac"][10][1])).upper()[2:]}"
                     build_glyph("frac", ufo_dir, f"uni{str(hex(UNICODE_VALUES["frac"][10][1])).upper()[2:]}" + cv_suffix + ss_suffix, weight, 1, cv_values_list[cv_index][1], ss_values_list[ss_index][1], 10, cv_values_list[cv_index][0], ss_values_list[ss_index][0])
-                    
+                    glyphs_count += 1
                     #print(str(i).zfill(2), "frac", ufo_dir, glyph_name + cv_suffix + ss_suffix, weight, 1, cv_values_list[cv_index][1], ss_values_list[ss_index][1] if ss_values_list[ss_index][1] == "" else "-", 10, cv_values_list[cv_index][0], ss_values_list[ss_index][0] if ss_values_list[ss_index][0] == "" else "-")
                 elif UNICODE_VALUES["frac"][d2][d1] != -1:
                     glyph_name = ""
@@ -527,12 +494,14 @@ def build_weight(weight: str, ufo_dir: str):
                     if d2 == 0:  # invisible dnom
                         if cv_values_list[cv_index][1] == 0 and ss_values_list[ss_index][1] == "":
                             build_glyph("frac", ufo_dir, glyph_name + cv_suffix + ss_suffix, weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], 0, 0, "")
+                            glyphs_count += 1
                     else:
                         build_glyph("frac", ufo_dir, glyph_name + cv_suffix + ss_suffix, weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
+                        glyphs_count += 1
                     #print(str(i).zfill(2), "frac", ufo_dir, glyph_name + cv_suffix + ss_suffix, weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0] if ss_values_list[ss_index][0] == "" else "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1] if ss_values_list[ss_index][1] == "" else "-")
                 cv_index += 1
             ss_index += 1
-    print(f"Done building glyphs for weight {weight}")
+    print(f"Done building glyphs for weight {weight} ({glyphs_count} generated)")
     return
 
 def main():
