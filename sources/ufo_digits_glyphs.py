@@ -207,11 +207,9 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
                 x_offset = PNUM_SUPS_KERN[weight]["other"][0] - base_2_x_metrics["left_kern"]
                 width = base_2_x_metrics["raw_width"] + PNUM_SUPS_KERN[weight]["other"][0] + PNUM_SUPS_KERN[weight]["other"][1]
         elif type.split("_")[1] == "tnum":
-            additional_kern = TNUM_WIDTH[weight] - base_2_x_metrics["glyph_width"]
-            if (base_2_x_metrics["left_kern"] + base_2_x_metrics["right_kern"]) != 0:  # keep 0 if it is already 0
-                lk = int(base_2_x_metrics["left_kern"] + additional_kern * (base_2_x_metrics["left_kern"] / (base_2_x_metrics["left_kern"] + base_2_x_metrics["right_kern"])))
-                x_offset = lk - base_2_x_metrics["left_kern"]
             width = TNUM_WIDTH[weight]
+            additional_kern = width - base_2_x_metrics["glyph_width"]
+            x_offset = int(base_2_x_metrics["left_kern"] + additional_kern / 2)
 
         # calculate the y metrics
         y_offset = 0  # value for superior
@@ -382,6 +380,8 @@ def build_weight(weight: str, ufo_dir: str):
     ]
     SS_LIST_NAMES = [ ss_data[0] for ss_data in SS_LIST ]
     SS_LIST_DIGITS = [ ss_data[1] for ss_data in SS_LIST ]
+    
+    glyphs_count = 0
     for i in range(100):
         # calculate the digits (0-9)
         d1 = i // 10
@@ -442,31 +442,39 @@ def build_weight(weight: str, ufo_dir: str):
                     for type in ["superior", "subscript", "numr", "dnom"]:
                         if not(type == "superior"):
                             build_glyph(type, ufo_dir, f"{DIGITS_NAMES_ENGLISH[i]}{cv_suffix}{ss_suffix}.{type}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
+                            glyphs_count += 1
                         build_glyph(type + "_pnum", ufo_dir, f"{DIGITS_NAMES_ENGLISH[i]}{cv_suffix}{ss_suffix}.{type}.pnum", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                         build_glyph(type + "_tnum", ufo_dir, f"{DIGITS_NAMES_ENGLISH[i]}{cv_suffix}{ss_suffix}.{type}.tnum", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
+                        glyphs_count += 2
                 # circled numbers etc. (d1 = dozens, d2 = units)
                 if i == 0 or (i != 0 and i < 10 and cv_values_list[cv_index][0] == 0 and ss_values_list[ss_index][0] == ""):  # one digit (0-9)
                     build_glyph("circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                     build_glyph("black_circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["black_circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
+                    glyphs_count += 2
                     if i >= 1:
                         build_glyph("parenthezed", ufo_dir, f"uni{str(hex(UNICODE_VALUES["parenthezed"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                         build_glyph("full_stop", ufo_dir, f"uni{str(hex(UNICODE_VALUES["full_stop"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                         build_glyph("double_circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["double_circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
+                        glyphs_count += 3
                 elif i >= 10 and i <= 20:  # two digits
                     if d1 != d2:  # disable building for 2 same digits that are the same if digit one has a non-null cv or ss to avoid duplicates 
                         build_glyph("circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                         build_glyph("black_circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["black_circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
+                        glyphs_count += 2
                         if i >= 1: # 1-20
                             build_glyph("parenthezed", ufo_dir, f"uni{str(hex(UNICODE_VALUES["parenthezed"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                             build_glyph("full_stop", ufo_dir, f"uni{str(hex(UNICODE_VALUES["full_stop"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
+                            glyphs_count += 2
                     elif d1 == d2:
                         build_glyph("circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                         build_glyph("black_circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["black_circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                         build_glyph("parenthezed", ufo_dir, f"uni{str(hex(UNICODE_VALUES["parenthezed"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
                         build_glyph("full_stop", ufo_dir, f"uni{str(hex(UNICODE_VALUES["full_stop"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                        
+                        glyphs_count += 4
+
                     if i == 10:  # 10
                         build_glyph("double_circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["double_circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
+                        glyphs_count += 1
                 # fractions (digit_1 = numerator, digits_2 = denominator)
                 if i == 1:  # as 0/1 doesn't exists, let's put the 1/10 here
                     glyph_name = ""
@@ -475,7 +483,7 @@ def build_weight(weight: str, ufo_dir: str):
                     else:
                         glyph_name = f"uni{str(hex(UNICODE_VALUES["frac"][10][1])).upper()[2:]}"
                     build_glyph("frac", ufo_dir, f"uni{str(hex(UNICODE_VALUES["frac"][10][1])).upper()[2:]}" + cv_suffix + ss_suffix, weight, 1, cv_values_list[cv_index][1], ss_values_list[ss_index][1], 10, cv_values_list[cv_index][0], ss_values_list[ss_index][0])
-                    
+                    glyphs_count += 1
                     #print(str(i).zfill(2), "frac", ufo_dir, glyph_name + cv_suffix + ss_suffix, weight, 1, cv_values_list[cv_index][1], ss_values_list[ss_index][1] if ss_values_list[ss_index][1] == "" else "-", 10, cv_values_list[cv_index][0], ss_values_list[ss_index][0] if ss_values_list[ss_index][0] == "" else "-")
                 elif UNICODE_VALUES["frac"][d2][d1] != -1:
                     glyph_name = ""
@@ -486,12 +494,14 @@ def build_weight(weight: str, ufo_dir: str):
                     if d2 == 0:  # invisible dnom
                         if cv_values_list[cv_index][1] == 0 and ss_values_list[ss_index][1] == "":
                             build_glyph("frac", ufo_dir, glyph_name + cv_suffix + ss_suffix, weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], 0, 0, "")
+                            glyphs_count += 1
                     else:
                         build_glyph("frac", ufo_dir, glyph_name + cv_suffix + ss_suffix, weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
+                        glyphs_count += 1
                     #print(str(i).zfill(2), "frac", ufo_dir, glyph_name + cv_suffix + ss_suffix, weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0] if ss_values_list[ss_index][0] == "" else "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1] if ss_values_list[ss_index][1] == "" else "-")
                 cv_index += 1
             ss_index += 1
-    print(f"Done building glyphs for weight {weight}")
+    print(f"Done building glyphs for weight {weight} ({glyphs_count} generated)")
     return
 
 def main():
