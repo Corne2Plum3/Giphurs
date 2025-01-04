@@ -18,8 +18,11 @@ And thus are built:
 * U+2460-U+24FF and U+2776-U+277F as long they have numbers
 
 The program takes 2 parameters: the weight value (100, 400, 1000) and the ufo directory location.
+The weight value can take an additional "i" at the end (for example "400i") for italics, which can
+be used to apply an offset on glyphs.
 """
 
+from math import pi, tan
 import sys
 from ufo_utils import *
 import xml.etree.ElementTree as ET
@@ -153,13 +156,20 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
     }
     DIGITS_HEIGHT = 1480
     SUPS_HEIGHT = 858
+    ITALIC_SLANT = 10*pi/180  # slant to the RIGHT in radians (the "*pi/180" converts degrees to radians)
 
-    # get the dependencies and the metrics
+    use_sups = type.split("_")[0] in ["superior", "subscript", "numr", "dnom"] or type in ["circle", "black_circle", "double_circle", "frac"]
+
+    # check if italic
+    is_italic = weight[-1] == "i"
+    if is_italic:  # remove the "i" at the end
+        weight = weight[:-1]
+
+    # get the dependencies and the metrics (apply italic offset here if needed)
     base_1 = ""
     base_2 = ""
     base_1_x_metrics = {}
     base_2_x_metrics = {}
-    use_sups = type.split("_")[0] in ["superior", "subscript", "numr", "dnom"] or type in ["circle", "black_circle", "double_circle", "frac"]
     if ss_d1 == "":  # not use custom ss
         cv_search = ["def", "ss01", "ss02"]
         if use_sups:  # use sups
@@ -186,7 +196,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         base_2 = SS_GLYPH_NAMES[ss_d2][ss_search[cv_d2]]
     base_1_x_metrics = get_glyph_metrics(base_1, ufo_dir)
     base_2_x_metrics = get_glyph_metrics(base_2, ufo_dir)
-
+        
     # start to build the xml (output)
     xml_root = ET.Element("glyph", {"name": glyph_name, "format": "2"})
     new_file_name = get_glif_from_name(glyph_name, ufo_dir)
@@ -210,6 +220,15 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
             width = TNUM_WIDTH[weight]
             additional_kern = width - base_2_x_metrics["glyph_width"]
             x_offset = int(base_2_x_metrics["left_kern"] + additional_kern / 2)
+
+        # Add more x offset if italic (none if superior) as we move the glyph below
+        if is_italic:
+            if type.split("_")[0] == "subscript":
+                x_offset -= abs(SUPS_Y - SUBS_Y) / tan(pi/2-ITALIC_SLANT)
+            elif type.split("_")[0] == "numr":
+                x_offset -= abs(SUPS_Y - NUMR_Y) / tan(pi/2-ITALIC_SLANT)
+            elif type.split("_")[0] == "dnom":
+                x_offset -= abs(SUPS_Y - DNOM_Y) / tan(pi/2-ITALIC_SLANT)
 
         # calculate the y metrics
         y_offset = 0  # value for superior
@@ -252,11 +271,16 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         middle = base_circle_x_metrics["left_kern"] + base_circle_x_metrics["raw_width"] / 2
         if digit_1 == 0:  # one digit : digit_2
             x2 = middle - base_2_x_metrics["glyph_width"] / 2
+            if is_italic:
+                x2 -= abs(y_offset) / tan(pi/2-ITALIC_SLANT)
             ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x2)), "yOffset": str(int(y_offset))})
         else:  # two digits : dozens = digit_1 and units = digit_2 (!)
             both_digits_length = (base_1_x_metrics["glyph_width"] + base_2_x_metrics["glyph_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
             x1 = middle - both_digits_length / 2 + TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] * (SUPS_HEIGHT / DIGITS_HEIGHT) 
             x2 = middle + both_digits_length / 2 - TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] * (SUPS_HEIGHT / DIGITS_HEIGHT) - base_2_x_metrics["glyph_width"] * TWO_DIGITS_WIDTH_COEF[weight]
+            if is_italic:
+                x1 -= abs(y_offset) / tan(pi/2-ITALIC_SLANT) * TWO_DIGITS_WIDTH_COEF[weight]
+                x2 -= abs(y_offset) / tan(pi/2-ITALIC_SLANT) * TWO_DIGITS_WIDTH_COEF[weight]
             ET.SubElement(xml_outline, "component", {"base": base_1, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x1)), "yOffset": str(int(y_offset))})
             ET.SubElement(xml_outline, "component", {"base": base_2, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x2)), "yOffset": str(int(y_offset))})
 
@@ -282,7 +306,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
 
         if digit_1 == 0:
             x2 = DEFAULT_KERN[weight] + ((width - 2*DEFAULT_KERN[weight]) - base_2_x_metrics["glyph_width"]) * 0.5
-            ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(x2), "yOffset": "0"})
+            ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x2)), "yOffset": "0"})
         else:
             middle = width / 2
             x1 = middle - both_digits_length / 2 + TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2
@@ -342,6 +366,8 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         digit_1_middle = base_frac_x_metrics["left_kern"] - DEFAULT_KERN[weight] * 1.5
         x1 = digit_1_middle - base_1_x_metrics["glyph_width"] / 2
         y1 = NUMR_Y - SUPS_Y
+        if is_italic:
+            x1 -= abs(y1) / tan(pi/2-ITALIC_SLANT)
         ET.SubElement(xml_outline, "component", {"base": base_1, "xOffset": str(int(x1)), "yOffset": str(int(y1))})
 
         # dnom
@@ -352,11 +378,16 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
             digit_21_middle = base_frac_x_metrics["left_kern"] + base_frac_x_metrics["raw_width"]
             x21 = digit_21_middle - base_1_x_metrics["glyph_width"] / 2
             x22 = x21 + base_1_x_metrics["glyph_width"] - base_2_x_metrics["left_kern"] - TWO_DIGITS_OVERLAP[weight]
+            if is_italic:
+                x21 -= abs(y2) / tan(pi/2-ITALIC_SLANT) 
+                x22 -= abs(y2) / tan(pi/2-ITALIC_SLANT)
             ET.SubElement(xml_outline, "component", {"base": base_1, "xOffset": str(int(x21)), "yOffset": str(int(y2))})
             ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x22)), "yOffset": str(int(y2))})
         else:
             digit_2_middle = base_frac_x_metrics["left_kern"] + base_frac_x_metrics["raw_width"] + DEFAULT_KERN[weight] * 1.5
             x2 = digit_2_middle - base_2_x_metrics["glyph_width"] / 2
+            if is_italic:
+                x2 -= abs(y2) / tan(pi/2-ITALIC_SLANT)
             ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x2)), "yOffset": str(int(y2))})
 
     # save
