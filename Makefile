@@ -44,29 +44,38 @@ tests:
 	fontbakery check-googlefonts -F fonts/ttf/$(font_name)-Regular.ttf > $(tests_output_dir)/fontbakery_ttf_400.log & \
 	fontbakery check-googlefonts -F fonts/ttf/$(font_name)ExtraBlack-Regular.ttf > $(tests_output_dir)/fontbakery_ttf_1000.log & \
 	fontbakery check-googlefonts -F fonts/variable/$(font_name)\[wght\].ttf > $(tests_output_dir)/fontbakery_ttf_var.log & \
+	fontbakery check-googlefonts -F fonts/otf/$(font_name)-Italic.otf > $(tests_output_dir)/fontbakery_otf_i_400.log & \
+	fontbakery check-googlefonts -F fonts/otf/$(font_name)ExtraBlack-Italic.otf > $(tests_output_dir)/fontbakery_otf_i_1000.log & \
+	fontbakery check-googlefonts -F fonts/variable/$(font_name)-Italic\[wght\].ttf > $(tests_output_dir)/fontbakery_ttf_i_var.log & \
 	wait
 	@echo "Done"
 
 # build accented glyphs
 ufo_accented_glyphs: sources/ufo
-	python3 sources/ufo_accented_glyphs.py sources/ufo/Giphurs-Thin.ufo
-	python3 sources/ufo_accented_glyphs.py sources/ufo/Giphurs-Regular.ufo
-	python3 sources/ufo_accented_glyphs.py sources/ufo/Giphurs-ExtraBlack.ufo
+	python3 sources/ufo_accented_glyphs.py sources/ufo/$(font_name)-Thin.ufo
+	python3 sources/ufo_accented_glyphs.py sources/ufo/$(font_name)-Regular.ufo
+	python3 sources/ufo_accented_glyphs.py sources/ufo/$(font_name)-ExtraBlack.ufo
+	python3 sources/ufo_accented_glyphs.py sources/ufo/$(font_name)-ThinItalic.ufo
+	python3 sources/ufo_accented_glyphs.py sources/ufo/$(font_name)-Italic.ufo
+	python3 sources/ufo_accented_glyphs.py sources/ufo/$(font_name)-ExtraBlackItalic.ufo
 	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
 
 # build number based glyphs
 ufo_digits_glyphs: sources/ufo
-	python3 sources/ufo_digits_glyphs.py 100 sources/ufo/Giphurs-Thin.ufo
-	python3 sources/ufo_digits_glyphs.py 400 sources/ufo/Giphurs-Regular.ufo
-	python3 sources/ufo_digits_glyphs.py 1000 sources/ufo/Giphurs-ExtraBlack.ufo
+	python3 sources/ufo_digits_glyphs.py 100 sources/ufo/$(font_name)-Thin.ufo
+	python3 sources/ufo_digits_glyphs.py 400 sources/ufo/$(font_name)-Regular.ufo
+	python3 sources/ufo_digits_glyphs.py 1000 sources/ufo/$(font_name)-ExtraBlack.ufo
+	python3 sources/ufo_digits_glyphs.py 100i sources/ufo/$(font_name)-ThinItalic.ufo
+	python3 sources/ufo_digits_glyphs.py 400i sources/ufo/$(font_name)-Italic.ufo
+	python3 sources/ufo_digits_glyphs.py 1000i sources/ufo/$(font_name)-ExtraBlackItalic.ufo
 	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
 
 # edit fontinfo.plist to set the bit 7 of openTypeOS2Selection ("use typo metrics")
 # Note: This is currently automatically run when building fonts
 ufo_use_typo_metrics: sources/ufo
-	python3 ufo_use_typo_metrics.py sources/ufo/Giphurs-Thin.ufo
-	python3 ufo_use_typo_metrics.py sources/ufo/Giphurs-Regular.ufo
-	python3 ufo_use_typo_metrics.py sources/ufo/Giphurs-ExtraBlack.ufo
+	python3 ufo_use_typo_metrics.py sources/ufo/$(font_name)-Thin.ufo
+	python3 ufo_use_typo_metrics.py sources/ufo/$(font_name)-Regular.ufo
+	python3 ufo_use_typo_metrics.py sources/ufo/$(font_name)-ExtraBlack.ufo
 
 # clean all generated files from the scripts
 
