@@ -2,13 +2,13 @@
 <glyph name="Ugrave" format="2">
   <advance width="1344"/>
   <unicode hex="00D9"/>
-  <anchor x="670" y="-10" name="bottom_cedilla"/>
-  <anchor x="787" y="0" name="bottom_right"/>
-  <anchor x="672" y="0" name="bottom_center"/>
-  <anchor x="1425" y="1480" name="top_right"/>
-  <anchor x="975" y="1716" name="top_center"/>
+  <anchor x="540" y="-10" name="bottom_cedilla"/>
+  <anchor x="657" y="0" name="bottom_right"/>
+  <anchor x="542" y="0" name="bottom_center"/>
+  <anchor x="1295" y="1480" name="top_right"/>
+  <anchor x="845" y="1716" name="top_center"/>
   <outline>
     <component base="U"/>
-    <component base="gravecomb" xOffset="90" yOffset="340"/>
+    <component base="gravecomb" xOffset="-40" yOffset="340"/>
   </outline>
 </glyph>
