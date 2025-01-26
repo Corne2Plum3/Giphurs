@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dotlessuni0268" format="2">
   <advance width="804"/>
-  <anchor x="402" y="-20" name="bottom_cedilla"/>
-  <anchor x="402" y="1040" name="top_center"/>
-  <anchor x="402" y="0" name="bottom_center"/>
-  <anchor x="582" y="0" name="bottom_right"/>
+  <anchor x="268" y="-20" name="bottom_cedilla"/>
+  <anchor x="455" y="1040" name="top_center"/>
+  <anchor x="272" y="0" name="bottom_center"/>
+  <anchor x="452" y="0" name="bottom_right"/>
   <outline>
     <contour>
-      <point x="0" y="400" type="line"/>
-      <point x="0" y="446"/>
-      <point x="0" y="594"/>
-      <point x="0" y="640" type="curve"/>
-      <point x="804" y="640" type="line"/>
-      <point x="804" y="400" type="line"/>
+      <point x="-59" y="400" type="line"/>
+      <point x="-17" y="640" type="line"/>
+      <point x="787" y="640" type="line"/>
+      <point x="745" y="400" type="line"/>
     </contour>
     <contour>
-      <point x="222" y="0" type="line"/>
-      <point x="222" y="1040" type="line"/>
-      <point x="582" y="1040" type="line"/>
-      <point x="582" y="0" type="line"/>
+      <point x="92" y="0" type="line"/>
+      <point x="275" y="1040" type="line"/>
+      <point x="635" y="1040" type="line"/>
+      <point x="452" y="0" type="line"/>
     </contour>
   </outline>
 </glyph>

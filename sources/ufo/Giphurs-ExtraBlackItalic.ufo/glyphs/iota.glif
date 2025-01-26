@@ -2,34 +2,36 @@
 <glyph name="iota" format="2">
   <advance width="665"/>
   <unicode hex="03B9"/>
-  <anchor x="250" y="1040" name="greek_t"/>
-  <anchor x="250" y="1040" name="greek_k"/>
-  <anchor x="250" y="1040" name="greek_kt"/>
-  <anchor x="250" y="1040" name="greek_v"/>
-  <anchor x="250" y="1040" name="top_center"/>
-  <anchor x="321" y="0" name="bottom_center"/>
+  <anchor x="303" y="1040" name="greek_t"/>
+  <anchor x="303" y="1040" name="greek_k"/>
+  <anchor x="303" y="1040" name="greek_kt"/>
+  <anchor x="303" y="1040" name="greek_v"/>
+  <anchor x="303" y="1040" name="top_center"/>
+  <anchor x="191" y="0" name="bottom_center"/>
   <outline>
     <contour>
-      <point x="560" y="306" type="curve"/>
-      <point x="660" y="14" type="line"/>
-      <point x="634" y="1"/>
-      <point x="586" y="-30"/>
-      <point x="498" y="-30" type="curve" smooth="yes"/>
-      <point x="314" y="-30"/>
-      <point x="70" y="62"/>
-      <point x="70" y="362" type="curve" smooth="yes"/>
-      <point x="70" y="440" type="line"/>
-      <point x="70" y="578" type="line"/>
-      <point x="70" y="1040" type="line"/>
-      <point x="430" y="1040" type="line"/>
-      <point x="430" y="578" type="line"/>
-      <point x="430" y="440" type="line"/>
-      <point x="430" y="362" type="line" smooth="yes"/>
-      <point x="430" y="312"/>
-      <point x="446" y="290"/>
-      <point x="498" y="290" type="curve" smooth="yes"/>
-      <point x="517" y="290"/>
-      <point x="547" y="297"/>
+      <point x="123" y="1040" type="line"/>
+      <point x="483" y="1040" type="line"/>
+      <point x="364" y="362" type="line" smooth="yes"/>
+      <point x="362" y="352"/>
+      <point x="361" y="344"/>
+      <point x="361" y="336" type="curve" smooth="yes"/>
+      <point x="361" y="305"/>
+      <point x="377" y="290"/>
+      <point x="419" y="290" type="curve" smooth="yes"/>
+      <point x="438" y="290"/>
+      <point x="469" y="297"/>
+      <point x="484" y="306" type="curve"/>
+      <point x="532" y="14" type="line"/>
+      <point x="504" y="1"/>
+      <point x="451" y="-30"/>
+      <point x="363" y="-30" type="curve" smooth="yes"/>
+      <point x="197" y="-30"/>
+      <point x="-4" y="44"/>
+      <point x="-4" y="278" type="curve" smooth="yes"/>
+      <point x="-4" y="304"/>
+      <point x="-1" y="332"/>
+      <point x="4" y="362" type="curve" smooth="yes"/>
     </contour>
   </outline>
   <lib>
