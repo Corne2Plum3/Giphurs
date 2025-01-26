@@ -22,6 +22,7 @@ help:
 	@echo "  * make tests -i     : Runs automated tests (output at the $(tests_output_dir)/ folder ). -i option is mandatory."
 	@echo "UFO sources scripts"
 	@echo "  * make ufo_accented_glyphs            : Build accented glyphs (the UFO files must be opened and exported throught Fontforge after)."
+	@echo "  * make ufo_composite_glyphs           : Build composite glyphs (the UFO files must be opened and exported throught Fontforge after, and accented glyphs has to be already built)."
 	@echo "  * make ufo_digits_glyphs              : Build digits based glyphs (the UFO files must be opened and exported throught Fontforge after)."
 	@echo "  * make ufo_use_typo_metrics           : Enable bit 7 ("use typo metrics") of openTypeOS2Selection in fontinfo.plist"
 
