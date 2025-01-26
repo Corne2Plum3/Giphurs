@@ -159,6 +159,84 @@ def get_glyph_xml_points(glyph_name, ufo_dir, x_offset=0, y_offset=0, x_scale=1.
 
     return xml_contour_nodes
 
+def get_kerning(glyph_first, glyph_second, ufo_dir):
+    """
+    Returns the kerning between 2 glyphs by reading the `feature.fea` file.
+
+    Requires a `kern` feature to be defined and containing a kerning lookup. Within the kerning
+    lookup, the classes should be defined first (before the `pos` values).
+
+    Note: Given how this is implemented right now, the script and language aren't checked, and
+    thus, only the first lookup table found in the `feature kern` block is used.
+    """
+    features_filename = (ufo_dir + "/features.fea") if ufo_dir[-1] != "/" else (ufo_dir + "features.fea")
+
+    # Find the table
+    table_name = None
+    table_found = False
+    with open(features_filename, "r") as features_file:
+        # find the name of the kern table
+        line = features_file.readline()
+        while line:
+            if "feature kern" in line:  # feature found
+                while line and not("}" in line) and table_name is None:
+                    line = features_file.readline()
+                    if "lookup" in line:
+                        table_name = line.strip().replace(";", "").split(" ")[1]
+                if table_name is None:
+                    print("WARNING: No lookup table found in feature kern block")
+                    return 0
+            line = features_file.readline()
+        if table_name is None:
+            print("WARNING: No feature kern block found")
+            return 0
+
+        # find the kern table
+        features_file.seek(0)  # go back to the beginning
+        line = features_file.readline()
+        while line and not(table_found):
+            if f"lookup {table_name}" in line:
+                table_found = True
+            else:
+                line = features_file.readline()
+
+        if not(table_found):
+            print(f"WARNING: Kern table '{table_name}' not found.")
+            return 0
+
+        # find the classes of the 2 glyphs and the kern
+        line = features_file.readline()  # pointing "lookupflag 0;"
+        line = features_file.readline()  # pointing towards the first class definition
+        glyph_first_classes = []
+        glyph_second_classes = []
+        while line and not("}" in line):
+            if line.strip().split(" ")[0] == "pos":  # pos value
+                # example: "pos @kc82_first_1 @kc82_second_3 -70;"
+                class_first =  line.strip().split(" ")[1]
+                class_second = line.strip().split(" ")[2]
+                kern_value = int(line.strip().split(" ")[3].replace(";", ""))
+                if (class_first in glyph_first_classes) and (class_second in glyph_second_classes):
+                    return kern_value
+                else:
+                    line = features_file.readline()  # next line
+            elif "=" in line:  # new class
+                # first line
+                current_class = line.strip().split(" ")[0]
+                glyph_list = line.strip().split("=")[1]
+                if (f"\\{glyph_first}" in glyph_list) or (f" {glyph_first}" in glyph_list) or (f"{glyph_first} " in glyph_list):
+                    glyph_first_classes.append(current_class)
+                if (f"\\{glyph_second}" in glyph_list) or (f" {glyph_second}" in glyph_list) or (f"{glyph_second} " in glyph_list):
+                    glyph_second_classes.append(current_class)
+                while not(";" in line):
+                    line = features_file.readline()
+                    if (f"\\{glyph_first}" in glyph_list) or (f" {glyph_first}" in glyph_list) or (f"{glyph_first} " in glyph_list):
+                        glyph_first_classes.append(current_class)
+                    if (f"\\{glyph_second}" in glyph_list) or (f" {glyph_second}" in glyph_list) or (f"{glyph_second} " in glyph_list):
+                        glyph_second_classes.append(current_class)
+                line = features_file.readline()  # next line
+
+        return 0  # no kerning
+
 def move_glyph(glyph_name, ufo_dir, x, y, move_points=True, move_anchors=True, move_width=False):
     """
     Translate all elements of the glyphs by (x, y). The parameter `move_width`, if set to True,
