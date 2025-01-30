@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tbar.sc" format="2">
+  <advance width="1258"/>
+  <anchor x="629" y="-20" name="bottom_cedilla"/>
+  <anchor x="629" y="1200" name="top_center"/>
+  <anchor x="629" y="0" name="bottom_center"/>
+  <outline>
+    <contour>
+      <point x="1029" y="399" type="line"/>
+      <point x="229" y="399" type="line"/>
+      <point x="229" y="434"/>
+      <point x="229" y="604"/>
+      <point x="229" y="639" type="curve"/>
+      <point x="1029" y="639" type="line"/>
+    </contour>
+    <contour>
+      <point x="809" y="0" type="line"/>
+      <point x="449" y="0" type="line"/>
+      <point x="449" y="880" type="line"/>
+      <point x="70" y="880" type="line"/>
+      <point x="70" y="1200" type="line"/>
+      <point x="1188" y="1200" type="line"/>
+      <point x="1188" y="880" type="line"/>
+      <point x="809" y="880" type="line"/>
+    </contour>
+  </outline>
+</glyph>
