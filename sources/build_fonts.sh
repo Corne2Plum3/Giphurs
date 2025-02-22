@@ -34,14 +34,19 @@ echo "Done editing UFO files."
 
 # Build the font (the touch command is needed otherwhise I dunno why some non-encoded glyphs don't get updated)...
 echo -e "\x1b[0;36mBuilding the fonts\x1b[0;0m"
-touch Giphurs.designspace && gftools builder config.yaml
+touch Giphurs.designspace && touch Giphurs-Italic.designspace && gftools builder config.yaml
 
 # Fix incorrect name of the weight 1000
 WEIGHT_1000_OLD_NAME="Giphurs-ExtraBlack"
 WEIGHT_1000_NEW_NAME="GiphursExtraBlack-Regular"
+WEIGHT_1000_ITALIC_OLD_NAME="Giphurs-ExtraBlackItalic"
+WEIGHT_1000_ITALIC_NEW_NAME="GiphursExtraBlack-Italic"
 mv $FONTS_DIR/otf/$WEIGHT_1000_OLD_NAME.otf $FONTS_DIR/otf/$WEIGHT_1000_NEW_NAME.otf 
 mv $FONTS_DIR/ttf/$WEIGHT_1000_OLD_NAME.ttf $FONTS_DIR/ttf/$WEIGHT_1000_NEW_NAME.ttf 
 mv $FONTS_DIR/webfonts/$WEIGHT_1000_OLD_NAME.woff2 $FONTS_DIR/webfonts/$WEIGHT_1000_NEW_NAME.woff2
+mv $FONTS_DIR/otf/$WEIGHT_1000_ITALIC_OLD_NAME.otf $FONTS_DIR/otf/$WEIGHT_1000_ITALIC_NEW_NAME.otf 
+mv $FONTS_DIR/ttf/$WEIGHT_1000_ITALIC_OLD_NAME.ttf $FONTS_DIR/ttf/$WEIGHT_1000_ITALIC_NEW_NAME.ttf 
+mv $FONTS_DIR/webfonts/$WEIGHT_1000_ITALIC_OLD_NAME.woff2 $FONTS_DIR/webfonts/$WEIGHT_1000_ITALIC_NEW_NAME.woff2
 
 # Build SC variants of the fonts
 for (( i=0; i<4; i++));
