@@ -1,5 +1,13 @@
 # Giphurs font
 
+<p align="center">
+	<a href="https://github.com/Corne2Plum3/Giphurs/stargazers"><img src="https://img.shields.io/github/stars/Corne2Plum3/Giphurs?style=flat-square" alt="Stargazers" /></a>
+	<a href="https://github.com/Corne2Plum3/Giphurs/releases"><img src="https://img.shields.io/github/downloads/Corne2Plum3/Giphurs/total?style=flat-square" alt="All releases" /></a>
+	<a href="https://github.com/Corne2Plum3/Giphurs/releases/latest"><img src="https://img.shields.io/github/downloads/Corne2Plum3/Giphurs/latest/total?style=flat-square" alt="Latest release" /></a>
+	<a href="https://github.com/Corne2Plum3/Giphurs/releases/latest"><img src="https://img.shields.io/github/v/release/Corne2Plum3/Giphurs?style=flat-square" alt="" /></a>
+	<a href="https://github.com/Corne2Plum3/Giphurs/blob/master/output/fontbakery/fontbakery-report.md"><img src="https://img.shields.io/endpoint?style=flat-square&url=https://raw.githubusercontent.com/Corne2Plum3/Giphurs/refs/heads/master/output/badges/overall.json" alt="Fontbakery report"/></a>
+</p>
+
 Your average Arial/Helvetica/Circular **sans serif** font, made with [Fontforge](https://fontforge.org/en-US/), with a goal of being simple, readable and multipurpose.
 
 It is a variable font, with the weight customizable across a wide range, and a lot of differents [OpenType features](https://github.com/Corne2Plum3/Giphurs/wiki/OpenType-font-features) to customize the font. The font covers quite a large amount of glyphs, over **2500** glyphs, and supports more than **600** [languages](https://github.com/Corne2Plum3/Giphurs/wiki/Supported-languages-list) (according to [hyperglot](https://github.com/rosettatype/hyperglot)).

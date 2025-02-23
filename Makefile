@@ -9,7 +9,7 @@ font_name := Giphurs
 font_version := $(shell echo $(shell echo "scale=3;("$(shell echo $(shell fc-query -f '%{fontversion}\n' fonts/otf/Giphurs-Regular.otf)"+16" | bc)"/65536)" | bc))
 
 # Output directory of make tests (Don't put the '/' at the end!)
-tests_output_dir := tests_results
+tests_output_dir := output
 
 
 # documentaton
@@ -36,17 +36,7 @@ fonts: sources/ufo
 
 # run fontbakery tests
 tests:
-	rm -rf $(tests_output_dir)
-	mkdir $(tests_output_dir)
-	fontbakery check-googlefonts -F fonts/otf/$(font_name)-Thin.otf > $(tests_output_dir)/fontbakery_otf_100.log & \
-	fontbakery check-googlefonts -F fonts/otf/$(font_name)-Regular.otf > $(tests_output_dir)/fontbakery_otf_400.log & \
-	fontbakery check-googlefonts -F fonts/otf/$(font_name)ExtraBlack-Regular.otf > $(tests_output_dir)/fontbakery_otf_1000.log & \
-	fontbakery check-googlefonts -F fonts/ttf/$(font_name)-Thin.ttf > $(tests_output_dir)/fontbakery_ttf_100.log & \
-	fontbakery check-googlefonts -F fonts/ttf/$(font_name)-Regular.ttf > $(tests_output_dir)/fontbakery_ttf_400.log & \
-	fontbakery check-googlefonts -F fonts/ttf/$(font_name)ExtraBlack-Regular.ttf > $(tests_output_dir)/fontbakery_ttf_1000.log & \
-	fontbakery check-googlefonts -F fonts/variable/$(font_name)\[wght\].ttf > $(tests_output_dir)/fontbakery_ttf_var.log & \
-	wait
-	@echo "Done"
+	./sources/tests.sh
 
 # build accented glyphs
 ufo_accented_glyphs: sources/ufo
