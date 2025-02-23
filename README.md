@@ -4,6 +4,7 @@
 	<img src="https://img.shields.io/github/stars/Corne2Plum3/Giphurs?style=flat-square" alt="" />
 	<img src="https://img.shields.io/github/downloads/Corne2Plum3/Giphurs/total?style=flat-square" alt="" />
 	<img src="https://img.shields.io/github/downloads/Corne2Plum3/Giphurs/latest/total?style=flat-square" alt="" />
+	<img src="https://img.shields.io/github/v/release/Corne2Plum3/Giphurs?style=flat-square" alt="" />
 	<img src="https://img.shields.io/endpoint?style=flat-square&url=https://raw.githubusercontent.com/Corne2Plum3/Giphurs/refs/heads/test/output/badges/overall.json" alt="" />
 </p>
 
