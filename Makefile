@@ -31,6 +31,10 @@ export_fonts:
 fonts: sources/ufo
 	./sources/build_fonts.sh
 
+# create HTML specimens of the (variable) fonts
+proof: fonts/
+	./sources/proof.sh
+
 # run fontbakery tests
 tests:
 	./sources/tests.sh
