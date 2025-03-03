@@ -8,10 +8,6 @@ font_name := Giphurs
 # If the version is 1.000 or above
 font_version := $(shell echo $(shell echo "scale=3;("$(shell echo $(shell fc-query -f '%{fontversion}\n' fonts/otf/Giphurs-Regular.otf)"+16" | bc)"/65536)" | bc))
 
-# Output directory of make tests (Don't put the '/' at the end!)
-tests_output_dir := output
-
-
 # documentaton
 help:
 	@echo "Available make commands:"
@@ -19,7 +15,8 @@ help:
 	@echo "  * make clean_fonts  : Empties the current fonts/ folder."
 	@echo "  * make export_fonts : Export fonts/ directory into a zip file."
 	@echo "  * make fonts        : Generate font binaries from UFO sources."
-	@echo "  * make tests -i     : Runs automated tests (output at the $(tests_output_dir)/ folder ). -i option is mandatory."
+	@echo "  * make proof        : Creates HTML proof (in output/proof/) directory"
+	@echo "  * make tests -i     : Runs automated tests (in output/ folder ). -i option is mandatory."
 	@echo "UFO sources scripts"
 	@echo "  * make ufo_accented_glyphs            : Build accented glyphs (the UFO files must be opened and exported throught Fontforge after)."
 	@echo "  * make ufo_composite_glyphs           : Build composite glyphs (the UFO files must be opened and exported throught Fontforge after, and accented glyphs has to be already built)."
