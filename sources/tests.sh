@@ -2,12 +2,13 @@
 set -e
 
 # without '/' !!!
-FONT_DIR="fonts"
+FONT_DIR="fonts/variable"
+FONT_FILES=$(find $FONT_DIR -type f | grep -E -v "(SC|.woff2)")
 OUTPUT_DIR="output"
+
 
 TESTING_START_TIME=$(date +%s)
 mkdir -p $OUTPUT_DIR/ $OUTPUT_DIR/fontbakery
-FONT_FILES=$(find $FONT_DIR -type f -name "*Regular*" | grep -E -v "(SC|.ttf|.woff2)")
 echo -e "\x1b[0;36mFiles to check: "$FONT_FILES"\x1b[0;0m"
 
 if [ -z FONT_FILES ]
