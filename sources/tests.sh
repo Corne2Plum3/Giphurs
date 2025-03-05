@@ -25,3 +25,7 @@ TESTING_END_TIME=$(date +%s)  # when the compilation finished
 TESTING_DURATION=$(($TESTING_END_TIME-$TESTING_START_TIME))
 echo -e "\x1b[1;32mTests done succesfully in "$TESTING_DURATION" second(s) UwU\x1b[0;0m"
 
+# Open the report in the web browser
+echo "Opening generated HTML report in your web browser..."
+HTML_REPORT_PATH="file://"$(pwd)"/"$REPORTS_FILES".html"
+xdg-open "$HTML_REPORT_PATH"

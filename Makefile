@@ -16,7 +16,7 @@ help:
 	@echo "  * make export_fonts : Export fonts/ directory into a zip file."
 	@echo "  * make fonts        : Generate font binaries from UFO sources."
 	@echo "  * make proof        : Creates HTML proof (in output/proof/) directory"
-	@echo "  * make tests -i     : Runs automated tests (in output/ folder ). -i option is mandatory."
+	@echo "  * make tests        : Runs automated tests (in output/ folder ) and opens the HTML report in your web browser."
 	@echo "UFO sources scripts"
 	@echo "  * make ufo_accented_glyphs            : Build accented glyphs (the UFO files must be opened and exported throught Fontforge after)."
 	@echo "  * make ufo_composite_glyphs           : Build composite glyphs (the UFO files must be opened and exported throught Fontforge after, and accented glyphs has to be already built)."
