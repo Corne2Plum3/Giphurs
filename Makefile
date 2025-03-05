@@ -15,13 +15,13 @@ help:
 	@echo "  * make clean_fonts  : Empties the current fonts/ folder."
 	@echo "  * make export_fonts : Export fonts/ directory into a zip file."
 	@echo "  * make fonts        : Generate font binaries from UFO sources."
-	@echo "  * make proof        : Creates HTML proof (in output/proof/) directory"
-	@echo "  * make tests        : Runs automated tests (in output/ folder ) and opens the HTML report in your web browser."
+	@echo "  * make proof        : Creates HTML specimens of the font (in output/ directory) and opens the HTML report in your web browser."
+	@echo "  * make tests        : Runs automated tests (in output/ directory) and opens the HTML report in your web browser."
 	@echo "UFO sources scripts"
-	@echo "  * make ufo_accented_glyphs            : Build accented glyphs (the UFO files must be opened and exported throught Fontforge after)."
-	@echo "  * make ufo_composite_glyphs           : Build composite glyphs (the UFO files must be opened and exported throught Fontforge after, and accented glyphs has to be already built)."
-	@echo "  * make ufo_digits_glyphs              : Build digits based glyphs (the UFO files must be opened and exported throught Fontforge after)."
-	@echo "  * make ufo_use_typo_metrics           : Enable bit 7 ("use typo metrics") of openTypeOS2Selection in fontinfo.plist"
+	@echo "  * make ufo_accented_glyphs  : Build accented glyphs (the UFO files must be opened and exported throught Fontforge after)."
+	@echo "  * make ufo_composite_glyphs : Build composite glyphs (the UFO files must be opened and exported throught Fontforge after, and accented glyphs has to be already built)."
+	@echo "  * make ufo_digits_glyphs    : Build digits based glyphs (the UFO files must be opened and exported throught Fontforge after)."
+	@echo "  * make ufo_use_typo_metrics : Enable bit 7 ("use typo metrics") of openTypeOS2Selection in fontinfo.plist"
 
 # make a zip archive of the font folder
 export_fonts:
@@ -36,7 +36,7 @@ proof: fonts/
 	./sources/proof.sh
 
 # run fontbakery tests
-tests:
+tests: fonts/
 	./sources/tests.sh
 
 # build accented glyphs
