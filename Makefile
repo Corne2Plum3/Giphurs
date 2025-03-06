@@ -3,11 +3,6 @@
 # Name of the font
 font_name := Giphurs
 
-# If the version is below 1, a 0 is added
-#font_version := $(shell echo "0"$(shell echo "scale=3;("$(shell echo $(shell fc-query -f '%{fontversion}\n' fonts/otf/Giphurs-Regular.otf)"+16" | bc)"/65536)" | bc))
-# If the version is 1.000 or above
-font_version := $(shell echo $(shell echo "scale=3;("$(shell echo $(shell fc-query -f '%{fontversion}\n' fonts/otf/Giphurs-Regular.otf)"+16" | bc)"/65536)" | bc))
-
 # documentaton
 help:
 	@echo "Available make commands:"
@@ -25,7 +20,7 @@ help:
 
 # make a zip archive of the font folder
 export_fonts:
-	zip -r $(font_name)_fonts_v$(font_version).zip fonts/ OFL.txt
+	font_version=$$(./sources/get_font_version.sh $$(find fonts/ -type f | head -n 1)); zip -r $(font_name)_fonts_v$$font_version.zip fonts/ OFL.txt
 
 # build the fonts (otf, ttf, woof2, static + variables)
 fonts: sources/ufo
