@@ -6,7 +6,7 @@
 _misc
 py
 fonts-backup/
-output/proof/
+output/
 sources/__pycache__
 sources/instance_ufos/
 sources/sfd_cleaned/
@@ -16,6 +16,4 @@ sources/.fuse_hidden*
 sources/py/
 sources/ufo/*/lib.plist
 temp
-tests_results
-ufo_built.stamp
 venv
