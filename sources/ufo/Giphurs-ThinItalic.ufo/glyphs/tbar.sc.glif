@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tbar.sc" format="2">
   <advance width="1181"/>
-  <anchor x="590" y="-20" name="bottom_cedilla"/>
-  <anchor x="590" y="1200" name="top_center"/>
-  <anchor x="590" y="0" name="bottom_center"/>
+  <anchor x="456" y="-20" name="bottom_cedilla"/>
+  <anchor x="672" y="1200" name="top_center"/>
+  <anchor x="460" y="0" name="bottom_center"/>
   <outline>
     <contour>
-      <point x="893" y="579" type="line"/>
-      <point x="288" y="579" type="line"/>
-      <point x="288" y="588"/>
-      <point x="288" y="610"/>
-      <point x="288" y="619" type="curve"/>
-      <point x="893" y="619" type="line"/>
+      <point x="865" y="579" type="line"/>
+      <point x="260" y="579" type="line"/>
+      <point x="267" y="619" type="line"/>
+      <point x="872" y="619" type="line"/>
     </contour>
     <contour>
-      <point x="613" y="0" type="line"/>
-      <point x="568" y="0" type="line"/>
-      <point x="568" y="1160" type="line"/>
-      <point x="180" y="1160" type="line"/>
-      <point x="180" y="1200" type="line"/>
-      <point x="1001" y="1200" type="line"/>
-      <point x="1001" y="1160" type="line"/>
-      <point x="613" y="1160" type="line"/>
+      <point x="483" y="0" type="line"/>
+      <point x="438" y="0" type="line"/>
+      <point x="643" y="1160" type="line"/>
+      <point x="255" y="1160" type="line"/>
+      <point x="262" y="1200" type="line"/>
+      <point x="1083" y="1200" type="line"/>
+      <point x="1076" y="1160" type="line"/>
+      <point x="688" y="1160" type="line"/>
     </contour>
   </outline>
 </glyph>
