@@ -66,12 +66,12 @@ ufo_use_typo_metrics: sources/ufo
 
 # Cleaning process
 clean:
+	rm -rf output/
 	rm -rf sources/instance_ufos
 	rm -rf sources/__pycache__
 	rm -f sources/*.ninja
 	rm -f sources/.fuse_hidden*
 	rm -f sources/.ninja_log
-	rm -rf test_results
 	rm -f *.zip
 
 clean_fonts:
