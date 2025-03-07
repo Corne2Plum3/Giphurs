@@ -222,7 +222,11 @@ def main():
                     else:
                         glyphs_list.append(csv_line.split(";")[0].strip())
             # act on each glyph
-            for glyph in glyphs_list:
+            print("Starting...")
+            nb_glyphs = len(glyphs_list)
+            for index, glyph in enumerate(glyphs_list):
+                sys.stdout.write('\033[2K\033[1G')
+                print(f"[{index}/{nb_glyphs} ({int((index-1)/nb_glyphs*100)}%)] Working on {glyph}...", end="\r")
                 build_accented_glyph(glyph, sys.argv[1])
             print(f"Done with {sys.argv[1]} ({len(glyphs_list)} files changed)")
         else:

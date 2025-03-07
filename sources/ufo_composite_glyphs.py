@@ -154,10 +154,12 @@ def main():
                     else:
                         glyphs_list.append(csv_line.split(";")[0].strip())
             # act on each glyph
-            for glyph in glyphs_list:
-                #print(f"Working on {glyph}...", end=" ")
+            print("Starting...")
+            nb_glyphs = len(glyphs_list)
+            for index, glyph in enumerate(glyphs_list, start=1):
+                sys.stdout.write('\033[2K\033[1G')
+                print(f"[{index}/{nb_glyphs} ({int((index-1)/nb_glyphs*100)}%)] Working on {glyph}...", end="\r")
                 build_composite_glyph(glyph, sys.argv[1])
-                #print("DONE")
             print(f"Done with {sys.argv[1]} ({len(glyphs_list)} files changed)")
         else:  # single glyph
             build_composite_glyph(sys.argv[2], sys.argv[1])
