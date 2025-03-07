@@ -125,7 +125,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         "400": 100,
         "1000": 50
     }
-    PNUM_SUPS_KERN = {
+    PNUM_SUPS_KERN = {  # "other" must be used for one.ss06!!!
         "100": {
             "1": (84,140),
             "other": (140,140)
@@ -154,9 +154,11 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         "400": 120,
         "1000": 40
     }
+    FRAC_BAR_OVERLAP = 315  # kern between numr/dnom and the fraction bar (U+2044)
     DIGITS_HEIGHT = 1480
     SUPS_HEIGHT = 858
     ITALIC_SLANT = 10*pi/180  # slant to the RIGHT in radians (the "*pi/180" converts degrees to radians)
+    ITALIC_OFFSET = -130  # move to the right some italic glyphs
 
     use_sups = type.split("_")[0] in ["superior", "subscript", "numr", "dnom"] or type in ["circle", "black_circle", "double_circle", "frac"]
 
@@ -344,51 +346,52 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         base_frac = "fraction"
         base_frac_x_metrics = get_glyph_metrics(base_frac, ufo_dir)
 
-        if digit_2 == 10:
-            # based on where the denominators are located
-            width = base_frac_x_metrics["left_kern"] + base_frac_x_metrics["raw_width"]
-            width -= base_1_x_metrics["glyph_width"] / 2
-            width += base_1_x_metrics["glyph_width"] - TWO_DIGITS_OVERLAP[weight]
-            width += base_2_x_metrics["left_kern"] + base_2_x_metrics["raw_width"] + DEFAULT_KERN[weight]
-        else:  # denominator = 0 => same than normal fractions
-            width = base_frac_x_metrics["glyph_width"]
+        # advance value (entire glyph width)
+        advance = base_1_x_metrics["glyph_width"] + base_frac_x_metrics["glyph_width"] - FRAC_BAR_OVERLAP  # numr + bar
+        if digit_2 != 0:  # dnom (hide if 0)
+            if digit_2 == 10:  # 1/10
+                advance += base_1_x_metrics["left_kern"] + base_1_x_metrics["raw_width"] - FRAC_BAR_OVERLAP + base_2_x_metrics["glyph_width"]
+                if ss_d1 != "ss06":  # add extra kern if there isn't a bar under the digit 1
+                    advance += base_2_x_metrics["left_kern"]
+
+            else:
+                advance += base_2_x_metrics["glyph_width"] - FRAC_BAR_OVERLAP
+        ET.SubElement(xml_root, "advance", {"width": str(int(advance))})
 
         # unicode value
-        ET.SubElement(xml_root, "advance", {"width": str(int(width))})
         if cv_d1 == 0 and cv_d2 == 0 and ss_d1 == "" and ss_d2 == "":
             ET.SubElement(xml_root, "unicode", {"hex": hex(UNICODE_VALUES["frac"][digit_2][digit_1]).upper()[2:]})
         xml_outline = ET.SubElement(xml_root, "outline")
 
-        # fractional bar
-        ET.SubElement(xml_outline, "component", {"base": base_frac, "xOffset": "0", "yOffset": "0"})
-
         # numr
-        digit_1_middle = base_frac_x_metrics["left_kern"] - DEFAULT_KERN[weight] * 1.5
-        x1 = digit_1_middle - base_1_x_metrics["glyph_width"] / 2
         y1 = NUMR_Y - SUPS_Y
+        x1 = 0
         if is_italic:
             x1 -= abs(y1) / tan(pi/2-ITALIC_SLANT)
         ET.SubElement(xml_outline, "component", {"base": base_1, "xOffset": str(int(x1)), "yOffset": str(int(y1))})
 
+        # fraction bar
+        xf = base_1_x_metrics["glyph_width"] - FRAC_BAR_OVERLAP
+        ET.SubElement(xml_outline, "component", {"base": base_frac, "xOffset": str(xf), "yOffset": "0"})
+
         # dnom
-        y2 = DNOM_Y - SUPS_Y
-        if digit_2 == 0:
-            pass
-        elif digit_2 == 10:
-            digit_21_middle = base_frac_x_metrics["left_kern"] + base_frac_x_metrics["raw_width"]
-            x21 = digit_21_middle - base_1_x_metrics["glyph_width"] / 2
-            x22 = x21 + base_1_x_metrics["glyph_width"] - base_2_x_metrics["left_kern"] - TWO_DIGITS_OVERLAP[weight]
-            if is_italic:
-                x21 -= abs(y2) / tan(pi/2-ITALIC_SLANT) 
-                x22 -= abs(y2) / tan(pi/2-ITALIC_SLANT)
-            ET.SubElement(xml_outline, "component", {"base": base_1, "xOffset": str(int(x21)), "yOffset": str(int(y2))})
-            ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x22)), "yOffset": str(int(y2))})
-        else:
-            digit_2_middle = base_frac_x_metrics["left_kern"] + base_frac_x_metrics["raw_width"] + DEFAULT_KERN[weight] * 1.5
-            x2 = digit_2_middle - base_2_x_metrics["glyph_width"] / 2
-            if is_italic:
-                x2 -= abs(y2) / tan(pi/2-ITALIC_SLANT)
-            ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x2)), "yOffset": str(int(y2))})
+        if digit_2 != 0:  # no denominators for "1/0"
+            y2 = DNOM_Y - SUPS_Y
+            if digit_2 == 10:  # 1/10
+                x21 = xf + base_frac_x_metrics["glyph_width"] - FRAC_BAR_OVERLAP
+                x22 = x21 + base_1_x_metrics["left_kern"] + base_1_x_metrics["raw_width"]
+                if ss_d1 != "ss06":  # add extra kern if there isn't a bar under the digit 1
+                    x22 += base_2_x_metrics["left_kern"]
+                if is_italic:
+                    x21 -= abs(y2) / tan(pi/2-ITALIC_SLANT)
+                    x22 -= abs(y2) / tan(pi/2-ITALIC_SLANT)
+                ET.SubElement(xml_outline, "component", {"base": base_1, "xOffset": str(x21), "yOffset": str(y2)})
+                ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(x22), "yOffset": str(y2)})
+            else:
+                x2 = xf + base_frac_x_metrics["glyph_width"] - FRAC_BAR_OVERLAP
+                if is_italic:
+                    x2 -= abs(y2) / tan(pi/2-ITALIC_SLANT)
+                ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(x2), "yOffset": str(y2)})
 
     # save
     tree = ET.ElementTree(xml_root)
