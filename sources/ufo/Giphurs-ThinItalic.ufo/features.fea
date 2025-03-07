@@ -8600,12 +8600,12 @@ lookup mark_Mark_positioning {
 	<anchor 483 0> mark @bottom_right
 	<anchor 375 0> mark @bottom_center
 	<anchor 558 1040> mark @top_center;
-  pos base [\a ] <anchor 962 1040> mark @top_right
+  pos base [\a \a.cv23 \uni0430.cv23 ] <anchor 962 1040> mark @top_right
 	<anchor 383 -10> mark @bottom_cedilla
 	<anchor 870 0> mark @bottom_right
 	<anchor 658 1040> mark @top_center
 	<anchor 475 0> mark @bottom_center;
-  pos base [\g ] <anchor 367 -360> mark @bottom_center
+  pos base [\g \g.cv24 ] <anchor 367 -360> mark @bottom_center
 	<anchor 613 1040> mark @top_center;
   pos base [\z ] <anchor 559 1040> mark @top_center
 	<anchor 376 0> mark @bottom_center;
@@ -8792,7 +8792,7 @@ lookup mark_Mark_positioning {
 	<anchor 95 0> mark @bottom_right;
   pos base [\AE ] <anchor 880 0> mark @bottom_center
 	<anchor 1431 1380> mark @top_center;
-  pos base [\ae ] <anchor 1003 1040> mark @top_center;
+  pos base [\ae \ae.cv23 ] <anchor 1003 1040> mark @top_center;
   pos base [\oslash \uni028A \sigma1 \uni03DB \uni0454 \uni04D9 \uni04E9 ] <anchor 631 1040> mark @top_center
 	<anchor 448 0> mark @bottom_center;
   pos base [\Aogonek ] <anchor 1031 -20> mark @bottom_cedilla
@@ -10932,9 +10932,6 @@ lookup mark_Mark_positioning {
 	<anchor 224 0> mark @bottom_right
 	<anchor 202 0> mark @bottom_center
 	<anchor 202 1914> mark @top_center;
-  pos base [\a.cv23 \uni0430.cv23 \uni1E9A.cv23 ] <anchor 984 0> mark @bottom_right
-	<anchor 605 1040> mark @top_center
-	<anchor 605 0> mark @bottom_center;
   pos base [\agrave.cv23 \aacute.cv23 \acircumflex.cv23 \atilde.cv23 \amacron.cv23 \abreve.cv23 \uni01CE.cv23 \uni0201.cv23 \uni0203.cv23 \uni0227.cv23 \uni04D1.cv23 \uni1EA5.cv23 \uni1EA7.cv23 \uni1EA9.cv23 ] <anchor 984 0> mark @bottom_right
 	<anchor 605 0> mark @bottom_center
 	<anchor 665 1376> mark @top_center;
@@ -10944,7 +10941,6 @@ lookup mark_Mark_positioning {
   pos base [\aring.cv23 \aringacute.cv23 \uni1EA3.cv23 ] <anchor 984 0> mark @bottom_right
 	<anchor 605 0> mark @bottom_center
 	<anchor 683 1480> mark @top_center;
-  pos base [\ae.cv23 \uni04D5.cv23 ] <anchor 950 1040> mark @top_center;
   pos base [\aogonek.cv23 ] <anchor 605 1040> mark @top_center
 	<anchor 851 -350> mark @bottom_center;
   pos base [\uni01DF.cv23 ] <anchor 984 0> mark @bottom_right
@@ -10954,9 +10950,13 @@ lookup mark_Mark_positioning {
 	<anchor 605 0> mark @bottom_center
 	<anchor 725 1712> mark @top_center;
   pos base [\uni01E3.cv23 \aeacute.cv23 ] <anchor 1010 1376> mark @top_center;
+  pos base [\uni04D5.cv23 ] <anchor 950 1040> mark @top_center;
   pos base [\uni1E01.cv23 ] <anchor 984 0> mark @bottom_right
 	<anchor 605 1040> mark @top_center
 	<anchor 527 -440> mark @bottom_center;
+  pos base [\uni1E9A.cv23 ] <anchor 984 0> mark @bottom_right
+	<anchor 605 1040> mark @top_center
+	<anchor 605 0> mark @bottom_center;
   pos base [\uni1EA1.cv23 ] <anchor 984 0> mark @bottom_right
 	<anchor 605 1040> mark @top_center
 	<anchor 546 -336> mark @bottom_center;
@@ -10969,16 +10969,14 @@ lookup mark_Mark_positioning {
   pos base [\uni1EB3.cv23 ] <anchor 984 0> mark @bottom_right
 	<anchor 605 0> mark @bottom_center
 	<anchor 726 1724> mark @top_center;
-  pos base [\g.cv24 ] <anchor 560 -360> mark @bottom_center
-	<anchor 560 1040> mark @top_center;
   pos base [\gcircumflex.cv24 \gbreve.cv24 \gdotaccent.cv24 \gcaron.cv24 \uni01F5.cv24 \uni1E21.cv24 ] <anchor 560 -360> mark @bottom_center
 	<anchor 620 1376> mark @top_center;
   pos base [\gcommaaccent.cv24 ] <anchor 560 -360> mark @bottom_center
 	<anchor 630 1436> mark @top_center;
-  pos base [\u.cv25 ] <anchor 578 1040> mark @top_center
-	<anchor 578 0> mark @bottom_center
-	<anchor 676 0> mark @bottom_right
-	<anchor 963 1040> mark @top_right;
+  pos base [\u.cv25 ] <anchor 631 1040> mark @top_center
+	<anchor 448 0> mark @bottom_center
+	<anchor 546 0> mark @bottom_right
+	<anchor 1016 1040> mark @top_right;
   pos base [\ugrave.cv25 \uacute.cv25 \ucircumflex.cv25 \utilde.cv25 \umacron.cv25 \ubreve.cv25 \uhungarumlaut.cv25 \uni01D4.cv25 \uni0215.cv25 \uni0217.cv25 ] <anchor 578 0> mark @bottom_center
 	<anchor 676 0> mark @bottom_right
 	<anchor 963 1040> mark @top_right

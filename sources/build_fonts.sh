@@ -15,6 +15,7 @@ FONTNAME="Giphurs"
 
 # Empty the fonts folder (for real making a copy of it)
 echo -e "\x1b[0;36mCleaning the fonts folder\x1b[0;0m"
+rm -rf "${FONTS_DIR}-backup"
 mv $FONTS_DIR "${FONTS_DIR}-backup"
 mkdir $FONTS_DIR
 echo "Done."
@@ -97,7 +98,7 @@ wait
 
 # Clean backup files
 echo -e "\x1b[0;36mRemoving backup files\x1b[0;0m"
-rm -r "${FONTS_DIR}-backup"
+rm -rf "${FONTS_DIR}-backup"
 cd $FONTS_DIR/otf
 ls | grep backup | xargs rm
 cd ../ttf

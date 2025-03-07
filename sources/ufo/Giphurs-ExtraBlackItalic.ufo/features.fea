@@ -8594,12 +8594,12 @@ lookup mark_Mark_positioning {
 	<anchor 582 1040> mark @top_center
 	<anchor 399 0> mark @bottom_center
 	<anchor 620 0> mark @bottom_right;
-  pos base [\a ] <anchor 1233 1040> mark @top_right
+  pos base [\a \a.cv23 \uni0430.cv23 ] <anchor 1233 1040> mark @top_right
 	<anchor 395 -30> mark @bottom_cedilla
 	<anchor 1074 0> mark @bottom_right
 	<anchor 707 1040> mark @top_center
 	<anchor 524 0> mark @bottom_center;
-  pos base [\g ] <anchor 461 -360> mark @bottom_center
+  pos base [\g \g.cv24 ] <anchor 461 -360> mark @bottom_center
 	<anchor 707 1040> mark @top_center;
   pos base [\z ] <anchor 386 0> mark @bottom_center
 	<anchor 569 1040> mark @top_center;
@@ -8790,7 +8790,7 @@ lookup mark_Mark_positioning {
 	<anchor 1037 0> mark @bottom_center;
   pos base [\Oslash ] <anchor 714 0> mark @bottom_center
 	<anchor 957 1380> mark @top_center;
-  pos base [\ae ] <anchor 1053 1040> mark @top_center;
+  pos base [\ae \ae.cv23 ] <anchor 1053 1040> mark @top_center;
   pos base [\oslash ] <anchor 460 0> mark @bottom_center
 	<anchor 643 1040> mark @top_center;
   pos base [\Amacron ] <anchor 1169 -20> mark @bottom_cedilla
@@ -11311,9 +11311,6 @@ lookup mark_Mark_positioning {
 	<anchor 430 0> mark @bottom_right
 	<anchor 252 0> mark @bottom_center
 	<anchor 252 1856> mark @top_center;
-  pos base [\a.cv23 \uni0430.cv23 \uni1E9A.cv23 ] <anchor 1204 0> mark @bottom_right
-	<anchor 654 1040> mark @top_center
-	<anchor 654 0> mark @bottom_center;
   pos base [\agrave.cv23 \aacute.cv23 \acircumflex.cv23 \atilde.cv23 \abreve.cv23 \uni01CE.cv23 \uni0201.cv23 \uni0203.cv23 \uni04D1.cv23 \uni1EA5.cv23 \uni1EA7.cv23 \uni1EA9.cv23 \uni1EB3.cv23 ] <anchor 1204 0> mark @bottom_right
 	<anchor 654 0> mark @bottom_center
 	<anchor 714 1376> mark @top_center;
@@ -11323,7 +11320,6 @@ lookup mark_Mark_positioning {
   pos base [\aring.cv23 \aringacute.cv23 \uni1EA3.cv23 ] <anchor 1204 0> mark @bottom_right
 	<anchor 654 0> mark @bottom_center
 	<anchor 732 1480> mark @top_center;
-  pos base [\ae.cv23 \uni04D5.cv23 ] <anchor 1000 1040> mark @top_center;
   pos base [\amacron.cv23 ] <anchor 1204 0> mark @bottom_right
 	<anchor 654 0> mark @bottom_center
 	<anchor 715 1384> mark @top_center;
@@ -11334,9 +11330,13 @@ lookup mark_Mark_positioning {
 	<anchor 786 1784> mark @top_center;
   pos base [\uni01E3.cv23 ] <anchor 1061 1384> mark @top_center;
   pos base [\aeacute.cv23 ] <anchor 1060 1376> mark @top_center;
+  pos base [\uni04D5.cv23 ] <anchor 1000 1040> mark @top_center;
   pos base [\uni1E01.cv23 ] <anchor 1204 0> mark @bottom_right
 	<anchor 654 1040> mark @top_center
 	<anchor 576 -440> mark @bottom_center;
+  pos base [\uni1E9A.cv23 ] <anchor 1204 0> mark @bottom_right
+	<anchor 654 1040> mark @top_center
+	<anchor 654 0> mark @bottom_center;
   pos base [\uni1EA1.cv23 ] <anchor 1204 0> mark @bottom_right
 	<anchor 654 1040> mark @top_center
 	<anchor 583 -400> mark @bottom_center;
@@ -11349,8 +11349,6 @@ lookup mark_Mark_positioning {
   pos base [\uni1EAF.cv23 \uni1EB1.cv23 ] <anchor 1204 0> mark @bottom_right
 	<anchor 654 0> mark @bottom_center
 	<anchor 759 1632> mark @top_center;
-  pos base [\g.cv24 ] <anchor 654 -360> mark @bottom_center
-	<anchor 654 1040> mark @top_center;
   pos base [\gcircumflex.cv24 \gbreve.cv24 \gcaron.cv24 \uni01F5.cv24 ] <anchor 654 -360> mark @bottom_center
 	<anchor 714 1376> mark @top_center;
   pos base [\gdotaccent.cv24 ] <anchor 654 -360> mark @bottom_center
@@ -11359,10 +11357,10 @@ lookup mark_Mark_positioning {
 	<anchor 732 1480> mark @top_center;
   pos base [\uni1E21.cv24 ] <anchor 654 -360> mark @bottom_center
 	<anchor 715 1384> mark @top_center;
-  pos base [\u.cv25 ] <anchor 1122 1040> mark @top_right
-	<anchor 807 0> mark @bottom_right
-	<anchor 596 0> mark @bottom_center
-	<anchor 596 1040> mark @top_center;
+  pos base [\u.cv25 ] <anchor 1175 1040> mark @top_right
+	<anchor 677 0> mark @bottom_right
+	<anchor 466 0> mark @bottom_center
+	<anchor 649 1040> mark @top_center;
   pos base [\ugrave.cv25 \uacute.cv25 \ucircumflex.cv25 \utilde.cv25 \ubreve.cv25 \uhungarumlaut.cv25 \uni01D4.cv25 \uni0215.cv25 \uni0217.cv25 ] <anchor 1122 1040> mark @top_right
 	<anchor 807 0> mark @bottom_right
 	<anchor 596 0> mark @bottom_center
