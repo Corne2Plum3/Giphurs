@@ -18,7 +18,7 @@ import xml.etree.ElementTree as ET
 # CSV with the format Glyph Name ; Copy anchors ; Glyph 1 ; Glyph 2 ; Glyph 3 ; Glyph 4 ; ...
 # Copy anchors contains a number (0 or 1)
 # WARNING: First line is ignored
-COMPOSITE_GLYPHS_LIST = "sources/composite_glyphs.csv"
+COMPOSITE_GLYPHS_LIST = "scripts/composite_glyphs.csv"
 COMPOSITE_GLYPHS_LIST_DELIM = ";"
 
 def build_composite_glyph(glyph_name, ufo_dir):

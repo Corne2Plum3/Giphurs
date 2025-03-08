@@ -17,7 +17,7 @@ import xml.etree.ElementTree as ET
 
 # CSV with the format glyph_name ; component 1 ; component 2 ; ...
 # WARNING: First line is ignored
-COMPONENTS_LIST = "sources/custom_components.csv"
+COMPONENTS_LIST = "scripts/custom_components.csv"
 COMPONENTS_LIST_DELIM = ";"
 MKMK_ANCHORS_REPLACE = {
     "mkmk_top_center": "top_center",
