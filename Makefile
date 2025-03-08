@@ -15,9 +15,9 @@ UFO_USE_TYPO_METRICS_SCRIPT := "scripts/ufo_use_typo_metrics.py"
 help:
 	@echo "Available make commands:"
 	@echo "  * make archive      : Export fonts/ directory into a zip file (created at the project's root directory)"
+	@echo "  * make build        : Generate font binaries from UFO sources."
 	@echo "  * make clean        : Remove temporary and useless generated files, including UFO sources."
 	@echo "  * make clean_fonts  : Empties the current fonts/ folder."
-	@echo "  * make fonts        : Generate font binaries from UFO sources."
 	@echo "  * make proof        : Creates HTML specimens of the font (in output/ directory) and opens the HTML report in your web browser."
 	@echo "  * make tests        : Runs automated tests (in output/ directory) and opens the HTML report in your web browser."
 	@echo "UFO sources scripts"
@@ -31,8 +31,8 @@ archive:
 	font_version=$$(./scripts/get_font_version.sh $$(find fonts/ -type f | head -n 1)); zip -r $(FONT_NAME)_fonts_v$$font_version.zip fonts/ OFL.txt
 
 # build the fonts (otf, ttf, woof2, static + variables)
-fonts: sources/
-	./scripts/build_fonts.sh
+build: sources/
+	./scripts/build.sh
 
 # create HTML specimens of the (variable) fonts
 proof: fonts/
