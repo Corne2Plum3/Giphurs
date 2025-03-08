@@ -4,7 +4,9 @@
 	<a href="https://github.com/Corne2Plum3/Giphurs/stargazers"><img src="https://img.shields.io/github/stars/Corne2Plum3/Giphurs?style=flat-square" alt="Stargazers" /></a>
 	<a href="https://github.com/Corne2Plum3/Giphurs/releases"><img src="https://img.shields.io/github/downloads/Corne2Plum3/Giphurs/total?style=flat-square" alt="All releases" /></a>
 	<a href="https://github.com/Corne2Plum3/Giphurs/releases/latest"><img src="https://img.shields.io/github/downloads/Corne2Plum3/Giphurs/latest/total?style=flat-square" alt="Latest release" /></a>
+	<a href="https://github.com/Corne2Plum3/Giphurs/releases/tag/v1.9.9"><img src="https://img.shields.io/github/downloads/corne2plum3/Giphurs/v1.9.9/total?style=flat-square" alt="Pre-release" /></a>
 	<a href="https://github.com/Corne2Plum3/Giphurs/releases/latest"><img src="https://img.shields.io/github/v/release/Corne2Plum3/Giphurs?style=flat-square" alt="" /></a>
+	<a href="https://github.com/Corne2Plum3/Giphurs/releases/tag/v1.9.9"><img src="https://img.shields.io/github/v/release/corne2plum3/Giphurs?style=flat-square&include_prereleases&color=%23ff8800&label=pre-release" alt="Pre-release" /></a>
 	<a href="./output/fontbakery/fontbakery-report.html"><img src="./output/badges/overall.svg" alt=""></a>
 </p>
 
