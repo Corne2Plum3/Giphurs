@@ -35,18 +35,18 @@ The font itself works fine, but there's still stuff to do, and things may change
 
 The end goal is to upload this font on [Google Fonts](https://fonts.google.com/).
 
-# TODO list
-
-* Make another list of tasks to do.
-* Add italic.
-* Fix other small problems that [Font Bakery](https://github.com/googlefonts/fontbakery) complains about.
-* Improve font documentation (if it even exists).
+The full list of tasks is here: https://github.com/users/Corne2Plum3/projects/4
 
 # Download
 
 Go in [releases](https://github.com/Corne2Plum3/Giphurs/releases) page and pick the latest version. The font is available in the following formats: `otf`, `ttf` and `woff2`.
 
 You also have "SC" versions of the font (currently available for all weights except 1000) which uses small caps instead of lowercase characters.
+
+You can choose between 2 versions:
+
+* The latest stable version: [1.2.2](https://github.com/Corne2Plum3/Giphurs/releases/tag/v1.2.2)
+* An experimental/preview of 2.0, featuring *italics*: [1.9.9](https://github.com/Corne2Plum3/Giphurs/releases/tag/v1.9.9) (not recommended for production)
 
 # Build the fonts
 
