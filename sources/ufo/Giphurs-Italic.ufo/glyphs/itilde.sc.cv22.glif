@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="itilde.sc.cv22" format="2">
   <advance width="460"/>
-  <anchor x="231" y="-20" name="bottom_cedilla"/>
-  <anchor x="231" y="1200" name="greek_t"/>
-  <anchor x="231" y="1200" name="greek_k"/>
-  <anchor x="231" y="1200" name="greek_kt"/>
-  <anchor x="231" y="1200" name="greek_v"/>
-  <anchor x="320" y="0" name="bottom_right"/>
-  <anchor x="231" y="0" name="bottom_center"/>
-  <anchor x="288" y="1536" name="top_center"/>
+  <anchor x="97" y="-20" name="bottom_cedilla"/>
+  <anchor x="313" y="1200" name="greek_t"/>
+  <anchor x="313" y="1200" name="greek_k"/>
+  <anchor x="313" y="1200" name="greek_kt"/>
+  <anchor x="313" y="1200" name="greek_v"/>
+  <anchor x="190" y="0" name="bottom_right"/>
+  <anchor x="101" y="0" name="bottom_center"/>
+  <anchor x="370" y="1536" name="top_center"/>
   <outline>
     <component base="i.sc.cv22"/>
-    <component base="tildecomb" xOffset="-594" yOffset="160"/>
+    <component base="tildecomb" xOffset="-512" yOffset="160"/>
   </outline>
 </glyph>

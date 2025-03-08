@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="adieresis.cv23" format="2">
   <advance width="1184"/>
-  <anchor x="1064" y="0" name="bottom_right"/>
-  <anchor x="608" y="0" name="bottom_center"/>
-  <anchor x="668" y="1376" name="top_center"/>
+  <anchor x="444" y="-10" name="bottom_cedilla"/>
+  <anchor x="1097" y="1040" name="top_right"/>
+  <anchor x="934" y="0" name="bottom_right"/>
+  <anchor x="478" y="0" name="bottom_center"/>
+  <anchor x="721" y="1376" name="top_center"/>
   <outline>
     <component base="a.cv23"/>
-    <component base="uni0308" xOffset="-217"/>
+    <component base="uni0308" xOffset="-164"/>
   </outline>
 </glyph>

@@ -2,16 +2,17 @@
 <glyph name="uni04D0" format="2">
   <advance width="1356"/>
   <unicode hex="04D0"/>
-  <anchor x="310" y="1040" name="greek_v"/>
-  <anchor x="66" y="1040" name="greek_kt"/>
-  <anchor x="232" y="1040" name="greek_k"/>
-  <anchor x="106" y="1040" name="greek_t"/>
-  <anchor x="1286" y="0" name="bottom_right"/>
-  <anchor x="678" y="0" name="bottom_center"/>
-  <anchor x="678" y="-90" name="bottom_ypogegrammeni"/>
-  <anchor x="738" y="1716" name="top_center"/>
+  <anchor x="1054" y="-20" name="bottom_cedilla"/>
+  <anchor x="363" y="1040" name="greek_v"/>
+  <anchor x="119" y="1040" name="greek_kt"/>
+  <anchor x="285" y="1040" name="greek_k"/>
+  <anchor x="159" y="1040" name="greek_t"/>
+  <anchor x="1156" y="0" name="bottom_right"/>
+  <anchor x="548" y="0" name="bottom_center"/>
+  <anchor x="532" y="-90" name="bottom_ypogegrammeni"/>
+  <anchor x="851" y="1716" name="top_center"/>
   <outline>
     <component base="uni0410"/>
-    <component base="uni0306" xOffset="-147" yOffset="340"/>
+    <component base="uni0306" xOffset="-34" yOffset="340"/>
   </outline>
 </glyph>

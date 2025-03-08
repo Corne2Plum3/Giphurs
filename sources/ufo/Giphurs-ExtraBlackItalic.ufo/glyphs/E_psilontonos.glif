@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Epsilontonos" format="2">
-  <advance width="2170"/>
+  <advance width="2231"/>
   <unicode hex="0388"/>
-  <anchor x="1169" y="-20" name="bottom_cedilla"/>
-  <anchor x="1726" y="0" name="bottom_right"/>
-  <anchor x="1169" y="0" name="bottom_center"/>
-  <anchor x="1169" y="1380" name="top_center"/>
+  <anchor x="949" y="-20" name="bottom_cedilla"/>
+  <anchor x="1510" y="0" name="bottom_right"/>
+  <anchor x="953" y="0" name="bottom_center"/>
+  <anchor x="1196" y="1380" name="top_center"/>
   <outline>
-    <component base="Epsilon" xOffset="542"/>
-    <component base="tonos" xOffset="-35"/>
+    <component base="Epsilon" xOffset="456"/>
+    <component base="tonos" xOffset="-121"/>
   </outline>
 </glyph>

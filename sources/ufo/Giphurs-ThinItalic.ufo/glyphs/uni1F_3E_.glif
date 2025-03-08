@@ -2,11 +2,12 @@
 <glyph name="uni1F3E" format="2">
   <advance width="1238"/>
   <unicode hex="1F3E"/>
-  <anchor x="873" y="0" name="bottom_right"/>
-  <anchor x="849" y="0" name="bottom_center"/>
-  <anchor x="849" y="1380" name="top_center"/>
+  <anchor x="628" y="-20" name="bottom_cedilla"/>
+  <anchor x="656" y="0" name="bottom_right"/>
+  <anchor x="632" y="0" name="bottom_center"/>
+  <anchor x="875" y="1380" name="top_center"/>
   <outline>
-    <component base="Iota" xOffset="438"/>
-    <component base="uni1FCE" xOffset="-120"/>
+    <component base="Iota" xOffset="351"/>
+    <component base="uni1FCE" xOffset="-207"/>
   </outline>
 </glyph>

@@ -2,12 +2,12 @@
 <glyph name="Etatonos" format="2">
   <advance width="1863"/>
   <unicode hex="0389"/>
-  <anchor x="1043" y="-90" name="bottom_ypogegrammeni"/>
-  <anchor x="579" y="-20" name="bottom_cedilla"/>
-  <anchor x="1043" y="0" name="bottom_center"/>
-  <anchor x="1043" y="1380" name="top_center"/>
+  <anchor x="1070" y="1380" name="top_center"/>
+  <anchor x="827" y="0" name="bottom_center"/>
+  <anchor x="359" y="-20" name="bottom_cedilla"/>
+  <anchor x="811" y="-90" name="bottom_ypogegrammeni"/>
   <outline>
-    <component base="Eta" xOffset="344"/>
-    <component base="tonos" xOffset="-70"/>
+    <component base="Eta" xOffset="258"/>
+    <component base="tonos" xOffset="-156"/>
   </outline>
 </glyph>

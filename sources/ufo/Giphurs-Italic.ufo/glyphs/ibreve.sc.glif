@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ibreve.sc" format="2">
   <advance width="779"/>
-  <anchor x="390" y="-20" name="bottom_cedilla"/>
-  <anchor x="390" y="1200" name="greek_t"/>
-  <anchor x="390" y="1200" name="greek_k"/>
-  <anchor x="390" y="1200" name="greek_kt"/>
-  <anchor x="390" y="1200" name="greek_v"/>
-  <anchor x="479" y="0" name="bottom_right"/>
-  <anchor x="390" y="0" name="bottom_center"/>
-  <anchor x="450" y="1536" name="top_center"/>
+  <anchor x="256" y="-20" name="bottom_cedilla"/>
+  <anchor x="472" y="1200" name="greek_t"/>
+  <anchor x="472" y="1200" name="greek_k"/>
+  <anchor x="472" y="1200" name="greek_kt"/>
+  <anchor x="472" y="1200" name="greek_v"/>
+  <anchor x="349" y="0" name="bottom_right"/>
+  <anchor x="260" y="0" name="bottom_center"/>
+  <anchor x="532" y="1536" name="top_center"/>
   <outline>
     <component base="i.sc"/>
-    <component base="uni0306" xOffset="-435" yOffset="160"/>
+    <component base="uni0306" xOffset="-353" yOffset="160"/>
   </outline>
 </glyph>

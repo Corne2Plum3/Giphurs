@@ -2,12 +2,12 @@
 <glyph name="Epsilontonos" format="2">
   <advance width="1419"/>
   <unicode hex="0388"/>
-  <anchor x="750" y="1380" name="top_center"/>
-  <anchor x="750" y="0" name="bottom_center"/>
-  <anchor x="1158" y="0" name="bottom_right"/>
-  <anchor x="750" y="-20" name="bottom_cedilla"/>
+  <anchor x="777" y="1380" name="top_center"/>
+  <anchor x="534" y="0" name="bottom_center"/>
+  <anchor x="942" y="0" name="bottom_right"/>
+  <anchor x="530" y="-20" name="bottom_cedilla"/>
   <outline>
-    <component base="Epsilon" xOffset="162"/>
-    <component base="tonos" xOffset="-120"/>
+    <component base="Epsilon" xOffset="76"/>
+    <component base="tonos" xOffset="-206"/>
   </outline>
 </glyph>

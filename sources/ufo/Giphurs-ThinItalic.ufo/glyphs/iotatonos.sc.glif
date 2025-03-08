@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="iotatonos.sc" format="2">
   <advance width="799"/>
-  <anchor x="400" y="-20" name="bottom_cedilla"/>
-  <anchor x="429" y="0" name="bottom_right"/>
-  <anchor x="400" y="0" name="bottom_center"/>
-  <anchor x="400" y="1536" name="top_center"/>
+  <anchor x="266" y="-20" name="bottom_cedilla"/>
+  <anchor x="299" y="0" name="bottom_right"/>
+  <anchor x="270" y="0" name="bottom_center"/>
+  <anchor x="482" y="1200" name="top_center"/>
   <outline>
     <component base="iota.sc"/>
-    <component base="tonos" xOffset="258" yOffset="160"/>
+    <component base="tonos" xOffset="287" yOffset="160"/>
   </outline>
 </glyph>

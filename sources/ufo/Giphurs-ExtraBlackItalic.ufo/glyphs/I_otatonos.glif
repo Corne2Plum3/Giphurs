@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Iotatonos" format="2">
-  <advance width="1840"/>
+  <advance width="1901"/>
   <unicode hex="038A"/>
-  <anchor x="1004" y="1380" name="top_center"/>
-  <anchor x="1004" y="0" name="bottom_center"/>
-  <anchor x="1194" y="0" name="bottom_right"/>
+  <anchor x="784" y="-20" name="bottom_cedilla"/>
+  <anchor x="1031" y="1380" name="top_center"/>
+  <anchor x="788" y="0" name="bottom_center"/>
+  <anchor x="978" y="0" name="bottom_right"/>
   <outline>
-    <component base="Iota" xOffset="542"/>
-    <component base="tonos" xOffset="-35"/>
+    <component base="Iota" xOffset="456"/>
+    <component base="tonos" xOffset="-121"/>
   </outline>
 </glyph>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni1F2D" format="2">
-  <advance width="2684"/>
+  <advance width="2744"/>
   <unicode hex="1F2D"/>
-  <anchor x="1571" y="-90" name="bottom_ypogegrammeni"/>
-  <anchor x="1088" y="-20" name="bottom_cedilla"/>
-  <anchor x="1571" y="0" name="bottom_center"/>
-  <anchor x="1571" y="1380" name="top_center"/>
+  <anchor x="1579" y="1380" name="top_center"/>
+  <anchor x="1336" y="0" name="bottom_center"/>
+  <anchor x="849" y="-20" name="bottom_cedilla"/>
+  <anchor x="1320" y="-90" name="bottom_ypogegrammeni"/>
   <outline>
-    <component base="Eta" xOffset="828"/>
-    <component base="uni1FDE" xOffset="-50"/>
+    <component base="Eta" xOffset="723"/>
+    <component base="uni1FDE" xOffset="-155"/>
   </outline>
 </glyph>

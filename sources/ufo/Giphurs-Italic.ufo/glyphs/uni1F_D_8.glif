@@ -2,15 +2,16 @@
 <glyph name="uni1FD8" format="2">
   <advance width="806"/>
   <unicode hex="1FD8"/>
-  <anchor x="-40" y="1040" name="greek_v"/>
-  <anchor x="-284" y="1040" name="greek_kt"/>
-  <anchor x="-118" y="1040" name="greek_k"/>
-  <anchor x="-244" y="1040" name="greek_t"/>
-  <anchor x="498" y="0" name="bottom_right"/>
-  <anchor x="403" y="0" name="bottom_center"/>
-  <anchor x="463" y="1716" name="top_center"/>
+  <anchor x="269" y="-20" name="bottom_cedilla"/>
+  <anchor x="13" y="1040" name="greek_v"/>
+  <anchor x="-231" y="1040" name="greek_kt"/>
+  <anchor x="-65" y="1040" name="greek_k"/>
+  <anchor x="-191" y="1040" name="greek_t"/>
+  <anchor x="368" y="0" name="bottom_right"/>
+  <anchor x="273" y="0" name="bottom_center"/>
+  <anchor x="576" y="1716" name="top_center"/>
   <outline>
     <component base="Iota"/>
-    <component base="uni0306" xOffset="-422" yOffset="340"/>
+    <component base="uni0306" xOffset="-309" yOffset="340"/>
   </outline>
 </glyph>

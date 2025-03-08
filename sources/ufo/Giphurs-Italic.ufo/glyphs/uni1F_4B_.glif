@@ -2,12 +2,13 @@
 <glyph name="uni1F4B" format="2">
   <advance width="2095"/>
   <unicode hex="1F4B"/>
-  <anchor x="1416" y="0" name="bottom_right"/>
-  <anchor x="1249" y="0" name="bottom_center"/>
-  <anchor x="1828" y="1480" name="top_right"/>
-  <anchor x="1249" y="1380" name="top_center"/>
+  <anchor x="1005" y="-20" name="bottom_cedilla"/>
+  <anchor x="1176" y="0" name="bottom_right"/>
+  <anchor x="1009" y="0" name="bottom_center"/>
+  <anchor x="1849" y="1480" name="top_right"/>
+  <anchor x="1252" y="1380" name="top_center"/>
   <outline>
-    <component base="Omicron" xOffset="448"/>
-    <component base="uni1FDD" xOffset="-70"/>
+    <component base="Omicron" xOffset="338"/>
+    <component base="uni1FDD" xOffset="-180"/>
   </outline>
 </glyph>
