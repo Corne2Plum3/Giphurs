@@ -23,8 +23,8 @@ export_fonts:
 	font_version=$$(./sources/get_font_version.sh $$(find fonts/ -type f | head -n 1)); zip -r $(font_name)_fonts_v$$font_version.zip fonts/ OFL.txt
 
 # build the fonts (otf, ttf, woof2, static + variables)
-fonts: sources/ufo
-	./sources/build_fonts.sh
+fonts: sources/
+	./scripts/build_fonts.sh
 
 # create HTML specimens of the (variable) fonts
 proof: fonts/
