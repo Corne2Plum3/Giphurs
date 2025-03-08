@@ -33,7 +33,7 @@ BADGE_VALUE=$(cat $BADGES_DIR/overall.json | jq .message | tr -d '"%')
 curl "https://img.shields.io/badge/FontBakery_QA-"$BADGE_VALUE"%25-hsl("$BADGE_VALUE",100%25,35%25)?style=flat-square" > $BADGE_OVERALL_SVG".svg"
 # ... local font version
 FONT_FILE_TO_CHECK=$(find $FONT_DIR/ -type f | grep -E -v "(SC|.woff2|\[)" | head -n 1)
-FONT_VERSION=$(./sources/get_font_version.sh $FONT_FILE_TO_CHECK)
+FONT_VERSION=$(./scripts/get_font_version.sh $FONT_FILE_TO_CHECK)
 curl "https://img.shields.io/badge/Local_fonts_version-"$FONT_VERSION"-black?style=flat-square" > $BADGE_LOCAL_VERSION_SVG".svg"
 
 # Open the report in the web browser

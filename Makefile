@@ -36,11 +36,11 @@ build: sources/
 
 # create HTML specimens of the (variable) fonts
 proof: fonts/
-	./sources/proof.sh
+	./scripts/proof.sh
 
 # run fontbakery tests
 tests: fonts/
-	./sources/tests.sh
+	./scripts/tests.sh
 
 # build accented glyphs
 ufo_accented_glyphs: sources/
