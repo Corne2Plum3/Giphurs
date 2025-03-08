@@ -8,20 +8,6 @@
   <anchor x="679" y="0" name="bottom_center"/>
   <anchor x="679" y="1200" name="top_center"/>
   <outline>
-    <contour>
-      <point x="645" y="345" type="line"/>
-      <point x="35" y="1200" type="line"/>
-      <point x="453" y="1200" type="line"/>
-      <point x="679" y="875" type="line"/>
-      <point x="904" y="1200" type="line"/>
-      <point x="1322" y="1200" type="line"/>
-      <point x="718" y="345" type="line"/>
-    </contour>
-    <contour>
-      <point x="499" y="0" type="line"/>
-      <point x="499" y="760" type="line"/>
-      <point x="859" y="760" type="line"/>
-      <point x="859" y="0" type="line"/>
-    </contour>
+    <component base="y.sc"/>
   </outline>
 </glyph>

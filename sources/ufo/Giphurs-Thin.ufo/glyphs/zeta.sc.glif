@@ -4,29 +4,6 @@
   <anchor x="554" y="0" name="bottom_center"/>
   <anchor x="554" y="1200" name="top_center"/>
   <outline>
-    <contour>
-      <point x="878" y="1190" type="line"/>
-      <point x="914" y="1168" type="line"/>
-      <point x="215" y="10" type="line"/>
-      <point x="180" y="32" type="line"/>
-    </contour>
-    <contour>
-      <point x="212" y="40" type="line"/>
-      <point x="914" y="40" type="line"/>
-      <point x="914" y="0" type="line"/>
-      <point x="650" y="0"/>
-      <point x="444" y="0"/>
-      <point x="180" y="0" type="curve"/>
-      <point x="180" y="32" type="line"/>
-    </contour>
-    <contour>
-      <point x="889" y="1160" type="line"/>
-      <point x="194" y="1160" type="line"/>
-      <point x="194" y="1200" type="line"/>
-      <point x="458" y="1200"/>
-      <point x="650" y="1200"/>
-      <point x="914" y="1200" type="curve"/>
-      <point x="914" y="1168" type="line"/>
-    </contour>
+    <component base="z.sc"/>
   </outline>
 </glyph>

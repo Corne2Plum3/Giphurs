@@ -10,15 +10,6 @@
   <anchor x="260" y="0" name="bottom_center"/>
   <anchor x="260" y="1380" name="top_center"/>
   <outline>
-    <contour>
-      <point x="450" y="1312" type="line"/>
-      <point x="450" y="168" type="line"/>
-      <point x="450" y="0" type="line"/>
-      <point x="70" y="0" type="line"/>
-      <point x="70" y="168" type="line"/>
-      <point x="70" y="1312" type="line"/>
-      <point x="70" y="1480" type="line"/>
-      <point x="450" y="1480" type="line"/>
-    </contour>
+    <component base="I.cv22"/>
   </outline>
 </glyph>

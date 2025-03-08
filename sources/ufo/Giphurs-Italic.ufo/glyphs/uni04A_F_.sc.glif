@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni04AF.sc" format="2">
   <advance width="1206"/>
+  <anchor x="686" y="1200" name="greek_t"/>
+  <anchor x="686" y="1200" name="greek_k"/>
+  <anchor x="686" y="1200" name="greek_kt"/>
+  <anchor x="686" y="1200" name="greek_v"/>
   <anchor x="686" y="1200" name="top_center"/>
   <anchor x="474" y="0" name="bottom_center"/>
   <outline>
-    <contour>
-      <point x="520" y="457" type="line"/>
-      <point x="152" y="1200" type="line"/>
-      <point x="361" y="1200" type="line"/>
-      <point x="596" y="695" type="line"/>
-      <point x="1009" y="1200" type="line"/>
-      <point x="1218" y="1200" type="line"/>
-      <point x="586" y="456" type="line"/>
-    </contour>
-    <contour>
-      <point x="383" y="0" type="line"/>
-      <point x="489" y="600" type="line"/>
-      <point x="669" y="600" type="line"/>
-      <point x="563" y="0" type="line"/>
-    </contour>
+    <component base="y.sc"/>
   </outline>
 </glyph>

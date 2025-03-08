@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni1E9F.sc" format="2">
   <advance width="1326"/>
-  <anchor x="663" y="1200" name="top_center"/>
-  <anchor x="663" y="0" name="bottom_center"/>
+  <anchor x="745" y="1200" name="top_center"/>
+  <anchor x="533" y="0" name="bottom_center"/>
   <outline>
-    <contour>
-      <point x="140" y="0" type="line"/>
-      <point x="140" y="144" type="line"/>
-      <point x="209" y="160" type="line"/>
-      <point x="1107" y="160" type="line"/>
-      <point x="1186" y="144" type="line"/>
-      <point x="1186" y="0" type="line"/>
-    </contour>
-    <contour>
-      <point x="663" y="998" type="line"/>
-      <point x="329" y="160" type="line"/>
-      <point x="140" y="144" type="line"/>
-      <point x="553" y="1200" type="line"/>
-      <point x="772" y="1200" type="line"/>
-      <point x="1186" y="144" type="line"/>
-      <point x="997" y="160" type="line"/>
-    </contour>
+    <component base="delta.sc"/>
   </outline>
 </glyph>

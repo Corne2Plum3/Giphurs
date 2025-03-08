@@ -4,15 +4,6 @@
   <anchor x="230" y="0" name="bottom_center"/>
   <anchor x="529" y="1200" name="top_center"/>
   <outline>
-    <contour>
-      <point x="320" y="520" type="line"/>
-      <point x="320" y="130" type="line"/>
-      <point x="320" y="0" type="line"/>
-      <point x="140" y="0" type="line"/>
-      <point x="140" y="1200" type="line"/>
-      <point x="918" y="1200" type="line"/>
-      <point x="918" y="1040" type="line"/>
-      <point x="320" y="1040" type="line"/>
-    </contour>
+    <component base="gamma.sc"/>
   </outline>
 </glyph>

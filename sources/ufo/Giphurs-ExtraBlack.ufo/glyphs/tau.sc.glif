@@ -5,15 +5,6 @@
   <anchor x="629" y="1200" name="top_center"/>
   <anchor x="629" y="0" name="bottom_center"/>
   <outline>
-    <contour>
-      <point x="809" y="0" type="line"/>
-      <point x="449" y="0" type="line"/>
-      <point x="449" y="880" type="line"/>
-      <point x="70" y="880" type="line"/>
-      <point x="70" y="1200" type="line"/>
-      <point x="1188" y="1200" type="line"/>
-      <point x="1188" y="880" type="line"/>
-      <point x="809" y="880" type="line"/>
-    </contour>
+    <component base="t.sc"/>
   </outline>
 </glyph>

@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="nu.sc" format="2">
   <advance width="1238"/>
-  <anchor x="619" y="1200" name="top_center"/>
-  <anchor x="619" y="0" name="bottom_center"/>
+  <anchor x="701" y="1200" name="top_center"/>
+  <anchor x="489" y="0" name="bottom_center"/>
   <outline>
-    <contour>
-      <point x="320" y="1200" type="line"/>
-      <point x="918" y="282" type="line"/>
-      <point x="918" y="1200" type="line"/>
-      <point x="1098" y="1200" type="line"/>
-      <point x="1098" y="0" type="line"/>
-      <point x="918" y="0" type="line"/>
-      <point x="320" y="918" type="line"/>
-      <point x="320" y="0" type="line"/>
-      <point x="140" y="0" type="line"/>
-      <point x="140" y="1200" type="line"/>
-    </contour>
+    <component base="n.sc"/>
   </outline>
 </glyph>

@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni0283.sc" format="2">
   <advance width="1032"/>
+  <anchor x="399" y="0" name="bottom_center"/>
+  <anchor x="611" y="1200" name="top_center"/>
   <outline>
-    <contour>
-      <point x="637" y="600" type="line"/>
-      <point x="348" y="160" type="line"/>
-      <point x="892" y="160" type="line"/>
-      <point x="892" y="0" type="line"/>
-      <point x="140" y="0" type="line"/>
-      <point x="140" y="133" type="line"/>
-      <point x="449" y="600" type="line"/>
-      <point x="140" y="1067" type="line"/>
-      <point x="140" y="1200" type="line"/>
-      <point x="892" y="1200" type="line"/>
-      <point x="892" y="1040" type="line"/>
-      <point x="348" y="1040" type="line"/>
-    </contour>
+    <component base="sigma.sc"/>
   </outline>
 </glyph>

@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="upsilon.sc" format="2">
   <advance width="1206"/>
-  <anchor x="604" y="1200" name="greek_t"/>
-  <anchor x="604" y="1200" name="greek_k"/>
-  <anchor x="604" y="1200" name="greek_kt"/>
-  <anchor x="604" y="1200" name="greek_v"/>
-  <anchor x="604" y="1200" name="top_center"/>
-  <anchor x="604" y="0" name="bottom_center"/>
+  <anchor x="686" y="1200" name="greek_t"/>
+  <anchor x="686" y="1200" name="greek_k"/>
+  <anchor x="686" y="1200" name="greek_kt"/>
+  <anchor x="686" y="1200" name="greek_v"/>
+  <anchor x="686" y="1200" name="top_center"/>
+  <anchor x="474" y="0" name="bottom_center"/>
   <outline>
-    <contour>
-      <point x="569" y="457" type="line"/>
-      <point x="70" y="1200" type="line"/>
-      <point x="279" y="1200" type="line"/>
-      <point x="603" y="695" type="line"/>
-      <point x="927" y="1200" type="line"/>
-      <point x="1136" y="1200" type="line"/>
-      <point x="636" y="456" type="line"/>
-    </contour>
-    <contour>
-      <point x="513" y="0" type="line"/>
-      <point x="513" y="600" type="line"/>
-      <point x="693" y="600" type="line"/>
-      <point x="693" y="0" type="line"/>
-    </contour>
+    <component base="y.sc"/>
   </outline>
 </glyph>

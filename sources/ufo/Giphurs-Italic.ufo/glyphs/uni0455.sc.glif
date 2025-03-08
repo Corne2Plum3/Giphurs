@@ -1,49 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni0455.sc" format="2">
   <advance width="1090"/>
-  <anchor x="545" y="-20" name="bottom_cedilla"/>
-  <anchor x="545" y="0" name="bottom_center"/>
-  <anchor x="547" y="1200" name="top_center"/>
+  <anchor x="411" y="-20" name="bottom_cedilla"/>
+  <anchor x="415" y="0" name="bottom_center"/>
+  <anchor x="629" y="1200" name="top_center"/>
   <outline>
-    <contour>
-      <point x="547" y="1060" type="curve" smooth="yes"/>
-      <point x="376" y="1060"/>
-      <point x="323" y="978"/>
-      <point x="323" y="880" type="curve" smooth="yes"/>
-      <point x="323" y="782"/>
-      <point x="379" y="730"/>
-      <point x="547" y="690" type="curve" smooth="yes"/>
-      <point x="802" y="628"/>
-      <point x="990" y="532"/>
-      <point x="990" y="319" type="curve" smooth="yes"/>
-      <point x="990" y="106"/>
-      <point x="812" y="-20"/>
-      <point x="545" y="-20" type="curve" smooth="yes"/>
-      <point x="300" y="-20"/>
-      <point x="124" y="123"/>
-      <point x="100" y="327" type="curve"/>
-      <point x="276" y="387" type="line"/>
-      <point x="276" y="243"/>
-      <point x="378" y="140"/>
-      <point x="545" y="140" type="curve" smooth="yes"/>
-      <point x="728" y="140"/>
-      <point x="810" y="211"/>
-      <point x="810" y="319" type="curve" smooth="yes"/>
-      <point x="810" y="427"/>
-      <point x="719" y="475"/>
-      <point x="547" y="516" type="curve" smooth="yes"/>
-      <point x="292" y="579"/>
-      <point x="143" y="678"/>
-      <point x="143" y="880" type="curve" smooth="yes"/>
-      <point x="143" y="1082"/>
-      <point x="294" y="1220"/>
-      <point x="546" y="1220" type="curve" smooth="yes"/>
-      <point x="789" y="1220"/>
-      <point x="941" y="1076"/>
-      <point x="964" y="872" type="curve"/>
-      <point x="787" y="822" type="line"/>
-      <point x="787" y="956"/>
-      <point x="710" y="1060"/>
-    </contour>
+    <component base="s.sc"/>
   </outline>
 </glyph>

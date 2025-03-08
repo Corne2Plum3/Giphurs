@@ -2,20 +2,9 @@
 <glyph name="uni029C" format="2">
   <advance width="1159"/>
   <unicode hex="029C"/>
+  <anchor x="450" y="0" name="bottom_center"/>
+  <anchor x="633" y="1040" name="top_center"/>
   <outline>
-    <contour>
-      <point x="193" y="1040" type="line"/>
-      <point x="373" y="1040" type="line"/>
-      <point x="296" y="600" type="line"/>
-      <point x="815" y="600" type="line"/>
-      <point x="892" y="1040" type="line"/>
-      <point x="1072" y="1040" type="line"/>
-      <point x="889" y="0" type="line"/>
-      <point x="709" y="0" type="line"/>
-      <point x="786" y="439" type="line"/>
-      <point x="267" y="439" type="line"/>
-      <point x="190" y="0" type="line"/>
-      <point x="10" y="0" type="line"/>
-    </contour>
+    <component base="uni043D"/>
   </outline>
 </glyph>

@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="kgreenlandic.sc" format="2">
   <advance width="1165"/>
+  <anchor x="453" y="0" name="bottom_center"/>
+  <anchor x="665" y="1200" name="top_center"/>
   <outline>
-    <contour>
-      <point x="489" y="680" type="line"/>
-      <point x="518" y="717" type="line"/>
-      <point x="1045" y="0" type="line"/>
-      <point x="989" y="0" type="line"/>
-    </contour>
-    <contour>
-      <point x="225" y="398" type="line"/>
-      <point x="225" y="0" type="line"/>
-      <point x="180" y="0" type="line"/>
-      <point x="180" y="1200" type="line"/>
-      <point x="225" y="1200" type="line"/>
-      <point x="225" y="454" type="line"/>
-      <point x="971" y="1200" type="line"/>
-      <point x="1014" y="1200"/>
-      <point x="984" y="1200"/>
-      <point x="1027" y="1200" type="curve"/>
-    </contour>
+    <component base="k.sc"/>
   </outline>
 </glyph>
