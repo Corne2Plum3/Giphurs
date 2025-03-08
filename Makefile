@@ -67,9 +67,12 @@ ufo_digits_glyphs: sources/ufo
 # edit fontinfo.plist to set the bit 7 of openTypeOS2Selection ("use typo metrics")
 # Note: This is currently automatically run when building fonts
 ufo_use_typo_metrics: sources/ufo
-	python3 ufo_use_typo_metrics.py sources/ufo/$(font_name)-Thin.ufo
-	python3 ufo_use_typo_metrics.py sources/ufo/$(font_name)-Regular.ufo
-	python3 ufo_use_typo_metrics.py sources/ufo/$(font_name)-ExtraBlack.ufo
+	python3 sources/ufo_use_typo_metrics.py sources/ufo/$(font_name)-Thin.ufo
+	python3 sources/ufo_use_typo_metrics.py sources/ufo/$(font_name)-Regular.ufo
+	python3 sources/ufo_use_typo_metrics.py sources/ufo/$(font_name)-ExtraBlack.ufo
+	python3 sources/ufo_use_typo_metrics.py sources/ufo/$(font_name)-ThinItalic.ufo
+	python3 sources/ufo_use_typo_metrics.py sources/ufo/$(font_name)-Italic.ufo
+	python3 sources/ufo_use_typo_metrics.py sources/ufo/$(font_name)-ExtraBlackItalic.ufo
 
 # clean all generated files from the scripts
 
