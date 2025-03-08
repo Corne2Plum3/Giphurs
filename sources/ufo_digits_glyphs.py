@@ -158,7 +158,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
     DIGITS_HEIGHT = 1480
     SUPS_HEIGHT = 858
     ITALIC_SLANT = 10*pi/180  # slant to the RIGHT in radians (the "*pi/180" converts degrees to radians)
-    ITALIC_OFFSET = -130  # move to the right some italic glyphs
+    ITALIC_X_OFFSET = -130  # move to the right some italic glyphs
 
     use_sups = type.split("_")[0] in ["superior", "subscript", "numr", "dnom"] or type in ["circle", "black_circle", "double_circle", "frac"]
 
@@ -212,18 +212,21 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
             x_offset = 0
             width = base_2_x_metrics["glyph_width"]
         elif type.split("_")[1] == "pnum":
-            if digit_1 == 1:
+            if digit_2 == 1:
                 x_offset = PNUM_SUPS_KERN[weight]["1"][0] - base_2_x_metrics["left_kern"]
-                width = base_2_x_metrics["raw_width"] + PNUM_SUPS_KERN[weight]["1"][0] + PNUM_SUPS_KERN[weight]["1"][1]
+                width = PNUM_SUPS_KERN[weight]["1"][0] + base_2_x_metrics["raw_width"] + PNUM_SUPS_KERN[weight]["1"][1]
             else:
                 x_offset = PNUM_SUPS_KERN[weight]["other"][0] - base_2_x_metrics["left_kern"]
-                width = base_2_x_metrics["raw_width"] + PNUM_SUPS_KERN[weight]["other"][0] + PNUM_SUPS_KERN[weight]["other"][1]
+                width = PNUM_SUPS_KERN[weight]["other"][0] + base_2_x_metrics["raw_width"] + PNUM_SUPS_KERN[weight]["other"][1]
+            if is_italic:
+                x_offset += tan(ITALIC_SLANT) * SUPS_HEIGHT / 2
+                width -= tan(ITALIC_SLANT) * SUPS_HEIGHT / 2
         elif type.split("_")[1] == "tnum":
             width = TNUM_WIDTH[weight]
             additional_kern = width - base_2_x_metrics["glyph_width"]
-            x_offset = int(base_2_x_metrics["left_kern"] + additional_kern / 2)
+            x_offset = int(base_2_x_metrics["left_kern"] + additional_kern / 2 + ITALIC_X_OFFSET)
 
-        # Add more x offset if italic (none if superior) as we move the glyph below
+        # Add more x offset if italic (none if superior) as we move the glyph only below
         if is_italic:
             if type.split("_")[0] == "subscript":
                 x_offset -= abs(SUPS_Y - SUBS_Y) / tan(pi/2-ITALIC_SLANT)
