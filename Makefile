@@ -1,7 +1,15 @@
 .PHONY: export_fonts tests clean clean_fonts 
 
 # Name of the font
-font_name := Giphurs
+FONT_NAME := Giphurs
+
+# Paths (without '/' for directories!)
+UFO_DIR := ./sources
+
+UFO_ACCENTED_GLYPHS_SCRIPT := "scripts/ufo_accented_glyphs.py"
+UFO_COMPOSITE_GLYPHS_SCRIPT := "scripts/ufo_composite_glyphs.py"
+UFO_DIGITS_GLYPHS_SCRIPT := "scripts/ufo_digits_glyphs.py"
+UFO_USE_TYPO_METRICS_SCRIPT := "scripts/ufo_use_typo_metrics.py"
 
 # documentaton
 help:
@@ -20,7 +28,7 @@ help:
 
 # make a zip archive of the font folder
 export_fonts:
-	font_version=$$(./sources/get_font_version.sh $$(find fonts/ -type f | head -n 1)); zip -r $(font_name)_fonts_v$$font_version.zip fonts/ OFL.txt
+	font_version=$$(./sources/get_font_version.sh $$(find fonts/ -type f | head -n 1)); zip -r $(FONT_NAME)_fonts_v$$font_version.zip fonts/ OFL.txt
 
 # build the fonts (otf, ttf, woof2, static + variables)
 fonts: sources/
@@ -35,46 +43,32 @@ tests: fonts/
 	./sources/tests.sh
 
 # build accented glyphs
-ufo_accented_glyphs: sources/ufo
-	python3 sources/ufo_accented_glyphs.py sources/ufo/$(font_name)-Thin.ufo
-	python3 sources/ufo_accented_glyphs.py sources/ufo/$(font_name)-Regular.ufo
-	python3 sources/ufo_accented_glyphs.py sources/ufo/$(font_name)-ExtraBlack.ufo
-	python3 sources/ufo_accented_glyphs.py sources/ufo/$(font_name)-ThinItalic.ufo
-	python3 sources/ufo_accented_glyphs.py sources/ufo/$(font_name)-Italic.ufo
-	python3 sources/ufo_accented_glyphs.py sources/ufo/$(font_name)-ExtraBlackItalic.ufo
+ufo_accented_glyphs: sources/
+	UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null); \
+	for ufo in $$UFO_FILES; do python3 $(UFO_ACCENTED_GLYPHS_SCRIPT) $${ufo}; done
 	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
 
 # build composite glyphs (should be run AFTER ufo_accented_glyphs)
-ufo_composite_glyphs: sources/ufo
-	python3 sources/ufo_composite_glyphs.py sources/ufo/$(font_name)-Thin.ufo
-	python3 sources/ufo_composite_glyphs.py sources/ufo/$(font_name)-Regular.ufo
-	python3 sources/ufo_composite_glyphs.py sources/ufo/$(font_name)-ExtraBlack.ufo
-	python3 sources/ufo_composite_glyphs.py sources/ufo/$(font_name)-ThinItalic.ufo
-	python3 sources/ufo_composite_glyphs.py sources/ufo/$(font_name)-Italic.ufo
-	python3 sources/ufo_composite_glyphs.py sources/ufo/$(font_name)-ExtraBlackItalic.ufo
+ufo_composite_glyphs: sources/
+	UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null); \
+	for ufo in $$UFO_FILES; do python3 $(UFO_COMPOSITE_GLYPHS_SCRIPT) $${ufo}; done
 	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
 
 # build number based glyphs
-ufo_digits_glyphs: sources/ufo
-	python3 sources/ufo_digits_glyphs.py 100 sources/ufo/$(font_name)-Thin.ufo
-	python3 sources/ufo_digits_glyphs.py 400 sources/ufo/$(font_name)-Regular.ufo
-	python3 sources/ufo_digits_glyphs.py 1000 sources/ufo/$(font_name)-ExtraBlack.ufo
-	python3 sources/ufo_digits_glyphs.py 100i sources/ufo/$(font_name)-ThinItalic.ufo
-	python3 sources/ufo_digits_glyphs.py 400i sources/ufo/$(font_name)-Italic.ufo
-	python3 sources/ufo_digits_glyphs.py 1000i sources/ufo/$(font_name)-ExtraBlackItalic.ufo
+ufo_digits_glyphs: sources/
+	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 100 $(UFO_DIR)/$(FONT_NAME)-Thin.ufo
+	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 400 $(UFO_DIR)/$(FONT_NAME)-Regular.ufo
+	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 1000 $(UFO_DIR)/$(FONT_NAME)-ExtraBlack.ufo
+	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 100i $(UFO_DIR)/$(FONT_NAME)-ThinItalic.ufo
+	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 400i $(UFO_DIR)/$(FONT_NAME)-Italic.ufo
+	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 1000i $(UFO_DIR)/$(FONT_NAME)-ExtraBlackItalic.ufo
 	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
 
 # edit fontinfo.plist to set the bit 7 of openTypeOS2Selection ("use typo metrics")
 # Note: This is currently automatically run when building fonts
-ufo_use_typo_metrics: sources/ufo
-	python3 sources/ufo_use_typo_metrics.py sources/ufo/$(font_name)-Thin.ufo
-	python3 sources/ufo_use_typo_metrics.py sources/ufo/$(font_name)-Regular.ufo
-	python3 sources/ufo_use_typo_metrics.py sources/ufo/$(font_name)-ExtraBlack.ufo
-	python3 sources/ufo_use_typo_metrics.py sources/ufo/$(font_name)-ThinItalic.ufo
-	python3 sources/ufo_use_typo_metrics.py sources/ufo/$(font_name)-Italic.ufo
-	python3 sources/ufo_use_typo_metrics.py sources/ufo/$(font_name)-ExtraBlackItalic.ufo
-
-# clean all generated files from the scripts
+ufo_use_typo_metrics: sources/
+	UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null); \
+	for ufo in $$UFO_FILES; do python3 $(UFO_USE_TYPO_METRICS_SCRIPT) $${ufo}; done
 
 # Cleaning process
 clean:
