@@ -1,4 +1,4 @@
-.PHONY: export_fonts tests clean clean_fonts 
+.PHONY: export_fonts proof tests clean clean_fonts 
 
 # Name of the font
 FONT_NAME := Giphurs
@@ -73,14 +73,15 @@ ufo_use_typo_metrics: sources/
 # Cleaning process
 clean:
 	rm -rf output/
-	rm -rf sources/instance_ufos
-	rm -rf sources/__pycache__
-	rm -f sources/*.ninja
-	rm -f sources/.fuse_hidden*
-	rm -f sources/.ninja_log
+	rm -rf scripts/__pycache__
+	rm -rf $(UFO_DIR)/instance_ufos
+	rm -f $(UFO_DIR)/*.ninja
+	rm -f $(UFO_DIR)/.fuse_hidden*
+	rm -f $(UFO_DIR)/.ninja_log
 	rm -f *.zip
 
 clean_fonts:
 	rm -rf fonts/
+	rm -rf fonts-backup/
 	mkdir fonts
 	cd fonts/ && mkdir otf ttf variable webfonts
