@@ -3,51 +3,47 @@ set -e
 
 COMPILATION_START_TIME=$(date +%s)  # when the compilation started
 
-# move to sources folder
-cd sources/
-
-FONTS_DIR="../fonts"
+# Do NOT put '/' at the end of directories names
+FONT_NAME="Giphurs"
+FONTS_DIR="fonts"
+FONTS_DIR_BACKUP="$FONTS_DIR-backup"
 FONTS_DIR_LIST=(otf ttf variable webfonts)  # all directories in FONTS_DIR
-FONTS_TYPE_LIST=(otf ttf ttf woff2)  # type of the file of each folder defined above
-UFO_DIR="ufo/"  # where the ufo source files are (don't forget the '/' at the end!)
-UFO_LIST=$(ls $UFO_DIR)  # list of all files inside UFO_DIR
-FONTNAME="Giphurs"
+FONTS_TYPE_LIST=(otf ttf ttf woff2)  # type of the file of each folder defined above (the order matters!)
+SOURCES_DIR="sources"
 
-# Empty the fonts folder (for real making a copy of it)
+UFO_LIST=$(find $SOURCES_DIR -name "*.ufo")  # list of all files inside UFO_DIR
+
+# Create a backup of the fonts folder before empying it
 echo -e "\x1b[0;36mCleaning the fonts folder\x1b[0;0m"
-rm -rf "${FONTS_DIR}-backup"
-mv $FONTS_DIR "${FONTS_DIR}-backup"
+rm -rf $FONTS_DIR_BACKUP
+mv $FONTS_DIR $FONTS_DIR_BACKUP
 mkdir $FONTS_DIR
 echo "Done."
 
 # Applying some change to ufo file
 echo -e "\x1b[0;36mApplying some changes to the ufo sources.\x1b[0;0m"
-for dst in $UFO_LIST
+for ufo_file in $UFO_LIST
 do
-    echo "Applying some changes on $UFO_DIR$dst"
-    echo "Copying lib.plist into $UFO_DIR$dst"
-    cp -f lib.plist $UFO_DIR$dst
+    echo "Applying some changes on $ufo_file"
+    echo "Copying lib.plist into $ufo_file"
+    cp -f $SOURCES_DIR/lib.plist $ufo_file
     echo "Setting bit 7 of openTypeOS2Selection in fontinfo.plist"
-    python3 ufo_use_typo_metrics.py $UFO_DIR$dst
+    python3 ./scripts/ufo_use_typo_metrics.py $ufo_file
 done
 
 echo "Done editing UFO files."
 
 # Build the font (the touch command is needed otherwhise I dunno why some non-encoded glyphs don't get updated)...
 echo -e "\x1b[0;36mBuilding the fonts\x1b[0;0m"
-touch Giphurs.designspace && touch Giphurs-Italic.designspace && gftools builder config.yaml
+touch $SOURCES_DIR/Giphurs.designspace && touch $SOURCES_DIR/Giphurs-Italic.designspace && gftools builder $SOURCES_DIR/config.yaml
 
 # Fix incorrect name of the weight 1000
-WEIGHT_1000_OLD_NAME="Giphurs-ExtraBlack"
-WEIGHT_1000_NEW_NAME="GiphursExtraBlack-Regular"
-WEIGHT_1000_ITALIC_OLD_NAME="Giphurs-ExtraBlackItalic"
-WEIGHT_1000_ITALIC_NEW_NAME="GiphursExtraBlack-Italic"
-mv $FONTS_DIR/otf/$WEIGHT_1000_OLD_NAME.otf $FONTS_DIR/otf/$WEIGHT_1000_NEW_NAME.otf 
-mv $FONTS_DIR/ttf/$WEIGHT_1000_OLD_NAME.ttf $FONTS_DIR/ttf/$WEIGHT_1000_NEW_NAME.ttf 
-mv $FONTS_DIR/webfonts/$WEIGHT_1000_OLD_NAME.woff2 $FONTS_DIR/webfonts/$WEIGHT_1000_NEW_NAME.woff2
-mv $FONTS_DIR/otf/$WEIGHT_1000_ITALIC_OLD_NAME.otf $FONTS_DIR/otf/$WEIGHT_1000_ITALIC_NEW_NAME.otf 
-mv $FONTS_DIR/ttf/$WEIGHT_1000_ITALIC_OLD_NAME.ttf $FONTS_DIR/ttf/$WEIGHT_1000_ITALIC_NEW_NAME.ttf 
-mv $FONTS_DIR/webfonts/$WEIGHT_1000_ITALIC_OLD_NAME.woff2 $FONTS_DIR/webfonts/$WEIGHT_1000_ITALIC_NEW_NAME.woff2
+mv $FONTS_DIR/otf/$FONT_NAME"-ExtraBlack.otf" $FONTS_DIR/otf/$FONT_NAME"ExtraBlack-Regular.otf"
+mv $FONTS_DIR/otf/$FONT_NAME"-ExtraBlackItalic.otf" $FONTS_DIR/otf/$FONT_NAME"ExtraBlack-Italic.otf"
+mv $FONTS_DIR/ttf/$FONT_NAME"-ExtraBlack.ttf" $FONTS_DIR/ttf/$FONT_NAME"ExtraBlack-Regular.ttf"
+mv $FONTS_DIR/ttf/$FONT_NAME"-ExtraBlackItalic.ttf" $FONTS_DIR/ttf/$FONT_NAME"ExtraBlack-Italic.ttf"
+mv $FONTS_DIR/webfonts/$FONT_NAME"-ExtraBlack.woff2" $FONTS_DIR/webfonts/$FONT_NAME"ExtraBlack-Regular.woff2"
+mv $FONTS_DIR/webfonts/$FONT_NAME"-ExtraBlackItalic.woff2" $FONTS_DIR/webfonts/$FONT_NAME"ExtraBlack-Italic.woff2"
 
 # Build SC variants of the fonts
 for (( i=0; i<4; i++));
@@ -93,22 +89,13 @@ for font in $WOFF2_LIST
 do
     gftools fix-nonhinting $FONTS_DIR/webfonts/$font $FONTS_DIR/webfonts/$font &
 done
-
 wait
 
 # Clean backup files
 echo -e "\x1b[0;36mRemoving backup files\x1b[0;0m"
-rm -rf "${FONTS_DIR}-backup"
-cd $FONTS_DIR/otf
-ls | grep backup | xargs rm
-cd ../ttf
-ls | grep backup | xargs rm
-cd ../webfonts
-ls | grep backup | xargs rm
+rm -f $(find $FONTS_DIR -name "*backup*")
+rm -rf $FONTS_DIR_BACKUP
 echo "Done."
-
-# Go back to where we come from
-cd ../..
 
 # Sucess message
 COMPILATION_END_TIME=$(date +%s)  # when the compilation finished
