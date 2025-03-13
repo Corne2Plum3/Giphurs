@@ -10050,9 +10050,9 @@ lookup mark_Mark_positioning {
   pos base [\cacute.sc \ccircumflex.sc \cdotaccent.sc \ccaron.sc ] <anchor 529 -20> mark @bottom_cedilla
 	<anchor 533 0> mark @bottom_center
 	<anchor 805 1536> mark @top_center;
-  pos base [\dcaron.sc ] <anchor 550 1596> mark @top_center
-	<anchor 462 -20> mark @bottom_cedilla
-	<anchor 550 0> mark @bottom_center;
+  pos base [\dcaron.sc \uni1E0B.sc ] <anchor 328 -20> mark @bottom_cedilla
+	<anchor 420 0> mark @bottom_center
+	<anchor 692 1536> mark @top_center;
   pos base [\eogonek.sc ] <anchor 388 -20> mark @bottom_cedilla
 	<anchor 604 1200> mark @top_center
 	<anchor 601 -350> mark @bottom_center;
@@ -10093,6 +10093,9 @@ lookup mark_Mark_positioning {
 	<anchor 616 1200> mark @top_center;
   pos base [\uni0163.sc ] <anchor 672 1200> mark @top_center
 	<anchor 413 -350> mark @bottom_center;
+  pos base [\tcaron.sc \uni1E6B.sc ] <anchor 456 -20> mark @bottom_cedilla
+	<anchor 460 0> mark @bottom_center
+	<anchor 732 1536> mark @top_center;
   pos base [\uring.sc \uni1EE7.sc ] <anchor 468 -20> mark @bottom_cedilla
 	<anchor 1106 1200> mark @top_right
 	<anchor 552 0> mark @bottom_right
@@ -10297,9 +10300,6 @@ lookup mark_Mark_positioning {
 	<anchor 362 -201> mark @bottom_center;
   pos base [\uni1E09.sc ] <anchor 486 -350> mark @bottom_center
 	<anchor 805 1536> mark @top_center;
-  pos base [\uni1E0B.sc ] <anchor 328 -20> mark @bottom_cedilla
-	<anchor 420 0> mark @bottom_center
-	<anchor 692 1536> mark @top_center;
   pos base [\uni1E0D.sc \uni1E13.sc ] <anchor 328 -20> mark @bottom_cedilla
 	<anchor 632 1200> mark @top_center
 	<anchor 361 -336> mark @bottom_center;
@@ -10369,9 +10369,6 @@ lookup mark_Mark_positioning {
   pos base [\uni1E69.sc ] <anchor 398 -20> mark @bottom_cedilla
 	<anchor 343 -336> mark @bottom_center
 	<anchor 676 1536> mark @top_center;
-  pos base [\uni1E6B.sc ] <anchor 456 -20> mark @bottom_cedilla
-	<anchor 460 0> mark @bottom_center
-	<anchor 732 1536> mark @top_center;
   pos base [\uni1E6D.sc \uni1E71.sc ] <anchor 456 -20> mark @bottom_cedilla
 	<anchor 672 1200> mark @top_center
 	<anchor 401 -336> mark @bottom_center;

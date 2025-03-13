@@ -10340,9 +10340,9 @@ lookup mark_Mark_positioning {
   pos base [\cdotaccent.sc ] <anchor 546 -20> mark @bottom_cedilla
 	<anchor 550 0> mark @bottom_center
 	<anchor 833 1600> mark @top_center;
-  pos base [\dcaron.sc ] <anchor 574 1640> mark @top_center
-	<anchor 454 -20> mark @bottom_cedilla
-	<anchor 574 0> mark @bottom_center;
+  pos base [\dcaron.sc ] <anchor 320 -20> mark @bottom_cedilla
+	<anchor 444 0> mark @bottom_center
+	<anchor 716 1536> mark @top_center;
   pos base [\emacron.sc ] <anchor 403 -20> mark @bottom_cedilla
 	<anchor 874 0> mark @bottom_right
 	<anchor 407 0> mark @bottom_center
@@ -10400,6 +10400,9 @@ lookup mark_Mark_positioning {
 	<anchor 668 1200> mark @top_center;
   pos base [\uni0163.sc ] <anchor 711 1200> mark @top_center
 	<anchor 450 -380> mark @bottom_center;
+  pos base [\tcaron.sc ] <anchor 495 -20> mark @bottom_cedilla
+	<anchor 499 0> mark @bottom_center
+	<anchor 771 1536> mark @top_center;
   pos base [\umacron.sc ] <anchor 511 -20> mark @bottom_cedilla
 	<anchor 1302 1200> mark @top_right
 	<anchor 719 0> mark @bottom_right

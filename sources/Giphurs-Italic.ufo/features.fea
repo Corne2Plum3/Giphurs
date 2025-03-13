@@ -10123,9 +10123,9 @@ lookup mark_Mark_positioning {
   pos base [\cacute.sc \ccircumflex.sc \cdotaccent.sc \ccaron.sc \oslashacute.sc ] <anchor 560 -20> mark @bottom_cedilla
 	<anchor 564 0> mark @bottom_center
 	<anchor 836 1536> mark @top_center;
-  pos base [\dcaron.sc ] <anchor 560 1610> mark @top_center
-	<anchor 460 -20> mark @bottom_cedilla
-	<anchor 560 0> mark @bottom_center;
+  pos base [\dcaron.sc \uni1E0B.sc ] <anchor 326 -20> mark @bottom_cedilla
+	<anchor 430 0> mark @bottom_center
+	<anchor 702 1536> mark @top_center;
   pos base [\emacron.sc ] <anchor 395 -20> mark @bottom_cedilla
 	<anchor 788 0> mark @bottom_right
 	<anchor 399 0> mark @bottom_center
@@ -10185,6 +10185,9 @@ lookup mark_Mark_positioning {
 	<anchor 629 1200> mark @top_center;
   pos base [\uni0163.sc ] <anchor 688 1200> mark @top_center
 	<anchor 432 -336> mark @bottom_center;
+  pos base [\tcaron.sc \uni1E6B.sc \uni1E97.sc ] <anchor 472 -20> mark @bottom_cedilla
+	<anchor 476 0> mark @bottom_center
+	<anchor 748 1536> mark @top_center;
   pos base [\utilde.sc ] <anchor 485 -20> mark @bottom_cedilla
 	<anchor 1180 1200> mark @top_right
 	<anchor 631 0> mark @bottom_right
@@ -10388,9 +10391,6 @@ lookup mark_Mark_positioning {
 	<anchor 392 -220> mark @bottom_center;
   pos base [\uni1E09.sc ] <anchor 520 -336> mark @bottom_center
 	<anchor 836 1536> mark @top_center;
-  pos base [\uni1E0B.sc ] <anchor 326 -20> mark @bottom_cedilla
-	<anchor 430 0> mark @bottom_center
-	<anchor 702 1536> mark @top_center;
   pos base [\uni1E0D.sc \uni1E13.sc ] <anchor 326 -20> mark @bottom_cedilla
 	<anchor 642 1200> mark @top_center
 	<anchor 371 -336> mark @bottom_center;
@@ -10463,9 +10463,6 @@ lookup mark_Mark_positioning {
   pos base [\uni1E69.sc ] <anchor 411 -20> mark @bottom_cedilla
 	<anchor 356 -336> mark @bottom_center
 	<anchor 689 1536> mark @top_center;
-  pos base [\uni1E6B.sc \uni1E97.sc ] <anchor 472 -20> mark @bottom_cedilla
-	<anchor 476 0> mark @bottom_center
-	<anchor 748 1536> mark @top_center;
   pos base [\uni1E6D.sc \uni1E71.sc ] <anchor 472 -20> mark @bottom_cedilla
 	<anchor 688 1200> mark @top_center
 	<anchor 417 -336> mark @bottom_center;
