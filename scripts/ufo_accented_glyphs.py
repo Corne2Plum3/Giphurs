@@ -103,12 +103,13 @@ def build_accented_glyph(glyph_name, ufo_dir):
         # Load anchor points
         new_component_anchors = get_glyph_anchor_points(components_list[i], ufo_dir)
 
-        # Place component
+        # Place component (and update glyph width on base)
         x_offset = 0
         y_offset = 0
         if i == 0:  # find the offset of the new component (ignore the step below for the base)
             glyph_component[components_list[i]] = (0, 0)
             base_metrics = get_glyph_metrics(components_list[i], ufo_dir)
+            xml_tree.getroot().find("advance").attrib["width"] = str(base_metrics["glyph_width"])
         else:
             # Find a matching anchor
             placed_component = False
