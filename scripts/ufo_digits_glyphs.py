@@ -354,6 +354,8 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
         if digit_2 != 0:  # dnom (hide if 0)
             if digit_2 == 10:  # 1/10
                 advance += base_1_x_metrics["left_kern"] + base_1_x_metrics["raw_width"] - FRAC_BAR_OVERLAP + base_2_x_metrics["glyph_width"]
+                if is_italic:
+                    advance -= base_1_x_metrics["right_kern"] + base_2_x_metrics["left_kern"]
                 if ss_d1 != "ss06":  # add extra kern if there isn't a bar under the digit 1
                     advance += base_2_x_metrics["left_kern"]
 
@@ -388,6 +390,7 @@ def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: 
                 if is_italic:
                     x21 -= abs(y2) / tan(pi/2-ITALIC_SLANT)
                     x22 -= abs(y2) / tan(pi/2-ITALIC_SLANT)
+                    x22 -= base_1_x_metrics["right_kern"] + base_2_x_metrics["left_kern"]
                 ET.SubElement(xml_outline, "component", {"base": base_1, "xOffset": str(x21), "yOffset": str(y2)})
                 ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(x22), "yOffset": str(y2)})
             else:
