@@ -21,20 +21,56 @@ import xml.etree.ElementTree as ET
 COMPOSITE_GLYPHS_LIST = "scripts/composite_glyphs.csv"
 COMPOSITE_GLYPHS_LIST_DELIM = ";"
 
-def build_composite_glyph(glyph_name, ufo_dir):
+def build_composite_glyph(glyph_name, ufo_dir, style=1):
     """
     Build the composite glyph `glyph_name` using its components listed from `COMPOSITE_GLYPHS_LIST`.
     
     Changes UFO .glif file of destination glyph.
 
-    Return `0` if sucess, `1` if it fails.
+    Return `0` if sucess, non-zero integer if it fails.
     """
     # Get compoents
-    glyph_data = get_composite_glyphs_components(glyph_name)
-    if glyph_data is None:
-        return 1
-    copy_anchors = bool(glyph_data[0])
-    components_list = glyph_data[1:]
+    copy_anchors = False
+    with open(COMPOSITE_GLYPHS_LIST, "r") as csv_file:
+        csv_lines = csv_file.readlines()
+        line_number = 1
+        components_list = []
+
+        # find the glyph on the list (find its index -> line_number)
+        glyph_found = False
+        while line_number < len(csv_lines) and not glyph_found:  # find the glyph on the list
+            line_glyph_name = csv_lines[line_number].split(COMPOSITE_GLYPHS_LIST_DELIM)[0]
+            line_styles = csv_lines[line_number].split(COMPOSITE_GLYPHS_LIST_DELIM)[1]
+            line_non_italic_support = bool(int(line_styles) & 1)
+            line_italic_support = bool(int(line_styles) & 2)
+            if line_glyph_name == glyph_name and ((style == 1 and line_non_italic_support) or (style == 2 and line_italic_support)):
+                glyph_found = True
+            else:
+                line_number += 1
+
+        if line_number >= len(csv_lines):  # end of file reached
+            print(f"ERROR: Glyph {glyph_name} not found on {COMPOSITE_GLYPHS_LIST} for style={style}")
+            return 1
+        
+        csv_entry = csv_lines[line_number].split(COMPOSITE_GLYPHS_LIST_DELIM)
+
+        if len(csv_entry) < 4:  # 0 components found or missing parameters
+            print(f"ERROR: Invalid entry for {glyph_name} (line {line_number+1})")
+            return 2
+
+        # Read the "Copy anchors" parameter
+        copy_anchors = bool(int(csv_entry[2]))
+
+        column_number = 3
+        while column_number < len(csv_entry):
+            cell_value = csv_entry[column_number].strip()
+            if cell_value != "":
+                components_list.append(cell_value)
+            column_number += 1
+
+        if glyph_name in components_list:  # avoid infinite recursion
+            print(f"ERROR: Glyph {glyph_name} contains itself as component (line {line_number+1})")
+            return 3
     
     # Place components
     x_cursor = 0
@@ -103,47 +139,14 @@ def copy_single_glyph(glyph_src, glyph_dst, ufo_dir, copy_anchors=True, replace_
     dst_xml_tree.write(get_glif_from_name(glyph_dst, ufo_dir), encoding='utf-8', xml_declaration=True)
     return
 
-def get_composite_glyphs_components(glyph_name):
-    """
-    Reads the list of components of glyph_name from COMPONENTS_LIST.
-
-    Returns a list containing:
-    * The first element is a boolean telling if the composite  glyph has anchors.
-    * The rest (starting from index 1) is the name of each glyph name, in order from left to right.
-    """
-
-    global COMPOSITE_GLYPHS_LIST, COMPOSITE_GLYPHS_LIST_DELIM
-
-    # Get the list of components
-    with open(COMPOSITE_GLYPHS_LIST, "r") as csv_file:
-        csv_lines = csv_file.readlines()
-        line_number = 1
-        components_list = []
-        while line_number < len(csv_lines) and csv_lines[line_number].split(COMPOSITE_GLYPHS_LIST)[0] != glyph_name:  # find the glyph on the list
-            if csv_lines[line_number].split(COMPOSITE_GLYPHS_LIST_DELIM)[0] == glyph_name:  # if found
-                row_columns = csv_lines[line_number].split(COMPOSITE_GLYPHS_LIST_DELIM)
-                column_number = 1
-                while column_number < len(row_columns):
-                    cell_value = row_columns[column_number].strip()
-                    if cell_value != "":
-                        if column_number == 1:
-                            components_list.append(int(cell_value))
-                        else:
-                            components_list.append(cell_value)
-                    column_number += 1
-                return components_list
-            
-            line_number += 1
-
-        # We're here if the glyph hasn't been found
-        return None
-
 def main():
-    if len(sys.argv) < 2:
+    if len(sys.argv) < 3:
         print(f"ERROR: {sys.argv[0]}: Not enough parameters.")
-        print(f"Usage: {sys.argv[0]} <ufo_directory> [<glyph_name>]")
+        print(f"Usage: {sys.argv[0]} <ufo_directory> <style> [<glyph_name>]")
+        print("* style: 1 = non-italic ; 2 = italic")
+        print("If a glyph name isn't provided, all composite glyphs from the font will be built.")
     else:
-        if len(sys.argv) == 2:  # no specific glyph -> do all
+        if len(sys.argv) == 3:  # no specific glyph -> do all
             # get the list of what to do
             glyphs_list = []
             with open(COMPOSITE_GLYPHS_LIST, "r") as csv_file:
@@ -156,14 +159,20 @@ def main():
             # act on each glyph
             print("Starting...")
             nb_glyphs = len(glyphs_list)
+            sucess_count = 0
             for index, glyph in enumerate(glyphs_list, start=1):
                 sys.stdout.write('\033[2K\033[1G')
                 print(f"[{index}/{nb_glyphs} ({int((index-1)/nb_glyphs*100)}%)] Working on {glyph}...", end="\r")
-                build_composite_glyph(glyph, sys.argv[1])
-            print(f"Done with {sys.argv[1]} ({len(glyphs_list)} files changed)")
+                build_status = build_composite_glyph(glyph, sys.argv[1], int(sys.argv[2]))
+                if build_status == 0:
+                    sucess_count += 1
+            print(f"Done with {sys.argv[1]} ({sucess_count}/{len(glyphs_list)} files changed)")
         else:  # single glyph
-            build_composite_glyph(sys.argv[2], sys.argv[1])
-            print(f"Done building {sys.argv[2]}")
+            build_status = build_composite_glyph(sys.argv[3], sys.argv[1], int(sys.argv[2]))
+            if build_status == 0:
+                print(f"Done building {sys.argv[3]}")
+            else:
+                print(f"Failed building {sys.argv[3]}")
 
 if __name__ == "__main__":
     main()
