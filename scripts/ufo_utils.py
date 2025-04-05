@@ -275,6 +275,38 @@ def move_glyph(glyph_name, ufo_dir, x, y, move_points=True, move_anchors=True, m
     xml_tree.write(filename, encoding="UTF-8", xml_declaration=True)
     return
 
+def move_glyph_xml(glif_xml_root, x, y, move_points=True, move_anchors=True, move_width=False):
+    """
+    Implementation of move_glyph which takes the contents of a .glif file (ElementTree).
+    
+    Does not write on the .glif, but returns the modified ElementTree object.
+    """
+    for element in glif_xml_root.findall("./*"):
+        if element.tag == "advance" and move_width:
+            element.attrib["width"] = str(int(element.attrib["width"]) + x)
+        elif element.tag == "anchor" and move_anchors:
+            element.attrib["x"] = str(int(element.attrib["x"]) + x)
+            element.attrib["y"] = str(int(element.attrib["y"]) + y)
+        elif element.tag == "outline" and move_points:
+            for outline_element in element.findall("./*"):
+                if outline_element.tag == "contour":
+                    for contour_element in outline_element.findall("./*"):
+                        if contour_element.tag == "point":
+                            contour_element.attrib["x"] = str(int(contour_element.attrib["x"]) + x)
+                            contour_element.attrib["y"] = str(int(contour_element.attrib["y"]) + y)
+                elif outline_element.tag == "component":
+                    if "xOffset" in outline_element.attrib:
+                        outline_element.attrib["xOffset"] = str(int(outline_element.attrib["xOffset"]) + x)
+                    else:
+                        outline_element.attrib["xOffset"] = str(x)
+                    if "yOffset" in outline_element.attrib:
+                        outline_element.attrib["yOffset"] = str(int(outline_element.attrib["yOffset"]) + y)
+                    else:
+                        outline_element.attrib["yOffset"] = str(y)
+        # ignore other type of elements, keeping them as is
+
+    return glif_xml_root
+
 def unlink_references(glyph_name, ufo_dir):
     """
     Replace all components of a glyph (references towards other glyphs) by points.
