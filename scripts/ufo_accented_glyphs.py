@@ -11,7 +11,7 @@ Fields on COMPONENTS_LIST:
 glyph_name, allow_left_overflow, allow_right_overflow, base, component_1, component_2, ...
 """
 
-from multiprocessing import Process, Value
+from multiprocessing import Process
 import sys
 from ufo_utils import *
 import xml.etree.ElementTree as ET
@@ -263,7 +263,7 @@ def main():
         print(f"ERROR: No glyph to build for style={style}")
         exit(2)
     
-    # Build the composite glyphs
+    # Build the accented glyphs
     print("Starting...")
     nb_glyphs = len(glyphs_list_data)
     if USE_MULTITHREADING:
@@ -283,7 +283,7 @@ def main():
         print(f"Done with {sys.argv[1]} ({nb_glyphs} files changed)", flush=True)
     else:
         print(f"Done building {glyph_name} in {sys.argv[1]} ({nb_glyphs} files changed)", flush=True)
-        pass
+
 
 def build_single_glyph(glyph_data, ufo_dir, style, index, nb_glyphs):
     """
