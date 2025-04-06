@@ -11,6 +11,7 @@ Fields on COMPONENTS_LIST:
 glyph_name, allow_left_overflow, allow_right_overflow, base, component_1, component_2, ...
 """
 
+from multiprocessing import Process
 import sys
 from ufo_utils import *
 import xml.etree.ElementTree as ET
@@ -25,8 +26,11 @@ MKMK_ANCHORS_REPLACE = {
     "mkmk_greek_top_center": "top_center"  # under special conditions replaces mkmk_top_center
 }
 
+# Performances settings
+USE_MULTITHREADING = True
 
-def build_accented_glyph(glyph_name, ufo_dir, style=1):
+
+def build_accented_glyph(glyph_name, ufo_dir, style, allow_left_overflow, allow_right_overflow, components_list):
     """
     Edit a .glif file and change generate the components.
 
@@ -36,59 +40,10 @@ def build_accented_glyph(glyph_name, ufo_dir, style=1):
     """
     global COMPONENTS_LIST, COMPONENTS_LIST_DELIM, MKMK_ANCHORS_REPLACE
 
-    # Check if style is correct
-    assert style in [1, 2]
-
     # Load file to edit
-    xml_tree = ET.parse(get_glif_from_name(glyph_name, ufo_dir))
+    glif_filename = get_glif_from_name(glyph_name, ufo_dir)
+    xml_tree = ET.parse(glif_filename)
     xml_root = xml_tree.getroot()
-
-    # Find the glyph and its components
-    components_list = []
-    allow_left_overflow = False
-    allow_right_overflow = False
-    with open(COMPONENTS_LIST, "r") as csv_file:
-        csv_lines = csv_file.readlines()
-        i = 1
-        components_list = []
-
-        # find the glyph on the list (find its index -> i)
-        glyph_found = False
-        while i < len(csv_lines) and not glyph_found:
-            line_glyph_name = csv_lines[i].split(COMPONENTS_LIST_DELIM)[0]
-            line_styles = csv_lines[i].split(COMPONENTS_LIST_DELIM)[1]
-            line_non_italic_support = bool(int(line_styles) & 1)
-            line_italic_support = bool(int(line_styles) & 2)
-            if line_glyph_name == glyph_name and ((style == 1 and line_non_italic_support) or (style == 2 and line_italic_support)):
-                glyph_found = True
-            else:
-                i += 1
-
-        if i >= len(csv_lines):  # end of file reached
-            print(f"ERROR: Glyph {glyph_name} not found on {COMPONENTS_LIST} for style={style}")
-            return 1
-
-        csv_entry = csv_lines[i].split(COMPONENTS_LIST_DELIM)
-
-        if len(csv_entry) < 5:  # 0 components found or missing parameters
-            print(f"ERROR: Invalid entry for {glyph_name} (line {i+1})")
-            return 2
-        
-        # retrieve overflow parameters
-        allow_left_overflow = bool(int(csv_entry[2].strip()))
-        allow_right_overflow = bool(int(csv_entry[3].strip()))
-
-        # retrieve the components names
-        j = 4
-        while j < len(csv_entry):
-            component = csv_entry[j].strip()
-            if component != "":
-                components_list.append(component)
-            j += 1
-
-        if glyph_name in components_list:  # avoid infinite recursion
-            print(f"ERROR: Glyph {glyph_name} contains itself as component (line {i+1})")
-            return 3
 
     # Place components and anchors and get metrics of the base (when recalculate kerning)
     glyph_component = {}  # {"component": (xOffset, yOffset)}
@@ -190,52 +145,162 @@ def build_accented_glyph(glyph_name, ufo_dir, style=1):
             ET.SubElement(xml_outline, "component", {"base": component, "xOffset": str(glyph_component[component][0]), "yOffset": str(glyph_component[component][1])})
 
     # Save the file
-    xml_tree.write(get_glif_from_name(glyph_name, ufo_dir), encoding='utf-8', xml_declaration=True)
+    xml_tree.write(glif_filename, encoding='utf-8', xml_declaration=True)
 
     # Update kern if needed
     current_glyph_metrics = get_glyph_metrics(glyph_name, ufo_dir)
     if (not allow_right_overflow) and current_glyph_metrics["x_max"] > base_metrics["glyph_width"]:
-        move_glyph(glyph_name, ufo_dir, current_glyph_metrics["x_max"] - base_metrics["glyph_width"], 0, False, False, True)
+        xml_root = move_glyph(glyph_name, ufo_dir, current_glyph_metrics["x_max"] - base_metrics["glyph_width"], 0, False, False, True)
     if (not allow_left_overflow) and current_glyph_metrics["x_min"] < 0:
-        move_glyph(glyph_name, ufo_dir, abs(current_glyph_metrics["x_min"]), 0, True, True, not allow_right_overflow)
+        xml_root = move_glyph(glyph_name, ufo_dir, abs(current_glyph_metrics["x_min"]), 0, True, True, not allow_right_overflow)
 
     #print(f"Done with {glyph_name} ({len(glyph_component)} components, {len(glyph_anchors)} anchors)")
     return 0
 
+def check_csv_entry(csv_line, glyph_name=None, style=None):
+    """
+    Read a line of COMPOSITE_GLYPHS_LIST given as a string.
+    It is possible to check if it corresponds to a specific glyph name and/or a style
+    If the line is valid and applies to the style given, then returns 0,
+    otherwise returns a non-zero value, depending on the issue.
+    """
+    csv_data = csv_line.strip().split(COMPONENTS_LIST_DELIM)
+    for i in range(len(csv_data)):  # remove whitespaces
+        csv_data[i] = csv_data[i].strip()
+
+    # Number of columns check:
+    if len(csv_data) < 5:
+        return 1  # Not enough parameters
+    
+    # Style entry check
+    csv_style_value = None
+    try:
+        csv_style_value = int(csv_data[1])
+    except:
+        return 2  # Style field is not an integer
+
+    # Self reference check (to avoid infinite recursion)
+    if csv_data[0] in csv_data[4:]:
+        return 3  # Glyph refers itself as component
+
+    # Glyph name matching check
+    if not glyph_name is None:
+        if glyph_name != csv_data[0]:
+            return 4  # Glyph name is not matching
+
+    # Style support check
+    if not style is None:
+        line_non_italic_support = bool(int(csv_style_value) & 1)
+        line_italic_support = bool(int(csv_style_value) & 2)
+        if not((style == 1 and line_non_italic_support) or (style == 2 and line_italic_support)):
+            return 5  # Unsupported style
+    
+    # All good :)
+    return 0
+
 def main():
+
+    # Read parameters
     if len(sys.argv) < 3:
         print(f"ERROR: {sys.argv[0]}: Not enough parameters.")
         print(f"Usage: {sys.argv[0]} <ufo_directory> <style> [<glyph_name>]")
         print("* style: 1 = non-italic ; 2 = italic")
         print("If a glyph name isn't provided, all accented glyphs from the font will be built")
-    else:
-        if len(sys.argv) == 3:  # no specific glyph -> do all
-            # get the list of what to do
-            glyphs_list = []
-            with open(COMPONENTS_LIST, "r") as csv_file:
-                first_line_seen = False
-                for csv_line in csv_file:
-                    if not first_line_seen:  # then this is the first line (-> skip)
-                        first_line_seen = True
-                    else:
-                        glyphs_list.append(csv_line.split(";")[0].strip())
-            # act on each glyph
-            print("Starting...")
-            nb_glyphs = len(glyphs_list)
-            success_count = 0
-            for index, glyph in enumerate(glyphs_list):
-                sys.stdout.write('\033[2K\033[1G')
-                print(f"[{index}/{nb_glyphs} ({int((index-1)/nb_glyphs*100)}%)] Working on {glyph}...", end="\r")
-                build_status = build_accented_glyph(glyph, sys.argv[1], int(sys.argv[2]))
-                if build_status == 0:
-                    success_count += 1
-            print(f"Done with {sys.argv[1]} ({success_count}/{len(glyphs_list)} files changed)")
-        else:
-            build_status = build_accented_glyph(sys.argv[3], sys.argv[1], int(sys.argv[2]))
-            if build_status == 0:
-                print(f"Done building {sys.argv[3]}")
+        return
+
+    ufo_dir = sys.argv[1]
+    style = int(sys.argv[2])
+    glyph_name = None if len(sys.argv) == 3 else sys.argv[3]
+
+    # Get the list of glyphs to do. Result is in 'glyphs_list', a 2d matrix, with each rows looking like the CSV file:
+    # [0] Glyph Name (str)
+    # [1] Supported styles (int)
+    # [2] Allow left overflow (bool)
+    # [3] Allow right overflow (bool)
+    # [4+] Components (str)
+    glyphs_list_data = []
+    with open(COMPONENTS_LIST, "r") as csv_file:
+        csv_lines = csv_file.readlines()
+        first_line_seen = False
+        for line_number, csv_line in enumerate(csv_lines, start=1):
+            if not first_line_seen:  # then this is the first line (-> skip)
+                first_line_seen = True
             else:
-                print(f"Failed building {sys.argv[3]}")
-        
+                csv_line_check = check_csv_entry(csv_line, glyph_name, style)
+                # -- Valid line
+                if csv_line_check == 0:
+                    csv_line_splitted = csv_line.strip().split(COMPONENTS_LIST_DELIM)  # all elements are strings!
+                    new_entry = []
+                    for i in range(len(csv_line_splitted)):  # remove whitespaces
+                        if not csv_line_splitted[i] == "":
+                            if i == 1:  # Styles -> int
+                                csv_line_splitted[i] = int(csv_line_splitted[i])
+                            elif i == 2 or i == 3:  # Allow left/right overflow -> bool
+                                csv_line_splitted[i] = not csv_line_splitted[i].lower() in ["", "0", "no"]
+                            new_entry.append(csv_line_splitted[i])
+                    glyphs_list_data.append(new_entry)
+                # -- Errors on the line
+                elif csv_line_check == 1:
+                    print(f"WARNING: Not enough parameters at line {line_number}, skipping.")
+                elif csv_line_check == 2:
+                    print(f"WARNING: 'Style' field isn't an integer at line {line_number}, skipping.")
+                elif csv_line_check == 3:
+                    print(f"WARNING: The glyph at line {line_number} contains itself as component, skipping.")
+                # -- The style and eventually the glyph name don't match
+                # do nothing
+    
+    # Check the possible errors before build and correct them if possible
+    # -- The glyph specified doesn't exists [FATAL]
+    if not glyph_name is None and len(glyphs_list_data) == 0:
+        print(f"ERROR: Don't know how to build {glyph_name} for style={style}")
+        exit(1)
+    # -- A specified glyph appears twice (NOT checked if building all glyphs)
+    if not glyph_name is None and len(glyphs_list_data) > 1:
+        print(f"WARNING: More than 1 recipe found for {glyph_name} for style={style}: only the first one will be used")
+        glyphs_list_data = [glyphs_list_data[0]]
+    # -- 0 glyphs to build [FATAL]
+    if len(glyphs_list_data) == 0:
+        print(f"ERROR: No glyph to build for style={style}")
+        exit(2)
+    
+    # Build the accented glyphs
+    print("Starting...")
+    nb_glyphs = len(glyphs_list_data)
+    if USE_MULTITHREADING:
+        processes = [Process(target=build_single_glyph, args=(glyphs_list_data[i], ufo_dir, style, i, nb_glyphs)) for i in range(nb_glyphs)]
+        # start all processes
+        for process in processes:
+            process.start()
+        # wait for all processes to complete
+        for process in processes:
+            process.join()
+    else:  # single thread (recommended for debug)
+        for i in range(nb_glyphs):
+            build_single_glyph(glyphs_list_data[i], ufo_dir, style, i, nb_glyphs)
+
+    # End message
+    if glyph_name is None:
+        print(f"Done with {sys.argv[1]} ({nb_glyphs} files changed)", flush=True)
+    else:
+        print(f"Done building {glyph_name} in {sys.argv[1]} ({nb_glyphs} files changed)", flush=True)
+
+
+def build_single_glyph(glyph_data, ufo_dir, style, index, nb_glyphs):
+    """
+    Sub-process of main() supposed to work in parallel which read a line of glyph_list.
+    Ne retourne rien.
+    """
+
+    current_glyph_name = glyph_data[0]
+    current_glyph_left_overflow = glyph_data[2]
+    current_glyph_right_overflow = glyph_data[3]
+    current_glyph_components = glyph_data[4:]
+
+    sys.stdout.write('\033[2K\033[1G')
+    print(f"[{index+1}/{nb_glyphs} ({int((index+1)/nb_glyphs*100)}%)] Working on {current_glyph_name}...", end="\r")
+
+    build_accented_glyph(current_glyph_name, ufo_dir, style, current_glyph_left_overflow, current_glyph_right_overflow, current_glyph_components)
+
+
 if __name__ == "__main__":
     main()
