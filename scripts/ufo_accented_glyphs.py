@@ -37,8 +37,7 @@ def build_accented_glyph(glyph_name, ufo_dir, style, allow_left_overflow, allow_
     global COMPONENTS_LIST, COMPONENTS_LIST_DELIM, MKMK_ANCHORS_REPLACE
 
     # Load file to edit
-    glif_filename = get_glif_from_name(glyph_name, ufo_dir)
-    xml_tree = ET.parse(glif_filename)
+    xml_tree = ET.parse(get_glif_from_name(glyph_name, ufo_dir))
     xml_root = xml_tree.getroot()
 
     # Place components and anchors and get metrics of the base (when recalculate kerning)
@@ -140,15 +139,15 @@ def build_accented_glyph(glyph_name, ufo_dir, style, allow_left_overflow, allow_
         else:
             ET.SubElement(xml_outline, "component", {"base": component, "xOffset": str(glyph_component[component][0]), "yOffset": str(glyph_component[component][1])})
 
+    # Save the file
+    xml_tree.write(get_glif_from_name(glyph_name, ufo_dir), encoding='utf-8', xml_declaration=True)
+
     # Update kern if needed
     current_glyph_metrics = get_glyph_metrics(glyph_name, ufo_dir)
     if (not allow_right_overflow) and current_glyph_metrics["x_max"] > base_metrics["glyph_width"]:
-        xml_root = move_glyph_xml(xml_root, current_glyph_metrics["x_max"] - base_metrics["glyph_width"], 0, False, False, True)
+        move_glyph(glyph_name, ufo_dir, current_glyph_metrics["x_max"] - base_metrics["glyph_width"], 0, False, False, True)
     if (not allow_left_overflow) and current_glyph_metrics["x_min"] < 0:
-        xml_root = move_glyph_xml(xml_root, ufo_dir, abs(current_glyph_metrics["x_min"]), 0, True, True, not allow_right_overflow)
-
-    # Save the file
-    xml_tree.write(glif_filename, encoding='utf-8', xml_declaration=True)
+        move_glyph(glyph_name, ufo_dir, abs(current_glyph_metrics["x_min"]), 0, True, True, not allow_right_overflow)
 
     #print(f"Done with {glyph_name} ({len(glyph_component)} components, {len(glyph_anchors)} anchors)")
     return 0
