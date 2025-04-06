@@ -11,6 +11,7 @@ specified, it will act on all glyphs listed by `COMPOSITE_GLYPHS_LIST`
 Usage: python3 PATH_TO_THIS_SCRIPT <ufo_directory> [<glyph_name>]
 """
 
+from multiprocessing import Process
 import sys
 from ufo_utils import *
 import xml.etree.ElementTree as ET
@@ -20,6 +21,9 @@ import xml.etree.ElementTree as ET
 # WARNING: First line is ignored
 COMPOSITE_GLYPHS_LIST = "scripts/composite_glyphs.csv"
 COMPOSITE_GLYPHS_LIST_DELIM = ";"
+
+# Performances settings
+USE_MULTITHREADING = True
 
 def build_composite_glyph(glyph_name, ufo_dir, style, copy_anchors, components_list):
     """
@@ -206,24 +210,38 @@ def main():
     # Build the composite glyphs
     print("Starting...")
     nb_glyphs = len(glyphs_list_data)
-    sucess_count = 0
-    for index, glyph_data in enumerate(glyphs_list_data, start=0):
-        current_glyph_name = glyph_data[0]
-        current_glyph_copy_anchors = glyph_data[2]
-        current_glyph_components = glyph_data[3:]
-
-        sys.stdout.write('\033[2K\033[1G')
-        print(f"[{index}/{nb_glyphs} ({int((index-1)/nb_glyphs*100)}%)] Working on {current_glyph_name}...", end="\r")
-
-        build_status = build_composite_glyph(current_glyph_name, ufo_dir, style, current_glyph_copy_anchors, current_glyph_components)
-        if build_status == 0:
-            sucess_count += 1
+    if USE_MULTITHREADING:
+        processes = [Process(target=build_single_glyph, args=(glyphs_list_data[i], ufo_dir, style, i, nb_glyphs)) for i in range(nb_glyphs)]
+        # start all processes
+        for process in processes:
+            process.start()
+        # wait for all processes to complete
+        for process in processes:
+            process.join()
+    else:  # single thread (recommended for debug)
+        for i in range(nb_glyphs):
+            build_single_glyph(glyphs_list_data[i], ufo_dir, style, i, nb_glyphs)
 
     # End message
     if glyph_name is None:
-        print(f"Done with {sys.argv[1]} ({sucess_count}/{nb_glyphs} files changed)")
+        print(f"Done with {sys.argv[1]} ({nb_glyphs} files changed)", flush=True)
     else:
-        print(f"Done building {glyph_name} in {sys.argv[1]} ({sucess_count}/{nb_glyphs} files changed)")
+        print(f"Done building {glyph_name} in {sys.argv[1]} ({nb_glyphs} files changed)", flush=True)
+        
+def build_single_glyph(glyph_data, ufo_dir, style, index, nb_glyphs):
+    """
+    Sub-process of main() supposed to work in parallel which read a line of glyph_list.
+    Ne retourne rien.
+    """
+    current_glyph_name = glyph_data[0]
+    current_glyph_copy_anchors = glyph_data[2]
+    current_glyph_components = glyph_data[3:]
+
+    sys.stdout.write('\033[2K\033[1G')
+    print(f"[{index+1}/{nb_glyphs} ({int((index+1)/nb_glyphs*100)}%)] Working on {current_glyph_name}...", end="\r")
+
+    build_composite_glyph(current_glyph_name, ufo_dir, style, current_glyph_copy_anchors, current_glyph_components)
+
 
 if __name__ == "__main__":
     main()
