@@ -11,6 +11,7 @@ Fields on COMPONENTS_LIST:
 glyph_name, allow_left_overflow, allow_right_overflow, base, component_1, component_2, ...
 """
 
+from multiprocessing import Process, Value
 import sys
 from ufo_utils import *
 import xml.etree.ElementTree as ET
@@ -25,6 +26,9 @@ MKMK_ANCHORS_REPLACE = {
     "mkmk_greek_top_center": "top_center"  # under special conditions replaces mkmk_top_center
 }
 
+# Performances settings
+USE_MULTITHREADING = True
+
 
 def build_accented_glyph(glyph_name, ufo_dir, style, allow_left_overflow, allow_right_overflow, components_list):
     """
@@ -37,7 +41,8 @@ def build_accented_glyph(glyph_name, ufo_dir, style, allow_left_overflow, allow_
     global COMPONENTS_LIST, COMPONENTS_LIST_DELIM, MKMK_ANCHORS_REPLACE
 
     # Load file to edit
-    xml_tree = ET.parse(get_glif_from_name(glyph_name, ufo_dir))
+    glif_filename = get_glif_from_name(glyph_name, ufo_dir)
+    xml_tree = ET.parse(glif_filename)
     xml_root = xml_tree.getroot()
 
     # Place components and anchors and get metrics of the base (when recalculate kerning)
@@ -140,14 +145,14 @@ def build_accented_glyph(glyph_name, ufo_dir, style, allow_left_overflow, allow_
             ET.SubElement(xml_outline, "component", {"base": component, "xOffset": str(glyph_component[component][0]), "yOffset": str(glyph_component[component][1])})
 
     # Save the file
-    xml_tree.write(get_glif_from_name(glyph_name, ufo_dir), encoding='utf-8', xml_declaration=True)
+    xml_tree.write(glif_filename, encoding='utf-8', xml_declaration=True)
 
     # Update kern if needed
     current_glyph_metrics = get_glyph_metrics(glyph_name, ufo_dir)
     if (not allow_right_overflow) and current_glyph_metrics["x_max"] > base_metrics["glyph_width"]:
-        move_glyph(glyph_name, ufo_dir, current_glyph_metrics["x_max"] - base_metrics["glyph_width"], 0, False, False, True)
+        xml_root = move_glyph(glyph_name, ufo_dir, current_glyph_metrics["x_max"] - base_metrics["glyph_width"], 0, False, False, True)
     if (not allow_left_overflow) and current_glyph_metrics["x_min"] < 0:
-        move_glyph(glyph_name, ufo_dir, abs(current_glyph_metrics["x_min"]), 0, True, True, not allow_right_overflow)
+        xml_root = move_glyph(glyph_name, ufo_dir, abs(current_glyph_metrics["x_min"]), 0, True, True, not allow_right_overflow)
 
     #print(f"Done with {glyph_name} ({len(glyph_component)} components, {len(glyph_anchors)} anchors)")
     return 0
@@ -194,6 +199,7 @@ def check_csv_entry(csv_line, glyph_name=None, style=None):
     return 0
 
 def main():
+
     # Read parameters
     if len(sys.argv) < 3:
         print(f"ERROR: {sys.argv[0]}: Not enough parameters.")
@@ -260,26 +266,41 @@ def main():
     # Build the composite glyphs
     print("Starting...")
     nb_glyphs = len(glyphs_list_data)
-    sucess_count = 0
-    for index, glyph_data in enumerate(glyphs_list_data, start=0):
-        current_glyph_name = glyph_data[0]
-        current_glyph_left_overflow = glyph_data[2]
-        current_glyph_right_overflow = glyph_data[3]
-        current_glyph_components = glyph_data[4:]
-
-        sys.stdout.write('\033[2K\033[1G')
-        print(f"[{index}/{nb_glyphs} ({int((index-1)/nb_glyphs*100)}%)] Working on {current_glyph_name}...", end="\r")
-
-        build_status = build_accented_glyph(current_glyph_name, ufo_dir, style, current_glyph_left_overflow, current_glyph_right_overflow, current_glyph_components)
-        if build_status == 0:
-            sucess_count += 1
+    if USE_MULTITHREADING:
+        processes = [Process(target=build_single_glyph, args=(glyphs_list_data[i], ufo_dir, style, i, nb_glyphs)) for i in range(nb_glyphs)]
+        # start all processes
+        for process in processes:
+            process.start()
+        # wait for all processes to complete
+        for process in processes:
+            process.join()
+    else:  # single thread (recommended for debug)
+        for i in range(nb_glyphs):
+            build_single_glyph(glyphs_list_data[i], ufo_dir, style, i, nb_glyphs)
 
     # End message
     if glyph_name is None:
-        print(f"Done with {sys.argv[1]} ({sucess_count}/{nb_glyphs} files changed)")
+        print(f"Done with {sys.argv[1]} ({nb_glyphs} files changed)", flush=True)
     else:
-        print(f"Done building {glyph_name} in {sys.argv[1]} ({sucess_count}/{nb_glyphs} files changed)")
+        print(f"Done building {glyph_name} in {sys.argv[1]} ({nb_glyphs} files changed)", flush=True)
+        pass
 
-        
+def build_single_glyph(glyph_data, ufo_dir, style, index, nb_glyphs):
+    """
+    Sub-process of main() supposed to work in parallel which read a line of glyph_list.
+    Ne retourne rien.
+    """
+
+    current_glyph_name = glyph_data[0]
+    current_glyph_left_overflow = glyph_data[2]
+    current_glyph_right_overflow = glyph_data[3]
+    current_glyph_components = glyph_data[4:]
+
+    sys.stdout.write('\033[2K\033[1G')
+    print(f"[{index+1}/{nb_glyphs} ({int((index+1)/nb_glyphs*100)}%)] Working on {current_glyph_name}...", end="\r")
+
+    build_accented_glyph(current_glyph_name, ufo_dir, style, current_glyph_left_overflow, current_glyph_right_overflow, current_glyph_components)
+
+
 if __name__ == "__main__":
     main()
