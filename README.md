@@ -4,9 +4,7 @@
 	<a href="https://github.com/Corne2Plum3/Giphurs/stargazers"><img src="https://img.shields.io/github/stars/Corne2Plum3/Giphurs?style=flat-square" alt="Stargazers" /></a>
 	<a href="https://github.com/Corne2Plum3/Giphurs/releases"><img src="https://img.shields.io/github/downloads/Corne2Plum3/Giphurs/total?style=flat-square" alt="All releases" /></a>
 	<a href="https://github.com/Corne2Plum3/Giphurs/releases/latest"><img src="https://img.shields.io/github/downloads/Corne2Plum3/Giphurs/latest/total?style=flat-square" alt="Latest release" /></a>
-	<a href="https://github.com/Corne2Plum3/Giphurs/releases/tag/v1.9.9"><img src="https://img.shields.io/github/downloads/corne2plum3/Giphurs/v1.9.9/total?style=flat-square" alt="Pre-release" /></a>
 	<a href="https://github.com/Corne2Plum3/Giphurs/releases/latest"><img src="https://img.shields.io/github/v/release/Corne2Plum3/Giphurs?style=flat-square" alt="" /></a>
-	<a href="https://github.com/Corne2Plum3/Giphurs/releases/tag/v1.9.9"><img src="https://img.shields.io/github/v/release/corne2plum3/Giphurs?style=flat-square&include_prereleases&color=%23ff8800&label=pre-release" alt="Pre-release" /></a>
 	<a href="./output/fontbakery/fontbakery-report.html"><img src="./output/badges/overall.svg" alt=""></a>
 </p>
 
@@ -45,10 +43,8 @@ Go in [releases](https://github.com/Corne2Plum3/Giphurs/releases) page and pick 
 
 You also have "SC" versions of the font (currently available for all weights except 1000) which uses small caps instead of lowercase characters.
 
-You can choose between 2 versions:
-
-* The latest stable version: [1.2.2](https://github.com/Corne2Plum3/Giphurs/releases/tag/v1.2.2)
-* An experimental/preview of 2.0, featuring *italics*: [1.9.9](https://github.com/Corne2Plum3/Giphurs/releases/tag/v1.9.9) (not recommended for production)
+> [!WARNING]
+> If you downloaded the font before April 7th 2025 (before version 2.0.0), please redownload the font. A lot of bugs, some severe, have been found in previous versions which had been fixed.
 
 # Build the fonts
 
