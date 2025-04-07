@@ -4291,6 +4291,9 @@ lookup locl_BGR {
     sub \uni0436 by \uni0436.loclBGR ;
     sub \uni0434 by \uni0434.loclBGR ;
     sub \uni045D by \uni045D.loclBGR ;
+    sub \uni0434.sc by \uni0434.sc.loclBGR ;
+    sub \uni043B.sc by \uni043B.sc.loclBGR ;
+    sub \uni0444.sc by \uni0444.sc.loclBGR ;
 } locl_BGR;
 
 lookup locl_MKD {
@@ -4481,8 +4484,8 @@ lookup ccmp_latn {
     sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
-    sub \i \uni0307  by \idieresis;
     sub \i \uni0308  by \idieresis;
+    sub \i \uni0307  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
@@ -4541,8 +4544,8 @@ lookup ccmp_latn {
     sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \i \uni0328  by \iogonek;
     sub \iogonek \gravecomb  by \iogonek;
+    sub \i \uni0328  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4631,13 +4634,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \A \uni030A \acutecomb  by \uni01DC;
-    sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni0308 \uni0304  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \Oslash \acutecomb  by \uni01E0;
+    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5592,8 +5595,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0456 \uni0307  by \uni0457;
+    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -10269,7 +10272,7 @@ lookup mark_Mark_positioning {
 	<anchor 587 1792> mark @top_center;
   pos base [\upsilondieresistonos.sc \uni1FE2.sc \uni1FE3.sc ] <anchor 458 0> mark @bottom_center
 	<anchor 776 1792> mark @top_center;
-  pos base [\lambda.sc ] <anchor 913 0> mark @bottom_right
+  pos base [\lambda.sc \uni043B.sc.loclBGR ] <anchor 913 0> mark @bottom_right
 	<anchor 452 0> mark @bottom_center
 	<anchor 664 1200> mark @top_center;
   pos base [\phi.sc ] <anchor 457 0> mark @bottom_right
@@ -10734,6 +10737,10 @@ lookup mark_Mark_positioning {
 	<anchor 631 0> mark @bottom_center;
   pos base [\uni0433.loclMKD ] <anchor 367 0> mark @bottom_center
 	<anchor 610 1376> mark @top_center;
+  pos base [\uni0434.sc.loclBGR ] <anchor 498 0> mark @bottom_center
+	<anchor 710 1200> mark @top_center;
+  pos base [\uni0444.sc.loclBGR ] <anchor 752 1240> mark @top_center
+	<anchor 526 -40> mark @bottom_center;
 } mark_Mark_positioning;
 
 lookup mkmk_mark_to_mark_top_center {
@@ -12041,7 +12048,8 @@ feature mkmk {
 	\uni045D.loclBGR \uni043A.loclBGR \uni043B.loclBGR \uni043F.loclBGR 
 	\uni0442.loclBGR \uni0446.loclBGR \uni0448.loclBGR \uni0449.loclBGR 
 	\uni044E.loclBGR \uni0431.loclSRB \uni0433.loclSRB \uni0434.loclSRB 
-	\uni043F.loclSRB \uni0442.loclSRB \uni0433.loclMKD ];
+	\uni043F.loclSRB \uni0442.loclSRB \uni0433.loclMKD \uni0434.sc.loclBGR 
+	\uni043B.sc.loclBGR \uni0444.sc.loclBGR ];
 @GDEF_Ligature = [\i \j \igrave \iacute \icircumflex \idieresis \dotlessi \itilde 
 	\imacron \ibreve \iogonek \jcircumflex \uni01D0 \uni0209 \uni020B \uni0249 
 	\uni0457 \uni1EC9 \arrowright \arrowleft \arrowboth \arrowdblright 
