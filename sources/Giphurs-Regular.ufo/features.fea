@@ -6958,9 +6958,6 @@ feature locl {
 
  script cyrl;
      language dflt ;
-      lookup locl_BGR;
-      lookup locl_MKD;
-      lookup locl_SRB;
      language BGR  exclude_dflt;
       lookup locl_BGR;
      language MKD  exclude_dflt;
