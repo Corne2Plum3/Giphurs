@@ -8688,7 +8688,7 @@ lookup mark_Mark_positioning {
 	<anchor 73 0> mark @bottom_center;
   pos base [\P \Rho \uni0420 \uni1FEC ] <anchor 73 0> mark @bottom_center
 	<anchor 696 1380> mark @top_center;
-  pos base [\N \K \uni01B2 \Kappa \Nu \Pi \uni041A \uni041F \uni0418 \uni0426 \uni043A \uni212A ] <anchor 785 1380> mark @top_center
+  pos base [\N \K \uni01B2 \Kappa \Nu \Pi \uni041A \uni041F \uni0418 \uni0426 \uni212A ] <anchor 785 1380> mark @top_center
 	<anchor 542 0> mark @bottom_center;
   pos base [\L \uni216C ] <anchor 316 1380> mark @top_center
 	<anchor 458 0> mark @bottom_center;
@@ -8900,7 +8900,7 @@ lookup mark_Mark_positioning {
 	<anchor 376 1716> mark @top_center;
   pos base [\lacute ] <anchor 182 0> mark @bottom_center
 	<anchor 376 1716> mark @top_center;
-  pos base [\Nacute \Ncaron \uni01E8 \uni01F8 \uni040C \uni040D \uni0419 \uni045C \uni04E2 \uni1E30 \uni1E44 ] <anchor 542 0> mark @bottom_center
+  pos base [\Nacute \Ncaron \uni01E8 \uni01F8 \uni040C \uni040D \uni0419 \uni04E2 \uni1E30 \uni1E44 ] <anchor 542 0> mark @bottom_center
 	<anchor 845 1716> mark @top_center;
   pos base [\Racute \Rcaron \uni0210 \uni0212 \uni1E58 ] <anchor 453 0> mark @bottom_center
 	<anchor 756 1716> mark @top_center;
@@ -8977,7 +8977,7 @@ lookup mark_Mark_positioning {
 	<anchor 383 -395> mark @bottom_center;
   pos base [\rcommaaccent ] <anchor 528 1040> mark @top_center
 	<anchor 6 -395> mark @bottom_center;
-  pos base [\kgreenlandic \kappa ] <anchor 610 1040> mark @top_center
+  pos base [\kgreenlandic \kappa \uni043A ] <anchor 610 1040> mark @top_center
 	<anchor 427 0> mark @bottom_center;
   pos base [\longs ] <anchor 72 0> mark @bottom_center
 	<anchor 457 1380> mark @top_center;
@@ -9324,6 +9324,8 @@ lookup mark_Mark_positioning {
 	<anchor 452 0> mark @bottom_center;
   pos base [\uni0453 ] <anchor 358 0> mark @bottom_center
 	<anchor 601 1376> mark @top_center;
+  pos base [\uni045C ] <anchor 427 0> mark @bottom_center
+	<anchor 670 1376> mark @top_center;
   pos base [\uni0474 ] <anchor 808 1380> mark @top_center
 	<anchor 525 0> mark @bottom_center;
   pos base [\uni0475 ] <anchor 618 1040> mark @top_center

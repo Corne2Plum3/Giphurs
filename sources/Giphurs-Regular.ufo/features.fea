@@ -6957,7 +6957,6 @@ feature liga {
 feature locl {
 
  script cyrl;
-     language dflt ;
      language BGR  exclude_dflt;
       lookup locl_BGR;
      language MKD  exclude_dflt;
@@ -8643,7 +8642,7 @@ lookup mark_Mark_positioning {
 	<anchor 235 0> mark @bottom_center;
   pos base [\P \Rho \uni0420 ] <anchor 235 0> mark @bottom_center
 	<anchor 598 1380> mark @top_center;
-  pos base [\N \K \uni01B2 \Kappa \Nu \Pi \Psi \uni041A \uni041F \uni0418 \uni0426 \uni043A \uni0470 \uni212A \uniA78D ] <anchor 699 1380> mark @top_center
+  pos base [\N \K \uni01B2 \Kappa \Nu \Pi \Psi \uni041A \uni041F \uni0418 \uni0426 \uni0470 \uni212A \uniA78D ] <anchor 699 1380> mark @top_center
 	<anchor 699 0> mark @bottom_center;
   pos base [\L \uni216C ] <anchor 235 1380> mark @top_center
 	<anchor 604 0> mark @bottom_center;
@@ -8711,7 +8710,7 @@ lookup mark_Mark_positioning {
 	<anchor 498 0> mark @bottom_right
 	<anchor 403 0> mark @bottom_center
 	<anchor 403 1716> mark @top_center;
-  pos base [\Ntilde \Nacute \Ncaron \uni01E8 \uni01F8 \uni040C \uni040D \uni0419 \uni045C \uni04E4 \uni1E30 \uni1E44 ] <anchor 699 1716> mark @top_center
+  pos base [\Ntilde \Nacute \Ncaron \uni01E8 \uni01F8 \uni040C \uni040D \uni0419 \uni04E4 \uni1E30 \uni1E44 ] <anchor 699 1716> mark @top_center
 	<anchor 699 0> mark @bottom_center;
   pos base [\Ograve \Oacute \Ocircumflex \Otilde \Odieresis \Obreve \Ohungarumlaut \uni01D1 \uni022E \uni020C \uni020E \uni04E6 \uni1ED0 \uni1ED2 \uni1ED4 ] <anchor 801 -20> mark @bottom_cedilla
 	<anchor 968 0> mark @bottom_right
@@ -8927,7 +8926,7 @@ lookup mark_Mark_positioning {
 	<anchor 598 -409> mark @bottom_center;
   pos base [\rcommaaccent ] <anchor 488 1040> mark @top_center
 	<anchor 230 -409> mark @bottom_center;
-  pos base [\kgreenlandic \kappa ] <anchor 554 0> mark @bottom_center
+  pos base [\kgreenlandic \kappa \uni043A ] <anchor 554 0> mark @bottom_center
 	<anchor 554 1040> mark @top_center;
   pos base [\longs ] <anchor 390 1400> mark @top_center
 	<anchor 230 0> mark @bottom_center;
@@ -9294,6 +9293,8 @@ lookup mark_Mark_positioning {
 	<anchor 684 1040> mark @top_center;
   pos base [\uni0453 ] <anchor 490 0> mark @bottom_center
 	<anchor 490 1376> mark @top_center;
+  pos base [\uni045C ] <anchor 554 0> mark @bottom_center
+	<anchor 554 1376> mark @top_center;
   pos base [\uni0474 ] <anchor 723 1400> mark @top_center
 	<anchor 678 0> mark @bottom_center;
   pos base [\uni0475 ] <anchor 575 1040> mark @top_center

@@ -8685,7 +8685,7 @@ lookup mark_Mark_positioning {
 	<anchor 203 0> mark @bottom_center;
   pos base [\P \Rho \uni0420 ] <anchor 203 0> mark @bottom_center
 	<anchor 583 1380> mark @top_center;
-  pos base [\N \K \uni01B2 \Kappa \Nu \Pi \uni041A \uni041F \uni0418 \uni0426 \uni043A \uni212A ] <anchor 672 1380> mark @top_center
+  pos base [\N \K \uni01B2 \Kappa \Nu \Pi \uni041A \uni041F \uni0418 \uni0426 \uni212A ] <anchor 672 1380> mark @top_center
 	<anchor 672 0> mark @bottom_center;
   pos base [\L \uni216C ] <anchor 203 1380> mark @top_center
 	<anchor 588 0> mark @bottom_center;
@@ -8753,7 +8753,7 @@ lookup mark_Mark_positioning {
 	<anchor 435 0> mark @bottom_right
 	<anchor 411 0> mark @bottom_center
 	<anchor 411 1716> mark @top_center;
-  pos base [\Ntilde \Nacute \Ncaron \uni01E8 \uni01F8 \uni040C \uni040D \uni0419 \uni045C \uni04E2 \uni04E4 \uni1E30 \uni1E44 ] <anchor 672 1716> mark @top_center
+  pos base [\Ntilde \Nacute \Ncaron \uni01E8 \uni01F8 \uni040C \uni040D \uni0419 \uni04E2 \uni04E4 \uni1E30 \uni1E44 ] <anchor 672 1716> mark @top_center
 	<anchor 672 0> mark @bottom_center;
   pos base [\Ograve \Oacute \Ocircumflex \Otilde \Odieresis \Omacron \Obreve \Ohungarumlaut \uni01D1 \uni022E \uni020C \uni020E \uni04E6 \uni1ED0 \uni1ED2 \uni1ED4 ] <anchor 757 -20> mark @bottom_cedilla
 	<anchor 863 0> mark @bottom_right
@@ -8923,7 +8923,7 @@ lookup mark_Mark_positioning {
 	<anchor 583 -395> mark @bottom_center;
   pos base [\rcommaaccent ] <anchor 475 1040> mark @top_center
 	<anchor 206 -395> mark @bottom_center;
-  pos base [\kgreenlandic \kappa ] <anchor 557 1040> mark @top_center
+  pos base [\kgreenlandic \kappa \uni043A ] <anchor 557 1040> mark @top_center
 	<anchor 557 0> mark @bottom_center;
   pos base [\longs ] <anchor 202 0> mark @bottom_center
 	<anchor 344 1380> mark @top_center;
@@ -9268,6 +9268,8 @@ lookup mark_Mark_positioning {
 	<anchor 582 0> mark @bottom_center;
   pos base [\uni0453 ] <anchor 488 0> mark @bottom_center
 	<anchor 488 1376> mark @top_center;
+  pos base [\uni045C ] <anchor 557 0> mark @bottom_center
+	<anchor 557 1376> mark @top_center;
   pos base [\uni0474 ] <anchor 695 1380> mark @top_center
 	<anchor 655 0> mark @bottom_center;
   pos base [\uni0475 ] <anchor 565 1040> mark @top_center
