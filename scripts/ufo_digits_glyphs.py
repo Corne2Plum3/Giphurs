@@ -29,7 +29,7 @@ from ufo_utils import *
 import xml.etree.ElementTree as ET
 
 # Performances settings
-USE_MULTITHREADING = True
+USE_MULTITHREADING = False
 
 # Script constants
 
@@ -754,18 +754,23 @@ def build_single_glyph(glyph_name, weight, is_italic, ufo_dir, index, nb_glyphs)
     elif base_name in FRACTIONS_UNICODE:
         build_fraction(glyph_name, weight, is_italic, ufo_dir)
     # from this point we're sure the glyph name starts by "uniXXXX"
-    elif int(base_name[3:], 16) in CIRCLED_UNICODE:
-        build_circled_number(glyph_name, weight, is_italic, ufo_dir, "circle")
-    elif int(base_name[3:], 16) in BLACK_CIRCLE_UNICODE:
-        build_circled_number(glyph_name, weight, is_italic, ufo_dir, "black_circle")
-    elif int(base_name[3:], 16) in DOUBLE_CIRCLE_UNICODE:
-        build_circled_number(glyph_name, weight, is_italic, ufo_dir, "double_circle")
-    elif int(base_name[3:], 16) in PARENTHESIZED_UNICODE:
-        build_parenthesized_number(glyph_name, weight, is_italic, ufo_dir)
-    elif int(base_name[3:], 16) in FULL_STOP_UNICODE:
-        build_full_stop_number(glyph_name, weight, is_italic, ufo_dir)
-    else:
+    try:
+        int(base_name[3:], 16)
+    except:
         print(f"{sys.argv[0]}: I don't know how to build {glyph_name}")
+    else:
+        if int(base_name[3:], 16) in CIRCLED_UNICODE:
+            build_circled_number(glyph_name, weight, is_italic, ufo_dir, "circle")
+        elif int(base_name[3:], 16) in BLACK_CIRCLE_UNICODE:
+            build_circled_number(glyph_name, weight, is_italic, ufo_dir, "black_circle")
+        elif int(base_name[3:], 16) in DOUBLE_CIRCLE_UNICODE:
+            build_circled_number(glyph_name, weight, is_italic, ufo_dir, "double_circle")
+        elif int(base_name[3:], 16) in PARENTHESIZED_UNICODE:
+            build_parenthesized_number(glyph_name, weight, is_italic, ufo_dir)
+        elif int(base_name[3:], 16) in FULL_STOP_UNICODE:
+            build_full_stop_number(glyph_name, weight, is_italic, ufo_dir)
+        else:
+            print(f"{sys.argv[0]}: I don't know how to build {glyph_name}")
 
     return
 
