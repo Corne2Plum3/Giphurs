@@ -23,9 +23,15 @@ be used to apply an offset on glyphs.
 """
 
 from math import pi, tan
+from multiprocessing import Process
 import sys
 from ufo_utils import *
 import xml.etree.ElementTree as ET
+
+# Performances settings
+USE_MULTITHREADING = True
+
+# Script constants
 
 DIGITS_NAMES_ENGLISH = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 
@@ -710,32 +716,56 @@ def main():
         glyph_list = get_glyph_list()
 
     # Generate each glyphs
-    for index, glyph_name in enumerate(glyph_list, start=1):
-        print(f"[{index}/{len(glyph_list)}] Building {glyph_name}...")  # temporary display btw
-        base_name = glyph_name.split(".")[0]
-        if ".superior" in glyph_name:
-            build_small_digit(glyph_name, weight, is_italic, ufo_dir, "superior")
-        elif ".subscript" in glyph_name:
-            build_small_digit(glyph_name, weight, is_italic, ufo_dir, "subscript")
-        elif ".numr" in glyph_name:
-            build_small_digit(glyph_name, weight, is_italic, ufo_dir, "numr")
-        elif ".dnom" in glyph_name:
-            build_small_digit(glyph_name, weight, is_italic, ufo_dir, "dnom")
-        elif base_name in FRACTIONS_UNICODE:
-            build_fraction(glyph_name, weight, is_italic, ufo_dir)
-        # from this point we're sure the glyph name starts by "uniXXXX"
-        elif int(base_name[3:], 16) in CIRCLED_UNICODE:
-            build_circled_number(glyph_name, weight, is_italic, ufo_dir, "circle")
-        elif int(base_name[3:], 16) in BLACK_CIRCLE_UNICODE:
-            build_circled_number(glyph_name, weight, is_italic, ufo_dir, "black_circle")
-        elif int(base_name[3:], 16) in DOUBLE_CIRCLE_UNICODE:
-            build_circled_number(glyph_name, weight, is_italic, ufo_dir, "double_circle")
-        elif int(base_name[3:], 16) in PARENTHESIZED_UNICODE:
-            build_parenthesized_number(glyph_name, weight, is_italic, ufo_dir)
-        elif int(base_name[3:], 16) in FULL_STOP_UNICODE:
-            build_full_stop_number(glyph_name, weight, is_italic, ufo_dir)
-        else:
-            print(f"{sys.argv[0]}: I don't know how to build {glyph_name}")
+    nb_glyphs = len(glyph_list)
+    if USE_MULTITHREADING:
+        processes = [ Process(target=build_single_glyph, args=(glyph_list[i], weight, is_italic, ufo_dir, i, nb_glyphs)) for i in range(nb_glyphs) ]
+        # start all processes
+        for process in processes:
+            process.start()
+        # wait for all processes to complete
+        for process in processes:
+            process.join()
+    else:  # single thread (recommended for debug)
+        for index, glyph_name in enumerate(glyph_list, start=1):
+            build_single_glyph(glyph_name, weight, is_italic, ufo_dir, index, nb_glyphs)
+
+def build_single_glyph(glyph_name, weight, is_italic, ufo_dir, index, nb_glyphs):
+    """
+    Sub-process of main() supposed to work in parallel which read a line of glyph_list.
+    Returns nothing.
+    """
+
+    # Display
+    sys.stdout.write('\033[2K\033[1G')
+    print(f"[{index+1}/{nb_glyphs} ({int((index+1)/nb_glyphs*100)}%)] Working on {glyph_name}...", end="\r")
+
+    # Create the glyph
+    base_name = glyph_name.split(".")[0]
+    if ".superior" in glyph_name:
+        build_small_digit(glyph_name, weight, is_italic, ufo_dir, "superior")
+    elif ".subscript" in glyph_name:
+        build_small_digit(glyph_name, weight, is_italic, ufo_dir, "subscript")
+    elif ".numr" in glyph_name:
+        build_small_digit(glyph_name, weight, is_italic, ufo_dir, "numr")
+    elif ".dnom" in glyph_name:
+        build_small_digit(glyph_name, weight, is_italic, ufo_dir, "dnom")
+    elif base_name in FRACTIONS_UNICODE:
+        build_fraction(glyph_name, weight, is_italic, ufo_dir)
+    # from this point we're sure the glyph name starts by "uniXXXX"
+    elif int(base_name[3:], 16) in CIRCLED_UNICODE:
+        build_circled_number(glyph_name, weight, is_italic, ufo_dir, "circle")
+    elif int(base_name[3:], 16) in BLACK_CIRCLE_UNICODE:
+        build_circled_number(glyph_name, weight, is_italic, ufo_dir, "black_circle")
+    elif int(base_name[3:], 16) in DOUBLE_CIRCLE_UNICODE:
+        build_circled_number(glyph_name, weight, is_italic, ufo_dir, "double_circle")
+    elif int(base_name[3:], 16) in PARENTHESIZED_UNICODE:
+        build_parenthesized_number(glyph_name, weight, is_italic, ufo_dir)
+    elif int(base_name[3:], 16) in FULL_STOP_UNICODE:
+        build_full_stop_number(glyph_name, weight, is_italic, ufo_dir)
+    else:
+        print(f"{sys.argv[0]}: I don't know how to build {glyph_name}")
+
+    return
 
 if __name__ == "__main__":
     main()
