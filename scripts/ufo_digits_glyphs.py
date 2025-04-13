@@ -696,7 +696,9 @@ def get_glyph_list():
 def main():
     if len(sys.argv) < 3:
         print(f"{sys.argv[0]}: Not enough parameters.")
-        print(f"Usage: {sys.argv[0]} <weight> <ufo_directory>")
+        print(f"Usage: {sys.argv[0]} <weight> <ufo_directory> [<glyph_name>]")
+        print(f"* weight can be either '100', '400' or '1000', can be followed by a 'i' for italics (for example '400i')")
+        print("If a glyph name isn't provided, all glyphs supported by the script of the font will be built.")
         return
     
     # Read parameters
