@@ -23,23 +23,17 @@ be used to apply an offset on glyphs.
 """
 
 from math import pi, tan
+from multiprocessing import Process
 import sys
 from ufo_utils import *
 import xml.etree.ElementTree as ET
 
+# Performances settings
+USE_MULTITHREADING = False
+
+# Script constants
+
 DIGITS_NAMES_ENGLISH = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-
-DIGITS_NAMES = {
-    "def": DIGITS_NAMES_ENGLISH,
-    "ss01": [ "zero.cv10" ] + [ DIGITS_NAMES_ENGLISH[i] + ".cv" + str(i).zfill(2) for i in range(1,10,1)],
-    "ss02": [ "zero.cv20" ] + [ DIGITS_NAMES_ENGLISH[i%10] + ".cv" + str(i).zfill(2) for i in range(11,20,1)]
-}
-
-SUPS_NAMES = {
-    "def": [ f"{DIGITS_NAMES_ENGLISH[i]}.superior" for i in range(10) ],
-    "ss01": [ "zero.cv10.superior" ] + [ DIGITS_NAMES_ENGLISH[i] + ".cv" + str(i).zfill(2) + ".superior" for i in range(1,10,1)],
-    "ss02": [ "zero.cv20.superior" ] + [ DIGITS_NAMES_ENGLISH[i%10] + ".cv" + str(i).zfill(2) + ".superior" for i in range(11,20,1)]
-}
 
 UNICODE_VALUES = {  # index = number
     "subscript": [ 0x2080 + i for i in range(10) ],
@@ -65,6 +59,86 @@ UNICODE_VALUES = {  # index = number
     ]
 }
 
+# {"number_0-9": list_of_available_cv}
+# CAUTION: must start by 
+DIGITS_CV_LIST = {
+    "0": [".cv10", ".cv20"],
+    "1": [".cv01", ".cv11"],
+    "2": [".cv02", ".cv12"],
+    "3": [".cv03", ".cv13"],
+    "4": [".cv04", ".cv14"],
+    "5": [".cv05", ".cv15"],
+    "6": [".cv06", ".cv16"],
+    "7": [".cv07", ".cv17"],
+    "8": [".cv08", ".cv18"],
+    "9": [".cv09", ".cv19"],
+}
+
+# {"number_0-9": list_of_available_ss}
+# CAUTION: first character must be a period
+DIGITS_SS_LIST = {
+    "1": [".ss06"],
+    "7": [".ss07"],
+    "0": [".zero"],
+}
+
+# index = number
+SUPERIOR_UNICODE = [0x2070, 0x00B9, 0x00B2, 0x00B3] + [ 0x2070 + i for i in range(4, 10, 1) ]  # 0-9
+SUBSCRIPT_UNICODE = [ 0x2080 + i for i in range(10) ]  # 0-9
+CIRCLED_UNICODE = [ 0x24EA ] + [ 0x2460 + i for i in range(20) ]  # 0-20
+PARENTHESIZED_UNICODE = [None] + [ 0x2474 + i for i in range(20) ]  # 1-20
+FULL_STOP_UNICODE = [None] + [ 0x2488 + i for i in range(20) ]  # 1-20
+BLACK_CIRCLE_UNICODE = [ 0x24FF ] + [ 0x2776 + i for i in range(10) ] + [ 0x24EB + i for i in range(10) ]  # 0-20
+DOUBLE_CIRCLE_UNICODE = [None] + [ 0x24F5 + i for i in range(10) ]  # 1-10
+
+# {"glyph_name": unicode_value (int)}
+FRACTIONS_UNICODE = {
+    "onequarter": 0x00BC,
+    "onehalf": 0x00BD,
+    "threequarters": 0x00BE,
+    "uni2150": 0x2150,
+    "uni2151": 0x2151,
+    "uni2152": 0x2152,
+    "onethird": 0x2153,
+    "twothirds": 0x2154,
+    "uni2155": 0x2155,
+    "uni2156": 0x2156,
+    "uni2157": 0x2157,
+    "uni2158": 0x2158,
+    "uni2159": 0x2159,
+    "uni215A": 0x215A,
+    "oneeighth": 0x215B,
+    "threeeighths": 0x215C,
+    "fiveeighths": 0x215D,
+    "seveneighths": 0x215E,
+    "uni215F": 0x215F,
+    "uni2189": 0x2189
+}
+
+# {"glyph name": (numr, dnom)}
+FRACTIONS_DIGITS = {
+    "onequarter": (1, 4),
+    "onehalf": (1, 2),
+    "threequarters": (3, 4),
+    "uni2150": (1, 7),
+    "uni2151": (1, 9),
+    "uni2152": (1, 10),
+    "onethird": (1, 3),
+    "twothirds": (2, 3),
+    "uni2155": (1, 5),
+    "uni2156": (2, 5),
+    "uni2157": (3, 5),
+    "uni2158": (4, 5),
+    "uni2159": (1, 6),
+    "uni215A": (5, 6),
+    "oneeighth": (1, 8),
+    "threeeighths": (3, 8),
+    "fiveeighths": (5, 8),
+    "seveneighths": (7, 8),
+    "uni215F": (1, None),
+    "uni2189": (0, 3)
+}
+
 FRAC_NAMES = {  # using the bottom as reference
     "1/4": "onequarter",
     "1/2": "onehalf",
@@ -77,480 +151,628 @@ FRAC_NAMES = {  # using the bottom as reference
     "7/8": "seveneighths"
 }
 
-SS_DIGITS = {
-    "ss06": 1,
-    "ss07": 7,
-    "zero": 0
+# font constants
+SUPS_Y = 810
+SUBS_Y = -188
+NUMR_Y = 622
+DNOM_Y = 0
+CENTER_Y = 311
+DEFAULT_KERN = {
+    "100": 140,
+    "400": 100,
+    "1000": 50
 }
-SS_GLYPH_NAMES = {
-    "ss06": {
-        "digit_def": "one.ss06",
-        "digit_ss01": "one.cv01.ss06",
-        "digit_ss02": "one.cv11.ss06",
-        "sups_def": "one.ss06.superior",
-        "sups_ss01": "one.cv01.ss06.superior",
-        "sups_ss02": "one.cv11.ss06.superior"
+PNUM_SUPS_KERN = {  # "other" must be used for one.ss06!!!
+    "100": {
+        "1": (84,140),
+        "other": (140,140)
     },
-    "ss07": {
-        "digit_def": "seven.ss07",
-        "digit_ss01": "seven.cv07.ss07",
-        "digit_ss02": "seven.cv17.ss07",
-        "sups_def": "seven.ss07.superior",
-        "sups_ss01": "seven.cv07.ss07.superior",
-        "sups_ss02": "seven.cv17.ss07.superior"
+    "400": {
+        "1": (50,120),
+        "other": (60,60)
     },
-    "zero": {
-        "digit_def": "zero.zero",
-        "digit_ss01": "zero.cv10.zero",
-        "digit_ss02": "zero.cv20.zero",
-        "sups_def": "zero.zero.superior",
-        "sups_ss01": "zero.cv10.zero.superior",
-        "sups_ss02": "zero.cv20.zero.superior"
+    "1000": {
+        "1": (60,84),
+        "other": (50,50)
     }
 }
-SS_LIST = ["ss06","ss07","zero"]
+TNUM_WIDTH = {
+    "100": 1232,
+    "400": 1232,
+    "1000": 1232
+}
+TWO_DIGITS_WIDTH_COEF = {
+    "100": 4/5,
+    "400": 3/4,
+    "1000": 2/3
+}
+TWO_DIGITS_OVERLAP = {  # for NORMAL size without TWO_DIGITS_WIDTH_COEF applied
+    "100": 140,
+    "400": 120,
+    "1000": 40
+}
+FRAC_BAR_OVERLAP = 315  # kern between numr/dnom and the fraction bar (U+2044)
+DIGITS_HEIGHT = 1480
+SUPS_HEIGHT = 858
+ITALIC_SLANT = 10*pi/180  # slant to the RIGHT in radians (the "*pi/180" converts degrees to radians)
+ITALIC_X_OFFSET = -130  # move to the right some italic glyphs
 
-# create a .glif file in the {ufo_dir}/glyphs/{new_file_name} directory
-def build_glyph(type: str, ufo_dir: str, glyph_name: str, weight: str, digit_1: int, cv_d1: int, ss_d1: str, digit_2: int, cv_d2: int, ss_d2: str):
-    global DIGITS_NAMES_ENGLISH, SUPS_NAMES, FRAC_NAMES, SS_GLYPH_NAMES
+ 
+def build_circled_number(glyph_name: str, weight: int, is_italic: bool, ufo_dir: str, circle_type: str):
+    """
+    circle_type: one of the following: "circle", "black_circle", "double_circle"
+    """
+    assert circle_type in ["circle", "black_circle", "double_circle"]
 
-    # constants
-    SUPS_Y = 810
-    SUBS_Y = -188
-    NUMR_Y = 622
-    DNOM_Y = 0
-    CENTER_Y = 311
-    DEFAULT_KERN = {
-        "100": 140,
-        "400": 100,
-        "1000": 50
-    }
-    PNUM_SUPS_KERN = {  # "other" must be used for one.ss06!!!
-        "100": {
-            "1": (84,140),
-            "other": (140,140)
-        },
-        "400": {
-            "1": (50,120),
-            "other": (60,60)
-        },
-        "1000": {
-            "1": (60,84),
-            "other": (50,50)
-        }
-    }
-    TNUM_WIDTH = {
-        "100": 1232,
-        "400": 1232,
-        "1000": 1232
-    }
-    TWO_DIGITS_WIDTH_COEF = {
-        "100": 4/5,
-        "400": 3/4,
-        "1000": 2/3
-    }
-    TWO_DIGITS_OVERLAP = {  # for NORMAL size without TWO_DIGITS_WIDTH_COEF applied
-        "100": 140,
-        "400": 120,
-        "1000": 40
-    }
-    FRAC_BAR_OVERLAP = 315  # kern between numr/dnom and the fraction bar (U+2044)
-    DIGITS_HEIGHT = 1480
-    SUPS_HEIGHT = 858
-    ITALIC_SLANT = 10*pi/180  # slant to the RIGHT in radians (the "*pi/180" converts degrees to radians)
-    ITALIC_X_OFFSET = -130  # move to the right some italic glyphs
+    # Get the number and the digits to draw
+    n = None
+    if circle_type == "circle":
+        n = CIRCLED_UNICODE.index(int(glyph_name.split(".")[0][3:], 16))  # all glyph names starts with "uniXXXX"
+    elif circle_type == "black_circle":
+        n = BLACK_CIRCLE_UNICODE.index(int(glyph_name.split(".")[0][3:], 16))
+    elif circle_type == "double_circle":
+        n = DOUBLE_CIRCLE_UNICODE.index(int(glyph_name.split(".")[0][3:], 16))
+    d1 = n // 10  # tens digit
+    d2 = n % 10  # units digit
 
-    use_sups = type.split("_")[0] in ["superior", "subscript", "numr", "dnom"] or type in ["circle", "black_circle", "double_circle", "frac"]
+    # Get the base (the circle) and its metrics
+    base_circle = None
+    if circle_type == "circle":
+        base_circle = "uni25EF"
+    elif circle_type == "black_circle":
+        base_circle = "H18533"
+    elif circle_type == "double_circle":
+        base_circle = "double_circle_empty"
+    base_circle_metrics = get_glyph_metrics(base_circle, ufo_dir)
 
-    # check if italic
-    is_italic = weight[-1] == "i"
-    if is_italic:  # remove the "i" at the end
-        weight = weight[:-1]
+    # Get the digits glyphs and their metrics
+    d1_glyph = DIGITS_NAMES_ENGLISH[d1]
+    d2_glyph = DIGITS_NAMES_ENGLISH[d2]
+    cv_list = find_cv_from_name(glyph_name)
+    for cv in cv_list:
+        if d1 != 0 and (str(d1) in DIGITS_CV_LIST) and (cv in DIGITS_CV_LIST[str(d1)]):
+            d1_glyph = d1_glyph + cv
+        if (str(d2) in DIGITS_CV_LIST) and (cv in DIGITS_CV_LIST[str(d2)]):
+            d2_glyph = d2_glyph + cv
+    ss_list = find_ss_from_name(glyph_name)   
+    for ss in ss_list:
+        if d1 != 0 and (str(d1) in DIGITS_SS_LIST) and (ss in DIGITS_SS_LIST[str(d1)]):
+            d1_glyph = d1_glyph + ss
+        if (str(d2) in DIGITS_SS_LIST) and (ss in DIGITS_SS_LIST[str(d2)]):
+            d2_glyph = d2_glyph + ss
+    d1_glyph += ".superior"
+    d2_glyph += ".superior"
+    d1_glyph_metrics = get_glyph_metrics(d1_glyph, ufo_dir)
+    d2_glyph_metrics = get_glyph_metrics(d2_glyph, ufo_dir)
 
-    # get the dependencies and the metrics (apply italic offset here if needed)
-    base_1 = ""
-    base_2 = ""
-    base_1_x_metrics = {}
-    base_2_x_metrics = {}
-    if ss_d1 == "":  # not use custom ss
-        cv_search = ["def", "ss01", "ss02"]
-        if use_sups:  # use sups
-            base_1 = SUPS_NAMES[cv_search[cv_d1]][digit_1 % 10]
-        else:  # use normal numbers
-            base_1 = DIGITS_NAMES[cv_search[cv_d1]][digit_1 % 10]
-    else:            
-        if use_sups:  # use sups
-            ss_search = ["sups_def", "sups_ss01", "sups_ss02"]
-        else:
-            ss_search = ["digit_def", "digit_ss01", "digit_ss02"]
-        base_1 = SS_GLYPH_NAMES[ss_d1][ss_search[cv_d1]]
-    if ss_d2 == "":  # not use custom ss
-        cv_search = ["def", "ss01", "ss02"]
-        if use_sups:  # use sups
-            base_2 = SUPS_NAMES[cv_search[cv_d2]][digit_2 % 10]
-        else:  # use normal numbers
-            base_2 = DIGITS_NAMES[cv_search[cv_d2]][digit_2 % 10]
-    else:            
-        if use_sups:  # use sups
-            ss_search = ["sups_def", "sups_ss01", "sups_ss02"]
-        else:
-            ss_search = ["digit_def", "digit_ss01", "digit_ss02"]
-        base_2 = SS_GLYPH_NAMES[ss_d2][ss_search[cv_d2]]
-    base_1_x_metrics = get_glyph_metrics(base_1, ufo_dir)
-    base_2_x_metrics = get_glyph_metrics(base_2, ufo_dir)
-        
-    # start to build the xml (output)
+    # Start to build the xml (output)
     xml_root = ET.Element("glyph", {"name": glyph_name, "format": "2"})
-    new_file_name = get_glif_from_name(glyph_name, ufo_dir)
+    ET.SubElement(xml_root, "advance", {"width": str(base_circle_metrics["glyph_width"])})  # glyph width
+    if len(cv_list) == 0 and len(ss_list) == 0:  # unicode value (if any)
+        unicode_value = None
+        if circle_type == "circle":
+            unicode_value = CIRCLED_UNICODE[n]
+        elif circle_type == "black_circle":
+            unicode_value = BLACK_CIRCLE_UNICODE[n]
+        elif circle_type == "double_circle":
+            unicode_value = DOUBLE_CIRCLE_UNICODE[n]
+        ET.SubElement(xml_root, "unicode", {"hex": hex(unicode_value).upper()[2:]})
 
-    # draw
-    if type.split("_")[0] in ["superior", "subscript", "numr", "dnom"]:  # sups/subs/numr/dnom with eventually pnum/tnum on digit_2 !!!!!! 
-        # calculate x offset and width
-        x_offset = 0
-        width = 0
-        if len(type.split("_")) == 1:  # no pnum nor tnum
-            x_offset = 0
-            width = base_2_x_metrics["glyph_width"]
-        elif type.split("_")[1] == "pnum":
-            if digit_2 == 1:
-                x_offset = PNUM_SUPS_KERN[weight]["1"][0] - base_2_x_metrics["left_kern"]
-                width = PNUM_SUPS_KERN[weight]["1"][0] + base_2_x_metrics["raw_width"] + PNUM_SUPS_KERN[weight]["1"][1]
-            else:
-                x_offset = PNUM_SUPS_KERN[weight]["other"][0] - base_2_x_metrics["left_kern"]
-                width = PNUM_SUPS_KERN[weight]["other"][0] + base_2_x_metrics["raw_width"] + PNUM_SUPS_KERN[weight]["other"][1]
-            if is_italic:
-                x_offset += tan(ITALIC_SLANT) * SUPS_HEIGHT / 2
-                width -= tan(ITALIC_SLANT) * SUPS_HEIGHT / 2
-        elif type.split("_")[1] == "tnum":
-            width = TNUM_WIDTH[weight]
-            additional_kern = width - base_2_x_metrics["glyph_width"]
-            x_offset = int(base_2_x_metrics["left_kern"] + additional_kern / 2 + ITALIC_X_OFFSET)
-
-        # Add more x offset if italic (none if superior) as we move the glyph only below
+    # Place the components
+    xml_outline = ET.SubElement(xml_root, "outline")
+    ET.SubElement(xml_outline, "component", {"base": base_circle})
+    y_offset = CENTER_Y - SUPS_Y
+    middle = base_circle_metrics["left_kern"] + base_circle_metrics["raw_width"] / 2
+    if d1 == 0:  # one digit : d2
+        x2 = middle - d2_glyph_metrics["glyph_width"] / 2
         if is_italic:
-            if type.split("_")[0] == "subscript":
-                x_offset -= abs(SUPS_Y - SUBS_Y) / tan(pi/2-ITALIC_SLANT)
-            elif type.split("_")[0] == "numr":
-                x_offset -= abs(SUPS_Y - NUMR_Y) / tan(pi/2-ITALIC_SLANT)
-            elif type.split("_")[0] == "dnom":
-                x_offset -= abs(SUPS_Y - DNOM_Y) / tan(pi/2-ITALIC_SLANT)
-
-        # calculate the y metrics
-        y_offset = 0  # value for superior
-        if type.split("_")[0] == "subscript":
-            y_offset = SUBS_Y - SUPS_Y
-        elif type.split("_")[0] == "numr":
-            y_offset = NUMR_Y - SUPS_Y
-        elif type.split("_")[0] == "dnom":
-            y_offset = DNOM_Y - SUPS_Y
-        
-        # build the xml
-        ET.SubElement(xml_root, "advance", {"width": str(width)})
-        if type == "subscript" and cv_d1 == 0 and cv_d2 == 0 and ss_d1 == "" and ss_d2 == "":
-            ET.SubElement(xml_root, "unicode", {"hex": hex(UNICODE_VALUES["subscript"][digit_2]).upper()[2:]})
-        xml_outline = ET.SubElement(xml_root, "outline")
-        ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x_offset)), "yOffset": str(int(y_offset))})
-
-    elif type in ["circle", "black_circle", "double_circle"]:  # ATTENTION: for 2 digits : dozens = digit_1 and units = digit_2 !!!
-
-        # get the circle
-        base_circle = ""
-        if type == "circle":
-            base_circle = "uni25EF"
-        elif type == "black_circle":
-            base_circle = "H18533"
-        else:  # double_circle
-            base_circle = "double_circle_empty"
-        base_circle_x_metrics = get_glyph_metrics(base_circle, ufo_dir)
-        width = base_circle_x_metrics["glyph_width"]
-
-        # start building the xml (base)
-        ET.SubElement(xml_root, "advance", {"width": str(width)})
-        if cv_d1 == 0 and cv_d2 == 0 and ss_d1 == "" and ss_d2 == "":
-            ET.SubElement(xml_root, "unicode", {"hex": hex(UNICODE_VALUES[type][digit_1 * 10 + digit_2]).upper()[2:]})
-        xml_outline = ET.SubElement(xml_root, "outline")
-        ET.SubElement(xml_outline, "component", {"base": base_circle})
-
-        # add numbers
-        y_offset = CENTER_Y - SUPS_Y
-        middle = base_circle_x_metrics["left_kern"] + base_circle_x_metrics["raw_width"] / 2
-        if digit_1 == 0:  # one digit : digit_2
-            x2 = middle - base_2_x_metrics["glyph_width"] / 2
-            if is_italic:
-                x2 -= abs(y_offset) / tan(pi/2-ITALIC_SLANT)
-            ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x2)), "yOffset": str(int(y_offset))})
-        else:  # two digits : dozens = digit_1 and units = digit_2 (!)
-            both_digits_length = (base_1_x_metrics["glyph_width"] + base_2_x_metrics["glyph_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
-            x1 = middle - both_digits_length / 2 + TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] * (SUPS_HEIGHT / DIGITS_HEIGHT) 
-            x2 = middle + both_digits_length / 2 - TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] * (SUPS_HEIGHT / DIGITS_HEIGHT) - base_2_x_metrics["glyph_width"] * TWO_DIGITS_WIDTH_COEF[weight]
-            if is_italic:
-                x1 -= abs(y_offset) / tan(pi/2-ITALIC_SLANT) * TWO_DIGITS_WIDTH_COEF[weight]
-                x2 -= abs(y_offset) / tan(pi/2-ITALIC_SLANT) * TWO_DIGITS_WIDTH_COEF[weight]
-            ET.SubElement(xml_outline, "component", {"base": base_1, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x1)), "yOffset": str(int(y_offset))})
-            ET.SubElement(xml_outline, "component", {"base": base_2, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x2)), "yOffset": str(int(y_offset))})
-
-    elif type == "parenthezed":
-        base_pl = "parenleft"
-        base_pr = "parenright"
-        base_pl_x_metrics = get_glyph_metrics(base_pl, ufo_dir)
-        base_pr_x_metrics = get_glyph_metrics(base_pr, ufo_dir)
-
-        # width calculation
-        both_digits_length = (base_1_x_metrics["glyph_width"] + base_2_x_metrics["glyph_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
-        width = (base_pl_x_metrics["raw_width"] + base_pr_x_metrics["raw_width"]) * TWO_DIGITS_WIDTH_COEF[weight] + both_digits_length - TWO_DIGITS_OVERLAP[weight]
-
-        ET.SubElement(xml_root, "advance", {"width": str(width)})
-        if cv_d1 == 0 and cv_d2 == 0 and ss_d1 == "" and ss_d2 == "":
-            ET.SubElement(xml_root, "unicode", {"hex": hex(UNICODE_VALUES[type][digit_1 * 10 + digit_2]).upper()[2:]})
-        xml_outline = ET.SubElement(xml_root, "outline")
-
-        xl = DEFAULT_KERN[weight] - base_pl_x_metrics["left_kern"] * TWO_DIGITS_WIDTH_COEF[weight]
-        xr = width - DEFAULT_KERN[weight] - (base_pr_x_metrics["left_kern"] + base_pr_x_metrics["raw_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
-        ET.SubElement(xml_outline, "component", {"base": base_pl, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(xl)), "yOffset": "0"})
-        ET.SubElement(xml_outline, "component", {"base": base_pr, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(xr)), "yOffset": "0"})
-
-        if digit_1 == 0:
-            x2 = DEFAULT_KERN[weight] + ((width - 2*DEFAULT_KERN[weight]) - base_2_x_metrics["glyph_width"]) * 0.5
-            ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x2)), "yOffset": "0"})
-        else:
-            middle = width / 2
-            x1 = middle - both_digits_length / 2 + TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2
-            x2 = middle + both_digits_length / 2 - TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2 - base_2_x_metrics["glyph_width"] * TWO_DIGITS_WIDTH_COEF[weight]
-            ET.SubElement(xml_outline, "component", {"base": base_1, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x1)), "yOffset": "0"})
-            ET.SubElement(xml_outline, "component", {"base": base_2, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x2)), "yOffset": "0"})
-    
-    elif type == "full_stop":
-        base_period = "period"
-        base_period_x_metrics = get_glyph_metrics(base_period, ufo_dir)
-
-        # width calculation
-        both_digits_length = (base_1_x_metrics["glyph_width"] + base_2_x_metrics["glyph_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
-        width = DEFAULT_KERN[weight] / 2 + both_digits_length + base_period_x_metrics["raw_width"] + DEFAULT_KERN[weight] - TWO_DIGITS_OVERLAP[weight]
-
-        ET.SubElement(xml_root, "advance", {"width": str(width)})
-        if cv_d1 == 0 and cv_d2 == 0 and ss_d1 == "" and ss_d2 == "":
-            ET.SubElement(xml_root, "unicode", {"hex": hex(UNICODE_VALUES[type][digit_1 * 10 + digit_2]).upper()[2:]})
-        xml_outline = ET.SubElement(xml_root, "outline")
-
-        xp = width - base_period_x_metrics["left_kern"] - base_period_x_metrics["raw_width"] - DEFAULT_KERN[weight]
-        ET.SubElement(xml_outline, "component", {"base": base_period, "xOffset": str(int(xp)), "yOffset": "0"})
-
-        middle = (width - base_period_x_metrics["glyph_width"]) / 2 + DEFAULT_KERN[weight]
-        if digit_1 == 0:
-            x2 = middle - base_2_x_metrics["glyph_width"] / 2 + DEFAULT_KERN[weight]
-            ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(int(x2)), "yOffset": "0"})
-        else:
-            x1 = middle - both_digits_length / 2 + TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2
-            x2 = middle + both_digits_length / 2 - TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2 - base_2_x_metrics["glyph_width"] * TWO_DIGITS_WIDTH_COEF[weight]
-            ET.SubElement(xml_outline, "component", {"base": base_1, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x1)), "yOffset": "0"})
-            ET.SubElement(xml_outline, "component", {"base": base_2, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x2)), "yOffset": "0"})
-    
-    elif type == "frac":  # numr = digit_1, dnom = digit_2. For no dnom, set digit_2 to zero. For 1/10 in dnom, set digit_1=1 and digit_2=10
-        base_frac = "fraction"
-        base_frac_x_metrics = get_glyph_metrics(base_frac, ufo_dir)
-
-        # advance value (entire glyph width)
-        advance = base_1_x_metrics["glyph_width"] + base_frac_x_metrics["glyph_width"] - FRAC_BAR_OVERLAP  # numr + bar
-        if digit_2 != 0:  # dnom (hide if 0)
-            if digit_2 == 10:  # 1/10
-                advance += base_1_x_metrics["left_kern"] + base_1_x_metrics["raw_width"] - FRAC_BAR_OVERLAP + base_2_x_metrics["glyph_width"]
-                if is_italic:
-                    advance -= base_1_x_metrics["right_kern"] + base_2_x_metrics["left_kern"]
-                if ss_d1 != "ss06":  # add extra kern if there isn't a bar under the digit 1
-                    advance += base_2_x_metrics["left_kern"]
-
-            else:
-                advance += base_2_x_metrics["glyph_width"] - FRAC_BAR_OVERLAP
-        ET.SubElement(xml_root, "advance", {"width": str(int(advance))})
-
-        # unicode value
-        if cv_d1 == 0 and cv_d2 == 0 and ss_d1 == "" and ss_d2 == "":
-            ET.SubElement(xml_root, "unicode", {"hex": hex(UNICODE_VALUES["frac"][digit_2][digit_1]).upper()[2:]})
-        xml_outline = ET.SubElement(xml_root, "outline")
-
-        # numr
-        y1 = NUMR_Y - SUPS_Y
-        x1 = 0
+            x2 -= abs(y_offset) / tan(pi/2-ITALIC_SLANT)
+        ET.SubElement(xml_outline, "component", {"base": d2_glyph, "xOffset": str(int(x2)), "yOffset": str(int(y_offset))})
+    else:  # two digits : dozens = digit_1 and units = digit_2 (!)
+        both_digits_length = (d1_glyph_metrics["glyph_width"] + d2_glyph_metrics["glyph_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
+        x1 = middle - both_digits_length / 2 + TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] * (SUPS_HEIGHT / DIGITS_HEIGHT) 
+        x2 = middle + both_digits_length / 2 - TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] * (SUPS_HEIGHT / DIGITS_HEIGHT) - d2_glyph_metrics["glyph_width"] * TWO_DIGITS_WIDTH_COEF[weight]
         if is_italic:
-            x1 -= abs(y1) / tan(pi/2-ITALIC_SLANT)
-        ET.SubElement(xml_outline, "component", {"base": base_1, "xOffset": str(int(x1)), "yOffset": str(int(y1))})
+            x1 -= abs(y_offset) / tan(pi/2-ITALIC_SLANT) * TWO_DIGITS_WIDTH_COEF[weight]
+            x2 -= abs(y_offset) / tan(pi/2-ITALIC_SLANT) * TWO_DIGITS_WIDTH_COEF[weight]
+        ET.SubElement(xml_outline, "component", {"base": d1_glyph, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x1)), "yOffset": str(int(y_offset))})
+        ET.SubElement(xml_outline, "component", {"base": d2_glyph, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x2)), "yOffset": str(int(y_offset))})
 
-        # fraction bar
-        xf = base_1_x_metrics["glyph_width"] - FRAC_BAR_OVERLAP
-        ET.SubElement(xml_outline, "component", {"base": base_frac, "xOffset": str(xf), "yOffset": "0"})
-
-        # dnom
-        if digit_2 != 0:  # no denominators for "1/0"
-            y2 = DNOM_Y - SUPS_Y
-            if digit_2 == 10:  # 1/10
-                x21 = xf + base_frac_x_metrics["glyph_width"] - FRAC_BAR_OVERLAP
-                x22 = x21 + base_1_x_metrics["left_kern"] + base_1_x_metrics["raw_width"]
-                if ss_d1 != "ss06":  # add extra kern if there isn't a bar under the digit 1
-                    x22 += base_2_x_metrics["left_kern"]
-                if is_italic:
-                    x21 -= abs(y2) / tan(pi/2-ITALIC_SLANT)
-                    x22 -= abs(y2) / tan(pi/2-ITALIC_SLANT)
-                    x22 -= base_1_x_metrics["right_kern"] + base_2_x_metrics["left_kern"]
-                ET.SubElement(xml_outline, "component", {"base": base_1, "xOffset": str(x21), "yOffset": str(y2)})
-                ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(x22), "yOffset": str(y2)})
-            else:
-                x2 = xf + base_frac_x_metrics["glyph_width"] - FRAC_BAR_OVERLAP
-                if is_italic:
-                    x2 -= abs(y2) / tan(pi/2-ITALIC_SLANT)
-                ET.SubElement(xml_outline, "component", {"base": base_2, "xOffset": str(x2), "yOffset": str(y2)})
-
-    # save
+    # Save
     tree = ET.ElementTree(xml_root)
-    tree.write(new_file_name, encoding="UTF-8", xml_declaration=True)
-    #print(f"{glyph_name}, {base_1}, {base_2}")
+    tree.write(get_glif_from_name(glyph_name, ufo_dir), encoding="UTF-8", xml_declaration=True)
 
     # Unlink reference for black circles
-    if type == "black_circle":
+    if circle_type == "black_circle":
         unlink_references(glyph_name, ufo_dir)
-
-    return
-
-# create some glif files inside a ufo
-def build_weight(weight: str, ufo_dir: str):
-    # sups / subs / numr / dnom / numerics signs such as "(1)"" or "2."
-    SS_LIST = [  # ss name, digits affected
-        ("ss06", 1),
-        ("ss07", 7),
-        ("zero", 0)
-    ]
-    SS_LIST_NAMES = [ ss_data[0] for ss_data in SS_LIST ]
-    SS_LIST_DIGITS = [ ss_data[1] for ss_data in SS_LIST ]
     
-    glyphs_count = 0
-    for i in range(100):
-        # calculate the digits (0-9)
-        d1 = i // 10
-        d2 = i % 10
-        # find applicable cv
-        cv_suffix_list = [""]
-        cv_values_list = [(0,0)]
-        for c1 in range(3):
-            for c2 in range(3):
-                if c1 == 0 and c2 == 0:
-                    pass
-                elif d1 == d2:  # 2 same digits
-                    if c2 == 0:
-                        cv_suffix_list.append(f".cv{str((c1 - 1) * 10 + d1).zfill(2) if d1 != 0 else str(c1 * 10)}")
-                        cv_values_list.append((c1, c1))
-                elif c1 != 0 and c2 == 0:  # digit 1 only
-                    cv_suffix_list.append(f".cv{str((c1 - 1) * 10 + d1).zfill(2) if d1 != 0 else str(c1 * 10)}")
-                    cv_values_list.append((c1, 0))
-                elif c1 == 0 and c2 != 0:  # digit 2 only
-                    cv_suffix_list.append(f".cv{str((c2 - 1) * 10 + d2).zfill(2) if d2 != 0 else str(c2 * 10)}")
-                    cv_values_list.append((0, c2))
-                else:  # both digits
-                    cv_d1 = (c1 - 1) * 10 + d1 if d1 != 0 else c1 * 10
-                    cv_d2 = (c2 - 1) * 10 + d2 if d2 != 0 else c2 * 10
-                    if cv_d1 < cv_d2:
-                        cv_suffix_list.append(f".cv{str(cv_d1).zfill(2)}.cv{str(cv_d2).zfill(2)}")
-                    else:
-                        cv_suffix_list.append(f".cv{str(cv_d2).zfill(2)}.cv{str(cv_d1).zfill(2)}")
-                    cv_values_list.append((c1, c2))
-        # find applicable ss
-        ss_suffix_list = [""]
-        ss_values_list = [("","")]
-        if d1 == d2 and d2 in SS_LIST_DIGITS:  # 2 same digits
-            ss_suffix_list.append("." + SS_LIST_NAMES[SS_LIST_DIGITS.index(d2)])
-            ss_values_list.append((SS_LIST_NAMES[SS_LIST_DIGITS.index(d2)], SS_LIST_NAMES[SS_LIST_DIGITS.index(d2)]))
-        else:
-            if d1 in SS_LIST_DIGITS:  # 2 differents digits
-                ss_suffix_list.append("." + SS_LIST_NAMES[SS_LIST_DIGITS.index(d1)])
-                ss_values_list.append((SS_LIST_NAMES[SS_LIST_DIGITS.index(d1)], ""))
-            if d2 in SS_LIST_DIGITS:
-                ss_suffix_list.append("." + SS_LIST_NAMES[SS_LIST_DIGITS.index(d2)])
-                ss_values_list.append(("", SS_LIST_NAMES[SS_LIST_DIGITS.index(d2)]))
-            if d1 in SS_LIST_DIGITS and d2 in SS_LIST_DIGITS:
-                ss_index_d1 = SS_LIST_DIGITS.index(d1)
-                ss_index_d2 = SS_LIST_DIGITS.index(d2)
-                if ss_index_d1 < ss_index_d2:
-                    ss_suffix_list.append(f".{SS_LIST_NAMES[ss_index_d1]}.{SS_LIST_NAMES[ss_index_d2]}")
-                else:
-                    ss_suffix_list.append(f".{SS_LIST_NAMES[ss_index_d2]}.{SS_LIST_NAMES[ss_index_d1]}")
-                ss_values_list.append((SS_LIST_NAMES[ss_index_d1], SS_LIST_NAMES[ss_index_d2]))
-        # generate the glyphs
-        ss_index = 0
-        for ss_suffix in ss_suffix_list:
-            cv_index = 0
-            for cv_suffix in cv_suffix_list:
-                # sups / subs / numr / dnom (on d2)
-                if i == 0 or (i != 0 and i < 10 and cv_values_list[cv_index][0] == 0 and ss_values_list[ss_index][0] == ""):
-                    for type in ["superior", "subscript", "numr", "dnom"]:
-                        if not(type == "superior"):
-                            build_glyph(type, ufo_dir, f"{DIGITS_NAMES_ENGLISH[i]}{cv_suffix}{ss_suffix}.{type}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                            glyphs_count += 1
-                        build_glyph(type + "_pnum", ufo_dir, f"{DIGITS_NAMES_ENGLISH[i]}{cv_suffix}{ss_suffix}.{type}.pnum", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                        build_glyph(type + "_tnum", ufo_dir, f"{DIGITS_NAMES_ENGLISH[i]}{cv_suffix}{ss_suffix}.{type}.tnum", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                        glyphs_count += 2
-                # circled numbers etc. (d1 = dozens, d2 = units)
-                if i == 0 or (i != 0 and i < 10 and cv_values_list[cv_index][0] == 0 and ss_values_list[ss_index][0] == ""):  # one digit (0-9)
-                    build_glyph("circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                    build_glyph("black_circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["black_circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                    glyphs_count += 2
-                    if i >= 1:
-                        build_glyph("parenthezed", ufo_dir, f"uni{str(hex(UNICODE_VALUES["parenthezed"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                        build_glyph("full_stop", ufo_dir, f"uni{str(hex(UNICODE_VALUES["full_stop"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                        build_glyph("double_circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["double_circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, 0, 0, "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                        glyphs_count += 3
-                elif i >= 10 and i <= 20:  # two digits
-                    if d1 != d2:  # disable building for 2 same digits that are the same if digit one has a non-null cv or ss to avoid duplicates 
-                        build_glyph("circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                        build_glyph("black_circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["black_circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                        glyphs_count += 2
-                        if i >= 1: # 1-20
-                            build_glyph("parenthezed", ufo_dir, f"uni{str(hex(UNICODE_VALUES["parenthezed"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                            build_glyph("full_stop", ufo_dir, f"uni{str(hex(UNICODE_VALUES["full_stop"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                            glyphs_count += 2
-                    elif d1 == d2:
-                        build_glyph("circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                        build_glyph("black_circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["black_circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                        build_glyph("parenthezed", ufo_dir, f"uni{str(hex(UNICODE_VALUES["parenthezed"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                        build_glyph("full_stop", ufo_dir, f"uni{str(hex(UNICODE_VALUES["full_stop"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                        glyphs_count += 4
-
-                    if i == 10:  # 10
-                        build_glyph("double_circle", ufo_dir, f"uni{str(hex(UNICODE_VALUES["double_circle"][d1 * 10 + d2])).upper()[2:]}{cv_suffix}{ss_suffix}", weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                        glyphs_count += 1
-                # fractions (digit_1 = numerator, digits_2 = denominator)
-                if i == 1:  # as 0/1 doesn't exists, let's put the 1/10 here
-                    glyph_name = ""
-                    if f"1/10" in FRAC_NAMES:
-                        glyph_name = FRAC_NAMES["1/10"]
-                    else:
-                        glyph_name = f"uni{str(hex(UNICODE_VALUES["frac"][10][1])).upper()[2:]}"
-                    build_glyph("frac", ufo_dir, f"uni{str(hex(UNICODE_VALUES["frac"][10][1])).upper()[2:]}" + cv_suffix + ss_suffix, weight, 1, cv_values_list[cv_index][1], ss_values_list[ss_index][1], 10, cv_values_list[cv_index][0], ss_values_list[ss_index][0])
-                    glyphs_count += 1
-                    #print(str(i).zfill(2), "frac", ufo_dir, glyph_name + cv_suffix + ss_suffix, weight, 1, cv_values_list[cv_index][1], ss_values_list[ss_index][1] if ss_values_list[ss_index][1] == "" else "-", 10, cv_values_list[cv_index][0], ss_values_list[ss_index][0] if ss_values_list[ss_index][0] == "" else "-")
-                elif UNICODE_VALUES["frac"][d2][d1] != -1:
-                    glyph_name = ""
-                    if f"{d1}/{d2}" in FRAC_NAMES:
-                        glyph_name = FRAC_NAMES[f"{d1}/{d2}"]
-                    else:
-                        glyph_name = f"uni{str(hex(UNICODE_VALUES["frac"][d2][d1])).upper()[2:]}"
-                    if d2 == 0:  # invisible dnom
-                        if cv_values_list[cv_index][1] == 0 and ss_values_list[ss_index][1] == "":
-                            build_glyph("frac", ufo_dir, glyph_name + cv_suffix + ss_suffix, weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], 0, 0, "")
-                            glyphs_count += 1
-                    else:
-                        build_glyph("frac", ufo_dir, glyph_name + cv_suffix + ss_suffix, weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0], d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1])
-                        glyphs_count += 1
-                    #print(str(i).zfill(2), "frac", ufo_dir, glyph_name + cv_suffix + ss_suffix, weight, d1, cv_values_list[cv_index][0], ss_values_list[ss_index][0] if ss_values_list[ss_index][0] == "" else "", d2, cv_values_list[cv_index][1], ss_values_list[ss_index][1] if ss_values_list[ss_index][1] == "" else "-")
-                cv_index += 1
-            ss_index += 1
-    print(f"Done building glyphs for weight {weight} ({glyphs_count} generated)")
     return
+
+def build_fraction(glyph_name: str, weight: int, is_italic: bool, ufo_dir: str):
+
+    base_glyph_name = glyph_name.split(".")[0]
+
+    # Get the numr and dnom values and the digits to draw
+    numr_value = FRACTIONS_DIGITS[base_glyph_name][0]
+    dnom_value = FRACTIONS_DIGITS[base_glyph_name][1]
+
+    # Get the fraction bar and its metrics
+    base_frac = "fraction"
+    base_frac_metrics = get_glyph_metrics(base_frac, ufo_dir)
+
+    n0 = numr_value % 10  # unit digit for the numerator
+    d0 = dnom_value % 10 if dnom_value is not None else None  # unit digit for denominator
+    d1 = dnom_value // 10 if dnom_value is not None else None  # tens digit for denominator
+    n0_glyph = DIGITS_NAMES_ENGLISH[n0]
+    d0_glyph = DIGITS_NAMES_ENGLISH[d0] if d0 is not None else None 
+    d1_glyph = DIGITS_NAMES_ENGLISH[d1] if (d1 is not None and d1 >= 1) else None 
+    cv_list = find_cv_from_name(glyph_name)
+    for cv in cv_list:
+        if cv in DIGITS_CV_LIST[str(n0)]:
+            n0_glyph = n0_glyph + cv
+        if d0_glyph is not None and cv in DIGITS_CV_LIST[str(d0)]:
+            d0_glyph = d0_glyph + cv
+        if d1_glyph is not None and cv in DIGITS_CV_LIST[str(d1)]:
+            d1_glyph = d1_glyph + cv
+    ss_list = find_ss_from_name(glyph_name)   
+    for ss in ss_list:
+        if str(n0) in DIGITS_SS_LIST and ss in DIGITS_SS_LIST[str(n0)]:
+            n0_glyph = n0_glyph + ss
+        if d0_glyph is not None and str(d0) in DIGITS_SS_LIST and ss in DIGITS_SS_LIST[str(d0)]:
+            d0_glyph = d0_glyph + ss
+        if d1_glyph is not None and str(d1) in DIGITS_SS_LIST and ss in DIGITS_SS_LIST[str(d1)]:
+            d1_glyph = d1_glyph + ss
+    n0_glyph += ".superior"
+    if d0_glyph is not None:
+        d0_glyph += ".superior"
+    if d1_glyph is not None:
+        d1_glyph += ".superior"
+    n0_glyph_metrics = get_glyph_metrics(n0_glyph, ufo_dir)
+    d0_glyph_metrics = get_glyph_metrics(d0_glyph, ufo_dir) if d0_glyph is not None else None
+    d1_glyph_metrics = get_glyph_metrics(d1_glyph, ufo_dir) if d1_glyph is not None else None
+
+    # Begin the XML file
+    xml_root = ET.Element("glyph", {"name": glyph_name, "format": "2"})
+
+    # Advance value calculation (entire glyph width)
+    advance = n0_glyph_metrics["glyph_width"] + base_frac_metrics["glyph_width"] - FRAC_BAR_OVERLAP  # numr + bar
+    if d0_glyph is not None:  # dnom (hide if 0)
+        if dnom_value >= 10:  # 1/10
+            advance += d1_glyph_metrics["left_kern"] + d1_glyph_metrics["raw_width"] - FRAC_BAR_OVERLAP + d0_glyph_metrics["glyph_width"]
+            if is_italic:
+                advance -= d1_glyph_metrics["right_kern"] + d0_glyph_metrics["left_kern"]
+            if not ".ss06" in d1_glyph:  # add extra kern if there isn't a bar under the digit 1
+                advance += d0_glyph_metrics["left_kern"]
+        else:
+            advance += d0_glyph_metrics["glyph_width"] - FRAC_BAR_OVERLAP
+    ET.SubElement(xml_root, "advance", {"width": str(int(advance))})
+    
+    # Unicode value calculation
+    if len(cv_list) == 0 and len(ss_list) == 0:
+        ET.SubElement(xml_root, "unicode", {"hex": hex(FRACTIONS_UNICODE[base_glyph_name]).upper()[2:]})
+
+    # Place the numerator (for now only 1 digit supported)
+    xml_outline = ET.SubElement(xml_root, "outline")
+    xn0 = 0
+    yn0 = NUMR_Y - SUPS_Y
+    if is_italic:
+        xn0 -= abs(yn0) / tan(pi/2-ITALIC_SLANT)
+    ET.SubElement(xml_outline, "component", {"base": n0_glyph, "xOffset": str(int(xn0)), "yOffset": str(int(yn0))})
+
+    # Place the fraction bar
+    xf = n0_glyph_metrics["glyph_width"] - FRAC_BAR_OVERLAP
+    ET.SubElement(xml_outline, "component", {"base": base_frac, "xOffset": str(int(xf)), "yOffset": "0"})
+
+    # Place the denominator$
+    if d0_glyph is not None:  # no denominator for "1/0"
+        yd =  DNOM_Y - SUPS_Y
+        if d1_glyph is not None:
+            xd1 = xf + base_frac_metrics["glyph_width"] - FRAC_BAR_OVERLAP
+            xd0 = xd1 + d1_glyph_metrics["left_kern"] + d1_glyph_metrics["raw_width"]
+            if not "ss06" in d1_glyph:  # add extra kern if there isn't a bar under the digit 1
+                xd0 += d0_glyph_metrics["left_kern"]
+            if is_italic:
+                xd1 -= abs(yd) / tan(pi/2-ITALIC_SLANT)
+                xd0 -= abs(yd) / tan(pi/2-ITALIC_SLANT)
+                xd0 -= d1_glyph_metrics["right_kern"] + d0_glyph_metrics["left_kern"]
+            ET.SubElement(xml_outline, "component", {"base": d1_glyph, "xOffset": str(int(xd1)), "yOffset": str(int(yd))})
+            ET.SubElement(xml_outline, "component", {"base": d0_glyph, "xOffset": str(int(xd0)), "yOffset": str(int(yd))})
+        else:
+            xd0 = xf + base_frac_metrics["glyph_width"] - FRAC_BAR_OVERLAP
+            if is_italic:
+                xd0 -= abs(yd) / tan(pi/2-ITALIC_SLANT)
+            ET.SubElement(xml_outline, "component", {"base": d0_glyph, "xOffset": str(int(xd0)), "yOffset": str(int(yd))})
+    
+    # Save
+    tree = ET.ElementTree(xml_root)
+    tree.write(get_glif_from_name(glyph_name, ufo_dir), encoding="UTF-8", xml_declaration=True)
+    return
+
+def build_full_stop_number(glyph_name: str, weight: int, is_italic: bool, ufo_dir: str):
+    # Get the number and the digits to draw
+    n = FULL_STOP_UNICODE.index(int(glyph_name.split(".")[0][3:], 16))  # all glyph names starts with "uniXXXX"
+    d1 = n // 10  # tens digit
+    d2 = n % 10  # units digit
+
+    # Get the base . and its metrics
+    base_period = "period"
+    base_period_metrics = get_glyph_metrics(base_period, ufo_dir)
+
+    # Get the digits glyphs and their metrics
+    d1_glyph = DIGITS_NAMES_ENGLISH[d1]
+    d2_glyph = DIGITS_NAMES_ENGLISH[d2]
+    cv_list = find_cv_from_name(glyph_name)
+    for cv in cv_list:
+        if d1 != 0 and (str(d1) in DIGITS_CV_LIST) and (cv in DIGITS_CV_LIST[str(d1)]):
+            d1_glyph = d1_glyph + cv
+        if (str(d2) in DIGITS_CV_LIST) and (cv in DIGITS_CV_LIST[str(d2)]):
+            d2_glyph = d2_glyph + cv
+    ss_list = find_ss_from_name(glyph_name)   
+    for ss in ss_list:
+        if d1 != 0 and (str(d1) in DIGITS_SS_LIST) and (ss in DIGITS_SS_LIST[str(d1)]):
+            d1_glyph = d1_glyph + ss
+        if (str(d2) in DIGITS_SS_LIST) and (ss in DIGITS_SS_LIST[str(d2)]):
+            d2_glyph = d2_glyph + ss
+    d1_glyph_metrics = get_glyph_metrics(d1_glyph, ufo_dir)
+    d2_glyph_metrics = get_glyph_metrics(d2_glyph, ufo_dir)
+
+    # Start to build the xml (output)
+    xml_root = ET.Element("glyph", {"name": glyph_name, "format": "2"})
+    both_digits_length = (d1_glyph_metrics["glyph_width"] + d2_glyph_metrics["glyph_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
+    new_glyph_width = DEFAULT_KERN[weight] / 2 + both_digits_length + base_period_metrics["raw_width"] + DEFAULT_KERN[weight] - TWO_DIGITS_OVERLAP[weight]
+    ET.SubElement(xml_root, "advance", {"width": str(new_glyph_width)})  # glyph width
+    if len(cv_list) == 0 and len(ss_list) == 0:  # unicode value (if any)
+        unicode_value = FULL_STOP_UNICODE[n]
+        ET.SubElement(xml_root, "unicode", {"hex": hex(unicode_value).upper()[2:]})
+    
+    # Place the components
+    xml_outline = ET.SubElement(xml_root, "outline")
+    xp = new_glyph_width - base_period_metrics["left_kern"] - base_period_metrics["raw_width"] - DEFAULT_KERN[weight]
+    ET.SubElement(xml_outline, "component", {"base": base_period, "xOffset": str(int(xp)), "yOffset": "0"})
+    middle = (new_glyph_width - base_period_metrics["glyph_width"]) / 2 + DEFAULT_KERN[weight]
+    if d1 == 0:
+        x2 = middle - d2_glyph_metrics["glyph_width"] / 2 + DEFAULT_KERN[weight]
+        ET.SubElement(xml_outline, "component", {"base": d2_glyph, "xOffset": str(int(x2)), "yOffset": "0"})
+    else:
+        x1 = middle - both_digits_length / 2 + TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2
+        x2 = middle + both_digits_length / 2 - TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2 - d2_glyph_metrics["glyph_width"] * TWO_DIGITS_WIDTH_COEF[weight]
+        ET.SubElement(xml_outline, "component", {"base": d1_glyph, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x1)), "yOffset": "0"})
+        ET.SubElement(xml_outline, "component", {"base": d2_glyph, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x2)), "yOffset": "0"})
+
+    tree = ET.ElementTree(xml_root)
+    tree.write(get_glif_from_name(glyph_name, ufo_dir), encoding="UTF-8", xml_declaration=True)
+    return
+
+def build_parenthesized_number(glyph_name: str, weight: int, is_italic: bool, ufo_dir: str):
+    # Get the number and the digits to draw
+    n = PARENTHESIZED_UNICODE.index(int(glyph_name.split(".")[0][3:], 16))  # all glyph names starts with "uniXXXX"
+    d1 = n // 10  # tens digit
+    d2 = n % 10  # units digit
+
+    # Get the base () and its metrics
+    base_pl = "parenleft"
+    base_pr = "parenright"
+    base_pl_metrics = get_glyph_metrics(base_pl, ufo_dir)
+    base_pr_metrics = get_glyph_metrics(base_pr, ufo_dir)
+
+    # Get the digits glyphs and their metrics
+    d1_glyph = DIGITS_NAMES_ENGLISH[d1]
+    d2_glyph = DIGITS_NAMES_ENGLISH[d2]
+    cv_list = find_cv_from_name(glyph_name)
+    for cv in cv_list:
+        if d1 != 0 and (str(d1) in DIGITS_CV_LIST) and (cv in DIGITS_CV_LIST[str(d1)]):
+            d1_glyph = d1_glyph + cv
+        if (str(d2) in DIGITS_CV_LIST) and (cv in DIGITS_CV_LIST[str(d2)]):
+            d2_glyph = d2_glyph + cv
+    ss_list = find_ss_from_name(glyph_name)   
+    for ss in ss_list:
+        if d1 != 0 and (str(d1) in DIGITS_SS_LIST) and (ss in DIGITS_SS_LIST[str(d1)]):
+            d1_glyph = d1_glyph + ss
+        if (str(d2) in DIGITS_SS_LIST) and (ss in DIGITS_SS_LIST[str(d2)]):
+            d2_glyph = d2_glyph + ss
+    d1_glyph_metrics = get_glyph_metrics(d1_glyph, ufo_dir)
+    d2_glyph_metrics = get_glyph_metrics(d2_glyph, ufo_dir)
+
+    # Start to build the xml (output)
+    xml_root = ET.Element("glyph", {"name": glyph_name, "format": "2"})
+    both_digits_length = (d1_glyph_metrics["glyph_width"] + d2_glyph_metrics["glyph_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
+    new_glyph_width = (base_pl_metrics["raw_width"] + base_pr_metrics["raw_width"]) * TWO_DIGITS_WIDTH_COEF[weight] + both_digits_length - TWO_DIGITS_OVERLAP[weight]
+    ET.SubElement(xml_root, "advance", {"width": str(new_glyph_width)})  # glyph width
+    if len(cv_list) == 0 and len(ss_list) == 0:  # unicode value (if any)
+        unicode_value = PARENTHESIZED_UNICODE[n]
+        ET.SubElement(xml_root, "unicode", {"hex": hex(unicode_value).upper()[2:]})
+
+    # Place the components
+    xml_outline = ET.SubElement(xml_root, "outline")
+    xl = DEFAULT_KERN[weight] - base_pl_metrics["left_kern"] * TWO_DIGITS_WIDTH_COEF[weight]
+    xr = new_glyph_width - DEFAULT_KERN[weight] - (base_pr_metrics["left_kern"] + base_pr_metrics["raw_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
+    ET.SubElement(xml_outline, "component", {"base": base_pl, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(xl)), "yOffset": "0"})
+    ET.SubElement(xml_outline, "component", {"base": base_pr, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(xr)), "yOffset": "0"})
+    if d1 == 0:
+        x2 = DEFAULT_KERN[weight] + ((new_glyph_width - 2*DEFAULT_KERN[weight]) - d2_glyph_metrics["glyph_width"]) * 0.5
+        ET.SubElement(xml_outline, "component", {"base": d2_glyph, "xOffset": str(int(x2)), "yOffset": "0"})
+    else:
+        middle = new_glyph_width / 2
+        x1 = middle - both_digits_length / 2 + TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2
+        x2 = middle + both_digits_length / 2 - TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] / 2 - d2_glyph_metrics["glyph_width"] * TWO_DIGITS_WIDTH_COEF[weight]
+        ET.SubElement(xml_outline, "component", {"base": d1_glyph, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x1)), "yOffset": "0"})
+        ET.SubElement(xml_outline, "component", {"base": d2_glyph, "xScale": str(TWO_DIGITS_WIDTH_COEF[weight]), "xOffset": str(int(x2)), "yOffset": "0"})
+
+    # Save
+    tree = ET.ElementTree(xml_root)
+    tree.write(get_glif_from_name(glyph_name, ufo_dir), encoding="UTF-8", xml_declaration=True)
+    return
+
+def build_small_digit(glyph_name: str, weight: int, is_italic: bool, ufo_dir: str, type: str):
+    """
+    type: one of the following : "superior", "subscript", "numr", "dnom"
+    """
+    assert type in ["superior", "subscript", "numr", "dnom"]
+    
+    # Read parameters
+    is_pnum = ".pnum" in glyph_name
+    is_tnum = ".tnum" in glyph_name
+
+    # Find the glyph to draw and its metrics
+    base_glyph = glyph_name.split(".")[0]
+    cv_list = find_cv_from_name(glyph_name)
+    if len(cv_list) >= 1:
+        base_glyph += cv_list[0]
+    ss_list = find_ss_from_name(glyph_name)
+    if len(ss_list) >= 1:
+        base_glyph += ss_list[0]
+    base_glyph += ".superior"
+    base_metrics = get_glyph_metrics(base_glyph, ufo_dir)
+
+    # Start to build the xml (output)
+    xml_root = ET.Element("glyph", {"name": glyph_name, "format": "2"})
+
+    # Calculate x offset and width
+    x_offset = 0
+    width = 0
+    if is_pnum:
+        if "one" in base_glyph:
+            x_offset = PNUM_SUPS_KERN[weight]["1"][0] - base_metrics["left_kern"]
+            width = PNUM_SUPS_KERN[weight]["1"][0] + base_metrics["raw_width"] + PNUM_SUPS_KERN[weight]["1"][1]
+        else:
+            x_offset = PNUM_SUPS_KERN[weight]["other"][0] - base_metrics["left_kern"]
+            width = PNUM_SUPS_KERN[weight]["other"][0] + base_metrics["raw_width"] + PNUM_SUPS_KERN[weight]["other"][1]
+        if is_italic:
+            x_offset += tan(ITALIC_SLANT) * SUPS_HEIGHT / 2
+            width -= tan(ITALIC_SLANT) * SUPS_HEIGHT / 2
+    elif is_tnum:
+        width = TNUM_WIDTH[weight]
+        additional_kern = width - base_metrics["glyph_width"]
+        x_offset = int(base_metrics["left_kern"] + additional_kern / 2 + ITALIC_X_OFFSET)
+    else:    
+        x_offset = 0
+        width = base_metrics["glyph_width"]
+
+    # Add more x offset if italic (none if superior) as we move the glyph only below
+    if is_italic:
+        if type == "subscript":
+            x_offset -= abs(SUPS_Y - SUBS_Y) / tan(pi/2-ITALIC_SLANT)
+        elif type == "numr":
+            x_offset -= abs(SUPS_Y - NUMR_Y) / tan(pi/2-ITALIC_SLANT)
+        elif type == "dnom":
+            x_offset -= abs(SUPS_Y - DNOM_Y) / tan(pi/2-ITALIC_SLANT)
+
+    # Calculate the y position
+    y_offset = 0  # value for superior
+    if type == "subscript":
+        y_offset = SUBS_Y - SUPS_Y
+    elif type == "numr":
+        y_offset = NUMR_Y - SUPS_Y
+    elif type == "dnom":
+        y_offset = DNOM_Y - SUPS_Y
+    
+    # Build the xml and place components
+    ET.SubElement(xml_root, "advance", {"width": str(width)})
+    if type == "superior" and len(cv_list) == 0 and len(ss_list) == 0 and not is_pnum and not is_tnum:  # add unicode if any
+        ET.SubElement(xml_root, "unicode", {"hex": hex(SUPERIOR_UNICODE[DIGITS_NAMES_ENGLISH.index(glyph_name.split(".")[0])]).upper()[2:]})
+    elif type == "subscript" and len(cv_list) == 0 and len(ss_list) == 0 and not is_pnum and not is_tnum:
+        ET.SubElement(xml_root, "unicode", {"hex": hex(SUBSCRIPT_UNICODE[DIGITS_NAMES_ENGLISH.index(glyph_name.split(".")[0])]).upper()[2:]})
+    xml_outline = ET.SubElement(xml_root, "outline")
+    ET.SubElement(xml_outline, "component", {"base": base_glyph, "xOffset": str(int(x_offset)), "yOffset": str(int(y_offset))})
+
+    # Save
+    tree = ET.ElementTree(xml_root)
+    tree.write(get_glif_from_name(glyph_name, ufo_dir), encoding="UTF-8", xml_declaration=True)
+    return
+
+def find_cv_from_name(glyph_name: str):
+    """
+    Returns cv styles used in the glyph (from the name)
+    """
+    # Get the list of all available character variants
+    all_cv_list = []
+    for digit in DIGITS_CV_LIST:
+        all_cv_list += DIGITS_CV_LIST[digit]
+
+    glyph_cv_list = []
+    for e in glyph_name.split(".")[1:]:
+        if "." + e in all_cv_list:
+            glyph_cv_list.append("." + e)
+    
+    return glyph_cv_list
+
+def find_ss_from_name(glyph_name: str):
+    """
+    Returns stylistic sets used in the glyph (from the name)
+    """
+    # Get the list of all available character variants
+    all_ss_list = []
+    for digit in DIGITS_SS_LIST:
+        all_ss_list += DIGITS_SS_LIST[digit]
+
+    glyph_ss_list = []
+    for e in glyph_name.split(".")[1:]:
+        if "." + e in all_ss_list:
+            glyph_ss_list.append("." + e)
+    
+    return glyph_ss_list
+
+def get_glyph_list():
+    """
+    Generate the full list of glyphs to generate within this script.
+
+    Returns an array with the name of each glyph.
+    """
+
+    glyph_list = []
+
+    # sups/subs/numr/dnom
+    for n in range(10):
+        for cv in [""] + (DIGITS_CV_LIST[str(n)] if str(n) in DIGITS_CV_LIST else []):
+            for ss in [""] + (DIGITS_SS_LIST[str(n)] if str(n) in DIGITS_SS_LIST else []):
+                for ssnd in [".superior", ".subscript", ".numr", ".dnom"]:
+                    for _pt in ["", ".pnum", ".tnum"]:
+                        if not(ssnd == ".superior" and _pt == ""):
+                            glyph_list.append(DIGITS_NAMES_ENGLISH[n] + cv + ss + ssnd + _pt)
+            
+    # 1 digit circled/parenthesized/full_stop/black_circle/double_circle (0-9 ; 11)
+    for n in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11]:
+        for cv in [""] + (DIGITS_CV_LIST[str(n%10)] if str(n%10) in DIGITS_CV_LIST else []):
+            for ss in [""] + (DIGITS_SS_LIST[str(n%10)] if str(n%10) in DIGITS_SS_LIST else []):
+                glyph_list.append(f"uni{str(hex(CIRCLED_UNICODE[n]).upper()[2:])}" + cv + ss)
+                if n >= 1:
+                    glyph_list.append(f"uni{str(hex(PARENTHESIZED_UNICODE[n]).upper()[2:])}" + cv + ss)
+                    glyph_list.append(f"uni{str(hex(FULL_STOP_UNICODE[n]).upper()[2:])}" + cv + ss)
+                glyph_list.append(f"uni{str(hex(BLACK_CIRCLE_UNICODE[n]).upper()[2:])}" + cv + ss)
+                if n >= 1 and n <= 10:
+                    glyph_list.append(f"uni{str(hex(DOUBLE_CIRCLE_UNICODE[n]).upper()[2:])}" + cv + ss)
+
+    # 2 digit circled/parenthesized/full_stop/black_circle/double_circle (10 ; 12-20)
+    for n in [10, 12, 13, 14, 15, 16, 17, 18, 19, 20]:
+        d1 = n // 10
+        d2 = n % 10
+        for cv1 in [""] + (DIGITS_CV_LIST[str(d1)] if str(d1) in DIGITS_CV_LIST else []):
+            for cv2 in [""] + (DIGITS_CV_LIST[str(d2)] if str(d2) in DIGITS_CV_LIST else []):
+                cv1_temp, cv2_temp = cv1, cv2
+                if cv1 != "" and cv2 != "" and int(cv1[3:]) > int(cv2[3:]):  # swap if needed because all cv must be in ascending order
+                    cv1_temp, cv2_temp = cv2, cv1
+                for ss1 in [""] + (DIGITS_SS_LIST[str(d1)] if str(d1) in DIGITS_SS_LIST else []):
+                    for ss2 in [""] + (DIGITS_SS_LIST[str(d2)] if str(d2) in DIGITS_SS_LIST else []):
+                        # ss1 and ss2 would be swapped for 71, 01 and 07 (not possible)
+                        glyph_list.append(f"uni{str(hex(CIRCLED_UNICODE[n]).upper()[2:])}" + cv1_temp + cv2_temp + ss1 + ss2)
+                        glyph_list.append(f"uni{str(hex(PARENTHESIZED_UNICODE[n]).upper()[2:])}" + cv1_temp + cv2_temp + ss1 + ss2)
+                        glyph_list.append(f"uni{str(hex(FULL_STOP_UNICODE[n]).upper()[2:])}" + cv1_temp + cv2_temp + ss1 + ss2)
+                        glyph_list.append(f"uni{str(hex(BLACK_CIRCLE_UNICODE[n]).upper()[2:])}" + cv1_temp + cv2_temp + ss1 + ss2)
+                        if n == 10:
+                            glyph_list.append(f"uni{str(hex(DOUBLE_CIRCLE_UNICODE[n]).upper()[2:])}" + cv1_temp + cv2_temp + ss1 + ss2)
+
+    # Fraction 1/ (uni215F)
+    for cv in [""] + (DIGITS_CV_LIST["1"] if "1" in DIGITS_CV_LIST else []):
+        for ss in [""] + (DIGITS_SS_LIST["1"] if "1" in DIGITS_SS_LIST else []):
+            glyph_list.append(f"uni215F" + cv + ss)
+    
+    # Fraction 1/10 (uni2152)
+    for cv1 in [""] + (DIGITS_CV_LIST["1"] if "1" in DIGITS_CV_LIST else []):
+        for cv0 in [""] + (DIGITS_CV_LIST["0"] if "0" in DIGITS_CV_LIST else []):
+            cv1_temp, cv2_temp = cv1, cv0
+            if cv1 != "" and cv0 != "" and int(cv1[3:]) > int(cv0[3:]):  # swap if needed because all cv must be in ascending order
+                cv1_temp, cv2_temp = cv0, cv1
+            for ss1 in [""] + (DIGITS_SS_LIST["1"] if "1" in DIGITS_SS_LIST else []):
+                for ss0 in [""] + (DIGITS_SS_LIST["0"] if "0" in DIGITS_SS_LIST else []):
+                    glyph_list.append(f"uni2152" + cv1_temp + cv2_temp + ss1 + ss0)
+
+    # Other fractions
+    for fraction_name in FRACTIONS_DIGITS:
+        if not fraction_name in ["uni2152", "uni215F"]:  # ignore 1/ and 1/10 (done earlier)
+            n = FRACTIONS_DIGITS[fraction_name][0]
+            d = FRACTIONS_DIGITS[fraction_name][1]
+            for cv1 in [""] + (DIGITS_CV_LIST[str(n)] if str(n) in DIGITS_CV_LIST else []):
+                for cv2 in [""] + (DIGITS_CV_LIST[str(d)] if str(d) in DIGITS_CV_LIST else []):
+                    cv1_temp, cv2_temp = cv1, cv2
+                    if cv1 != "" and cv2 != "" and int(cv1[3:]) > int(cv2[3:]):  # swap if needed because all cv must be in ascending order
+                        cv1_temp, cv2_temp = cv2, cv1
+                    for ss1 in [""] + (DIGITS_SS_LIST[str(n)] if str(n) in DIGITS_SS_LIST else []):
+                        for ss2 in [""] + (DIGITS_SS_LIST[str(d)] if str(d) in DIGITS_SS_LIST else []):
+                            # ss1 and ss2 would be swapped for 7/1, 0/1 and 0/7 (not possible)
+                            glyph_list.append(fraction_name + cv1_temp + cv2_temp + ss1 + ss2)
+
+    return glyph_list
 
 def main():
     if len(sys.argv) < 3:
         print(f"{sys.argv[0]}: Not enough parameters.")
-        print(f"Usage: {sys.argv[0]} <weight> <ufo_directory>")
+        print(f"Usage: {sys.argv[0]} <weight> <ufo_directory> [<glyph_name>]")
+        print(f"* weight can be either '100', '400' or '1000', can be followed by a 'i' for italics (for example '400i')")
+        print("If a glyph name isn't provided, all glyphs supported by the script of the font will be built.")
+        return
+    
+    # Read parameters
+    weight = sys.argv[1]
+    ufo_dir = sys.argv[2] 
+
+    # Get weight and is_italic parameters
+    is_italic = weight[-1] == "i"
+    if is_italic:  # remove the "i" at the end
+        weight = weight[:-1]
+
+    # Get the list of glyphs to generate
+    glyph_list = []
+    if len(sys.argv) > 3:
+        glyph_list.append(sys.argv[3])
     else:
-        build_weight(sys.argv[1], sys.argv[2])
-        print("Done.")
+        glyph_list = get_glyph_list()
+
+    # Generate each glyphs
+    nb_glyphs = len(glyph_list)
+    if USE_MULTITHREADING:
+        processes = [ Process(target=build_single_glyph, args=(glyph_list[i], weight, is_italic, ufo_dir, i, nb_glyphs)) for i in range(nb_glyphs) ]
+        # start all processes
+        for process in processes:
+            process.start()
+        # wait for all processes to complete
+        for process in processes:
+            process.join()
+    else:  # single thread (recommended for debug)
+        for index, glyph_name in enumerate(glyph_list, start=1):
+            build_single_glyph(glyph_name, weight, is_italic, ufo_dir, index, nb_glyphs)
+
+def build_single_glyph(glyph_name, weight, is_italic, ufo_dir, index, nb_glyphs):
+    """
+    Sub-process of main() supposed to work in parallel which read a line of glyph_list.
+    Returns nothing.
+    """
+
+    # Display
+    sys.stdout.write('\033[2K\033[1G')
+    print(f"[{index+1}/{nb_glyphs} ({int((index+1)/nb_glyphs*100)}%)] Working on {glyph_name}...", end="\r")
+
+    # Create the glyph
+    base_name = glyph_name.split(".")[0]
+    if ".superior" in glyph_name:
+        build_small_digit(glyph_name, weight, is_italic, ufo_dir, "superior")
+    elif ".subscript" in glyph_name:
+        build_small_digit(glyph_name, weight, is_italic, ufo_dir, "subscript")
+    elif ".numr" in glyph_name:
+        build_small_digit(glyph_name, weight, is_italic, ufo_dir, "numr")
+    elif ".dnom" in glyph_name:
+        build_small_digit(glyph_name, weight, is_italic, ufo_dir, "dnom")
+    elif base_name in FRACTIONS_UNICODE:
+        build_fraction(glyph_name, weight, is_italic, ufo_dir)
+    # from this point we're sure the glyph name starts by "uniXXXX"
+    try:
+        int(base_name[3:], 16)
+    except:
+        print(f"{sys.argv[0]}: I don't know how to build {glyph_name}")
+    else:
+        if int(base_name[3:], 16) in CIRCLED_UNICODE:
+            build_circled_number(glyph_name, weight, is_italic, ufo_dir, "circle")
+        elif int(base_name[3:], 16) in BLACK_CIRCLE_UNICODE:
+            build_circled_number(glyph_name, weight, is_italic, ufo_dir, "black_circle")
+        elif int(base_name[3:], 16) in DOUBLE_CIRCLE_UNICODE:
+            build_circled_number(glyph_name, weight, is_italic, ufo_dir, "double_circle")
+        elif int(base_name[3:], 16) in PARENTHESIZED_UNICODE:
+            build_parenthesized_number(glyph_name, weight, is_italic, ufo_dir)
+        elif int(base_name[3:], 16) in FULL_STOP_UNICODE:
+            build_full_stop_number(glyph_name, weight, is_italic, ufo_dir)
+        else:
+            print(f"{sys.argv[0]}: I don't know how to build {glyph_name}")
+
+    return
 
 if __name__ == "__main__":
     main()
