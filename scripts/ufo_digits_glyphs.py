@@ -29,7 +29,7 @@ from ufo_utils import *
 import xml.etree.ElementTree as ET
 
 # Performances settings
-USE_MULTITHREADING = False
+USE_MULTITHREADING = True
 
 # Script constants
 
