@@ -35,30 +35,6 @@ USE_MULTITHREADING = True
 
 DIGITS_NAMES_ENGLISH = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 
-UNICODE_VALUES = {  # index = number
-    "subscript": [ 0x2080 + i for i in range(10) ],
-    "circle": [ 0x24EA ] + [ 0x2460 + i for i in range(20) ],
-    "black_circle": [ 0x24FF ] + [ 0x2776 + i for i in range(10) ] + [ 0x24EB + i for i in range(10) ],
-    "double_circle": [ -1 ] + [ 0x24F5 + i for i in range(10) ],
-    "parenthezed": [ -1 ] + [ 0x2474 + i for i in range(20) ],
-    "full_stop": [ -1 ] + [ 0x2488 + i for i in range(20) ],
-    "frac": [  # [dnom][numr]
-        #  0/     1/     2/     3/     4/     5/     6/     7/     8/     9/
-        [  -1  ,0x215F,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ],  # /0 (nothing)
-        [  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ],  # /1
-        [  -1  ,0x00BD,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ],  # /2
-        [0x2189,0x2153,0x2154,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ],  # /3
-        [  -1  ,0x00BC,  -1  ,0x00BE,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ],  # /4
-        [  -1  ,0x2155,0x2156,0x2157,0x2158,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ],  # /5
-        [  -1  ,0x2159,  -1  ,  -1  ,  -1  ,0x215A,  -1  ,  -1  ,  -1  ,  -1  ],  # /6
-        [  -1  ,0x2150,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ],  # /7
-        [  -1  ,0x215B,  -1  ,0x215C,  -1  ,0x215D,  -1  ,0x215E,  -1  ,  -1  ],  # /8
-        [  -1  ,0x2151,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ],  # /9
-        [  -1  ,0x2152,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ,  -1  ]   # /10
-        #  0/     1/     2/     3/     4/     5/     6/     7/     8/     9/
-    ]
-}
-
 # {"number_0-9": list_of_available_cv}
 # CAUTION: must start by 
 DIGITS_CV_LIST = {
@@ -334,18 +310,8 @@ def build_fraction(glyph_name: str, weight: int, is_italic: bool, ufo_dir: str):
     # Begin the XML file
     xml_root = ET.Element("glyph", {"name": glyph_name, "format": "2"})
 
-    # Advance value calculation (entire glyph width)
-    advance = n0_glyph_metrics["glyph_width"] + base_frac_metrics["glyph_width"] - FRAC_BAR_OVERLAP  # numr + bar
-    if d0_glyph is not None:  # dnom (hide if 0)
-        if dnom_value >= 10:  # 1/10
-            advance += d1_glyph_metrics["left_kern"] + d1_glyph_metrics["raw_width"] - FRAC_BAR_OVERLAP + d0_glyph_metrics["glyph_width"]
-            if is_italic:
-                advance -= d1_glyph_metrics["right_kern"] + d0_glyph_metrics["left_kern"]
-            if not ".ss06" in d1_glyph:  # add extra kern if there isn't a bar under the digit 1
-                advance += d0_glyph_metrics["left_kern"]
-        else:
-            advance += d0_glyph_metrics["glyph_width"] - FRAC_BAR_OVERLAP
-    ET.SubElement(xml_root, "advance", {"width": str(int(advance))})
+    # Advance value calculation XML calculated after building the glyph
+    ET.SubElement(xml_root, "advance", {"width": str(int(0))})
     
     # Unicode value calculation
     if len(cv_list) == 0 and len(ss_list) == 0:
@@ -363,26 +329,31 @@ def build_fraction(glyph_name: str, weight: int, is_italic: bool, ufo_dir: str):
     xf = n0_glyph_metrics["glyph_width"] - FRAC_BAR_OVERLAP
     ET.SubElement(xml_outline, "component", {"base": base_frac, "xOffset": str(int(xf)), "yOffset": "0"})
 
-    # Place the denominator$
+    # Place the denominator and advance calculation
     if d0_glyph is not None:  # no denominator for "1/0"
-        yd =  DNOM_Y - SUPS_Y
+        yd = DNOM_Y - SUPS_Y
         if d1_glyph is not None:
             xd1 = xf + base_frac_metrics["glyph_width"] - FRAC_BAR_OVERLAP
-            xd0 = xd1 + d1_glyph_metrics["left_kern"] + d1_glyph_metrics["raw_width"]
-            if not "ss06" in d1_glyph:  # add extra kern if there isn't a bar under the digit 1
-                xd0 += d0_glyph_metrics["left_kern"]
+            kern_d1_d0 = PNUM_SUPS_KERN[weight]["1"][1] if d1 == 0 else PNUM_SUPS_KERN[weight]["other"][1]
+            kern_d1_d0 += PNUM_SUPS_KERN[weight]["1"][0] if d0 == 0 else PNUM_SUPS_KERN[weight]["other"][0]
+            xd0 = xd1 + d1_glyph_metrics["left_kern"] + d1_glyph_metrics["raw_width"] + kern_d1_d0 - d0_glyph_metrics["left_kern"]
+            if ".ss06" in d1_glyph:  # if 1 has a bar below, add some kern
+                xd0 += -81
             if is_italic:
                 xd1 -= abs(yd) / tan(pi/2-ITALIC_SLANT)
                 xd0 -= abs(yd) / tan(pi/2-ITALIC_SLANT)
-                xd0 -= d1_glyph_metrics["right_kern"] + d0_glyph_metrics["left_kern"]
             ET.SubElement(xml_outline, "component", {"base": d1_glyph, "xOffset": str(int(xd1)), "yOffset": str(int(yd))})
             ET.SubElement(xml_outline, "component", {"base": d0_glyph, "xOffset": str(int(xd0)), "yOffset": str(int(yd))})
+            xml_root.find("advance").attrib["width"] = str(int(xd0 + d0_glyph_metrics["glyph_width"] + (abs(yd) / tan(pi/2-ITALIC_SLANT) if is_italic else 0)))
         else:
             xd0 = xf + base_frac_metrics["glyph_width"] - FRAC_BAR_OVERLAP
             if is_italic:
                 xd0 -= abs(yd) / tan(pi/2-ITALIC_SLANT)
             ET.SubElement(xml_outline, "component", {"base": d0_glyph, "xOffset": str(int(xd0)), "yOffset": str(int(yd))})
-    
+            xml_root.find("advance").attrib["width"] = str(int(xd0 + d0_glyph_metrics["glyph_width"] + (abs(yd) / tan(pi/2-ITALIC_SLANT) if is_italic else 0)))
+    else:
+        xml_root.find("advance").attrib["width"] = str(int(xf + base_frac_metrics["glyph_width"]))
+
     # Save
     tree = ET.ElementTree(xml_root)
     tree.write(get_glif_from_name(glyph_name, ufo_dir), encoding="UTF-8", xml_declaration=True)
