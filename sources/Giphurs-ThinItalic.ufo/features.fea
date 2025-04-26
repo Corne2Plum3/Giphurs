@@ -4484,8 +4484,8 @@ lookup ccmp_latn {
     sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
-    sub \i \uni0307  by \idieresis;
     sub \i \uni0308  by \idieresis;
+    sub \i \uni0307  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
@@ -4544,8 +4544,8 @@ lookup ccmp_latn {
     sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \i \uni0328  by \iogonek;
     sub \iogonek \gravecomb  by \iogonek;
+    sub \i \uni0328  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4634,13 +4634,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \A \uni030A \acutecomb  by \uni01DC;
-    sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni0308 \uni0304  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \Oslash \acutecomb  by \uni01E0;
+    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5595,8 +5595,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0456 \uni0307  by \uni0457;
+    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -8850,7 +8850,7 @@ lookup mark_Mark_positioning {
   pos base [\AE \uni04D4 ] <anchor 880 0> mark @bottom_center
 	<anchor 1431 1380> mark @top_center;
   pos base [\ae \uni04D5 \ae.cv23 \uni04D5.cv23 ] <anchor 1003 1040> mark @top_center;
-  pos base [\oslash \uni028A \sigma1 \uni03DB \uni0454 \uni04D9 \uni04E9 ] <anchor 631 1040> mark @top_center
+  pos base [\oslash \uni028A \sigma1 \uni03DB \uni0432 \uni0454 \uni04D9 \uni04E9 ] <anchor 631 1040> mark @top_center
 	<anchor 448 0> mark @bottom_center;
   pos base [\Aogonek ] <anchor 1031 -20> mark @bottom_cedilla
 	<anchor 509 -90> mark @bottom_ypogegrammeni
@@ -9159,7 +9159,7 @@ lookup mark_Mark_positioning {
 	<anchor 367 0> mark @bottom_center;
   pos base [\uni0264 ] <anchor 728 1040> mark @top_center
 	<anchor 545 0> mark @bottom_center;
-  pos base [\uni0265 \uni028B \uni029C \uni043F \uni0438 \uni043D \uni0446 ] <anchor 620 1040> mark @top_center
+  pos base [\uni0265 \uni028B \uni029C \uni043D \uni0446 ] <anchor 620 1040> mark @top_center
 	<anchor 437 0> mark @bottom_center;
   pos base [\uni0268 ] <anchor 134 -20> mark @bottom_cedilla
 	<anchor 160 0> mark @bottom_right
@@ -9184,7 +9184,7 @@ lookup mark_Mark_positioning {
 	<anchor 1033 1040> mark @top_right
 	<anchor 862 -30> mark @bottom_right
 	<anchor 453 -10> mark @bottom_cedilla;
-  pos base [\uni0299 \uni0432 ] <anchor 353 0> mark @bottom_center
+  pos base [\uni0299 ] <anchor 353 0> mark @bottom_center
 	<anchor 536 1040> mark @top_center;
   pos base [\uni0394 ] <anchor 828 1380> mark @top_center
 	<anchor 585 0> mark @bottom_center;
@@ -9292,40 +9292,36 @@ lookup mark_Mark_positioning {
   pos base [\uni040E \uni04EE \uni04F2 ] <anchor 766 1716> mark @top_center;
   pos base [\uni0431 ] <anchor 695 1400> mark @top_center
 	<anchor 448 0> mark @bottom_center;
-  pos base [\uni0433 ] <anchor 358 0> mark @bottom_center
-	<anchor 541 1040> mark @top_center;
   pos base [\uni043C ] <anchor 495 0> mark @bottom_center
 	<anchor 678 1040> mark @top_center;
-  pos base [\uni0442 ] <anchor 599 1040> mark @top_center
-	<anchor 416 0> mark @bottom_center;
-  pos base [\uni0444 ] <anchor 760 1400> mark @top_center
-	<anchor 450 -360> mark @bottom_center;
+  pos base [\uni0444 ] <anchor 1067 1400> mark @top_center
+	<anchor 757 -360> mark @bottom_center;
   pos base [\uni044D ] <anchor 576 1040> mark @top_center
 	<anchor 393 0> mark @bottom_center;
   pos base [\uni044F ] <anchor 348 0> mark @bottom_center
 	<anchor 531 1040> mark @top_center;
-  pos base [\uni0439 \uni045D \uni04E3 ] <anchor 437 0> mark @bottom_center
-	<anchor 680 1376> mark @top_center;
   pos base [\uni0448 \uni0449 ] <anchor 604 0> mark @bottom_center
 	<anchor 787 1040> mark @top_center;
   pos base [\uni044E ] <anchor 814 1040> mark @top_center
 	<anchor 631 0> mark @bottom_center;
   pos base [\uni0447 ] <anchor 402 0> mark @bottom_center
 	<anchor 585 1040> mark @top_center;
-  pos base [\uni044A ] <anchor 469 0> mark @bottom_center
+  pos base [\uni044A ] <anchor 514 0> mark @bottom_center
 	<anchor 372 1040> mark @top_center;
-  pos base [\uni044C ] <anchor 353 0> mark @bottom_center
+  pos base [\uni044C ] <anchor 398 0> mark @bottom_center
 	<anchor 256 1040> mark @top_center;
-  pos base [\uni044B ] <anchor 683 1040> mark @top_center
-	<anchor 500 0> mark @bottom_center;
-  pos base [\uni0436 ] <anchor 587 0> mark @bottom_center
-	<anchor 770 1040> mark @top_center;
-  pos base [\uni0434 ] <anchor 635 1040> mark @top_center
-	<anchor 452 0> mark @bottom_center;
+  pos base [\uni044B ] <anchor 691 1040> mark @top_center
+	<anchor 508 0> mark @bottom_center;
+  pos base [\uni0436 ] <anchor 686 0> mark @bottom_center
+	<anchor 869 1040> mark @top_center;
+  pos base [\uni0434 ] <anchor 462 0> mark @bottom_center
+	<anchor 705 1380> mark @top_center;
   pos base [\uni0453 ] <anchor 358 0> mark @bottom_center
 	<anchor 601 1376> mark @top_center;
   pos base [\uni045C ] <anchor 427 0> mark @bottom_center
 	<anchor 670 1376> mark @top_center;
+  pos base [\uni045D \uni04E3 ] <anchor 437 0> mark @bottom_center
+	<anchor 680 1376> mark @top_center;
   pos base [\uni0474 ] <anchor 808 1380> mark @top_center
 	<anchor 525 0> mark @bottom_center;
   pos base [\uni0475 ] <anchor 618 1040> mark @top_center

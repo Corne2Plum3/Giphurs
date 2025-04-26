@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni0439" format="2">
-  <advance width="1134"/>
+  <advance width="500"/>
   <unicode hex="0439"/>
-  <anchor x="437" y="0" name="bottom_center"/>
-  <anchor x="680" y="1376" name="top_center"/>
   <outline>
-    <component base="uni0438"/>
-    <component base="uni0306" xOffset="-205"/>
+    <contour>
+      <point x="122" y="108" type="curve" smooth="yes"/>
+      <point x="122" y="180"/>
+      <point x="178" y="236"/>
+      <point x="250" y="236" type="curve" smooth="yes"/>
+      <point x="322" y="236"/>
+      <point x="378" y="180"/>
+      <point x="378" y="108" type="curve" smooth="yes"/>
+      <point x="378" y="36"/>
+      <point x="322" y="-20"/>
+      <point x="250" y="-20" type="curve" smooth="yes"/>
+      <point x="178" y="-20"/>
+      <point x="122" y="36"/>
+    </contour>
   </outline>
 </glyph>
