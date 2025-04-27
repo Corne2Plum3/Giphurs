@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<?xml version='1.0' encoding='UTF-8'?>
 <plist version="1.0">
   <dict>
     <key>familyName</key>
@@ -32,7 +31,7 @@
     <string>2023-01-20: Finally found a name for the font lol
 2022-06-21: Created with FontForge (http://fontforge.org)</string>
     <key>openTypeHeadCreated</key>
-    <string>2025/04/26 18:43:25</string>
+    <string>2025/04/27 16:27:46</string>
     <key>openTypeHheaAscender</key>
     <integer>2048</integer>
     <key>openTypeHheaDescender</key>
@@ -57,7 +56,7 @@
       <integer>0</integer>
     </array>
     <key>openTypeOS2Type</key>
-    <array/>
+    <array />
     <key>openTypeOS2TypoAscender</key>
     <integer>2048</integer>
     <key>openTypeOS2TypoDescender</key>
@@ -101,6 +100,14 @@
     </array>
     <key>guidelines</key>
     <array>
+      <dict>
+        <key>x</key>
+        <real>1024</real>
+        <key>y</key>
+        <real>412.967</real>
+        <key>angle</key>
+        <real>0</real>
+      </dict>
       <dict>
         <key>x</key>
         <real>1024</real>
@@ -430,5 +437,5 @@
         <real>0</real>
       </dict>
     </array>
-  </dict>
+  <key>openTypeOS2Selection</key><array><integer>7</integer></array></dict>
 </plist>

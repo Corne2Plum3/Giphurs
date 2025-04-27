@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni0438" format="2">
-  <advance width="1134"/>
+  <advance width="1152"/>
   <unicode hex="0438"/>
-  <anchor x="620" y="1040" name="top_center"/>
-  <anchor x="437" y="0" name="bottom_center"/>
+  <anchor x="423" y="-10" name="bottom_cedilla"/>
+  <anchor x="832" y="-30" name="bottom_right"/>
+  <anchor x="1003" y="1040" name="top_right"/>
+  <anchor x="618" y="1040" name="top_center"/>
+  <anchor x="435" y="0" name="bottom_center"/>
   <outline>
-    <contour>
-      <point x="962" y="1040" type="line"/>
-      <point x="108" y="72" type="line"/>
-      <point x="278" y="1040" type="line"/>
-      <point x="233" y="1040" type="line"/>
-      <point x="50" y="0" type="line"/>
-      <point x="95" y="0" type="line"/>
-      <point x="950" y="968" type="line"/>
-      <point x="779" y="0" type="line"/>
-      <point x="824" y="0" type="line"/>
-      <point x="1007" y="1040" type="line"/>
-    </contour>
+    <component base="u"/>
   </outline>
 </glyph>

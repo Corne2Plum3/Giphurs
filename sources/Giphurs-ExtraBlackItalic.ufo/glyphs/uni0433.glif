@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni0433" format="2">
-  <advance width="979"/>
+  <advance width="1066"/>
   <unicode hex="0433"/>
-  <anchor x="360" y="0" name="bottom_center"/>
-  <anchor x="543" y="1040" name="top_center"/>
+  <anchor x="590" y="1040" name="top_center"/>
+  <anchor x="407" y="0" name="bottom_center"/>
   <outline>
-    <contour>
-      <point x="-60" y="0" type="line"/>
-      <point x="123" y="1040" type="line"/>
-      <point x="962" y="1040" type="line"/>
-      <point x="906" y="720" type="line"/>
-      <point x="427" y="720" type="line"/>
-      <point x="300" y="0" type="line"/>
-    </contour>
+    <component base="uni01A8"/>
   </outline>
 </glyph>

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni045D" format="2">
-  <advance width="1195"/>
+  <advance width="1192"/>
   <unicode hex="045D"/>
-  <anchor x="467" y="0" name="bottom_center"/>
-  <anchor x="710" y="1376" name="top_center"/>
+  <anchor x="366" y="-20" name="bottom_cedilla"/>
+  <anchor x="1175" y="1040" name="top_right"/>
+  <anchor x="466" y="0" name="bottom_center"/>
+  <anchor x="1016" y="0" name="bottom_right"/>
+  <anchor x="709" y="1376" name="top_center"/>
   <outline>
     <component base="uni0438"/>
-    <component base="gravecomb" xOffset="-175"/>
+    <component base="gravecomb" xOffset="-176"/>
   </outline>
 </glyph>
