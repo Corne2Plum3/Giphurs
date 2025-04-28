@@ -9002,7 +9002,7 @@ lookup mark_Mark_positioning {
 	<anchor 281 0> mark @bottom_center
 	<anchor 305 0> mark @bottom_right
 	<anchor 276 -20> mark @bottom_cedilla;
-  pos base [\uni019C \uniA7B6 ] <anchor 962 1380> mark @top_center
+  pos base [\uni019C ] <anchor 962 1380> mark @top_center
 	<anchor 719 0> mark @bottom_center;
   pos base [\uni019D ] <anchor 881 1380> mark @top_center;
   pos base [\uni019F ] <anchor 870 1380> mark @top_center
@@ -9330,8 +9330,8 @@ lookup mark_Mark_positioning {
 	<anchor 868 1716> mark @top_center;
   pos base [\uni0477 ] <anchor 395 0> mark @bottom_center
 	<anchor 678 1376> mark @top_center;
-  pos base [\uni047C ] <anchor 719 0> mark @bottom_center
-	<anchor 1092 2112> mark @top_center;
+  pos base [\uni047C ] <anchor 939 0> mark @bottom_center
+	<anchor 1312 2112> mark @top_center;
   pos base [\uni047D ] <anchor 736 0> mark @bottom_center
 	<anchor 1049 1772> mark @top_center;
   pos base [\uni04C1 ] <anchor 779 0> mark @bottom_cedilla
@@ -9964,6 +9964,8 @@ lookup mark_Mark_positioning {
   pos base [\uni2C6D ] <anchor 576 -90> mark @bottom_ypogegrammeni
 	<anchor 835 1380> mark @top_center
 	<anchor 592 0> mark @bottom_center;
+  pos base [\uniA7B6 ] <anchor 939 0> mark @bottom_center
+	<anchor 1182 1380> mark @top_center;
   pos base [\uniA7B7 ] <anchor 736 0> mark @bottom_center
 	<anchor 919 1040> mark @top_center;
   pos base [\a.sc \alphatonos.sc \alpha.sc \uni0430.sc \uni1F00.sc \uni1F01.sc \uni1F02.sc \uni1F03.sc \uni1F04.sc \uni1F05.sc \uni1F06.sc \uni1F07.sc \uni1F70.sc \uni1F71.sc ] <anchor 885 -20> mark @bottom_cedilla

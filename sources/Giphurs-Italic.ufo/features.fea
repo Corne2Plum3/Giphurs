@@ -8573,7 +8573,7 @@ lookup mark_Mark_positioning {
   pos base [\h ] <anchor 343 1380> mark @top_center
 	<anchor 468 0> mark @bottom_center
 	<anchor 96 -20> mark @bottom_cedilla;
-  pos base [\m \uni026F \uni0442 \uniA7B7 \uni0442.loclBGR \uni0448.loclBGR \uni0449.loclBGR ] <anchor 889 1040> mark @top_center
+  pos base [\m \uni026F \uni0442 \uni0442.loclBGR \uni0448.loclBGR \uni0449.loclBGR ] <anchor 889 1040> mark @top_center
 	<anchor 706 0> mark @bottom_center;
   pos base [\e \uni0435 ] <anchor 651 1040> mark @top_center
 	<anchor 468 0> mark @bottom_center
@@ -9349,10 +9349,10 @@ lookup mark_Mark_positioning {
 	<anchor 900 1736> mark @top_center;
   pos base [\uni0477 ] <anchor 400 0> mark @bottom_center
 	<anchor 688 1376> mark @top_center;
-  pos base [\uni047C ] <anchor 731 0> mark @bottom_center
-	<anchor 1107 2126> mark @top_center;
-  pos base [\uni047D ] <anchor 706 0> mark @bottom_center
-	<anchor 1022 1786> mark @top_center;
+  pos base [\uni047C ] <anchor 1027 0> mark @bottom_center
+	<anchor 1403 2126> mark @top_center;
+  pos base [\uni047D ] <anchor 795 0> mark @bottom_center
+	<anchor 1111 1786> mark @top_center;
   pos base [\uni04C1 \uni04DC ] <anchor 838 0> mark @bottom_cedilla
 	<anchor 1139 1716> mark @top_center;
   pos base [\uni04DB ] <anchor 427 0> mark @bottom_center
@@ -10052,8 +10052,10 @@ lookup mark_Mark_positioning {
   pos base [\uni2C6D ] <anchor 631 0> mark @bottom_center
 	<anchor 874 1380> mark @top_center
 	<anchor 615 -90> mark @bottom_ypogegrammeni;
-  pos base [\uniA7B6 ] <anchor 974 1380> mark @top_center
-	<anchor 731 0> mark @bottom_center;
+  pos base [\uniA7B6 ] <anchor 1270 1380> mark @top_center
+	<anchor 1027 0> mark @bottom_center;
+  pos base [\uniA7B7 ] <anchor 795 0> mark @bottom_center
+	<anchor 978 1040> mark @top_center;
   pos base [\a.sc \alphatonos.sc \alpha.sc \uni0430.sc \uni1F00.sc \uni1F01.sc \uni1F02.sc \uni1F03.sc \uni1F04.sc \uni1F05.sc \uni1F06.sc \uni1F07.sc \uni1F70.sc \uni1F71.sc ] <anchor 890 -20> mark @bottom_cedilla
 	<anchor 677 1200> mark @top_center
 	<anchor 451 -80> mark @bottom_ypogegrammeni
