@@ -51,12 +51,12 @@ languagesystem latn WLF ;
 # GSUB 
 
 
-lookup locl_Localized_Eng {
+lookup locl_cv27_Localized_Eng {
   lookupflag 0;
     sub \Eng by \Eng.locl ;
-} locl_Localized_Eng;
+} locl_cv27_Localized_Eng;
 
-lookup locl_BGR {
+lookup locl_ss09_Localized_BGR_forms {
   lookupflag 0;
     sub \uni0424 by \uni0424.loclBGR ;
     sub \uni041B by \uni041B.loclBGR ;
@@ -78,25 +78,25 @@ lookup locl_BGR {
     sub \uni0436 by \uni0436.loclBGR ;
     sub \uni0434 by \uni0434.loclBGR ;
     sub \uni045D by \uni045D.loclBGR ;
-} locl_BGR;
+} locl_ss09_Localized_BGR_forms;
 
-lookup locl_MKD {
+lookup locl_ss11_Localized_MKD_forms {
   lookupflag 0;
     sub \uni043F by \uni043F.loclSRB ;
     sub \uni0431 by \uni0431.loclSRB ;
     sub \uni0433 by \uni0433.loclMKD ;
     sub \uni0442 by \uni0442.loclSRB ;
     sub \uni0434 by \uni0434.loclSRB ;
-} locl_MKD;
+} locl_ss11_Localized_MKD_forms;
 
-lookup locl_SRB {
+lookup locl_ss10_Localized_SRB_forms {
   lookupflag 0;
     sub \uni043F by \uni043F.loclSRB ;
     sub \uni0431 by \uni0431.loclSRB ;
     sub \uni0433 by \uni0433.loclSRB ;
     sub \uni0442 by \uni0442.loclSRB ;
     sub \uni0434 by \uni0434.loclSRB ;
-} locl_SRB;
+} locl_ss10_Localized_SRB_forms;
 
 lookup c2sc_Small_caps_from_caps {
   lookupflag 0;
@@ -4485,8 +4485,8 @@ lookup ccmp_latn {
     sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
-    sub \i \uni0308  by \idieresis;
     sub \i \uni0307  by \idieresis;
+    sub \i \uni0308  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
@@ -4545,8 +4545,8 @@ lookup ccmp_latn {
     sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \iogonek \gravecomb  by \iogonek;
     sub \i \uni0328  by \iogonek;
+    sub \iogonek \gravecomb  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4635,13 +4635,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \u \uni0308 \gravecomb  by \uni01DC;
-    sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \AE \acutecomb  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \Oslash \acutecomb  by \uni01E0;
     sub \A \uni0307 \uni0304  by \uni01E0;
+    sub \Oslash \acutecomb  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5596,8 +5596,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0456 \uni0308  by \uni0457;
+    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -5862,92 +5862,193 @@ lookup calt_Contextual_Alternates {
 	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
 } calt_Contextual_Alternates;
 
+feature cv27 {
+
+ script DFLT;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script copt;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script cyrl;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script grek;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script latn;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+} cv27;
+
 feature locl {
 
  script cyrl;
      language BGR  exclude_dflt;
-      lookup locl_BGR;
+      lookup locl_ss09_Localized_BGR_forms;
      language MKD  exclude_dflt;
-      lookup locl_MKD;
+      lookup locl_ss11_Localized_MKD_forms;
      language SRB  exclude_dflt;
-      lookup locl_SRB;
+      lookup locl_ss10_Localized_SRB_forms;
 
  script latn;
      language ACH  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language AVN  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language BAD0 exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language BMB  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language BML  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language BTI  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language DAG  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language DJR  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language DNJ  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language DNK  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language EMK  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language EWE  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language FAN0 exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language FMP  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language FTA  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language FUV  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language GAD  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language GKP  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language IBO  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language KIS  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language LAM  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language LUG  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language MAW  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language MBO  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language MND  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language MNK  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language MOR  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language NYM  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language NZA  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language PIL  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language SIG  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language SRR  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language TMH  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language TMN  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language TOD0 exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language WCI  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
      language WLF  exclude_dflt;
-      lookup locl_Localized_Eng;
+      lookup locl_cv27_Localized_Eng;
 } locl;
+
+feature ss09 {
+  featureNames {
+    name 3 1 0x409 "Localized Bulgarian forms";
+  };
+
+ script DFLT;
+     language dflt ;
+      lookup locl_ss09_Localized_BGR_forms;
+
+ script copt;
+     language dflt ;
+      lookup locl_ss09_Localized_BGR_forms;
+
+ script cyrl;
+     language dflt ;
+      lookup locl_ss09_Localized_BGR_forms;
+
+ script grek;
+     language dflt ;
+      lookup locl_ss09_Localized_BGR_forms;
+
+ script latn;
+     language dflt ;
+      lookup locl_ss09_Localized_BGR_forms;
+} ss09;
+
+feature ss11 {
+  featureNames {
+    name 3 1 0x409 "Localized Macedonian forms";
+  };
+
+ script DFLT;
+     language dflt ;
+      lookup locl_ss11_Localized_MKD_forms;
+
+ script copt;
+     language dflt ;
+      lookup locl_ss11_Localized_MKD_forms;
+
+ script cyrl;
+     language dflt ;
+      lookup locl_ss11_Localized_MKD_forms;
+
+ script grek;
+     language dflt ;
+      lookup locl_ss11_Localized_MKD_forms;
+
+ script latn;
+     language dflt ;
+      lookup locl_ss11_Localized_MKD_forms;
+} ss11;
+
+feature ss10 {
+  featureNames {
+    name 3 1 0x409 "Localized Serbian forms";
+  };
+
+ script DFLT;
+     language dflt ;
+      lookup locl_ss10_Localized_SRB_forms;
+
+ script copt;
+     language dflt ;
+      lookup locl_ss10_Localized_SRB_forms;
+
+ script cyrl;
+     language dflt ;
+      lookup locl_ss10_Localized_SRB_forms;
+
+ script grek;
+     language dflt ;
+      lookup locl_ss10_Localized_SRB_forms;
+
+ script latn;
+     language dflt ;
+      lookup locl_ss10_Localized_SRB_forms;
+} ss10;
 
 feature c2sc {
 
