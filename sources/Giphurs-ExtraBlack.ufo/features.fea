@@ -69,6 +69,7 @@ lookup locl_BGR {
     sub \uni0438 by \uni0438.loclBGR ;
     sub \uni043B by \uni043B.loclBGR ;
     sub \uni0442 by \uni0442.loclBGR ;
+    sub \uni0444 by \uni0444.loclBGR ;
     sub \uni0439 by \uni0439.loclBGR ;
     sub \uni0446 by \uni0446.loclBGR ;
     sub \uni0448 by \uni0448.loclBGR ;
@@ -1287,6 +1288,7 @@ lookup smcp_Small_caps {
     sub \uniA7B5 by \uniA7B5.sc ;
     sub \uni0434.loclBGR by \uni0434.loclBGR.sc ;
     sub \uni043B.loclBGR by \uni043B.loclBGR.sc ;
+    sub \uni0444.loclBGR by \uni0444.loclBGR.sc ;
 } smcp_Small_caps;
 
 lookup cv01_Alternative_digit_1_A {
@@ -9416,7 +9418,7 @@ lookup mark_Mark_positioning {
 	<anchor 677 1040> mark @top_center;
   pos base [\uni0442 \uni0442.loclSRB ] <anchor 569 1040> mark @top_center
 	<anchor 569 0> mark @bottom_center;
-  pos base [\uni0444 ] <anchor 780 1400> mark @top_center
+  pos base [\uni0444 \uni0444.loclBGR ] <anchor 780 1400> mark @top_center
 	<anchor 780 -360> mark @bottom_center;
   pos base [\uni044D ] <anchor 539 1040> mark @top_center
 	<anchor 537 0> mark @bottom_center;
@@ -11494,7 +11496,6 @@ feature mkmk {
       lookup mkmk_mark_to_mark_bottom_center;
       lookup mkmk_mark_to_mark_greek_top_center;
 } mkmk;
-#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 
@@ -11774,15 +11775,15 @@ feature mkmk {
 	\uni1D7D \uniA7B4 \uniA7B5 \Eng.locl \uni0414.loclBGR \uni041B.loclBGR 
 	\uni0424.loclBGR \uni0432.loclBGR \uni0433.loclBGR \uni0434.loclBGR 
 	\uni0436.loclBGR \uni0437.loclBGR \uni0438.loclBGR \uni0439.loclBGR 
-	\uni045D.loclBGR \uni043A.loclBGR \uni043B.loclBGR \uni043F.loclBGR 
-	\uni0442.loclBGR \uni0446.loclBGR \uni0448.loclBGR \uni0449.loclBGR 
-	\uni044E.loclBGR \uni0431.loclSRB \uni0433.loclSRB \uni0434.loclSRB 
-	\uni043F.loclSRB \uni0442.loclSRB \uni0433.loclMKD \a.sc \b.sc \c.sc \d.sc 
-	\e.sc \f.sc \g.sc \h.sc \i.sc \j.sc \k.sc \l.sc \m.sc \n.sc \o.sc \p.sc \q.sc \r.sc 
-	\s.sc \t.sc \u.sc \v.sc \w.sc \x.sc \y.sc \z.sc \agrave.sc \aacute.sc 
-	\acircumflex.sc \atilde.sc \adieresis.sc \aring.sc \ae.sc \ccedilla.sc 
-	\egrave.sc \eacute.sc \ecircumflex.sc \edieresis.sc \igrave.sc \iacute.sc 
-	\icircumflex.sc \idieresis.sc \ntilde.sc \ograve.sc \oacute.sc 
+	\uni043A.loclBGR \uni043B.loclBGR \uni043F.loclBGR \uni0442.loclBGR 
+	\uni0444.loclBGR \uni0446.loclBGR \uni0448.loclBGR \uni0449.loclBGR 
+	\uni044E.loclBGR \uni045D.loclBGR \uni0431.loclSRB \uni0433.loclSRB 
+	\uni0434.loclSRB \uni043F.loclSRB \uni0442.loclSRB \uni0433.loclMKD \a.sc 
+	\b.sc \c.sc \d.sc \e.sc \f.sc \g.sc \h.sc \i.sc \j.sc \k.sc \l.sc \m.sc \n.sc \o.sc 
+	\p.sc \q.sc \r.sc \s.sc \t.sc \u.sc \v.sc \w.sc \x.sc \y.sc \z.sc \agrave.sc 
+	\aacute.sc \acircumflex.sc \atilde.sc \adieresis.sc \aring.sc \ae.sc 
+	\ccedilla.sc \egrave.sc \eacute.sc \ecircumflex.sc \edieresis.sc \igrave.sc 
+	\iacute.sc \icircumflex.sc \idieresis.sc \ntilde.sc \ograve.sc \oacute.sc 
 	\ocircumflex.sc \otilde.sc \odieresis.sc \oslash.sc \ugrave.sc \uacute.sc 
 	\ucircumflex.sc \udieresis.sc \yacute.sc \thorn.sc \ydieresis.sc \amacron.sc 
 	\abreve.sc \aogonek.sc \cacute.sc \ccircumflex.sc \cdotaccent.sc \ccaron.sc 

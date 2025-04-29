@@ -50,6 +50,7 @@ languagesystem latn WLF ;
 
 # GSUB 
 
+
 lookup locl_Localized_Eng {
   lookupflag 0;
     sub \Eng by \Eng.locl ;
@@ -68,6 +69,7 @@ lookup locl_BGR {
     sub \uni0438 by \uni0438.loclBGR ;
     sub \uni043B by \uni043B.loclBGR ;
     sub \uni0442 by \uni0442.loclBGR ;
+    sub \uni0444 by \uni0444.loclBGR ;
     sub \uni0439 by \uni0439.loclBGR ;
     sub \uni0446 by \uni0446.loclBGR ;
     sub \uni0448 by \uni0448.loclBGR ;
@@ -1286,6 +1288,7 @@ lookup smcp_Small_caps {
     sub \uniA7B5 by \uniA7B5.sc ;
     sub \uni0434.loclBGR by \uni0434.loclBGR.sc ;
     sub \uni043B.loclBGR by \uni043B.loclBGR.sc ;
+    sub \uni0444.loclBGR by \uni0444.loclBGR.sc ;
 } smcp_Small_caps;
 
 lookup cv01_Alternative_digit_1_A {
@@ -4482,8 +4485,8 @@ lookup ccmp_latn {
     sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
-    sub \i \uni0307  by \idieresis;
     sub \i \uni0308  by \idieresis;
+    sub \i \uni0307  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
@@ -4542,8 +4545,8 @@ lookup ccmp_latn {
     sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \i \uni0328  by \iogonek;
     sub \iogonek \gravecomb  by \iogonek;
+    sub \i \uni0328  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4632,13 +4635,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \A \uni030A \acutecomb  by \uni01DC;
-    sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni0308 \uni0304  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \Oslash \acutecomb  by \uni01E0;
+    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5593,8 +5596,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0456 \uni0307  by \uni0457;
+    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -5858,6 +5861,93 @@ lookup calt_Contextual_Alternates {
 	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
 	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
 } calt_Contextual_Alternates;
+
+feature locl {
+
+ script cyrl;
+     language BGR  exclude_dflt;
+      lookup locl_BGR;
+     language MKD  exclude_dflt;
+      lookup locl_MKD;
+     language SRB  exclude_dflt;
+      lookup locl_SRB;
+
+ script latn;
+     language ACH  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language AVN  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language BAD0 exclude_dflt;
+      lookup locl_Localized_Eng;
+     language BMB  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language BML  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language BTI  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language DAG  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language DJR  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language DNJ  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language DNK  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language EMK  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language EWE  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language FAN0 exclude_dflt;
+      lookup locl_Localized_Eng;
+     language FMP  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language FTA  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language FUV  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language GAD  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language GKP  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language IBO  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language KIS  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language LAM  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language LUG  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language MAW  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language MBO  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language MND  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language MNK  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language MOR  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language NYM  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language NZA  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language PIL  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language SIG  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language SRR  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language TMH  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language TMN  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language TOD0 exclude_dflt;
+      lookup locl_Localized_Eng;
+     language WCI  exclude_dflt;
+      lookup locl_Localized_Eng;
+     language WLF  exclude_dflt;
+      lookup locl_Localized_Eng;
+} locl;
 
 feature c2sc {
 
@@ -6951,93 +7041,6 @@ feature liga {
      language dflt ;
       lookup liga_Standard_ligatures;
 } liga;
-
-feature locl {
-
- script cyrl;
-     language BGR  exclude_dflt;
-      lookup locl_BGR;
-     language MKD  exclude_dflt;
-      lookup locl_MKD;
-     language SRB  exclude_dflt;
-      lookup locl_SRB;
-
- script latn;
-     language ACH  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language AVN  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language BAD0 exclude_dflt;
-      lookup locl_Localized_Eng;
-     language BMB  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language BML  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language BTI  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language DAG  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language DJR  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language DNJ  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language DNK  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language EMK  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language EWE  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language FAN0 exclude_dflt;
-      lookup locl_Localized_Eng;
-     language FMP  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language FTA  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language FUV  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language GAD  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language GKP  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language IBO  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language KIS  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language LAM  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language LUG  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language MAW  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language MBO  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language MND  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language MNK  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language MOR  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language NYM  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language NZA  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language PIL  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language SIG  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language SRR  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language TMH  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language TMN  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language TOD0 exclude_dflt;
-      lookup locl_Localized_Eng;
-     language WCI  exclude_dflt;
-      lookup locl_Localized_Eng;
-     language WLF  exclude_dflt;
-      lookup locl_Localized_Eng;
-} locl;
 
 feature ccmp {
 
@@ -9240,7 +9243,7 @@ lookup mark_Mark_positioning {
 	<anchor 625 1040> mark @top_center;
   pos base [\uni0442 \uni0442.loclSRB ] <anchor 546 1040> mark @top_center
 	<anchor 546 0> mark @bottom_center;
-  pos base [\uni0444 ] <anchor 643 1400> mark @top_center
+  pos base [\uni0444 \uni0444.loclBGR ] <anchor 643 1400> mark @top_center
 	<anchor 643 -360> mark @bottom_center;
   pos base [\uni044D ] <anchor 523 1040> mark @top_center
 	<anchor 523 0> mark @bottom_center;
@@ -11239,15 +11242,15 @@ feature mkmk {
 	\uni1D7D \uniA7B4 \uniA7B5 \Eng.locl \uni0414.loclBGR \uni041B.loclBGR 
 	\uni0424.loclBGR \uni0432.loclBGR \uni0433.loclBGR \uni0434.loclBGR 
 	\uni0436.loclBGR \uni0437.loclBGR \uni0438.loclBGR \uni0439.loclBGR 
-	\uni045D.loclBGR \uni043A.loclBGR \uni043B.loclBGR \uni043F.loclBGR 
-	\uni0442.loclBGR \uni0446.loclBGR \uni0448.loclBGR \uni0449.loclBGR 
-	\uni044E.loclBGR \uni0431.loclSRB \uni0433.loclSRB \uni0434.loclSRB 
-	\uni043F.loclSRB \uni0442.loclSRB \uni0433.loclMKD \a.sc \b.sc \c.sc \d.sc 
-	\e.sc \f.sc \g.sc \h.sc \i.sc \j.sc \k.sc \l.sc \m.sc \n.sc \o.sc \p.sc \q.sc \r.sc 
-	\s.sc \t.sc \u.sc \v.sc \w.sc \x.sc \y.sc \z.sc \agrave.sc \aacute.sc 
-	\acircumflex.sc \atilde.sc \adieresis.sc \aring.sc \ae.sc \ccedilla.sc 
-	\egrave.sc \eacute.sc \ecircumflex.sc \edieresis.sc \igrave.sc \iacute.sc 
-	\icircumflex.sc \idieresis.sc \ntilde.sc \ograve.sc \oacute.sc 
+	\uni043A.loclBGR \uni043B.loclBGR \uni043F.loclBGR \uni0442.loclBGR 
+	\uni0444.loclBGR \uni0446.loclBGR \uni0448.loclBGR \uni0449.loclBGR 
+	\uni044E.loclBGR \uni045D.loclBGR \uni0431.loclSRB \uni0433.loclSRB 
+	\uni0434.loclSRB \uni043F.loclSRB \uni0442.loclSRB \uni0433.loclMKD \a.sc 
+	\b.sc \c.sc \d.sc \e.sc \f.sc \g.sc \h.sc \i.sc \j.sc \k.sc \l.sc \m.sc \n.sc \o.sc 
+	\p.sc \q.sc \r.sc \s.sc \t.sc \u.sc \v.sc \w.sc \x.sc \y.sc \z.sc \agrave.sc 
+	\aacute.sc \acircumflex.sc \atilde.sc \adieresis.sc \aring.sc \ae.sc 
+	\ccedilla.sc \egrave.sc \eacute.sc \ecircumflex.sc \edieresis.sc \igrave.sc 
+	\iacute.sc \icircumflex.sc \idieresis.sc \ntilde.sc \ograve.sc \oacute.sc 
 	\ocircumflex.sc \otilde.sc \odieresis.sc \oslash.sc \ugrave.sc \uacute.sc 
 	\ucircumflex.sc \udieresis.sc \yacute.sc \thorn.sc \ydieresis.sc \amacron.sc 
 	\abreve.sc \aogonek.sc \cacute.sc \ccircumflex.sc \cdotaccent.sc \ccaron.sc 
