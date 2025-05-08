@@ -2154,6 +2154,7 @@ lookup cv23_Alternative_small_letter_a {
     sub \uni24D0 by \uni24D0.cv23 ;
     sub \uni249C by \uni249C.cv23 ;
     sub \uni1D43 by \uni1D43.cv23 ;
+    sub \uniA657 by \uniA657.cv23 ;
 } cv23_Alternative_small_letter_a;
 
 lookup cv24_Alternative_small_letter_g {
@@ -4509,8 +4510,8 @@ lookup ccmp_latn {
     sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
-    sub \i \uni0308  by \idieresis;
     sub \i \uni0307  by \idieresis;
+    sub \i \uni0308  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
@@ -4569,8 +4570,8 @@ lookup ccmp_latn {
     sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \iogonek \gravecomb  by \iogonek;
     sub \i \uni0328  by \iogonek;
+    sub \iogonek \gravecomb  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4659,13 +4660,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \u \uni0308 \gravecomb  by \uni01DC;
-    sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \AE \acutecomb  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \Oslash \acutecomb  by \uni01E0;
     sub \A \uni0307 \uni0304  by \uni01E0;
+    sub \Oslash \acutecomb  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5620,8 +5621,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0456 \uni0308  by \uni0457;
+    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -5886,6 +5887,29 @@ lookup calt_Contextual_Alternates {
 	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
 } calt_Contextual_Alternates;
 
+feature cv27 {
+
+ script DFLT;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script copt;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script cyrl;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script grek;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script latn;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+} cv27;
+
 feature locl {
 
  script cyrl;
@@ -5972,29 +5996,6 @@ feature locl {
      language WLF  exclude_dflt;
       lookup locl_cv27_Localized_Eng;
 } locl;
-
-feature cv27 {
-
- script DFLT;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script copt;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script cyrl;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script grek;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script latn;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-} cv27;
 
 feature ss09 {
   featureNames {
@@ -10066,37 +10067,58 @@ lookup mark_Mark_positioning {
 	<anchor 925 1040> mark @top_center;
   pos base [\uni0414.loclBGR ] <anchor 767 0> mark @bottom_center
 	<anchor 767 1380> mark @top_center
+	<anchor 767 0> mark @bottom_center
+	<anchor 767 1380> mark @top_center
 	<anchor 767 1380> mark @top_center
 	<anchor 767 0> mark @bottom_center;
-  pos base [\uni041B.loclBGR ] <anchor 678 0> mark @bottom_center
+  pos base [\uni041B.loclBGR ] <anchor 678 1380> mark @top_center
+	<anchor 678 0> mark @bottom_center
+	<anchor 678 0> mark @bottom_center
 	<anchor 678 1380> mark @top_center
 	<anchor 678 0> mark @bottom_center
 	<anchor 678 1380> mark @top_center;
   pos base [\uni0424.loclBGR ] <anchor 801 1520> mark @top_center
 	<anchor 801 -40> mark @bottom_center
+	<anchor 801 1520> mark @top_center
+	<anchor 801 -40> mark @bottom_center
 	<anchor 801 -40> mark @bottom_center
 	<anchor 801 1520> mark @top_center;
   pos base [\uni0432.loclBGR ] <anchor 614 0> mark @bottom_center
+	<anchor 569 1380> mark @top_center
+	<anchor 614 0> mark @bottom_center
 	<anchor 569 1380> mark @top_center
 	<anchor 569 1380> mark @top_center
 	<anchor 614 0> mark @bottom_center;
   pos base [\uni0433.loclBGR ] <anchor 506 0> mark @bottom_center
 	<anchor 506 1040> mark @top_center
+	<anchor 506 0> mark @bottom_center
+	<anchor 506 1040> mark @top_center
 	<anchor 506 1040> mark @top_center
 	<anchor 506 0> mark @bottom_center;
   pos base [\uni0434.loclBGR \uni0434.loclSRB ] <anchor 608 -360> mark @bottom_center
+	<anchor 608 1040> mark @top_center
+	<anchor 608 -360> mark @bottom_center
 	<anchor 608 1040> mark @top_center
 	<anchor 608 1040> mark @top_center
 	<anchor 608 -360> mark @bottom_center;
   pos base [\uni0436.loclBGR ] <anchor 814 1380> mark @top_center
 	<anchor 814 0> mark @bottom_center
+	<anchor 814 1380> mark @top_center
+	<anchor 814 0> mark @bottom_center
 	<anchor 814 0> mark @bottom_center
 	<anchor 814 1380> mark @top_center;
   pos base [\uni0437.loclBGR ] <anchor 551 1040> mark @top_center
 	<anchor 544 -360> mark @bottom_center
+	<anchor 551 1040> mark @top_center
+	<anchor 544 -360> mark @bottom_center
 	<anchor 544 -360> mark @bottom_center
 	<anchor 551 1040> mark @top_center;
   pos base [\uni0438.loclBGR ] <anchor 578 1040> mark @top_center
+	<anchor 578 0> mark @bottom_center
+	<anchor 1016 1040> mark @top_right
+	<anchor 1036 0> mark @bottom_right
+	<anchor 538 -20> mark @bottom_cedilla
+	<anchor 578 1040> mark @top_center
 	<anchor 578 0> mark @bottom_center
 	<anchor 1016 1040> mark @top_right
 	<anchor 1036 0> mark @bottom_right
@@ -10111,6 +10133,11 @@ lookup mark_Mark_positioning {
 	<anchor 1016 1040> mark @top_right
 	<anchor 1036 0> mark @bottom_right
 	<anchor 538 -20> mark @bottom_cedilla
+	<anchor 578 1376> mark @top_center
+	<anchor 578 0> mark @bottom_center
+	<anchor 1016 1040> mark @top_right
+	<anchor 1036 0> mark @bottom_right
+	<anchor 538 -20> mark @bottom_cedilla
 	<anchor 538 -20> mark @bottom_cedilla
 	<anchor 1036 0> mark @bottom_right
 	<anchor 1016 1040> mark @top_right
@@ -10118,37 +10145,55 @@ lookup mark_Mark_positioning {
 	<anchor 578 1376> mark @top_center;
   pos base [\uni043A.loclBGR ] <anchor 568 0> mark @bottom_center
 	<anchor 230 1380> mark @top_center
+	<anchor 568 0> mark @bottom_center
+	<anchor 230 1380> mark @top_center
 	<anchor 230 1380> mark @top_center
 	<anchor 568 0> mark @bottom_center;
-  pos base [\uni043B.loclBGR ] <anchor 530 0> mark @bottom_center
+  pos base [\uni043B.loclBGR ] <anchor 530 1040> mark @top_center
+	<anchor 530 0> mark @bottom_center
+	<anchor 530 0> mark @bottom_center
 	<anchor 530 1040> mark @top_center
 	<anchor 530 0> mark @bottom_center
 	<anchor 530 1040> mark @top_center;
   pos base [\uni043F.loclBGR \uni0446.loclBGR ] <anchor 578 0> mark @bottom_center
 	<anchor 578 1040> mark @top_center
+	<anchor 578 0> mark @bottom_center
+	<anchor 578 1040> mark @top_center
 	<anchor 578 1040> mark @top_center
 	<anchor 578 0> mark @bottom_center;
   pos base [\uni0442.loclBGR \uni0448.loclBGR \uni0449.loclBGR ] <anchor 836 0> mark @bottom_center
+	<anchor 836 1040> mark @top_center
+	<anchor 836 0> mark @bottom_center
 	<anchor 836 1040> mark @top_center
 	<anchor 836 1040> mark @top_center
 	<anchor 836 0> mark @bottom_center;
   pos base [\uni044E.loclBGR ] <anchor 801 0> mark @bottom_center
 	<anchor 223 1380> mark @top_center
+	<anchor 801 0> mark @bottom_center
+	<anchor 223 1380> mark @top_center
 	<anchor 223 1380> mark @top_center
 	<anchor 801 0> mark @bottom_center;
   pos base [\uni0431.loclSRB ] <anchor 598 0> mark @bottom_center
+	<anchor 598 1380> mark @top_center
+	<anchor 598 0> mark @bottom_center
 	<anchor 598 1380> mark @top_center
 	<anchor 598 1380> mark @top_center
 	<anchor 598 0> mark @bottom_center;
   pos base [\uni0433.loclSRB \uni0433.loclMKD ] <anchor 490 1040> mark @top_center
 	<anchor 490 0> mark @bottom_center
+	<anchor 490 1040> mark @top_center
+	<anchor 490 0> mark @bottom_center
 	<anchor 490 0> mark @bottom_center
 	<anchor 490 1040> mark @top_center;
   pos base [\uni043F.loclSRB ] <anchor 580 1040> mark @top_center
 	<anchor 580 0> mark @bottom_center
+	<anchor 580 1040> mark @top_center
+	<anchor 580 0> mark @bottom_center
 	<anchor 580 0> mark @bottom_center
 	<anchor 580 1040> mark @top_center;
   pos base [\uni0442.loclSRB ] <anchor 556 0> mark @bottom_center
+	<anchor 556 1040> mark @top_center
+	<anchor 556 0> mark @bottom_center
 	<anchor 556 1040> mark @top_center
 	<anchor 556 1040> mark @top_center
 	<anchor 556 0> mark @bottom_center;
@@ -10809,15 +10854,22 @@ lookup mark_Mark_positioning {
 	<anchor 782 1200> mark @top_center;
   pos base [\uni0434.loclBGR.sc ] <anchor 677 0> mark @bottom_center
 	<anchor 677 1200> mark @top_center
+	<anchor 677 0> mark @bottom_center
+	<anchor 677 1200> mark @top_center
 	<anchor 677 1200> mark @top_center
 	<anchor 677 0> mark @bottom_center;
   pos base [\uni043B.loclBGR.sc ] <anchor 595 1200> mark @top_center
+	<anchor 595 0> mark @bottom_center
+	<anchor 1119 0> mark @bottom_right
+	<anchor 595 1200> mark @top_center
 	<anchor 595 0> mark @bottom_center
 	<anchor 1119 0> mark @bottom_right
 	<anchor 1119 0> mark @bottom_right
 	<anchor 595 0> mark @bottom_center
 	<anchor 595 1200> mark @top_center;
   pos base [\uni0444.loclBGR.sc ] <anchor 694 -40> mark @bottom_center
+	<anchor 694 1240> mark @top_center
+	<anchor 694 -40> mark @bottom_center
 	<anchor 694 1240> mark @top_center
 	<anchor 694 1240> mark @top_center
 	<anchor 694 -40> mark @bottom_center;
@@ -11296,6 +11348,7 @@ feature mkmk {
       lookup mkmk_mark_to_mark_bottom_center;
       lookup mkmk_mark_to_mark_greek_top_center;
 } mkmk;
+#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 
