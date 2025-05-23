@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="eth.sc" format="2">
-  <advance width="500"/>
+  <advance width="1390"/>
   <outline>
     <contour>
-      <point x="122" y="108" type="curve" smooth="yes"/>
-      <point x="122" y="180"/>
-      <point x="178" y="236"/>
-      <point x="250" y="236" type="curve" smooth="yes"/>
-      <point x="322" y="236"/>
-      <point x="378" y="180"/>
-      <point x="378" y="108" type="curve" smooth="yes"/>
-      <point x="378" y="36"/>
-      <point x="322" y="-20"/>
-      <point x="250" y="-20" type="curve" smooth="yes"/>
-      <point x="178" y="-20"/>
-      <point x="122" y="36"/>
+      <point x="530" y="880" type="line"/>
+      <point x="530" y="320" type="line"/>
+      <point x="710" y="320" type="line"/>
+      <point x="870" y="320"/>
+      <point x="980" y="420"/>
+      <point x="980" y="600" type="curve" smooth="yes"/>
+      <point x="980" y="780"/>
+      <point x="870" y="880"/>
+      <point x="710" y="880" type="curve"/>
+    </contour>
+    <contour>
+      <point x="710" y="0" type="curve"/>
+      <point x="366" y="0" type="line"/>
+      <point x="170" y="0" type="line"/>
+      <point x="170" y="1200" type="line"/>
+      <point x="710" y="1200" type="line"/>
+      <point x="1090" y="1200"/>
+      <point x="1340" y="963"/>
+      <point x="1340" y="600" type="curve" smooth="yes"/>
+      <point x="1340" y="237"/>
+      <point x="1090" y="0"/>
+    </contour>
+    <contour>
+      <point x="780" y="480" type="line"/>
+      <point x="0" y="480" type="line"/>
+      <point x="0" y="720" type="line"/>
+      <point x="780" y="720" type="line"/>
     </contour>
   </outline>
 </glyph>
