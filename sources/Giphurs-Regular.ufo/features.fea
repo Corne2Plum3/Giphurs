@@ -1286,6 +1286,11 @@ lookup smcp_Small_caps_main_lookup {
     sub \uniA7C8 by \uniA7C8.sc ;
     sub \uni1D7D by \uni1D7D.sc ;
     sub \uniA7B5 by \uniA7B5.sc ;
+    sub \dotlessi by \dotlessi.sc ;
+    sub \longs by \longs.sc ;
+    sub \uni01EF by \uni01EF.sc ;
+    sub \uni0265 by \uni0265.sc ;
+    sub \uni0295 by \uni0295.sc ;
     sub \uni0434.loclBGR by \uni0434.loclBGR.sc ;
     sub \uni043B.loclBGR by \uni043B.loclBGR.sc ;
     sub \uni0444.loclBGR by \uni0444.loclBGR.sc ;
@@ -2104,6 +2109,7 @@ lookup cv22_Alternative_letter_I {
     sub \uni1FD3.sc by \uni1FD3.sc.cv22 ;
     sub \uni1FD6.sc by \uni1FD6.sc.cv22 ;
     sub \uni1FD7.sc by \uni1FD7.sc.cv22 ;
+    sub \dotlessi.sc by \dotlessi.sc.cv22 ;
 } cv22_Alternative_letter_I;
 
 lookup cv23_Alternative_small_letter_a {
