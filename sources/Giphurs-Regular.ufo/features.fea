@@ -152,6 +152,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \Ucircumflex by \ucircumflex.sc ;
     sub \Udieresis by \udieresis.sc ;
     sub \Yacute by \yacute.sc ;
+    sub \Eth by \eth.sc ;
     sub \Oslash by \oslash.sc ;
     sub \Thorn by \thorn.sc ;
     sub \Amacron by \amacron.sc ;
@@ -226,6 +227,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \uni018F by \uni0259.sc ;
     sub \uni0190 by \uni025B.sc ;
     sub \uni0193 by \uni0260.sc ;
+    sub \uni0194 by \uni0263.sc ;
     sub \uni0196 by \uni0269.sc ;
     sub \uni0197 by \uni0268.sc ;
     sub \uni0198 by \uni0199.sc ;
@@ -263,6 +265,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \uni01E8 by \uni01E9.sc ;
     sub \uni01EA by \uni01EB.sc ;
     sub \uni01EC by \uni01ED.sc ;
+    sub \uni01EE by \uni01EF.sc ;
     sub \uni0226 by \uni0227.sc ;
     sub \uni01F4 by \uni01F5.sc ;
     sub \uni01F8 by \uni01F9.sc ;
@@ -562,6 +565,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \uniA78B by \uniA78C.sc ;
     sub \Beta by \beta.sc ;
     sub \uni2C64 by \uni027D.sc ;
+    sub \uniA78D by \uni0265.sc ;
     sub \uniA7AA by \uni0266.sc ;
     sub \uniA7AE by \uni026A.sc ;
     sub \uniA7B2 by \uni029D.sc ;
@@ -571,6 +575,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \uniA7B6 by \uniA7B7.sc ;
     sub \uniA7C7 by \uniA7C8.sc ;
     sub \uniA7B4 by \uniA7B5.sc ;
+    sub \uni2C6F by \uni0250.sc ;
 } c2sc_Small_caps_from_caps;
 
 lookup smcp_Small_caps_main_lookup {
@@ -628,6 +633,7 @@ lookup smcp_Small_caps_main_lookup {
     sub \udieresis by \udieresis.sc ;
     sub \yacute by \yacute.sc ;
     sub \ydieresis by \ydieresis.sc ;
+    sub \dotlessi by \dotlessi.sc ;
     sub \thorn by \thorn.sc ;
     sub \ae by \ae.sc ;
     sub \oslash by \oslash.sc ;
@@ -695,6 +701,7 @@ lookup smcp_Small_caps_main_lookup {
     sub \tcaron by \tcaron.sc ;
     sub \tbar by \tbar.sc ;
     sub \kgreenlandic by \kgreenlandic.sc ;
+    sub \longs by \longs.sc ;
     sub \uni0180 by \uni0180.sc ;
     sub \uni0183 by \uni0183.sc ;
     sub \uni0185 by \uni0185.sc ;
@@ -735,6 +742,7 @@ lookup smcp_Small_caps_main_lookup {
     sub \uni01E9 by \uni01E9.sc ;
     sub \uni01EB by \uni01EB.sc ;
     sub \uni01ED by \uni01ED.sc ;
+    sub \uni01EF by \uni01EF.sc ;
     sub \uni01F0 by \uni01F0.sc ;
     sub \uni0227 by \uni0227.sc ;
     sub \uni0292 by \uni0292.sc ;
@@ -789,6 +797,7 @@ lookup smcp_Small_caps_main_lookup {
     sub \uni0260 by \uni0260.sc ;
     sub \uni0263 by \uni0263.sc ;
     sub \uni0264 by \uni0264.sc ;
+    sub \uni0265 by \uni0265.sc ;
     sub \uni0266 by \uni0266.sc ;
     sub \uni0268 by \uni0268.sc ;
     sub \uni0269 by \uni0269.sc ;
@@ -805,6 +814,7 @@ lookup smcp_Small_caps_main_lookup {
     sub \uni02A4 by \uni02A4.sc ;
     sub \uni028B by \uni028B.sc ;
     sub \uni028C by \uni028C.sc ;
+    sub \uni0295 by \uni0295.sc ;
     sub \uni0298 by \uni0298.sc ;
     sub \uni029D by \uni029D.sc ;
     sub \uni02A3 by \uni02A3.sc ;
@@ -1286,11 +1296,6 @@ lookup smcp_Small_caps_main_lookup {
     sub \uniA7C8 by \uniA7C8.sc ;
     sub \uni1D7D by \uni1D7D.sc ;
     sub \uniA7B5 by \uniA7B5.sc ;
-    sub \dotlessi by \dotlessi.sc ;
-    sub \longs by \longs.sc ;
-    sub \uni01EF by \uni01EF.sc ;
-    sub \uni0265 by \uni0265.sc ;
-    sub \uni0295 by \uni0295.sc ;
     sub \uni0434.loclBGR by \uni0434.loclBGR.sc ;
     sub \uni043B.loclBGR by \uni043B.loclBGR.sc ;
     sub \uni0444.loclBGR by \uni0444.loclBGR.sc ;
@@ -2079,6 +2084,7 @@ lookup cv22_Alternative_letter_I {
     sub \imacron.sc by \imacron.sc.cv22 ;
     sub \ibreve.sc by \ibreve.sc.cv22 ;
     sub \iogonek.sc by \iogonek.sc.cv22 ;
+    sub \dotlessi.sc by \dotlessi.sc.cv22 ;
     sub \ij.sc by \ij.sc.cv22 ;
     sub \uni01D0.sc by \uni01D0.sc.cv22 ;
     sub \uni0209.sc by \uni0209.sc.cv22 ;
@@ -2109,7 +2115,6 @@ lookup cv22_Alternative_letter_I {
     sub \uni1FD3.sc by \uni1FD3.sc.cv22 ;
     sub \uni1FD6.sc by \uni1FD6.sc.cv22 ;
     sub \uni1FD7.sc by \uni1FD7.sc.cv22 ;
-    sub \dotlessi.sc by \dotlessi.sc.cv22 ;
 } cv22_Alternative_letter_I;
 
 lookup cv23_Alternative_small_letter_a {
@@ -4531,8 +4536,8 @@ lookup ccmp_latn {
     sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
-    sub \i \uni0307  by \idieresis;
     sub \i \uni0308  by \idieresis;
+    sub \i \uni0307  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
@@ -4591,8 +4596,8 @@ lookup ccmp_latn {
     sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \i \uni0328  by \iogonek;
     sub \iogonek \gravecomb  by \iogonek;
+    sub \i \uni0328  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4681,13 +4686,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \A \uni030A \acutecomb  by \uni01DC;
-    sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni0308 \uni0304  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \Oslash \acutecomb  by \uni01E0;
+    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5642,8 +5647,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0456 \uni0307  by \uni0457;
+    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -5908,29 +5913,6 @@ lookup calt_Contextual_Alternates {
 	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
 } calt_Contextual_Alternates;
 
-feature cv27 {
-
- script DFLT;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script copt;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script cyrl;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script grek;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script latn;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-} cv27;
-
 feature locl {
 
  script cyrl;
@@ -6017,6 +5999,29 @@ feature locl {
      language WLF  exclude_dflt;
       lookup locl_cv27_Localized_Eng;
 } locl;
+
+feature cv27 {
+
+ script DFLT;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script copt;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script cyrl;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script grek;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script latn;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+} cv27;
 
 feature ss09 {
   featureNames {
@@ -11236,6 +11241,7 @@ feature mkmk {
       lookup mkmk_mark_to_mark_bottom_center;
       lookup mkmk_mark_to_mark_greek_top_center;
 } mkmk;
+#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 

@@ -152,6 +152,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \Ucircumflex by \ucircumflex.sc ;
     sub \Udieresis by \udieresis.sc ;
     sub \Yacute by \yacute.sc ;
+    sub \Eth by \eth.sc ;
     sub \Oslash by \oslash.sc ;
     sub \Thorn by \thorn.sc ;
     sub \Amacron by \amacron.sc ;
@@ -226,6 +227,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \uni018F by \uni0259.sc ;
     sub \uni0190 by \uni025B.sc ;
     sub \uni0193 by \uni0260.sc ;
+    sub \uni0194 by \uni0263.sc ;
     sub \uni0196 by \uni0269.sc ;
     sub \uni0197 by \uni0268.sc ;
     sub \uni0198 by \uni0199.sc ;
@@ -263,6 +265,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \uni01E8 by \uni01E9.sc ;
     sub \uni01EA by \uni01EB.sc ;
     sub \uni01EC by \uni01ED.sc ;
+    sub \uni01EE by \uni01EF.sc ;
     sub \uni0226 by \uni0227.sc ;
     sub \uni01F4 by \uni01F5.sc ;
     sub \uni01F8 by \uni01F9.sc ;
@@ -562,6 +565,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \uniA78B by \uniA78C.sc ;
     sub \Beta by \beta.sc ;
     sub \uni2C64 by \uni027D.sc ;
+    sub \uniA78D by \uni0265.sc ;
     sub \uniA7AA by \uni0266.sc ;
     sub \uniA7AE by \uni026A.sc ;
     sub \uniA7B2 by \uni029D.sc ;
@@ -571,6 +575,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \uniA7B6 by \uniA7B7.sc ;
     sub \uniA7C7 by \uniA7C8.sc ;
     sub \uniA7B4 by \uniA7B5.sc ;
+    sub \uni2C6F by \uni0250.sc ;
 } c2sc_Small_caps_from_caps;
 
 lookup smcp_Small_caps_main_lookup {
