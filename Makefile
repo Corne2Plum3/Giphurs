@@ -1,4 +1,4 @@
-.PHONY: export_fonts proof tests clean clean_fonts 
+.PHONY: archive proof tests clean clean_fonts 
 
 # Name of the font
 FONT_NAME := Giphurs
