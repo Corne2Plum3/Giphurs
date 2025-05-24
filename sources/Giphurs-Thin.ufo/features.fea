@@ -622,6 +622,7 @@ lookup smcp_Small_caps_main_lookup {
     sub \icircumflex by \icircumflex.sc ;
     sub \idieresis by \idieresis.sc ;
     sub \ntilde by \ntilde.sc ;
+    sub \eth by \eth.sc ;
     sub \ograve by \ograve.sc ;
     sub \oacute by \oacute.sc ;
     sub \ocircumflex by \ocircumflex.sc ;
@@ -633,6 +634,7 @@ lookup smcp_Small_caps_main_lookup {
     sub \udieresis by \udieresis.sc ;
     sub \yacute by \yacute.sc ;
     sub \ydieresis by \ydieresis.sc ;
+    sub \dotlessi by \dotlessi.sc ;
     sub \thorn by \thorn.sc ;
     sub \ae by \ae.sc ;
     sub \oslash by \oslash.sc ;
@@ -700,6 +702,7 @@ lookup smcp_Small_caps_main_lookup {
     sub \tcaron by \tcaron.sc ;
     sub \tbar by \tbar.sc ;
     sub \kgreenlandic by \kgreenlandic.sc ;
+    sub \longs by \longs.sc ;
     sub \uni0180 by \uni0180.sc ;
     sub \uni0183 by \uni0183.sc ;
     sub \uni0185 by \uni0185.sc ;
@@ -740,6 +743,7 @@ lookup smcp_Small_caps_main_lookup {
     sub \uni01E9 by \uni01E9.sc ;
     sub \uni01EB by \uni01EB.sc ;
     sub \uni01ED by \uni01ED.sc ;
+    sub \uni01EF by \uni01EF.sc ;
     sub \uni01F0 by \uni01F0.sc ;
     sub \uni0227 by \uni0227.sc ;
     sub \uni0292 by \uni0292.sc ;
@@ -794,6 +798,7 @@ lookup smcp_Small_caps_main_lookup {
     sub \uni0260 by \uni0260.sc ;
     sub \uni0263 by \uni0263.sc ;
     sub \uni0264 by \uni0264.sc ;
+    sub \uni0265 by \uni0265.sc ;
     sub \uni0266 by \uni0266.sc ;
     sub \uni0268 by \uni0268.sc ;
     sub \uni0269 by \uni0269.sc ;
@@ -810,6 +815,7 @@ lookup smcp_Small_caps_main_lookup {
     sub \uni02A4 by \uni02A4.sc ;
     sub \uni028B by \uni028B.sc ;
     sub \uni028C by \uni028C.sc ;
+    sub \uni0295 by \uni0295.sc ;
     sub \uni0298 by \uni0298.sc ;
     sub \uni029D by \uni029D.sc ;
     sub \uni02A3 by \uni02A3.sc ;
@@ -1291,15 +1297,11 @@ lookup smcp_Small_caps_main_lookup {
     sub \uniA7C8 by \uniA7C8.sc ;
     sub \uni1D7D by \uni1D7D.sc ;
     sub \uniA7B5 by \uniA7B5.sc ;
-    sub \dotlessi by \dotlessi.sc ;
-    sub \longs by \longs.sc ;
-    sub \uni01EF by \uni01EF.sc ;
-    sub \uni0265 by \uni0265.sc ;
-    sub \uni0295 by \uni0295.sc ;
     sub \uni0434.loclBGR by \uni0434.loclBGR.sc ;
     sub \uni043B.loclBGR by \uni043B.loclBGR.sc ;
     sub \uni0444.loclBGR by \uni0444.loclBGR.sc ;
 } smcp_Small_caps_main_lookup;
+
 lookup smcp_Small_caps_locl_to_non_locl_lookup {
   lookupflag 0;
     sub \uni0432.loclBGR by \uni0432.sc ;
