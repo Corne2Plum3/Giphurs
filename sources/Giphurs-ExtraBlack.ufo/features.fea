@@ -2228,6 +2228,32 @@ lookup cv26_Alternative_ampersand {
     sub \ampersand by \ampersand.cv26 ;
 } cv26_Alternative_ampersand;
 
+lookup cv28_Alternative_small_letter_l {
+  lookupflag 0;
+    sub \l by \l.cv28 ;
+    sub \lacute by \lacute.cv28 ;
+    sub \ldot by \ldot.cv28 ;
+    sub \lcommaaccent by \lcommaaccent.cv28 ;
+    sub \lcaron by \lcaron.cv28 ;
+    sub \lslash by \lslash.cv28 ;
+    sub \uni019A by \uni019A.cv28 ;
+    sub \uni0234 by \uni0234.cv28 ;
+    sub \uni026D by \uni026D.cv28 ;
+    sub \uni026E by \uni026E.cv28 ;
+    sub \uni02AA by \uni02AA.cv28 ;
+    sub \uni02AB by \uni02AB.cv28 ;
+    sub \uni1E37 by \uni1E37.cv28 ;
+    sub \uni1E39 by \uni1E39.cv28 ;
+    sub \uni1E3B by \uni1E3B.cv28 ;
+    sub \uni1E3D by \uni1E3D.cv28 ;
+    sub \uni2097 by \uni2097.cv28 ;
+    sub \uni217C by \uni217C.cv28 ;
+    sub \uni01C9 by \uni01C9.cv28 ;
+    sub \uni02E1 by \uni02E1.cv28 ;
+    sub \uni24DB by \uni24DB.cv28 ;
+    sub \uni24A7 by \uni24A7.cv28 ;
+} cv28_Alternative_small_letter_l;
+
 lookup ss01_Alternative_digits_set_A {
   lookupflag 0;
     sub \eight by \eight.cv08 ;
@@ -6764,6 +6790,115 @@ feature cv26 {
      language ROM  exclude_dflt;
       lookup cv26_Alternative_ampersand;
 } cv26;
+
+feature cv28 {
+
+ script DFLT;
+     language dflt ;
+      lookup cv28_Alternative_small_letter_l;
+
+ script copt;
+     language dflt ;
+      lookup cv28_Alternative_small_letter_l;
+
+ script cyrl;
+     language dflt ;
+      lookup cv28_Alternative_small_letter_l;
+     language BGR  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language MKD  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language SRB  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+
+ script grek;
+     language dflt ;
+      lookup cv28_Alternative_small_letter_l;
+
+ script latn;
+     language dflt ;
+      lookup cv28_Alternative_small_letter_l;
+     language ACH  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language AVN  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language BAD0 exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language BMB  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language BML  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language BTI  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language CAT  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language DAG  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language DJR  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language DNJ  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language DNK  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language EMK  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language EWE  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language FAN0 exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language FMP  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language FTA  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language FUV  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language GAD  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language GKP  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language IBO  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language KIS  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language LAM  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language LUG  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language MAW  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language MBO  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language MND  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language MNK  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language MOL  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language MOR  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language NYM  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language NZA  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language PIL  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language ROM  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language SIG  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language SRR  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language TMH  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language TMN  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language TOD0 exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language WCI  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+     language WLF  exclude_dflt;
+      lookup cv28_Alternative_small_letter_l;
+} cv28;
 
 feature ss01 {
   featureNames {
