@@ -4563,8 +4563,8 @@ lookup ccmp_latn {
     sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
-    sub \i \uni0308  by \idieresis;
     sub \i \uni0307  by \idieresis;
+    sub \i \uni0308  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
@@ -4623,8 +4623,8 @@ lookup ccmp_latn {
     sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \iogonek \gravecomb  by \iogonek;
     sub \i \uni0328  by \iogonek;
+    sub \iogonek \gravecomb  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4713,13 +4713,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \u \uni0308 \gravecomb  by \uni01DC;
-    sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \AE \acutecomb  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \Oslash \acutecomb  by \uni01E0;
     sub \A \uni0307 \uni0304  by \uni01E0;
+    sub \Oslash \acutecomb  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5674,8 +5674,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0456 \uni0308  by \uni0457;
+    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -5940,6 +5940,29 @@ lookup calt_Contextual_Alternates {
 	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
 } calt_Contextual_Alternates;
 
+feature cv27 {
+
+ script DFLT;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script copt;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script cyrl;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script grek;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script latn;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+} cv27;
+
 feature locl {
 
  script cyrl;
@@ -6026,29 +6049,6 @@ feature locl {
      language WLF  exclude_dflt;
       lookup locl_cv27_Localized_Eng;
 } locl;
-
-feature cv27 {
-
- script DFLT;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script copt;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script cyrl;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script grek;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script latn;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-} cv27;
 
 feature ss09 {
   featureNames {
@@ -8901,7 +8901,7 @@ lookup mark_Mark_positioning {
 	<anchor 592 0> mark @bottom_center;
   pos base [\p \uni0440 ] <anchor 592 1040> mark @top_center
 	<anchor 592 0> mark @bottom_center;
-  pos base [\q \uni043B \uni051B ] <anchor 560 0> mark @bottom_center
+  pos base [\q \uni051B ] <anchor 560 0> mark @bottom_center
 	<anchor 560 1040> mark @top_center;
   pos base [\h ] <anchor 203 -20> mark @bottom_cedilla
 	<anchor 203 1380> mark @top_center
@@ -9502,8 +9502,8 @@ lookup mark_Mark_positioning {
 	<anchor 605 1400> mark @top_center;
   pos base [\uni0403 \uni1E1E ] <anchor 203 0> mark @bottom_center
 	<anchor 588 1716> mark @top_center;
-  pos base [\uni041B \uni042D \uni2108 ] <anchor 679 0> mark @bottom_center
-	<anchor 679 1380> mark @top_center;
+  pos base [\uni041B ] <anchor 759 0> mark @bottom_center
+	<anchor 759 1380> mark @top_center;
   pos base [\uni0411 ] <anchor 601 0> mark @bottom_center
 	<anchor 606 1380> mark @top_center;
   pos base [\uni0416 ] <anchor 909 0> mark @bottom_cedilla
@@ -9515,12 +9515,14 @@ lookup mark_Mark_positioning {
 	<anchor 622 0> mark @bottom_center;
   pos base [\uni042A ] <anchor 422 1380> mark @top_center
 	<anchor 820 0> mark @bottom_center;
-  pos base [\uni0414 ] <anchor 702 0> mark @bottom_center
-	<anchor 702 1380> mark @top_center;
+  pos base [\uni0414 ] <anchor 782 0> mark @bottom_center
+	<anchor 782 1380> mark @top_center;
   pos base [\uni042C ] <anchor 601 0> mark @bottom_center
 	<anchor 203 1380> mark @top_center;
   pos base [\uni042B ] <anchor 794 0> mark @bottom_center
 	<anchor 794 1380> mark @top_center;
+  pos base [\uni042D \uni2108 ] <anchor 679 1380> mark @top_center
+	<anchor 679 0> mark @bottom_center;
   pos base [\uni042E ] <anchor 955 1380> mark @top_center
 	<anchor 955 0> mark @bottom_center;
   pos base [\uni042F ] <anchor 547 0> mark @bottom_center
@@ -9530,6 +9532,8 @@ lookup mark_Mark_positioning {
 	<anchor 578 0> mark @bottom_center;
   pos base [\uni0433 \uni0433.loclSRB \uni0433.loclMKD ] <anchor 488 0> mark @bottom_center
 	<anchor 488 1040> mark @top_center;
+  pos base [\uni043B ] <anchor 640 1040> mark @top_center
+	<anchor 640 0> mark @bottom_center;
   pos base [\uni043C ] <anchor 625 0> mark @bottom_center
 	<anchor 625 1040> mark @top_center;
   pos base [\uni0442 \uni0442.loclSRB ] <anchor 546 1040> mark @top_center
@@ -9556,8 +9560,8 @@ lookup mark_Mark_positioning {
 	<anchor 630 0> mark @bottom_center;
   pos base [\uni0436 ] <anchor 717 0> mark @bottom_center
 	<anchor 717 1040> mark @top_center;
-  pos base [\uni0434 ] <anchor 582 1040> mark @top_center
-	<anchor 582 0> mark @bottom_center;
+  pos base [\uni0434 ] <anchor 662 1040> mark @top_center
+	<anchor 662 0> mark @bottom_center;
   pos base [\uni0453 ] <anchor 488 0> mark @bottom_center
 	<anchor 488 1376> mark @top_center;
   pos base [\uni045C ] <anchor 557 0> mark @bottom_center
@@ -10493,8 +10497,8 @@ lookup mark_Mark_positioning {
 	<anchor 733 1200> mark @top_center;
   pos base [\uni0437.sc ] <anchor 562 0> mark @bottom_center
 	<anchor 562 1200> mark @top_center;
-  pos base [\uni043B.sc ] <anchor 566 1200> mark @top_center
-	<anchor 506 0> mark @bottom_center;
+  pos base [\uni043B.sc ] <anchor 646 1200> mark @top_center
+	<anchor 586 0> mark @bottom_center;
   pos base [\uni0444.sc ] <anchor 686 0> mark @bottom_right
 	<anchor 663 0> mark @bottom_center
 	<anchor 663 1200> mark @top_center;
@@ -10968,15 +10972,6 @@ lookup mark_Mark_positioning {
   pos base [\uni1EF1.cv25 ] <anchor 578 1040> mark @top_center
 	<anchor 676 0> mark @bottom_right
 	<anchor 578 -336> mark @bottom_center;
-  pos base [\dotlessuni0268 ] <anchor 268 -20> mark @bottom_cedilla
-	<anchor 290 0> mark @bottom_right
-	<anchor 268 0> mark @bottom_center
-	<anchor 268 1040> mark @top_center;
-  pos base [\dotlessuni2148 ] <anchor 555 1039> mark @top_center
-	<anchor 319 0> mark @bottom_center
-	<anchor 498 0> mark @bottom_right
-	<anchor 319 -20> mark @bottom_cedilla;
-  pos base [\dotlessuni2149 ] <anchor 781 1039> mark @top_center;
   pos base [\l.cv28 ] <anchor 202 1380> mark @top_center
 	<anchor 202 0> mark @bottom_center;
   pos base [\lacute.cv28 ] <anchor 202 0> mark @bottom_center
@@ -10989,6 +10984,15 @@ lookup mark_Mark_positioning {
 	<anchor 202 1716> mark @top_center;
   pos base [\uni1E3B.cv28 ] <anchor 202 1380> mark @top_center
 	<anchor 202 -201> mark @bottom_center;
+  pos base [\dotlessuni0268 ] <anchor 268 -20> mark @bottom_cedilla
+	<anchor 290 0> mark @bottom_right
+	<anchor 268 0> mark @bottom_center
+	<anchor 268 1040> mark @top_center;
+  pos base [\dotlessuni2148 ] <anchor 555 1039> mark @top_center
+	<anchor 319 0> mark @bottom_center
+	<anchor 498 0> mark @bottom_right
+	<anchor 319 -20> mark @bottom_cedilla;
+  pos base [\dotlessuni2149 ] <anchor 781 1039> mark @top_center;
 } mark_Mark_positioning;
 
 lookup mkmk_mark_to_mark_top_center {
@@ -11994,37 +11998,41 @@ feature mkmk {
 	\uni1D58.cv25 \uni1E73.cv25 \uni1E75.cv25 \uni1E77.cv25 \uni1E79.cv25 
 	\uni1E7B.cv25 \uni1EE5.cv25 \uni1EE7.cv25 \uni1EE9.cv25 \uni1EEB.cv25 
 	\uni1EED.cv25 \uni1EEF.cv25 \uni1EF1.cv25 \uni2106.cv25 \uni24B0.cv25 
-	\uni24E4.cv25 \ampersand.cv26 \dollar.ss05 \cent.ss05 \sterling.ss05 
-	\lira.ss05 \peseta.ss05 \uni20AA.ss05 \Euro.ss05 \uni20B2.ss05 \one.ss06 
-	\one.ss06.pnum \one.ss06.tnum \one.ss06.onum \one.ss06.onum.tnum 
-	\one.ss06.superior \one.ss06.superior.pnum \one.ss06.superior.tnum 
-	\one.ss06.subscript \one.ss06.subscript.pnum \one.ss06.subscript.tnum 
-	\one.ss06.numr \one.ss06.numr.pnum \one.ss06.numr.tnum \one.ss06.dnom 
-	\one.ss06.dnom.pnum \one.ss06.dnom.tnum \one.cv01.ss06 \one.cv01.ss06.pnum 
-	\one.cv01.ss06.tnum \one.cv01.ss06.onum \one.cv01.ss06.onum.tnum 
-	\one.cv01.ss06.superior \one.cv01.ss06.superior.pnum 
-	\one.cv01.ss06.superior.tnum \one.cv01.ss06.subscript 
-	\one.cv01.ss06.subscript.pnum \one.cv01.ss06.subscript.tnum 
-	\one.cv01.ss06.numr \one.cv01.ss06.numr.pnum \one.cv01.ss06.numr.tnum 
-	\one.cv01.ss06.dnom \one.cv01.ss06.dnom.pnum \one.cv01.ss06.dnom.tnum 
-	\one.cv11.ss06 \one.cv11.ss06.pnum \one.cv11.ss06.tnum \one.cv11.ss06.onum 
-	\one.cv11.ss06.onum.tnum \one.cv11.ss06.superior 
-	\one.cv11.ss06.superior.pnum \one.cv11.ss06.superior.tnum 
-	\one.cv11.ss06.subscript \one.cv11.ss06.subscript.pnum 
-	\one.cv11.ss06.subscript.tnum \one.cv11.ss06.numr \one.cv11.ss06.numr.pnum 
-	\one.cv11.ss06.numr.tnum \one.cv11.ss06.dnom \one.cv11.ss06.dnom.pnum 
-	\one.cv11.ss06.dnom.tnum \uni2460.ss06 \uni2460.cv01.ss06 
-	\uni2460.cv11.ss06 \uni2469.ss06 \uni2469.cv10.ss06 \uni2469.cv20.ss06 
-	\uni2469.cv01.ss06 \uni2469.cv01.cv10.ss06 \uni2469.cv01.cv20.ss06 
-	\uni2469.cv11.ss06 \uni2469.cv10.cv11.ss06 \uni2469.cv11.cv20.ss06 
-	\uni246A.ss06 \uni246A.cv01.ss06 \uni246A.cv11.ss06 \uni246B.ss06 
-	\uni246B.cv02.ss06 \uni246B.cv12.ss06 \uni246B.cv01.ss06 
-	\uni246B.cv01.cv02.ss06 \uni246B.cv01.cv12.ss06 \uni246B.cv11.ss06 
-	\uni246B.cv02.cv11.ss06 \uni246B.cv11.cv12.ss06 \uni246C.ss06 
-	\uni246C.cv03.ss06 \uni246C.cv13.ss06 \uni246C.cv01.ss06 
-	\uni246C.cv01.cv03.ss06 \uni246C.cv01.cv13.ss06 \uni246C.cv11.ss06 
-	\uni246C.cv03.cv11.ss06 \uni246C.cv11.cv13.ss06 \uni246D.ss06 
-	\uni246D.cv04.ss06 \uni246D.cv14.ss06 \uni246D.cv01.ss06 
+	\uni24E4.cv25 \ampersand.cv26 \l.cv28 \lacute.cv28 \lcommaaccent.cv28 
+	\lcaron.cv28 \ldot.cv28 \lslash.cv28 \uni019A.cv28 \uni01C9.cv28 
+	\uni0234.cv28 \uni026D.cv28 \uni026E.cv28 \uni02AA.cv28 \uni02AB.cv28 
+	\uni02E1.cv28 \uni1E37.cv28 \uni1E39.cv28 \uni1E3B.cv28 \uni1E3D.cv28 
+	\uni2097.cv28 \uni217C.cv28 \uni24A7.cv28 \uni24DB.cv28 \dollar.ss05 
+	\cent.ss05 \sterling.ss05 \lira.ss05 \peseta.ss05 \uni20AA.ss05 \Euro.ss05 
+	\uni20B2.ss05 \one.ss06 \one.ss06.pnum \one.ss06.tnum \one.ss06.onum 
+	\one.ss06.onum.tnum \one.ss06.superior \one.ss06.superior.pnum 
+	\one.ss06.superior.tnum \one.ss06.subscript \one.ss06.subscript.pnum 
+	\one.ss06.subscript.tnum \one.ss06.numr \one.ss06.numr.pnum 
+	\one.ss06.numr.tnum \one.ss06.dnom \one.ss06.dnom.pnum \one.ss06.dnom.tnum 
+	\one.cv01.ss06 \one.cv01.ss06.pnum \one.cv01.ss06.tnum \one.cv01.ss06.onum 
+	\one.cv01.ss06.onum.tnum \one.cv01.ss06.superior 
+	\one.cv01.ss06.superior.pnum \one.cv01.ss06.superior.tnum 
+	\one.cv01.ss06.subscript \one.cv01.ss06.subscript.pnum 
+	\one.cv01.ss06.subscript.tnum \one.cv01.ss06.numr \one.cv01.ss06.numr.pnum 
+	\one.cv01.ss06.numr.tnum \one.cv01.ss06.dnom \one.cv01.ss06.dnom.pnum 
+	\one.cv01.ss06.dnom.tnum \one.cv11.ss06 \one.cv11.ss06.pnum 
+	\one.cv11.ss06.tnum \one.cv11.ss06.onum \one.cv11.ss06.onum.tnum 
+	\one.cv11.ss06.superior \one.cv11.ss06.superior.pnum 
+	\one.cv11.ss06.superior.tnum \one.cv11.ss06.subscript 
+	\one.cv11.ss06.subscript.pnum \one.cv11.ss06.subscript.tnum 
+	\one.cv11.ss06.numr \one.cv11.ss06.numr.pnum \one.cv11.ss06.numr.tnum 
+	\one.cv11.ss06.dnom \one.cv11.ss06.dnom.pnum \one.cv11.ss06.dnom.tnum 
+	\uni2460.ss06 \uni2460.cv01.ss06 \uni2460.cv11.ss06 \uni2469.ss06 
+	\uni2469.cv10.ss06 \uni2469.cv20.ss06 \uni2469.cv01.ss06 
+	\uni2469.cv01.cv10.ss06 \uni2469.cv01.cv20.ss06 \uni2469.cv11.ss06 
+	\uni2469.cv10.cv11.ss06 \uni2469.cv11.cv20.ss06 \uni246A.ss06 
+	\uni246A.cv01.ss06 \uni246A.cv11.ss06 \uni246B.ss06 \uni246B.cv02.ss06 
+	\uni246B.cv12.ss06 \uni246B.cv01.ss06 \uni246B.cv01.cv02.ss06 
+	\uni246B.cv01.cv12.ss06 \uni246B.cv11.ss06 \uni246B.cv02.cv11.ss06 
+	\uni246B.cv11.cv12.ss06 \uni246C.ss06 \uni246C.cv03.ss06 \uni246C.cv13.ss06 
+	\uni246C.cv01.ss06 \uni246C.cv01.cv03.ss06 \uni246C.cv01.cv13.ss06 
+	\uni246C.cv11.ss06 \uni246C.cv03.cv11.ss06 \uni246C.cv11.cv13.ss06 
+	\uni246D.ss06 \uni246D.cv04.ss06 \uni246D.cv14.ss06 \uni246D.cv01.ss06 
 	\uni246D.cv01.cv04.ss06 \uni246D.cv01.cv14.ss06 \uni246D.cv11.ss06 
 	\uni246D.cv04.cv11.ss06 \uni246D.cv11.cv14.ss06 \uni246E.ss06 
 	\uni246E.cv05.ss06 \uni246E.cv15.ss06 \uni246E.cv01.ss06 
@@ -12296,11 +12304,7 @@ feature mkmk {
 	\uni2152.cv10.cv11.ss06.zero \uni2152.cv11.cv20.ss06.zero \colon.centered 
 	\asterisk.centered \dotlessuni0268 \dotlessuni029D \dotlessuni02B2 
 	\dotlessuni1DA4 \dotlessuni2071 \dotlessuni2148 \dotlessuni2149 
-	\double_circle_empty \l.cv28 \lacute.cv28 \lcommaaccent.cv28 \lcaron.cv28 
-	\ldot.cv28 \lslash.cv28 \uni019A.cv28 \uni01C9.cv28 \uni0234.cv28 
-	\uni026D.cv28 \uni026E.cv28 \uni02AA.cv28 \uni02AB.cv28 \uni02E1.cv28 
-	\uni1E37.cv28 \uni1E39.cv28 \uni1E3B.cv28 \uni1E3D.cv28 \uni2097.cv28 
-	\uni217C.cv28 \uni24A7.cv28 \uni24DB.cv28 ];
+	\double_circle_empty ];
 @GDEF_Ligature = [\i \j \igrave \iacute \icircumflex \idieresis \dotlessi \itilde 
 	\imacron \ibreve \iogonek \jcircumflex \uni01D0 \uni0209 \uni020B \uni0249 
 	\uni0457 \uni1EC9 \arrowright \arrowleft \arrowboth \arrowdblright 
