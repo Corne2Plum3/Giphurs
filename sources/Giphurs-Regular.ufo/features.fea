@@ -4563,8 +4563,8 @@ lookup ccmp_latn {
     sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
-    sub \i \uni0308  by \idieresis;
     sub \i \uni0307  by \idieresis;
+    sub \i \uni0308  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
@@ -4623,8 +4623,8 @@ lookup ccmp_latn {
     sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \iogonek \gravecomb  by \iogonek;
     sub \i \uni0328  by \iogonek;
+    sub \iogonek \gravecomb  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4713,13 +4713,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \u \uni0308 \gravecomb  by \uni01DC;
-    sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \AE \acutecomb  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \Oslash \acutecomb  by \uni01E0;
     sub \A \uni0307 \uni0304  by \uni01E0;
+    sub \Oslash \acutecomb  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5674,8 +5674,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0456 \uni0308  by \uni0457;
+    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -5940,6 +5940,29 @@ lookup calt_Contextual_Alternates {
 	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
 } calt_Contextual_Alternates;
 
+feature cv27 {
+
+ script DFLT;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script copt;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script cyrl;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script grek;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script latn;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+} cv27;
+
 feature locl {
 
  script cyrl;
@@ -6026,29 +6049,6 @@ feature locl {
      language WLF  exclude_dflt;
       lookup locl_cv27_Localized_Eng;
 } locl;
-
-feature cv27 {
-
- script DFLT;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script copt;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script cyrl;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script grek;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script latn;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-} cv27;
 
 feature ss09 {
   featureNames {
@@ -7421,15 +7421,15 @@ feature calt {
 
 lookup kern_Horizontal_kerning {
   lookupflag 0;
-    @kc87_first_1 = [\A \backslash \Agrave \Aacute \Acircumflex \Atilde \Adieresis \Aring \Amacron 
-	\Aogonek \Abreve \uni01CD \uni01DE \uni01E0 \uni0226 \Aringacute 
-	\uni0200 \uni0202 \uni0245 \Alpha \uni0394 \Lambda \Alphatonos \uni0410 
-	\uni0466 \uni04D0 \uni04D2 \uni1E00 \uni1EA0 \uni1EA2 \uni1EA4 \uni1EA6 
-	\uni1EA8 \uni1EAA \uni1EAC \uni1EAE \uni1EB0 \uni1EB2 \uni1EB4 \uni1EB6 
-	\uni212B \Delta \uni1F08 \uni1F09 \uni1F0A \uni1F0B \uni1F0C \uni1F0D 
-	\uni1F0E \uni1F0F \uni1F88 \uni1F89 \uni1F8A \uni1F8B \uni1F8C \uni1F8D 
-	\uni1F8E \uni1F8F \uni1FB8 \uni1FB9 \uni1FBA \uni1FBC \uni1FBB 
-	\uni0414.loclBGR \uni041B.loclBGR ];
+    @kc87_first_1 = [\A \Aacute \Abreve \Acircumflex \Adieresis \Agrave \Alpha \Alphatonos \Amacron 
+	\Aogonek \Aring \Aringacute \Atilde \Delta \Lambda \backslash \uni01CD 
+	\uni01DE \uni01E0 \uni0200 \uni0202 \uni0226 \uni0245 \uni0394 \uni0410 
+	\uni0414.loclBGR \uni041B.loclBGR \uni0466 \uni04D0 \uni04D2 \uni1E00 
+	\uni1EA0 \uni1EA2 \uni1EA4 \uni1EA6 \uni1EA8 \uni1EAA \uni1EAC \uni1EAE 
+	\uni1EB0 \uni1EB2 \uni1EB4 \uni1EB6 \uni1F08 \uni1F09 \uni1F0A \uni1F0B 
+	\uni1F0C \uni1F0D \uni1F0E \uni1F0F \uni1F88 \uni1F89 \uni1F8A \uni1F8B 
+	\uni1F8C \uni1F8D \uni1F8E \uni1F8F \uni1FB8 \uni1FB9 \uni1FBA \uni1FBB 
+	\uni1FBC \uni212B ];
     @kc87_first_2 = [\B \Beta \beta \delta \germandbls \uni0181 \uni0182 \uni0243 \uni03D0 \uni0411 
 	\uni0412 \uni0417 \uni0432.loclBGR \uni0498 \uni04DE \uni1E02 \uni1E04 
 	\uni1E06 \uni1E9E \uniA7B4 \uniA7B5 ];
@@ -7479,8 +7479,8 @@ lookup kern_Horizontal_kerning {
 	\Ygrave \uni01B3 \uni0232 \uni024E \uni03D3 \uni03D4 \uni04AE \uni04B0 
 	\uni1E8E \uni1EF4 \uni1EF6 \uni1EF8 \uni1F59 \uni1F5B \uni1F5D \uni1F5F 
 	\uni1FE8 \uni1FE9 \uni1FEA \uni1FEB ];
-    @kc87_first_17 = [\V \slash \uni0423 \uni0474 \uni0476 \uni1E7C \uni1E7E \uni1EFE \uni2164 
-	\universal \gradient \uni2163 ];
+    @kc87_first_17 = [\V \gradient \slash \uni0423 \uni0474 \uni0476 \uni1E7C \uni1E7E \uni1EFE 
+	\uni2163 \uni2164 \universal ];
     @kc87_first_18 = [\W ];
     @kc87_first_19 = [\a \aacute \abreve \acircumflex \adieresis \agrave \amacron \aogonek \aring 
 	\atilde \uni01DF \uni01E1 \uni0201 \uni0203 \uni0227 \uni0430 \uni04D1 
@@ -7771,12 +7771,12 @@ lookup kern_Horizontal_kerning {
     @kc87_first_67 = [\uni044A \uni044C \uni0459 \uni045A \uni048D ];
     @kc87_first_68 = [\uni047F.sc \uni051D.sc \uni1E87.sc \uni1E89.sc \uni1E98.sc \uni2C73.sc \w.sc 
 	\wacute.sc \wdieresis.sc \wgrave.sc ];
-    @kc87_second_1 = [\A \slash \Agrave \Aacute \Acircumflex \Atilde \Adieresis \Aring \Amacron 
-	\Aogonek \Abreve \uni01CD \uni01DE \uni01E0 \uni0226 \Aringacute 
-	\uni0200 \uni0202 \uni0245 \Alpha \uni0394 \Lambda \uni0410 \uni0466 
-	\uni04D0 \uni04D2 \uni1E00 \uni1EA0 \uni1EA2 \uni1EA4 \uni1EA6 \uni1EA8 
-	\uni1EAA \uni1EAC \uni1EAE \uni1EB0 \uni1EB2 \uni1EB4 \uni1EB6 \uni212B 
-	\Delta \uni1FB8 \uni1FB9 \uni1FBC \uni0414.loclBGR \uni041B.loclBGR ];
+    @kc87_second_1 = [\A \Aacute \Abreve \Acircumflex \Adieresis \Agrave \Alpha \Amacron \Aogonek 
+	\Aring \Aringacute \Atilde \Delta \Lambda \slash \uni01CD \uni01DE 
+	\uni01E0 \uni0200 \uni0202 \uni0226 \uni0245 \uni0394 \uni0410 
+	\uni0414.loclBGR \uni041B.loclBGR \uni0466 \uni04D0 \uni04D2 \uni1E00 
+	\uni1EA0 \uni1EA2 \uni1EA4 \uni1EA6 \uni1EA8 \uni1EAA \uni1EAC \uni1EAE 
+	\uni1EB0 \uni1EB2 \uni1EB4 \uni1EB6 \uni1FB8 \uni1FB9 \uni1FBC \uni212B ];
     @kc87_second_2 = [\AE \AEacute \uni01E2 \uni04D4 ];
     @kc87_second_3 = [\C \Cacute \Ccaron \Ccedilla \Ccircumflex \Cdotaccent \Euro \Euro.ss05 \G \G.cv21 
 	\Gbreve \Gbreve.cv21 \Gcaron \Gcaron.cv21 \Gcircumflex 
@@ -8938,7 +8938,6 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_41 @kc87_second_13 -210;
     pos @kc87_first_41 @kc87_second_14 -140;
     pos @kc87_first_41 @kc87_second_15 -105;
-    pos @kc87_first_41 @kc87_second_33 -140;
     pos @kc87_first_41 @kc87_second_39 -70;
     pos @kc87_first_41 @kc87_second_40 -35;
     pos @kc87_first_41 @kc87_second_43 -140;
@@ -12210,7 +12209,6 @@ feature mkmk {
       lookup mkmk_mark_to_mark_bottom_center;
       lookup mkmk_mark_to_mark_greek_top_center;
 } mkmk;
-#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 
