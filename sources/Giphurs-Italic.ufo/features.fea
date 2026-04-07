@@ -4563,8 +4563,8 @@ lookup ccmp_latn {
     sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
-    sub \i \uni0308  by \idieresis;
     sub \i \uni0307  by \idieresis;
+    sub \i \uni0308  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
@@ -4623,8 +4623,8 @@ lookup ccmp_latn {
     sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \iogonek \gravecomb  by \iogonek;
     sub \i \uni0328  by \iogonek;
+    sub \iogonek \gravecomb  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4713,13 +4713,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \u \uni0308 \gravecomb  by \uni01DC;
-    sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \AE \acutecomb  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \Oslash \acutecomb  by \uni01E0;
     sub \A \uni0307 \uni0304  by \uni01E0;
+    sub \Oslash \acutecomb  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5674,8 +5674,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0456 \uni0308  by \uni0457;
+    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -5940,29 +5940,6 @@ lookup calt_Contextual_Alternates {
 	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
 } calt_Contextual_Alternates;
 
-feature cv27 {
-
- script DFLT;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script copt;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script cyrl;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script grek;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script latn;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-} cv27;
-
 feature locl {
 
  script cyrl;
@@ -6049,6 +6026,29 @@ feature locl {
      language WLF  exclude_dflt;
       lookup locl_cv27_Localized_Eng;
 } locl;
+
+feature cv27 {
+
+ script DFLT;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script copt;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script cyrl;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script grek;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script latn;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+} cv27;
 
 feature ss09 {
   featureNames {
@@ -7482,31 +7482,30 @@ lookup kern_Horizontal_kerning {
     @kc87_first_17 = [\V \gradient \slash \uni0423 \uni0474 \uni0476 \uni1E7C \uni1E7E \uni1EFE 
 	\uni2163 \uni2164 \universal ];
     @kc87_first_18 = [\W \Wacute \Wcircumflex \Wdieresis \Wgrave \uni0460 \uni1E86 \uni1E88 \uni2C72 ];
-    @kc87_first_19 = [\a \aacute \abreve \acircumflex \adieresis \agrave \amacron \aogonek \aring 
-	\atilde \uni01DF \uni01E1 \uni0201 \uni0203 \uni0227 \uni0430 \uni04D1 
-	\uni04D3 \uni1E01 \uni1EA1 \uni1EA3 \uni1EA5 \uni1EA7 \uni1EA9 \uni1EAB 
-	\uni1EAD \uni1EAF \uni1EB1 \uni1EB3 \uni1EB5 \uni1EB7 \u \ugrave \uacute 
-	\ucircumflex \udieresis \utilde \umacron \ubreve \uring \uhungarumlaut 
-	\uogonek \uhorn \uni01D4 \uni01D6 \uni01D8 \uni01DA \uni01DC \uni0215 
-	\uni0217 \uni0251 \uni026F \uni0438 \uni043C \uni043D \uni043F \uni0447 
-	\uni044B \uni045D \uni045F \uni04B9 \uni04E3 \uni04E5 \uni04F9 \uni0505 
-	\uni1E73 \uni1E75 \uni1E77 \uni1E79 \uni1E7B \uni1EE5 \uni1EE7 \uni1EE9 
-	\uni1EEB \uni1EED \uni1EEF \uni1EF1 \a.cv23 \agrave.cv23 \aacute.cv23 
-	\acircumflex.cv23 \atilde.cv23 \adieresis.cv23 \aring.cv23 
-	\amacron.cv23 \abreve.cv23 \aogonek.cv23 \uni01CE.cv23 \uni01DF.cv23 
-	\uni01E1.cv23 \aringacute.cv23 \uni0201.cv23 \uni0203.cv23 
-	\uni0227.cv23 \uni0250.cv23 \uni0430.cv23 \uni04D1.cv23 
-	\uni04D3.cv23 \uni1E01.cv23 \uni1EA1.cv23 \uni1EA3.cv23 
-	\uni1EA5.cv23 \uni1EA7.cv23 \uni1EA9.cv23 \uni1EAB.cv23 
-	\uni1EAD.cv23 \uni1EAF.cv23 \uni1EB1.cv23 \uni1EB3.cv23 
-	\uni1EB5.cv23 \uni1EB7.cv23 \u.cv25 \ugrave.cv25 \uacute.cv25 
-	\ucircumflex.cv25 \udieresis.cv25 \utilde.cv25 \umacron.cv25 
-	\ubreve.cv25 \uring.cv25 \uhungarumlaut.cv25 \uogonek.cv25 
-	\uhorn.cv25 \uni01D4.cv25 \uni01D6.cv25 \uni01D8.cv25 \uni01DA.cv25 
-	\uni01DC.cv25 \uni0215.cv25 \uni0217.cv25 \uni1E73.cv25 
-	\uni1E75.cv25 \uni1E77.cv25 \uni1E79.cv25 \uni1E7B.cv25 
-	\uni1EE5.cv25 \uni1EE7.cv25 \uni1EE9.cv25 \uni1EEB.cv25 
-	\uni1EED.cv25 \uni1EEF.cv25 \uni1EF1.cv25 ];
+    @kc87_first_19 = [\a \a.cv23 \aacute \aacute.cv23 \abreve \abreve.cv23 \acircumflex 
+	\acircumflex.cv23 \adieresis \adieresis.cv23 \agrave \agrave.cv23 
+	\amacron \amacron.cv23 \aogonek \aogonek.cv23 \aring \aring.cv23 
+	\aringacute.cv23 \atilde \atilde.cv23 \u \u.cv25 \uacute \uacute.cv25 
+	\ubreve \ubreve.cv25 \ucircumflex \ucircumflex.cv25 \udieresis 
+	\udieresis.cv25 \ugrave \ugrave.cv25 \uhorn \uhorn.cv25 
+	\uhungarumlaut \uhungarumlaut.cv25 \umacron \umacron.cv25 
+	\uni01CE.cv23 \uni01D4 \uni01D4.cv25 \uni01D6 \uni01D6.cv25 \uni01D8 
+	\uni01D8.cv25 \uni01DA \uni01DA.cv25 \uni01DC \uni01DC.cv25 \uni01DF 
+	\uni01DF.cv23 \uni01E1 \uni01E1.cv23 \uni0201 \uni0201.cv23 \uni0203 
+	\uni0203.cv23 \uni0215 \uni0215.cv25 \uni0217 \uni0217.cv25 \uni0227 
+	\uni0227.cv23 \uni0250.cv23 \uni0251 \uni026F \uni0430 \uni0430.cv23 
+	\uni0438 \uni043C \uni043D \uni043F \uni0447 \uni044B \uni045D \uni045F 
+	\uni04B9 \uni04D1 \uni04D1.cv23 \uni04D3 \uni04D3.cv23 \uni04E3 
+	\uni04E5 \uni04F9 \uni0505 \uni1E01 \uni1E01.cv23 \uni1E73 
+	\uni1E73.cv25 \uni1E75 \uni1E75.cv25 \uni1E77 \uni1E77.cv25 \uni1E79 
+	\uni1E79.cv25 \uni1E7B \uni1E7B.cv25 \uni1EA1 \uni1EA1.cv23 \uni1EA3 
+	\uni1EA3.cv23 \uni1EA5 \uni1EA5.cv23 \uni1EA7 \uni1EA7.cv23 \uni1EA9 
+	\uni1EA9.cv23 \uni1EAB \uni1EAB.cv23 \uni1EAD \uni1EAD.cv23 \uni1EAF 
+	\uni1EAF.cv23 \uni1EB1 \uni1EB1.cv23 \uni1EB3 \uni1EB3.cv23 \uni1EB5 
+	\uni1EB5.cv23 \uni1EB7 \uni1EB7.cv23 \uni1EE5 \uni1EE5.cv25 \uni1EE7 
+	\uni1EE7.cv25 \uni1EE9 \uni1EE9.cv25 \uni1EEB \uni1EEB.cv25 \uni1EED 
+	\uni1EED.cv25 \uni1EEF \uni1EEF.cv25 \uni1EF1 \uni1EF1.cv25 \uogonek 
+	\uogonek.cv25 \uring \uring.cv25 \utilde \utilde.cv25 ];
     @kc87_first_20 = [\a.sc \aacute.sc \abreve.sc \acircumflex.sc \adieresis.sc \agrave.sc \alpha.sc 
 	\amacron.sc \aogonek.sc \aring.sc \atilde.sc \delta.sc \lambda.sc 
 	\uni019B.sc \uni01CE.sc \uni01DF.sc \uni01E1.sc \uni0201.sc 
@@ -7697,11 +7696,11 @@ lookup kern_Horizontal_kerning {
 	\uni1F26 \uni1F27 \uni1F74 \uni1F75 \uni1F90 \uni1F91 \uni1F92 \uni1F93 
 	\uni1F94 \uni1F95 \uni1F96 \uni1F97 \uni1FC2 \uni1FC3 \uni1FC4 \uni1FC6 
 	\uni1FC7 ];
-    @kc87_first_35 = [\s \sacute \scircumflex \scedilla \scaron \uni01A8 \scommaaccent \uni023F 
-	\uni025B \uni025C \uni025D \uni0282 \epsilontonos \epsilon \uni0433 
-	\uni0437 \uni0453 \uni0455 \uni0479 \uni0493 \uni0499 \uni04DF \uni04F7 
-	\uni04FB \uni0511 \uni1E61 \uni1E63 \uni1E65 \uni1E67 \uni1E69 \uni1F10 
-	\uni1F11 \uni1F12 \uni1F13 \uni1F14 \uni1F15 \uni1F72 \uni1F73 ];
+    @kc87_first_35 = [\epsilon \epsilontonos \s \sacute \scaron \scedilla \scircumflex \scommaaccent 
+	\uni01A8 \uni023F \uni025B \uni025C \uni025D \uni0282 \uni0433 \uni0437 
+	\uni0453 \uni0455 \uni0479 \uni0493 \uni0499 \uni04DF \uni04F7 \uni04FB 
+	\uni0511 \uni1E61 \uni1E63 \uni1E65 \uni1E67 \uni1E69 \uni1F10 \uni1F11 
+	\uni1F12 \uni1F13 \uni1F14 \uni1F15 \uni1F72 \uni1F73 ];
     @kc87_first_36 = [\eth \uni1EFC \uni1EFD ];
     @kc87_first_37 = [\g \gbreve \gcircumflex \gcommaaccent \gdotaccent \sigma \uni01E5 \uni1E21 ];
     @kc87_first_38 = [\g.sc \gbreve.sc \gcircumflex.sc \gcommaaccent.sc \gdotaccent.sc \omega.sc 
@@ -7825,41 +7824,40 @@ lookup kern_Horizontal_kerning {
     @kc87_second_15 = [\W \Wacute \Wcircumflex \Wdieresis \Wgrave \uni0460 \uni1E86 \uni1E88 \uni2C72 ];
     @kc87_second_16 = [\X \uni0416 \uni0423 \uni0496 \uni049A \uni04B2 \uni04C1 \uni04DC \uni04FC 
 	\uni04FE \uni1E8A \uni1E8C \uni2169 \uni216A \uni216B ];
-    @kc87_second_17 = [\a \d \g \q \agrave \aacute \acircumflex \atilde \adieresis \aring \eth \amacron 
-	\abreve \aogonek \dcaron \dcroat \gcircumflex \gbreve \gdotaccent 
-	\gcommaaccent \uni01DF \uni01E1 \uni01E5 \uni0201 \uni0203 \uni0227 
-	\uni0238 \uni0239 \uni024B \uni0260 \uni0261 \uni0278 \alphatonos 
-	\alpha \sigma \phi \uni0430 \uni0432 \uni0434 \uni0444 \uni04D1 \uni04D3 
-	\uni0501 \uni0503 \uni051B \uni1E01 \uni1E0B \uni1E0D \uni1E0F \uni1E11 
-	\uni1E21 \uni1EA1 \uni1EA3 \uni1EA5 \uni1EA7 \uni1EA9 \uni1EAB \uni1EAD 
-	\uni1EAF \uni1EB1 \uni1EB3 \uni1EB5 \uni1EB7 \uni1F00 \uni1F01 \uni1F02 
-	\uni1F03 \uni1F04 \uni1F05 \uni1F06 \uni1F07 \uni1F80 \uni1F81 \uni1F82 
-	\uni1F83 \uni1F84 \uni1F85 \uni1F86 \uni1F87 \uni1FB0 \uni1FB1 \uni1FB2 
-	\uni1FB3 \uni1FB4 \uni1FB6 \uni1FB7 \dong \uni217E \uniA7C8 
-	\uni0434.loclBGR \a.sc \agrave.sc \aacute.sc \acircumflex.sc 
-	\atilde.sc \adieresis.sc \aring.sc \amacron.sc \abreve.sc \aogonek.sc 
-	\uni019B.sc \uni01CE.sc \uni01DF.sc \uni01E1.sc \uni0201.sc 
-	\uni0203.sc \uni0227.sc \alpha.sc \delta.sc \lambda.sc \uni0430.sc 
-	\uni0467.sc \uni0469.sc \uni04D1.sc \uni04D3.sc \uni1E01.sc 
-	\uni1EA1.sc \uni1EA3.sc \uni1EA5.sc \uni1EA7.sc \uni1EA9.sc 
-	\uni1EAB.sc \uni1EAD.sc \uni1EAF.sc \uni1EB1.sc \uni1EB3.sc 
-	\uni1EB5.sc \uni1EB7.sc \uni1F00.sc \uni1F01.sc \uni1F02.sc 
-	\uni1F03.sc \uni1F04.sc \uni1F05.sc \uni1F06.sc \uni1F07.sc 
-	\uni1F70.sc \uni1F71.sc \uni1F80.sc \uni1F81.sc \uni1F82.sc 
-	\uni1F83.sc \uni1F84.sc \uni1F85.sc \uni1F86.sc \uni1F87.sc 
-	\uni1FB0.sc \uni1FB1.sc \uni1FB2.sc \uni1FB3.sc \uni1FB4.sc 
-	\uni1FB6.sc \uni1FB7.sc \uni0434.loclBGR.sc \uni043B.loclBGR.sc 
-	\a.cv23 \agrave.cv23 \aacute.cv23 \acircumflex.cv23 \atilde.cv23 
-	\adieresis.cv23 \aring.cv23 \ae.cv23 \amacron.cv23 \abreve.cv23 
-	\aogonek.cv23 \uni01CE.cv23 \uni01DF.cv23 \uni01E1.cv23 
-	\uni01E3.cv23 \aringacute.cv23 \aeacute.cv23 \uni0201.cv23 
-	\uni0203.cv23 \uni0227.cv23 \uni0430.cv23 \uni04D1.cv23 
-	\uni04D3.cv23 \uni04D5.cv23 \uni1E01.cv23 \uni1E9A.cv23 
-	\uni1EA1.cv23 \uni1EA3.cv23 \uni1EA5.cv23 \uni1EA7.cv23 
-	\uni1EA9.cv23 \uni1EAB.cv23 \uni1EAD.cv23 \uni1EAF.cv23 
-	\uni1EB1.cv23 \uni1EB3.cv23 \uni1EB5.cv23 \uni1EB7.cv23 \g.cv24 
-	\gcircumflex.cv24 \gbreve.cv24 \gdotaccent.cv24 \gcommaaccent.cv24 
-	\uni01E5.cv24 \gcaron.cv24 \uni01F5.cv24 \uni1E21.cv24 ];
+    @kc87_second_17 = [\a \a.cv23 \a.sc \aacute \aacute.cv23 \aacute.sc \abreve \abreve.cv23 \abreve.sc 
+	\acircumflex \acircumflex.cv23 \acircumflex.sc \adieresis 
+	\adieresis.cv23 \adieresis.sc \ae.cv23 \aeacute.cv23 \agrave 
+	\agrave.cv23 \agrave.sc \alpha \alpha.sc \alphatonos \amacron 
+	\amacron.cv23 \amacron.sc \aogonek \aogonek.cv23 \aogonek.sc \aring 
+	\aring.cv23 \aring.sc \aringacute.cv23 \atilde \atilde.cv23 
+	\atilde.sc \d \dcaron \dcroat \delta.sc \dong \eth \g \g.cv24 \gbreve 
+	\gbreve.cv24 \gcaron.cv24 \gcircumflex \gcircumflex.cv24 
+	\gcommaaccent \gcommaaccent.cv24 \gdotaccent \gdotaccent.cv24 
+	\lambda.sc \phi \q \sigma \uni019B.sc \uni01CE.cv23 \uni01CE.sc 
+	\uni01DF \uni01DF.cv23 \uni01DF.sc \uni01E1 \uni01E1.cv23 \uni01E1.sc 
+	\uni01E3.cv23 \uni01E5 \uni01E5.cv24 \uni01F5.cv24 \uni0201 
+	\uni0201.cv23 \uni0201.sc \uni0203 \uni0203.cv23 \uni0203.sc \uni0227 
+	\uni0227.cv23 \uni0227.sc \uni0238 \uni0239 \uni024B \uni0260 \uni0261 
+	\uni0278 \uni0430 \uni0430.cv23 \uni0430.sc \uni0432 \uni0434 
+	\uni0434.loclBGR \uni0434.loclBGR.sc \uni043B.loclBGR.sc \uni0444 
+	\uni0467.sc \uni0469.sc \uni04D1 \uni04D1.cv23 \uni04D1.sc \uni04D3 
+	\uni04D3.cv23 \uni04D3.sc \uni04D5.cv23 \uni0501 \uni0503 \uni051B 
+	\uni1E01 \uni1E01.cv23 \uni1E01.sc \uni1E0B \uni1E0D \uni1E0F \uni1E11 
+	\uni1E21 \uni1E21.cv24 \uni1E9A.cv23 \uni1EA1 \uni1EA1.cv23 
+	\uni1EA1.sc \uni1EA3 \uni1EA3.cv23 \uni1EA3.sc \uni1EA5 \uni1EA5.cv23 
+	\uni1EA5.sc \uni1EA7 \uni1EA7.cv23 \uni1EA7.sc \uni1EA9 \uni1EA9.cv23 
+	\uni1EA9.sc \uni1EAB \uni1EAB.cv23 \uni1EAB.sc \uni1EAD \uni1EAD.cv23 
+	\uni1EAD.sc \uni1EAF \uni1EAF.cv23 \uni1EAF.sc \uni1EB1 \uni1EB1.cv23 
+	\uni1EB1.sc \uni1EB3 \uni1EB3.cv23 \uni1EB3.sc \uni1EB5 \uni1EB5.cv23 
+	\uni1EB5.sc \uni1EB7 \uni1EB7.cv23 \uni1EB7.sc \uni1F00 \uni1F00.sc 
+	\uni1F01 \uni1F01.sc \uni1F02 \uni1F02.sc \uni1F03 \uni1F03.sc 
+	\uni1F04 \uni1F04.sc \uni1F05 \uni1F05.sc \uni1F06 \uni1F06.sc 
+	\uni1F07 \uni1F07.sc \uni1F70.sc \uni1F71.sc \uni1F80 \uni1F80.sc 
+	\uni1F81 \uni1F81.sc \uni1F82 \uni1F82.sc \uni1F83 \uni1F83.sc 
+	\uni1F84 \uni1F84.sc \uni1F85 \uni1F85.sc \uni1F86 \uni1F86.sc 
+	\uni1F87 \uni1F87.sc \uni1FB0 \uni1FB0.sc \uni1FB1 \uni1FB1.sc 
+	\uni1FB2 \uni1FB2.sc \uni1FB3 \uni1FB3.sc \uni1FB4 \uni1FB4.sc 
+	\uni1FB6 \uni1FB6.sc \uni1FB7 \uni1FB7.sc \uni217E \uniA7C8 ];
     @kc87_second_18 = [\acute \asciicircum \asterisk \breve \caron \circumflex \degree \dieresis 
 	\dieresistonos \dotaccent \eight.cv08.superior 
 	\eight.cv08.superior.pnum \eight.cv08.superior.tnum 
@@ -7923,21 +7921,20 @@ lookup kern_Horizontal_kerning {
 	\uni22A2 \uni22A7 \uni22A8 \uni22A9 \uni22AB ];
     @kc87_second_21 = [\beta \mu \p \uni01BF \uni03BC \uni048F \uni0516 \uni1E55 \uni1E57 \uni2C64 
 	\uniA7B4 \uniA7B5 ];
-    @kc87_second_22 = [\c \e \o \ccedilla \egrave \eacute \ecircumflex \edieresis \ograve \oacute 
-	\ocircumflex \otilde \odieresis \oslash \cacute \ccircumflex 
-	\cdotaccent \ccaron \emacron \ebreve \edotaccent \eogonek \ecaron 
-	\omacron \obreve \ohungarumlaut \oe \uni0188 \uni018D \ohorn \uni01A3 
-	\uni01D2 \uni01DD \uni01EB \oslashacute \uni020D \uni020F \uni022B 
-	\uni022D \uni022F \uni0231 \uni023C \uni0247 \uni0255 \uni0258 \uni0259 
-	\uni025A \uni0275 \uni0276 \uni029B \omicron \omicrontonos \uni03D9 
-	\uni03F2 \uni03F5 \uni0435 \uni043E \uni0450 \uni0451 \uni0473 \uni047B 
-	\uni04A9 \uni04AB \uni04D7 \uni04D9 \uni04DB \uni04E7 \uni04E9 \uni04EB 
-	\uni050D \uni1E09 \uni1E15 \uni1E17 \uni1E19 \uni1E1B \uni1E1D \uni1E4D 
-	\uni1E4F \uni1E51 \uni1E53 \uni1EB9 \uni1EBB \uni1EBD \uni1EBF \uni1EC1 
-	\uni1EC3 \uni1EC5 \uni1EC7 \uni1ECD \uni1ECF \uni1ED1 \uni1ED3 \uni1ED5 
-	\uni1ED7 \uni1ED9 \uni1EDB \uni1EDD \uni1EDF \uni1EE1 \uni1EE3 \uni1F40 
-	\uni1F41 \uni1F42 \uni1F43 \uni1F44 \uni1F45 \uni1F78 \uni1F79 \uni20C0 
-	\uni217D ];
+    @kc87_second_22 = [\c \cacute \ccaron \ccedilla \ccircumflex \cdotaccent \e \eacute \ebreve \ecaron 
+	\ecircumflex \edieresis \edotaccent \egrave \emacron \eogonek \o 
+	\oacute \obreve \ocircumflex \odieresis \oe \ograve \ohorn 
+	\ohungarumlaut \omacron \omicron \omicrontonos \oslash \oslashacute 
+	\otilde \uni0188 \uni018D \uni01A3 \uni01D2 \uni01DD \uni01EB \uni020D 
+	\uni020F \uni022B \uni022D \uni022F \uni0231 \uni023C \uni0247 \uni0255 
+	\uni0258 \uni0259 \uni025A \uni0275 \uni0276 \uni029B \uni03D9 \uni03F2 
+	\uni03F5 \uni0435 \uni043E \uni0450 \uni0451 \uni0473 \uni047B \uni04A9 
+	\uni04AB \uni04D7 \uni04D9 \uni04DB \uni04E7 \uni04E9 \uni04EB \uni050D 
+	\uni1E09 \uni1E15 \uni1E17 \uni1E19 \uni1E1B \uni1E1D \uni1E4D \uni1E4F 
+	\uni1E51 \uni1E53 \uni1EB9 \uni1EBB \uni1EBD \uni1EBF \uni1EC1 \uni1EC3 
+	\uni1EC5 \uni1EC7 \uni1ECD \uni1ECF \uni1ED1 \uni1ED3 \uni1ED5 \uni1ED7 
+	\uni1ED9 \uni1EDB \uni1EDD \uni1EDF \uni1EE1 \uni1EE3 \uni1F40 \uni1F41 
+	\uni1F42 \uni1F43 \uni1F44 \uni1F45 \uni1F78 \uni1F79 \uni20C0 \uni217D ];
     @kc87_second_23 = [\c.sc \cacute.sc \ccaron.sc \ccedilla.sc \ccircumflex.sc \cdotaccent.sc \g.sc 
 	\gbreve.sc \gcaron.sc \gcircumflex.sc \gcommaaccent.sc 
 	\gdotaccent.sc \o.sc \oacute.sc \obreve.sc \ocircumflex.sc 
@@ -8026,34 +8023,34 @@ lookup kern_Horizontal_kerning {
 	\uni1FD0.sc \uni1FD1.sc \uni1FD2.sc \uni1FD3.sc \uni1FD6.sc 
 	\uni1FD7.sc \uni2170.sc \uni2171.sc \uni2172.sc \uni2173.sc 
 	\uni2178.sc ];
-    @kc87_second_28 = [\s \sacute \scircumflex \scedilla \scaron \uni01A8 \scommaaccent \uni023F 
-	\uni025B \uni025C \uni025D \uni0282 \epsilontonos \epsilon \uni0433 
-	\uni0437 \uni0453 \uni0455 \uni0479 \uni0493 \uni0499 \uni04DF \uni04F7 
-	\uni04FB \uni0511 \uni1E61 \uni1E63 \uni1E65 \uni1E67 \uni1E69 \uni1F10 
-	\uni1F11 \uni1F12 \uni1F13 \uni1F14 \uni1F15 \uni1F72 \uni1F73 ];
-    @kc87_second_29 = [\m \n \r \u \ntilde \ugrave \uacute \ucircumflex \udieresis \nacute \ncommaaccent 
-	\ncaron \napostrophe \racute \rcommaaccent \rcaron \utilde \umacron 
-	\ubreve \uring \uhungarumlaut \uogonek \uni01D4 \uni01D6 \uni01D8 
-	\uni01DA \uni01DC \uni01F9 \uni0211 \uni0213 \uni0215 \uni0217 \uni024D 
-	\uni0265 \uni0269 \uni026F \uni0270 \uni0271 \uni0273 \uni0289 \uni028A 
-	\uni028B \uni0299 \uni029C \uni029F \etatonos \upsilondieresistonos 
-	\eta \iota \kappa \upsilon \upsilontonos \uni0438 \uni0439 \uni043A 
-	\uni043C \uni043D \uni043F \uni0442 \uni0446 \uni0448 \uni0449 \uni044B 
-	\uni044C \uni044E \uni045C \uni045D \uni045F \uni0465 \uni0469 \uni046D 
-	\uni0491 \uni0495 \uni049B \uni049D \uni04A1 \uni04A3 \uni04A5 \uni04A7 
-	\uni04AD \uni04C8 \uni04CA \uni04CE \uni0523 \uni0525 \uni0529 \uni1E3F 
-	\uni1E41 \uni1E43 \uni1E45 \uni1E47 \uni1E49 \uni1E4B \uni1E59 \uni1E5B 
-	\uni1E5D \uni1E5F \uni1E73 \uni1E75 \uni1E77 \uni1E79 \uni1E7B \uni1EE5 
-	\uni1EE7 \uni1EE9 \uni1EEB \uni1EED \uni1EEF \uni1EF1 \uni1F50 \uni1F51 
-	\uni1F52 \uni1F53 \uni1F54 \uni1F55 \uni1F56 \uni1F57 \uni1F7A \uni1F7B 
-	\uni1FE6 \uni1FE7 \uni20AA \uniA657 \u.cv25 \ugrave.cv25 \uacute.cv25 
-	\ucircumflex.cv25 \udieresis.cv25 \utilde.cv25 \umacron.cv25 
-	\ubreve.cv25 \uring.cv25 \uhungarumlaut.cv25 \uogonek.cv25 
-	\uhorn.cv25 \uni01D4.cv25 \uni01D6.cv25 \uni01D8.cv25 \uni01DA.cv25 
-	\uni01DC.cv25 \uni0215.cv25 \uni0217.cv25 \uni1E73.cv25 
-	\uni1E75.cv25 \uni1E77.cv25 \uni1E79.cv25 \uni1E7B.cv25 
-	\uni1EE5.cv25 \uni1EE7.cv25 \uni1EE9.cv25 \uni1EEB.cv25 
-	\uni1EED.cv25 \uni1EEF.cv25 \uni1EF1.cv25 ];
+    @kc87_second_28 = [\epsilon \epsilontonos \s \sacute \scaron \scedilla \scircumflex \scommaaccent 
+	\uni01A8 \uni023F \uni025B \uni025C \uni025D \uni0282 \uni0433 \uni0437 
+	\uni0453 \uni0455 \uni0479 \uni0493 \uni0499 \uni04DF \uni04F7 \uni04FB 
+	\uni0511 \uni1E61 \uni1E63 \uni1E65 \uni1E67 \uni1E69 \uni1F10 \uni1F11 
+	\uni1F12 \uni1F13 \uni1F14 \uni1F15 \uni1F72 \uni1F73 ];
+    @kc87_second_29 = [\eta \etatonos \iota \kappa \m \n \nacute \napostrophe \ncaron \ncommaaccent 
+	\ntilde \r \racute \rcaron \rcommaaccent \u \u.cv25 \uacute \uacute.cv25 
+	\ubreve \ubreve.cv25 \ucircumflex \ucircumflex.cv25 \udieresis 
+	\udieresis.cv25 \ugrave \ugrave.cv25 \uhorn.cv25 \uhungarumlaut 
+	\uhungarumlaut.cv25 \umacron \umacron.cv25 \uni01D4 \uni01D4.cv25 
+	\uni01D6 \uni01D6.cv25 \uni01D8 \uni01D8.cv25 \uni01DA \uni01DA.cv25 
+	\uni01DC \uni01DC.cv25 \uni01F9 \uni0211 \uni0213 \uni0215 
+	\uni0215.cv25 \uni0217 \uni0217.cv25 \uni024D \uni0265 \uni0269 
+	\uni026F \uni0270 \uni0271 \uni0273 \uni0289 \uni028A \uni028B \uni0299 
+	\uni029C \uni029F \uni0438 \uni0439 \uni043A \uni043C \uni043D \uni043F 
+	\uni0442 \uni0446 \uni0448 \uni0449 \uni044B \uni044C \uni044E \uni045C 
+	\uni045D \uni045F \uni0465 \uni0469 \uni046D \uni0491 \uni0495 \uni049B 
+	\uni049D \uni04A1 \uni04A3 \uni04A5 \uni04A7 \uni04AD \uni04C8 \uni04CA 
+	\uni04CE \uni0523 \uni0525 \uni0529 \uni1E3F \uni1E41 \uni1E43 \uni1E45 
+	\uni1E47 \uni1E49 \uni1E4B \uni1E59 \uni1E5B \uni1E5D \uni1E5F \uni1E73 
+	\uni1E73.cv25 \uni1E75 \uni1E75.cv25 \uni1E77 \uni1E77.cv25 \uni1E79 
+	\uni1E79.cv25 \uni1E7B \uni1E7B.cv25 \uni1EE5 \uni1EE5.cv25 \uni1EE7 
+	\uni1EE7.cv25 \uni1EE9 \uni1EE9.cv25 \uni1EEB \uni1EEB.cv25 \uni1EED 
+	\uni1EED.cv25 \uni1EEF \uni1EEF.cv25 \uni1EF1 \uni1EF1.cv25 \uni1F50 
+	\uni1F51 \uni1F52 \uni1F53 \uni1F54 \uni1F55 \uni1F56 \uni1F57 \uni1F7A 
+	\uni1F7B \uni1FE6 \uni1FE7 \uni20AA \uniA657 \uogonek \uogonek.cv25 
+	\upsilon \upsilondieresistonos \upsilontonos \uring \uring.cv25 
+	\utilde \utilde.cv25 ];
     @kc87_second_30 = [\f \florin \t \tcaron \uni0163 \uni01AB \uni01AD \uni0236 \uni1E1F \uni1E6B 
 	\uni1E6D \uni1E6F \uni1E71 \uni1E9D ];
     @kc87_second_31 = [\j.sc \jcircumflex.sc \uni01F0.sc \uni0237.sc \uni029D.sc \uni03F3.sc 
@@ -8097,11 +8094,11 @@ lookup kern_Horizontal_kerning {
     @kc87_second_48 = [\uni0254.sc \uni037B.sc \uni037D.sc \uni044D.sc \uni04ED.sc ];
     @kc87_second_49 = [\uni0414 \uni041B \uni04C5 \uni0508 \uni0512 \uni0514 \uni0520 \uni052A \uni052E ];
     @kc87_second_50 = [\uni042F \uni0518 ];
-    @kc87_second_51 = [\uni043B \uni0459 \uni04C6 \uni0509 \uni0513 \uni0515 \uni0521 \uni052B \uni052F ];
-    @kc87_second_52 = [\uni0434.sc \uni043B.sc \uni0459.sc \uni04C6.sc \uni0509.sc \uni0513.sc 
+    @kc87_second_51 = [\uni0434.sc \uni043B.sc \uni0459.sc \uni04C6.sc \uni0509.sc \uni0513.sc 
 	\uni0515.sc \uni0521.sc \uni052B.sc \uni052F.sc ];
-    @kc87_second_53 = [\uni0436 \uni0445 \uni0497 \uni04B3 \uni04C2 \uni04DD \uni04FD \uni04FF \uni1E8B 
+    @kc87_second_52 = [\uni0436 \uni0445 \uni0497 \uni04B3 \uni04C2 \uni04DD \uni04FD \uni04FF \uni1E8B 
 	\uni1E8D \uni2179 \uni217A \uni217B \x ];
+    @kc87_second_53 = [\uni043B \uni0459 \uni04C6 \uni0509 \uni0513 \uni0515 \uni0521 \uni052B \uni052F ];
     @kc87_second_54 = [\uni0447 \uni04B7 \uni04B9 \uni04CC \uni04F5 ];
     @kc87_second_55 = [\uni044F.sc \uni0519.sc ];
     @kc87_second_56 = [\uni0461 \uni047F \uni051D \uni1E87 \uni1E89 \uni1E98 \uni2C73 \w \wacute 
@@ -8111,6 +8108,8 @@ lookup kern_Horizontal_kerning {
 	\wacute.sc \wdieresis.sc \wgrave.sc ];
     @kc87_second_59 = [\uni0500 \uni0502 ];
     @kc87_second_60 = [\uni0501.sc \uni0503.sc ];
+    @kc87_second_61 = [\uni0237 ];
+    @kc87_second_62 = [\j \jcircumflex \uni01F0 \uni03F3 \uni0458 ];
     pos @kc87_first_1 @kc87_second_3 -70;
     pos @kc87_first_1 @kc87_second_8 -70;
     pos @kc87_first_1 @kc87_second_9 -140;
@@ -8175,7 +8174,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_4 @kc87_second_45 -70;
     pos @kc87_first_4 @kc87_second_49 -70;
     pos @kc87_first_4 @kc87_second_51 -70;
-    pos @kc87_first_4 @kc87_second_52 -70;
+    pos @kc87_first_4 @kc87_second_53 -70;
     pos @kc87_first_4 @kc87_second_57 -35;
     pos @kc87_first_5 @kc87_second_1 -280;
     pos @kc87_first_5 @kc87_second_2 -350;
@@ -8213,14 +8212,15 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_5 @kc87_second_48 -240;
     pos @kc87_first_5 @kc87_second_49 -280;
     pos @kc87_first_5 @kc87_second_50 -70;
-    pos @kc87_first_5 @kc87_second_51 -280;
-    pos @kc87_first_5 @kc87_second_52 -240;
-    pos @kc87_first_5 @kc87_second_53 -175;
+    pos @kc87_first_5 @kc87_second_51 -240;
+    pos @kc87_first_5 @kc87_second_52 -175;
+    pos @kc87_first_5 @kc87_second_53 -280;
     pos @kc87_first_5 @kc87_second_54 -240;
     pos @kc87_first_5 @kc87_second_55 -210;
     pos @kc87_first_5 @kc87_second_56 -175;
     pos @kc87_first_5 @kc87_second_59 -175;
     pos @kc87_first_5 @kc87_second_60 -175;
+    pos @kc87_first_5 @kc87_second_61 -240;
     pos @kc87_first_6 @kc87_second_42 1;
     pos @kc87_first_7 @kc87_second_3 -70;
     pos @kc87_first_7 @kc87_second_8 -105;
@@ -8322,7 +8322,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_10 @kc87_second_42 1;
     pos @kc87_first_10 @kc87_second_49 -210;
     pos @kc87_first_10 @kc87_second_51 -210;
-    pos @kc87_first_10 @kc87_second_52 -210;
+    pos @kc87_first_10 @kc87_second_53 -210;
     pos @kc87_first_10 @kc87_second_57 -70;
     pos @kc87_first_10 @kc87_second_59 -70;
     pos @kc87_first_10 @kc87_second_60 -105;
@@ -8349,8 +8349,8 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_11 @kc87_second_45 -70;
     pos @kc87_first_11 @kc87_second_49 -210;
     pos @kc87_first_11 @kc87_second_51 -175;
-    pos @kc87_first_11 @kc87_second_52 -175;
-    pos @kc87_first_11 @kc87_second_53 -35;
+    pos @kc87_first_11 @kc87_second_52 -35;
+    pos @kc87_first_11 @kc87_second_53 -175;
     pos @kc87_first_11 @kc87_second_57 -70;
     pos @kc87_first_11 @kc87_second_58 -35;
     pos @kc87_first_11 @kc87_second_59 -35;
@@ -8370,7 +8370,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_12 @kc87_second_47 -35;
     pos @kc87_first_12 @kc87_second_49 -210;
     pos @kc87_first_12 @kc87_second_51 -210;
-    pos @kc87_first_12 @kc87_second_52 -210;
+    pos @kc87_first_12 @kc87_second_53 -210;
     pos @kc87_first_12 @kc87_second_59 -70;
     pos @kc87_first_12 @kc87_second_60 -105;
     pos @kc87_first_13 @kc87_second_6 -70;
@@ -8396,7 +8396,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_14 @kc87_second_42 1;
     pos @kc87_first_14 @kc87_second_44 -70;
     pos @kc87_first_14 @kc87_second_45 -35;
-    pos @kc87_first_14 @kc87_second_53 -35;
+    pos @kc87_first_14 @kc87_second_52 -35;
     pos @kc87_first_14 @kc87_second_54 -35;
     pos @kc87_first_14 @kc87_second_56 -35;
     pos @kc87_first_14 @kc87_second_58 -35;
@@ -8463,14 +8463,15 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_16 @kc87_second_48 -140;
     pos @kc87_first_16 @kc87_second_49 -280;
     pos @kc87_first_16 @kc87_second_50 -105;
-    pos @kc87_first_16 @kc87_second_51 -315;
-    pos @kc87_first_16 @kc87_second_52 -280;
-    pos @kc87_first_16 @kc87_second_53 -140;
+    pos @kc87_first_16 @kc87_second_51 -280;
+    pos @kc87_first_16 @kc87_second_52 -140;
+    pos @kc87_first_16 @kc87_second_53 -315;
     pos @kc87_first_16 @kc87_second_54 -210;
     pos @kc87_first_16 @kc87_second_55 -210;
     pos @kc87_first_16 @kc87_second_56 -105;
     pos @kc87_first_16 @kc87_second_59 -315;
     pos @kc87_first_16 @kc87_second_60 -350;
+    pos @kc87_first_16 @kc87_second_61 -140;
     pos @kc87_first_17 @kc87_second_1 -280;
     pos @kc87_first_17 @kc87_second_2 -280;
     pos @kc87_first_17 @kc87_second_3 -105;
@@ -8505,14 +8506,15 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_17 @kc87_second_48 -70;
     pos @kc87_first_17 @kc87_second_49 -210;
     pos @kc87_first_17 @kc87_second_50 -35;
-    pos @kc87_first_17 @kc87_second_51 -245;
-    pos @kc87_first_17 @kc87_second_52 -210;
-    pos @kc87_first_17 @kc87_second_53 -70;
+    pos @kc87_first_17 @kc87_second_51 -210;
+    pos @kc87_first_17 @kc87_second_52 -70;
+    pos @kc87_first_17 @kc87_second_53 -245;
     pos @kc87_first_17 @kc87_second_54 -105;
     pos @kc87_first_17 @kc87_second_55 -105;
     pos @kc87_first_17 @kc87_second_56 -70;
     pos @kc87_first_17 @kc87_second_59 -175;
     pos @kc87_first_17 @kc87_second_60 -245;
+    pos @kc87_first_17 @kc87_second_61 -70;
     pos @kc87_first_18 @kc87_second_1 -210;
     pos @kc87_first_18 @kc87_second_2 -245;
     pos @kc87_first_18 @kc87_second_3 -35;
@@ -8535,11 +8537,12 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_18 @kc87_second_42 1;
     pos @kc87_first_18 @kc87_second_47 -70;
     pos @kc87_first_18 @kc87_second_49 -140;
-    pos @kc87_first_18 @kc87_second_51 -175;
-    pos @kc87_first_18 @kc87_second_52 -140;
+    pos @kc87_first_18 @kc87_second_51 -140;
+    pos @kc87_first_18 @kc87_second_53 -175;
     pos @kc87_first_18 @kc87_second_54 -70;
     pos @kc87_first_18 @kc87_second_59 -105;
     pos @kc87_first_18 @kc87_second_60 -140;
+    pos @kc87_first_18 @kc87_second_61 -35;
     pos @kc87_first_19 @kc87_second_12 -280;
     pos @kc87_first_19 @kc87_second_14 -175;
     pos @kc87_first_19 @kc87_second_15 -140;
@@ -8600,7 +8603,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_22 @kc87_second_44 -70;
     pos @kc87_first_22 @kc87_second_45 -175;
     pos @kc87_first_22 @kc87_second_46 -35;
-    pos @kc87_first_22 @kc87_second_53 -105;
+    pos @kc87_first_22 @kc87_second_52 -105;
     pos @kc87_first_22 @kc87_second_54 -35;
     pos @kc87_first_22 @kc87_second_56 -50;
     pos @kc87_first_22 @kc87_second_57 -105;
@@ -8642,8 +8645,8 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_24 @kc87_second_45 -140;
     pos @kc87_first_24 @kc87_second_46 -35;
     pos @kc87_first_24 @kc87_second_49 -140;
-    pos @kc87_first_24 @kc87_second_51 -70;
-    pos @kc87_first_24 @kc87_second_52 -105;
+    pos @kc87_first_24 @kc87_second_51 -105;
+    pos @kc87_first_24 @kc87_second_52 -70;
     pos @kc87_first_24 @kc87_second_53 -70;
     pos @kc87_first_24 @kc87_second_57 -70;
     pos @kc87_first_24 @kc87_second_58 -35;
@@ -8668,8 +8671,8 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_25 @kc87_second_49 -50;
     pos @kc87_first_25 @kc87_second_50 -35;
     pos @kc87_first_25 @kc87_second_51 -50;
-    pos @kc87_first_25 @kc87_second_52 -50;
-    pos @kc87_first_25 @kc87_second_53 -105;
+    pos @kc87_first_25 @kc87_second_52 -105;
+    pos @kc87_first_25 @kc87_second_53 -50;
     pos @kc87_first_25 @kc87_second_54 -50;
     pos @kc87_first_25 @kc87_second_56 -35;
     pos @kc87_first_25 @kc87_second_57 -105;
@@ -8700,7 +8703,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_27 @kc87_second_42 1;
     pos @kc87_first_27 @kc87_second_44 -35;
     pos @kc87_first_27 @kc87_second_45 -140;
-    pos @kc87_first_27 @kc87_second_53 -35;
+    pos @kc87_first_27 @kc87_second_52 -35;
     pos @kc87_first_27 @kc87_second_57 -70;
     pos @kc87_first_27 @kc87_second_58 -35;
     pos @kc87_first_28 @kc87_second_42 1;
@@ -8745,6 +8748,8 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_30 @kc87_second_47 -35;
     pos @kc87_first_30 @kc87_second_59 -70;
     pos @kc87_first_30 @kc87_second_60 -105;
+    pos @kc87_first_30 @kc87_second_61 105;
+    pos @kc87_first_30 @kc87_second_62 105;
     pos @kc87_first_31 @kc87_second_3 -70;
     pos @kc87_first_31 @kc87_second_4 -35;
     pos @kc87_first_31 @kc87_second_6 -70;
@@ -8788,7 +8793,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_32 @kc87_second_46 -35;
     pos @kc87_first_32 @kc87_second_49 -70;
     pos @kc87_first_32 @kc87_second_51 -70;
-    pos @kc87_first_32 @kc87_second_52 -70;
+    pos @kc87_first_32 @kc87_second_53 -70;
     pos @kc87_first_32 @kc87_second_57 -70;
     pos @kc87_first_32 @kc87_second_58 -35;
     pos @kc87_first_33 @kc87_second_3 -35;
@@ -8860,7 +8865,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_36 @kc87_second_42 1;
     pos @kc87_first_36 @kc87_second_44 -35;
     pos @kc87_first_36 @kc87_second_45 -140;
-    pos @kc87_first_36 @kc87_second_53 -35;
+    pos @kc87_first_36 @kc87_second_52 -35;
     pos @kc87_first_36 @kc87_second_57 -70;
     pos @kc87_first_36 @kc87_second_58 -35;
     pos @kc87_first_37 @kc87_second_6 -35;
@@ -8903,7 +8908,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_39 @kc87_second_47 -35;
     pos @kc87_first_39 @kc87_second_49 -105;
     pos @kc87_first_39 @kc87_second_51 -105;
-    pos @kc87_first_39 @kc87_second_52 -105;
+    pos @kc87_first_39 @kc87_second_53 -105;
     pos @kc87_first_39 @kc87_second_59 -50;
     pos @kc87_first_39 @kc87_second_60 -70;
     pos @kc87_first_40 @kc87_second_1 -210;
@@ -8930,8 +8935,8 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_40 @kc87_second_41 -70;
     pos @kc87_first_40 @kc87_second_42 1;
     pos @kc87_first_40 @kc87_second_49 -210;
-    pos @kc87_first_40 @kc87_second_51 -210;
-    pos @kc87_first_40 @kc87_second_52 -175;
+    pos @kc87_first_40 @kc87_second_51 -175;
+    pos @kc87_first_40 @kc87_second_53 -210;
     pos @kc87_first_40 @kc87_second_55 -70;
     pos @kc87_first_40 @kc87_second_59 -175;
     pos @kc87_first_40 @kc87_second_60 -175;
@@ -9086,13 +9091,14 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_46 @kc87_second_48 -175;
     pos @kc87_first_46 @kc87_second_49 -175;
     pos @kc87_first_46 @kc87_second_51 -210;
-    pos @kc87_first_46 @kc87_second_52 -210;
-    pos @kc87_first_46 @kc87_second_53 -140;
+    pos @kc87_first_46 @kc87_second_52 -140;
+    pos @kc87_first_46 @kc87_second_53 -210;
     pos @kc87_first_46 @kc87_second_54 -210;
     pos @kc87_first_46 @kc87_second_55 -175;
     pos @kc87_first_46 @kc87_second_56 -175;
     pos @kc87_first_46 @kc87_second_59 -210;
     pos @kc87_first_46 @kc87_second_60 -210;
+    pos @kc87_first_46 @kc87_second_61 -210;
     pos @kc87_first_47 @kc87_second_5 -70;
     pos @kc87_first_47 @kc87_second_11 -35;
     pos @kc87_first_47 @kc87_second_12 -240;
@@ -9110,7 +9116,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_47 @kc87_second_44 -35;
     pos @kc87_first_47 @kc87_second_45 -140;
     pos @kc87_first_47 @kc87_second_47 1;
-    pos @kc87_first_47 @kc87_second_53 -35;
+    pos @kc87_first_47 @kc87_second_52 -35;
     pos @kc87_first_47 @kc87_second_56 -35;
     pos @kc87_first_47 @kc87_second_57 -105;
     pos @kc87_first_47 @kc87_second_58 -70;
@@ -9137,8 +9143,8 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_48 @kc87_second_44 -35;
     pos @kc87_first_48 @kc87_second_45 -105;
     pos @kc87_first_48 @kc87_second_49 -210;
-    pos @kc87_first_48 @kc87_second_51 -175;
-    pos @kc87_first_48 @kc87_second_52 -140;
+    pos @kc87_first_48 @kc87_second_51 -140;
+    pos @kc87_first_48 @kc87_second_53 -175;
     pos @kc87_first_48 @kc87_second_57 -35;
     pos @kc87_first_48 @kc87_second_58 -35;
     pos @kc87_first_48 @kc87_second_59 -35;
@@ -9173,8 +9179,8 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_49 @kc87_second_49 -210;
     pos @kc87_first_49 @kc87_second_50 -70;
     pos @kc87_first_49 @kc87_second_51 -175;
-    pos @kc87_first_49 @kc87_second_52 -175;
-    pos @kc87_first_49 @kc87_second_53 -105;
+    pos @kc87_first_49 @kc87_second_52 -105;
+    pos @kc87_first_49 @kc87_second_53 -175;
     pos @kc87_first_49 @kc87_second_56 -50;
     pos @kc87_first_49 @kc87_second_57 -105;
     pos @kc87_first_49 @kc87_second_58 -70;
@@ -9198,7 +9204,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_50 @kc87_second_47 -35;
     pos @kc87_first_50 @kc87_second_49 -245;
     pos @kc87_first_50 @kc87_second_51 -210;
-    pos @kc87_first_50 @kc87_second_52 -210;
+    pos @kc87_first_50 @kc87_second_53 -210;
     pos @kc87_first_50 @kc87_second_59 -70;
     pos @kc87_first_50 @kc87_second_60 -105;
     pos @kc87_first_51 @kc87_second_12 -240;
@@ -9206,6 +9212,8 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_51 @kc87_second_14 -105;
     pos @kc87_first_51 @kc87_second_15 -35;
     pos @kc87_first_51 @kc87_second_42 1;
+    pos @kc87_first_51 @kc87_second_61 44;
+    pos @kc87_first_51 @kc87_second_62 44;
     pos @kc87_first_52 @kc87_second_1 -140;
     pos @kc87_first_52 @kc87_second_2 -210;
     pos @kc87_first_52 @kc87_second_6 -140;
@@ -9220,7 +9228,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_52 @kc87_second_42 1;
     pos @kc87_first_52 @kc87_second_49 -210;
     pos @kc87_first_52 @kc87_second_51 -175;
-    pos @kc87_first_52 @kc87_second_52 -175;
+    pos @kc87_first_52 @kc87_second_53 -175;
     pos @kc87_first_52 @kc87_second_59 -105;
     pos @kc87_first_52 @kc87_second_60 -210;
     pos @kc87_first_53 @kc87_second_12 -240;
@@ -9274,8 +9282,8 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_56 @kc87_second_45 -35;
     pos @kc87_first_56 @kc87_second_47 -50;
     pos @kc87_first_56 @kc87_second_49 -210;
-    pos @kc87_first_56 @kc87_second_51 -210;
-    pos @kc87_first_56 @kc87_second_52 -175;
+    pos @kc87_first_56 @kc87_second_51 -175;
+    pos @kc87_first_56 @kc87_second_53 -210;
     pos @kc87_first_56 @kc87_second_55 -35;
     pos @kc87_first_56 @kc87_second_57 -70;
     pos @kc87_first_56 @kc87_second_58 -35;
@@ -9297,7 +9305,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_57 @kc87_second_42 1;
     pos @kc87_first_57 @kc87_second_49 -175;
     pos @kc87_first_57 @kc87_second_51 -140;
-    pos @kc87_first_57 @kc87_second_52 -140;
+    pos @kc87_first_57 @kc87_second_53 -140;
     pos @kc87_first_57 @kc87_second_57 -35;
     pos @kc87_first_58 @kc87_second_5 -70;
     pos @kc87_first_58 @kc87_second_9 -70;
@@ -9377,7 +9385,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_60 @kc87_second_47 -35;
     pos @kc87_first_60 @kc87_second_49 -140;
     pos @kc87_first_60 @kc87_second_51 -140;
-    pos @kc87_first_60 @kc87_second_52 -140;
+    pos @kc87_first_60 @kc87_second_53 -140;
     pos @kc87_first_60 @kc87_second_59 -70;
     pos @kc87_first_60 @kc87_second_60 -105;
     pos @kc87_first_61 @kc87_second_1 -210;
@@ -9410,7 +9418,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_61 @kc87_second_48 -70;
     pos @kc87_first_61 @kc87_second_49 -210;
     pos @kc87_first_61 @kc87_second_51 -210;
-    pos @kc87_first_61 @kc87_second_52 -210;
+    pos @kc87_first_61 @kc87_second_53 -210;
     pos @kc87_first_61 @kc87_second_54 -35;
     pos @kc87_first_61 @kc87_second_59 -175;
     pos @kc87_first_61 @kc87_second_60 -245;
@@ -9459,6 +9467,8 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_63 @kc87_second_58 -50;
     pos @kc87_first_63 @kc87_second_59 -35;
     pos @kc87_first_63 @kc87_second_60 -35;
+    pos @kc87_first_63 @kc87_second_61 105;
+    pos @kc87_first_63 @kc87_second_62 105;
     pos @kc87_first_64 @kc87_second_3 -70;
     pos @kc87_first_64 @kc87_second_4 -50;
     pos @kc87_first_64 @kc87_second_6 -50;
@@ -9521,6 +9531,8 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_65 @kc87_second_58 -50;
     pos @kc87_first_65 @kc87_second_59 -35;
     pos @kc87_first_65 @kc87_second_60 -35;
+    pos @kc87_first_65 @kc87_second_61 105;
+    pos @kc87_first_65 @kc87_second_62 105;
     pos @kc87_first_66 @kc87_second_1 -210;
     pos @kc87_first_66 @kc87_second_2 -210;
     pos @kc87_first_66 @kc87_second_3 -35;
@@ -9546,11 +9558,12 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_66 @kc87_second_48 -70;
     pos @kc87_first_66 @kc87_second_49 -175;
     pos @kc87_first_66 @kc87_second_51 -175;
-    pos @kc87_first_66 @kc87_second_52 -175;
+    pos @kc87_first_66 @kc87_second_53 -175;
     pos @kc87_first_66 @kc87_second_54 -35;
     pos @kc87_first_66 @kc87_second_55 -35;
     pos @kc87_first_66 @kc87_second_59 -140;
     pos @kc87_first_66 @kc87_second_60 -175;
+    pos @kc87_first_66 @kc87_second_61 -35;
     pos @kc87_first_67 @kc87_second_5 -70;
     pos @kc87_first_67 @kc87_second_8 -70;
     pos @kc87_first_67 @kc87_second_9 -105;
@@ -9575,7 +9588,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_67 @kc87_second_45 -280;
     pos @kc87_first_67 @kc87_second_46 -35;
     pos @kc87_first_67 @kc87_second_50 -35;
-    pos @kc87_first_67 @kc87_second_53 -70;
+    pos @kc87_first_67 @kc87_second_52 -70;
     pos @kc87_first_67 @kc87_second_54 -105;
     pos @kc87_first_67 @kc87_second_55 -35;
     pos @kc87_first_67 @kc87_second_56 -70;
@@ -9603,9 +9616,10 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_68 @kc87_second_47 -35;
     pos @kc87_first_68 @kc87_second_49 -140;
     pos @kc87_first_68 @kc87_second_51 -140;
-    pos @kc87_first_68 @kc87_second_52 -140;
+    pos @kc87_first_68 @kc87_second_53 -140;
     pos @kc87_first_68 @kc87_second_59 -105;
     pos @kc87_first_68 @kc87_second_60 -105;
+    pos @kc87_first_68 @kc87_second_61 -35;
 } kern_Horizontal_kerning;
 
 lookup mark_Mark_positioning {
@@ -10014,8 +10028,8 @@ lookup mark_Mark_positioning {
 	<anchor 822 1716> mark @top_center;
   pos base [\zacute \zdotaccent \zcaron \uni1E91 ] <anchor 382 0> mark @bottom_center
 	<anchor 625 1376> mark @top_center;
-  pos base [\uni0237 ] <anchor 332 1040> mark @top_center
-	<anchor 26 -360> mark @bottom_center;
+  pos base [\uni0237 ] <anchor 283 1040> mark @top_center
+	<anchor -23 -360> mark @bottom_center;
   pos base [\oe ] <anchor 876 0> mark @bottom_center
 	<anchor 1088 1200> mark @top_center;
   pos base [\OE ] <anchor 1425 1380> mark @top_center
