@@ -4526,55 +4526,42 @@ lookup ccmp_latn {
     sub \A \acutecomb  by \Aacute;
     sub \A \uni0302  by \Acircumflex;
     sub \A \tildecomb  by \Atilde;
-    sub \A \uni0307  by \Adieresis;
     sub \A \uni030A  by \Aring;
     sub \C \uni0327  by \Ccedilla;
     sub \E \gravecomb  by \Egrave;
     sub \E \acutecomb  by \Eacute;
     sub \E \uni0302  by \Ecircumflex;
-    sub \E \uni0307  by \Edieresis;
     sub \I \gravecomb  by \Igrave;
     sub \I \acutecomb  by \Iacute;
     sub \I \uni0302  by \Icircumflex;
-    sub \I \uni0307  by \Idieresis;
     sub \O \gravecomb  by \Ograve;
     sub \O \acutecomb  by \Oacute;
     sub \O \uni0302  by \Ocircumflex;
     sub \O \tildecomb  by \Otilde;
-    sub \O \uni0307  by \Odieresis;
     sub \U \gravecomb  by \Ugrave;
     sub \U \acutecomb  by \Uacute;
     sub \U \uni0302  by \Ucircumflex;
-    sub \U \uni0307  by \Udieresis;
     sub \Y \acutecomb  by \Yacute;
     sub \a \acutecomb  by \aacute;
     sub \a \uni0302  by \acircumflex;
     sub \a \tildecomb  by \atilde;
-    sub \a \uni0307  by \adieresis;
     sub \a \uni030A  by \aring;
     sub \e \gravecomb  by \egrave;
     sub \e \acutecomb  by \eacute;
     sub \e \uni0302  by \ecircumflex;
-    sub \e \uni0307  by \edieresis;
-    sub \i \gravecomb  by \igrave;
     sub \i \gravecomb  by \igrave;
     sub \i \acutecomb  by \iacute;
     sub \uni0456 \acutecomb  by \iacute;
-    sub \i \acutecomb  by \iacute;
-    sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0308  by \idieresis;
-    sub \i \uni0307  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
     sub \o \uni0302  by \ocircumflex;
     sub \o \tildecomb  by \otilde;
-    sub \o \uni0307  by \odieresis;
     sub \u \gravecomb  by \ugrave;
     sub \u \acutecomb  by \uacute;
     sub \u \uni0302  by \ucircumflex;
-    sub \u \uni0307  by \udieresis;
     sub \y \acutecomb  by \yacute;
     sub \i \uni030A  by \dotlessi;
     sub \A \uni0304  by \Amacron;
@@ -4598,8 +4585,6 @@ lookup ccmp_latn {
     sub \E \uni0306  by \Ebreve;
     sub \e \uni0306  by \ebreve;
     sub \E \uni0307  by \Edotaccent;
-    sub \E \uni0307  by \Edotaccent;
-    sub \e \uni0307  by \edotaccent;
     sub \e \uni0307  by \edotaccent;
     sub \E \uni0328  by \Eogonek;
     sub \e \uni0328  by \eogonek;
@@ -4615,19 +4600,15 @@ lookup ccmp_latn {
     sub \h \uni0302  by \hcircumflex;
     sub \I \tildecomb  by \Itilde;
     sub \i \tildecomb  by \itilde;
-    sub \i \tildecomb  by \itilde;
     sub \I \uni0304  by \Imacron;
     sub \i \uni0304  by \imacron;
-    sub \i \uni0304  by \imacron;
     sub \I \uni0306  by \Ibreve;
-    sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
     sub \iogonek \gravecomb  by \iogonek;
     sub \i \uni0328  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
-    sub \j \uni0302  by \jcircumflex;
     sub \j \uni0302  by \jcircumflex;
     sub \L \acutecomb  by \Lacute;
     sub \l \acutecomb  by \lacute;
@@ -4701,7 +4682,6 @@ lookup ccmp_latn {
     sub \a \uni030C  by \uni01CE;
     sub \I \uni030C  by \uni01CF;
     sub \i \uni030C  by \uni01D0;
-    sub \i \uni030C  by \uni01D0;
     sub \O \uni030C  by \uni01D1;
     sub \o \uni030C  by \uni01D2;
     sub \U \uni030C  by \uni01D3;
@@ -4763,7 +4743,6 @@ lookup ccmp_latn {
     sub \e \uni030F  by \uni0205;
     sub \I \uni030F  by \uni0208;
     sub \i \uni030F  by \uni0209;
-    sub \i \uni030F  by \uni0209;
     sub \O \uni030F  by \uni020C;
     sub \o \uni030F  by \uni020D;
     sub \R \uni030F  by \uni0210;
@@ -4775,7 +4754,6 @@ lookup ccmp_latn {
     sub \E \uni0311  by \uni0206;
     sub \e \uni0311  by \uni0207;
     sub \I \uni0311  by \uni020A;
-    sub \i \uni0311  by \uni020B;
     sub \i \uni0311  by \uni020B;
     sub \O \uni0311  by \uni020E;
     sub \o \uni0311  by \uni020F;
@@ -4983,7 +4961,6 @@ lookup ccmp_latn {
     sub \e \dotbelowcomb \uni0302  by \uni1EC7;
     sub \I \hookabovecomb  by \uni1EC8;
     sub \i \hookabovecomb  by \uni1EC9;
-    sub \i \hookabovecomb  by \uni1EC9;
     sub \I \dotbelowcomb  by \uni1ECA;
     sub \i \dotbelowcomb  by \uni1ECB;
     sub \O \dotbelowcomb  by \uni1ECC;
@@ -5068,7 +5045,6 @@ lookup ccmp_latn {
     sub \d.sc \uni030C  by \dcaron.sc;
     sub \e.sc \uni0304  by \emacron.sc;
     sub \e.sc \uni0306  by \ebreve.sc;
-    sub \e.sc \uni0307  by \edotaccent.sc;
     sub \e.sc \uni0307  by \edotaccent.sc;
     sub \e.sc \uni0328  by \eogonek.sc;
     sub \e.sc \uni030C  by \ecaron.sc;
@@ -5940,6 +5916,29 @@ lookup calt_Contextual_Alternates {
 	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
 } calt_Contextual_Alternates;
 
+feature cv27 {
+
+ script DFLT;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script copt;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script cyrl;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script grek;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script latn;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+} cv27;
+
 feature locl {
 
  script cyrl;
@@ -6026,29 +6025,6 @@ feature locl {
      language WLF  exclude_dflt;
       lookup locl_cv27_Localized_Eng;
 } locl;
-
-feature cv27 {
-
- script DFLT;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script copt;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script cyrl;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script grek;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script latn;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-} cv27;
 
 feature ss09 {
   featureNames {
@@ -11652,8 +11628,8 @@ lookup mark_Mark_positioning {
 	<anchor 529 -20> mark @bottom_cedilla
 	<anchor 533 0> mark @bottom_center
 	<anchor 805 1536> mark @top_center;
-  pos base [\uniA7B7.sc ] <anchor 810 1200> mark @top_center
-	<anchor 598 0> mark @bottom_center;
+  pos base [\uniA7B7.sc ] <anchor 773 2> mark @bottom_center
+	<anchor 969 1113> mark @top_center;
   pos base [\uni0434.loclBGR.sc ] <anchor 498 0> mark @bottom_center
 	<anchor 710 1200> mark @top_center;
   pos base [\uni0444.loclBGR.sc ] <anchor 752 1240> mark @top_center

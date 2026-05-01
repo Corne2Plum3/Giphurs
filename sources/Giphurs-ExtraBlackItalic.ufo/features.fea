@@ -4557,14 +4557,10 @@ lookup ccmp_latn {
     sub \e \uni0302  by \ecircumflex;
     sub \e \uni0307  by \edieresis;
     sub \i \gravecomb  by \igrave;
-    sub \i \gravecomb  by \igrave;
     sub \i \acutecomb  by \iacute;
     sub \uni0456 \acutecomb  by \iacute;
-    sub \i \acutecomb  by \iacute;
-    sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0308  by \idieresis;
-    sub \i \uni0307  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
@@ -4598,8 +4594,6 @@ lookup ccmp_latn {
     sub \E \uni0306  by \Ebreve;
     sub \e \uni0306  by \ebreve;
     sub \E \uni0307  by \Edotaccent;
-    sub \E \uni0307  by \Edotaccent;
-    sub \e \uni0307  by \edotaccent;
     sub \e \uni0307  by \edotaccent;
     sub \E \uni0328  by \Eogonek;
     sub \e \uni0328  by \eogonek;
@@ -4615,19 +4609,15 @@ lookup ccmp_latn {
     sub \h \uni0302  by \hcircumflex;
     sub \I \tildecomb  by \Itilde;
     sub \i \tildecomb  by \itilde;
-    sub \i \tildecomb  by \itilde;
     sub \I \uni0304  by \Imacron;
     sub \i \uni0304  by \imacron;
-    sub \i \uni0304  by \imacron;
     sub \I \uni0306  by \Ibreve;
-    sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
     sub \iogonek \gravecomb  by \iogonek;
     sub \i \uni0328  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
-    sub \j \uni0302  by \jcircumflex;
     sub \j \uni0302  by \jcircumflex;
     sub \L \acutecomb  by \Lacute;
     sub \l \acutecomb  by \lacute;
@@ -4701,7 +4691,6 @@ lookup ccmp_latn {
     sub \a \uni030C  by \uni01CE;
     sub \I \uni030C  by \uni01CF;
     sub \i \uni030C  by \uni01D0;
-    sub \i \uni030C  by \uni01D0;
     sub \O \uni030C  by \uni01D1;
     sub \o \uni030C  by \uni01D2;
     sub \U \uni030C  by \uni01D3;
@@ -4763,7 +4752,6 @@ lookup ccmp_latn {
     sub \e \uni030F  by \uni0205;
     sub \I \uni030F  by \uni0208;
     sub \i \uni030F  by \uni0209;
-    sub \i \uni030F  by \uni0209;
     sub \O \uni030F  by \uni020C;
     sub \o \uni030F  by \uni020D;
     sub \R \uni030F  by \uni0210;
@@ -4775,7 +4763,6 @@ lookup ccmp_latn {
     sub \E \uni0311  by \uni0206;
     sub \e \uni0311  by \uni0207;
     sub \I \uni0311  by \uni020A;
-    sub \i \uni0311  by \uni020B;
     sub \i \uni0311  by \uni020B;
     sub \O \uni0311  by \uni020E;
     sub \o \uni0311  by \uni020F;
@@ -4983,7 +4970,6 @@ lookup ccmp_latn {
     sub \e \dotbelowcomb \uni0302  by \uni1EC7;
     sub \I \hookabovecomb  by \uni1EC8;
     sub \i \hookabovecomb  by \uni1EC9;
-    sub \i \hookabovecomb  by \uni1EC9;
     sub \I \dotbelowcomb  by \uni1ECA;
     sub \i \dotbelowcomb  by \uni1ECB;
     sub \O \dotbelowcomb  by \uni1ECC;
@@ -5068,7 +5054,6 @@ lookup ccmp_latn {
     sub \d.sc \uni030C  by \dcaron.sc;
     sub \e.sc \uni0304  by \emacron.sc;
     sub \e.sc \uni0306  by \ebreve.sc;
-    sub \e.sc \uni0307  by \edotaccent.sc;
     sub \e.sc \uni0307  by \edotaccent.sc;
     sub \e.sc \uni0328  by \eogonek.sc;
     sub \e.sc \uni030C  by \ecaron.sc;
@@ -5908,6 +5893,171 @@ lookup ccmp_diacritics {
     sub \uni030A \hookabovecomb  by \uni030A_hookabovecomb;
 } ccmp_diacritics;
 
+lookup ccmp_cv {
+  lookupflag 0;
+    sub \G.cv21 \uni0302  by \Gcircumflex.cv21;
+    sub \G.cv21 \uni0306  by \Gbreve.cv21;
+    sub \G.cv21 \uni0307  by \Gdotaccent.cv21;
+    sub \G.cv21 \uni0327  by \Gcommaaccent.cv21;
+    sub \G.cv21 \uni030C  by \Gcaron.cv21;
+    sub \G.cv21 \acutecomb  by \uni01F4.cv21;
+    sub \G.cv21 \uni0304  by \uni1E20.cv21;
+    sub \g.sc.cv21 \uni0302  by \gcircumflex.sc.cv21;
+    sub \g.sc.cv21 \uni0306  by \gbreve.sc.cv21;
+    sub \g.sc.cv21 \uni0307  by \gdotaccent.sc.cv21;
+    sub \g.sc.cv21 \uni0327  by \gcommaaccent.sc.cv21;
+    sub \g.sc.cv21 \uni030C  by \gcaron.sc.cv21;
+    sub \g.sc.cv21 \acutecomb  by \uni01F5.sc.cv21;
+    sub \I.cv22 \gravecomb  by \Igrave.cv22;
+    sub \I.cv22 \acutecomb  by \Iacute.cv22;
+    sub \I.cv22 \uni0302  by \Icircumflex.cv22;
+    sub \I.cv22 \uni0307  by \Idieresis.cv22;
+    sub \I.cv22 \tildecomb  by \Itilde.cv22;
+    sub \I.cv22 \uni0304  by \Imacron.cv22;
+    sub \I.cv22 \uni0306  by \Ibreve.cv22;
+    sub \I.cv22 \uni0328  by \Iogonek.cv22;
+    sub \I.cv22 \uni0307  by \Idotaccent.cv22;
+    sub \I.cv22 \uni030C  by \uni01CF.cv22;
+    sub \I.cv22 \uni030F  by \uni0208.cv22;
+    sub \I.cv22 \uni0311  by \uni020A.cv22;
+    sub \Iota.cv22 \acutecomb  by \Iotatonos.cv22;
+    sub \Iota.cv22 \uni0308  by \Iotadieresis.cv22;
+    sub \uni0406.cv22 \uni0308  by \uni0407.cv22;
+    sub \I.cv22 \uni0330  by \uni1E2C.cv22;
+    sub \I.cv22 \uni0308 \acutecomb  by \uni1E2E.cv22;
+    sub \I.cv22 \hookabovecomb  by \uni1EC8.cv22;
+    sub \I.cv22 \dotbelowcomb  by \uni1ECA.cv22;
+    sub \Iota.cv22 \uni0313  by \uni1F38.cv22;
+    sub \Iota.cv22 \uni0314  by \uni1F39.cv22;
+    sub \Iota.cv22 \uni0313 \gravecomb  by \uni1F3A.cv22;
+    sub \Iota.cv22 \uni0314 \gravecomb  by \uni1F3B.cv22;
+    sub \Iota.cv22 \uni0313 \acutecomb  by \uni1F3C.cv22;
+    sub \Iota.cv22 \uni0314 \acutecomb  by \uni1F3D.cv22;
+    sub \Iota.cv22 \uni0313 \tildecomb  by \uni1F3E.cv22;
+    sub \Iota.cv22 \uni0314 \tildecomb  by \uni1F3F.cv22;
+    sub \Iota.cv22 \uni0306  by \uni1FD8.cv22;
+    sub \Iota.cv22 \uni0304  by \uni1FD9.cv22;
+    sub \Iota.cv22 \gravecomb  by \uni1FDA.cv22;
+    sub \Iota.cv22 \acutecomb  by \uni1FDB.cv22;
+    sub \i.sc.cv22 \gravecomb  by \igrave.sc.cv22;
+    sub \i.sc.cv22 \acutecomb  by \iacute.sc.cv22;
+    sub \i.sc.cv22 \uni0302  by \icircumflex.sc.cv22;
+    sub \i.sc.cv22 \uni0307  by \idieresis.sc.cv22;
+    sub \i.sc.cv22 \tildecomb  by \itilde.sc.cv22;
+    sub \i.sc.cv22 \uni0304  by \imacron.sc.cv22;
+    sub \i.sc.cv22 \uni0306  by \ibreve.sc.cv22;
+    sub \i.sc.cv22 \uni0328  by \iogonek.sc.cv22;
+    sub \i.sc.cv22 \uni030C  by \uni01D0.sc.cv22;
+    sub \i.sc.cv22 \uni030F  by \uni0209.sc.cv22;
+    sub \i.sc.cv22 \uni0311  by \uni020B.sc.cv22;
+    sub \iota.sc.cv22 \uni0308 \acutecomb  by \iotadieresistonos.sc.cv22;
+    sub \iota.sc.cv22 \acutecomb  by \iotatonos.sc.cv22;
+    sub \iota.sc.cv22 \uni0308  by \iotadieresis.sc.cv22;
+    sub \uni0456.sc.cv22 \uni0308  by \uni0457.sc.cv22;
+    sub \i.sc.cv22 \uni0330  by \uni1E2D.sc.cv22;
+    sub \i.sc.cv22 \uni0308 \acutecomb  by \uni1E2F.sc.cv22;
+    sub \i.sc.cv22 \hookabovecomb  by \uni1EC9.sc.cv22;
+    sub \i.sc.cv22 \dotbelowcomb  by \uni1ECB.sc.cv22;
+    sub \iota.sc.cv22 \uni0313  by \uni1F30.sc.cv22;
+    sub \iota.sc.cv22 \uni0314  by \uni1F31.sc.cv22;
+    sub \iota.sc.cv22 \uni0313 \gravecomb  by \uni1F32.sc.cv22;
+    sub \iota.sc.cv22 \uni0314 \gravecomb  by \uni1F33.sc.cv22;
+    sub \iota.sc.cv22 \uni0313 \acutecomb  by \uni1F34.sc.cv22;
+    sub \iota.sc.cv22 \uni0314 \acutecomb  by \uni1F35.sc.cv22;
+    sub \iota.sc.cv22 \uni0313 \tildecomb  by \uni1F36.sc.cv22;
+    sub \iota.sc.cv22 \uni0314 \tildecomb  by \uni1F37.sc.cv22;
+    sub \iota.sc.cv22 \uni0306  by \uni1FD0.sc.cv22;
+    sub \iota.sc.cv22 \uni0304  by \uni1FD1.sc.cv22;
+    sub \iota.sc.cv22 \uni0308 \gravecomb  by \uni1FD2.sc.cv22;
+    sub \iota.sc.cv22 \uni0308 \acutecomb  by \uni1FD3.sc.cv22;
+    sub \iota.sc.cv22 \tildecomb  by \uni1FD6.sc.cv22;
+    sub \iota.sc.cv22 \uni0308 \tildecomb  by \uni1FD7.sc.cv22;
+    sub \a.cv23 \gravecomb  by \agrave.cv23;
+    sub \a.cv23 \acutecomb  by \aacute.cv23;
+    sub \a.cv23 \uni0302  by \acircumflex.cv23;
+    sub \a.cv23 \tildecomb  by \atilde.cv23;
+    sub \a.cv23 \uni0307  by \adieresis.cv23;
+    sub \a.cv23 \uni030A  by \aring.cv23;
+    sub \a.cv23 \uni0304  by \amacron.cv23;
+    sub \a.cv23 \uni0306  by \abreve.cv23;
+    sub \a.cv23 \uni0328  by \aogonek.cv23;
+    sub \a.cv23 \uni030C  by \uni01CE.cv23;
+    sub \a.cv23 \uni0308 \uni0304  by \uni01DF.cv23;
+    sub \a.cv23 \uni0307 \uni0304  by \uni01E1.cv23;
+    sub \ae.cv23 \uni0304  by \uni01E3.cv23;
+    sub \a.cv23 \uni030A \acutecomb  by \aringacute.cv23;
+    sub \ae.cv23 \acutecomb  by \aeacute.cv23;
+    sub \a.cv23 \uni030F  by \uni0201.cv23;
+    sub \a.cv23 \uni0311  by \uni0203.cv23;
+    sub \a.cv23 \uni0307  by \uni0227.cv23;
+    sub \a.cv23 \uni0325  by \uni1E01.cv23;
+    sub \a.cv23 \dotbelowcomb  by \uni1EA1.cv23;
+    sub \a.cv23 \hookabovecomb  by \uni1EA3.cv23;
+    sub \a.cv23 \uni0302 \acutecomb  by \uni1EA5.cv23;
+    sub \a.cv23 \uni0302 \gravecomb  by \uni1EA7.cv23;
+    sub \a.cv23 \uni0302 \hookabovecomb  by \uni1EA9.cv23;
+    sub \a.cv23 \uni0302 \tildecomb  by \uni1EAB.cv23;
+    sub \a.cv23 \dotbelowcomb \uni0302  by \uni1EAD.cv23;
+    sub \a.cv23 \uni0306 \acutecomb  by \uni1EAF.cv23;
+    sub \a.cv23 \uni0306 \gravecomb  by \uni1EB1.cv23;
+    sub \a.cv23 \uni0306 \hookabovecomb  by \uni1EB3.cv23;
+    sub \a.cv23 \uni0306 \tildecomb  by \uni1EB5.cv23;
+    sub \a.cv23 \dotbelowcomb \uni0306  by \uni1EB7.cv23;
+    sub \g.cv24 \uni0302  by \gcircumflex.cv24;
+    sub \g.cv24 \uni0306  by \gbreve.cv24;
+    sub \g.cv24 \uni0307  by \gdotaccent.cv24;
+    sub \g.cv24 \uni0327  by \gcommaaccent.cv24;
+    sub \g.cv24 \uni030C  by \gcaron.cv24;
+    sub \g.cv24 \acutecomb  by \uni01F5.cv24;
+    sub \g.cv24 \uni0304  by \uni1E21.cv24;
+    sub \u.cv25 \gravecomb  by \ugrave.cv25;
+    sub \u.cv25 \acutecomb  by \uacute.cv25;
+    sub \u.cv25 \uni0302  by \ucircumflex.cv25;
+    sub \u.cv25 \uni0307  by \udieresis.cv25;
+    sub \u.cv25 \tildecomb  by \utilde.cv25;
+    sub \u.cv25 \uni0304  by \umacron.cv25;
+    sub \u.cv25 \uni0306  by \ubreve.cv25;
+    sub \u.cv25 \uni030A  by \uring.cv25;
+    sub \u.cv25 \uni030B  by \uhungarumlaut.cv25;
+    sub \u.cv25 \uni0328  by \uogonek.cv25;
+    sub \u.cv25 \uni031B  by \uhorn.cv25;
+    sub \u.cv25 \uni030C  by \uni01D4.cv25;
+    sub \u.cv25 \uni0308 \uni0304  by \uni01D6.cv25;
+    sub \u.cv25 \uni0308 \acutecomb  by \uni01D8.cv25;
+    sub \u.cv25 \uni0308 \uni030C  by \uni01DA.cv25;
+    sub \u.cv25 \uni0308 \gravecomb  by \uni01DC.cv25;
+    sub \u.cv25 \uni030F  by \uni0215.cv25;
+    sub \u.cv25 \uni0311  by \uni0217.cv25;
+    sub \u.cv25 \uni0324  by \uni1E73.cv25;
+    sub \u.cv25 \uni0330  by \uni1E75.cv25;
+    sub \u.cv25 \uni032D  by \uni1E77.cv25;
+    sub \u.cv25 \tildecomb \acutecomb  by \uni1E79.cv25;
+    sub \u.cv25 \uni0304 \uni0308  by \uni1E7B.cv25;
+    sub \u.cv25 \dotbelowcomb  by \uni1EE5.cv25;
+    sub \u.cv25 \hookabovecomb  by \uni1EE7.cv25;
+    sub \u.cv25 \uni031B \acutecomb  by \uni1EE9.cv25;
+    sub \u.cv25 \uni031B \gravecomb  by \uni1EEB.cv25;
+    sub \u.cv25 \uni031B \hookabovecomb  by \uni1EED.cv25;
+    sub \u.cv25 \uni031B \tildecomb  by \uni1EEF.cv25;
+    sub \u.cv25 \uni031B \dotbelowcomb  by \uni1EF1.cv25;
+} ccmp_cv;
+
+lookup ccmp_diacritics {
+  lookupflag 0;
+    sub \uni0302 \gravecomb  by \uni0302_gravecomb;
+    sub \uni0302 \acutecomb  by \uni0302_acutecomb;
+    sub \uni0302 \hookabovecomb  by \uni0302_hookabovecomb;
+    sub \uni0306 \gravecomb  by \uni0306_gravecomb;
+    sub \uni0306 \acutecomb  by \uni0306_acutecomb;
+    sub \uni0306 \hookabovecomb  by \uni0306_hookabovecomb;
+    sub \uni0308 \gravecomb  by \uni0308_gravecomb;
+    sub \uni0308 \acutecomb  by \uni0308_acutecomb;
+    sub \uni0308 \uni030C  by \uni0308_uni030C;
+    sub \uni030A \gravecomb  by \uni030A_gravecomb;
+    sub \uni030A \acutecomb  by \uni030A_acutecomb;
+    sub \uni030A \hookabovecomb  by \uni030A_hookabovecomb;
+} ccmp_diacritics;
+
 lookup calt_Centered_glyphs {
   lookupflag 0;
     sub [\asterisk ]'  by [\asterisk.centered ];
@@ -5939,6 +6089,29 @@ lookup calt_Contextual_Alternates {
 	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
 	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
 } calt_Contextual_Alternates;
+
+feature cv27 {
+
+ script DFLT;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script copt;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script cyrl;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script grek;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script latn;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+} cv27;
 
 feature locl {
 
@@ -6026,29 +6199,6 @@ feature locl {
      language WLF  exclude_dflt;
       lookup locl_cv27_Localized_Eng;
 } locl;
-
-feature cv27 {
-
- script DFLT;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script copt;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script cyrl;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script grek;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script latn;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-} cv27;
 
 feature ss09 {
   featureNames {
@@ -12027,8 +12177,8 @@ lookup mark_Mark_positioning {
 	<anchor 1415 1200> mark @top_right
 	<anchor 606 -20> mark @bottom_cedilla
 	<anchor 882 1536> mark @top_center;
-  pos base [\uniA7B7.sc ] <anchor 777 0> mark @bottom_center
-	<anchor 989 1200> mark @top_center;
+  pos base [\uniA7B7.sc ] <anchor 926 5> mark @bottom_center
+	<anchor 1121 1100> mark @top_center;
   pos base [\uni0434.loclBGR.sc ] <anchor 668 0> mark @bottom_center
 	<anchor 880 1200> mark @top_center;
   pos base [\uni0444.loclBGR.sc ] <anchor 543 -40> mark @bottom_center
