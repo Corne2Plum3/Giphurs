@@ -5849,6 +5849,7 @@ lookup ccmp_cv {
     sub \u.cv25 \uni031B \tildecomb  by \uni1EEF.cv25;
     sub \u.cv25 \uni031B \dotbelowcomb  by \uni1EF1.cv25;
 } ccmp_cv;
+
 lookup ccmp_diacritics {
   lookupflag 0;
     sub \uni0302 \gravecomb  by \uni0302_gravecomb;
