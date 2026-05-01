@@ -4518,30 +4518,30 @@ lookup ccmp_Soft_dotted_i_j {
 
 lookup ccmp_latn {
   lookupflag 0;
-    sub \i \uni0307  by \i;
-    sub \j \uni0307  by \j;
+    sub \dotlessi \uni0307  by \i;
+    sub \uni0237 \uni0307  by \j;
     sub \A \gravecomb  by \Agrave;
     sub \a \gravecomb  by \agrave;
     sub \c \uni0327  by \ccedilla;
     sub \A \acutecomb  by \Aacute;
     sub \A \uni0302  by \Acircumflex;
     sub \A \tildecomb  by \Atilde;
-    sub \A \uni0307  by \Adieresis;
+    sub \A \uni0308  by \Adieresis;
     sub \A \uni030A  by \Aring;
     sub \C \uni0327  by \Ccedilla;
     sub \E \gravecomb  by \Egrave;
     sub \E \acutecomb  by \Eacute;
     sub \E \uni0302  by \Ecircumflex;
-    sub \E \uni0307  by \Edieresis;
+    sub \E \uni0308  by \Edieresis;
     sub \I \gravecomb  by \Igrave;
     sub \I \acutecomb  by \Iacute;
     sub \I \uni0302  by \Icircumflex;
-    sub \I \uni0307  by \Idieresis;
+    sub \I \uni0308  by \Idieresis;
     sub \O \gravecomb  by \Ograve;
     sub \O \acutecomb  by \Oacute;
     sub \O \uni0302  by \Ocircumflex;
     sub \O \tildecomb  by \Otilde;
-    sub \O \uni0307  by \Odieresis;
+    sub \O \uni0308  by \Odieresis;
     sub \U \gravecomb  by \Ugrave;
     sub \U \acutecomb  by \Uacute;
     sub \U \uni0302  by \Ucircumflex;
@@ -4550,27 +4550,23 @@ lookup ccmp_latn {
     sub \a \acutecomb  by \aacute;
     sub \a \uni0302  by \acircumflex;
     sub \a \tildecomb  by \atilde;
-    sub \a \uni0307  by \adieresis;
+    sub \a \uni0308  by \adieresis;
     sub \a \uni030A  by \aring;
     sub \e \gravecomb  by \egrave;
     sub \e \acutecomb  by \eacute;
     sub \e \uni0302  by \ecircumflex;
-    sub \e \uni0307  by \edieresis;
-    sub \i \gravecomb  by \igrave;
+    sub \e \uni0308  by \edieresis;
     sub \i \gravecomb  by \igrave;
     sub \i \acutecomb  by \iacute;
     sub \uni0456 \acutecomb  by \iacute;
-    sub \i \acutecomb  by \iacute;
-    sub \i \uni0302  by \icircumflex;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0308  by \idieresis;
-    sub \i \uni0307  by \idieresis;
     sub \n \tildecomb  by \ntilde;
     sub \o \gravecomb  by \ograve;
     sub \o \acutecomb  by \oacute;
     sub \o \uni0302  by \ocircumflex;
     sub \o \tildecomb  by \otilde;
-    sub \o \uni0307  by \odieresis;
+    sub \o \uni0308  by \odieresis;
     sub \u \gravecomb  by \ugrave;
     sub \u \acutecomb  by \uacute;
     sub \u \uni0302  by \ucircumflex;
@@ -4598,8 +4594,6 @@ lookup ccmp_latn {
     sub \E \uni0306  by \Ebreve;
     sub \e \uni0306  by \ebreve;
     sub \E \uni0307  by \Edotaccent;
-    sub \E \uni0307  by \Edotaccent;
-    sub \e \uni0307  by \edotaccent;
     sub \e \uni0307  by \edotaccent;
     sub \E \uni0328  by \Eogonek;
     sub \e \uni0328  by \eogonek;
@@ -4615,19 +4609,15 @@ lookup ccmp_latn {
     sub \h \uni0302  by \hcircumflex;
     sub \I \tildecomb  by \Itilde;
     sub \i \tildecomb  by \itilde;
-    sub \i \tildecomb  by \itilde;
     sub \I \uni0304  by \Imacron;
     sub \i \uni0304  by \imacron;
-    sub \i \uni0304  by \imacron;
     sub \I \uni0306  by \Ibreve;
-    sub \i \uni0306  by \ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
     sub \iogonek \gravecomb  by \iogonek;
     sub \i \uni0328  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
-    sub \j \uni0302  by \jcircumflex;
     sub \j \uni0302  by \jcircumflex;
     sub \L \acutecomb  by \Lacute;
     sub \l \acutecomb  by \lacute;
@@ -4636,8 +4626,8 @@ lookup ccmp_latn {
     sub \n \acutecomb  by \nacute;
     sub \N \uni030C  by \Ncaron;
     sub \n \uni030C  by \ncaron;
-    sub \O \uni030C  by \Omacron;
-    sub \o \uni030C  by \omacron;
+    sub \O \uni0304  by \Omacron;
+    sub \o \uni0304  by \omacron;
     sub \O \uni0306  by \Obreve;
     sub \o \uni0306  by \obreve;
     sub \R \acutecomb  by \Racute;
@@ -4701,7 +4691,6 @@ lookup ccmp_latn {
     sub \a \uni030C  by \uni01CE;
     sub \I \uni030C  by \uni01CF;
     sub \i \uni030C  by \uni01D0;
-    sub \i \uni030C  by \uni01D0;
     sub \O \uni030C  by \uni01D1;
     sub \o \uni030C  by \uni01D2;
     sub \U \uni030C  by \uni01D3;
@@ -4763,7 +4752,6 @@ lookup ccmp_latn {
     sub \e \uni030F  by \uni0205;
     sub \I \uni030F  by \uni0208;
     sub \i \uni030F  by \uni0209;
-    sub \i \uni030F  by \uni0209;
     sub \O \uni030F  by \uni020C;
     sub \o \uni030F  by \uni020D;
     sub \R \uni030F  by \uni0210;
@@ -4776,7 +4764,6 @@ lookup ccmp_latn {
     sub \e \uni0311  by \uni0207;
     sub \I \uni0311  by \uni020A;
     sub \i \uni0311  by \uni020B;
-    sub \i \uni0311  by \uni020B;
     sub \O \uni0311  by \uni020E;
     sub \o \uni0311  by \uni020F;
     sub \R \uni0311  by \uni0212;
@@ -4784,9 +4771,9 @@ lookup ccmp_latn {
     sub \U \uni0311  by \uni0216;
     sub \u \uni0311  by \uni0217;
     sub \S \uni0326  by \Scommaaccent;
-    sub \s \uni0327  by \scommaaccent;
+    sub \s \uni0326  by \scommaaccent;
     sub \T \uni0326  by \uni021A;
-    sub \t \uni0327  by \uni021B;
+    sub \t \uni0326  by \uni021B;
     sub \j \uni0307  by \uni0249;
     sub \B \uni0307  by \uni1E02;
     sub \b \uni0307  by \uni1E03;
@@ -4983,7 +4970,6 @@ lookup ccmp_latn {
     sub \e \dotbelowcomb \uni0302  by \uni1EC7;
     sub \I \hookabovecomb  by \uni1EC8;
     sub \i \hookabovecomb  by \uni1EC9;
-    sub \i \hookabovecomb  by \uni1EC9;
     sub \I \dotbelowcomb  by \uni1ECA;
     sub \i \dotbelowcomb  by \uni1ECB;
     sub \O \dotbelowcomb  by \uni1ECC;
@@ -5036,23 +5022,23 @@ lookup ccmp_latn {
     sub \a.sc \acutecomb  by \aacute.sc;
     sub \a.sc \uni0302  by \acircumflex.sc;
     sub \a.sc \tildecomb  by \atilde.sc;
-    sub \a.sc \uni0307  by \adieresis.sc;
+    sub \a.sc \uni0308  by \adieresis.sc;
     sub \a.sc \uni030A  by \aring.sc;
     sub \c.sc \uni0327  by \ccedilla.sc;
     sub \e.sc \gravecomb  by \egrave.sc;
     sub \e.sc \acutecomb  by \eacute.sc;
     sub \e.sc \uni0302  by \ecircumflex.sc;
-    sub \e.sc \uni0307  by \edieresis.sc;
+    sub \e.sc \uni0308  by \edieresis.sc;
     sub \i.sc \gravecomb  by \igrave.sc;
     sub \i.sc \acutecomb  by \iacute.sc;
     sub \i.sc \uni0302  by \icircumflex.sc;
-    sub \i.sc \uni0307  by \idieresis.sc;
+    sub \i.sc \uni0308  by \idieresis.sc;
     sub \n.sc \tildecomb  by \ntilde.sc;
     sub \o.sc \gravecomb  by \ograve.sc;
     sub \o.sc \acutecomb  by \oacute.sc;
     sub \o.sc \uni0302  by \ocircumflex.sc;
     sub \o.sc \tildecomb  by \otilde.sc;
-    sub \o.sc \uni0307  by \odieresis.sc;
+    sub \o.sc \uni0308  by \odieresis.sc;
     sub \u.sc \gravecomb  by \ugrave.sc;
     sub \u.sc \acutecomb  by \uacute.sc;
     sub \u.sc \uni0302  by \ucircumflex.sc;
@@ -5068,7 +5054,6 @@ lookup ccmp_latn {
     sub \d.sc \uni030C  by \dcaron.sc;
     sub \e.sc \uni0304  by \emacron.sc;
     sub \e.sc \uni0306  by \ebreve.sc;
-    sub \e.sc \uni0307  by \edotaccent.sc;
     sub \e.sc \uni0307  by \edotaccent.sc;
     sub \e.sc \uni0328  by \eogonek.sc;
     sub \e.sc \uni030C  by \ecaron.sc;
@@ -5089,7 +5074,7 @@ lookup ccmp_latn {
     sub \n.sc \acutecomb  by \nacute.sc;
     sub \n.sc \uni0327  by \ncommaaccent.sc;
     sub \n.sc \uni030C  by \ncaron.sc;
-    sub \o.sc \uni030C  by \omacron.sc;
+    sub \o.sc \uni0304  by \omacron.sc;
     sub \o.sc \uni0306  by \obreve.sc;
     sub \o.sc \uni030B  by \ohungarumlaut.sc;
     sub \r.sc \acutecomb  by \racute.sc;
@@ -5147,8 +5132,8 @@ lookup ccmp_latn {
     sub \r.sc \uni0311  by \uni0213.sc;
     sub \u.sc \uni030F  by \uni0215.sc;
     sub \u.sc \uni0311  by \uni0217.sc;
-    sub \s.sc \uni0327  by \scommaaccent.sc;
-    sub \t.sc \uni0327  by \uni021B.sc;
+    sub \s.sc \uni0326  by \scommaaccent.sc;
+    sub \t.sc \uni0326  by \uni021B.sc;
     sub \h.sc \uni030C  by \uni021F.sc;
     sub \a.sc \uni0307  by \uni0227.sc;
     sub \e.sc \uni0327  by \uni0229.sc;
@@ -5408,19 +5393,12 @@ lookup ccmp_grek {
     sub \Omega \uni0313 \tildecomb  by \uni1F6E;
     sub \Omega \uni0314 \tildecomb  by \uni1F6F;
     sub \alpha \gravecomb  by \uni1F70;
-    sub \alpha \acutecomb  by \uni1F71;
     sub \epsilon \gravecomb  by \uni1F72;
-    sub \epsilon \acutecomb  by \uni1F73;
     sub \eta \gravecomb  by \uni1F74;
-    sub \eta \acutecomb  by \uni1F75;
     sub \iota \gravecomb  by \uni1F76;
-    sub \iota \acutecomb  by \uni1F77;
     sub \omicron \gravecomb  by \uni1F78;
-    sub \omicron \acutecomb  by \uni1F79;
     sub \upsilon \gravecomb  by \uni1F7A;
-    sub \upsilon \acutecomb  by \uni1F7B;
     sub \omega \gravecomb  by \uni1F7C;
-    sub \omega \acutecomb  by \uni1F7D;
     sub \alpha \uni0314 \uni0345  by \uni1F81;
     sub \alpha \uni0313 \gravecomb \uni0345  by \uni1F82;
     sub \alpha \uni0314 \gravecomb \uni0345  by \uni1F83;
@@ -5479,7 +5457,6 @@ lookup ccmp_grek {
     sub \Alpha \uni0304  by \uni1FB9;
     sub \Alpha \gravecomb  by \uni1FBA;
     sub \Alpha \uni0345  by \uni1FBC;
-    sub \Alpha \acutecomb  by \uni1FBB;
     sub \eta \gravecomb \uni0345  by \uni1FC2;
     sub \eta \uni0345  by \uni1FC3;
     sub \eta \acutecomb \uni0345  by \uni1FC4;
@@ -5496,8 +5473,6 @@ lookup ccmp_grek {
     sub \Iota \uni0306  by \uni1FD8;
     sub \Iota \uni0304  by \uni1FD9;
     sub \Iota \gravecomb  by \uni1FDA;
-    sub \Eta \acutecomb  by \uni1FCB;
-    sub \iota \uni0308 \acutecomb  by \uni1FD3;
     sub \upsilon \uni0306  by \uni1FE0;
     sub \upsilon \uni0304  by \uni1FE1;
     sub \upsilon \uni0308 \gravecomb  by \uni1FE2;
@@ -5505,12 +5480,10 @@ lookup ccmp_grek {
     sub \rho \uni0314  by \uni1FE5;
     sub \upsilon \tildecomb  by \uni1FE6;
     sub \upsilon \uni0308 \tildecomb  by \uni1FE7;
-    sub \upsilon \uni0308 \acutecomb  by \uni1FE3;
     sub \Upsilon \uni0306  by \uni1FE8;
     sub \Upsilon \uni0304  by \uni1FE9;
     sub \Upsilon \gravecomb  by \uni1FEA;
     sub \Rho \uni0314  by \uni1FEC;
-    sub \Upsilon \acutecomb  by \uni1FEB;
     sub \omega \gravecomb \uni0345  by \uni1FF2;
     sub \omega \uni0345  by \uni1FF3;
     sub \omega \acutecomb \uni0345  by \uni1FF4;
@@ -5519,10 +5492,6 @@ lookup ccmp_grek {
     sub \Omicron \gravecomb  by \uni1FF8;
     sub \Omega \gravecomb  by \uni1FFA;
     sub \Omega \uni0345  by \uni1FFC;
-    sub \Omicron \acutecomb  by \uni1FF9;
-    sub \Omega \acutecomb  by \uni1FFB;
-    sub \Iota \acutecomb  by \uni1FDB;
-    sub \Epsilon \acutecomb  by \uni1FC9;
     sub \iota.sc \uni0308 \acutecomb  by \iotadieresistonos.sc;
     sub \alpha.sc \acutecomb  by \alphatonos.sc;
     sub \epsilon.sc \acutecomb  by \epsilontonos.sc;
@@ -5587,19 +5556,12 @@ lookup ccmp_grek {
     sub \omega.sc \uni0313 \tildecomb  by \uni1F66.sc;
     sub \omega.sc \uni0314 \tildecomb  by \uni1F67.sc;
     sub \alpha.sc \gravecomb  by \uni1F70.sc;
-    sub \alpha.sc \acutecomb  by \uni1F71.sc;
     sub \epsilon.sc \gravecomb  by \uni1F72.sc;
-    sub \epsilon.sc \acutecomb  by \uni1F73.sc;
     sub \eta.sc \gravecomb  by \uni1F74.sc;
-    sub \eta.sc \acutecomb  by \uni1F75.sc;
     sub \iota.sc \gravecomb  by \uni1F76.sc;
-    sub \iota.sc \acutecomb  by \uni1F77.sc;
     sub \omicron.sc \gravecomb  by \uni1F78.sc;
-    sub \omicron.sc \acutecomb  by \uni1F79.sc;
     sub \upsilon.sc \gravecomb  by \uni1F7A.sc;
-    sub \upsilon.sc \acutecomb  by \uni1F7B.sc;
     sub \omega.sc \gravecomb  by \uni1F7C.sc;
-    sub \omega.sc \acutecomb  by \uni1F7D.sc;
     sub \alpha.sc \uni0313 \uni0345  by \uni1F80.sc;
     sub \alpha.sc \uni0314 \uni0345  by \uni1F81.sc;
     sub \alpha.sc \uni0313 \gravecomb \uni0345  by \uni1F82.sc;
@@ -5639,13 +5601,11 @@ lookup ccmp_grek {
     sub \iota.sc \uni0306  by \uni1FD0.sc;
     sub \iota.sc \uni0304  by \uni1FD1.sc;
     sub \iota.sc \uni0308 \gravecomb  by \uni1FD2.sc;
-    sub \iota.sc \uni0308 \acutecomb  by \uni1FD3.sc;
     sub \iota.sc \tildecomb  by \uni1FD6.sc;
     sub \iota.sc \uni0308 \tildecomb  by \uni1FD7.sc;
     sub \upsilon.sc \uni0306  by \uni1FE0.sc;
     sub \upsilon.sc \uni0304  by \uni1FE1.sc;
     sub \upsilon.sc \uni0308 \gravecomb  by \uni1FE2.sc;
-    sub \upsilon.sc \uni0308 \acutecomb  by \uni1FE3.sc;
     sub \rho.sc \uni0313  by \uni1FE4.sc;
     sub \rho.sc \uni0314  by \uni1FE5.sc;
     sub \upsilon.sc \tildecomb  by \uni1FE6.sc;
@@ -5761,7 +5721,7 @@ lookup ccmp_cv {
     sub \I.cv22 \gravecomb  by \Igrave.cv22;
     sub \I.cv22 \acutecomb  by \Iacute.cv22;
     sub \I.cv22 \uni0302  by \Icircumflex.cv22;
-    sub \I.cv22 \uni0307  by \Idieresis.cv22;
+    sub \I.cv22 \uni0308  by \Idieresis.cv22;
     sub \I.cv22 \tildecomb  by \Itilde.cv22;
     sub \I.cv22 \uni0304  by \Imacron.cv22;
     sub \I.cv22 \uni0306  by \Ibreve.cv22;
@@ -5788,11 +5748,10 @@ lookup ccmp_cv {
     sub \Iota.cv22 \uni0306  by \uni1FD8.cv22;
     sub \Iota.cv22 \uni0304  by \uni1FD9.cv22;
     sub \Iota.cv22 \gravecomb  by \uni1FDA.cv22;
-    sub \Iota.cv22 \acutecomb  by \uni1FDB.cv22;
     sub \i.sc.cv22 \gravecomb  by \igrave.sc.cv22;
     sub \i.sc.cv22 \acutecomb  by \iacute.sc.cv22;
     sub \i.sc.cv22 \uni0302  by \icircumflex.sc.cv22;
-    sub \i.sc.cv22 \uni0307  by \idieresis.sc.cv22;
+    sub \i.sc.cv22 \uni0308  by \idieresis.sc.cv22;
     sub \i.sc.cv22 \tildecomb  by \itilde.sc.cv22;
     sub \i.sc.cv22 \uni0304  by \imacron.sc.cv22;
     sub \i.sc.cv22 \uni0306  by \ibreve.sc.cv22;
@@ -5819,14 +5778,13 @@ lookup ccmp_cv {
     sub \iota.sc.cv22 \uni0306  by \uni1FD0.sc.cv22;
     sub \iota.sc.cv22 \uni0304  by \uni1FD1.sc.cv22;
     sub \iota.sc.cv22 \uni0308 \gravecomb  by \uni1FD2.sc.cv22;
-    sub \iota.sc.cv22 \uni0308 \acutecomb  by \uni1FD3.sc.cv22;
     sub \iota.sc.cv22 \tildecomb  by \uni1FD6.sc.cv22;
     sub \iota.sc.cv22 \uni0308 \tildecomb  by \uni1FD7.sc.cv22;
     sub \a.cv23 \gravecomb  by \agrave.cv23;
     sub \a.cv23 \acutecomb  by \aacute.cv23;
     sub \a.cv23 \uni0302  by \acircumflex.cv23;
     sub \a.cv23 \tildecomb  by \atilde.cv23;
-    sub \a.cv23 \uni0307  by \adieresis.cv23;
+    sub \a.cv23 \uni0308  by \adieresis.cv23;
     sub \a.cv23 \uni030A  by \aring.cv23;
     sub \a.cv23 \uni0304  by \amacron.cv23;
     sub \a.cv23 \uni0306  by \abreve.cv23;
@@ -5863,7 +5821,7 @@ lookup ccmp_cv {
     sub \u.cv25 \gravecomb  by \ugrave.cv25;
     sub \u.cv25 \acutecomb  by \uacute.cv25;
     sub \u.cv25 \uni0302  by \ucircumflex.cv25;
-    sub \u.cv25 \uni0307  by \udieresis.cv25;
+    sub \u.cv25 \uni0308  by \udieresis.cv25;
     sub \u.cv25 \tildecomb  by \utilde.cv25;
     sub \u.cv25 \uni0304  by \umacron.cv25;
     sub \u.cv25 \uni0306  by \ubreve.cv25;
@@ -5939,6 +5897,29 @@ lookup calt_Contextual_Alternates {
 	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
 	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
 } calt_Contextual_Alternates;
+
+feature cv27 {
+
+ script DFLT;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script copt;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script cyrl;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script grek;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script latn;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+} cv27;
 
 feature locl {
 
@@ -6027,29 +6008,6 @@ feature locl {
       lookup locl_cv27_Localized_Eng;
 } locl;
 
-feature cv27 {
-
- script DFLT;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script copt;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script cyrl;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script grek;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script latn;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-} cv27;
-
 feature ss09 {
   featureNames {
     name 3 1 0x409 "Localized Bulgarian forms";
@@ -6129,6 +6087,10 @@ feature ss10 {
 } ss10;
 
 feature c2sc {
+
+ script cyrl;
+     language dflt ;
+      lookup c2sc_Small_caps_from_caps;
 
  script grek;
      language dflt ;
@@ -11393,8 +11355,8 @@ lookup mark_Mark_positioning {
 	<anchor 704 1200> mark @top_center;
   pos base [\uni0477.sc ] <anchor 452 0> mark @bottom_center
 	<anchor 764 1536> mark @top_center;
-  pos base [\uni047D.sc ] <anchor 598 0> mark @bottom_center
-	<anchor 940 1932> mark @top_center;
+  pos base [\uni047D.sc ] <anchor 773 2> mark @bottom_center
+	<anchor 1099 1845> mark @top_center;
   pos base [\uni04BD.sc \uni04BF.sc ] <anchor 914 1200> mark @top_center;
   pos base [\uni04C2.sc ] <anchor 603 0> mark @bottom_center
 	<anchor 875 1536> mark @top_center;
@@ -11652,8 +11614,8 @@ lookup mark_Mark_positioning {
 	<anchor 529 -20> mark @bottom_cedilla
 	<anchor 533 0> mark @bottom_center
 	<anchor 805 1536> mark @top_center;
-  pos base [\uniA7B7.sc ] <anchor 810 1200> mark @top_center
-	<anchor 598 0> mark @bottom_center;
+  pos base [\uniA7B7.sc ] <anchor 773 2> mark @bottom_center
+	<anchor 969 1113> mark @top_center;
   pos base [\uni0434.loclBGR.sc ] <anchor 498 0> mark @bottom_center
 	<anchor 710 1200> mark @top_center;
   pos base [\uni0444.loclBGR.sc ] <anchor 752 1240> mark @top_center
