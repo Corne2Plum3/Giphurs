@@ -1,5 +1,4 @@
 from dotenv import load_dotenv
-from verboselogs import VerboseLogger   # pyright: ignore[reportMissingTypeStubs]
 from logger import configure_logging
 from math import trunc
 from multiprocessing import Pool
@@ -7,7 +6,9 @@ import os
 from pathlib import Path
 import shutil
 import time
+from ufo_copy_fea_blocks import copy_fea_blocks
 from ufo_use_typo_metrics import use_typo_metrics
+from verboselogs import VerboseLogger   # pyright: ignore[reportMissingTypeStubs]
 
 
 # ===== Build settings =====
@@ -27,7 +28,7 @@ FONTS_DIR_BACKUP_PATH: Path = Path(os.environ.get('FONTS_DIR_BACKUP_PATH', f'{FO
 SOURCES_DIR_PATH: Path = Path(os.environ.get('SOURCES_DIR_PATH', './sources'))
 
 # Temporary sources files for pre-processing
-SOURCES_INST_DIR_PATH: Path = Path(os.environ.get('SOURCES_INST_DIR_PATH', f'{FONTS_DIR_PATH}-backup'))
+SOURCES_INST_DIR_PATH: Path = Path(os.environ.get('SOURCES_INST_DIR_PATH', f'{SOURCES_DIR_PATH}-inst'))
 
 # Do not remove UFOs copy that are used for pre-processing and used for actually building the font
 KEEP_UFO_INST: bool = os.environ.get('KEEP_UFO_INST', 'False').lower() in ['true', '1']
@@ -35,11 +36,19 @@ KEEP_UFO_INST: bool = os.environ.get('KEEP_UFO_INST', 'False').lower() in ['true
 # How many process to run at most for parallelizable tasks (excluding gftools)
 PROCESSES_COUNT: int = int(os.environ.get('PROCESSES_COUNT', '1'))
 
+# List of features that should be the same in all tables in features.fea
+COMMON_FEATURES_LIST: Path = Path(os.environ.get('COMMON_FEATURES_LIST', './scripts/common_features_list.txt'))
+
+# List of lookups that should be the same in all tables in features.fea
+COMMON_LOOKUPS_LIST: Path = Path(os.environ.get('COMMON_LOOKUPS_LIST', './scripts/common_lookups_list.txt'))
+
+# The feature.fea to use as source for copying features and lookups
+FEATURES_LOOKUPS_REF: Path = Path(os.environ.get('COMMON_LOOKUPS_LIST', SOURCES_INST_DIR_PATH / f'{FONT_NAME}-Regular.ufo' / 'features.fea'))
+
 # ===== Constants =====
 
 # List of directories FONTS_DIR and the type of binaries inside each of these directories (no period at the beginning)
 FONTS_DIR_TYPES: dict[str, str] = {'otf': 'otf', 'ttf': 'ttf', 'variable': 'ttf', 'webfonts': 'woff2'}
-
 
 # List of all .ufo files inside SOURCES_DIR_PATH
 UFO_FILES_LIST: list[Path] = [ufo for ufo in SOURCES_INST_DIR_PATH.glob("*.ufo")]
@@ -379,7 +388,21 @@ logger.success('Ready to generate the fonts.')  # pyright: ignore[reportUnknownM
 
 # ===== 2. Pre-processing =====
 logger.info(f'Pre-processing UFO files at "{SOURCES_INST_DIR_PATH}"...')
+
+# For copy_tables()
+feature_list: list[str] = []
+with open('scripts/common_features_list.txt', 'r') as f:
+    for line in f.readlines():
+        if len(line.strip()) >= 1:
+            feature_list.append(line.strip())
+lookup_list: list[str] = []
+with open('scripts/common_lookups_list.txt', 'r') as f:
+    for line in f.readlines():
+        if len(line.strip()) >= 1:
+            lookup_list.append(line.strip())
+# Loop for every .ufo
 for ufo in UFO_FILES_LIST:
+    logger.verbose(f'Pre-processing {ufo}...')  # pyright: ignore[reportUnknownMemberType]
     # lib.plist
     if copy_plist(SOURCES_INST_DIR_PATH / 'lib.plist', ufo / 'lib.plist') != 0:
         exit(1)
@@ -387,6 +410,16 @@ for ufo in UFO_FILES_LIST:
     logger.info(f'Enabling openTypeOS2Selection bit 7 "use_typo_metrics" in "{ufo}"')
     if use_typo_metrics(str(ufo)) != 0:
         exit(1)
+    # feature blocks
+    if FEATURES_LOOKUPS_REF != ufo / 'features.fea':
+        logger.info(f'Copy features from "{FEATURES_LOOKUPS_REF}"')
+        if copy_fea_blocks(FEATURES_LOOKUPS_REF, ufo / 'features.fea', 'feature', feature_list) != 0:
+            exit(1)
+    # lookup blocks
+    if FEATURES_LOOKUPS_REF != SOURCES_INST_DIR_PATH / 'features.fea':
+        logger.info(f'Copy features from "{FEATURES_LOOKUPS_REF}"')
+        if copy_fea_blocks(FEATURES_LOOKUPS_REF, ufo / 'features.fea', 'lookup', lookup_list) != 0:
+            exit(1)
 logger.success('Pre-processing done with success.')  # pyright: ignore[reportUnknownMemberType]
 
 # ===== 3. Building the fonts =====
@@ -399,12 +432,12 @@ fix_incorrect_fonts_name_on_weight_1000(font_name=FONT_NAME, font_dir=FONTS_DIR_
 if build_all_sc_fonts(font_name=FONT_NAME, font_dir=FONTS_DIR_PATH, font_dir_types=FONTS_DIR_TYPES):
     exit(1)
 logger.success('Building process done with success.')  # pyright: ignore[reportUnknownMemberType]
-"""
+
 # ===== 4. Post-processing =====
 logger.info('Post-processing all fonts...')
 add_hinting_all(FONTS_DIR_PATH, FONTS_DIR_TYPES, False)
 logger.success('Post-processing done with success.')  # pyright: ignore[reportUnknownMemberType]
-"""
+
 # ===== 5. Clean-up =====
 logger.info('Cleaning up useless files...')
 if KEEP_UFO_INST:  # Clean temporary source files
