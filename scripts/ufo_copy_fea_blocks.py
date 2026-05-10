@@ -6,10 +6,10 @@ import sys
 FEATURES_LIST = './scripts/common_features_list.txt'
 LOOKUPS_LIST = './scripts/common_lookups_list.txt'
 
-def copy_tables(fea_src: Path, fea_dst: Path, mode: str, names: list[str]) -> int:
+def copy_fea_blocks(fea_src: Path, fea_dst: Path, mode: str, names: list[str]) -> int:
     '''
-    Copy a list of tables from a features.fea to another features.fea file.
-    Writes the destination files.
+    Copy a list of blocks from a features.fea to another features.fea file.
+    Writes the destination file.
     Args:
         fea_src: sources of tables to copy
         fea_dst: where to copy the tables
@@ -25,12 +25,14 @@ def copy_tables(fea_src: Path, fea_dst: Path, mode: str, names: list[str]) -> in
         statement_type = FeatureBlock
     elif mode.lower() == 'lookup':
         statement_type = LookupBlock
+    elif mode.lower() in ['nested', 'table']:
+        raise NotImplementedError(f'Unsupported mode: {mode}')  # too lazy lol and not needed at the moment
     else:
         raise ValueError(f'Unsupported mode: "{mode}"')
 
     # Read .fea files
     try:
-        print(f'[INFO] Copying {len(names)} {mode}(s) into "{fea_dst}"')
+        print(f'[INFO] Copying {len(names)} {mode}(s) from "{fea_src}" into "{fea_dst}"...')
         src_parser: Parser = Parser(fea_src)
         src_ast: FeatureFile = src_parser.parse()
         dst_parser: Parser = Parser(fea_dst)
@@ -54,7 +56,7 @@ def copy_tables(fea_src: Path, fea_dst: Path, mode: str, names: list[str]) -> in
                     dst_index = i
                     break
             if dst_index is None:
-                print(f'[WARNING] {mode} "{statement_target}" not found in destination "{fea_dst}".')
+                print(f'[INFO] {mode} "{statement_target}" not found in destination "{fea_dst}".')
             # Copy
             if dst_index is not None:  # statement both in src and dst
                 dst_ast.statements[dst_index] = src_ast.statements[src_index]  # pyright: ignore[reportUnknownMemberType]
@@ -101,9 +103,9 @@ if __name__ == '__main__':
                 lookup_list.append(line.strip())
 
     # Apply modifications
-    if copy_tables(fea_src, fea_dst, 'feature', feature_list) != 0:
+    if copy_fea_blocks(fea_src, fea_dst, 'feature', feature_list) != 0:
         exit(1)
-    if copy_tables(fea_src, fea_dst, 'lookup', lookup_list) != 0:
+    if copy_fea_blocks(fea_src, fea_dst, 'lookup', lookup_list) != 0:
         exit(1)
     
     exit(0)
