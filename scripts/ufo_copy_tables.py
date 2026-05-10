@@ -1,13 +1,26 @@
-from fontTools.feaLib.parser import Parser
-from fontTools.feaLib.ast import FeatureBlock, FeatureFile, LookupBlock
+from fontTools.feaLib.parser import Parser  # pyright: ignore[reportMissingTypeStubs]
+from fontTools.feaLib.ast import FeatureBlock, FeatureFile, LookupBlock  # pyright: ignore[reportMissingTypeStubs]
+from pathlib import Path
 import sys
 
-FEATURES_LIST = 'scripts/common_features_list.txt'
-LOOKUPS_LIST = 'common_lookups_list'
+FEATURES_LIST = './scripts/common_features_list.txt'
+LOOKUPS_LIST = './scripts/common_lookups_list.txt'
 
-def copy_tables(fea_src: FeatureFile, fea_dst: FeatureFile, mode: str, names: list[str]) -> FeatureFile:
+def copy_tables(fea_src: Path, fea_dst: Path, mode: str, names: list[str]) -> int:
+    '''
+    Copy a list of tables from a features.fea to another features.fea file.
+    Writes the destination files.
+    Args:
+        fea_src: sources of tables to copy
+        fea_dst: where to copy the tables
+        mode: type of what being copied. `feature` or `lookup`
+        names: names of the tables to copy
+    Returns:
+        `0` if success, non-zero otherwise.
+    '''
 
-    statement_type = None
+    # Check mode value
+    statement_type: type
     if mode.lower() == 'feature':
         statement_type = FeatureBlock
     elif mode.lower() == 'lookup':
@@ -15,33 +28,51 @@ def copy_tables(fea_src: FeatureFile, fea_dst: FeatureFile, mode: str, names: li
     else:
         raise ValueError(f'Unsupported mode: "{mode}"')
 
-    for statement_target in names:
-        # Find statement in source
-        src_index = None  # ... of the statement with the name we want
-        for i, statement in enumerate(src_ast.statements):
-            if isinstance(statement, statement_type) and statement.name == statement_target:
-                src_index = i
-                break
-        if src_index is None:
-            print(f'[WARNING] {mode} "{statement_target}" not found in source "{fea_src}".')
-            continue
-        # Find statement in destination
-        dst_index = None
-        for i, statement in enumerate(dst_ast.statements):
-            if isinstance(statement, statement_type) and statement.name == statement_target:
-                dst_index = i
-                break
-        if dst_index is None:
-            print(f'[WARNING] {mode} "{statement_target}" not found in destination "{fea_dst}".')
+    # Read .fea files
+    try:
+        print(f'[INFO] Copying {len(names)} {mode}(s) into "{fea_dst}"')
+        src_parser: Parser = Parser(fea_src)
+        src_ast: FeatureFile = src_parser.parse()
+        dst_parser: Parser = Parser(fea_dst)
+        dst_ast: FeatureFile = dst_parser.parse()
+        
         # Copy
-        if dst_index is not None:  # statement both in src and dst
-            dst_ast.statements[dst_index] = src_ast.statements[src_index]
-        else:
-            print(f'[INFO] Inserting {mode} "{statement_target}" at index {src_index} into "{fea_dst}".')
-            dst_ast.statements.insert(src_index, src_ast.statements[src_index])
+        for statement_target in names:
+            # Find statement in source
+            src_index: int | None = None  # ... of the statement with the name we want
+            for i, statement in enumerate(src_ast.statements):  # pyright: ignore[reportUnknownArgumentType, reportUnknownMemberType, reportUnknownVariableType]
+                if isinstance(statement, statement_type) and statement.name == statement_target:  # pyright: ignore[reportUnknownMemberType]
+                    src_index = i
+                    break
+            if src_index is None:
+                print(f'[WARNING] {mode} "{statement_target}" not found in source "{fea_src}".')
+                continue
+            # Find statement in destination
+            dst_index: int | None = None
+            for i, statement in enumerate(dst_ast.statements):  # pyright: ignore[reportUnknownArgumentType, reportUnknownMemberType, reportUnknownVariableType]
+                if isinstance(statement, statement_type) and statement.name == statement_target:  # pyright: ignore[reportUnknownMemberType]
+                    dst_index = i
+                    break
+            if dst_index is None:
+                print(f'[WARNING] {mode} "{statement_target}" not found in destination "{fea_dst}".')
+            # Copy
+            if dst_index is not None:  # statement both in src and dst
+                dst_ast.statements[dst_index] = src_ast.statements[src_index]  # pyright: ignore[reportUnknownMemberType]
+            else:
+                print(f'[INFO] Inserting {mode} "{statement_target}" at index {src_index} into "{fea_dst}".')
+                dst_ast.statements.insert(src_index, src_ast.statements[src_index])  # pyright: ignore[reportUnknownMemberType, reportUnknownArgumentType]
+        
+        # Save
+        with open(fea_dst, 'w', encoding='utf-8') as f:
+            print(f'[INFO] Writing into "{fea_dst}"...')
+            f.write(dst_ast.asFea())
 
-    print(f'[INFO] Done.')
-    return dst_ast
+    except Exception as err:
+        print(f'[ERROR] {err}')
+        return 1
+    
+    print('[INFO] Success.')
+    return 0
 
 if __name__ == '__main__':
 
@@ -53,36 +84,26 @@ if __name__ == '__main__':
         print("* DST: destination of the features and lookups. They get overwritten if already present (.fea file)")
         print("* Features and lookups to copy are defined by FEATURES_LIST and LOOKUPS_LIST in this script.")
         exit(1)
-
-    fea_src = sys.argv[1]
-    fea_dst = sys.argv[2]
+    fea_src: Path = Path(sys.argv[1])
+    fea_dst: Path = Path(sys.argv[2])
 
     # List of what to copy
-    feature_list = []
+    feature_list: list[str] = []
     with open('scripts/common_features_list.txt', 'r') as f:
         for line in f.readlines():
             if len(line.strip()) >= 1:
                 feature_list.append(line.strip())
     
-    lookup_list = []
+    lookup_list: list[str] = []
     with open('scripts/common_lookups_list.txt', 'r') as f:
         for line in f.readlines():
             if len(line.strip()) >= 1:
                 lookup_list.append(line.strip())
 
-    # Read .fea files
-    src_parser = Parser(fea_src)
-    src_ast = src_parser.parse()
-    dst_parser = Parser(fea_dst)
-    dst_ast = dst_parser.parse()
-    
     # Apply modifications
-    dst_ast = copy_tables(src_ast, dst_ast, 'feature', feature_list)
-    dst_ast = copy_tables(src_ast, dst_ast, 'lookup', lookup_list)
-
-    # Save
-    with open(fea_dst, 'w', encoding='utf-8') as f:
-        print(f'[INFO] Writing into "{fea_dst}...')
-        f.write(dst_ast.asFea())
-
+    if copy_tables(fea_src, fea_dst, 'feature', feature_list) != 0:
+        exit(1)
+    if copy_tables(fea_src, fea_dst, 'lookup', lookup_list) != 0:
+        exit(1)
+    
     exit(0)
