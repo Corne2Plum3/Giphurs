@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 from verboselogs import VerboseLogger   # pyright: ignore[reportMissingTypeStubs]
 from logger import configure_logging
 from math import trunc
+from multiprocessing import Pool
 import os
 from pathlib import Path
 import shutil
@@ -30,6 +31,9 @@ SOURCES_INST_DIR_PATH: Path = Path(os.environ.get('SOURCES_INST_DIR_PATH', f'{FO
 
 # Do not remove UFOs copy that are used for pre-processing and used for actually building the font
 KEEP_UFO_INST: bool = os.environ.get('KEEP_UFO_INST', 'False').lower() in ['true', '1']
+
+# How many process to run at most for parallelizable tasks (excluding gftools)
+PROCESSES_COUNT: int = int(os.environ.get('PROCESSES_COUNT', '1'))
 
 # ===== Constants =====
 
@@ -244,7 +248,7 @@ def build_sc_font(src_path: Path, dst_path: Path) -> int:
     pyftfeatfreeze_command: str = f'pyftfeatfreeze -f "smcp" -S -U "SC" {src_path} {dst_path}'
     return run_shell_command(pyftfeatfreeze_command, True, 'critical')
 
-def build_all_sc_fonts(font_name: str, font_dir: Path, font_dir_types: dict[str, str]) -> int:
+def build_all_sc_fonts(font_name: str, font_dir: Path, font_dir_types: dict[str, str], processes_count: int = 1) -> int:
     '''
     Generates small caps version of the font binaries, which should have been geenrate before calling this function.
     This function handles the logging process.
@@ -275,9 +279,20 @@ def build_all_sc_fonts(font_name: str, font_dir: Path, font_dir_types: dict[str,
 
     # Generate the fonts
     error_count = 0
-    for src_font_file in font_file_list:
-        if build_sc_font(src_font_file, font_file_list[src_font_file]) != 0:
-            error_count += 1
+    if processes_count > 1:  # parallel
+        logger.verbose(f'Using multiprocessing ({processes_count} processes)')  # pyright: ignore[reportUnknownMemberType]
+        tasks = [
+            (src_font_file, font_file_list[src_font_file]) 
+            for src_font_file in font_file_list
+        ]
+        with Pool(processes=processes_count) as pool:
+            results = pool.starmap(build_sc_font, tasks)
+        error_count += sum(1 for r in results if r != 0)
+    else:  # sequential
+        logger.verbose(f'Using a single process.')  # pyright: ignore[reportUnknownMemberType]
+        for src_font_file in font_file_list:
+            if build_sc_font(src_font_file, font_file_list[src_font_file]) != 0:
+                error_count += 1
     
     if error_count == 0:
         logger.success('The small caps (SC) has been built with success')  # pyright: ignore[reportUnknownMemberType]
@@ -311,7 +326,7 @@ def add_hinting(src_path: Path, dst_path: Path, keep_backup_files: bool = False)
                 logger.warning(f'Failed to remove "{target_file_name}": {err}')
     return exit_code
 
-def add_hinting_all(font_dir: Path, font_dir_types: dict[str, str], keep_backup_files: bool = False) -> int:
+def add_hinting_all(font_dir: Path, font_dir_types: dict[str, str], keep_backup_files: bool = False, processes_count: int = 1) -> int:
     """
     Add hinting on all font binaries if missing using gftools.
     This function handles the logging process.
@@ -332,9 +347,20 @@ def add_hinting_all(font_dir: Path, font_dir_types: dict[str, str], keep_backup_
 
     # Run commands
     error_count = 0
-    for font in font_file_list:
-        if add_hinting(font, font, keep_backup_files) != 0:
-            error_count += 1
+    if processes_count > 1:  # parallel
+        logger.verbose(f'Using multiprocessing ({processes_count} processes)')  # pyright: ignore[reportUnknownMemberType]
+        tasks = [
+            (font, font, keep_backup_files)
+            for font in font_file_list
+        ]
+        with Pool(processes=processes_count) as pool:
+            results = pool.starmap(add_hinting, tasks)
+        error_count += sum(1 for r in results if r != 0)
+    else:
+        logger.verbose(f'Using a single process.')  # pyright: ignore[reportUnknownMemberType]
+        for font in font_file_list:
+            if add_hinting(font, font, keep_backup_files) != 0:
+                error_count += 1
 
     if error_count == 0:
         logger.success('Hinting has been added on all fonts.')  # pyright: ignore[reportUnknownMemberType]
@@ -368,16 +394,17 @@ logger.info(f'Building font binaries at "{FONTS_DIR_PATH}"...')
 # Build the fonts
 if build_all_fonts(SOURCES_INST_DIR_PATH) != 0:  # gftools
     exit(1)
+
 fix_incorrect_fonts_name_on_weight_1000(font_name=FONT_NAME, font_dir=FONTS_DIR_PATH, font_dir_types=FONTS_DIR_TYPES, include_italics=True)
 if build_all_sc_fonts(font_name=FONT_NAME, font_dir=FONTS_DIR_PATH, font_dir_types=FONTS_DIR_TYPES):
     exit(1)
 logger.success('Building process done with success.')  # pyright: ignore[reportUnknownMemberType]
-
+"""
 # ===== 4. Post-processing =====
 logger.info('Post-processing all fonts...')
 add_hinting_all(FONTS_DIR_PATH, FONTS_DIR_TYPES, False)
 logger.success('Post-processing done with success.')  # pyright: ignore[reportUnknownMemberType]
-
+"""
 # ===== 5. Clean-up =====
 logger.info('Cleaning up useless files...')
 if KEEP_UFO_INST:  # Clean temporary source files
