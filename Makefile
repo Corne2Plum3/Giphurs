@@ -32,7 +32,7 @@ archive:
 
 # build the fonts (otf, ttf, woof2, static + variables)
 build: sources/
-	./scripts/build.sh
+	python3 ./scripts/build.py
 
 # create HTML specimens of the (variable) fonts
 proof: fonts/

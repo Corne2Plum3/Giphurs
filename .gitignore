@@ -1,3 +1,4 @@
+.env
 *.deb
 *.ninja
 *.ninja_log
@@ -16,5 +17,6 @@ sources/.fuse_hidden*
 sources/py/
 sources/*/lib.plist
 sources/.ninja*
+sources_inst/
 temp
 venv
