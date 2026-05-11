@@ -408,16 +408,14 @@ for ufo in UFO_FILES_LIST:
         exit(1)
     # use typo metrics
     logger.info(f'Enabling openTypeOS2Selection bit 7 "use_typo_metrics" in "{ufo}"')
-    if use_typo_metrics(str(ufo)) != 0:
+    if use_typo_metrics(ufo) != 0:
         exit(1)
     # feature blocks
     if FEATURES_LOOKUPS_REF != ufo / 'features.fea':
-        logger.info(f'Copy features from "{FEATURES_LOOKUPS_REF}"')
         if copy_fea_blocks(FEATURES_LOOKUPS_REF, ufo / 'features.fea', 'feature', feature_list) != 0:
             exit(1)
     # lookup blocks
     if FEATURES_LOOKUPS_REF != SOURCES_INST_DIR_PATH / 'features.fea':
-        logger.info(f'Copy features from "{FEATURES_LOOKUPS_REF}"')
         if copy_fea_blocks(FEATURES_LOOKUPS_REF, ufo / 'features.fea', 'lookup', lookup_list) != 0:
             exit(1)
 logger.success('Pre-processing done with success.')  # pyright: ignore[reportUnknownMemberType]

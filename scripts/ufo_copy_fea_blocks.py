@@ -1,10 +1,13 @@
 from fontTools.feaLib.parser import Parser  # pyright: ignore[reportMissingTypeStubs]
 from fontTools.feaLib.ast import FeatureBlock, FeatureFile, LookupBlock  # pyright: ignore[reportMissingTypeStubs]
+from logger import configure_logging
 from pathlib import Path
 import sys
 
 FEATURES_LIST = './scripts/common_features_list.txt'
 LOOKUPS_LIST = './scripts/common_lookups_list.txt'
+
+logger = configure_logging(__name__)
 
 def copy_fea_blocks(fea_src: Path, fea_dst: Path, mode: str, names: list[str]) -> int:
     '''
@@ -32,7 +35,7 @@ def copy_fea_blocks(fea_src: Path, fea_dst: Path, mode: str, names: list[str]) -
 
     # Read .fea files
     try:
-        print(f'[INFO] Copying {len(names)} {mode}(s) from "{fea_src}" into "{fea_dst}"...')
+        logger.info(f'Copying {len(names)} {mode}(s) from "{fea_src}" into "{fea_dst}"...')
         src_parser: Parser = Parser(fea_src)
         src_ast: FeatureFile = src_parser.parse()
         dst_parser: Parser = Parser(fea_dst)
@@ -47,7 +50,7 @@ def copy_fea_blocks(fea_src: Path, fea_dst: Path, mode: str, names: list[str]) -
                     src_index = i
                     break
             if src_index is None:
-                print(f'[WARNING] {mode} "{statement_target}" not found in source "{fea_src}".')
+                logger.warning(f'{mode} "{statement_target}" not found in source "{fea_src}".')
                 continue
             # Find statement in destination
             dst_index: int | None = None
@@ -56,24 +59,24 @@ def copy_fea_blocks(fea_src: Path, fea_dst: Path, mode: str, names: list[str]) -
                     dst_index = i
                     break
             if dst_index is None:
-                print(f'[INFO] {mode} "{statement_target}" not found in destination "{fea_dst}".')
+                logger.info(f'{mode} "{statement_target}" not found in destination "{fea_dst}".')
             # Copy
             if dst_index is not None:  # statement both in src and dst
                 dst_ast.statements[dst_index] = src_ast.statements[src_index]  # pyright: ignore[reportUnknownMemberType]
             else:
-                print(f'[INFO] Inserting {mode} "{statement_target}" at index {src_index} into "{fea_dst}".')
+                logger.debug(f'Inserting {mode} "{statement_target}" at index {src_index} into "{fea_dst}".')
                 dst_ast.statements.insert(src_index, src_ast.statements[src_index])  # pyright: ignore[reportUnknownMemberType, reportUnknownArgumentType]
         
         # Save
         with open(fea_dst, 'w', encoding='utf-8') as f:
-            print(f'[INFO] Writing into "{fea_dst}"...')
+            logger.debug(f'Writing into "{fea_dst}"...')
             f.write(dst_ast.asFea())
 
     except Exception as err:
-        print(f'[ERROR] {err}')
+        logger.critical(f'{err}')
         return 1
     
-    print('[INFO] Success.')
+    logger.success(f'Done copying {mode} into "{fea_dst}".')  # pyright: ignore[reportUnknownMemberType]
     return 0
 
 if __name__ == '__main__':
