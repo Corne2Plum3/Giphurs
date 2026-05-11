@@ -31,7 +31,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 # Performances settings
-USE_MULTITHREADING: bool = False
+USE_MULTITHREADING: bool = True
 
 # Script constants
 
@@ -669,7 +669,7 @@ def get_glyph_list() -> list[str]:
         for cv0 in [""] + (DIGITS_CV_LIST["0"] if "0" in DIGITS_CV_LIST else []):
             cv1_temp, cv0_temp = cv1, cv0
             if cv1 != "" and cv0 != "" and int(cv1[3:]) > int(cv0[3:]):  # swap if needed because all cv must be in ascending order
-                cv1_temp, cv2_temp = cv0, cv1
+                cv1_temp, cv0_temp = cv0, cv1
             for ss1 in [""] + (DIGITS_SS_LIST["1"] if "1" in DIGITS_SS_LIST else []):
                 for ss0 in [""] + (DIGITS_SS_LIST["0"] if "0" in DIGITS_SS_LIST else []):
                     glyph_list.append(f"uni2152" + cv1_temp + cv0_temp + ss1 + ss0)
@@ -725,7 +725,6 @@ def main():
             process.join()
     else:  # single thread (recommended for debug)
         for index, glyph_name in enumerate(glyph_list, start=1):
-            print(glyph_name)
             build_single_glyph(glyph_name, weight, is_italic, ufo_dir, index, nb_glyphs)
 
 def build_single_glyph(glyph_name: str, weight: int, is_italic: bool, ufo_dir: Path, index: int, nb_glyphs: int) -> None:
@@ -737,6 +736,7 @@ def build_single_glyph(glyph_name: str, weight: int, is_italic: bool, ufo_dir: P
     # Display
     sys.stdout.write('\033[2K\033[1G')
     print(f"[{index+1}/{nb_glyphs} ({int((index+1)/nb_glyphs*100)}%)] Working on {glyph_name}...", end="\r")
+    #print(f"[{index+1}/{nb_glyphs} ({int((index+1)/nb_glyphs*100)}%)] Working on {glyph_name}...")
 
     # Create the glyph
     base_name = glyph_name.split(".")[0]
