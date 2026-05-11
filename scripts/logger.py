@@ -7,7 +7,7 @@ def configure_logging(name: str | None = None, level: str='DEBUG') -> VerboseLog
     """Initialize Colored Logging with a consistent config"""            
     coloredlogs.install(   # pyright: ignore[reportUnknownMemberType]
         level=level,
-        fmt='%(asctime)s.%(msecs)03d %(programname)s %(levelname)s %(message)s',  # You can also define custom format
+        fmt='%(asctime)s.%(msecs)03d %(name)s[%(process)d] %(levelname)s %(message)s',  # You can also define custom format
     )  
     logger: VerboseLogger = VerboseLogger(name)  # Get a logger instance
     return logger
