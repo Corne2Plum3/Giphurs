@@ -9,5 +9,5 @@ def configure_logging(name: str | None = None, level: str='DEBUG') -> VerboseLog
         level=level,
         fmt='%(asctime)s.%(msecs)03d %(programname)s %(levelname)s %(message)s',  # You can also define custom format
     )  
-    logger = VerboseLogger(name)  # Get a logger instance
+    logger: VerboseLogger = VerboseLogger(name)  # Get a logger instance
     return logger

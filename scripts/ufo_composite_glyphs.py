@@ -25,7 +25,20 @@ COMPOSITE_GLYPHS_LIST_DELIM = ";"
 # Performances settings
 USE_MULTITHREADING = True
 
-def build_composite_glyph(glyph_name, ufo_dir, style, copy_anchors, components_list):
+
+class Composite_Glyph():
+    def __init__(self, name: str, styles: int, copy_anchor: bool, components: list[str]):
+        self.name = name
+        self.styles = styles
+        self.copy_anchor = copy_anchor
+        self.components = components
+
+
+def build_composite_glyph(glyph_name: str,
+                          ufo_dir: Path,
+                          style: int, 
+                          copy_anchors: bool, 
+                          components_list: list[str]) -> None:
     """
     Build the composite glyph `glyph_name` using its components listed from `COMPOSITE_GLYPHS_LIST`.
     
@@ -37,23 +50,33 @@ def build_composite_glyph(glyph_name, ufo_dir, style, copy_anchors, components_l
     """
 
     # Place components
-    x_cursor = 0
+    x_cursor: int = 0
     for component_number in range(0, len(components_list), 1):
-        component_name = components_list[component_number]
+        component_name: str = components_list[component_number]
         copy_single_glyph(component_name, glyph_name, ufo_dir, copy_anchors, component_number==0, x_cursor, 0)
         x_cursor += get_glyph_metrics(component_name, ufo_dir)["glyph_width"]
         if (component_number + 1) < len(components_list):  # apply kern with the next element
             x_cursor += get_kerning(components_list[component_number], components_list[component_number+1], ufo_dir)
     
     # Update the advance value
-    filename = get_glif_from_name(glyph_name, ufo_dir)
-    xml_tree = ET.parse(filename)
-    xml_tree.getroot().find("advance").attrib["width"] = str(x_cursor)
-    xml_tree.write(filename, encoding="UTF-8", xml_declaration=True)
-    
-    return 0
+    glif: Path | None = get_glif_from_name(glyph_name, ufo_dir)
+    if glif is None:
+        return
+    xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(glif)
+    xml_advance: ET.Element[str] | None = xml_tree.getroot().find("advance")
+    if xml_advance is None:
+        return
+    xml_advance.attrib["width"] = str(x_cursor)
+    xml_tree.write(glif, encoding="UTF-8", xml_declaration=True)
+    return
 
-def copy_single_glyph(glyph_src, glyph_dst, ufo_dir, copy_anchors=True, replace_all=True, x_offset=0, y_offset=0):
+def copy_single_glyph(glyph_src: str,
+                      glyph_dst: str,
+                      ufo_dir: Path,
+                      copy_anchors: bool = True,
+                      replace_all: bool = True,
+                      x_offset: int = 0,
+                      y_offset: int = 0) -> None:
     """
     Copy `glyph_src` into `glyph_dst`, without changing its name not Unicode value.
     Can also copy anchors with `copy_anchors` set to `True`.
@@ -63,20 +86,26 @@ def copy_single_glyph(glyph_src, glyph_dst, ufo_dir, copy_anchors=True, replace_
     Returns nothing
     """
     # get source anchors and outline
-    src_xml_tree = ET.parse(get_glif_from_name(glyph_src, ufo_dir))
-    src_xml_root = src_xml_tree.getroot()
-    src_anchor_list = src_xml_root.findall("anchor") if copy_anchors else []
+    src_glif: Path | None = get_glif_from_name(glyph_src, ufo_dir)
+    if src_glif is None:
+        return
+    src_xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(src_glif)
+    src_xml_root: ET.Element[str] = src_xml_tree.getroot()
+    src_anchor_list: list[ET.Element[str]] = src_xml_root.findall("anchor") if copy_anchors else []
 
     # Parse destination glyph XML
-    dst_xml_tree = ET.parse(get_glif_from_name(glyph_dst, ufo_dir))
-    dst_xml_root = dst_xml_tree.getroot()
+    dst_glif: Path | None = get_glif_from_name(glyph_dst, ufo_dir)
+    if dst_glif is None:
+        return
+    dst_xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(dst_glif)
+    dst_xml_root: ET.Element[str] = dst_xml_tree.getroot()
 
     # Clear old anchors and outline if replace_all
     if replace_all:
-        xml_anchor_list = dst_xml_root.findall("anchor")
+        xml_anchor_list: list[ET.Element[str]] = dst_xml_root.findall("anchor")
         for element in xml_anchor_list:  # delete the already existing ones
             dst_xml_root.remove(element)
-        xml_outline_list = dst_xml_root.findall("outline")
+        xml_outline_list: list[ET.Element[str]] = dst_xml_root.findall("outline")
         for element in xml_outline_list:  # delete the already existing ones
             dst_xml_root.remove(element)
         ET.SubElement(dst_xml_root, "outline")
@@ -84,7 +113,7 @@ def copy_single_glyph(glyph_src, glyph_dst, ufo_dir, copy_anchors=True, replace_
     # Copy the anchors
     if copy_anchors:
         for src_anchor in src_anchor_list:
-            dst_anchor_attribs = {
+            dst_anchor_attribs: dict[str, str] = {
                 "x": str(int(src_anchor.attrib["x"]) + x_offset),
                 "y": str(int(src_anchor.attrib["y"]) + y_offset),
                 "name": src_anchor.attrib["name"]
@@ -97,20 +126,25 @@ def copy_single_glyph(glyph_src, glyph_dst, ufo_dir, copy_anchors=True, replace_
         "xOffset": str(x_offset),
         "yOffset": str(y_offset)
     }
-    ET.SubElement(dst_xml_root.find("outline"), "component", new_component_attrib)
+    dst_xml_outline: ET.Element[str] | None = dst_xml_root.find("outline")
+    if dst_xml_outline is None:  # This shouldn't happen
+        print(f'[ERROR] Somehow couldn\'t find <outline> when copying {glyph_src} into {glyph_dst}')
+        return
+    ET.SubElement(dst_xml_outline, "component", new_component_attrib)
 
     # Save
-    dst_xml_tree.write(get_glif_from_name(glyph_dst, ufo_dir), encoding='utf-8', xml_declaration=True)
+    dst_xml_tree.write(dst_glif, encoding='utf-8', xml_declaration=True)
     return
 
-def check_csv_entry(csv_line, glyph_name=None, style=None):
+def check_csv_entry(csv_line: str, glyph_name: str | None = None, style: int | None = None) -> int:
     """
-    Read a line of COMPOSITE_GLYPHS_LIST given as a string.
+    Read a line of COMPOSITE_GLYPHS_LIST given as a string and check if the line is valid.
     It is possible to check if it corresponds to a specific glyph name and/or a style
-    If the line is valid and applies to the style given, then returns 0,
-    otherwise returns a non-zero value, depending on the issue.
+    If the line is valid and applies to the style given, then returns 0, otherwise returns a non-zero
+    value, depending on the issue.
+    Value for style : 1 = non-italic ; 2 = italic ; 3 = both
     """
-    csv_data = csv_line.split(COMPOSITE_GLYPHS_LIST_DELIM)
+    csv_data: list[str] = csv_line.split(COMPOSITE_GLYPHS_LIST_DELIM)
     for i in range(len(csv_data)):  # remove whitespaces
         csv_data[i] = csv_data[i].strip()
 
@@ -119,7 +153,7 @@ def check_csv_entry(csv_line, glyph_name=None, style=None):
         return 1  # Not enough parameters
     
     # Style entry check
-    csv_style_value = None
+    csv_style_value: int
     try:
         csv_style_value = int(csv_data[1])
     except:
@@ -130,14 +164,14 @@ def check_csv_entry(csv_line, glyph_name=None, style=None):
         return 3  # Glyph refers itself as component
 
     # Glyph name matching check
-    if not glyph_name is None:
+    if glyph_name is not None:
         if glyph_name != csv_data[0]:
             return 4  # Glyph name is not matching
 
     # Style support check
-    if not style is None:
-        line_non_italic_support = bool(int(csv_style_value) & 1)
-        line_italic_support = bool(int(csv_style_value) & 2)
+    if style is not None:
+        line_non_italic_support: bool = bool(int(csv_style_value) & 1)
+        line_italic_support: bool = bool(int(csv_style_value) & 2)
         if not((style == 1 and line_non_italic_support) or (style == 2 and line_italic_support)):
             return 5  # Unsupported style
     
@@ -153,16 +187,12 @@ def main():
         print("If a glyph name isn't provided, all composite glyphs from the font will be built.")
         return
     
-    ufo_dir = sys.argv[1]
-    style = int(sys.argv[2])
-    glyph_name = None if len(sys.argv) == 3 else sys.argv[3]
+    ufo_dir: Path = Path(sys.argv[1])
+    style: int = int(sys.argv[2])
+    glyph_name: str | None = None if len(sys.argv) == 3 else sys.argv[3]
 
-    # Get the list of glyphs to do. Result is in 'glyphs_list', a 2d matrix, with each rows looking like the CSV file:
-    # [0] Glyph Name (str)
-    # [1] Supported style (int)
-    # [2] Copy Anchors (bool)
-    # [3+] Components (str)
-    glyphs_list_data = []
+    # Get the list of glyphs to do
+    glyphs_list_data: list[Composite_Glyph] = []
     with open(COMPOSITE_GLYPHS_LIST, "r") as csv_file:
         csv_lines = csv_file.readlines()
         first_line_seen = False
@@ -173,15 +203,17 @@ def main():
                 csv_line_check = check_csv_entry(csv_line, glyph_name, style)
                 # -- Valid line
                 if csv_line_check == 0:
-                    csv_line_splitted = csv_line.strip().split(COMPOSITE_GLYPHS_LIST_DELIM)  # all elements are strings!
-                    new_entry = []
-                    for i in range(len(csv_line_splitted)):  # remove whitespaces
-                        if not csv_line_splitted[i] == "":
-                            if i == 1:  # Styles -> int
-                                csv_line_splitted[i] = int(csv_line_splitted[i])
-                            elif i == 2:  # Copy anchors -> bool
-                                csv_line_splitted[i] = not csv_line_splitted[i].lower() in ["", "0", "no"]
-                            new_entry.append(csv_line_splitted[i])
+                    csv_line_splitted: list[str] = csv_line.strip().split(COMPOSITE_GLYPHS_LIST_DELIM)
+                    components: list[str] = []
+                    for c in csv_line_splitted[3:]:
+                        if c != '':
+                            components.append(c)
+                    new_entry: Composite_Glyph = Composite_Glyph(
+                        name=csv_line_splitted[0],
+                        styles=int(csv_line_splitted[1]),
+                        copy_anchor=not csv_line_splitted[2].lower() in ["", "0", "no"],
+                        components=components
+                    )
                     glyphs_list_data.append(new_entry)
                 # -- Errors on the line
                 elif csv_line_check == 1:
@@ -191,7 +223,7 @@ def main():
                 elif csv_line_check == 3:
                     print(f"WARNING: The glyph at line {line_number} contains itself as component, skipping.")
                 # -- The style and eventually the glyph name don't match
-                # do nothing
+                # ...do nothing
     
     # Check the possible errors before build and correct them if possible
     # -- The glyph specified doesn't exists [FATAL]
@@ -211,7 +243,7 @@ def main():
     print("Starting...")
     nb_glyphs = len(glyphs_list_data)
     if USE_MULTITHREADING:
-        processes = [Process(target=build_single_glyph, args=(glyphs_list_data[i], ufo_dir, style, i, nb_glyphs)) for i in range(nb_glyphs)]
+        processes: list[Process] = [Process(target=build_single_glyph, args=(glyphs_list_data[i], ufo_dir, style, i, nb_glyphs)) for i in range(nb_glyphs)]
         # start all processes
         for process in processes:
             process.start()
@@ -219,8 +251,8 @@ def main():
         for process in processes:
             process.join()
     else:  # single thread (recommended for debug)
-        for i in range(nb_glyphs):
-            build_single_glyph(glyphs_list_data[i], ufo_dir, style, i, nb_glyphs)
+        for i, composite_glyph in enumerate(glyphs_list_data):
+            build_single_glyph(composite_glyph, ufo_dir, style, i, nb_glyphs)
 
     # End message
     if glyph_name is None:
@@ -228,20 +260,22 @@ def main():
     else:
         print(f"Done building {glyph_name} in {sys.argv[1]} ({nb_glyphs} files changed)", flush=True)
         
-def build_single_glyph(glyph_data, ufo_dir, style, index, nb_glyphs):
+def build_single_glyph(glyph_data: Composite_Glyph, ufo_dir: Path, style: int, index: int, nb_glyphs: int) -> None:
     """
     Sub-process of main() supposed to work in parallel which read a line of glyph_list.
-    Ne retourne rien.
+    Returns nothing.
     """
-    current_glyph_name = glyph_data[0]
-    current_glyph_copy_anchors = glyph_data[2]
-    current_glyph_components = glyph_data[3:]
 
     sys.stdout.write('\033[2K\033[1G')
-    print(f"[{index+1}/{nb_glyphs} ({int((index+1)/nb_glyphs*100)}%)] Working on {current_glyph_name}...", end="\r")
-
-    build_composite_glyph(current_glyph_name, ufo_dir, style, current_glyph_copy_anchors, current_glyph_components)
-
+    print(f"[{index+1}/{nb_glyphs} ({int((index+1)/nb_glyphs*100)}%)] Working on {glyph_data.name}...", end="\r")
+    
+    build_composite_glyph(
+        glyph_name=glyph_data.name,
+        ufo_dir=ufo_dir,
+        style=glyph_data.styles,
+        copy_anchors=glyph_data.copy_anchor,
+        components_list=glyph_data.components
+    )
 
 if __name__ == "__main__":
     main()
