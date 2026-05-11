@@ -28,7 +28,7 @@ MKMK_ANCHORS_REPLACE = {
 }
 
 # Performances settings
-USE_MULTITHREADING = False
+USE_MULTITHREADING = True
 
 
 class Accented_Glyph():
@@ -312,9 +312,9 @@ def build_single_glyph(glyph_data: Accented_Glyph, ufo_dir: Path, style: int, in
     Sub-process of main() supposed to work in parallel which read a line of glyph_list.
     Returns nothing.
     """
-    #sys.stdout.write('\033[2K\033[1G')
-    #print(f"[{index+1}/{nb_glyphs} ({int((index+1)/nb_glyphs*100)}%)] Working on {current_glyph_name}...", end="\r")
-    print(f"[{index+1}/{nb_glyphs} ({int((index+1)/nb_glyphs*100)}%)] Working on {glyph_data.name}...")
+    sys.stdout.write('\033[2K\033[1G')
+    print(f"[{index+1}/{nb_glyphs} ({int((index+1)/nb_glyphs*100)}%)] Working on {glyph_data.name}...", end="\r")
+    #print(f"[{index+1}/{nb_glyphs} ({int((index+1)/nb_glyphs*100)}%)] Working on {glyph_data.name}...")
 
     build_accented_glyph(
         glyph_name=glyph_data.name,
