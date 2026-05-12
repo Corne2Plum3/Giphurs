@@ -1,78 +1,79 @@
 """
 Set the bit 7 ("use typo metrics") of fsSelection in an ufo file.
 
-Note: Doesn't do anything if openTypeOS2Selection is already here, regardless its value
+Can be used directly on a terminal or by using the use_typo_metrics() function in a Python script.
 """
 
 from logger import configure_logging
 from pathlib import Path
+import plistlib
 import sys
-import xml.etree.ElementTree as ET
+from typing import Any
+
 
 logger = configure_logging(__name__)
 
-def use_typo_metrics(ufo_file: Path) -> int:
+def use_typo_metrics(ufo_dir: Path) -> int:
     """
-    Set the openTypeOS2Selection value inside 
+    Set the openTypeOS2Selection value inside a UFO file. Writes into the fontinfo.plist file of the UFO.
+
+    This function handles the logging.
+
+    Args:
+        ufo_dir: UFO to modify
+    Returns:
+        `0` if success, non-zero otherwise
     """
 
-    # load the file and find the root
-    logger.debug(f'Parsing "{ufo_file}/fontinfo.plist"...')
+    # Read file
+    logger.info(f'Working on "{ufo_dir}"...')
+    plist_raw_content: Any
     try:
-        tree = ET.parse(f"{ufo_file}/fontinfo.plist")
+        with open(ufo_dir / 'fontinfo.plist', 'rb') as f:
+            plist_raw_content = plistlib.load(f)
     except Exception as err:
-        logger.error(f'Failed to parse "{ufo_file}/fontinfo.plist": {err}')
-        return 1
-
-    # check if it is already set and remove it
-    try:
-        xml_dict = tree.getroot().find("dict")
-        if xml_dict is None:
-            logger.error('Element <dict> not found.')
-            return 1
-        xml_key_list = xml_dict.findall("key")
-
-        key_list: list[str] = []
-        for element in xml_key_list:
-            if element.text is not None:
-                key_list.append(element.text)
-
-        if "openTypeOS2Selection" in key_list:
-            xml_openTypeOS2Selection: ET.Element[str] | None = xml_dict.find('openTypeOS2Selection')
-            if xml_openTypeOS2Selection is not None:
-                if xml_openTypeOS2Selection.text != '7':
-                    logger.warning(f'Overwriting openTypeOS2Selection: {xml_openTypeOS2Selection.text} -> 7...')
-                else:
-                    logger.info(f'Overwriting openTypeOS2Selection: {xml_openTypeOS2Selection.text} -> 7...')
-                xml_openTypeOS2Selection.text = "7"
-        else:
-            logger.info(f'Adding openTypeOS2Selection with value 7...')
-            new_key = ET.Element("key", {})
-            new_key.text = "openTypeOS2Selection"
-            xml_dict.append(new_key)
-            new_array = ET.Element("array", {})
-            new_integer = ET.Element("integer", {})
-            new_integer.text = "7"
-            new_array.append(new_integer)
-            xml_dict.append(new_array)
-    except Exception as err:
-        logger.error(f'Internal error when trying to set openTypeOS2Selection to 7: {err}')
-        return 1
-
-    # save
-    logger.info(f'Writing into "{ufo_file}/fontinfo.plist"...')
-    try:
-        tree.write(f"{ufo_file}/fontinfo.plist", encoding="UTF-8", xml_declaration=True)
-    except Exception as err:
-        logger.error(f'Failed to write into "{ufo_file}/fontinfo.plist": {err}')
+        logger.critical(f'Failed to read "{ufo_dir / 'fontinfo.plist'}": {err}')
         return 1
     
+    if not isinstance(plist_raw_content, dict):
+        logger.critical(f'Failed to set version on "{ufo_dir / 'fontinfo.plist'}": a dict was expected, got {type(plist_raw_content)}.')
+        return 1
+   
+    plist_dict: dict[str, Any] = plist_raw_content  # pyright: ignore[reportUnknownVariableType]
+
+    # Early exit if nothing to do
+    if 'openTypeOS2Selection' in plist_dict and 7 in plist_dict['openTypeOS2Selection']:
+        logger.info(f'Value 7 is already in openTypeOS2Selection.')
+        return 0
+    
+    # Set or add if missing
+    if 'openTypeOS2Selection' in plist_dict:
+        plist_dict['openTypeOS2Selection'].append(7)
+    else:
+        plist_dict['openTypeOS2Selection'] = [7]
+
+    # Save
+    logger.verbose(f'Writing into "{ufo_dir / 'fontinfo.plist'}"...')  # pyright: ignore[reportUnknownMemberType]
+    try:
+        with open(ufo_dir / 'fontinfo.plist', 'wb') as f:
+            plistlib.dump(plist_dict, f, fmt=plistlib.FMT_XML)
+    except Exception as err:
+        logger.critical(f'Failed to write into "{ufo_dir / 'fontinfo.plist'}": {err}')
+        return 1
+
+    logger.success(f'The value 7 has been added to openTypeOS2Selection')  # pyright: ignore[reportUnknownMemberType]
     return 0
 
 if __name__ == "__main__":
+    # Read parameters
     if len(sys.argv) < 2:
         print(f"{sys.argv[0]}: Not enough parameters.")
         print(f"Usage: {sys.argv[0]} <ufo_directory>")
         exit(1)
-    exit(use_typo_metrics(Path(sys.argv[1])))
+    
+    # Execute
+    exit_code: int = use_typo_metrics(Path(sys.argv[1]))
+    
+    # Exit
+    exit(exit_code)
     
