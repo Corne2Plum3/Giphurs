@@ -7,6 +7,7 @@ from pathlib import Path
 import shutil
 import time
 from ufo_copy_fea_blocks import copy_fea_blocks
+from ufo_set_version import set_version
 from ufo_use_typo_metrics import use_typo_metrics
 from verboselogs import VerboseLogger   # pyright: ignore[reportMissingTypeStubs]
 
@@ -20,6 +21,9 @@ FONT_NAME: str = os.environ.get('FONT_NAME', 'Giphurs')
 
 # Font binary directory
 FONTS_DIR_PATH: Path = Path(os.environ.get('FONTS_DIR_PATH', './fonts'))
+
+# Font version (example: "2", "2.0.1", "2.010"). If None -> keep the version values from the UFOs
+FONT_VERSION: str | None = os.environ.get('FONT_VERSION', None)
 
 # Backup font binaries
 FONTS_DIR_BACKUP_PATH: Path = Path(os.environ.get('FONTS_DIR_BACKUP_PATH', f'{FONTS_DIR_PATH}-backup')) 
@@ -402,12 +406,12 @@ with open('scripts/common_lookups_list.txt', 'r') as f:
             lookup_list.append(line.strip())
 # Loop for every .ufo
 for ufo in UFO_FILES_LIST:
-    logger.verbose(f'Pre-processing {ufo}...')  # pyright: ignore[reportUnknownMemberType]
+    logger.info(f'Pre-processing {ufo}...')  # pyright: ignore[reportUnknownMemberType]
     # lib.plist
     if copy_plist(SOURCES_INST_DIR_PATH / 'lib.plist', ufo / 'lib.plist') != 0:
         exit(1)
     # use typo metrics
-    logger.info(f'Enabling openTypeOS2Selection bit 7 "use_typo_metrics" in "{ufo}"')
+    logger.verbose(f'Enabling openTypeOS2Selection bit 7 "use_typo_metrics" in "{ufo}"...')  # pyright: ignore[reportUnknownMemberType]
     if use_typo_metrics(ufo) != 0:
         exit(1)
     # feature blocks
@@ -415,8 +419,12 @@ for ufo in UFO_FILES_LIST:
         if copy_fea_blocks(FEATURES_LOOKUPS_REF, ufo / 'features.fea', 'feature', feature_list) != 0:
             exit(1)
     # lookup blocks
-    if FEATURES_LOOKUPS_REF != SOURCES_INST_DIR_PATH / 'features.fea':
+    if FEATURES_LOOKUPS_REF != ufo / 'features.fea':
         if copy_fea_blocks(FEATURES_LOOKUPS_REF, ufo / 'features.fea', 'lookup', lookup_list) != 0:
+            exit(1)
+    # version
+    if FONT_VERSION is not None:
+        if set_version(FONT_VERSION, ufo) != 0:
             exit(1)
 logger.success('Pre-processing done with success.')  # pyright: ignore[reportUnknownMemberType]
 
