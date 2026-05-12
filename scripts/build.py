@@ -441,7 +441,7 @@ logger.success('Building process done with success.')  # pyright: ignore[reportU
 
 # ===== 4. Post-processing =====
 logger.info('Post-processing all fonts...')
-add_hinting_all(FONTS_DIR_PATH, FONTS_DIR_TYPES, False)
+add_hinting_all(FONTS_DIR_PATH, FONTS_DIR_TYPES, False, PROCESSES_COUNT)
 logger.success('Post-processing done with success.')  # pyright: ignore[reportUnknownMemberType]
 
 # ===== 5. Clean-up =====
