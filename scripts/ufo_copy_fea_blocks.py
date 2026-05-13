@@ -7,7 +7,7 @@ import sys
 FEATURES_LIST = './scripts/common_features_list.txt'
 LOOKUPS_LIST = './scripts/common_lookups_list.txt'
 
-logger = configure_logging(__name__)
+logger = configure_logging()
 
 def copy_fea_blocks(fea_src: Path, fea_dst: Path, mode: str, names: list[str]) -> int:
     '''

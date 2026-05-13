@@ -1,13 +1,31 @@
 '''Logging configuration so it's used in all scripts.'''
 
 import coloredlogs  # pyright: ignore[reportMissingTypeStubs]
+from dotenv import load_dotenv
+import os
+from pathlib import Path
 from verboselogs import VerboseLogger  # pyright: ignore[reportMissingTypeStubs]
+import logging
 
-def configure_logging(name: str | None = None, level: str='DEBUG') -> VerboseLogger:
-    """Initialize Colored Logging with a consistent config"""            
-    coloredlogs.install(   # pyright: ignore[reportUnknownMemberType]
-        level=level,
-        fmt='%(asctime)s.%(msecs)03d %(name)s[%(process)d] %(levelname)s %(message)s',  # You can also define custom format
-    )  
-    logger: VerboseLogger = VerboseLogger(name)  # Get a logger instance
+
+load_dotenv()
+
+# Where to store the logs from this logger
+FONT_LOGS: Path = Path(os.environ.get('FONT_LOGS', 'logs/font.log'))
+
+
+def configure_logging() -> VerboseLogger:
+    """Initialize Colored Logging with a consistent config"""
+    if not FONT_LOGS.exists():
+        os.mkdir(FONT_LOGS.parents[0])
+
+    logging.basicConfig(
+        filename=FONT_LOGS,  # name of the log file
+        level=logging.DEBUG,  # level of the log
+        format='%(asctime)s %(name)s[%(process)d] %(levelname)s %(message)s'  # log format
+    )
+    
+    coloredlogs.install()  # pyright: ignore[reportUnknownMemberType]
+
+    logger: VerboseLogger = VerboseLogger('logger')  # Get a logger instance
     return logger

@@ -49,6 +49,12 @@ COMMON_LOOKUPS_LIST: Path = Path(os.environ.get('COMMON_LOOKUPS_LIST', './script
 # The feature.fea to use as source for copying features and lookups
 FEATURES_LOOKUPS_REF: Path = Path(os.environ.get('COMMON_LOOKUPS_LIST', SOURCES_INST_DIR_PATH / f'{FONT_NAME}-Regular.ufo' / 'features.fea'))
 
+# Where to store gftools logs (main build + hinting)
+GFTOOLS_LOGS: Path = Path(os.environ.get('GFTOOLS_LOGS', 'logs/gftools.log'))
+
+# Where to store pyftfeatfreeze logs (small caps build)
+PYFTFEATFREEZE_LOGS: Path = Path(os.environ.get('PYFTFEATFREEZE_LOGS', 'logs/pyftfeatfreeze.log'))
+
 # ===== Constants =====
 
 # List of directories FONTS_DIR and the type of binaries inside each of these directories (no period at the beginning)
@@ -58,24 +64,32 @@ FONTS_DIR_TYPES: dict[str, str] = {'otf': 'otf', 'ttf': 'ttf', 'variable': 'ttf'
 UFO_FILES_LIST: list[Path] = [ufo for ufo in SOURCES_INST_DIR_PATH.glob("*.ufo")]
 
 # Logger (don't use print(), use this instead, there are colors :3)
-logger: VerboseLogger = configure_logging(__name__)
+logger: VerboseLogger = configure_logging()
 
 # ===== Utils functions =====
 
-def run_shell_command(command: str, show_output_message: bool = True, output_message_fail_level: str = 'error') -> int:
+def run_shell_command(command: str, show_output_message: bool = True, output_message_fail_level: str = 'error', log_file: Path | None = None, clear_log_file: bool = True) -> int:
     '''
     Run a shell command and show it on the logs.
     Args:
         command: command to execute
         show_output_message: (optional) show a message after the execution of the command. Defaults to `True`
         output_message_fail_level: (optional) log level for message when non-zero exit code is obtained from the command. Possible values: `info`, `notice`, `warning`, `error`, `critical`.
+        log_file: (optional) store the command output to a file as well
+        clear_log_file: (optional) clear log_file before writing on it
     Returns:
         int: exit code from the command
     '''
     if output_message_fail_level.lower() not in ['info', 'notice', 'warning', 'error', 'critical']:
         raise ValueError(f'Invalid value for output_message_fail_level: {output_message_fail_level}')
-    logger.verbose(command)  # pyright: ignore[reportUnknownMemberType]
-    exit_code: int = os.system(command)
+    logger.verbose(f'{command}{f' -> ({log_file})' if log_file is not None else ''}')  # pyright: ignore[reportUnknownMemberType]
+    exit_code: int
+    if log_file is not None:
+        with open(log_file, 'w' if clear_log_file else 'a') as f:  # print executed command in logs
+            f.write(f'{command}\n')
+        exit_code = os.system(f'{command} 2>&1 | tee {'-a' if not clear_log_file else ''} {log_file}')
+    else:
+        exit_code = os.system(command)
     if show_output_message:
         if exit_code != 0:
             output_msg: str = f'Something went wrong with "{command}": exit code {exit_code}'
@@ -187,7 +201,7 @@ def build_all_fonts(ufo_dir: Path) -> int:
     global logger
     logger.info('Building the font with gftools builder...')
     gftools_command: str = f'gftools builder {ufo_dir}/config.yaml'
-    return run_shell_command(gftools_command, True, 'critical')
+    return run_shell_command(gftools_command, True, 'critical', GFTOOLS_LOGS, True)
 
 def fix_incorrect_fonts_name_on_weight_1000(font_name: str, font_dir: Path, font_dir_types: dict[str, str], include_italics: bool) -> int:
     """
@@ -259,7 +273,7 @@ def build_sc_font(src_path: Path, dst_path: Path) -> int:
         int: exit code of pyftfeatfreeze
     '''
     pyftfeatfreeze_command: str = f'pyftfeatfreeze -f "smcp" -S -U "SC" {src_path} {dst_path}'
-    return run_shell_command(pyftfeatfreeze_command, True, 'critical')
+    return run_shell_command(pyftfeatfreeze_command, True, 'critical', PYFTFEATFREEZE_LOGS, False)
 
 def build_all_sc_fonts(font_name: str, font_dir: Path, font_dir_types: dict[str, str], processes_count: int = 1) -> int:
     '''
@@ -325,8 +339,8 @@ def add_hinting(src_path: Path, dst_path: Path, keep_backup_files: bool = False)
     Return:
         int: exit code of gftools command
     """
-    gftools_command: str = f'gftools fix-nonhinting -q {src_path} {dst_path}'
-    exit_code: int = run_shell_command(gftools_command, True, 'error')
+    gftools_command: str = f'gftools fix-nonhinting {src_path} {dst_path} 2>&1 | tee -a {GFTOOLS_LOGS}'
+    exit_code: int = run_shell_command(gftools_command, True, 'error', GFTOOLS_LOGS, False)
     if not keep_backup_files:
         ext: str = dst_path.name.split('.')[1]
         backup_files: list[Path] = [f for f in (dst_path.parents[0]).glob(f'*backup*.{ext}')] + [f for f in (dst_path.parents[0]).glob(f'*.*backup*')]

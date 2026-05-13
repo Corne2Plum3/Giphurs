@@ -76,6 +76,7 @@ ufo_use_typo_metrics: sources/
 
 # Cleaning process
 clean:
+	rm -rf logs/
 	rm -rf output/
 	rm -rf scripts/__pycache__
 	rm -rf $(UFO_DIR)/instance_ufos

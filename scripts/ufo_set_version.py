@@ -11,7 +11,7 @@ import sys
 from typing import Any
 
 
-logger = configure_logging(__name__)
+logger = configure_logging()
 
 def set_version(version_string: str, ufo_dir: Path) -> int:
     '''
