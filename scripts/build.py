@@ -26,7 +26,7 @@ FONTS_DIR_PATH: Path = Path(os.environ.get('FONTS_DIR_PATH', './fonts'))
 FONT_VERSION: str | None = os.environ.get('FONT_VERSION', None)
 
 # Backup font binaries
-FONTS_DIR_BACKUP_PATH: Path = Path(os.environ.get('FONTS_DIR_BACKUP_PATH', f'{FONTS_DIR_PATH}-backup')) 
+FONTS_DIR_BACKUP_PATH: Path = Path(os.environ.get('FONTS_DIR_BACKUP_PATH', f'{FONTS_DIR_PATH}-backup'))
 
 # Where the sources files (.ufo) are located
 SOURCES_DIR_PATH: Path = Path(os.environ.get('SOURCES_DIR_PATH', './sources'))
@@ -58,7 +58,7 @@ PYFTFEATFREEZE_LOGS: Path = Path(os.environ.get('PYFTFEATFREEZE_LOGS', 'logs/pyf
 # ===== Constants =====
 
 # List of directories FONTS_DIR and the type of binaries inside each of these directories (no period at the beginning)
-FONTS_DIR_TYPES: dict[str, str] = {'otf': 'otf', 'ttf': 'ttf', 'variable': 'ttf', 'webfonts': 'woff2'}
+FONTS_SUBDIRS_TYPES: dict[str, str] = {'otf': 'otf', 'ttf': 'ttf', 'variable': 'ttf', 'webfonts': 'woff2'}
 
 # List of all .ufo files inside SOURCES_DIR_PATH
 UFO_FILES_LIST: list[Path] = [ufo for ufo in SOURCES_INST_DIR_PATH.glob("*.ufo")]
@@ -67,6 +67,37 @@ UFO_FILES_LIST: list[Path] = [ufo for ufo in SOURCES_INST_DIR_PATH.glob("*.ufo")
 logger: VerboseLogger = configure_logging()
 
 # ===== Utils functions =====
+
+def rename_loop(files: dict[Path, Path]) -> int:
+    """
+    Rename multiple files.
+    This function handles the logging process.
+    Args:
+        files: dict mapping files to rename to their new name
+    Return:
+        Amount of files where renamming failed.
+    """
+    global logger
+    error_count: int = 0
+    for old_name, new_name in files.items():
+        logger.verbose(f'Renaming "{old_name}" -> "{new_name}"')  # pyright: ignore[reportUnknownMemberType]
+        try:
+            os.rename(old_name, new_name)
+        except FileNotFoundError:
+            if new_name.exists():
+                logger.info(f'"{new_name}" already exists.')
+            else:
+                logger.warning(f'File not found: "{old_name}"')
+                error_count += 1
+        except Exception as err:
+            logger.warning(f'Unexpected error:{err}')
+            error_count += 1
+
+    if error_count == 0:
+        logger.success('Weight 1000 fonts successfully renamed.')  # pyright: ignore[reportUnknownMemberType]
+    else:
+        logger.warning(f'{error_count} error(s) occured when renaming weight 1000 files.')
+    return error_count
 
 def run_shell_command(command: str, show_output_message: bool = True, output_message_fail_level: str = 'error', log_file: Path | None = None, clear_log_file: bool = True) -> int:
     '''
@@ -133,7 +164,7 @@ def create_fonts_backup(src_dir: Path, dst_dir: Path) -> int:
 
 def create_sources_inst(src_dir: Path, dst_dir: Path) -> int:
     '''
-    Creates a copy of the 
+    Creates a copy of the
     Args:
         src_dir: Path to the directory to copy
         dst_dir: Path to the desination directory
@@ -203,65 +234,6 @@ def build_all_fonts(ufo_dir: Path) -> int:
     gftools_command: str = f'gftools builder {ufo_dir}/config.yaml'
     return run_shell_command(gftools_command, True, 'critical', GFTOOLS_LOGS, True)
 
-def fix_incorrect_fonts_name_on_weight_1000(font_name: str, font_dir: Path, font_dir_types: dict[str, str], include_italics: bool) -> int:
-    """
-    Rename incorrect font names on weight 1000 (usually after using gftools builder).
-    This function handles the logging process.
-    Args:
-        font_name: name of the font
-        font_dir: Path to all font files
-        font_dir_types: dictionary mapping all sub directories inside font_dir with the files extentions (no '.')
-        include_italics: fix name on italics
-    Returns:
-        int: Return the amount of error occured.
-    """
-    global logger
-    logger.info('Fixing font files names on weight 1000...')
-    error_count: int = 0
-
-    for file_dir in font_dir_types:
-        if file_dir == 'variable':
-            continue
-        file_ext: str = font_dir_types[file_dir]
-
-        # Non-italics
-        old_name: Path = font_dir / file_dir / f'{font_name}-ExtraBlack.{file_ext}'
-        new_name: Path = font_dir / file_dir / f'{font_name}ExtraBlack-Regular.{file_ext}'
-        logger.verbose(f'Renaming "{old_name}" -> "{new_name}"')  # pyright: ignore[reportUnknownMemberType]
-        try:
-            new_name.rename(new_name)
-        except FileNotFoundError:
-            if new_name.exists():
-                logger.info(f'"{new_name}" already exists.')
-            else:
-                logger.warning(f'File not found: "{old_name}"')
-                error_count += 1
-        except Exception as err:
-            logger.warning(f'Unexpected error:{err}')
-            error_count += 1
-
-        # Italics
-        if include_italics:
-            old_name = font_dir / file_dir / f'{font_name}-ExtraBlackItalic.{file_ext}'
-            new_name = font_dir / file_dir / f'{font_name}ExtraBlack-Italic.{file_ext}'
-            logger.verbose(f'Renaming "{old_name}" -> "{new_name}"')  # pyright: ignore[reportUnknownMemberType]
-            try:
-                old_name.rename(new_name)
-            except FileNotFoundError:
-                if new_name.exists():
-                    logger.info(f'"{new_name}" already exists.')
-                else:
-                    logger.warning(f'File not found: "{old_name}"')
-                    error_count += 1
-            except Exception as err:
-                logger.error(f'Unexpected error:{err}')
-                error_count += 1
-
-    if error_count == 0:
-        logger.success('Weight 1000 fonts successfully renamed.')  # pyright: ignore[reportUnknownMemberType]
-    else:
-        logger.warning(f'{error_count} error(s) occured when renaming weight 1000 files.')
-    return error_count
 
 def build_sc_font(src_path: Path, dst_path: Path) -> int:
     '''
@@ -275,14 +247,14 @@ def build_sc_font(src_path: Path, dst_path: Path) -> int:
     pyftfeatfreeze_command: str = f'pyftfeatfreeze -f "smcp" -S -U "SC" {src_path} {dst_path}'
     return run_shell_command(pyftfeatfreeze_command, True, 'critical', PYFTFEATFREEZE_LOGS, False)
 
-def build_all_sc_fonts(font_name: str, font_dir: Path, font_dir_types: dict[str, str], processes_count: int = 1) -> int:
+def build_all_sc_fonts(font_dir: Path, font_subdir_types: dict[str, str], processes_count: int = 1) -> int:
     '''
     Generates small caps version of the font binaries, which should have been geenrate before calling this function.
     This function handles the logging process.
     Args:
         font_name: name of the font
         font_dir: Path to all font files
-        font_dir_types: dictionary mapping all sub directories inside font_dir with the files extentions (no '.')
+        font_subdir_types: dictionary mapping all sub directories inside font_dir with the files extentions (no '.')
     Returns:
         int: Return the amount of errors occured.
     '''
@@ -291,15 +263,21 @@ def build_all_sc_fonts(font_name: str, font_dir: Path, font_dir_types: dict[str,
 
     # Create a dict with all input path to output path
     font_file_list: dict[Path, Path] = {}
-    for font_subdir in font_dir_types:
-        ext: str = font_dir_types[font_subdir]
+    for font_subdir in font_subdir_types:
+        ext: str = font_subdir_types[font_subdir]
         font_list: list[Path] = [font for font in (font_dir / font_subdir).glob('*.' + ext)]
         for src_font in font_list:
             src_name: str = src_font.name
-            dst_name: str = f'{font_name}SC.{ext}'  # non-variable
+            dst_name: str
+            font_name: str
             if '[' in src_name:
+                font_name = src_name.split('[')[0]
                 axis: str = src_name.split('[')[1].split(']')[0]
                 dst_name = f'{font_name}SC[{axis}].{ext}'  # variable
+            else:
+                font_name = src_name.split('-')[0]
+                src_weight: str = src_name.split('-')[1].split('.')[0]
+                dst_name = f'{font_name}SC-{src_weight}.{ext}'  # non-variable
             src_path: Path = font_dir / font_subdir / src_name
             dst_path: Path = font_dir / font_subdir / dst_name
             font_file_list[src_path] = dst_path
@@ -309,18 +287,18 @@ def build_all_sc_fonts(font_name: str, font_dir: Path, font_dir_types: dict[str,
     if processes_count > 1:  # parallel
         logger.verbose(f'Using multiprocessing ({processes_count} processes)')  # pyright: ignore[reportUnknownMemberType]
         tasks = [
-            (src_font_file, font_file_list[src_font_file]) 
+            (src_font_file, font_file_list[src_font_file])
             for src_font_file in font_file_list
         ]
         with Pool(processes=processes_count) as pool:
             results = pool.starmap(build_sc_font, tasks)
         error_count += sum(1 for r in results if r != 0)
     else:  # sequential
-        logger.verbose(f'Using a single process.')  # pyright: ignore[reportUnknownMemberType]
+        logger.verbose('Using a single process.')  # pyright: ignore[reportUnknownMemberType]
         for src_font_file in font_file_list:
             if build_sc_font(src_font_file, font_file_list[src_font_file]) != 0:
                 error_count += 1
-    
+
     if error_count == 0:
         logger.success('The small caps (SC) has been built with success')  # pyright: ignore[reportUnknownMemberType]
     else:
@@ -329,37 +307,26 @@ def build_all_sc_fonts(font_name: str, font_dir: Path, font_dir_types: dict[str,
 
 # Post-processing
 
-def add_hinting(src_path: Path, dst_path: Path, keep_backup_files: bool = False):
+def add_hinting(src_path: Path, dst_path: Path):
     """
     Add hinting to a font file using gftools fix-nonhinting.
     Args:
         src_path: input font file
         dst_file: output font file
-        keep_backup_files: (optional) keep the backup files generated by gftools. Default value: `False`
     Return:
         int: exit code of gftools command
     """
     gftools_command: str = f'gftools fix-nonhinting {src_path} {dst_path} 2>&1 | tee -a {GFTOOLS_LOGS}'
     exit_code: int = run_shell_command(gftools_command, True, 'error', GFTOOLS_LOGS, False)
-    if not keep_backup_files:
-        ext: str = dst_path.name.split('.')[1]
-        backup_files: list[Path] = [f for f in (dst_path.parents[0]).glob(f'*backup*.{ext}')] + [f for f in (dst_path.parents[0]).glob(f'*.*backup*')]
-        if len(backup_files) >= 1:
-            target_file_name: Path = backup_files[0]
-            logger.info(f'Removing backup file "{target_file_name}" generated by gftools...')
-            try:
-                os.remove(target_file_name)
-            except Exception as err:
-                logger.warning(f'Failed to remove "{target_file_name}": {err}')
     return exit_code
 
-def add_hinting_all(font_dir: Path, font_dir_types: dict[str, str], keep_backup_files: bool = False, processes_count: int = 1) -> int:
+def add_hinting_all(font_dir: Path, font_subdir_types: dict[str, str], keep_backup_files: bool = False, processes_count: int = 1) -> int:
     """
     Add hinting on all font binaries if missing using gftools.
     This function handles the logging process.
     Args:
         font_dir: Path to all font files
-        font_dir_types: dictionary mapping all sub directories inside font_dir with the files extentions (no '.')
+        font_subdir_types: dictionary mapping all sub directories inside font_dir with the files extentions (no '.')
         keep_backup_files: (optional) keep the backup files generated by gftools. Default value: `False`
     Returns:
         int: Return the amount of errors occured.
@@ -368,8 +335,8 @@ def add_hinting_all(font_dir: Path, font_dir_types: dict[str, str], keep_backup_
 
     # Get font list
     font_file_list: list[Path] = []
-    for font_subdir in font_dir_types:
-        ext: str = font_dir_types[font_subdir]
+    for font_subdir in font_subdir_types:
+        ext: str = font_subdir_types[font_subdir]
         font_file_list += [font for font in (font_dir / font_subdir).glob('*.' + ext)]
 
     # Run commands
@@ -377,22 +344,34 @@ def add_hinting_all(font_dir: Path, font_dir_types: dict[str, str], keep_backup_
     if processes_count > 1:  # parallel
         logger.verbose(f'Using multiprocessing ({processes_count} processes)')  # pyright: ignore[reportUnknownMemberType]
         tasks = [
-            (font, font, keep_backup_files)
+            (font, font)
             for font in font_file_list
         ]
         with Pool(processes=processes_count) as pool:
             results = pool.starmap(add_hinting, tasks)
         error_count += sum(1 for r in results if r != 0)
     else:
-        logger.verbose(f'Using a single process.')  # pyright: ignore[reportUnknownMemberType]
+        logger.verbose('Using a single process.')  # pyright: ignore[reportUnknownMemberType]
         for font in font_file_list:
-            if add_hinting(font, font, keep_backup_files) != 0:
+            if add_hinting(font, font) != 0:
                 error_count += 1
 
     if error_count == 0:
         logger.success('Hinting has been added on all fonts.')  # pyright: ignore[reportUnknownMemberType]
     else:
         logger.warning(f'{error_count} error(s) occured when adding hinting on all fonts.')
+
+    if not keep_backup_files:
+        logger.info('Removing generated backup files...')
+        for subdir in font_subdir_types:        
+            backup_files: list[Path] = [f for f in (font_dir / subdir).glob(f'*backup*.*')] + [f for f in (font_dir / subdir).glob(f'*.*backup*')]
+            for target in backup_files:
+                try:
+                    logger.info(f'Removing backup file "{target}" generated by gftools...')
+                    os.remove(target)
+                except Exception as err:
+                    logger.warning(f'Failed to remove "{target}": {err}')
+
     return error_count
 
 start_time: float = time.time()  # seconds
@@ -445,17 +424,27 @@ logger.success('Pre-processing done with success.')  # pyright: ignore[reportUnk
 # ===== 3. Building the fonts =====
 logger.info(f'Building font binaries at "{FONTS_DIR_PATH}"...')
 # Build the fonts
+# --- Main
 if build_all_fonts(SOURCES_INST_DIR_PATH) != 0:  # gftools
     exit(1)
-
-fix_incorrect_fonts_name_on_weight_1000(font_name=FONT_NAME, font_dir=FONTS_DIR_PATH, font_dir_types=FONTS_DIR_TYPES, include_italics=True)
-if build_all_sc_fonts(font_name=FONT_NAME, font_dir=FONTS_DIR_PATH, font_dir_types=FONTS_DIR_TYPES):
+rename_loop(
+    {
+        FONTS_DIR_PATH / 'otf' / f'{FONT_NAME}-ExtraBlack.otf'           : FONTS_DIR_PATH / 'otf' / f'{FONT_NAME}ExtraBlack-Regular.otf',
+        FONTS_DIR_PATH / 'otf' / f'{FONT_NAME}-ExtraBlackItalic.otf'     : FONTS_DIR_PATH / 'otf' / f'{FONT_NAME}ExtraBlack-Italic.otf',
+        FONTS_DIR_PATH / 'ttf' / f'{FONT_NAME}-ExtraBlack.ttf'           : FONTS_DIR_PATH / 'ttf' / f'{FONT_NAME}ExtraBlack-Regular.ttf',
+        FONTS_DIR_PATH / 'ttf' / f'{FONT_NAME}-ExtraBlackItalic.ttf'     : FONTS_DIR_PATH / 'ttf' / f'{FONT_NAME}ExtraBlack-Italic.ttf',
+        FONTS_DIR_PATH / 'webfonts' / f'{FONT_NAME}-ExtraBlack.woff2'      : FONTS_DIR_PATH / 'webfonts' / f'{FONT_NAME}ExtraBlack-Regular.woff2',
+        FONTS_DIR_PATH / 'webfonts' / f'{FONT_NAME}-ExtraBlackItalic.woff2': FONTS_DIR_PATH / 'webfonts' / f'{FONT_NAME}ExtraBlack-Italic.woff2'
+    }
+)
+# --- Small Caps
+if build_all_sc_fonts(font_dir=FONTS_DIR_PATH, font_subdir_types=FONTS_SUBDIRS_TYPES, processes_count=PROCESSES_COUNT):
     exit(1)
 logger.success('Building process done with success.')  # pyright: ignore[reportUnknownMemberType]
 
 # ===== 4. Post-processing =====
 logger.info('Post-processing all fonts...')
-add_hinting_all(FONTS_DIR_PATH, FONTS_DIR_TYPES, False, PROCESSES_COUNT)
+add_hinting_all(FONTS_DIR_PATH, FONTS_SUBDIRS_TYPES, False, PROCESSES_COUNT)
 logger.success('Post-processing done with success.')  # pyright: ignore[reportUnknownMemberType]
 
 # ===== 5. Clean-up =====
