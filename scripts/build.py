@@ -1,3 +1,5 @@
+import subprocess
+
 from dotenv import load_dotenv
 from logger import configure_logging
 from math import trunc
@@ -68,6 +70,33 @@ logger: VerboseLogger = configure_logging()
 
 # ===== Utils functions =====
 
+def empty_dir(d: Path) -> int:
+    """
+    Creates an empty directory with the given path. If it already exists, its content is cleared.
+    This function handles the logging process.
+    Args:
+        d: path to the directory to create or empty
+    Returns:
+        int: `0` if success, non-zero otherwise.
+    """
+    if d.exists(): 
+        try:
+            logger.verbose(f'Clearing directory "{d}"...')    # pyright: ignore[reportUnknownMemberType]
+            shutil.rmtree(d)
+        except Exception as err:
+            logger.error(f'Failed to remove ""{d}"": {err}')
+            return 1
+    else:
+        logger.info(f'"{d}" did not exist.')
+
+    logger.verbose(f'Creating directory "{d}"...')    # pyright: ignore[reportUnknownMemberType]
+    try:
+        os.mkdir(d)
+    except Exception as err:
+        logger.error(f'Failed to create ""{d}"": {err}')
+        return 1
+    return 0
+
 def rename_loop(files: dict[Path, Path]) -> int:
     """
     Rename multiple files.
@@ -118,9 +147,9 @@ def run_shell_command(command: str, show_output_message: bool = True, output_mes
     if log_file is not None:
         with open(log_file, 'w' if clear_log_file else 'a') as f:  # print executed command in logs
             f.write(f'{command}\n')
-        exit_code = os.system(f'{command} 2>&1 | tee {'-a' if not clear_log_file else ''} {log_file}')
+        exit_code = subprocess.run(f'{command} 2>&1 | tee {'-a' if not clear_log_file else ''} {log_file}', shell=True).returncode
     else:
-        exit_code = os.system(command)
+        exit_code = subprocess.run(command, shell=True).returncode
     if show_output_message:
         if exit_code != 0:
             output_msg: str = f'Something went wrong with "{command}": exit code {exit_code}'
@@ -151,7 +180,7 @@ def create_fonts_backup(src_dir: Path, dst_dir: Path) -> int:
     Returns:
         `0` if success, non-zero otherwise
     '''
-    logger.info(f'Creating font binaries backup directory "{src_dir}" at "{dst_dir}"...')  # pyright: ignore[reportUnknownMemberType]
+    logger.verbose(f'Creating font binaries backup directory "{src_dir}" at "{dst_dir}"...')  # pyright: ignore[reportUnknownMemberType]
     try:
         if dst_dir.exists():
             logger.warning(f'"{dst_dir}" already exists. It will be replaced.')
@@ -381,6 +410,8 @@ logger.info('Setting up the directories...')  # pyright: ignore[reportUnknownMem
 create_fonts_backup(FONTS_DIR_PATH, FONTS_DIR_BACKUP_PATH)
 if create_sources_inst(SOURCES_DIR_PATH, SOURCES_INST_DIR_PATH) != 0:
     exit(1)
+if empty_dir(FONTS_DIR_PATH) != 0:
+    exit(0)
 logger.success('Ready to generate the fonts.')  # pyright: ignore[reportUnknownMemberType]
 
 # ===== 2. Pre-processing =====
