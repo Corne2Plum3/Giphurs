@@ -32,7 +32,7 @@ archive:
 
 # build the fonts (otf, ttf, woof2, static + variables)
 build: sources/
-	./scripts/build.sh
+	python3 ./scripts/build.py
 
 # create HTML specimens of the (variable) fonts
 proof: fonts/
@@ -76,6 +76,7 @@ ufo_use_typo_metrics: sources/
 
 # Cleaning process
 clean:
+	rm -rf logs/
 	rm -rf output/
 	rm -rf scripts/__pycache__
 	rm -rf $(UFO_DIR)/instance_ufos
