@@ -6,8 +6,6 @@ FONT_NAME := Giphurs
 # Paths (without '/' for directories!)
 UFO_DIR := ./sources
 
-UFO_ACCENTED_GLYPHS_SCRIPT := "scripts/ufo_accented_glyphs.py"
-UFO_COMPOSITE_GLYPHS_SCRIPT := "scripts/ufo_composite_glyphs.py"
 UFO_DIGITS_GLYPHS_SCRIPT := "scripts/ufo_digits_glyphs.py"
 UFO_USE_TYPO_METRICS_SCRIPT := "scripts/ufo_use_typo_metrics.py"
 
@@ -21,8 +19,7 @@ help:
 	@echo "  * make proof        : Creates HTML specimens of the font (in output/ directory) and opens the HTML report in your web browser."
 	@echo "  * make tests        : Runs automated tests (in output/ directory) and opens the HTML report in your web browser."
 	@echo "UFO sources scripts"
-	@echo "  * make ufo_accented_glyphs  : Build accented glyphs (the UFO files must be opened and exported throught Fontforge after)."
-	@echo "  * make ufo_composite_glyphs : Build composite glyphs (the UFO files must be opened and exported throught Fontforge after, and accented glyphs has to be already built)."
+	@echo "  * make ufo_composed_glyphs  : Build accented and composite glyphs in all UFOs. (the UFO files must be opened and exported throught Fontforge after, and accented glyphs has to be already built)."
 	@echo "  * make ufo_digits_glyphs    : Build digits based glyphs (the UFO files must be opened and exported throught Fontforge after)."
 	@echo "  * make ufo_use_typo_metrics : Enable bit 7 ("use typo metrics") of openTypeOS2Selection in fontinfo.plist"
 
@@ -42,20 +39,12 @@ proof: fonts/
 tests: fonts/
 	./scripts/tests.sh
 
-# build accented glyphs (should be run before AND after ufo_composite_glyphs)
-ufo_accented_glyphs: sources/
+# build composed glyphs (accented + composite)
+ufo_composed_glyphs: scripts/ sources/
 	NON_ITALIC_UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null | grep -v "Italic"); \
-	for ufo in $$NON_ITALIC_UFO_FILES; do python3 $(UFO_ACCENTED_GLYPHS_SCRIPT) $${ufo} 1; done
+    for ufo in $$NON_ITALIC_UFO_FILES; do python3 scripts/ufo_composed_glyphs.py scripts/composed_glyphs.csv $${ufo} 1; done
 	ITALIC_UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null | grep "Italic"); \
-	for ufo in $$ITALIC_UFO_FILES; do python3 $(UFO_ACCENTED_GLYPHS_SCRIPT) $${ufo} 2; done
-	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
-
-# build composite glyphs
-ufo_composite_glyphs: sources/
-	NON_ITALIC_UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null | grep -v "Italic"); \
-	for ufo in $$NON_ITALIC_UFO_FILES; do python3 $(UFO_COMPOSITE_GLYPHS_SCRIPT) $${ufo} 1; done
-	ITALIC_UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null | grep "Italic"); \
-	for ufo in $$ITALIC_UFO_FILES; do python3 $(UFO_COMPOSITE_GLYPHS_SCRIPT) $${ufo} 2; done
+	for ufo in $$ITALIC_UFO_FILES; do python3 scripts/ufo_composed_glyphs.py scripts/composed_glyphs.csv $${ufo} 2; done
 	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
 
 # build number based glyphs
