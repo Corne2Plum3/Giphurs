@@ -4,6 +4,7 @@ from concurrent.futures import ProcessPoolExecutor
 from logger import configure_logging
 import os
 from pathlib import Path
+from tqdm import tqdm
 from ufo_utils import get_glif_from_name, get_glyph_anchor_points, get_glyph_metrics, get_kerning, move_glyph
 import xml.etree.ElementTree as ET
 
@@ -651,22 +652,23 @@ def build_composed_glyph_from_csv(csv_file: Path, ufo_dir: Path, styles: int, pr
     max_priority: int = cg_list[0].priority
     logger.info(f'Found {total_glyphs} glyphs inside "{csv_file}".')
     error_count: int = 0
-    for priority in reversed(range(max_priority + 1)):
-        cg_with_priority: list[Composed_Glyph] = [cg for cg in cg_list if cg.priority == priority]
-        logger.verbose(f'Building {len(cg_with_priority)} glyphs with priority {priority}')  # pyright: ignore[reportUnknownMemberType]
-        if processes_count > 1:
-            logger.verbose(f'Using multiprocessing ({processes_count} processes)')  # pyright: ignore[reportUnknownMemberType]
-            
-
-            with ProcessPoolExecutor(max_workers=processes_count) as executor:
-                futures = [executor.submit(_build_composed_glyph_from_csv_worker, cg, ufo_dir) for cg in cg_list]
-                for future in futures:
-                    error_count += future.result()
-        else:
-            logger.verbose('Using a single process.')  # pyright: ignore[reportUnknownMemberType]
-            for cg in cg_with_priority:
-                if cg.generate_glif(ufo_dir) != 0:
-                    error_count += 1
+    with tqdm(total=total_glyphs) as progress_bar: 
+        for priority in reversed(range(max_priority + 1)):
+            cg_with_priority: list[Composed_Glyph] = [cg for cg in cg_list if cg.priority == priority]
+            logger.verbose(f'Building {len(cg_with_priority)} glyphs with priority {priority}')  # pyright: ignore[reportUnknownMemberType]
+            if processes_count > 1:
+                logger.verbose(f'Using multiprocessing ({processes_count} processes)')  # pyright: ignore[reportUnknownMemberType]
+                with ProcessPoolExecutor(max_workers=processes_count) as executor:
+                    futures = [executor.submit(_build_composed_glyph_from_csv_worker, cg, ufo_dir) for cg in cg_with_priority]
+                    for future in futures:
+                        error_count += future.result()
+                        progress_bar.update(1)
+            else:
+                logger.verbose('Using a single process.')  # pyright: ignore[reportUnknownMemberType]
+                for cg in cg_with_priority:
+                    if cg.generate_glif(ufo_dir) != 0:
+                        error_count += 1
+                    progress_bar.update(1)
 
     if error_count >= total_glyphs:
         logger.error(f'Failed to generate every of the {total_glyphs} glyphs.')
