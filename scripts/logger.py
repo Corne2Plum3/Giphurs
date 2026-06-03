@@ -17,7 +17,11 @@ FONT_LOGS: Path = Path(os.environ.get('FONT_LOGS', 'logs/font.log'))
 def configure_logging() -> VerboseLogger:
     """Initialize Colored Logging with a consistent config"""
     if not FONT_LOGS.exists():
-        os.mkdir(FONT_LOGS.parents[0])
+        try:
+            os.mkdir(FONT_LOGS.parents[0])
+        except FileExistsError:
+            if Path(FONT_LOGS.parents[0]).exists():
+                pass
 
     logging.basicConfig(
         filename=FONT_LOGS,  # name of the log file
