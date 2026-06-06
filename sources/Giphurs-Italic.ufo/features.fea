@@ -4557,8 +4557,8 @@ lookup ccmp_latn {
     sub \e \uni0302  by \ecircumflex;
     sub \e \uni0308  by \edieresis;
     sub \i \gravecomb  by \igrave;
-    sub \uni0456 \acutecomb  by \iacute;
     sub \i \acutecomb  by \iacute;
+    sub \uni0456 \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0308  by \idieresis;
     sub \n \tildecomb  by \ntilde;
@@ -4614,8 +4614,8 @@ lookup ccmp_latn {
     sub \I \uni0306  by \Ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \i \uni0328  by \iogonek;
     sub \iogonek \gravecomb  by \iogonek;
+    sub \i \uni0328  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4702,13 +4702,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \A \uni030A \acutecomb  by \uni01DC;
-    sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni0308 \uni0304  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \Oslash \acutecomb  by \uni01E0;
+    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5634,8 +5634,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0456 \uni0307  by \uni0457;
+    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -5898,29 +5898,6 @@ lookup calt_Contextual_Alternates {
 	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
 } calt_Contextual_Alternates;
 
-feature cv27 {
-
- script DFLT;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script copt;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script cyrl;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script grek;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script latn;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-} cv27;
-
 feature locl {
 
  script cyrl;
@@ -6007,6 +5984,29 @@ feature locl {
      language WLF  exclude_dflt;
       lookup locl_cv27_Localized_Eng;
 } locl;
+
+feature cv27 {
+
+ script DFLT;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script copt;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script cyrl;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script grek;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script latn;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+} cv27;
 
 feature ss09 {
   featureNames {
@@ -7740,6 +7740,46 @@ lookup kern_Horizontal_kerning {
     @kc87_first_67 = [\uni044A \uni044C \uni0459 \uni045A \uni048D ];
     @kc87_first_68 = [\uni047F.sc \uni051D.sc \uni1E87.sc \uni1E89.sc \uni1E98.sc \uni2C73.sc \w.sc 
 	\wacute.sc \wdieresis.sc \wgrave.sc ];
+    @kc87_first_69 = [\eight.cv08.numr \eight.cv08.numr.pnum \eight.cv08.numr.tnum 
+	\eight.cv18.numr \eight.cv18.numr.pnum \eight.cv18.numr.tnum 
+	\eight.numr \eight.numr.pnum \eight.numr.tnum \five.cv05.numr 
+	\five.cv05.numr.pnum \five.cv05.numr.tnum \five.cv15.numr 
+	\five.cv15.numr.pnum \five.cv15.numr.tnum \five.numr 
+	\five.numr.pnum \five.numr.tnum \four.cv04.numr 
+	\four.cv04.numr.pnum \four.cv04.numr.tnum \four.cv14.numr 
+	\four.cv14.numr.pnum \four.cv14.numr.tnum \four.numr 
+	\four.numr.pnum \four.numr.tnum \nine.cv09.numr 
+	\nine.cv09.numr.pnum \nine.cv09.numr.tnum \nine.cv19.numr 
+	\nine.cv19.numr.pnum \nine.cv19.numr.tnum \nine.numr 
+	\nine.numr.pnum \nine.numr.tnum \one.cv01.numr \one.cv01.numr.pnum 
+	\one.cv01.numr.tnum \one.cv01.ss06.numr \one.cv01.ss06.numr.pnum 
+	\one.cv01.ss06.numr.tnum \one.cv11.numr \one.cv11.numr.pnum 
+	\one.cv11.numr.tnum \one.cv11.ss06.numr \one.cv11.ss06.numr.pnum 
+	\one.cv11.ss06.numr.tnum \one.numr \one.numr.pnum \one.numr.tnum 
+	\one.ss06.numr \one.ss06.numr.pnum \one.ss06.numr.tnum 
+	\seven.cv07.numr \seven.cv07.numr.pnum \seven.cv07.numr.tnum 
+	\seven.cv07.ss07.numr \seven.cv07.ss07.numr.pnum 
+	\seven.cv07.ss07.numr.tnum \seven.cv17.numr \seven.cv17.numr.pnum 
+	\seven.cv17.numr.tnum \seven.cv17.ss07.numr 
+	\seven.cv17.ss07.numr.pnum \seven.cv17.ss07.numr.tnum \seven.numr 
+	\seven.numr.pnum \seven.numr.tnum \seven.ss07.numr 
+	\seven.ss07.numr.pnum \seven.ss07.numr.tnum \six.cv06.numr 
+	\six.cv06.numr.pnum \six.cv06.numr.tnum \six.cv16.numr 
+	\six.cv16.numr.pnum \six.cv16.numr.tnum \six.numr \six.numr.pnum 
+	\six.numr.tnum \three.cv03.numr \three.cv03.numr.pnum 
+	\three.cv03.numr.tnum \three.cv13.numr \three.cv13.numr.pnum 
+	\three.cv13.numr.tnum \three.numr \three.numr.pnum \three.numr.tnum 
+	\two.cv02.numr \two.cv02.numr.pnum \two.cv02.numr.tnum 
+	\two.cv12.numr \two.cv12.numr.pnum \two.cv12.numr.tnum \two.numr 
+	\two.numr.pnum \two.numr.tnum \zero.cv10.numr \zero.cv10.numr.pnum 
+	\zero.cv10.numr.tnum \zero.cv10.zero.numr 
+	\zero.cv10.zero.numr.pnum \zero.cv10.zero.numr.tnum 
+	\zero.cv20.numr \zero.cv20.numr.pnum \zero.cv20.numr.tnum 
+	\zero.cv20.zero.numr \zero.cv20.zero.numr.pnum 
+	\zero.cv20.zero.numr.tnum \zero.numr \zero.numr.pnum 
+	\zero.numr.tnum \zero.zero.numr \zero.zero.numr.pnum 
+	\zero.zero.numr.tnum ];
+    @kc87_first_70 = [\fraction ];
     @kc87_second_1 = [\A \Aacute \Abreve \Acircumflex \Adieresis \Agrave \Alpha \Amacron \Aogonek 
 	\Aring \Aringacute \Atilde \Delta \Lambda \slash \uni01CD \uni01DE 
 	\uni01E0 \uni0200 \uni0202 \uni0226 \uni0245 \uni0394 \uni0410 
@@ -8073,6 +8113,46 @@ lookup kern_Horizontal_kerning {
 	\wacute.sc \wdieresis.sc \wgrave.sc ];
     @kc87_second_61 = [\uni0500 \uni0502 ];
     @kc87_second_62 = [\uni0501.sc \uni0503.sc ];
+    @kc87_second_63 = [\fraction ];
+    @kc87_second_64 = [\eight.cv08.dnom \eight.cv08.dnom.pnum \eight.cv08.dnom.tnum 
+	\eight.cv18.dnom \eight.cv18.dnom.pnum \eight.cv18.dnom.tnum 
+	\eight.dnom \eight.dnom.pnum \eight.dnom.tnum \five.cv05.dnom 
+	\five.cv05.dnom.pnum \five.cv05.dnom.tnum \five.cv15.dnom 
+	\five.cv15.dnom.pnum \five.cv15.dnom.tnum \five.dnom 
+	\five.dnom.pnum \five.dnom.tnum \four.cv04.dnom 
+	\four.cv04.dnom.pnum \four.cv04.dnom.tnum \four.cv14.dnom 
+	\four.cv14.dnom.pnum \four.cv14.dnom.tnum \four.dnom 
+	\four.dnom.pnum \four.dnom.tnum \nine.cv09.dnom 
+	\nine.cv09.dnom.pnum \nine.cv09.dnom.tnum \nine.cv19.dnom 
+	\nine.cv19.dnom.pnum \nine.cv19.dnom.tnum \nine.dnom 
+	\nine.dnom.pnum \nine.dnom.tnum \one.cv01.dnom \one.cv01.dnom.pnum 
+	\one.cv01.dnom.tnum \one.cv01.ss06.dnom \one.cv01.ss06.dnom.pnum 
+	\one.cv01.ss06.dnom.tnum \one.cv11.dnom \one.cv11.dnom.pnum 
+	\one.cv11.dnom.tnum \one.cv11.ss06.dnom \one.cv11.ss06.dnom.pnum 
+	\one.cv11.ss06.dnom.tnum \one.dnom \one.dnom.pnum \one.dnom.tnum 
+	\one.ss06.dnom \one.ss06.dnom.pnum \one.ss06.dnom.tnum 
+	\seven.cv07.dnom \seven.cv07.dnom.pnum \seven.cv07.dnom.tnum 
+	\seven.cv07.ss07.dnom \seven.cv07.ss07.dnom.pnum 
+	\seven.cv07.ss07.dnom.tnum \seven.cv17.dnom \seven.cv17.dnom.pnum 
+	\seven.cv17.dnom.tnum \seven.cv17.ss07.dnom 
+	\seven.cv17.ss07.dnom.pnum \seven.cv17.ss07.dnom.tnum \seven.dnom 
+	\seven.dnom.pnum \seven.dnom.tnum \seven.ss07.dnom 
+	\seven.ss07.dnom.pnum \seven.ss07.dnom.tnum \six.cv06.dnom 
+	\six.cv06.dnom.pnum \six.cv06.dnom.tnum \six.cv16.dnom 
+	\six.cv16.dnom.pnum \six.cv16.dnom.tnum \six.dnom \six.dnom.pnum 
+	\six.dnom.tnum \three.cv03.dnom \three.cv03.dnom.pnum 
+	\three.cv03.dnom.tnum \three.cv13.dnom \three.cv13.dnom.pnum 
+	\three.cv13.dnom.tnum \three.dnom \three.dnom.pnum \three.dnom.tnum 
+	\two.cv02.dnom \two.cv02.dnom.pnum \two.cv02.dnom.tnum 
+	\two.cv12.dnom \two.cv12.dnom.pnum \two.cv12.dnom.tnum \two.dnom 
+	\two.dnom.pnum \two.dnom.tnum \zero.cv10.dnom \zero.cv10.dnom.pnum 
+	\zero.cv10.dnom.tnum \zero.cv10.zero.dnom 
+	\zero.cv10.zero.dnom.pnum \zero.cv10.zero.dnom.tnum 
+	\zero.cv20.dnom \zero.cv20.dnom.pnum \zero.cv20.dnom.tnum 
+	\zero.cv20.zero.dnom \zero.cv20.zero.dnom.pnum 
+	\zero.cv20.zero.dnom.tnum \zero.dnom \zero.dnom.pnum 
+	\zero.dnom.tnum \zero.zero.dnom \zero.zero.dnom.pnum 
+	\zero.zero.dnom.tnum ];
     pos @kc87_first_1 @kc87_second_3 -70;
     pos @kc87_first_1 @kc87_second_8 -70;
     pos @kc87_first_1 @kc87_second_9 -140;
@@ -8289,6 +8369,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_10 @kc87_second_59 -70;
     pos @kc87_first_10 @kc87_second_61 -70;
     pos @kc87_first_10 @kc87_second_62 -105;
+    pos @kc87_first_10 @kc87_second_63 -140;
     pos @kc87_first_11 @kc87_second_1 -70;
     pos @kc87_first_11 @kc87_second_2 -140;
     pos @kc87_first_11 @kc87_second_5 -105;
@@ -8336,6 +8417,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_12 @kc87_second_55 -210;
     pos @kc87_first_12 @kc87_second_61 -70;
     pos @kc87_first_12 @kc87_second_62 -105;
+    pos @kc87_first_12 @kc87_second_63 -140;
     pos @kc87_first_13 @kc87_second_6 -70;
     pos @kc87_first_13 @kc87_second_12 -70;
     pos @kc87_first_13 @kc87_second_13 -105;
@@ -8435,6 +8517,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_16 @kc87_second_58 -105;
     pos @kc87_first_16 @kc87_second_61 -315;
     pos @kc87_first_16 @kc87_second_62 -350;
+    pos @kc87_first_16 @kc87_second_63 -245;
     pos @kc87_first_17 @kc87_second_1 -280;
     pos @kc87_first_17 @kc87_second_2 -280;
     pos @kc87_first_17 @kc87_second_3 -105;
@@ -8478,6 +8561,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_17 @kc87_second_58 -70;
     pos @kc87_first_17 @kc87_second_61 -175;
     pos @kc87_first_17 @kc87_second_62 -245;
+    pos @kc87_first_17 @kc87_second_63 -210;
     pos @kc87_first_18 @kc87_second_1 -210;
     pos @kc87_first_18 @kc87_second_2 -245;
     pos @kc87_first_18 @kc87_second_3 -35;
@@ -8506,6 +8590,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_18 @kc87_second_56 -70;
     pos @kc87_first_18 @kc87_second_61 -105;
     pos @kc87_first_18 @kc87_second_62 -140;
+    pos @kc87_first_18 @kc87_second_63 -140;
     pos @kc87_first_19 @kc87_second_12 -280;
     pos @kc87_first_19 @kc87_second_14 -175;
     pos @kc87_first_19 @kc87_second_15 -140;
@@ -8613,6 +8698,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_24 @kc87_second_55 -70;
     pos @kc87_first_24 @kc87_second_59 -70;
     pos @kc87_first_24 @kc87_second_60 -35;
+    pos @kc87_first_24 @kc87_second_63 -70;
     pos @kc87_first_25 @kc87_second_5 -70;
     pos @kc87_first_25 @kc87_second_9 -70;
     pos @kc87_first_25 @kc87_second_12 -240;
@@ -9170,6 +9256,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_50 @kc87_second_55 -210;
     pos @kc87_first_50 @kc87_second_61 -70;
     pos @kc87_first_50 @kc87_second_62 -105;
+    pos @kc87_first_50 @kc87_second_63 -105;
     pos @kc87_first_51 @kc87_second_12 -240;
     pos @kc87_first_51 @kc87_second_13 -140;
     pos @kc87_first_51 @kc87_second_14 -105;
@@ -9194,6 +9281,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_52 @kc87_second_55 -175;
     pos @kc87_first_52 @kc87_second_61 -105;
     pos @kc87_first_52 @kc87_second_62 -210;
+    pos @kc87_first_52 @kc87_second_63 -140;
     pos @kc87_first_53 @kc87_second_12 -240;
     pos @kc87_first_53 @kc87_second_13 -175;
     pos @kc87_first_53 @kc87_second_14 -70;
@@ -9252,6 +9340,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_56 @kc87_second_60 -35;
     pos @kc87_first_56 @kc87_second_61 -140;
     pos @kc87_first_56 @kc87_second_62 -210;
+    pos @kc87_first_56 @kc87_second_63 -70;
     pos @kc87_first_57 @kc87_second_1 -35;
     pos @kc87_first_57 @kc87_second_2 -70;
     pos @kc87_first_57 @kc87_second_5 -70;
@@ -9385,6 +9474,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_61 @kc87_second_56 -35;
     pos @kc87_first_61 @kc87_second_61 -175;
     pos @kc87_first_61 @kc87_second_62 -245;
+    pos @kc87_first_61 @kc87_second_63 -210;
     pos @kc87_first_62 @kc87_second_6 -35;
     pos @kc87_first_62 @kc87_second_12 -240;
     pos @kc87_first_62 @kc87_second_13 -140;
@@ -9583,6 +9673,36 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_68 @kc87_second_55 -140;
     pos @kc87_first_68 @kc87_second_61 -105;
     pos @kc87_first_68 @kc87_second_62 -105;
+    pos @kc87_first_69 @kc87_second_43 1;
+    pos @kc87_first_69 @kc87_second_63 -315;
+    pos @kc87_first_70 @kc87_second_1 -210;
+    pos @kc87_first_70 @kc87_second_2 -280;
+    pos @kc87_first_70 @kc87_second_6 -280;
+    pos @kc87_first_70 @kc87_second_8 -70;
+    pos @kc87_first_70 @kc87_second_17 -140;
+    pos @kc87_first_70 @kc87_second_19 -350;
+    pos @kc87_first_70 @kc87_second_20 -140;
+    pos @kc87_first_70 @kc87_second_22 -140;
+    pos @kc87_first_70 @kc87_second_23 -70;
+    pos @kc87_first_70 @kc87_second_24 -280;
+    pos @kc87_first_70 @kc87_second_28 -140;
+    pos @kc87_first_70 @kc87_second_32 -210;
+    pos @kc87_first_70 @kc87_second_33 -70;
+    pos @kc87_first_70 @kc87_second_34 -140;
+    pos @kc87_first_70 @kc87_second_35 -140;
+    pos @kc87_first_70 @kc87_second_36 -140;
+    pos @kc87_first_70 @kc87_second_39 -70;
+    pos @kc87_first_70 @kc87_second_43 1;
+    pos @kc87_first_70 @kc87_second_49 -140;
+    pos @kc87_first_70 @kc87_second_50 -70;
+    pos @kc87_first_70 @kc87_second_51 -140;
+    pos @kc87_first_70 @kc87_second_53 -245;
+    pos @kc87_first_70 @kc87_second_56 -70;
+    pos @kc87_first_70 @kc87_second_57 -70;
+    pos @kc87_first_70 @kc87_second_61 -245;
+    pos @kc87_first_70 @kc87_second_62 -280;
+    pos @kc87_first_70 @kc87_second_63 -385;
+    pos @kc87_first_70 @kc87_second_64 -315;
 } kern_Horizontal_kerning;
 
 lookup mark_Mark_positioning {
@@ -12243,6 +12363,7 @@ feature mkmk {
       lookup mkmk_mark_to_mark_bottom_center;
       lookup mkmk_mark_to_mark_greek_top_center;
 } mkmk;
+#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 
