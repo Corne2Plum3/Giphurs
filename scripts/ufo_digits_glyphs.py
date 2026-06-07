@@ -117,18 +117,6 @@ FRACTIONS_DIGITS: dict[str, tuple[int | None, int | None]] = {
     "uni2189": (0, 3)
 }
 
-FRAC_NAMES: dict[str, str] = {  # using the bottom as reference
-    "1/4": "onequarter",
-    "1/2": "onehalf",
-    "3/4": "threequarters",
-    "1/3": "onethird",
-    "2/3": "twothirds",
-    "1/8": "oneeighth",
-    "3/8": "threeeighths",
-    "5/8": "fiveeighths",
-    "7/8": "seveneighths"
-}
-
 # font constants
 SUPS_Y  : int = 810
 SUBS_Y  : int = -188
@@ -269,107 +257,6 @@ def build_circled_number(glyph_name: str, weight: int, is_italic: bool, ufo_dir:
     if circle_type == "black_circle":
         unlink_references(glyph_name, ufo_dir)
 
-    return
-
-def build_fraction(glyph_name: str, weight: int, is_italic: bool, ufo_dir: Path):
-
-    base_glyph_name = glyph_name.split(".")[0]
-
-    # Get the numr and dnom values and the digits to draw
-    numr_value = FRACTIONS_DIGITS[base_glyph_name][0]
-    dnom_value = FRACTIONS_DIGITS[base_glyph_name][1]
-
-    # Get the fraction bar and its metrics
-    base_frac = "fraction"
-    base_frac_metrics = get_glyph_metrics(base_frac, ufo_dir)
-
-    n0: int | None = numr_value % 10 if numr_value is not None else None  # unit digit for the numerator
-    d0: int | None = dnom_value % 10 if dnom_value is not None else None  # unit digit for denominator
-    d1: int | None = dnom_value // 10 if dnom_value is not None else None  # tens digit for denominator
-    n0_glyph: str | None = DIGITS_NAMES_ENGLISH[n0] if n0 is not None else None
-    d0_glyph: str | None = DIGITS_NAMES_ENGLISH[d0] if d0 is not None else None 
-    d1_glyph: str | None = DIGITS_NAMES_ENGLISH[d1] if (d1 is not None and d1 >= 1) else None 
-    cv_list: list[str] = find_cv_from_name(glyph_name)
-    for cv in cv_list:
-        if cv in DIGITS_CV_LIST[str(n0)] and n0_glyph is not None:
-            n0_glyph = n0_glyph + cv
-        if d0_glyph is not None and cv in DIGITS_CV_LIST[str(d0)]:
-            d0_glyph = d0_glyph + cv
-        if d1_glyph is not None and cv in DIGITS_CV_LIST[str(d1)]:
-            d1_glyph = d1_glyph + cv
-    ss_list = find_ss_from_name(glyph_name)   
-    for ss in ss_list:
-        if str(n0) in DIGITS_SS_LIST and ss in DIGITS_SS_LIST[str(n0)] and n0_glyph is not None:
-            n0_glyph = n0_glyph + ss
-        if d0_glyph is not None and str(d0) in DIGITS_SS_LIST and ss in DIGITS_SS_LIST[str(d0)]:
-            d0_glyph = d0_glyph + ss
-        if d1_glyph is not None and str(d1) in DIGITS_SS_LIST and ss in DIGITS_SS_LIST[str(d1)]:
-            d1_glyph = d1_glyph + ss
-    if n0_glyph is not None:
-        n0_glyph += ".superior"
-    if d0_glyph is not None:
-        d0_glyph += ".superior"
-    if d1_glyph is not None:
-        d1_glyph += ".superior"
-    n0_glyph_metrics: dict[str, int] = get_glyph_metrics(n0_glyph, ufo_dir) if n0_glyph is not None else {}
-    d0_glyph_metrics: dict[str, int] = get_glyph_metrics(d0_glyph, ufo_dir) if d0_glyph is not None else {}
-    d1_glyph_metrics: dict[str, int] = get_glyph_metrics(d1_glyph, ufo_dir) if d1_glyph is not None else {}
-
-    # Begin the XML file
-    xml_root = ET.Element("glyph", {"name": glyph_name, "format": "2"})
-
-    # Advance value calculation XML calculated after building the glyph
-    xml_advance: ET.Element[str] = ET.SubElement(xml_root, "advance", {"width": str(int(0))})
-    
-    # Unicode value calculation
-    if len(cv_list) == 0 and len(ss_list) == 0:
-        ET.SubElement(xml_root, "unicode", {"hex": hex(FRACTIONS_UNICODE[base_glyph_name]).upper()[2:]})
-
-    # Place the numerator (for now only 1 digit supported)
-    xml_outline: ET.Element[str] = ET.SubElement(xml_root, "outline")
-    xn0: float = 0
-    yn0: float = NUMR_Y - SUPS_Y
-    if is_italic:
-        xn0 -= abs(yn0) / tan(pi/2-ITALIC_SLANT)
-    if n0_glyph is not None:
-        ET.SubElement(xml_outline, "component", {"base": n0_glyph, "xOffset": str(int(xn0)), "yOffset": str(int(yn0))})
-
-    # Place the fraction bar
-    xf: float = n0_glyph_metrics["glyph_width"] - FRAC_BAR_OVERLAP
-    ET.SubElement(xml_outline, "component", {"base": base_frac, "xOffset": str(int(xf)), "yOffset": "0"})
-
-    # Place the denominator and advance calculation
-    if d0_glyph is not None:  # no denominator for "1/0"
-        yd: float = DNOM_Y - SUPS_Y
-        if d1_glyph is not None:
-            xd1: float = xf + base_frac_metrics["glyph_width"] - FRAC_BAR_OVERLAP
-            kern_d1_d0: int = PNUM_SUPS_KERN[weight]["1"][1] if d1 == 0 else PNUM_SUPS_KERN[weight]["other"][1]
-            kern_d1_d0 += PNUM_SUPS_KERN[weight]["1"][0] if d0 == 0 else PNUM_SUPS_KERN[weight]["other"][0]
-            xd0: float = xd1 + d1_glyph_metrics["left_kern"] + d1_glyph_metrics["raw_width"] + kern_d1_d0 - d0_glyph_metrics["left_kern"]
-            if ".ss06" in d1_glyph:  # if 1 has a bar below, add some kern
-                xd0 += -81
-            if is_italic:
-                xd1 -= abs(yd) / tan(pi/2-ITALIC_SLANT)
-                xd0 -= abs(yd) / tan(pi/2-ITALIC_SLANT)
-            ET.SubElement(xml_outline, "component", {"base": d1_glyph, "xOffset": str(int(xd1)), "yOffset": str(int(yd))})
-            ET.SubElement(xml_outline, "component", {"base": d0_glyph, "xOffset": str(int(xd0)), "yOffset": str(int(yd))})
-            
-            xml_advance.attrib["width"] = str(int(xd0 + d0_glyph_metrics["glyph_width"] + (abs(yd) / tan(pi/2-ITALIC_SLANT) if is_italic else 0)))
-        else:
-            xd0 = xf + base_frac_metrics["glyph_width"] - FRAC_BAR_OVERLAP
-            if is_italic:
-                xd0 -= abs(yd) / tan(pi/2-ITALIC_SLANT)
-            ET.SubElement(xml_outline, "component", {"base": d0_glyph, "xOffset": str(int(xd0)), "yOffset": str(int(yd))})
-            xml_advance.attrib["width"] = str(int(xd0 + d0_glyph_metrics["glyph_width"] + (abs(yd) / tan(pi/2-ITALIC_SLANT) if is_italic else 0)))
-    else:
-        xml_advance.attrib["width"] = str(int(xf + base_frac_metrics["glyph_width"]))
-
-    # Save
-    tree: ET.ElementTree[ET.Element[str]] = ET.ElementTree(xml_root)
-    glif: Path | None = get_glif_from_name(glyph_name, ufo_dir)
-    if glif is None:
-        return
-    tree.write(glif, encoding="UTF-8", xml_declaration=True)
     return
 
 def build_full_stop_number(glyph_name: str, weight: int, is_italic: bool, ufo_dir: Path):
@@ -659,35 +546,7 @@ def get_glyph_list() -> list[str]:
                         if n == 10:
                             glyph_list.append(f"uni{str(hex(DOUBLE_CIRCLE_UNICODE[n]).upper()[2:])}" + cv1_temp + cv2_temp + ss1 + ss2)
 
-    # Fraction 1/ (uni215F)
-    for cv in [""] + (DIGITS_CV_LIST["1"] if "1" in DIGITS_CV_LIST else []):
-        for ss in [""] + (DIGITS_SS_LIST["1"] if "1" in DIGITS_SS_LIST else []):
-            glyph_list.append(f"uni215F" + cv + ss)
-    
-    # Fraction 1/10 (uni2152)
-    for cv1 in [""] + (DIGITS_CV_LIST["1"] if "1" in DIGITS_CV_LIST else []):
-        for cv0 in [""] + (DIGITS_CV_LIST["0"] if "0" in DIGITS_CV_LIST else []):
-            cv1_temp, cv0_temp = cv1, cv0
-            if cv1 != "" and cv0 != "" and int(cv1[3:]) > int(cv0[3:]):  # swap if needed because all cv must be in ascending order
-                cv1_temp, cv0_temp = cv0, cv1
-            for ss1 in [""] + (DIGITS_SS_LIST["1"] if "1" in DIGITS_SS_LIST else []):
-                for ss0 in [""] + (DIGITS_SS_LIST["0"] if "0" in DIGITS_SS_LIST else []):
-                    glyph_list.append(f"uni2152" + cv1_temp + cv0_temp + ss1 + ss0)
-
-    # Other fractions
-    for fraction_name in FRACTIONS_DIGITS:
-        if not fraction_name in ["uni2152", "uni215F"]:  # ignore 1/ and 1/10 (done earlier)
-            n: int | None = FRACTIONS_DIGITS[fraction_name][0]
-            d: int | None = FRACTIONS_DIGITS[fraction_name][1]
-            for cv1 in [""] + (DIGITS_CV_LIST[str(n)] if str(n) in DIGITS_CV_LIST else []):
-                for cv2 in [""] + (DIGITS_CV_LIST[str(d)] if str(d) in DIGITS_CV_LIST else []):
-                    cv1_temp, cv2_temp = cv1, cv2
-                    if cv1 != "" and cv2 != "" and int(cv1[3:]) > int(cv2[3:]):  # swap if needed because all cv must be in ascending order
-                        cv1_temp, cv2_temp = cv2, cv1
-                    for ss1 in [""] + (DIGITS_SS_LIST[str(n)] if str(n) in DIGITS_SS_LIST else []):
-                        for ss2 in [""] + (DIGITS_SS_LIST[str(d)] if str(d) in DIGITS_SS_LIST else []):
-                            # ss1 and ss2 would be swapped for 7/1, 0/1 and 0/7 (not possible)
-                            glyph_list.append(fraction_name + cv1_temp + cv2_temp + ss1 + ss2)
+   
     return glyph_list
 
 def main():
@@ -748,8 +607,6 @@ def build_single_glyph(glyph_name: str, weight: int, is_italic: bool, ufo_dir: P
         build_small_digit(glyph_name, weight, is_italic, ufo_dir, "numr")
     elif ".dnom" in glyph_name:
         build_small_digit(glyph_name, weight, is_italic, ufo_dir, "dnom")
-    elif base_name in FRACTIONS_UNICODE:
-        build_fraction(glyph_name, weight, is_italic, ufo_dir)
     # from this point we're sure the glyph name starts by "uniXXXX"
     else:
         try:
