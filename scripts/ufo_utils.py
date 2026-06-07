@@ -6,7 +6,19 @@ Note: All glyphs must be located to a folder called "glyphs" to work correctly.
 from logger import configure_logging
 from pathlib import Path
 import xml.etree.ElementTree as ET
-
+from fontTools.feaLib.parser import Parser  # pyright: ignore[reportMissingTypeStubs]
+from fontTools.feaLib.ast import (    # pyright: ignore[reportMissingTypeStubs]
+    Block,
+    FeatureBlock,
+    FeatureFile,
+    GlyphClass,
+    GlyphClassDefinition,
+    GlyphClassName,
+    GlyphName,
+    LookupBlock,
+    LookupReferenceStatement,
+    PairPosStatement,
+)
 logger = configure_logging()
 
 def get_glif_from_name(glyph_name: str, ufo_dir: Path) -> Path | None:
@@ -232,7 +244,7 @@ def get_glyph_xml_points(glyph_name: str, ufo_dir: Path, x_offset: int = 0, y_of
             xml_contour_nodes += get_glyph_xml_points(element.attrib["base"], ufo_dir, component_x_offset, component_y_offset)
     return xml_contour_nodes
 
-def get_kerning(glyph_first: str, glyph_second: str, ufo_dir: Path) -> int:
+def get_kerning(glyph_first: str, glyph_second: str, ufo_dir: Path) -> float | int:
     """
     Returns the kerning between 2 glyphs by reading the `feature.fea` file.
     Requires a `kern` feature to be defined and containing a kerning lookup. Within the kerning
@@ -247,78 +259,79 @@ def get_kerning(glyph_first: str, glyph_second: str, ufo_dir: Path) -> int:
     Returns:
         int
     """
-    # Maybe code would look less awful if using fonttools lib?
-
-    features_filename = ufo_dir / 'features.fea'
-    if not features_filename.exists():
-        logger.warning(f'"{features_filename}" does not exists. Assuming kern between "{glyph_first}" and "{glyph_second}" is 0.')
+    fea_path: Path = ufo_dir / "features.fea"
+    if not fea_path.exists():
+        logger.warning(f'"{ufo_dir}": features.fea file not found.')
         return 0
 
-    # Find the table
-    table_name: str | None = None
-    table_found: bool = False 
-    with open(features_filename, "r") as features_file:
-        # find the name of the kern table
-        line: str = features_file.readline()
-        while line:
-            if "feature kern" in line:  # feature found
-                while line and not("}" in line) and table_name is None:
-                    line = features_file.readline()
-                    if "lookup" in line:
-                        table_name = line.strip().replace(";", "").split(" ")[1]
-                if table_name is None:
-                    logger.warning(f'No lookup table found in feature kern block in "{features_filename}"')
-                    return 0
-            line = features_file.readline()
-        if table_name is None:
-            logger.warning(f'No feature kern block found in "{features_filename}"')
-            return 0
+    # Parse the features.fea file into an Abstract Syntax Tree (AST)
+    parser: Parser = Parser(str(fea_path))
+    feature_file: FeatureFile = parser.parse()
 
-        # find the kern table
-        features_file.seek(0)  # go back to the beginning
-        line = features_file.readline()
-        while line and not(table_found):
-            if f"lookup {table_name}" in line:
-                table_found = True
+    # Pass 1: locate the kern table, all lookups and glyph class
+    glyph_classes: dict[str, GlyphClass] = {}  # @UPPERCASE = [A-Z];
+    lookups: dict[str, LookupBlock] = {}  # lookup LOOKUP_TABLE = {...}
+    feature_kern_block: FeatureBlock | None = None
+
+    for statement in feature_file.statements:
+        if isinstance(statement, GlyphClassDefinition):
+            glyph_classes[statement.name] = list(statement.glyphSet())
+            
+        if isinstance(statement, LookupBlock):
+            lookups[statement.name] = statement
+            for sub_statement in statement.statements:
+                if isinstance(statement, GlyphClassDefinition):
+                    glyph_classes[statement.name] = statement.glyphs
+            
+        if isinstance(statement, FeatureBlock) and statement.name == "kern":
+            feature_kern_block = statement
+            for sub_statement in statement.statements:
+                if isinstance(statement, GlyphClassDefinition):
+                    glyph_classes[statement.name] = statement.glyphs
+
+    if feature_kern_block is None:
+        logger.warning('"feature kern" block not found.')
+        return 0
+
+    # Pass 2: Read the kern table and get all pair pos statements
+    def _get_pair_pos_statements_from_block(block: Block) -> list[PairPosStatement]:
+        '''Returns the list of all PairPosStatement inside a Block'''
+        output: list[PairPosStatement] = []
+        for statement in block.statements:
+            if isinstance(statement, PairPosStatement):
+                output.append(statement)
+            if isinstance(statement, LookupReferenceStatement):
+                if statement.lookup == block.name:
+                    logger.error(f'Error with lookup "{block.name}": circular reference.')
+                    return []
+                output += _get_pair_pos_statements_from_block(statement.lookup)
+        return output
+
+    kern_statements: list[PairPosStatement] = []
+    for sub_statement in feature_kern_block.statements:
+        if isinstance(sub_statement, LookupReferenceStatement):
+            actual_block: LookupBlock = lookups.get(sub_statement.lookup.name)
+            if actual_block:
+                kern_statements += _get_pair_pos_statements_from_block(actual_block)
             else:
-                line = features_file.readline()
+                logger.warning(f"Lookup block '{sub_statement.lookup.name}' not found.")
+        if isinstance(sub_statement, PairPosStatement):
+            kern_statements.append(sub_statement)
 
-        if not(table_found):
-            logger.warning(f'Kern table "{table_name}" not found in "{features_filename}"')
-            return 0
+    # Pass 3: Find the kerning value from the list of kern statements
+    def _glyph_in_set(glyph: str, glyph_set: GlyphName | GlyphClass | GlyphClassName) -> bool:
+        if isinstance(glyph_set, GlyphName):
+            return glyph == glyph_set.glyph
+        if isinstance(glyph_set, GlyphClass):
+            return glyph in glyph_set.glyphs
+        # GlyphClassName
+        return glyph in glyph_set.glyphSet()
 
-        # find the classes of the 2 glyphs and the kern
-        line = features_file.readline()  # pointing "lookupflag 0;"
-        line = features_file.readline()  # pointing towards the first class definition
-        glyph_first_classes: list[str] = []
-        glyph_second_classes: list[str] = []
-        while line and not("}" in line):
-            if line.strip().split(" ")[0] == "pos":  # pos value
-                # example: "pos @kc82_first_1 @kc82_second_3 -70;"
-                class_first: str = line.strip().split(" ")[1]
-                class_second: str = line.strip().split(" ")[2]
-                kern_value: int = int(line.strip().split(" ")[3].replace(";", ""))
-                if (class_first in glyph_first_classes) and (class_second in glyph_second_classes):
-                    return kern_value
-                else:
-                    line = features_file.readline()  # next line
-            elif "=" in line:  # new class
-                # first line
-                current_class: str = line.strip().split(" ")[0]
-                glyph_list: str = line.strip().split("=")[1]
-                if (f"\\{glyph_first}" in glyph_list) or (f" {glyph_first}" in glyph_list) or (f"{glyph_first} " in glyph_list):
-                    glyph_first_classes.append(current_class)
-                if (f"\\{glyph_second}" in glyph_list) or (f" {glyph_second}" in glyph_list) or (f"{glyph_second} " in glyph_list):
-                    glyph_second_classes.append(current_class)
-                while not(";" in line):
-                    line = features_file.readline()
-                    if (f"\\{glyph_first}" in glyph_list) or (f" {glyph_first}" in glyph_list) or (f"{glyph_first} " in glyph_list):
-                        glyph_first_classes.append(current_class)
-                    if (f"\\{glyph_second}" in glyph_list) or (f" {glyph_second}" in glyph_list) or (f"{glyph_second} " in glyph_list):
-                        glyph_second_classes.append(current_class)
-                line = features_file.readline()  # next line
+    for pair_pos_statement in kern_statements:
+        if _glyph_in_set(glyph_first, pair_pos_statement.glyphs1) and _glyph_in_set(glyph_second, pair_pos_statement.glyphs2):
+            return pair_pos_statement.valuerecord1.xAdvance
 
-        return 0  # no kerning
+    return 0
 
 def move_glyph(glyph_name: str, ufo_dir: Path, x: int, y: int, move_points: bool = True, move_anchors: bool = True, move_width: bool = False) -> int:
     """

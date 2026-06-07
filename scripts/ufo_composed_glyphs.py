@@ -264,7 +264,7 @@ class Composite_Glyph(Composed_Glyph):
             self._copy_single_glyph(component_name, self.name, ufo_dir, self.copy_anchors, component_number==0, x_cursor, 0)
             x_cursor += get_glyph_metrics(component_name, ufo_dir)["glyph_width"]
             if (component_number + 1) < len(self.glyphs):  # apply kern with the next element
-                x_cursor += get_kerning(self.glyphs[component_number], self.glyphs[component_number+1], ufo_dir)
+                x_cursor += int(get_kerning(self.glyphs[component_number], self.glyphs[component_number+1], ufo_dir))
         
         # Update the advance value
         glif_filename: Path | None = get_glif_from_name(self.name, ufo_dir)
