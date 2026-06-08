@@ -181,9 +181,10 @@ class Accented_Glyph(Composed_Glyph):
         return 0
 
 class Composite_Glyph(Composed_Glyph):
-    def __init__(self, name: str, styles: int, copy_anchors: bool, glyphs: list[str]):
+    def __init__(self, name: str, styles: int, copy_anchors: bool, y_offset: int, glyphs: list[str]):
         super().__init__(name, styles, glyphs)
         self.copy_anchors = copy_anchors
+        self.y_offset = y_offset
 
     def _copy_single_glyph(self, glyph_src: str,
                                  glyph_dst: str,
@@ -261,7 +262,7 @@ class Composite_Glyph(Composed_Glyph):
         x_cursor: int = 0
         for component_number in range(0, len(self.glyphs), 1):
             component_name: str = self.glyphs[component_number]
-            self._copy_single_glyph(component_name, self.name, ufo_dir, self.copy_anchors, component_number==0, x_cursor, 0)
+            self._copy_single_glyph(component_name, self.name, ufo_dir, self.copy_anchors, component_number==0, x_cursor, self.y_offset)
             x_cursor += get_glyph_metrics(component_name, ufo_dir)["glyph_width"]
             if (component_number + 1) < len(self.glyphs):  # apply kern with the next element
                 x_cursor += int(get_kerning(self.glyphs[component_number], self.glyphs[component_number+1], ufo_dir))
@@ -563,7 +564,8 @@ def parse_composed_glyph_csv_line(line: str, index: int | None = None) -> Compos
             log_fail(f'Invalid param value at column [3]: "{data[3]}" is not a number', index)
             return None
         copy_anchors: bool = bool(int(data[3]))
-        return Composite_Glyph(name, styles, copy_anchors, glyphs)
+        y_offset: int = int(data[4]) if data[4].isnumeric() else 0
+        return Composite_Glyph(name, styles, copy_anchors, y_offset, glyphs)
 
     # Unknown category
     log_fail(f'Invalid category at column [2]: "{data[3]}" is not a number', index)
