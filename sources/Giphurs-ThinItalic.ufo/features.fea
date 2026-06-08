@@ -4557,8 +4557,8 @@ lookup ccmp_latn {
     sub \e \uni0302  by \ecircumflex;
     sub \e \uni0308  by \edieresis;
     sub \i \gravecomb  by \igrave;
-    sub \i \acutecomb  by \iacute;
     sub \uni0456 \acutecomb  by \iacute;
+    sub \i \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0308  by \idieresis;
     sub \n \tildecomb  by \ntilde;
@@ -4614,8 +4614,8 @@ lookup ccmp_latn {
     sub \I \uni0306  by \Ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \iogonek \gravecomb  by \iogonek;
     sub \i \uni0328  by \iogonek;
+    sub \iogonek \gravecomb  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4702,13 +4702,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \u \uni0308 \gravecomb  by \uni01DC;
-    sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni030A \acutecomb  by \uni01DC;
     sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \AE \acutecomb  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \Oslash \acutecomb  by \uni01E0;
     sub \A \uni0307 \uni0304  by \uni01E0;
+    sub \Oslash \acutecomb  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5634,8 +5634,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0456 \uni0308  by \uni0457;
+    sub \uni0456 \uni0307  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -5898,6 +5898,29 @@ lookup calt_Contextual_Alternates {
 	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
 } calt_Contextual_Alternates;
 
+feature cv27 {
+
+ script DFLT;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script copt;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script cyrl;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script grek;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script latn;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+} cv27;
+
 feature locl {
 
  script cyrl;
@@ -5984,29 +6007,6 @@ feature locl {
      language WLF  exclude_dflt;
       lookup locl_cv27_Localized_Eng;
 } locl;
-
-feature cv27 {
-
- script DFLT;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script copt;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script cyrl;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script grek;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script latn;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-} cv27;
 
 feature ss09 {
   featureNames {
@@ -7667,11 +7667,10 @@ lookup kern_Horizontal_kerning {
 	\nine.cv09.numr.pnum \nine.cv09.numr.tnum \nine.cv19.numr 
 	\nine.cv19.numr.pnum \nine.cv19.numr.tnum \nine.numr 
 	\nine.numr.pnum \nine.numr.tnum \one.cv01.numr \one.cv01.numr.pnum 
-	\one.cv01.numr.tnum \one.cv01.ss06.numr \one.cv01.ss06.numr.pnum 
-	\one.cv01.ss06.numr.tnum \one.cv11.numr \one.cv11.numr.pnum 
-	\one.cv11.numr.tnum \one.cv11.ss06.numr \one.cv11.ss06.numr.pnum 
-	\one.cv11.ss06.numr.tnum \one.numr \one.numr.pnum \one.numr.tnum 
-	\one.ss06.numr \one.ss06.numr.pnum \one.ss06.numr.tnum 
+	\one.cv01.numr.tnum \one.cv01.ss06.numr \one.cv01.ss06.numr.tnum 
+	\one.cv11.numr \one.cv11.numr.pnum \one.cv11.numr.tnum 
+	\one.cv11.ss06.numr \one.cv11.ss06.numr.tnum \one.numr 
+	\one.numr.pnum \one.numr.tnum \one.ss06.numr \one.ss06.numr.tnum 
 	\seven.cv07.numr \seven.cv07.numr.pnum \seven.cv07.numr.tnum 
 	\seven.cv07.ss07.numr \seven.cv07.ss07.numr.pnum 
 	\seven.cv07.ss07.numr.tnum \seven.cv17.numr \seven.cv17.numr.pnum 
@@ -7780,6 +7779,8 @@ lookup kern_Horizontal_kerning {
     @kc87_first_69 = [\uni044A \uni044C \uni0459 \uni045A \uni048D ];
     @kc87_first_70 = [\uni047F.sc \uni051D.sc \uni1E87.sc \uni1E89.sc \uni1E98.sc \uni2C73.sc \w.sc 
 	\wacute.sc \wdieresis.sc \wgrave.sc ];
+    @kc87_first_71 = [\one.ss06.numr.pnum \one.cv01.ss06.numr.pnum \one.cv11.ss06.numr.pnum ];
+    @kc87_first_72 = [\one.ss06.dnom.pnum \one.cv01.ss06.dnom.pnum \one.cv11.ss06.dnom.pnum ];
     @kc87_second_1 = [\A \Aacute \Abreve \Acircumflex \Adieresis \Agrave \Alpha \Amacron \Aogonek 
 	\Aring \Aringacute \Atilde \Delta \Lambda \slash \uni01CD \uni01DE 
 	\uni01E0 \uni0200 \uni0202 \uni0226 \uni0245 \uni0394 \uni0410 
@@ -8057,14 +8058,11 @@ lookup kern_Horizontal_kerning {
 	\three.cv13.dnom.tnum \three.dnom \three.dnom.pnum \three.dnom.tnum 
 	\two.cv02.dnom \two.cv02.dnom.pnum \two.cv02.dnom.tnum 
 	\two.cv12.dnom \two.cv12.dnom.pnum \two.cv12.dnom.tnum \two.dnom 
-	\two.dnom.pnum \two.dnom.tnum \zero.cv10.dnom \zero.cv10.dnom.pnum 
+	\two.dnom.pnum \two.dnom.tnum \zero.cv10.dnom.pnum 
 	\zero.cv10.dnom.tnum \zero.cv10.zero.dnom 
-	\zero.cv10.zero.dnom.pnum \zero.cv10.zero.dnom.tnum 
-	\zero.cv20.dnom \zero.cv20.dnom.pnum \zero.cv20.dnom.tnum 
-	\zero.cv20.zero.dnom \zero.cv20.zero.dnom.pnum 
-	\zero.cv20.zero.dnom.tnum \zero.dnom \zero.dnom.pnum 
-	\zero.dnom.tnum \zero.zero.dnom \zero.zero.dnom.pnum 
-	\zero.zero.dnom.tnum ];
+	\zero.cv10.zero.dnom.tnum \zero.cv20.dnom \zero.cv20.dnom.tnum 
+	\zero.cv20.zero.dnom \zero.cv20.zero.dnom.tnum \zero.dnom 
+	\zero.dnom.tnum \zero.zero.dnom \zero.zero.dnom.tnum ];
     @kc87_second_29 = [\epsilon \epsilontonos \s \sacute \scaron \scedilla \scircumflex \scommaaccent 
 	\uni01A8 \uni023F \uni025B \uni025C \uni025D \uni0282 \uni0433 \uni0437 
 	\uni0453 \uni0455 \uni0479 \uni0493 \uni0499 \uni04DF \uni04F7 \uni04FB 
@@ -8153,6 +8151,11 @@ lookup kern_Horizontal_kerning {
 	\wacute.sc \wdieresis.sc \wgrave.sc ];
     @kc87_second_63 = [\uni0500 \uni0502 ];
     @kc87_second_64 = [\uni0501.sc \uni0503.sc ];
+    @kc87_second_65 = [\zero.numr.pnum \zero.cv10.numr.pnum \zero.cv20.numr.pnum 
+	\zero.zero.numr.pnum \zero.cv10.zero.numr.pnum 
+	\zero.cv20.zero.numr.pnum ];
+    @kc87_second_66 = [\zero.dnom.pnum \zero.cv10.dnom \zero.cv20.dnom.pnum \zero.zero.dnom.pnum 
+	\zero.cv10.zero.dnom.pnum \zero.cv20.zero.dnom.pnum ];
     pos @kc87_first_1 @kc87_second_3 -70;
     pos @kc87_first_1 @kc87_second_8 -70;
     pos @kc87_first_1 @kc87_second_9 -140;
@@ -8947,6 +8950,7 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_38 @kc87_second_59 -70;
     pos @kc87_first_38 @kc87_second_63 -245;
     pos @kc87_first_38 @kc87_second_64 -280;
+    pos @kc87_first_38 @kc87_second_66 -315;
     pos @kc87_first_39 @kc87_second_6 -35;
     pos @kc87_first_39 @kc87_second_12 -240;
     pos @kc87_first_39 @kc87_second_13 -140;
@@ -9703,6 +9707,9 @@ lookup kern_Horizontal_kerning {
     pos @kc87_first_70 @kc87_second_57 -140;
     pos @kc87_first_70 @kc87_second_63 -105;
     pos @kc87_first_70 @kc87_second_64 -105;
+    pos @kc87_first_71 @kc87_second_32 -315;
+    pos @kc87_first_71 @kc87_second_65 -210;
+    pos @kc87_first_72 @kc87_second_66 -210;
 } kern_Horizontal_kerning;
 
 lookup mark_Mark_positioning {
@@ -12184,6 +12191,7 @@ feature mkmk {
       lookup mkmk_mark_to_mark_bottom_center;
       lookup mkmk_mark_to_mark_greek_top_center;
 } mkmk;
+#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 
