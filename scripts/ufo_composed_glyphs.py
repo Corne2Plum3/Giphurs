@@ -5,7 +5,7 @@ from logger import configure_logging
 import os
 from pathlib import Path
 from tqdm import tqdm
-from ufo_utils import get_glif_from_name, get_glyph_anchor_points, get_glyph_metrics, get_kerning, move_glyph
+from ufo_utils import add_glyph_reference_to_sequence, get_glif_from_name, get_glyph_anchor_points, get_glyph_metrics, move_glyph
 import xml.etree.ElementTree as ET
 
 # How many process to run at most for parallelizable tasks (excluding gftools)
@@ -32,7 +32,8 @@ class Composed_Glyph():
         pass
 
 class Accented_Glyph(Composed_Glyph):
-    
+    '''Glyph with accents/diacritics.'''
+
     def __init__(self, name: str, styles: int, allow_left_overflow: bool, allow_right_overflow: bool, glyphs: list[str]):
         super().__init__(name, styles, glyphs)
         self.allow_left_overflow = allow_left_overflow
@@ -181,76 +182,12 @@ class Accented_Glyph(Composed_Glyph):
         return 0
 
 class Composite_Glyph(Composed_Glyph):
+    '''Sequence of 1 or several glyphs.'''
+    
     def __init__(self, name: str, styles: int, copy_anchors: bool, y_offset: int, glyphs: list[str]):
         super().__init__(name, styles, glyphs)
         self.copy_anchors = copy_anchors
         self.y_offset = y_offset
-
-    def _copy_single_glyph(self, glyph_src: str,
-                                 glyph_dst: str,
-                                 ufo_dir: Path,
-                                 copy_anchors: bool = True,
-                                 replace_all: bool = True,
-                                 x_offset: int = 0,
-                                 y_offset: int = 0) -> int:
-        """
-            Copy `glyph_src` into `glyph_dst`, without changing its name not Unicode value.
-            Can also copy anchors with `copy_anchors` set to `True`.
-
-            Changes UFO .glif file of destination glyph.
-
-            Returns `0` if success, non-zero otherwise.
-        """
-        # get source anchors and outline
-        src_glif: Path | None = get_glif_from_name(glyph_src, ufo_dir)
-        if src_glif is None:
-            return 1
-        src_xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(src_glif)
-        src_xml_root: ET.Element[str] = src_xml_tree.getroot()
-        src_anchor_list: list[ET.Element[str]] = src_xml_root.findall("anchor") if copy_anchors else []
-
-        # Parse destination glyph XML
-        dst_glif: Path | None = get_glif_from_name(glyph_dst, ufo_dir)
-        if dst_glif is None:
-            return 1
-        dst_xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(dst_glif)
-        dst_xml_root: ET.Element[str] = dst_xml_tree.getroot()
-
-        # Clear old anchors and outline if replace_all
-        if replace_all:
-            xml_anchor_list: list[ET.Element[str]] = dst_xml_root.findall("anchor")
-            for element in xml_anchor_list:  # delete the already existing ones
-                dst_xml_root.remove(element)
-            xml_outline_list: list[ET.Element[str]] = dst_xml_root.findall("outline")
-            for element in xml_outline_list:  # delete the already existing ones
-                dst_xml_root.remove(element)
-            ET.SubElement(dst_xml_root, "outline")
-
-        # Copy the anchors
-        if copy_anchors:
-            for src_anchor in src_anchor_list:
-                dst_anchor_attribs: dict[str, str] = {
-                    "x": str(int(src_anchor.attrib["x"]) + x_offset),
-                    "y": str(int(src_anchor.attrib["y"]) + y_offset),
-                    "name": src_anchor.attrib["name"]
-                }
-                ET.SubElement(dst_xml_root, "anchor", dst_anchor_attribs)
-        
-        # Copy the outline
-        new_component_attrib = {
-            "base": glyph_src,
-            "xOffset": str(x_offset),
-            "yOffset": str(y_offset)
-        }
-        dst_xml_outline: ET.Element[str] | None = dst_xml_root.find("outline")
-        if dst_xml_outline is None:  # This shouldn't happen
-            logger.error(f'Somehow couldn\'t find <outline> when copying {glyph_src} into {glyph_dst}')
-            return 1
-        ET.SubElement(dst_xml_outline, "component", new_component_attrib)
-
-        # Save
-        dst_xml_tree.write(dst_glif, encoding='utf-8', xml_declaration=True)
-        return 0
 
     def generate_glif(self, ufo_dir: Path) -> int:
         # Self reference check
@@ -258,30 +195,56 @@ class Composite_Glyph(Composed_Glyph):
             logger.error(f'Failed to generate "{self.name}": the glyph is composed of itself.')
             return 1
 
-        # Place components
-        x_cursor: int = 0
-        for component_number in range(0, len(self.glyphs), 1):
-            component_name: str = self.glyphs[component_number]
-            self._copy_single_glyph(component_name, self.name, ufo_dir, self.copy_anchors, component_number==0, x_cursor, self.y_offset)
-            x_cursor += get_glyph_metrics(component_name, ufo_dir)["glyph_width"]
-            if (component_number + 1) < len(self.glyphs):  # apply kern with the next element
-                x_cursor += int(get_kerning(self.glyphs[component_number], self.glyphs[component_number+1], ufo_dir))
-        
-        # Update the advance value
-        glif_filename: Path | None = get_glif_from_name(self.name, ufo_dir)
-        if glif_filename is None:
+        # Clean XML of glif we're building
+        dst_glif: Path | None = get_glif_from_name(self.name, ufo_dir)
+        if dst_glif is None:
             return 1
-        xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(glif_filename)
-        xml_advance: ET.Element[str] | None = xml_tree.getroot().find("advance")
-        if xml_advance is None:
-            logger.error(f'<advance> not found in "{glif_filename}"')
+        dst_glif_xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(dst_glif)
+        try:
+            for anchor in dst_glif_xml_tree.getroot().findall('anchor'):
+                dst_glif_xml_tree.getroot().remove(anchor)
+            dst_glif_xml_tree_outline = dst_glif_xml_tree.getroot().find('outline')
+            if dst_glif_xml_tree_outline is not None:
+                for component in dst_glif_xml_tree_outline.findall('component'):
+                    dst_glif_xml_tree_outline.remove(component)
+            dst_advance_node: ET.Element[str] | None = dst_glif_xml_tree.getroot().find('advance')
+            if dst_advance_node is None:
+               ET.SubElement(dst_glif_xml_tree.getroot(), 'advance', {'width': '0'})
+            else:
+                dst_advance_node.attrib['width'] = '0'
+        except Exception as err:
+            logger.error(f'Failed to reset XML tree from "{self.name}": {err}')
             return 1
-        xml_advance.attrib["width"] = str(x_cursor)
+
+        for i, glyph_name in enumerate(self.glyphs):
+            new_glif: Path | None = get_glif_from_name(glyph_name, ufo_dir)
+            if new_glif is None:
+                return 1
+
+            try:
+                new_glif_xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(new_glif)
+            except Exception as err:
+                logger.error(f'Failed to get XML data from "{glyph_name}": {err}')
+                return 1
+
+            new_tree: ET.ElementTree[ET.Element[str]] | None = add_glyph_reference_to_sequence(  # pyright: ignore[reportAssignmentType]
+                src_glif_xml_tree=new_glif_xml_tree,  # pyright: ignore[reportArgumentType]
+                dst_glif_xml_tree=dst_glif_xml_tree,  # pyright: ignore[reportArgumentType]
+                ufo_dir=ufo_dir,
+                copy_anchors=self.copy_anchors,
+                replace_all=(i == 0),
+                x_offset=0,
+                y_offset=self.y_offset
+            )
+            if new_tree is None:
+                return 1
+            dst_glif_xml_tree = new_tree
+
         # Save the file
         try:
-            xml_tree.write(glif_filename, encoding='utf-8', xml_declaration=True)
+            dst_glif_xml_tree.write(dst_glif, encoding='utf-8', xml_declaration=True)
         except Exception as err:
-            logger.error(f'Failed to write into "{glif_filename}": {err}')
+            logger.error(f'Failed to write into "{dst_glif}": {err}')
             return 1
         logger.debug(f"Done buliding {self.name} ({len(self.glyphs)} components)")
         return 0

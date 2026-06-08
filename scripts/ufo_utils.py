@@ -3,6 +3,7 @@ Various useful functions to interact with ufo directories, and more especially t
 
 Note: All glyphs must be located to a folder called "glyphs" to work correctly.   
 """
+import copy
 from logger import configure_logging
 from pathlib import Path
 import xml.etree.ElementTree as ET
@@ -20,6 +21,113 @@ from fontTools.feaLib.ast import (    # pyright: ignore[reportMissingTypeStubs]
     PairPosStatement,
 )
 logger = configure_logging()
+
+def add_glyph_reference_to_sequence(src_glif_xml_tree: ET.ElementTree,
+                                    dst_glif_xml_tree: ET.ElementTree,
+                                    ufo_dir: Path,
+                                    copy_anchors: bool = True,
+                                    replace_all: bool = True,
+                                    x_offset: int = 0,
+                                    y_offset: int = 0) -> ET.ElementTree | None:
+    '''
+    Adds a glyph to a sequence of glyph, at the glif XML level. (to avoid writing file everytime).
+    All of the glyphs needs to be <component> inside <glyph>/<outline> to the kern value to be applied.
+
+    Args:
+        ufo_dir: where both src and dst glyph comes from (for kerning)
+        src_glif_xml_tree: output of ET.parse() from the .glif file containing the glyph to copy
+        dst_glif_xml_tree: output of ET.parse() from the .glif where to add the src glyph. Can be `None` if empty
+        copy_anchors: if `True`, copy anchors from source glyphs as well
+        replace_all: if `True`, remove outlines and anchors from dst glyph before copy
+        x_offset: horizontal offset to apply to the copied glyph (positive value -> right)
+        y_offset: vertical offset to apply to the copied glyph (positive value -> top)
+
+    Return:
+        A new(!) XML tree object, readt to be written into a .glif file with xml_tree.write()
+    '''
+
+    def _get_components_from_glif_xml_tree(xml_tree: ET.ElementTree) -> list[str]:
+        try:
+            return [node.attrib['base'] for node in xml_tree.getroot().find('outline').findall('component')]  # pyright: ignore[reportOptionalMemberAccess, reportUnknownMemberType, reportAttributeAccessIssue]
+        except Exception as err:
+            logger.warning(f'Failed to get glyphs from dst_glif_xml_tree: {err}')
+        return []
+
+    # Read src and dst input
+    try:
+        src_xml_root: ET.Element[str] | None = src_glif_xml_tree.getroot()
+        if src_xml_root is None:
+            logger.error(f'Failed to get root from src_glif_xml_tree: root is None.')
+            return None
+    except Exception as err:
+        logger.error(f'Failed to get root from src_glif_xml_tree: {err}')
+        return None
+    try:
+        output_glif_xml_tree: ET.ElementTree = copy.deepcopy(dst_glif_xml_tree)
+        output_xml_root: ET.Element[str] | None = output_glif_xml_tree.getroot()
+        if output_xml_root is None:
+            logger.error(f'Failed to get root from dst_glif_xml_tree: root is None.')
+            return None
+    except Exception as err:
+        logger.error(f'Failed to get or copy root from dst_glif_xml_tree: {err}')
+        return None
+
+    src_anchor_list: list[ET.Element] = src_glif_xml_tree.findall('anchor') if copy_anchors else []
+
+    if 'name' not in src_xml_root.attrib:
+        logger.error('Glyph name not found in src_glif_xml_tree.')
+        return None
+    src_glyph_name: str = src_xml_root.attrib['name']
+    if 'name' not in output_xml_root.attrib:
+        logger.error('Glyph name not found in dst_glif_xml_tree.')
+        return None
+    dst_glyph_name: str = output_xml_root.attrib['name']
+
+    dst_glyphs: list[str] = [] if replace_all else _get_components_from_glif_xml_tree(output_glif_xml_tree)
+    dst_last_glyph_name: str | None = None if len(dst_glyphs) == 0 else dst_glyphs[-1]
+
+    # Clear old anchors and outline if replace_all
+    if replace_all:
+        xml_anchor_list: list[ET.Element] = output_glif_xml_tree.findall('anchor')
+        for element in xml_anchor_list:  # delete the already existing ones
+            output_xml_root.remove(element)
+        xml_outline_list: list[ET.Element] = output_glif_xml_tree.findall('outline')
+        for element in xml_outline_list:  # delete the already existing ones
+            output_xml_root.remove(element)
+        ET.SubElement(output_xml_root, 'outline')
+    
+    # Copy the anchors
+    if copy_anchors:
+        for src_anchor in src_anchor_list:
+            dst_anchor_attribs: dict[str, str] = {
+                "x": str(int(src_anchor.attrib["x"]) + x_offset),
+                "y": str(int(src_anchor.attrib["y"]) + y_offset),
+                "name": src_anchor.attrib["name"]
+            }
+            ET.SubElement(output_xml_root, "anchor", dst_anchor_attribs)
+
+    # Copy the outline
+    output_xml_advance: ET.Element | None = output_xml_root.find("advance")
+    if output_xml_advance is None or 'width' not in output_xml_advance.attrib:
+        logger.error(f'<advance> not found in dst_glif_xml_tree.')
+        return None
+    kern: int = 0 if dst_last_glyph_name is None else int(get_kerning(dst_last_glyph_name, src_glyph_name, ufo_dir))
+    new_component_attrib: dict[str, str] = {
+        'base': src_glyph_name,
+        'xOffset': str(x_offset + kern + (0 if replace_all else int(output_xml_advance.attrib['width']))),
+        'yOffset': str(y_offset)
+    }
+    dst_xml_outline: ET.Element | None = output_xml_root.find("outline")
+    if dst_xml_outline is None:  # This shouldn't happen
+        logger.error(f'Somehow couldn\'t find <outline> when copying "{src_glyph_name}" into "{dst_glyph_name}"')
+        return None
+    ET.SubElement(dst_xml_outline, "component", new_component_attrib)
+
+    # Update the advance value
+    new_width: int = int(output_xml_advance.attrib['width']) + kern + get_glyph_metrics(src_glyph_name, ufo_dir)['glyph_width']    
+    output_xml_advance.attrib['width'] = str(new_width)
+
+    return output_glif_xml_tree
 
 def get_glif_from_name(glyph_name: str, ufo_dir: Path) -> Path | None:
     """
