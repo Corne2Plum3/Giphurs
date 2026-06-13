@@ -235,7 +235,7 @@ def get_csv_fractions() -> list[str]:
                         dnom_glyphs.append(d2_glyph + '.dnom' + ('.pnum' if len(str(frac_dnom)) >= 2 else ''))
                     else:
                         raise ValueError
-                csv_line = f'{frac_name}{suffix},3,C,0,0'
+                csv_line = f'{frac_name}{suffix},,3,C,0,0'
                 for g in numr_glyphs + ['fraction'] + dnom_glyphs:
                     csv_line += ',' + g
                 csv_lines.append(csv_line)
