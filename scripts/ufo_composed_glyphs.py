@@ -5,7 +5,7 @@ from logger import configure_logging
 import os
 from pathlib import Path
 from tqdm import tqdm
-from ufo_utils import add_glyph_reference_to_sequence, get_glif_from_name, get_glyph_anchor_points, get_glyph_metrics, move_glyph
+from ufo_utils import add_glyph_reference_to_sequence, add_component, clean_glyph, get_glif_from_name, get_glyph_anchor_points, get_glyph_metrics, move_glyph
 import xml.etree.ElementTree as ET
 
 # How many process to run at most for parallelizable tasks (excluding gftools)
@@ -14,8 +14,9 @@ PROCESSES_COUNT: int = int(os.environ.get('PROCESSES_COUNT', '1'))
 logger = configure_logging()
 
 class Composed_Glyph():
-    def __init__(self, name: str, styles: int, glyphs: list[str]):
+    def __init__(self, name: str, weight: str | None, styles: int, glyphs: list[str]):
         self.name = name
+        self.weight = weight
         self.styles = styles
         self.glyphs = glyphs
         self.priority = 0  # set manually when building glyphs
@@ -34,8 +35,8 @@ class Composed_Glyph():
 class Accented_Glyph(Composed_Glyph):
     '''Glyph with accents/diacritics.'''
 
-    def __init__(self, name: str, styles: int, allow_left_overflow: bool, allow_right_overflow: bool, glyphs: list[str]):
-        super().__init__(name, styles, glyphs)
+    def __init__(self, name: str, weight: str | None, styles: int, allow_left_overflow: bool, allow_right_overflow: bool, glyphs: list[str]):
+        super().__init__(name, weight, styles, glyphs)
         self.allow_left_overflow = allow_left_overflow
         self.allow_right_overflow = allow_right_overflow
 
@@ -184,8 +185,8 @@ class Accented_Glyph(Composed_Glyph):
 class Composite_Glyph(Composed_Glyph):
     '''Sequence of 1 or several glyphs.'''
     
-    def __init__(self, name: str, styles: int, copy_anchors: bool, y_offset: int, glyphs: list[str]):
-        super().__init__(name, styles, glyphs)
+    def __init__(self, name: str, weight: str | None, styles: int, copy_anchors: bool, y_offset: int, glyphs: list[str]):
+        super().__init__(name, weight, styles, glyphs)
         self.copy_anchors = copy_anchors
         self.y_offset = y_offset
 
@@ -199,7 +200,14 @@ class Composite_Glyph(Composed_Glyph):
         dst_glif: Path | None = get_glif_from_name(self.name, ufo_dir)
         if dst_glif is None:
             return 1
-        dst_glif_xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(dst_glif)
+        dst_glif_xml_tree: ET.ElementTree[ET.Element] = ET.parse(dst_glif)
+        tmp: ET.ElementTree | None = clean_glyph(dst_glif_xml_tree)  # pyright: ignore[reportArgumentType]
+        if tmp is None:
+            logger.error(f'Failed to clean XML tree of dst_glif for "{self.name}".')
+            return 1
+        dst_glif_xml_tree = tmp  # pyright: ignore[reportAssignmentType]
+        del tmp
+
         try:
             for anchor in dst_glif_xml_tree.getroot().findall('anchor'):
                 dst_glif_xml_tree.getroot().remove(anchor)
@@ -248,6 +256,57 @@ class Composite_Glyph(Composed_Glyph):
             return 1
         logger.debug(f"Done buliding {self.name} ({len(self.glyphs)} components)")
         return 0
+
+class Single_Glyph_Custom_Kern(Composed_Glyph):
+    '''Reference to a single glyph but allows custom kerning.'''
+    
+    def __init__(self, name: str, weight: str | None, styles: int, base: str, left_padding: int | None = None, right_padding: int | None = None):
+        # None : use values from base
+        super().__init__(name, weight, styles, [base])
+        self.left_padding = left_padding
+        self.right_padding = right_padding
+    
+    def generate_glif(self, ufo_dir: Path) -> int:
+        
+        # Load base .glif metrics
+        base_xml_metrics: dict[str, int] = get_glyph_metrics(self.glyphs[0], ufo_dir)
+
+        # Load destination .glif
+        dst_glif: Path | None = get_glif_from_name(self.name, ufo_dir)
+        if dst_glif is None:
+            return 1
+        dst_xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(dst_glif)
+        tmp: ET.ElementTree | None = clean_glyph(dst_xml_tree)  # pyright: ignore[reportRedeclaration, reportArgumentType]
+        if tmp is None:
+            return 1
+        dst_xml_tree = tmp  # pyright: ignore[reportAssignmentType]
+
+        # Update advance value
+        glyph_width: int = base_xml_metrics['raw_width']
+        glyph_width += self.left_padding if self.left_padding is not None else base_xml_metrics['left_kern']
+        glyph_width += self.right_padding if self.right_padding is not None else base_xml_metrics['right_kern']
+        for element in dst_xml_tree.getroot().findall('advance'):  # remove existing <advance>
+            dst_xml_tree.getroot().remove(element)
+        dst_xml_tree.getroot().insert(0, ET.Element('advance', {'width': str(glyph_width)}))
+
+        # Place component
+        tmp = add_component(
+            dst_xml_tree,  # pyright: ignore[reportArgumentType]
+            self.glyphs[0], 
+            x_offset=None if self.left_padding is None else self.left_padding - base_xml_metrics['left_kern']
+        )
+        if tmp is None:
+            return 1
+        dst_xml_tree = tmp  # pyright: ignore[reportAssignmentType]
+
+        # Save the file
+        try:
+            dst_xml_tree.write(dst_glif, encoding='utf-8', xml_declaration=True)
+        except Exception as err:
+            logger.error(f'Failed to write into "{dst_glif}": {err}')
+            return 1
+        logger.debug(f"Done buliding {self.name} ({len(self.glyphs)} components)")
+        return 0 
 
 class Glyph_Tree():
     def __init__(self, glyph_name: str, children: list['Glyph_Tree']):
@@ -472,6 +531,7 @@ def parse_composed_glyph_csv_line(line: str, index: int | None = None) -> Compos
         
         A line should look like this: `Name,Styles,Category,Param_1,Param_2,Glyph_1,Glyph_2,Glyph_3,Glyph_4,...`
         * `Name`: name of the composed glyph (`str`)
+        * `Weight`: weight where this line applies (`100`, `400` and `1000`). Keep empty for all.
         * `Styles`: styles where this line applies. `1` = normal ; `2` = italic ; `3` = both
         * `Category`: how the glyph `Name` should be build. `A`: accented ; `C`: composite
         * `Param_x`: depends of the `Category`:
@@ -497,53 +557,67 @@ def parse_composed_glyph_csv_line(line: str, index: int | None = None) -> Compos
 
     data: list[str] = line.split(',')
 
-    if len(data) < 6:  # Check column count
+    if len(data) < 7:  # Check column count
         log_fail('Not enough columns.', index)
         return None
 
     # Value check (params check columns 3 and 4 are done in their respective class)
-    if not data[1].isnumeric():
+    if not data[2].isnumeric():
         log_fail(f'Invalid style value: "{data[1]}" is not a number.', index)
         return None
 
     name: str = data[0]
-    styles: int = int(data[1])
-    category: str = data[2].upper()[0:]
-    glyphs: list[str] = [g for g in data[5:] if len(g) >= 1]
+    weight: str | None = None if data[1] == "" else data[1]
+    styles: int = int(data[2])
+    category: str = data[3].upper()[0:]
+    glyphs: list[str] = [g for g in data[6:] if len(g) >= 1]
 
     if category == 'A':  # Accented glyphs
-        if not data[3].isnumeric():
-            log_fail(f'Invalid param value at column [3]: "{data[3]}" is not a number', index)
-            return None
         if not data[4].isnumeric():
             log_fail(f'Invalid param value at column [4]: "{data[4]}" is not a number', index)
             return None
-        left_overflow: bool = bool(int(data[3]))
-        right_overflow: bool = bool(int(data[4]))
-        return Accented_Glyph(name, styles, left_overflow, right_overflow, glyphs)
+        if not data[5].isnumeric():
+            log_fail(f'Invalid param value at column [5]: "{data[5]}" is not a number', index)
+            return None
+        left_overflow: bool = bool(int(data[4]))
+        right_overflow: bool = bool(int(data[5]))
+        return Accented_Glyph(name, weight, styles, left_overflow, right_overflow, glyphs)
     
     if category == 'C':  # Composite glyph
-        if not data[3].isnumeric():
-            log_fail(f'Invalid param value at column [3]: "{data[3]}" is not a number', index)
+        if not data[4].isnumeric():
+            log_fail(f'Invalid param value at column [4]: "{data[4]}" is not a number', index)
             return None
-        copy_anchors: bool = bool(int(data[3]))
-        y_offset: int = int(data[4]) if data[4].isnumeric() else 0
-        return Composite_Glyph(name, styles, copy_anchors, y_offset, glyphs)
+        copy_anchors: bool = bool(int(data[4]))
+        y_offset: int = int(data[5]) if data[5].isnumeric() else 0
+        return Composite_Glyph(name, weight, styles, copy_anchors, y_offset, glyphs)
+
+    if category == 'K':
+        if not data[4].isnumeric():
+            log_fail(f'Invalid param value at column [4]: "{data[4]}" is not a number', index)
+            return None
+        if not data[5].isnumeric():
+            log_fail(f'Invalid param value at column [5]: "{data[5]}" is not a number', index)
+            return None
+        x_kern: int = int(data[4])
+        y_kern: int = int(data[5])
+        base: str = data[6]
+        return Single_Glyph_Custom_Kern(name, weight, styles, base, x_kern, y_kern)
 
     # Unknown category
-    log_fail(f'Invalid category at column [2]: "{data[3]}" is not a number', index)
+    log_fail(f'Invalid category at column [2]: "{category}"', index)
     return None
 
 
 
 
-def parse_composed_glyph_csv(csv_file: Path, styles: int, first_line_number: int = 1) -> list[Composed_Glyph]:
+def parse_composed_glyph_csv(csv_file: Path, weight: str, styles: int, first_line_number: int = 1) -> list[Composed_Glyph]:
     '''
         Read an entire CSV file describing composed glyphs (see `parse_composed_glyph_csv_line()`).
         This function handles logging. 
 
         Args:
             csv_file: path to the csv file to read
+            weight: `100` (Thin), `400` (Regular), `1000` (ExtraBlack)
             styles: `1` = normal, `2` = italic, `3` = both
             first_line_number: first line number to read in the CSV. First line in the file is 1!
         Return:
@@ -558,7 +632,9 @@ def parse_composed_glyph_csv(csv_file: Path, styles: int, first_line_number: int
             if line_number >= first_line_number:
                 cg: Composed_Glyph | None = parse_composed_glyph_csv_line(line.strip(), line_number + 1)
                 if cg is None:  # invalid line -> parse_composed_glyph_csv_line prints warning message
-                    pass 
+                    pass
+                elif cg.weight is not None and cg.weight != weight:  # weight check
+                    pass
                 elif not cg.styles & styles:  # style check
                     pass  # nothing to do, skip the line
                 elif cg.name in cg_list_names.keys():  # duplicate glyph check
@@ -573,7 +649,7 @@ def _build_composed_glyph_from_csv_worker(cg: Composed_Glyph, ufo_dir: Path) -> 
     '''Subfunction of `build_composed_glyph_from_csv()`'''
     return cg.generate_glif(ufo_dir)
 
-def build_composed_glyph_from_csv(csv_file: Path, ufo_dir: Path, styles: int, processes_count: int = 1) -> int:
+def build_composed_glyph_from_csv(csv_file: Path, ufo_dir: Path, weight: str, styles: int, processes_count: int = 1) -> int:
     '''
         Builds composed glyphs (.glif) from a CSV definition inside an UFO directory. Overwrites existing .glif files.
 
@@ -586,6 +662,7 @@ def build_composed_glyph_from_csv(csv_file: Path, ufo_dir: Path, styles: int, pr
         Args:
             csv_file: Path to the CSV file containing composed glyph definitions.
             ufo_dir: The base directory where the resulting `.glif` files (UFO components) will be written.
+            weight: `100` (Thin), `400` (Regular), `1000` (ExtraBlack)
             styles: `1` = non-italic, `2` = italic
             processes_count: Number of worker processes to use for generation. If 1, sequential execution is used.
 
@@ -601,7 +678,7 @@ def build_composed_glyph_from_csv(csv_file: Path, ufo_dir: Path, styles: int, pr
         return -1
     
     # Read CSV
-    cg_list: list[Composed_Glyph] = parse_composed_glyph_csv(csv_file, styles, 2)  # priority is 0 by default
+    cg_list: list[Composed_Glyph] = parse_composed_glyph_csv(csv_file, weight, styles, 2)  # priority is 0 by default
     if len(cg_list) == 0:
         logger.info('No glyph has been generated, nothing to build.')
         return 0
