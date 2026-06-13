@@ -209,7 +209,7 @@ def get_csv_fractions() -> list[str]:
                 dnom_glyphs.clear()
                 numr_glyphs = [f'{DIGITS_NAMES[int(d)]}{suffix}.numr' for d in str(frac_numr)] if frac_numr is not None else []
                 dnom_glyphs = [f'{DIGITS_NAMES[int(d)]}{suffix}.dnom' for d in str(frac_dnom)] if frac_dnom is not None else []
-                csv_line = f'{frac_name}{suffix},3,C,0,'
+                csv_line = f'{frac_name}{suffix},,3,C,0,'
                 for g in numr_glyphs + ['fraction'] + dnom_glyphs:
                     csv_line += ',' + g
                 csv_lines.append(csv_line)
