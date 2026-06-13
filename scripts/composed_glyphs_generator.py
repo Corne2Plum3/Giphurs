@@ -1,4 +1,5 @@
 import argparse
+from math import pi
 from logger import configure_logging
 from pathlib import Path
 import sys
@@ -9,6 +10,10 @@ CSV_HEADER: str = 'Glyphname,Styles,Category,Left overflow | Anchors,Right overf
 
 DIGITS_NAMES: list[str] = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 logger = configure_logging()
+
+ITALIC_SLANT    : float = 10 * pi / 180  # slant to the RIGHT in radians (the "*pi/180" converts degrees to radians)
+ITALIC_X_OFFSET : int   = -130  # move to the right some italic glyphs
+
 
 # === INTERNAL TOOLS ===
 
@@ -100,7 +105,7 @@ def _update_csv(csv_file: Path, csv_lines: list[str]) -> int:
             `0` if success, `1` if fail and the CSV has been left untouched, `2` if fail and the CSV has been modified
     '''
     logger.info(f'Updating "{csv_file}"...')
-    glyphs_to_write: dict[str, str] = {l.split(',')[0]: l for l in csv_lines}  # maps glyph name with the associated line
+    glyphs_to_write: dict[tuple[str, str, str], str] = {(l.split(',')[0], l.split(',')[1], l.split(',')[2]) : l for l in csv_lines}  # maps glyph name with the associated line
     replaced_lines: int = 0
     added_lines: int = 0
     new_csv_content: str = ''
@@ -118,10 +123,10 @@ def _update_csv(csv_file: Path, csv_lines: list[str]) -> int:
                 if ',' not in line.strip():
                     logger.warning(f'"{csv_file}": line {line_number} is invalid.')
                     continue
-                line_glyph_name = line.strip().split(',')[0]
-                if line_glyph_name in glyphs_to_write.keys():  # replace
-                    new_csv_content += glyphs_to_write[line_glyph_name] + '\n'
-                    glyphs_to_write.pop(line_glyph_name)
+                line_glyph_name_weight_style = (line.strip().split(',')[0], line.strip().split(',')[1], line.strip().split(',')[2])
+                if line_glyph_name_weight_style in glyphs_to_write.keys():  # replace
+                    new_csv_content += glyphs_to_write[line_glyph_name_weight_style] + '\n'
+                    glyphs_to_write.pop(line_glyph_name_weight_style)
                     replaced_lines += 1
                 else:
                     new_csv_content += line
@@ -243,6 +248,23 @@ def get_csv_fractions() -> list[str]:
     logger.info(f'Generated {len(csv_lines)} entries.')
     return csv_lines
 
+def get_csv_digits() -> list[str]:
+    '''Write CSV lines to generate .pnum and .tnum alternates of digits.'''
+    PNUM_KERN = {'100': 140, '400': 100, '1000': 70}
+
+    csv_lines: list[str] = []
+    
+    for digit_value, digit_name in enumerate(DIGITS_NAMES):
+        for suffix in _get_all_digits_alternates_suffixes(digit_value):
+                # pnum
+                for weight, kern in PNUM_KERN.items():
+                    pnum_glyph_name: str = digit_name + suffix + '.pnum'
+                    csv_lines.append(f'{pnum_glyph_name},{weight},3,K,{kern},{kern},{digit_name}')
+                # tnum (only works because the digits are .tnum by default !!)
+                tnum_glyph_name: str = digit_name + suffix + '.tnum'
+                csv_lines.append(f'{tnum_glyph_name},,3,C,1,0,{digit_name}')
+    return csv_lines
+
 # === ENTRY POINT ===
 
 if __name__ == '__main__':
@@ -250,6 +272,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Generate lines for composed glyphs CSV file for fractions glyphs into stdin.")
     parser.add_argument('csv_file', type=str, help="Composed glyph CSV to update.")
     parser.add_argument('--fractions', action='store_true', help="Generate CSV lines for fractions.")
+    parser.add_argument('--digits', action='store_true', help="Generate CSV lines for .pnum and .tnum digits.")
     args = parser.parse_args()
     if args.csv_file is None:
         logger.error(f'{sys.argv[0]}: CSV file not given.')
@@ -260,6 +283,8 @@ if __name__ == '__main__':
     new_lines: list[str] = []
     if args.fractions:
         new_lines += get_csv_fractions()
+    if args.digits:
+        new_lines += get_csv_digits()
 
     # Update file
     if len(new_lines) != 0:

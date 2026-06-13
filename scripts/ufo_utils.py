@@ -22,6 +22,55 @@ from fontTools.feaLib.ast import (    # pyright: ignore[reportMissingTypeStubs]
 )
 logger = configure_logging()
 
+# === .glif XML TREE METHODS ===
+
+def add_component(glif_xml_tree: ET.ElementTree,
+                  base: str,
+                  x_offset: int | None = None,
+                  y_offset: int | None = None,
+                  x_scale: float = 1.0,
+                  y_scale: float = 1.0) -> ET.ElementTree | None:
+    '''
+    Adds a glyph as `<component>` to a .glif XML representation. Do NOT copy anchors.
+
+    Args:
+        glif_xml_tree: output of `ET.parse()` from the .glif where to add the src glyph.
+        base: glyph name to add
+        x_offset: (optional) horizontal offset to apply to the copied glyph (positive value -> right). If not given, will use the x-position of the glyph to add.
+        y_offset: (optional) vertical offset to apply to the copied glyph (positive value -> top). If not given, will use the y-position of the glyph to add.
+        x_scale: (optional) horizontal scale of the glyph. If not given, `1.0` will be used.
+        y_scale: (optional) vertical scale of the glyph. If not given, `1.0` will be used.
+
+    Return:
+        A new(!) XML tree object, ready to be written into a .glif file with xml_tree.write()
+    '''
+
+    # Find root
+    try:
+        output_glif_xml_tree: ET.ElementTree = copy.deepcopy(glif_xml_tree)
+        output_xml_root: ET.Element[str] | None = output_glif_xml_tree.getroot()
+        if output_xml_root is None:
+            logger.error(f'Failed to get root from glif_xml_tree: root is None.')
+            return None
+    except Exception as err:
+        logger.error(f'Failed to get or copy root from glif_xml_tree: {err}')
+        return None
+
+    # Find <outline> (where to write)
+    output_xml_outline: ET.Element[str] | None = output_xml_root.find('outline')
+    if output_xml_outline is None:
+        output_xml_outline = ET.SubElement(output_xml_root, 'outline')
+
+    # New node and place it
+    new_xml_component: ET.Element[str] = ET.Element('component', {'base': base})
+    if x_offset is not None: new_xml_component.attrib['xOffset'] = str(x_offset)
+    if y_offset is not None: new_xml_component.attrib['yOffset'] = str(y_offset)
+    if x_scale != 1.0: new_xml_component.attrib['xScale'] = str(x_scale)
+    if y_scale != 1.0: new_xml_component.attrib['yScale'] = str(y_scale)
+    output_xml_outline.append(new_xml_component)
+
+    return output_glif_xml_tree
+
 def add_glyph_reference_to_sequence(src_glif_xml_tree: ET.ElementTree,
                                     dst_glif_xml_tree: ET.ElementTree,
                                     ufo_dir: Path,
@@ -35,15 +84,15 @@ def add_glyph_reference_to_sequence(src_glif_xml_tree: ET.ElementTree,
 
     Args:
         ufo_dir: where both src and dst glyph comes from (for kerning)
-        src_glif_xml_tree: output of ET.parse() from the .glif file containing the glyph to copy
-        dst_glif_xml_tree: output of ET.parse() from the .glif where to add the src glyph. Can be `None` if empty
+        src_glif_xml_tree: output of `ET.parse()` from the .glif file containing the glyph to copy
+        dst_glif_xml_tree: output of `ET.parse()` from the .glif where to add the src glyph. Can be `None` if empty
         copy_anchors: if `True`, copy anchors from source glyphs as well
         replace_all: if `True`, remove outlines and anchors from dst glyph before copy
         x_offset: horizontal offset to apply to the copied glyph (positive value -> right)
         y_offset: vertical offset to apply to the copied glyph (positive value -> top)
 
     Return:
-        A new(!) XML tree object, readt to be written into a .glif file with xml_tree.write()
+        A new(!) XML tree object, ready to be written into a .glif file with xml_tree.write()
     '''
 
     def _get_components_from_glif_xml_tree(xml_tree: ET.ElementTree) -> list[str]:
@@ -128,6 +177,40 @@ def add_glyph_reference_to_sequence(src_glif_xml_tree: ET.ElementTree,
     output_xml_advance.attrib['width'] = str(new_width)
 
     return output_glif_xml_tree
+
+def clean_glyph(glif_xml_tree: ET.ElementTree) -> ET.ElementTree | None:
+    '''
+    Clear anchors and outline from a glif as XML.
+
+    Args:
+        glif_xml_tree: output of `ET.parse()` from the .glif file to clear.
+    
+    Return:
+        A new XML `ElementTree` object, if success, `None` if fail.
+    '''
+
+    # Copy tree
+    tree: ET.ElementTree = copy.deepcopy(glif_xml_tree)
+
+    # Locate root + create copy
+    root: ET.Element[str] | None = tree.getroot()
+    if root is None:
+        logger.error('Couldn\'t find root of glif_xml_tree')
+        return None
+    
+    # Clear anchors 
+    for element in root.findall('anchor'):
+       root.remove(element)
+    
+    # Clear outline content
+    outline: ET.Element[str] | None = root.find('outline')
+    if outline is None:
+        outline = ET.SubElement(root, 'outline')
+    outline.clear()
+
+    return tree
+
+# === .glif GETTERS ===
 
 def get_glif_from_name(glyph_name: str, ufo_dir: Path) -> Path | None:
     """
@@ -440,6 +523,8 @@ def get_kerning(glyph_first: str, glyph_second: str, ufo_dir: Path) -> float | i
             return pair_pos_statement.valuerecord1.xAdvance
 
     return 0
+
+# === .glif SETTERS ===
 
 def move_glyph(glyph_name: str, ufo_dir: Path, x: int, y: int, move_points: bool = True, move_anchors: bool = True, move_width: bool = False) -> int:
     """
