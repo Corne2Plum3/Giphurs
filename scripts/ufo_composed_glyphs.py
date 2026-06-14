@@ -562,12 +562,16 @@ def parse_composed_glyph_csv_line(line: str, index: int | None = None) -> Compos
         return None
 
     # Value check (params check columns 3 and 4 are done in their respective class)
+    if data[1].strip() != "" and data[1].strip() not in ['100', '400', '1000']:
+        _log_fail(f'Unsupported weight: "{data[1].strip()}"', index)
+        return None
+
     if not data[2].isnumeric():
-        _log_fail(f'Invalid style value: "{data[1]}" is not a number.', index)
+        _log_fail(f'Invalid style value: "{data[2]}" is not a number.', index)
         return None
 
     name: str = data[0]
-    weight: str | None = None if data[1].strip() == "" else data[1]
+    weight: str | None = None if data[1].strip() == "" else data[1].strip()
     styles: int = int(data[2])
     category: str = data[3].upper()[0:]
     glyphs: list[str] = [g for g in data[6:] if len(g) >= 1]
@@ -634,7 +638,7 @@ def parse_composed_glyph_csv(csv_file: Path, weight: str | None, styles: int, fi
                 if cg is None:  # invalid line -> parse_composed_glyph_csv_line prints warning message
                     #logger.debug(f'Line {line_number} is invalid: skipped')
                     pass
-                elif cg.weight is not None and cg.weight != weight:  # weight check
+                elif (cg.weight is not None) and (cg.weight != weight):  # weight check
                     #logger.debug(f'Line {line_number} failed weight check: {cg.weight} != {weight}: skipped')
                     pass
                 elif not cg.styles & styles:  # style check
@@ -734,7 +738,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Generate .glif files from a CSV config.')
     parser.add_argument('csv_config', type=str, help='List of glyphs as CSV file.')
     parser.add_argument('ufo_dir', type=str, help='UFO dir to write.')
-    parser.add_argument('weight', type=int, help='100 = Thin ; 400 = Regular ; 100 = ExtraBlack', choices=[100, 400, 1000])
+    parser.add_argument('weight', type=str, help='100 = Thin ; 400 = Regular ; 100 = ExtraBlack', choices=['100', '400', '1000'])
     parser.add_argument('style', type=int, help='1 = non-italic ; 2 = italic', choices=[1, 2])
 
     # Check args values
