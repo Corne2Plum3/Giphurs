@@ -5,7 +5,8 @@ FONT_NAME := Giphurs
 
 # Paths (without '/' for directories!)
 UFO_DIR := ./sources
-
+UFO_COMPOSED_SCRIPT := "scripts/ufo_composed_glyphs.py"
+UFO_COMPOSED_CSV := "scripts/composed_glyphs.csv"
 UFO_DIGITS_GLYPHS_SCRIPT := "scripts/ufo_digits_glyphs.py"
 UFO_USE_TYPO_METRICS_SCRIPT := "scripts/ufo_use_typo_metrics.py"
 
@@ -39,13 +40,14 @@ proof: fonts/
 tests: fonts/
 	./scripts/tests.sh
 
-# build composed glyphs (accented + composite)
+# build composed glyphs (accented + composite + digits)
 ufo_composed_glyphs: scripts/ sources/
-	NON_ITALIC_UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null | grep -v "Italic"); \
-    for ufo in $$NON_ITALIC_UFO_FILES; do python3 scripts/ufo_composed_glyphs.py scripts/composed_glyphs.csv $${ufo} 1; done
-	ITALIC_UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null | grep "Italic"); \
-	for ufo in $$ITALIC_UFO_FILES; do python3 scripts/ufo_composed_glyphs.py scripts/composed_glyphs.csv $${ufo} 2; done
-	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
+	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_COMPOSED_CSV) $(UFO_DIR)/$(FONT_NAME)-Thin.ufo 100 1
+	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_COMPOSED_CSV) $(UFO_DIR)/$(FONT_NAME)-ThinItalic.ufo 100 2
+	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_COMPOSED_CSV) $(UFO_DIR)/$(FONT_NAME)-Regular.ufo 400 1
+	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_COMPOSED_CSV) $(UFO_DIR)/$(FONT_NAME)-Italic.ufo 400 2
+	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_COMPOSED_CSV) $(UFO_DIR)/$(FONT_NAME)-ExtraBlack.ufo 1000 1
+	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_COMPOSED_CSV) $(UFO_DIR)/$(FONT_NAME)-ExtraBlackItalic.ufo 1000 2
 
 # build number based glyphs
 ufo_digits_glyphs: sources/

@@ -529,7 +529,7 @@ def parse_composed_glyph_csv_line(line: str, index: int | None = None) -> Compos
     '''
         Converts a string with value separated by commas into a `Composed_Glyph` object (`Accented_Glyph` or `Composite_Glyph`).
         
-        A line should look like this: `Name,Styles,Category,Param_1,Param_2,Glyph_1,Glyph_2,Glyph_3,Glyph_4,...`
+        A line should look like this: `Name,Weight,Styles,Category,Param_1,Param_2,Glyph_1,Glyph_2,Glyph_3,Glyph_4,...`
         * `Name`: name of the composed glyph (`str`)
         * `Weight`: weight where this line applies (`100`, `400` and `1000`). Keep empty for all.
         * `Styles`: styles where this line applies. `1` = normal ; `2` = italic ; `3` = both
@@ -548,7 +548,7 @@ def parse_composed_glyph_csv_line(line: str, index: int | None = None) -> Compos
             `Accented_Glyph` or `Composite_Glyph` depending of the `Category` field.
     '''
 
-    def log_fail(msg: str, index: int | None):
+    def _log_fail(msg: str, index: int | None):
         '''Logging when returning None because of invalid value.'''
         if index is None:
             logger.warning(f'Failed to parse line "{line}": {msg}')
@@ -558,26 +558,26 @@ def parse_composed_glyph_csv_line(line: str, index: int | None = None) -> Compos
     data: list[str] = line.split(',')
 
     if len(data) < 7:  # Check column count
-        log_fail('Not enough columns.', index)
+        _log_fail('Not enough columns.', index)
         return None
 
     # Value check (params check columns 3 and 4 are done in their respective class)
     if not data[2].isnumeric():
-        log_fail(f'Invalid style value: "{data[1]}" is not a number.', index)
+        _log_fail(f'Invalid style value: "{data[1]}" is not a number.', index)
         return None
 
     name: str = data[0]
-    weight: str | None = None if data[1] == "" else data[1]
+    weight: str | None = None if data[1].strip() == "" else data[1]
     styles: int = int(data[2])
     category: str = data[3].upper()[0:]
     glyphs: list[str] = [g for g in data[6:] if len(g) >= 1]
 
     if category == 'A':  # Accented glyphs
         if not data[4].isnumeric():
-            log_fail(f'Invalid param value at column [4]: "{data[4]}" is not a number', index)
+            _log_fail(f'Invalid param value at column [4]: "{data[4]}" is not a number', index)
             return None
         if not data[5].isnumeric():
-            log_fail(f'Invalid param value at column [5]: "{data[5]}" is not a number', index)
+            _log_fail(f'Invalid param value at column [5]: "{data[5]}" is not a number', index)
             return None
         left_overflow: bool = bool(int(data[4]))
         right_overflow: bool = bool(int(data[5]))
@@ -585,7 +585,7 @@ def parse_composed_glyph_csv_line(line: str, index: int | None = None) -> Compos
     
     if category == 'C':  # Composite glyph
         if not data[4].isnumeric():
-            log_fail(f'Invalid param value at column [4]: "{data[4]}" is not a number', index)
+            _log_fail(f'Invalid param value at column [4]: "{data[4]}" is not a number', index)
             return None
         copy_anchors: bool = bool(int(data[4]))
         y_offset: int = int(data[5]) if data[5].isnumeric() else 0
@@ -593,10 +593,10 @@ def parse_composed_glyph_csv_line(line: str, index: int | None = None) -> Compos
 
     if category == 'K':
         if not data[4].isnumeric():
-            log_fail(f'Invalid param value at column [4]: "{data[4]}" is not a number', index)
+            _log_fail(f'Invalid param value at column [4]: "{data[4]}" is not a number', index)
             return None
         if not data[5].isnumeric():
-            log_fail(f'Invalid param value at column [5]: "{data[5]}" is not a number', index)
+            _log_fail(f'Invalid param value at column [5]: "{data[5]}" is not a number', index)
             return None
         x_kern: int = int(data[4])
         y_kern: int = int(data[5])
@@ -604,13 +604,13 @@ def parse_composed_glyph_csv_line(line: str, index: int | None = None) -> Compos
         return Single_Glyph_Custom_Kern(name, weight, styles, base, x_kern, y_kern)
 
     # Unknown category
-    log_fail(f'Invalid category at column [2]: "{category}"', index)
+    _log_fail(f'Invalid category at column [3]: "{category}"', index)
     return None
 
 
 
 
-def parse_composed_glyph_csv(csv_file: Path, weight: str, styles: int, first_line_number: int = 1) -> list[Composed_Glyph]:
+def parse_composed_glyph_csv(csv_file: Path, weight: str | None, styles: int, first_line_number: int = 1) -> list[Composed_Glyph]:
     '''
         Read an entire CSV file describing composed glyphs (see `parse_composed_glyph_csv_line()`).
         This function handles logging. 
@@ -632,10 +632,13 @@ def parse_composed_glyph_csv(csv_file: Path, weight: str, styles: int, first_lin
             if line_number >= first_line_number:
                 cg: Composed_Glyph | None = parse_composed_glyph_csv_line(line.strip(), line_number + 1)
                 if cg is None:  # invalid line -> parse_composed_glyph_csv_line prints warning message
+                    #logger.debug(f'Line {line_number} is invalid: skipped')
                     pass
                 elif cg.weight is not None and cg.weight != weight:  # weight check
+                    #logger.debug(f'Line {line_number} failed weight check: {cg.weight} != {weight}: skipped')
                     pass
                 elif not cg.styles & styles:  # style check
+                    #logger.debug(f'Line {line_number} failed style check: {cg.styles}&{styles} = {cg.styles & styles}: skipped')
                     pass  # nothing to do, skip the line
                 elif cg.name in cg_list_names.keys():  # duplicate glyph check
                     logger.warning(f'"{csv_file}": line {line_number} will be ignored, "{cg.name}" is already defined at line {cg_list_names[cg.name]}')
@@ -649,7 +652,7 @@ def _build_composed_glyph_from_csv_worker(cg: Composed_Glyph, ufo_dir: Path) -> 
     '''Subfunction of `build_composed_glyph_from_csv()`'''
     return cg.generate_glif(ufo_dir)
 
-def build_composed_glyph_from_csv(csv_file: Path, ufo_dir: Path, weight: str, styles: int, processes_count: int = 1) -> int:
+def build_composed_glyph_from_csv(csv_file: Path, ufo_dir: Path, weight: str | None, styles: int, processes_count: int = 1) -> int:
     '''
         Builds composed glyphs (.glif) from a CSV definition inside an UFO directory. Overwrites existing .glif files.
 
@@ -693,6 +696,7 @@ def build_composed_glyph_from_csv(csv_file: Path, ufo_dir: Path, weight: str, st
     
     max_priority: int = cg_list[0].priority
     logger.info(f'Found {total_glyphs} glyphs inside "{csv_file}".')
+    logger.info(f'{processes_count} processes will be used.')
     error_count: int = 0
     with tqdm(total=total_glyphs) as progress_bar: 
         for priority in reversed(range(max_priority + 1)):
@@ -730,6 +734,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Generate .glif files from a CSV config.')
     parser.add_argument('csv_config', type=str, help='List of glyphs as CSV file.')
     parser.add_argument('ufo_dir', type=str, help='UFO dir to write.')
+    parser.add_argument('weight', type=int, help='100 = Thin ; 400 = Regular ; 100 = ExtraBlack', choices=[100, 400, 1000])
     parser.add_argument('style', type=int, help='1 = non-italic ; 2 = italic', choices=[1, 2])
 
     # Check args values
@@ -747,5 +752,5 @@ if __name__ == '__main__':
         exit(1)
 
     # Run
-    exit_code: int = build_composed_glyph_from_csv(Path(args.csv_config), Path(args.ufo_dir), args.style, PROCESSES_COUNT)
+    exit_code: int = build_composed_glyph_from_csv(Path(args.csv_config), Path(args.ufo_dir), args.weight, args.style, PROCESSES_COUNT)
     exit(1 if exit_code == -1 else 0)
