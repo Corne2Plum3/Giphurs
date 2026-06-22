@@ -31,7 +31,7 @@ def add_component(glif_xml_tree: ET.ElementTree,
                   x_scale: float = 1.0,
                   y_scale: float = 1.0) -> ET.ElementTree | None:
     '''
-    Adds a glyph as `<component>` to a .glif XML representation. Do NOT copy anchors.
+    Adds a glyph as `<component>` to a .glif XML representation. Does NOT copy anchors.
 
     Args:
         glif_xml_tree: output of `ET.parse()` from the .glif where to add the src glyph.

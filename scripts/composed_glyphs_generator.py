@@ -1,5 +1,4 @@
 import argparse
-from math import pi
 from logger import configure_logging
 from pathlib import Path
 import sys
@@ -10,10 +9,6 @@ CSV_HEADER: str = 'Glyphname,Styles,Category,Left overflow | Anchors,Right overf
 
 DIGITS_NAMES: list[str] = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 logger = configure_logging()
-
-ITALIC_SLANT    : float = 10 * pi / 180  # slant to the RIGHT in radians (the "*pi/180" converts degrees to radians)
-ITALIC_X_OFFSET : int   = -130  # move to the right some italic glyphs
-
 
 # === INTERNAL TOOLS ===
 
@@ -250,19 +245,38 @@ def get_csv_fractions() -> list[str]:
 
 def get_csv_digits() -> list[str]:
     '''Write CSV lines to generate .pnum and .tnum alternates of digits.'''
-    PNUM_KERN = {'100': 140, '400': 100, '1000': 70}
 
     csv_lines: list[str] = []
     
     for digit_value, digit_name in enumerate(DIGITS_NAMES):
-        for suffix in _get_all_digits_alternates_suffixes(digit_value):
-                # pnum
-                for weight, kern in PNUM_KERN.items():
-                    pnum_glyph_name: str = digit_name + suffix + '.pnum'
-                    csv_lines.append(f'{pnum_glyph_name},{weight},3,K,{kern},{kern},{digit_name}')
-                # tnum (only works because the digits are .tnum by default !!)
-                tnum_glyph_name: str = digit_name + suffix + '.tnum'
-                csv_lines.append(f'{tnum_glyph_name},,3,C,1,0,{digit_name}')
+        for alt_suffix in _get_all_digits_alternates_suffixes(digit_value):
+            # pnum
+            pnum_glyph_name: str = digit_name + alt_suffix + '.pnum'
+            csv_lines.append(f'{pnum_glyph_name},,3,P,1,{digit_value},{digit_name + alt_suffix}')
+            # tnum (only works because the digits are .tnum by default !!)
+            tnum_glyph_name: str = digit_name + alt_suffix + '.tnum'
+            csv_lines.append(f'{tnum_glyph_name},,3,T,1,,{digit_name + alt_suffix}')
+    return csv_lines
+
+def get_csv_small_digits() -> list[str]:
+    '''Write CSV lines to generate .superior, .subscript, .numr and .dnom (+ .pnum, .tnum) alternates of digits.'''
+    Y_OFFSET = {'.subscript': -988, '.numr': -188, '.dnom': -810}  # compared to .superior
+    
+    csv_lines: list[str] = []
+    
+    for digit_value, digit_name in enumerate(DIGITS_NAMES):
+        for alt_suffix in _get_all_digits_alternates_suffixes(digit_value):
+            # .superior.pnum
+            csv_lines.append(f'{digit_name + alt_suffix + '.superior.pnum'},,3,P,0,{digit_value},{digit_name + alt_suffix + '.superior'}')
+            # .superior.tnum
+            csv_lines.append(f'{digit_name + alt_suffix + '.superior.tnum'},,3,T,0,,{digit_name + alt_suffix + '.superior'}')
+            for y_suffix, y_offset in Y_OFFSET.items():  # .subscript, .numr and .dnom
+                # (.subscript/.numr/.dnom)
+                csv_lines.append(f'{digit_name + alt_suffix + y_suffix},,3,C,0,{y_offset},{digit_name + alt_suffix + '.superior'}')
+                # (.subscript/.numr/.dnom).pnum
+                csv_lines.append(f'{digit_name + alt_suffix + y_suffix + '.pnum'},,3,C,0,{y_offset},{digit_name + alt_suffix + '.superior.pnum'}')
+                # (.subscript/.numr/.dnom).tnum
+                csv_lines.append(f'{digit_name + alt_suffix + y_suffix + '.tnum'},,3,C,0,{y_offset},{digit_name + alt_suffix + '.superior.tnum'}')
     return csv_lines
 
 # === ENTRY POINT ===
@@ -273,6 +287,7 @@ if __name__ == '__main__':
     parser.add_argument('csv_file', type=str, help="Composed glyph CSV to update.")
     parser.add_argument('--fractions', action='store_true', help="Generate CSV lines for fractions.")
     parser.add_argument('--digits', action='store_true', help="Generate CSV lines for .pnum and .tnum digits.")
+    parser.add_argument('--small_digits', action='store_true', help="Generate CSV lines for .superior, .subscript, .numr and .dnom digits.")
     args = parser.parse_args()
     if args.csv_file is None:
         logger.error(f'{sys.argv[0]}: CSV file not given.')
@@ -285,6 +300,8 @@ if __name__ == '__main__':
         new_lines += get_csv_fractions()
     if args.digits:
         new_lines += get_csv_digits()
+    if args.small_digits:
+        new_lines += get_csv_small_digits()
 
     # Update file
     if len(new_lines) != 0:
