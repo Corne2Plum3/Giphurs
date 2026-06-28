@@ -5,7 +5,7 @@ import sys
 
 # === CONSTANTS (common to all) ===
 
-CSV_HEADER: str = 'Glyphname,Styles,Category,Left overflow | Anchors,Right overflow | -,Glyph 1,Glyph 2,Glyph 3,Glyph 4'
+CSV_HEADER: str = 'Glyphname,Weight,Styles,Category,Param. 1,Param. 2,Glyph 1,Glyph 2,Glyph 3,Glyph 4'
 
 DIGITS_NAMES: list[str] = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 logger = configure_logging()
@@ -285,6 +285,7 @@ if __name__ == '__main__':
     # Read args
     parser = argparse.ArgumentParser(description="Generate lines for composed glyphs CSV file for fractions glyphs into stdin.")
     parser.add_argument('csv_file', type=str, help="Composed glyph CSV to update.")
+    parser.add_argument('--all', action='store_true', help="Generate all known CSV lines by the script.")
     parser.add_argument('--fractions', action='store_true', help="Generate CSV lines for fractions.")
     parser.add_argument('--digits', action='store_true', help="Generate CSV lines for .pnum and .tnum digits.")
     parser.add_argument('--small_digits', action='store_true', help="Generate CSV lines for .superior, .subscript, .numr and .dnom digits.")
@@ -296,11 +297,11 @@ if __name__ == '__main__':
 
     # Get lines to write
     new_lines: list[str] = []
-    if args.fractions:
+    if args.all or args.fractions:
         new_lines += get_csv_fractions()
-    if args.digits:
+    if args.all or args.digits:
         new_lines += get_csv_digits()
-    if args.small_digits:
+    if args.all or args.small_digits:
         new_lines += get_csv_small_digits()
 
     # Update file

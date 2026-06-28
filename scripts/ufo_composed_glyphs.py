@@ -161,7 +161,7 @@ def parse_composed_glyph_csv(csv_file: Path, weight: str | None, styles: int, fi
     logger.debug(f'Parsed {len(cg_list)} composed glyphs from "{csv_file}".')
     return cg_list
 
-def build_composed_glyph_from_csv(csv_file: Path, ufo_dir: Path, weight: str, style: int, processes_count: int = 1) -> int:
+def build_composed_glyph_from_csv(csv_file: Path | list[Path], ufo_dir: Path, weight: str, style: int, processes_count: int = 1) -> int:
     '''
         Builds composed glyphs (.glif) from a CSV definition inside an UFO directory. Overwrites existing .glif files.
 
@@ -172,7 +172,7 @@ def build_composed_glyph_from_csv(csv_file: Path, ufo_dir: Path, weight: str, st
         It supports multiprocessing (using `ProcessPoolExecutor`) when requested via `processes_count`.
 
         Args:
-            csv_file: Path to the CSV file containing composed glyph definitions.
+            csv_file: Path to the CSV file(s) containing composed glyph definitions.
             ufo_dir: The base directory where the resulting `.glif` files (UFO components) will be written.
             weight: `100` (Thin), `400` (Regular), `1000` (ExtraBlack)
             style: `1` = non-italic, `2` = italic
@@ -190,7 +190,14 @@ def build_composed_glyph_from_csv(csv_file: Path, ufo_dir: Path, weight: str, st
         return -1
     
     # Read CSV
-    cg_list: list[Composed_Glyph] = parse_composed_glyph_csv(csv_file, weight, style, 2)  # priority is 0 by default
+    cg_list: list[Composed_Glyph] = []
+    if isinstance(csv_file, list):  # several files
+        for c in csv_file:
+            logger.info(f'Reading "{c}"...')
+            cg_list += parse_composed_glyph_csv(c, weight, style, 2)
+    else:  # 1 file
+        logger.info(f'Reading "{csv_file}"...')
+        cg_list = parse_composed_glyph_csv(csv_file, weight, style, 2)  # priority is 0 by default
     if len(cg_list) == 0:
         logger.info('No glyph has been generated, nothing to build.')
         return 0
@@ -240,10 +247,10 @@ if __name__ == '__main__':
 
     # Read input args
     parser = argparse.ArgumentParser(description='Generate .glif files from a CSV config.')
-    parser.add_argument('csv_config', type=str, help='List of glyphs as CSV file.')
     parser.add_argument('ufo_dir', type=str, help='UFO dir to write.')
     parser.add_argument('weight', type=str, help='100 = Thin ; 400 = Regular ; 100 = ExtraBlack', choices=['100', '400', '1000'])
     parser.add_argument('style', type=int, help='1 = non-italic ; 2 = italic', choices=[1, 2])
+    parser.add_argument('csv_config', type=str, nargs='+', help='List(s) of glyphs as CSV file.')
 
     # Check args values
     try:
@@ -252,13 +259,15 @@ if __name__ == '__main__':
         logger.error(err)
         print(parser.print_help())
         exit(1)
-    if not Path(args.csv_config).exists():
-        logger.error(f'CSV config not found: "{args.csv_config}"')
-        exit(1)
+    for csv_file in args.csv_config:
+        if not Path(csv_file).exists():
+            logger.error(f'CSV config not found: "{args.csv_config}"')
+            exit(1)
     if not Path(args.ufo_dir).exists():
         logger.error(f'UFO not found: "{args.ufo_dir}"')
         exit(1)
 
     # Run
-    exit_code: int = build_composed_glyph_from_csv(Path(args.csv_config), Path(args.ufo_dir), args.weight, args.style, PROCESSES_COUNT)
+    csv_files: list[Path] = [Path(f) for f in args.csv_config]
+    exit_code: int = build_composed_glyph_from_csv(csv_files, Path(args.ufo_dir), args.weight, args.style, PROCESSES_COUNT)
     exit(1 if exit_code == -1 else 0)
