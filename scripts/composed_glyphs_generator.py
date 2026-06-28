@@ -16,7 +16,7 @@ def _get_all_digits_alternates_suffixes(digit_1: int, digit_2: int | None = None
     '''
         Returns all alternates suffixes for the given digit(s).
         
-        If there's only 1 digit, a list of string is returned.
+        If there's only 1 digit or both digits are the same, a list of string is returned.
 
         If there are 2 digits, a dict is returned: each key is a suffix, mapped to a tuple with the suffixes of digit_1 and digit_2.
         
@@ -47,7 +47,7 @@ def _get_all_digits_alternates_suffixes(digit_1: int, digit_2: int | None = None
 
     
     # 1 digit
-    if digit_2 is None:
+    if digit_2 is None or digit_1 == digit_2:
         alternate_list_1d: list[str] = []
         for ss in [''] + (DIGITS_SS_LIST[digit_1] if digit_1 in DIGITS_SS_LIST else []):
             for cv in [''] + DIGITS_CV_LIST[digit_1]:
@@ -279,6 +279,72 @@ def get_csv_small_digits() -> list[str]:
                 csv_lines.append(f'{digit_name + alt_suffix + y_suffix + '.tnum'},,3,C,0,{y_offset},{digit_name + alt_suffix + '.superior.tnum'}')
     return csv_lines
 
+def get_csv_circled_number() -> list[str]:
+    # Name of the glyphs (index = digit value)
+    CIRCLED_NAMES       : list[str] = [ 'uni24EA' ] + [ 'uni' + hex(0x2460 + i).upper()[2:] for i in range(20) ]  # 0-20
+    BLACK_CIRCLE_NAMES  : list[str] = [ 'uni24FF' ] + [ 'uni' + hex(0x2776 + i).upper()[2:] for i in range(10) ] + [ 'uni' + hex(0x24EB + i).upper()[2:] for i in range(10) ]  # 0-20
+    DOUBLE_CIRCLE_NAMES : list[str] = [ '' ] + [ 'uni' + hex(0x24F5 + i).upper()[2:] for i in range(10) ]  # 1-10
+    
+    # Bases (the circle)
+    CIRCLED_BASE      : str = 'uni25EF'
+    BLACK_CIRCLE_BASE : str = 'H18533'
+    DOUBLE_CIRCLE_BASE: str = 'double_circle_empty'
+
+    csv_lines: list[str] = []
+
+    for n in range(0, 21):  # circle 0-20
+        t: int = n // 10  # tens
+        u: int = n % 10  # units
+        alt_suffixes = _get_all_digits_alternates_suffixes(t if t != 0 else u, u if t != 0 else None)
+        if isinstance(alt_suffixes, list):  # 1 digit (u)
+            for alt_suffix in alt_suffixes:
+                du = DIGITS_NAMES[u] + alt_suffix + '.superior' 
+                if n < 10:
+                    csv_lines.append(f'{BLACK_CIRCLE_NAMES[n] + alt_suffix},,3,O,1,,{BLACK_CIRCLE_BASE},{du}')
+                else:  # 11, 22, ...
+                    csv_lines.append(f'{BLACK_CIRCLE_NAMES[n] + alt_suffix},,3,O,1,,{BLACK_CIRCLE_BASE},{du},{du}')
+        else:  # 2 digits (t, u)
+            for alt_suffix, alt_suffix_data in alt_suffixes.items():
+                dt = DIGITS_NAMES[t] + alt_suffix_data[0] + '.superior'
+                du = DIGITS_NAMES[u] + alt_suffix_data[1] + '.superior'
+                csv_lines.append(f'{CIRCLED_NAMES[n] + alt_suffix},,3,O,0,,{CIRCLED_BASE},{dt},{du}')
+                
+    for n in range(0, 21):  # black circle 0-20
+        t = n // 10  # tens
+        u = n % 10  # units
+        alt_suffixes = _get_all_digits_alternates_suffixes(t if t != 0 else u, u if t != 0 else None)
+        if isinstance(alt_suffixes, list):  # 1 digit
+            for alt_suffix in alt_suffixes:
+                du = DIGITS_NAMES[u] + alt_suffix + '.superior'
+                if n < 10:
+                    csv_lines.append(f'{BLACK_CIRCLE_NAMES[n] + alt_suffix},,3,O,1,,{BLACK_CIRCLE_BASE},{du}')
+                else:  # 11, 22, ...
+                    csv_lines.append(f'{BLACK_CIRCLE_NAMES[n] + alt_suffix},,3,O,1,,{BLACK_CIRCLE_BASE},{du},{du}')
+        else:  # 2 different digits
+            for alt_suffix, alt_suffix_data in alt_suffixes.items():
+                dt = DIGITS_NAMES[t] + alt_suffix_data[0] + '.superior'
+                du = DIGITS_NAMES[u] + alt_suffix_data[1] + '.superior'
+                csv_lines.append(f'{BLACK_CIRCLE_NAMES[n] + alt_suffix},,3,O,1,,{BLACK_CIRCLE_BASE},{dt},{du}')
+    
+    for n in range(1, 11):  # circle 1-10
+        t = n // 10  # tens
+        u = n % 10  # units
+        alt_suffixes = _get_all_digits_alternates_suffixes(t if t != 0 else u, u if t != 0 else None)
+        if isinstance(alt_suffixes, list):  # 1 digit (u)
+            for alt_suffix in alt_suffixes:
+                du = DIGITS_NAMES[u] + alt_suffix + '.superior' 
+                if n < 10:
+                    csv_lines.append(f'{BLACK_CIRCLE_NAMES[n] + alt_suffix},,3,O,1,,{BLACK_CIRCLE_BASE},{du}')
+                else:  # 11, 22, ...
+                    csv_lines.append(f'{BLACK_CIRCLE_NAMES[n] + alt_suffix},,3,O,1,,{BLACK_CIRCLE_BASE},{du},{du}')
+        else:  # 2 digits (t, u)
+            for alt_suffix, alt_suffix_data in alt_suffixes.items():
+                dt = DIGITS_NAMES[t] + alt_suffix_data[0] + '.superior'
+                du = DIGITS_NAMES[u] + alt_suffix_data[1] + '.superior'
+                csv_lines.append(f'{DOUBLE_CIRCLE_NAMES[n] + alt_suffix},,3,O,0,,{DOUBLE_CIRCLE_BASE},{dt},{du}')
+
+    return csv_lines
+
 # === ENTRY POINT ===
 
 if __name__ == '__main__':
@@ -288,6 +354,7 @@ if __name__ == '__main__':
     parser.add_argument('--all', action='store_true', help="Generate all known CSV lines by the script.")
     parser.add_argument('--fractions', action='store_true', help="Generate CSV lines for fractions.")
     parser.add_argument('--digits', action='store_true', help="Generate CSV lines for .pnum and .tnum digits.")
+    parser.add_argument('--circled_numbers', action='store_true', help="Generate CSV lines for numbers in a circle.")
     parser.add_argument('--small_digits', action='store_true', help="Generate CSV lines for .superior, .subscript, .numr and .dnom digits.")
     args = parser.parse_args()
     if args.csv_file is None:
@@ -303,6 +370,8 @@ if __name__ == '__main__':
         new_lines += get_csv_digits()
     if args.all or args.small_digits:
         new_lines += get_csv_small_digits()
+    if args.all or args.circled_numbers:
+        new_lines += get_csv_circled_number()
 
     # Update file
     if len(new_lines) != 0:

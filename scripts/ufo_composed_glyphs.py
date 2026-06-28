@@ -1,6 +1,7 @@
 import argparse
 from composed_glyphs.accented_glyphs import Accented_Glyph
 from composed_glyphs.composed_glyph import Composed_Glyph
+from composed_glyphs.circled_number_glyph import Circled_Number_Glyph
 from composed_glyphs.composed_glyph_tree import set_glyph_priorities_from_list
 from composed_glyphs.composite_glyph import Composite_Glyph
 from composed_glyphs.proportional_digit_glyph import Proportional_Digit_Glyph
@@ -118,6 +119,12 @@ def parse_composed_glyph_csv_line(line: str, index: int | None = None) -> Compos
         size = int(data[4])
         base = data[6]
         return Tabular_Digit_Glyph(name, weight, styles, size, [base])
+
+    if category == 'O':  # Circled number
+        if not _is_str_an_integer(data[4]):
+            _log_fail(f'Invalid param value at column [4]: "{data[4]}" is not a number', index)
+        unlink_references: bool = bool(int(data[4]))
+        return Circled_Number_Glyph(name, weight, styles, unlink_references, glyphs)
 
     # Unknown category
     _log_fail(f'Invalid category at column [3]: "{category}"', index)

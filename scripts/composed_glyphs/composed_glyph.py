@@ -25,6 +25,7 @@ class Composed_Glyph():
     STYLE_ITALIC: int = 2
     ITALIC_SLANT: float = 10 * pi / 180  # slant to the RIGHT in radians (the "*pi/180" converts degrees to radians)
     SUPS_HEIGHT: int = 858
+    DIGITS_HEIGHT: int = 1480
 
     def __init__(self, name: str, supported_weight: str | None, supported_styles: int, glyphs: list[str]):
         self.name = name
