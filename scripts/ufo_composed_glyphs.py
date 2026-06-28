@@ -1,5 +1,5 @@
 import argparse
-from composed_glyphs.accented_glyphs import Accented_Glyph
+from composed_glyphs.accented_glyph import Accented_Glyph
 from composed_glyphs.composed_glyph import Composed_Glyph
 from composed_glyphs.circled_number_glyph import Circled_Number_Glyph
 from composed_glyphs.composed_glyph_tree import set_glyph_priorities_from_list
