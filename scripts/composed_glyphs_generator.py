@@ -279,7 +279,9 @@ def get_csv_small_digits() -> list[str]:
                 csv_lines.append(f'{digit_name + alt_suffix + y_suffix + '.tnum'},,3,C,0,{y_offset},{digit_name + alt_suffix + '.superior.tnum'}')
     return csv_lines
 
-def get_csv_circled_number() -> list[str]:
+def get_csv_circled_numbers() -> list[str]:
+    '''Write CSV lines to generate numbers in a circle.'''
+    
     # Name of the glyphs (index = digit value)
     CIRCLED_NAMES       : list[str] = [ 'uni24EA' ] + [ 'uni' + hex(0x2460 + i).upper()[2:] for i in range(20) ]  # 0-20
     BLACK_CIRCLE_NAMES  : list[str] = [ 'uni24FF' ] + [ 'uni' + hex(0x2776 + i).upper()[2:] for i in range(10) ] + [ 'uni' + hex(0x24EB + i).upper()[2:] for i in range(10) ]  # 0-20
@@ -345,6 +347,36 @@ def get_csv_circled_number() -> list[str]:
 
     return csv_lines
 
+def get_csv_parenthesis_numbers() -> list[str]:
+    '''Writes CSV lines to generate numbers between ( ).'''
+
+    # Glyph names
+    PARENTHESIS_GLYPHS_NAMES: list[str] = [ '' ] + [ 'uni' + hex(0x2474 + i).upper()[2:] for i in range(20) ]  # 1-20
+    PARENTHESIS_LEFT: str = 'parenleft'
+    PARENTHESIS_RIGHT: str = 'parenright'
+
+    csv_lines: list[str] = []
+
+    for n in range(1, 21):
+        t: int = n // 10  # tens
+        u: int = n % 10  # units
+        alt_suffixes = _get_all_digits_alternates_suffixes(t if t != 0 else u, u if t != 0 else None)
+        if isinstance(alt_suffixes, list):  # 1 digit (u)
+            for alt_suffix in alt_suffixes:
+                du = DIGITS_NAMES[u] + alt_suffix
+                if n < 10:
+                    csv_lines.append(f'{PARENTHESIS_GLYPHS_NAMES[n] + alt_suffix},,3,(,,,{PARENTHESIS_LEFT},{du},{PARENTHESIS_RIGHT}')
+                else:  # 11, 22, ...
+                    csv_lines.append(f'{PARENTHESIS_GLYPHS_NAMES[n] + alt_suffix},,3,(,,,{PARENTHESIS_LEFT},{du},{du},{PARENTHESIS_RIGHT}')
+        else:  # 2 digits (t, u)
+            for alt_suffix, alt_suffix_data in alt_suffixes.items():
+                dt = DIGITS_NAMES[t] + alt_suffix_data[0]
+                du = DIGITS_NAMES[u] + alt_suffix_data[1]
+                csv_lines.append(f'{PARENTHESIS_GLYPHS_NAMES[n] + alt_suffix},,3,(,,,{PARENTHESIS_LEFT},{dt},{du},{PARENTHESIS_RIGHT}')
+
+    return csv_lines
+
+
 # === ENTRY POINT ===
 
 if __name__ == '__main__':
@@ -356,6 +388,7 @@ if __name__ == '__main__':
     parser.add_argument('--digits', action='store_true', help="Generate CSV lines for .pnum and .tnum digits.")
     parser.add_argument('--circled_numbers', action='store_true', help="Generate CSV lines for numbers in a circle.")
     parser.add_argument('--small_digits', action='store_true', help="Generate CSV lines for .superior, .subscript, .numr and .dnom digits.")
+    parser.add_argument('--parenthesis_numbers', action='store_true', help="Generate CSV lines for numbers between ().")
     args = parser.parse_args()
     if args.csv_file is None:
         logger.error(f'{sys.argv[0]}: CSV file not given.')
@@ -371,7 +404,9 @@ if __name__ == '__main__':
     if args.all or args.small_digits:
         new_lines += get_csv_small_digits()
     if args.all or args.circled_numbers:
-        new_lines += get_csv_circled_number()
+        new_lines += get_csv_circled_numbers()
+    if args.all or args.parenthesis_numbers:
+        new_lines += get_csv_parenthesis_numbers()
 
     # Update file
     if len(new_lines) != 0:

@@ -210,6 +210,33 @@ def clean_glyph(glif_xml_tree: ET.ElementTree) -> ET.ElementTree | None:
 
     return tree
 
+def set_glyph_width(glif_xml_tree: ET.ElementTree, width: int) -> ET.ElementTree | None:
+    '''
+        Set the advance width value of a glyph.
+
+        Args:
+        glif_xml_tree: output of `ET.parse()` from the .glif file to clear.
+    
+        Return:
+            A new XML `ElementTree` object, if success, `None` if fail.
+    '''
+    # Copy tree
+    tree: ET.ElementTree = copy.deepcopy(glif_xml_tree)
+
+    # Locate root + create copy
+    root: ET.Element[str] | None = tree.getroot()
+    if root is None:
+        logger.error('Couldn\'t find root of glif_xml_tree')
+        return None
+    
+    # Set advance value
+    if root.find('advance') is None:
+        root.append(ET.Element('advance', {'width': str(width)}))
+    else:
+        root.find('advance').attrib['width'] = str(width)  # pyright: ignore[reportOptionalMemberAccess]
+
+    return tree
+
 # === .glif GETTERS ===
 
 def get_glif_from_name(glyph_name: str, ufo_dir: Path) -> Path | None:

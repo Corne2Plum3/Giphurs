@@ -4,6 +4,7 @@ from composed_glyphs.composed_glyph import Composed_Glyph
 from composed_glyphs.circled_number_glyph import Circled_Number_Glyph
 from composed_glyphs.composed_glyph_tree import set_glyph_priorities_from_list
 from composed_glyphs.composite_glyph import Composite_Glyph
+from composed_glyphs.parenthesis_number_glyph import Parenthesis_Number_Glyph
 from composed_glyphs.proportional_digit_glyph import Proportional_Digit_Glyph
 from composed_glyphs.tabular_digit_glyph import Tabular_Digit_Glyph
 from concurrent.futures import ProcessPoolExecutor
@@ -119,6 +120,9 @@ def parse_composed_glyph_csv_line(line: str, index: int | None = None) -> Compos
         size = int(data[4])
         base = data[6]
         return Tabular_Digit_Glyph(name, weight, styles, size, [base])
+
+    if category == '(':
+        return Parenthesis_Number_Glyph(name, weight, styles, glyphs)
 
     if category == 'O':  # Circled number
         if not _is_str_an_integer(data[4]):
