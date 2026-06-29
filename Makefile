@@ -9,7 +9,6 @@ UFO_COMPOSED_GENERATOR_SCRIPT := "scripts/composed_glyphs_generator.py"
 UFO_COMPOSED_SCRIPT := "scripts/ufo_composed_glyphs.py"
 UFO_COMPOSED_CSV_1 := "scripts/composed_glyphs.csv"  # filled by hand
 UFO_COMPOSED_CSV_2 := "scripts/composed_glyphs_generated.csv"  # filled by UFO_COMPOSED_SCRIPT
-UFO_DIGITS_GLYPHS_SCRIPT := "scripts/ufo_digits_glyphs.py"
 UFO_USE_TYPO_METRICS_SCRIPT := "scripts/ufo_use_typo_metrics.py"
 
 # documentaton
@@ -22,8 +21,7 @@ help:
 	@echo "  * make proof        : Creates HTML specimens of the font (in output/ directory) and opens the HTML report in your web browser."
 	@echo "  * make tests        : Runs automated tests (in output/ directory) and opens the HTML report in your web browser."
 	@echo "UFO sources scripts"
-	@echo "  * make ufo_composed_glyphs  : Build accented and composite glyphs in all UFOs. (the UFO files must be opened and exported throught Fontforge after, and accented glyphs has to be already built)."
-	@echo "  * make ufo_digits_glyphs    : Build digits based glyphs (the UFO files must be opened and exported throught Fontforge after)."
+	@echo "  * make ufo_composed_glyphs  : Build all glyphs based on other glyphs across all UFOs (the UFO files must be opened and exported throught Fontforge after, and accented glyphs has to be already built)."
 	@echo "  * make ufo_use_typo_metrics : Enable bit 7 ("use typo metrics") of openTypeOS2Selection in fontinfo.plist"
 
 # make a zip archive of the font folder
@@ -53,16 +51,6 @@ ufo_composed_glyphs: scripts/ sources/
 	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-ExtraBlack.ufo 1000 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
 	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-ExtraBlackItalic.ufo 1000 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
 
-# build number based glyphs
-ufo_digits_glyphs: sources/
-	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 100 $(UFO_DIR)/$(FONT_NAME)-Thin.ufo
-	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 400 $(UFO_DIR)/$(FONT_NAME)-Regular.ufo
-	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 1000 $(UFO_DIR)/$(FONT_NAME)-ExtraBlack.ufo
-	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 100i $(UFO_DIR)/$(FONT_NAME)-ThinItalic.ufo
-	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 400i $(UFO_DIR)/$(FONT_NAME)-Italic.ufo
-	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 1000i $(UFO_DIR)/$(FONT_NAME)-ExtraBlackItalic.ufo
-	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
-
 # edit fontinfo.plist to set the bit 7 of openTypeOS2Selection ("use typo metrics")
 # Note: This is currently automatically run when building fonts
 ufo_use_typo_metrics: sources/
@@ -86,3 +74,5 @@ clean_fonts:
 	rm -rf fonts-backup/
 	mkdir fonts
 	cd fonts/ && mkdir otf ttf variable webfonts
+	cd ..
+	
