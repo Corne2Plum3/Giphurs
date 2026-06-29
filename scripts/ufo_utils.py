@@ -3,9 +3,241 @@ Various useful functions to interact with ufo directories, and more especially t
 
 Note: All glyphs must be located to a folder called "glyphs" to work correctly.   
 """
+import copy
+from logger import configure_logging
 from pathlib import Path
-import sys
 import xml.etree.ElementTree as ET
+from fontTools.feaLib.parser import Parser  # pyright: ignore[reportMissingTypeStubs]
+from fontTools.feaLib.ast import (    # pyright: ignore[reportMissingTypeStubs]
+    Block,
+    FeatureBlock,
+    FeatureFile,
+    GlyphClass,
+    GlyphClassDefinition,
+    GlyphClassName,
+    GlyphName,
+    LookupBlock,
+    LookupReferenceStatement,
+    PairPosStatement,
+)
+logger = configure_logging()
+
+# === .glif XML TREE METHODS ===
+
+def add_component(glif_xml_tree: ET.ElementTree,
+                  base: str,
+                  x_offset: int | None = None,
+                  y_offset: int | None = None,
+                  x_scale: float = 1.0,
+                  y_scale: float = 1.0) -> ET.ElementTree | None:
+    '''
+    Adds a glyph as `<component>` to a .glif XML representation. Does NOT copy anchors.
+
+    Args:
+        glif_xml_tree: output of `ET.parse()` from the .glif where to add the src glyph.
+        base: glyph name to add
+        x_offset: (optional) horizontal offset to apply to the copied glyph (positive value -> right). If not given, will use the x-position of the glyph to add.
+        y_offset: (optional) vertical offset to apply to the copied glyph (positive value -> top). If not given, will use the y-position of the glyph to add.
+        x_scale: (optional) horizontal scale of the glyph. If not given, `1.0` will be used.
+        y_scale: (optional) vertical scale of the glyph. If not given, `1.0` will be used.
+
+    Return:
+        A new(!) XML tree object, ready to be written into a .glif file with xml_tree.write()
+    '''
+
+    # Find root
+    try:
+        output_glif_xml_tree: ET.ElementTree = copy.deepcopy(glif_xml_tree)
+        output_xml_root: ET.Element[str] | None = output_glif_xml_tree.getroot()
+        if output_xml_root is None:
+            logger.error(f'Failed to get root from glif_xml_tree: root is None.')
+            return None
+    except Exception as err:
+        logger.error(f'Failed to get or copy root from glif_xml_tree: {err}')
+        return None
+
+    # Find <outline> (where to write)
+    output_xml_outline: ET.Element[str] | None = output_xml_root.find('outline')
+    if output_xml_outline is None:
+        output_xml_outline = ET.SubElement(output_xml_root, 'outline')
+
+    # New node and place it
+    new_xml_component: ET.Element[str] = ET.Element('component', {'base': base})
+    if x_offset is not None: new_xml_component.attrib['xOffset'] = str(x_offset)
+    if y_offset is not None: new_xml_component.attrib['yOffset'] = str(y_offset)
+    if x_scale != 1.0: new_xml_component.attrib['xScale'] = str(x_scale)
+    if y_scale != 1.0: new_xml_component.attrib['yScale'] = str(y_scale)
+    output_xml_outline.append(new_xml_component)
+
+    return output_glif_xml_tree
+
+def add_glyph_reference_to_sequence(src_glif_xml_tree: ET.ElementTree,
+                                    dst_glif_xml_tree: ET.ElementTree,
+                                    ufo_dir: Path,
+                                    copy_anchors: bool = True,
+                                    replace_all: bool = True,
+                                    x_offset: int = 0,
+                                    y_offset: int = 0) -> ET.ElementTree | None:
+    '''
+    Adds a glyph to a sequence of glyph, at the glif XML level. (to avoid writing file everytime).
+    All of the glyphs needs to be <component> inside <glyph>/<outline> to the kern value to be applied.
+
+    Args:
+        ufo_dir: where both src and dst glyph comes from (for kerning)
+        src_glif_xml_tree: output of `ET.parse()` from the .glif file containing the glyph to copy
+        dst_glif_xml_tree: output of `ET.parse()` from the .glif where to add the src glyph. Can be `None` if empty
+        copy_anchors: if `True`, copy anchors from source glyphs as well
+        replace_all: if `True`, remove outlines and anchors from dst glyph before copy
+        x_offset: horizontal offset to apply to the copied glyph (positive value -> right)
+        y_offset: vertical offset to apply to the copied glyph (positive value -> top)
+
+    Return:
+        A new(!) XML tree object, ready to be written into a .glif file with xml_tree.write()
+    '''
+
+    def _get_components_from_glif_xml_tree(xml_tree: ET.ElementTree) -> list[str]:
+        try:
+            return [node.attrib['base'] for node in xml_tree.getroot().find('outline').findall('component')]  # pyright: ignore[reportOptionalMemberAccess, reportUnknownMemberType, reportAttributeAccessIssue]
+        except Exception as err:
+            logger.warning(f'Failed to get glyphs from dst_glif_xml_tree: {err}')
+        return []
+
+    # Read src and dst input
+    try:
+        src_xml_root: ET.Element[str] | None = src_glif_xml_tree.getroot()
+        if src_xml_root is None:
+            logger.error(f'Failed to get root from src_glif_xml_tree: root is None.')
+            return None
+    except Exception as err:
+        logger.error(f'Failed to get root from src_glif_xml_tree: {err}')
+        return None
+    try:
+        output_glif_xml_tree: ET.ElementTree = copy.deepcopy(dst_glif_xml_tree)
+        output_xml_root: ET.Element[str] | None = output_glif_xml_tree.getroot()
+        if output_xml_root is None:
+            logger.error(f'Failed to get root from dst_glif_xml_tree: root is None.')
+            return None
+    except Exception as err:
+        logger.error(f'Failed to get or copy root from dst_glif_xml_tree: {err}')
+        return None
+
+    src_anchor_list: list[ET.Element] = src_glif_xml_tree.findall('anchor') if copy_anchors else []
+
+    if 'name' not in src_xml_root.attrib:
+        logger.error('Glyph name not found in src_glif_xml_tree.')
+        return None
+    src_glyph_name: str = src_xml_root.attrib['name']
+    if 'name' not in output_xml_root.attrib:
+        logger.error('Glyph name not found in dst_glif_xml_tree.')
+        return None
+    dst_glyph_name: str = output_xml_root.attrib['name']
+
+    dst_glyphs: list[str] = [] if replace_all else _get_components_from_glif_xml_tree(output_glif_xml_tree)
+    dst_last_glyph_name: str | None = None if len(dst_glyphs) == 0 else dst_glyphs[-1]
+
+    # Clear old anchors and outline if replace_all
+    if replace_all:
+        xml_anchor_list: list[ET.Element] = output_glif_xml_tree.findall('anchor')
+        for element in xml_anchor_list:  # delete the already existing ones
+            output_xml_root.remove(element)
+        xml_outline_list: list[ET.Element] = output_glif_xml_tree.findall('outline')
+        for element in xml_outline_list:  # delete the already existing ones
+            output_xml_root.remove(element)
+        ET.SubElement(output_xml_root, 'outline')
+    
+    # Copy the anchors
+    if copy_anchors:
+        for src_anchor in src_anchor_list:
+            dst_anchor_attribs: dict[str, str] = {
+                "x": str(int(src_anchor.attrib["x"]) + x_offset),
+                "y": str(int(src_anchor.attrib["y"]) + y_offset),
+                "name": src_anchor.attrib["name"]
+            }
+            ET.SubElement(output_xml_root, "anchor", dst_anchor_attribs)
+
+    # Copy the outline
+    output_xml_advance: ET.Element | None = output_xml_root.find("advance")
+    if output_xml_advance is None or 'width' not in output_xml_advance.attrib:
+        logger.error(f'<advance> not found in dst_glif_xml_tree.')
+        return None
+    kern: int = 0 if dst_last_glyph_name is None else int(get_kerning(dst_last_glyph_name, src_glyph_name, ufo_dir))
+    new_component_attrib: dict[str, str] = {
+        'base': src_glyph_name,
+        'xOffset': str(x_offset + kern + (0 if replace_all else int(output_xml_advance.attrib['width']))),
+        'yOffset': str(y_offset)
+    }
+    dst_xml_outline: ET.Element | None = output_xml_root.find("outline")
+    if dst_xml_outline is None:  # This shouldn't happen
+        logger.error(f'Somehow couldn\'t find <outline> when copying "{src_glyph_name}" into "{dst_glyph_name}"')
+        return None
+    ET.SubElement(dst_xml_outline, "component", new_component_attrib)
+
+    # Update the advance value
+    new_width: int = int(output_xml_advance.attrib['width']) + kern + get_glyph_metrics(src_glyph_name, ufo_dir)['glyph_width']    
+    output_xml_advance.attrib['width'] = str(new_width)
+
+    return output_glif_xml_tree
+
+def clean_glyph(glif_xml_tree: ET.ElementTree) -> ET.ElementTree | None:
+    '''
+    Clear anchors and outline from a glif as XML.
+
+    Args:
+        glif_xml_tree: output of `ET.parse()` from the .glif file to clear.
+    
+    Return:
+        A new XML `ElementTree` object, if success, `None` if fail.
+    '''
+
+    # Copy tree
+    tree: ET.ElementTree = copy.deepcopy(glif_xml_tree)
+
+    # Locate root + create copy
+    root: ET.Element[str] | None = tree.getroot()
+    if root is None:
+        logger.error('Couldn\'t find root of glif_xml_tree')
+        return None
+    
+    # Clear anchors 
+    for element in root.findall('anchor'):
+       root.remove(element)
+    
+    # Clear outline content
+    outline: ET.Element[str] | None = root.find('outline')
+    if outline is None:
+        outline = ET.SubElement(root, 'outline')
+    outline.clear()
+
+    return tree
+
+def set_glyph_width(glif_xml_tree: ET.ElementTree, width: int) -> ET.ElementTree | None:
+    '''
+        Set the advance width value of a glyph.
+
+        Args:
+        glif_xml_tree: output of `ET.parse()` from the .glif file to clear.
+    
+        Return:
+            A new XML `ElementTree` object, if success, `None` if fail.
+    '''
+    # Copy tree
+    tree: ET.ElementTree = copy.deepcopy(glif_xml_tree)
+
+    # Locate root + create copy
+    root: ET.Element[str] | None = tree.getroot()
+    if root is None:
+        logger.error('Couldn\'t find root of glif_xml_tree')
+        return None
+    
+    # Set advance value
+    if root.find('advance') is None:
+        root.append(ET.Element('advance', {'width': str(width)}))
+    else:
+        root.find('advance').attrib['width'] = str(width)  # pyright: ignore[reportOptionalMemberAccess]
+
+    return tree
+
+# === .glif GETTERS ===
 
 def get_glif_from_name(glyph_name: str, ufo_dir: Path) -> Path | None:
     """
@@ -18,10 +250,14 @@ def get_glif_from_name(glyph_name: str, ufo_dir: Path) -> Path | None:
         The name of the glyph, as str. Returns None if not found.
     """
     # open contents.plist
-    tree: ET.ElementTree[ET.Element[str]] = ET.parse(ufo_dir / 'glyphs' / 'contents.plist')
+    try:
+        tree: ET.ElementTree[ET.Element[str]] = ET.parse(ufo_dir / 'glyphs' / 'contents.plist')
+    except Exception as err:
+        logger.warning(f'Couldn\'t parse {ufo_dir / 'glyphs' / 'contents.plist'}: {err}')
+        return None
     glyphs_dict: ET.Element[str] | None = tree.getroot().find("dict")
     if glyphs_dict is None:
-        print('[WARNING] Couldn\' find <dict> in contents.plist')
+        logger.warning('Couldn\'t find <dict> in contents.plist')
         return None
 
     # find glyph_name
@@ -39,7 +275,7 @@ def get_glif_from_name(glyph_name: str, ufo_dir: Path) -> Path | None:
     if glyph_found:
         return ufo_dir / 'glyphs' / str(string_list[index].text)
     else:
-        print(f"{sys.argv[0]}: WARNING: Glyph not found: {glyph_name}")
+        logger.warning(f'Glyph not found: {glyph_name}')
         return None
 
 def get_glyph_anchor_points(glyph_name: str, ufo_dir: Path) -> dict[str, tuple[int, int]]:
@@ -54,7 +290,11 @@ def get_glyph_anchor_points(glyph_name: str, ufo_dir: Path) -> dict[str, tuple[i
     glif: Path | None = get_glif_from_name(glyph_name, ufo_dir)
     if glif is None:
         return {}
-    xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(glif)
+    try:
+        xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(glif)
+    except Exception as err:
+        logger.warning(f'Couldn\'t parse {glif}: {err}')
+        return {}
     xml_anchor_list: list[ET.Element[str]] = xml_tree.getroot().findall("anchor")
     anchor_dict: dict[str, tuple[int, int]] = {}
     for anchor in xml_anchor_list:
@@ -113,29 +353,33 @@ def get_glyph_points_coordinates(glyph_name: str, ufo_dir: Path) -> list[tuple[i
     glif: Path | None = get_glif_from_name(glyph_name, ufo_dir)
     if glif is None:
         return []
-    xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(glif)
+    try:
+        xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(glif)
+    except Exception as err:
+        logger.warning(f'Couldn\'t parse {glif}: {err}')
+        return []
     xml_outline: ET.Element[str] | None = xml_tree.getroot().find("outline")
     if xml_outline is None:
-        print(f'[WARNING] Couldn\'t find <outline> in "{glif}"')
+        logger.warning(f'Couldn\'t find <outline> in "{glif}"')
         return []
     points_list: list[tuple[int, int]] = []
     for element_index, element in enumerate(xml_outline):
         if element.tag == "contour":
             for point in element.findall("point"):
                 if float(point.attrib["x"]) % 1 != 0.0 or float(point.attrib["y"]) % 1 != 0.0:
-                    print(f'[WARNING] {glif}: non-integer coordinates at element {element_index}: ({point.attrib["x"]}, {point.attrib["y"]})')
+                    logger.warning(f'{glif}: non-integer coordinates at element {element_index}: ({point.attrib["x"]}, {point.attrib["y"]})')
                 points_list.append((int(point.attrib["x"]), int(point.attrib["y"])))
         elif element.tag == "component":
             components_points_list: list[tuple[int, int]] = get_glyph_points_coordinates(element.attrib["base"], ufo_dir)
             x_offset: int = 0
             if "xOffset" in element.attrib:
                 if float(element.attrib['xOffset']) % 1 != 0.0:
-                    print(f'[WARNING] {glif}: non-integer x-offset at element {element_index}: {element.attrib['xOffset']}')
+                    logger.warning(f'{glif}: non-integer x-offset at element {element_index}: {element.attrib['xOffset']}')
                 x_offset = int(element.attrib["xOffset"])
             y_offset: int = 0
             if "yOffset" in element.attrib:
                 if float(element.attrib['yOffset']) % 1 != 0.0:
-                    print(f'[WARNING] {glif}: non-integer y-offset at element {element_index}: {element.attrib['yOffset']}')
+                    logger.warning(f'{glif}: non-integer y-offset at element {element_index}: {element.attrib['yOffset']}')
                 y_offset = int(element.attrib["yOffset"])
             for point in components_points_list:
                 points_list.append((point[0] + x_offset, point[1] + y_offset))
@@ -154,10 +398,14 @@ def get_glyph_width(glyph_name: str, ufo_dir: Path) -> int:
     glif: Path | None = get_glif_from_name(glyph_name, ufo_dir)
     if glif is None:
         return 0
-    xml_tree = ET.parse(glif)
+    try:
+        xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(glif)
+    except Exception as err:
+        logger.warning(f'Couldn\'t parse {glif}: {err}')
+        return 0
     xml_advance: ET.Element[str] | None = xml_tree.getroot().find("advance")
     if xml_advance is None:
-        print(f'[WARNING] {glif}: <advance> tag not found.')
+        logger.warning(f'{glif}: <advance> tag not found.')
         return 0
     return int(xml_advance.attrib["width"])
 
@@ -178,10 +426,14 @@ def get_glyph_xml_points(glyph_name: str, ufo_dir: Path, x_offset: int = 0, y_of
     glif: Path | None = get_glif_from_name(glyph_name, ufo_dir)
     if glif is None:
         return []
-    xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(glif)
+    try:
+        xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(glif)
+    except Exception as err:
+        logger.warning(f'Couldn\'t parse {glif}: {err}')
+        return []
     xml_outline: ET.Element[str] | None = xml_tree.getroot().find("outline")
     if xml_outline is None:
-        print(f'[WARNING] {glif}: <outline> tag not found.')
+        logger.warning(f'{glif}: <outline> tag not found.')
     xml_contour_nodes: list[list[ET.Element[str]]] = []
     for element_index, element in enumerate(xml_outline if xml_outline is not None else []):
         if element.tag == "contour":
@@ -189,7 +441,7 @@ def get_glyph_xml_points(glyph_name: str, ufo_dir: Path, x_offset: int = 0, y_of
             xml_contour_points_with_offset: list[ET.Element[str]] = []
             for point_index, point in enumerate(xml_contour_points):
                 if float(point.attrib["x"]) % 1 != 0.0 or float(point.attrib["y"]) % 1 != 0.0:
-                    print(f'[WARNING] {glif}: non-integer coordinates at element {element_index}, point {point_index}: ({point.attrib["x"]}, {point.attrib["y"]})')
+                    logger.warning(f'{glif}: non-integer coordinates at element {element_index}, point {point_index}: ({point.attrib["x"]}, {point.attrib["y"]})')
                 point.attrib["x"] = str(int(float(point.attrib["x"]) * x_scale) + x_offset)
                 point.attrib["y"] = str(int(float(point.attrib["y"]) * y_scale) + y_offset)
                 xml_contour_points_with_offset.append(point)
@@ -199,18 +451,18 @@ def get_glyph_xml_points(glyph_name: str, ufo_dir: Path, x_offset: int = 0, y_of
             component_x_offset: int = 0
             if "xOffset" in element.attrib:
                 if float(element.attrib['yOffset']) % 1 != 0.0:
-                    print(f'[WARNING] {glif}: non-integer x-offset at element {element_index}: {element.attrib['xOffset']}')
+                    logger.warning(f'{glif}: non-integer x-offset at element {element_index}: {element.attrib['xOffset']}')
                 component_x_offset = int(element.attrib["xOffset"])
             component_y_offset: int = 0
             if "yOffset" in element.attrib:
                 if float(element.attrib['yOffset']) % 1 != 0.0:
-                    print(f'[WARNING] {glif}: non-integer y-offset at element {element_index}: {element.attrib['yOffset']}')
+                    logger.warning(f'{glif}: non-integer y-offset at element {element_index}: {element.attrib['yOffset']}')
                 component_y_offset = int(element.attrib["yOffset"])
             # Missing scale calculation?
             xml_contour_nodes += get_glyph_xml_points(element.attrib["base"], ufo_dir, component_x_offset, component_y_offset)
     return xml_contour_nodes
 
-def get_kerning(glyph_first: str, glyph_second: str, ufo_dir: Path):
+def get_kerning(glyph_first: str, glyph_second: str, ufo_dir: Path) -> float | int:
     """
     Returns the kerning between 2 glyphs by reading the `feature.fea` file.
     Requires a `kern` feature to be defined and containing a kerning lookup. Within the kerning
@@ -225,75 +477,81 @@ def get_kerning(glyph_first: str, glyph_second: str, ufo_dir: Path):
     Returns:
         int
     """
-    # Maybe code would look less awful if using fonttools lib?
+    fea_path: Path = ufo_dir / "features.fea"
+    if not fea_path.exists():
+        logger.warning(f'"{ufo_dir}": features.fea file not found.')
+        return 0
 
-    features_filename = ufo_dir / 'features.fea'
+    # Parse the features.fea file into an Abstract Syntax Tree (AST)
+    parser: Parser = Parser(str(fea_path))
+    feature_file: FeatureFile = parser.parse()
 
-    # Find the table
-    table_name: str | None = None
-    table_found: bool = False
-    with open(features_filename, "r") as features_file:
-        # find the name of the kern table
-        line: str = features_file.readline()
-        while line:
-            if "feature kern" in line:  # feature found
-                while line and not("}" in line) and table_name is None:
-                    line = features_file.readline()
-                    if "lookup" in line:
-                        table_name = line.strip().replace(";", "").split(" ")[1]
-                if table_name is None:
-                    print("[WARNING] No lookup table found in feature kern block")
-                    return 0
-            line = features_file.readline()
-        if table_name is None:
-            print("[WARNING] No feature kern block found")
-            return 0
+    # Pass 1: locate the kern table, all lookups and glyph class
+    glyph_classes: dict[str, GlyphClass] = {}  # @UPPERCASE = [A-Z];
+    lookups: dict[str, LookupBlock] = {}  # lookup LOOKUP_TABLE = {...}
+    feature_kern_block: FeatureBlock | None = None
 
-        # find the kern table
-        features_file.seek(0)  # go back to the beginning
-        line = features_file.readline()
-        while line and not(table_found):
-            if f"lookup {table_name}" in line:
-                table_found = True
+    for statement in feature_file.statements:
+        if isinstance(statement, GlyphClassDefinition):
+            glyph_classes[statement.name] = list(statement.glyphSet())
+            
+        if isinstance(statement, LookupBlock):
+            lookups[statement.name] = statement
+            for sub_statement in statement.statements:
+                if isinstance(statement, GlyphClassDefinition):
+                    glyph_classes[statement.name] = statement.glyphs
+            
+        if isinstance(statement, FeatureBlock) and statement.name == "kern":
+            feature_kern_block = statement
+            for sub_statement in statement.statements:
+                if isinstance(statement, GlyphClassDefinition):
+                    glyph_classes[statement.name] = statement.glyphs
+
+    if feature_kern_block is None:
+        logger.warning('"feature kern" block not found.')
+        return 0
+
+    # Pass 2: Read the kern table and get all pair pos statements
+    def _get_pair_pos_statements_from_block(block: Block) -> list[PairPosStatement]:
+        '''Returns the list of all PairPosStatement inside a Block'''
+        output: list[PairPosStatement] = []
+        for statement in block.statements:
+            if isinstance(statement, PairPosStatement):
+                output.append(statement)
+            if isinstance(statement, LookupReferenceStatement):
+                if statement.lookup == block.name:
+                    logger.error(f'Error with lookup "{block.name}": circular reference.')
+                    return []
+                output += _get_pair_pos_statements_from_block(statement.lookup)
+        return output
+
+    kern_statements: list[PairPosStatement] = []
+    for sub_statement in feature_kern_block.statements:
+        if isinstance(sub_statement, LookupReferenceStatement):
+            actual_block: LookupBlock = lookups.get(sub_statement.lookup.name)
+            if actual_block:
+                kern_statements += _get_pair_pos_statements_from_block(actual_block)
             else:
-                line = features_file.readline()
+                logger.warning(f"Lookup block '{sub_statement.lookup.name}' not found.")
+        if isinstance(sub_statement, PairPosStatement):
+            kern_statements.append(sub_statement)
 
-        if not(table_found):
-            print(f"[WARNING] Kern table '{table_name}' not found.")
-            return 0
+    # Pass 3: Find the kerning value from the list of kern statements
+    def _glyph_in_set(glyph: str, glyph_set: GlyphName | GlyphClass | GlyphClassName) -> bool:
+        if isinstance(glyph_set, GlyphName):
+            return glyph == glyph_set.glyph
+        if isinstance(glyph_set, GlyphClass):
+            return glyph in glyph_set.glyphs
+        # GlyphClassName
+        return glyph in glyph_set.glyphSet()
 
-        # find the classes of the 2 glyphs and the kern
-        line = features_file.readline()  # pointing "lookupflag 0;"
-        line = features_file.readline()  # pointing towards the first class definition
-        glyph_first_classes: list[str] = []
-        glyph_second_classes: list[str] = []
-        while line and not("}" in line):
-            if line.strip().split(" ")[0] == "pos":  # pos value
-                # example: "pos @kc82_first_1 @kc82_second_3 -70;"
-                class_first: str = line.strip().split(" ")[1]
-                class_second: str = line.strip().split(" ")[2]
-                kern_value: int = int(line.strip().split(" ")[3].replace(";", ""))
-                if (class_first in glyph_first_classes) and (class_second in glyph_second_classes):
-                    return kern_value
-                else:
-                    line = features_file.readline()  # next line
-            elif "=" in line:  # new class
-                # first line
-                current_class: str = line.strip().split(" ")[0]
-                glyph_list: str = line.strip().split("=")[1]
-                if (f"\\{glyph_first}" in glyph_list) or (f" {glyph_first}" in glyph_list) or (f"{glyph_first} " in glyph_list):
-                    glyph_first_classes.append(current_class)
-                if (f"\\{glyph_second}" in glyph_list) or (f" {glyph_second}" in glyph_list) or (f"{glyph_second} " in glyph_list):
-                    glyph_second_classes.append(current_class)
-                while not(";" in line):
-                    line = features_file.readline()
-                    if (f"\\{glyph_first}" in glyph_list) or (f" {glyph_first}" in glyph_list) or (f"{glyph_first} " in glyph_list):
-                        glyph_first_classes.append(current_class)
-                    if (f"\\{glyph_second}" in glyph_list) or (f" {glyph_second}" in glyph_list) or (f"{glyph_second} " in glyph_list):
-                        glyph_second_classes.append(current_class)
-                line = features_file.readline()  # next line
+    for pair_pos_statement in kern_statements:
+        if _glyph_in_set(glyph_first, pair_pos_statement.glyphs1) and _glyph_in_set(glyph_second, pair_pos_statement.glyphs2):
+            return pair_pos_statement.valuerecord1.xAdvance
 
-        return 0  # no kerning
+    return 0
+
+# === .glif SETTERS ===
 
 def move_glyph(glyph_name: str, ufo_dir: Path, x: int, y: int, move_points: bool = True, move_anchors: bool = True, move_width: bool = False) -> int:
     """
@@ -312,16 +570,20 @@ def move_glyph(glyph_name: str, ufo_dir: Path, x: int, y: int, move_points: bool
     glif: Path | None = get_glif_from_name(glyph_name, ufo_dir)
     if glif is None:
         return 1
-    xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(glif)
+    try:
+        xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(glif)
+    except Exception as err:
+        logger.warning(f'Couldn\'t parse {glif}: {err}')
+        return 1
     xml_root: ET.Element[str] = xml_tree.getroot()
     for element_index, element in enumerate(xml_root.findall("./*")):
         if element.tag == "advance" and move_width:
             if float(element.attrib["width"]) % 1 != 0.0:
-                print(f'[WARNING] {glif}: non-integer advance value: {element.attrib["width"]})')
+                logger.warning(f'{glif}: non-integer advance value: {element.attrib["width"]})')
             element.attrib["width"] = str(int(element.attrib["width"]) + x)
         elif element.tag == "anchor" and move_anchors:
             if float(element.attrib["x"]) % 1 != 0.0 or float(element.attrib["y"]) % 1 != 0.0:
-                print(f'[WARNING] {glif}: non-integer coordinates at anchor index {element_index}: ({element.attrib["x"]}, {element.attrib["y"]})')
+                logger.warning(f'{glif}: non-integer coordinates at anchor index {element_index}: ({element.attrib["x"]}, {element.attrib["y"]})')
             element.attrib["x"] = str(int(element.attrib["x"]) + x)
             element.attrib["y"] = str(int(element.attrib["y"]) + y)
         elif element.tag == "outline" and move_points:
@@ -330,19 +592,19 @@ def move_glyph(glyph_name: str, ufo_dir: Path, x: int, y: int, move_points: bool
                     for contour_element in outline_element.findall("./*"):
                         if contour_element.tag == "point":
                             if float(contour_element.attrib["x"]) % 1 != 0.0 or float(contour_element.attrib["y"]) % 1 != 0.0:
-                                print(f'[WARNING] {glif}: non-integer coordinates at outline index {element_index} outline {outline_number} : ({contour_element.attrib["x"]}, {contour_element.attrib["y"]})')
+                                logger.warning(f'{glif}: non-integer coordinates at outline index {element_index} outline {outline_number} : ({contour_element.attrib["x"]}, {contour_element.attrib["y"]})')
                             contour_element.attrib["x"] = str(int(contour_element.attrib["x"]) + x)
                             contour_element.attrib["y"] = str(int(contour_element.attrib["y"]) + y)
                 elif outline_element.tag == "component":
                     if "xOffset" in outline_element.attrib:
                         if float(outline_element.attrib['xOffset']) % 1 != 0.0:
-                            print(f'[WARNING] {glif}: non-integer x-offset at component index {element_index}: {outline_element.attrib['xOffset']}')
+                            logger.warning(f'{glif}: non-integer x-offset at component index {element_index}: {outline_element.attrib['xOffset']}')
                         outline_element.attrib["xOffset"] = str(int(outline_element.attrib["xOffset"]) + x)
                     else:
                         outline_element.attrib["xOffset"] = str(x)
                     if "yOffset" in outline_element.attrib:
                         if float(outline_element.attrib['yOffset']) % 1 != 0.0:
-                            print(f'[WARNING] {glif}: non-integer y-offset at component index {element_index}: {outline_element.attrib['yOffset']}')
+                            logger.warning(f'{glif}: non-integer y-offset at component index {element_index}: {outline_element.attrib['yOffset']}')
                         outline_element.attrib["yOffset"] = str(int(outline_element.attrib["yOffset"]) + y)
                     else:
                         outline_element.attrib["yOffset"] = str(y)
@@ -352,7 +614,7 @@ def move_glyph(glyph_name: str, ufo_dir: Path, x: int, y: int, move_points: bool
     try:
         xml_tree.write(glif, encoding="UTF-8", xml_declaration=True)
     except Exception as err:
-        print(f'[ERROR] Failed to save {glif}: {err}')
+        logger.error(f'Failed to save {glif}: {err}')
         return 1
     return 0
 
@@ -369,11 +631,15 @@ def unlink_references(glyph_name: str, ufo_dir: Path) -> int:
     glif: Path | None = get_glif_from_name(glyph_name, ufo_dir)
     if glif is None:
         return 1
-    xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(glif)
+    try:
+        xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(glif)
+    except Exception as err:
+        logger.warning(f'Couldn\'t parse {glif}: {err}')
+        return 1
     xml_root: ET.Element[str] = xml_tree.getroot()
     xml_outline: ET.Element[str] | None = xml_root.find("outline")
     if xml_outline is None:
-        print(f'[ERROR] <outline> not found.')
+        logger.error(f'<outline> not found.')
         return 1
 
     # Find all <components> node
@@ -410,7 +676,7 @@ def unlink_references(glyph_name: str, ufo_dir: Path) -> int:
     try:
         xml_tree.write(glif, encoding="UTF-8", xml_declaration=True)
     except Exception as err:
-        print(f'[ERROR] Failed to save {glif}: {err}')
+        logger.error(f'Failed to save {glif}: {err}')
         return 1
     return 0
 

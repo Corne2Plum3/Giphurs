@@ -94,28 +94,73 @@ All of the font building process is described inside the `build.py` script.
 
 ## UFO tools
 
-### Glyph generators
+### Composed glyph generator
+
+A composed glyph is a glyph that is created using one or several other glyphs. To give some examples, the glyph `IJ` is made of `I` and `J`, the glyph `â` is made of the small letter `a` with a circumflex accent `^` (`uni0302`). More than 60% of the glyphs in the font are composed.
+
+> [!NOTE]
+> Fontforge does include a built-in feature to build accented and composite (sequence of 1 or several glyphs). We do not use them, this isn't enough for our use, for several reasons:
+> * Double-accented glyphs are built from a single accented glyph. This might be an issue as anchors aren't copied, giving less flexibility on how to place accents.
+> * It is not possible to use custom glyphs when building an accented or composed glyphs: those settings are lost when exporting to UFO.
+> * We're using custom scripts to generate some digits based glyphs, such as proportional figures, subscript variants of the font, or numbers in a circle (`uni2468` for example)
+
+A script to generate all of those fonts called `ufo_composed_glyphs.py` exists to create all of those glyphs inside the UFOs from `sources/`. This file requires one or several CSV file to tell what to build. The script read the given CSV files and updates the UFOs file, automatically resolving dependencies and detecting circular references.
+
+> [!IMPORTANT]
+> In this project, 2 CSV files are used:
+> * `composed_glyphs.csv` for glyphs that should be definied manally, mostly accented and composite glyphs.
+> * `composed_glyphs_generated.csv` for glyphs defined by the `composed_glyphs_generator.py`, commonly digit-based glyphs. **Do NOT manally modify this file!!**.
+
+### CSV config file
+
+The CSV files are using a comma `,` separator and have the following fields (from left to right):
+* `Glyphname`: name of the glyph to generate
+* `Weight`: in which weight this line applies. Can be `100`, `400`, `1000`, or empty to support all weights. 
+* `Styles`: in which styles this line applies. `1` = normal ; `2` = italic ; `3` = both
+* `Category`: type of the glyph to generate (see table below)
+* `Param. 1` and `Param. 2`: depends of the category
+* `Glyph 1`, `Glyph 2`, ...: the glyphs to use to build the glyph `Glyphname`.
+
+The possible values for `Category` are given in the table below:
+
+| Category | Python class | Description | Param. 1 | Param. 2 | Supports anchors |
+|----|----|----|----|----|----|
+| `A` | `Accented_Glyph` | Glyph with one or several accents | Left overflow | Right overflow | Yes |
+| `C` | `Composite_Glyph` | Sequence of one or several glyph | Copy anchors | y-offset | Yes |
+| `P` | `Proportional_Digit_Glyph` | Digit with a kerning matching the shape of the glyph (`pnum`) | Size | Digit value | No |
+| `T` | `Accented_Glyph_Glyph` | Digit with a fixed width (`tnum`) | Size | - | No
+| `O` | `Circled_Number_Glyph` | Number in a circle *(letters are not supported)* | Unlink references | - | No |
+| `.` | `Full_Stop_Number_Glyph` | Number followed by a period. | - | - | No |
+| `(` | `Parenthesis_Number_Glyph` | Number between parenthesis | - | - | No |
+
+For the parameters:
+* **Left overflow** (`0` or `1`): if set to `0`, forces the left kern value to be at minimum 0.
+* **Right overflow** (`0` or `1`): if set to `0`, forces the right kern value to be at minimum 0.
+* **Copy anchors** (`0` or `1`): if set to `1`, copy all anchors of the copied glyphs. Note that copying several times the same anchor might give unexcepted results.
+* **y-offset** (`int`): how many units to move the generated glyph vertically (positive value = to the top)
+* **Size** (`0` or `1`): `0` = exponent (`.superior` digit) ; `1` = normal sized digit
+* **Digit value** (`0`-`9`): value of the digit
+* **Unlink references** (`0` or `1`): if set to `1`, replace all references to the glyphs by their points.
+
+> [!WARNING]
+> The glyph to generate must already exists inside the UFO (as `.glif` file) to the script to work.
+
+> [!TIP]
+> To clone a single glyph, it's recommended to use the `C` (composite) category. You can then just put one glyph, the glyph you want to copy. Set the **y-offset** parameter to 0, and for the **Copy anchors**, it depends of your needs.
+
+### Usage
+
+It is best used with the `make ufo_composed_glyph` command from the `Makefile` in the project's root folder. It will:
+1. Update `composed_glyphs_generated.csv`
+2. Edit the UFOs files inside `sources/`.
 
 > [!CAUTION]
 > After using one of these scripts, open ALL of the UFO files using Fontforge to regenerate the UFO with the export feature.
 
-* `ufo_accented_glyphs.py` : generates accented glyph(s) inside a UFO file (for example `À` or `é`), if the glyphs components are given inside `accented_glyphs.csv`, which contains the following fields:
-    * *Name*: name of the glyph.
-    * *Styles*: which style the line applies. `1` = non-italic, `2` = italic, `3` = both.
-    * *Allow left overflow*: if set to `0`, the left padding of the glyph will be `0` if an accent would go out of the left limit of the font.
-    * *Allow right overflow*: same than above but with the right side of the glyph.
-    * *Base*: glyph to use as base. By default, the generated glyph will have the same width than the base.
-    * *Comp. 2*, *Comp. 3*, *Comp. 4*: accents to use, in order.
-* `ufo_composite_glyphs.py`: generates a glyph based on the sequence of one or several glyphs (for example, `IJ` or `Alpha`), if it appears on the `composite_glyphs.csv`:
-    * *Name*  name of the glyph
-    * *Styles*: in which style this applies. `1` = non-italic, `2` = italic, `3` = both
-    * *Copy anchors*: copy the anchors points of the glyphs if possible if the value is not `0`.
-    * *Glyph. 1*, *Glyph. 2*, *Glyph. 3*, *Glyph. 4*: components of the glyph to build, in order.
-* `ufo_digits_glyphs.py`: generates the glyphs based on numbers. The list of the glyphs to generate is given inside the script.
 
 ### Other tools
 
-* `ufo_copy_fea_blocks.py`: copy `feature` or `lookup` block from a `.fea` file to another.
+* `ufo_copy_fea_blocks.py`: copy `feature` or `lookup` block from a `.fea` file to another defined by `common_features_list.txt` and `common_lookups_list.txt`.
 * `ufo_set_version.py`: change the version string inside a UFO file.
-* `ufo_use_typo_metrics.py`: set the bit 7 ("use typo metrics") of fsSelection in an ufo file.
+* `ufo_use_typo_metrics.py`: set the bit 7 ("use typo metrics") of fsSelection inside an UFO file.
 * `ufo_utils.py`: collection of functions used to interact with UFO files.

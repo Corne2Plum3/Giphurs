@@ -5,10 +5,10 @@ FONT_NAME := Giphurs
 
 # Paths (without '/' for directories!)
 UFO_DIR := ./sources
-
-UFO_ACCENTED_GLYPHS_SCRIPT := "scripts/ufo_accented_glyphs.py"
-UFO_COMPOSITE_GLYPHS_SCRIPT := "scripts/ufo_composite_glyphs.py"
-UFO_DIGITS_GLYPHS_SCRIPT := "scripts/ufo_digits_glyphs.py"
+UFO_COMPOSED_GENERATOR_SCRIPT := "scripts/composed_glyphs_generator.py"
+UFO_COMPOSED_SCRIPT := "scripts/ufo_composed_glyphs.py"
+UFO_COMPOSED_CSV_1 := "scripts/composed_glyphs.csv"  # filled by hand
+UFO_COMPOSED_CSV_2 := "scripts/composed_glyphs_generated.csv"  # filled by UFO_COMPOSED_SCRIPT
 UFO_USE_TYPO_METRICS_SCRIPT := "scripts/ufo_use_typo_metrics.py"
 
 # documentaton
@@ -21,9 +21,7 @@ help:
 	@echo "  * make proof        : Creates HTML specimens of the font (in output/ directory) and opens the HTML report in your web browser."
 	@echo "  * make tests        : Runs automated tests (in output/ directory) and opens the HTML report in your web browser."
 	@echo "UFO sources scripts"
-	@echo "  * make ufo_accented_glyphs  : Build accented glyphs (the UFO files must be opened and exported throught Fontforge after)."
-	@echo "  * make ufo_composite_glyphs : Build composite glyphs (the UFO files must be opened and exported throught Fontforge after, and accented glyphs has to be already built)."
-	@echo "  * make ufo_digits_glyphs    : Build digits based glyphs (the UFO files must be opened and exported throught Fontforge after)."
+	@echo "  * make ufo_composed_glyphs  : Build all glyphs based on other glyphs across all UFOs (the UFO files must be opened and exported throught Fontforge after, and accented glyphs has to be already built)."
 	@echo "  * make ufo_use_typo_metrics : Enable bit 7 ("use typo metrics") of openTypeOS2Selection in fontinfo.plist"
 
 # make a zip archive of the font folder
@@ -42,31 +40,16 @@ proof: fonts/
 tests: fonts/
 	./scripts/tests.sh
 
-# build accented glyphs (should be run before AND after ufo_composite_glyphs)
-ufo_accented_glyphs: sources/
-	NON_ITALIC_UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null | grep -v "Italic"); \
-	for ufo in $$NON_ITALIC_UFO_FILES; do python3 $(UFO_ACCENTED_GLYPHS_SCRIPT) $${ufo} 1; done
-	ITALIC_UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null | grep "Italic"); \
-	for ufo in $$ITALIC_UFO_FILES; do python3 $(UFO_ACCENTED_GLYPHS_SCRIPT) $${ufo} 2; done
-	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
-
-# build composite glyphs
-ufo_composite_glyphs: sources/
-	NON_ITALIC_UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null | grep -v "Italic"); \
-	for ufo in $$NON_ITALIC_UFO_FILES; do python3 $(UFO_COMPOSITE_GLYPHS_SCRIPT) $${ufo} 1; done
-	ITALIC_UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null | grep "Italic"); \
-	for ufo in $$ITALIC_UFO_FILES; do python3 $(UFO_COMPOSITE_GLYPHS_SCRIPT) $${ufo} 2; done
-	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
-
-# build number based glyphs
-ufo_digits_glyphs: sources/
-	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 100 $(UFO_DIR)/$(FONT_NAME)-Thin.ufo
-	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 400 $(UFO_DIR)/$(FONT_NAME)-Regular.ufo
-	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 1000 $(UFO_DIR)/$(FONT_NAME)-ExtraBlack.ufo
-	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 100i $(UFO_DIR)/$(FONT_NAME)-ThinItalic.ufo
-	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 400i $(UFO_DIR)/$(FONT_NAME)-Italic.ufo
-	python3 $(UFO_DIGITS_GLYPHS_SCRIPT) 1000i $(UFO_DIR)/$(FONT_NAME)-ExtraBlackItalic.ufo
-	@echo "OPEN EACH UFO FILE WITH FONTFORGE AND EXPORT THEM AS UFO WITHOUT CHANGING ANYTHING TO FINISH THE PROCESS!!!"
+# build composed glyphs (accented + composite + digits)
+# Updates UFO_COMPOSED_CSV_2 and then edit UFOs
+ufo_composed_glyphs: scripts/ sources/
+	python3 $(UFO_COMPOSED_GENERATOR_SCRIPT) $(UFO_COMPOSED_CSV_2) --all
+	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-Thin.ufo 100 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
+	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-ThinItalic.ufo 100 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
+	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-Regular.ufo 400 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
+	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-Italic.ufo 400 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
+	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-ExtraBlack.ufo 1000 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
+	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-ExtraBlackItalic.ufo 1000 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
 
 # edit fontinfo.plist to set the bit 7 of openTypeOS2Selection ("use typo metrics")
 # Note: This is currently automatically run when building fonts
@@ -79,6 +62,7 @@ clean:
 	rm -rf logs/
 	rm -rf output/
 	rm -rf scripts/__pycache__
+	rm -rf scripts/composed_glyphs/__pycache__
 	rm -rf $(UFO_DIR)/instance_ufos
 	rm -f $(UFO_DIR)/*.ninja
 	rm -f $(UFO_DIR)/.fuse_hidden*
@@ -90,3 +74,5 @@ clean_fonts:
 	rm -rf fonts-backup/
 	mkdir fonts
 	cd fonts/ && mkdir otf ttf variable webfonts
+	cd ..
+	
