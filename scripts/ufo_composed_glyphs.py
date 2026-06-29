@@ -4,6 +4,7 @@ from composed_glyphs.composed_glyph import Composed_Glyph
 from composed_glyphs.circled_number_glyph import Circled_Number_Glyph
 from composed_glyphs.composed_glyph_tree import set_glyph_priorities_from_list
 from composed_glyphs.composite_glyph import Composite_Glyph
+from composed_glyphs.full_stop_number_glyph import Full_Stop_Number_Glyph
 from composed_glyphs.parenthesis_number_glyph import Parenthesis_Number_Glyph
 from composed_glyphs.proportional_digit_glyph import Proportional_Digit_Glyph
 from composed_glyphs.tabular_digit_glyph import Tabular_Digit_Glyph
@@ -121,7 +122,7 @@ def parse_composed_glyph_csv_line(line: str, index: int | None = None) -> Compos
         base = data[6]
         return Tabular_Digit_Glyph(name, weight, styles, size, [base])
 
-    if category == '(':
+    if category == '(':  # number between ()
         return Parenthesis_Number_Glyph(name, weight, styles, glyphs)
 
     if category == 'O':  # Circled number
@@ -129,6 +130,9 @@ def parse_composed_glyph_csv_line(line: str, index: int | None = None) -> Compos
             _log_fail(f'Invalid param value at column [4]: "{data[4]}" is not a number', index)
         unlink_references: bool = bool(int(data[4]))
         return Circled_Number_Glyph(name, weight, styles, unlink_references, glyphs)
+
+    if category == 'S':  # Full stop number (w/ period)
+        return Full_Stop_Number_Glyph(name, weight, styles, glyphs)
 
     # Unknown category
     _log_fail(f'Invalid category at column [3]: "{category}"', index)
@@ -221,7 +225,7 @@ def build_composed_glyph_from_csv(csv_file: Path | list[Path], ufo_dir: Path, we
         return -1
     
     max_priority: int = cg_list[0].priority
-    logger.info(f'Found {total_glyphs} glyphs inside "{csv_file}".')
+    logger.info(f'Found {total_glyphs} glyphs inside {'[' + str(['"' + str(f) + '"' for f in csv_file]) + ']' if isinstance(csv_file, list) else csv_file}.')
     logger.info(f'{processes_count} processes will be used.')
     error_count: int = 0
     with tqdm(total=total_glyphs) as progress_bar: 
