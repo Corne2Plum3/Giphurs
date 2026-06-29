@@ -160,7 +160,7 @@ It is best used with the `make ufo_composed_glyph` command from the `Makefile` i
 
 ### Other tools
 
-* `ufo_copy_fea_blocks.py`: copy `feature` or `lookup` block from a `.fea` file to another.
+* `ufo_copy_fea_blocks.py`: copy `feature` or `lookup` block from a `.fea` file to another defined by `common_features_list.txt` and `common_lookups_list.txt`.
 * `ufo_set_version.py`: change the version string inside a UFO file.
 * `ufo_use_typo_metrics.py`: set the bit 7 ("use typo metrics") of fsSelection inside an UFO file.
 * `ufo_utils.py`: collection of functions used to interact with UFO files.
