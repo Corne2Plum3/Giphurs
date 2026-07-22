@@ -4564,8 +4564,8 @@ lookup ccmp_latn {
     sub \e \uni0302  by \ecircumflex;
     sub \e \uni0308  by \edieresis;
     sub \i \gravecomb  by \igrave;
-    sub \uni0456 \acutecomb  by \iacute;
     sub \i \acutecomb  by \iacute;
+    sub \uni0456 \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0308  by \idieresis;
     sub \n \tildecomb  by \ntilde;
@@ -4621,8 +4621,8 @@ lookup ccmp_latn {
     sub \I \uni0306  by \Ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \i \uni0328  by \iogonek;
     sub \iogonek \gravecomb  by \iogonek;
+    sub \i \uni0328  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4709,13 +4709,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \A \uni030A \acutecomb  by \uni01DC;
-    sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni0308 \uni0304  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \Oslash \acutecomb  by \uni01E0;
+    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5641,8 +5641,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0456 \uni0307  by \uni0457;
+    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -5883,27 +5883,920 @@ lookup calt_Centered_glyphs {
 lookup calt_Contextual_Alternates {
   lookupflag 0;
     sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
+	\threequarters \uni2150 \uni2151 \uni2152 \onethird \twothirds 
 	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\colon ]'lookup calt_Centered_glyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
+	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 \zero.pnum 
+	\one.pnum \two.pnum \three.pnum \four.pnum \five.pnum \six.pnum 
+	\seven.pnum \eight.pnum \nine.pnum \zero.tnum \one.tnum \two.tnum 
+	\three.tnum \four.tnum \five.tnum \six.tnum \seven.tnum \eight.tnum 
+	\nine.tnum \zero.onum \one.onum \two.onum \three.onum \four.onum 
+	\five.onum \six.onum \seven.onum \eight.onum \nine.onum 
+	\zero.onum.tnum \one.onum.tnum \two.onum.tnum \three.onum.tnum 
+	\four.onum.tnum \five.onum.tnum \six.onum.tnum \seven.onum.tnum 
+	\eight.onum.tnum \nine.onum.tnum \one.cv01 \one.cv01.pnum 
+	\one.cv01.tnum \one.cv01.onum \one.cv01.onum.tnum \two.cv02 
+	\two.cv02.pnum \two.cv02.tnum \two.cv02.onum \two.cv02.onum.tnum 
+	\three.cv03 \three.cv03.pnum \three.cv03.tnum \three.cv03.onum 
+	\three.cv03.onum.tnum \four.cv04 \four.cv04.pnum \four.cv04.tnum 
+	\four.cv04.onum \four.cv04.onum.tnum \five.cv05 \five.cv05.pnum 
+	\five.cv05.tnum \five.cv05.onum \five.cv05.onum.tnum \six.cv06 
+	\six.cv06.pnum \six.cv06.tnum \six.cv06.onum \six.cv06.onum.tnum 
+	\seven.cv07 \seven.cv07.pnum \seven.cv07.tnum \seven.cv07.onum 
+	\seven.cv07.onum.tnum \eight.cv08 \eight.cv08.pnum \eight.cv08.tnum 
+	\eight.cv08.onum \eight.cv08.onum.tnum \nine.cv09 \nine.cv09.pnum 
+	\nine.cv09.tnum \nine.cv09.onum \nine.cv09.onum.tnum \zero.cv10 
+	\zero.cv10.pnum \zero.cv10.tnum \zero.cv10.onum 
+	\zero.cv10.onum.tnum \one.cv11 \one.cv11.pnum \one.cv11.tnum 
+	\one.cv11.onum \one.cv11.onum.tnum \two.cv12 \two.cv12.pnum 
+	\two.cv12.tnum \two.cv12.onum \two.cv12.onum.tnum \three.cv13 
+	\three.cv13.pnum \three.cv13.tnum \three.cv13.onum 
+	\three.cv13.onum.tnum \four.cv14 \four.cv14.pnum \four.cv14.tnum 
+	\four.cv14.onum \four.cv14.onum.tnum \five.cv15 \five.cv15.pnum 
+	\five.cv15.tnum \five.cv15.onum \five.cv15.onum.tnum \six.cv16 
+	\six.cv16.pnum \six.cv16.tnum \six.cv16.onum \six.cv16.onum.tnum 
+	\seven.cv17 \seven.cv17.pnum \seven.cv17.tnum \seven.cv17.onum 
+	\seven.cv17.onum.tnum \eight.cv18 \eight.cv18.pnum \eight.cv18.tnum 
+	\eight.cv18.onum \eight.cv18.onum.tnum \nine.cv19 \nine.cv19.pnum 
+	\nine.cv19.tnum \nine.cv19.onum \nine.cv19.onum.tnum \zero.cv20 
+	\zero.cv20.pnum \zero.cv20.tnum \zero.cv20.onum 
+	\zero.cv20.onum.tnum \uni215F.cv01 \uni215F.cv11 \onehalf.cv02 
+	\onehalf.cv12 \onehalf.cv01 \onehalf.cv01.cv02 \onehalf.cv01.cv12 
+	\onehalf.cv11 \onehalf.cv02.cv11 \onehalf.cv11.cv12 \uni2189.cv03 
+	\uni2189.cv13 \uni2189.cv10 \uni2189.cv03.cv10 \uni2189.cv10.cv13 
+	\uni2189.cv20 \uni2189.cv03.cv20 \uni2189.cv13.cv20 \onethird.cv03 
+	\onethird.cv13 \onethird.cv01 \onethird.cv01.cv03 
+	\onethird.cv01.cv13 \onethird.cv11 \onethird.cv03.cv11 
+	\onethird.cv11.cv13 \twothirds.cv03 \twothirds.cv13 \twothirds.cv02 
+	\twothirds.cv02.cv03 \twothirds.cv02.cv13 \twothirds.cv12 
+	\twothirds.cv03.cv12 \twothirds.cv12.cv13 \onequarter.cv04 
+	\onequarter.cv14 \onequarter.cv01 \onequarter.cv01.cv04 
+	\onequarter.cv01.cv14 \onequarter.cv11 \onequarter.cv04.cv11 
+	\onequarter.cv11.cv14 \threequarters.cv04 \threequarters.cv14 
+	\threequarters.cv03 \threequarters.cv03.cv04 
+	\threequarters.cv03.cv14 \threequarters.cv13 
+	\threequarters.cv04.cv13 \threequarters.cv13.cv14 \uni2155.cv05 
+	\uni2155.cv15 \uni2155.cv01 \uni2155.cv01.cv05 \uni2155.cv01.cv15 
+	\uni2155.cv11 \uni2155.cv05.cv11 \uni2155.cv11.cv15 \uni2156.cv05 
+	\uni2156.cv15 \uni2156.cv02 \uni2156.cv02.cv05 \uni2156.cv02.cv15 
+	\uni2156.cv12 \uni2156.cv05.cv12 \uni2156.cv12.cv15 \uni2157.cv05 
+	\uni2157.cv15 \uni2157.cv03 \uni2157.cv03.cv05 \uni2157.cv03.cv15 
+	\uni2157.cv13 \uni2157.cv05.cv13 \uni2157.cv13.cv15 \uni2158.cv05 
+	\uni2158.cv15 \uni2158.cv04 \uni2158.cv04.cv05 \uni2158.cv04.cv15 
+	\uni2158.cv14 \uni2158.cv05.cv14 \uni2158.cv14.cv15 \uni2159.cv06 
+	\uni2159.cv16 \uni2159.cv01 \uni2159.cv01.cv06 \uni2159.cv01.cv16 
+	\uni2159.cv11 \uni2159.cv06.cv11 \uni2159.cv11.cv16 \uni215A.cv06 
+	\uni215A.cv16 \uni215A.cv05 \uni215A.cv05.cv06 \uni215A.cv05.cv16 
+	\uni215A.cv15 \uni215A.cv06.cv15 \uni215A.cv15.cv16 \uni2150.cv07 
+	\uni2150.cv17 \uni2150.cv01 \uni2150.cv01.cv07 \uni2150.cv01.cv17 
+	\uni2150.cv11 \uni2150.cv07.cv11 \uni2150.cv11.cv17 \oneeighth.cv08 
+	\oneeighth.cv18 \oneeighth.cv01 \oneeighth.cv01.cv08 
+	\oneeighth.cv01.cv18 \oneeighth.cv11 \oneeighth.cv08.cv11 
+	\oneeighth.cv11.cv18 \threeeighths.cv08 \threeeighths.cv18 
+	\threeeighths.cv03 \threeeighths.cv03.cv08 \threeeighths.cv03.cv18 
+	\threeeighths.cv13 \threeeighths.cv08.cv13 \threeeighths.cv13.cv18 
+	\fiveeighths.cv08 \fiveeighths.cv18 \fiveeighths.cv05 
+	\fiveeighths.cv05.cv08 \fiveeighths.cv05.cv18 \fiveeighths.cv15 
+	\fiveeighths.cv08.cv15 \fiveeighths.cv15.cv18 \seveneighths.cv08 
+	\seveneighths.cv18 \seveneighths.cv07 \seveneighths.cv07.cv08 
+	\seveneighths.cv07.cv18 \seveneighths.cv17 \seveneighths.cv08.cv17 
+	\seveneighths.cv17.cv18 \uni2151.cv09 \uni2151.cv19 \uni2151.cv01 
+	\uni2151.cv01.cv09 \uni2151.cv01.cv19 \uni2151.cv11 
+	\uni2151.cv09.cv11 \uni2151.cv11.cv19 \uni2152.cv10 \uni2152.cv20 
+	\uni2152.cv01 \uni2152.cv01.cv10 \uni2152.cv01.cv20 \uni2152.cv11 
+	\uni2152.cv10.cv11 \uni2152.cv11.cv20 \one.ss06 \one.ss06.pnum 
+	\one.ss06.tnum \one.ss06.onum \one.ss06.onum.tnum \one.cv01.ss06 
+	\one.cv01.ss06.pnum \one.cv01.ss06.tnum \one.cv01.ss06.onum 
+	\one.cv01.ss06.onum.tnum \one.cv11.ss06 \one.cv11.ss06.pnum 
+	\one.cv11.ss06.tnum \one.cv11.ss06.onum \one.cv11.ss06.onum.tnum 
+	\uni215F.ss06 \uni215F.cv01.ss06 \uni215F.cv11.ss06 \onehalf.ss06 
+	\onehalf.cv02.ss06 \onehalf.cv12.ss06 \onehalf.cv01.ss06 
+	\onehalf.cv01.cv02.ss06 \onehalf.cv01.cv12.ss06 \onehalf.cv11.ss06 
+	\onehalf.cv02.cv11.ss06 \onehalf.cv11.cv12.ss06 \onethird.ss06 
+	\onethird.cv03.ss06 \onethird.cv13.ss06 \onethird.cv01.ss06 
+	\onethird.cv01.cv03.ss06 \onethird.cv01.cv13.ss06 
+	\onethird.cv11.ss06 \onethird.cv03.cv11.ss06 
+	\onethird.cv11.cv13.ss06 \onequarter.ss06 \onequarter.cv04.ss06 
+	\onequarter.cv14.ss06 \onequarter.cv01.ss06 
+	\onequarter.cv01.cv04.ss06 \onequarter.cv01.cv14.ss06 
+	\onequarter.cv11.ss06 \onequarter.cv04.cv11.ss06 
+	\onequarter.cv11.cv14.ss06 \uni2155.ss06 \uni2155.cv05.ss06 
+	\uni2155.cv15.ss06 \uni2155.cv01.ss06 \uni2155.cv01.cv05.ss06 
+	\uni2155.cv01.cv15.ss06 \uni2155.cv11.ss06 \uni2155.cv05.cv11.ss06 
+	\uni2155.cv11.cv15.ss06 \uni2159.ss06 \uni2159.cv06.ss06 
+	\uni2159.cv16.ss06 \uni2159.cv01.ss06 \uni2159.cv01.cv06.ss06 
+	\uni2159.cv01.cv16.ss06 \uni2159.cv11.ss06 \uni2159.cv06.cv11.ss06 
+	\uni2159.cv11.cv16.ss06 \uni2150.ss06 \uni2150.cv07.ss06 
+	\uni2150.cv17.ss06 \uni2150.cv01.ss06 \uni2150.cv01.cv07.ss06 
+	\uni2150.cv01.cv17.ss06 \uni2150.cv11.ss06 \uni2150.cv07.cv11.ss06 
+	\uni2150.cv11.cv17.ss06 \oneeighth.ss06 \oneeighth.cv08.ss06 
+	\oneeighth.cv18.ss06 \oneeighth.cv01.ss06 
+	\oneeighth.cv01.cv08.ss06 \oneeighth.cv01.cv18.ss06 
+	\oneeighth.cv11.ss06 \oneeighth.cv08.cv11.ss06 
+	\oneeighth.cv11.cv18.ss06 \uni2151.ss06 \uni2151.cv09.ss06 
+	\uni2151.cv19.ss06 \uni2151.cv01.ss06 \uni2151.cv01.cv09.ss06 
+	\uni2151.cv01.cv19.ss06 \uni2151.cv11.ss06 \uni2151.cv09.cv11.ss06 
+	\uni2151.cv11.cv19.ss06 \uni2152.ss06 \uni2152.cv10.ss06 
+	\uni2152.cv20.ss06 \uni2152.cv01.ss06 \uni2152.cv01.cv10.ss06 
+	\uni2152.cv01.cv20.ss06 \uni2152.cv11.ss06 \uni2152.cv10.cv11.ss06 
+	\uni2152.cv11.cv20.ss06 \seven.ss07 \seven.ss07.pnum 
+	\seven.ss07.tnum \seven.ss07.onum \seven.ss07.onum.tnum 
+	\seven.cv07.ss07 \seven.cv07.ss07.pnum \seven.cv07.ss07.tnum 
+	\seven.cv07.ss07.onum \seven.cv07.ss07.onum.tnum \seven.cv17.ss07 
+	\seven.cv17.ss07.pnum \seven.cv17.ss07.tnum \seven.cv17.ss07.onum 
+	\seven.cv17.ss07.onum.tnum \uni2150.ss07 \uni2150.cv07.ss07 
+	\uni2150.cv17.ss07 \uni2150.cv01.ss07 \uni2150.cv01.cv07.ss07 
+	\uni2150.cv01.cv17.ss07 \uni2150.cv11.ss07 \uni2150.cv07.cv11.ss07 
+	\uni2150.cv11.cv17.ss07 \seveneighths.ss07 \seveneighths.cv08.ss07 
+	\seveneighths.cv18.ss07 \seveneighths.cv07.ss07 
+	\seveneighths.cv07.cv08.ss07 \seveneighths.cv07.cv18.ss07 
+	\seveneighths.cv17.ss07 \seveneighths.cv08.cv17.ss07 
+	\seveneighths.cv17.cv18.ss07 \uni2150.ss06.ss07 
+	\uni2150.cv07.ss06.ss07 \uni2150.cv17.ss06.ss07 
+	\uni2150.cv01.ss06.ss07 \uni2150.cv01.cv07.ss06.ss07 
+	\uni2150.cv01.cv17.ss06.ss07 \uni2150.cv11.ss06.ss07 
+	\uni2150.cv07.cv11.ss06.ss07 \uni2150.cv11.cv17.ss06.ss07 
+	\zero.zero \zero.zero.pnum \zero.zero.tnum \zero.zero.onum 
+	\zero.zero.onum.tnum \zero.cv10.zero \zero.cv10.zero.pnum 
+	\zero.cv10.zero.tnum \zero.cv10.zero.onum 
+	\zero.cv10.zero.onum.tnum \zero.cv20.zero \zero.cv20.zero.pnum 
+	\zero.cv20.zero.tnum \zero.cv20.zero.onum 
+	\zero.cv20.zero.onum.tnum \uni2189.zero \uni2189.cv03.zero 
+	\uni2189.cv13.zero \uni2189.cv10.zero \uni2189.cv03.cv10.zero 
+	\uni2189.cv10.cv13.zero \uni2189.cv20.zero \uni2189.cv03.cv20.zero 
+	\uni2189.cv13.cv20.zero \uni2152.zero \uni2152.cv10.zero 
+	\uni2152.cv20.zero \uni2152.cv01.zero \uni2152.cv01.cv10.zero 
+	\uni2152.cv01.cv20.zero \uni2152.cv11.zero \uni2152.cv10.cv11.zero 
+	\uni2152.cv11.cv20.zero \uni2152.ss06.zero \uni2152.cv10.ss06.zero 
+	\uni2152.cv20.ss06.zero \uni2152.cv01.ss06.zero 
+	\uni2152.cv01.cv10.ss06.zero \uni2152.cv01.cv20.ss06.zero 
+	\uni2152.cv11.ss06.zero \uni2152.cv10.cv11.ss06.zero 
+	\uni2152.cv11.cv20.ss06.zero ] [\colon ]'lookup calt_Centered_glyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
+	\threequarters \uni2150 \uni2151 \uni2152 \onethird \twothirds 
 	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
+	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 \zero.pnum 
+	\one.pnum \two.pnum \three.pnum \four.pnum \five.pnum \six.pnum 
+	\seven.pnum \eight.pnum \nine.pnum \zero.tnum \one.tnum \two.tnum 
+	\three.tnum \four.tnum \five.tnum \six.tnum \seven.tnum \eight.tnum 
+	\nine.tnum \zero.onum \one.onum \two.onum \three.onum \four.onum 
+	\five.onum \six.onum \seven.onum \eight.onum \nine.onum 
+	\zero.onum.tnum \one.onum.tnum \two.onum.tnum \three.onum.tnum 
+	\four.onum.tnum \five.onum.tnum \six.onum.tnum \seven.onum.tnum 
+	\eight.onum.tnum \nine.onum.tnum \one.cv01 \one.cv01.pnum 
+	\one.cv01.tnum \one.cv01.onum \one.cv01.onum.tnum \two.cv02 
+	\two.cv02.pnum \two.cv02.tnum \two.cv02.onum \two.cv02.onum.tnum 
+	\three.cv03 \three.cv03.pnum \three.cv03.tnum \three.cv03.onum 
+	\three.cv03.onum.tnum \four.cv04 \four.cv04.pnum \four.cv04.tnum 
+	\four.cv04.onum \four.cv04.onum.tnum \five.cv05 \five.cv05.pnum 
+	\five.cv05.tnum \five.cv05.onum \five.cv05.onum.tnum \six.cv06 
+	\six.cv06.pnum \six.cv06.tnum \six.cv06.onum \six.cv06.onum.tnum 
+	\seven.cv07 \seven.cv07.pnum \seven.cv07.tnum \seven.cv07.onum 
+	\seven.cv07.onum.tnum \eight.cv08 \eight.cv08.pnum \eight.cv08.tnum 
+	\eight.cv08.onum \eight.cv08.onum.tnum \nine.cv09 \nine.cv09.pnum 
+	\nine.cv09.tnum \nine.cv09.onum \nine.cv09.onum.tnum \zero.cv10 
+	\zero.cv10.pnum \zero.cv10.tnum \zero.cv10.onum 
+	\zero.cv10.onum.tnum \one.cv11 \one.cv11.pnum \one.cv11.tnum 
+	\one.cv11.onum \one.cv11.onum.tnum \two.cv12 \two.cv12.pnum 
+	\two.cv12.tnum \two.cv12.onum \two.cv12.onum.tnum \three.cv13 
+	\three.cv13.pnum \three.cv13.tnum \three.cv13.onum 
+	\three.cv13.onum.tnum \four.cv14 \four.cv14.pnum \four.cv14.tnum 
+	\four.cv14.onum \four.cv14.onum.tnum \five.cv15 \five.cv15.pnum 
+	\five.cv15.tnum \five.cv15.onum \five.cv15.onum.tnum \six.cv16 
+	\six.cv16.pnum \six.cv16.tnum \six.cv16.onum \six.cv16.onum.tnum 
+	\seven.cv17 \seven.cv17.pnum \seven.cv17.tnum \seven.cv17.onum 
+	\seven.cv17.onum.tnum \eight.cv18 \eight.cv18.pnum \eight.cv18.tnum 
+	\eight.cv18.onum \eight.cv18.onum.tnum \nine.cv19 \nine.cv19.pnum 
+	\nine.cv19.tnum \nine.cv19.onum \nine.cv19.onum.tnum \zero.cv20 
+	\zero.cv20.pnum \zero.cv20.tnum \zero.cv20.onum 
+	\zero.cv20.onum.tnum \uni215F.cv01 \uni215F.cv11 \onehalf.cv02 
+	\onehalf.cv12 \onehalf.cv01 \onehalf.cv01.cv02 \onehalf.cv01.cv12 
+	\onehalf.cv11 \onehalf.cv02.cv11 \onehalf.cv11.cv12 \uni2189.cv03 
+	\uni2189.cv13 \uni2189.cv10 \uni2189.cv03.cv10 \uni2189.cv10.cv13 
+	\uni2189.cv20 \uni2189.cv03.cv20 \uni2189.cv13.cv20 \onethird.cv03 
+	\onethird.cv13 \onethird.cv01 \onethird.cv01.cv03 
+	\onethird.cv01.cv13 \onethird.cv11 \onethird.cv03.cv11 
+	\onethird.cv11.cv13 \twothirds.cv03 \twothirds.cv13 \twothirds.cv02 
+	\twothirds.cv02.cv03 \twothirds.cv02.cv13 \twothirds.cv12 
+	\twothirds.cv03.cv12 \twothirds.cv12.cv13 \onequarter.cv04 
+	\onequarter.cv14 \onequarter.cv01 \onequarter.cv01.cv04 
+	\onequarter.cv01.cv14 \onequarter.cv11 \onequarter.cv04.cv11 
+	\onequarter.cv11.cv14 \threequarters.cv04 \threequarters.cv14 
+	\threequarters.cv03 \threequarters.cv03.cv04 
+	\threequarters.cv03.cv14 \threequarters.cv13 
+	\threequarters.cv04.cv13 \threequarters.cv13.cv14 \uni2155.cv05 
+	\uni2155.cv15 \uni2155.cv01 \uni2155.cv01.cv05 \uni2155.cv01.cv15 
+	\uni2155.cv11 \uni2155.cv05.cv11 \uni2155.cv11.cv15 \uni2156.cv05 
+	\uni2156.cv15 \uni2156.cv02 \uni2156.cv02.cv05 \uni2156.cv02.cv15 
+	\uni2156.cv12 \uni2156.cv05.cv12 \uni2156.cv12.cv15 \uni2157.cv05 
+	\uni2157.cv15 \uni2157.cv03 \uni2157.cv03.cv05 \uni2157.cv03.cv15 
+	\uni2157.cv13 \uni2157.cv05.cv13 \uni2157.cv13.cv15 \uni2158.cv05 
+	\uni2158.cv15 \uni2158.cv04 \uni2158.cv04.cv05 \uni2158.cv04.cv15 
+	\uni2158.cv14 \uni2158.cv05.cv14 \uni2158.cv14.cv15 \uni2159.cv06 
+	\uni2159.cv16 \uni2159.cv01 \uni2159.cv01.cv06 \uni2159.cv01.cv16 
+	\uni2159.cv11 \uni2159.cv06.cv11 \uni2159.cv11.cv16 \uni215A.cv06 
+	\uni215A.cv16 \uni215A.cv05 \uni215A.cv05.cv06 \uni215A.cv05.cv16 
+	\uni215A.cv15 \uni215A.cv06.cv15 \uni215A.cv15.cv16 \uni2150.cv07 
+	\uni2150.cv17 \uni2150.cv01 \uni2150.cv01.cv07 \uni2150.cv01.cv17 
+	\uni2150.cv11 \uni2150.cv07.cv11 \uni2150.cv11.cv17 \oneeighth.cv08 
+	\oneeighth.cv18 \oneeighth.cv01 \oneeighth.cv01.cv08 
+	\oneeighth.cv01.cv18 \oneeighth.cv11 \oneeighth.cv08.cv11 
+	\oneeighth.cv11.cv18 \threeeighths.cv08 \threeeighths.cv18 
+	\threeeighths.cv03 \threeeighths.cv03.cv08 \threeeighths.cv03.cv18 
+	\threeeighths.cv13 \threeeighths.cv08.cv13 \threeeighths.cv13.cv18 
+	\fiveeighths.cv08 \fiveeighths.cv18 \fiveeighths.cv05 
+	\fiveeighths.cv05.cv08 \fiveeighths.cv05.cv18 \fiveeighths.cv15 
+	\fiveeighths.cv08.cv15 \fiveeighths.cv15.cv18 \seveneighths.cv08 
+	\seveneighths.cv18 \seveneighths.cv07 \seveneighths.cv07.cv08 
+	\seveneighths.cv07.cv18 \seveneighths.cv17 \seveneighths.cv08.cv17 
+	\seveneighths.cv17.cv18 \uni2151.cv09 \uni2151.cv19 \uni2151.cv01 
+	\uni2151.cv01.cv09 \uni2151.cv01.cv19 \uni2151.cv11 
+	\uni2151.cv09.cv11 \uni2151.cv11.cv19 \uni2152.cv10 \uni2152.cv20 
+	\uni2152.cv01 \uni2152.cv01.cv10 \uni2152.cv01.cv20 \uni2152.cv11 
+	\uni2152.cv10.cv11 \uni2152.cv11.cv20 \one.ss06 \one.ss06.pnum 
+	\one.ss06.tnum \one.ss06.onum \one.ss06.onum.tnum \one.cv01.ss06 
+	\one.cv01.ss06.pnum \one.cv01.ss06.tnum \one.cv01.ss06.onum 
+	\one.cv01.ss06.onum.tnum \one.cv11.ss06 \one.cv11.ss06.pnum 
+	\one.cv11.ss06.tnum \one.cv11.ss06.onum \one.cv11.ss06.onum.tnum 
+	\uni215F.ss06 \uni215F.cv01.ss06 \uni215F.cv11.ss06 \onehalf.ss06 
+	\onehalf.cv02.ss06 \onehalf.cv12.ss06 \onehalf.cv01.ss06 
+	\onehalf.cv01.cv02.ss06 \onehalf.cv01.cv12.ss06 \onehalf.cv11.ss06 
+	\onehalf.cv02.cv11.ss06 \onehalf.cv11.cv12.ss06 \onethird.ss06 
+	\onethird.cv03.ss06 \onethird.cv13.ss06 \onethird.cv01.ss06 
+	\onethird.cv01.cv03.ss06 \onethird.cv01.cv13.ss06 
+	\onethird.cv11.ss06 \onethird.cv03.cv11.ss06 
+	\onethird.cv11.cv13.ss06 \onequarter.ss06 \onequarter.cv04.ss06 
+	\onequarter.cv14.ss06 \onequarter.cv01.ss06 
+	\onequarter.cv01.cv04.ss06 \onequarter.cv01.cv14.ss06 
+	\onequarter.cv11.ss06 \onequarter.cv04.cv11.ss06 
+	\onequarter.cv11.cv14.ss06 \uni2155.ss06 \uni2155.cv05.ss06 
+	\uni2155.cv15.ss06 \uni2155.cv01.ss06 \uni2155.cv01.cv05.ss06 
+	\uni2155.cv01.cv15.ss06 \uni2155.cv11.ss06 \uni2155.cv05.cv11.ss06 
+	\uni2155.cv11.cv15.ss06 \uni2159.ss06 \uni2159.cv06.ss06 
+	\uni2159.cv16.ss06 \uni2159.cv01.ss06 \uni2159.cv01.cv06.ss06 
+	\uni2159.cv01.cv16.ss06 \uni2159.cv11.ss06 \uni2159.cv06.cv11.ss06 
+	\uni2159.cv11.cv16.ss06 \uni2150.ss06 \uni2150.cv07.ss06 
+	\uni2150.cv17.ss06 \uni2150.cv01.ss06 \uni2150.cv01.cv07.ss06 
+	\uni2150.cv01.cv17.ss06 \uni2150.cv11.ss06 \uni2150.cv07.cv11.ss06 
+	\uni2150.cv11.cv17.ss06 \oneeighth.ss06 \oneeighth.cv08.ss06 
+	\oneeighth.cv18.ss06 \oneeighth.cv01.ss06 
+	\oneeighth.cv01.cv08.ss06 \oneeighth.cv01.cv18.ss06 
+	\oneeighth.cv11.ss06 \oneeighth.cv08.cv11.ss06 
+	\oneeighth.cv11.cv18.ss06 \uni2151.ss06 \uni2151.cv09.ss06 
+	\uni2151.cv19.ss06 \uni2151.cv01.ss06 \uni2151.cv01.cv09.ss06 
+	\uni2151.cv01.cv19.ss06 \uni2151.cv11.ss06 \uni2151.cv09.cv11.ss06 
+	\uni2151.cv11.cv19.ss06 \uni2152.ss06 \uni2152.cv10.ss06 
+	\uni2152.cv20.ss06 \uni2152.cv01.ss06 \uni2152.cv01.cv10.ss06 
+	\uni2152.cv01.cv20.ss06 \uni2152.cv11.ss06 \uni2152.cv10.cv11.ss06 
+	\uni2152.cv11.cv20.ss06 \seven.ss07 \seven.ss07.pnum 
+	\seven.ss07.tnum \seven.ss07.onum \seven.ss07.onum.tnum 
+	\seven.cv07.ss07 \seven.cv07.ss07.pnum \seven.cv07.ss07.tnum 
+	\seven.cv07.ss07.onum \seven.cv07.ss07.onum.tnum \seven.cv17.ss07 
+	\seven.cv17.ss07.pnum \seven.cv17.ss07.tnum \seven.cv17.ss07.onum 
+	\seven.cv17.ss07.onum.tnum \uni2150.ss07 \uni2150.cv07.ss07 
+	\uni2150.cv17.ss07 \uni2150.cv01.ss07 \uni2150.cv01.cv07.ss07 
+	\uni2150.cv01.cv17.ss07 \uni2150.cv11.ss07 \uni2150.cv07.cv11.ss07 
+	\uni2150.cv11.cv17.ss07 \seveneighths.ss07 \seveneighths.cv08.ss07 
+	\seveneighths.cv18.ss07 \seveneighths.cv07.ss07 
+	\seveneighths.cv07.cv08.ss07 \seveneighths.cv07.cv18.ss07 
+	\seveneighths.cv17.ss07 \seveneighths.cv08.cv17.ss07 
+	\seveneighths.cv17.cv18.ss07 \uni2150.ss06.ss07 
+	\uni2150.cv07.ss06.ss07 \uni2150.cv17.ss06.ss07 
+	\uni2150.cv01.ss06.ss07 \uni2150.cv01.cv07.ss06.ss07 
+	\uni2150.cv01.cv17.ss06.ss07 \uni2150.cv11.ss06.ss07 
+	\uni2150.cv07.cv11.ss06.ss07 \uni2150.cv11.cv17.ss06.ss07 
+	\zero.zero \zero.zero.pnum \zero.zero.tnum \zero.zero.onum 
+	\zero.zero.onum.tnum \zero.cv10.zero \zero.cv10.zero.pnum 
+	\zero.cv10.zero.tnum \zero.cv10.zero.onum 
+	\zero.cv10.zero.onum.tnum \zero.cv20.zero \zero.cv20.zero.pnum 
+	\zero.cv20.zero.tnum \zero.cv20.zero.onum 
+	\zero.cv20.zero.onum.tnum \uni2189.zero \uni2189.cv03.zero 
+	\uni2189.cv13.zero \uni2189.cv10.zero \uni2189.cv03.cv10.zero 
+	\uni2189.cv10.cv13.zero \uni2189.cv20.zero \uni2189.cv03.cv20.zero 
+	\uni2189.cv13.cv20.zero \uni2152.zero \uni2152.cv10.zero 
+	\uni2152.cv20.zero \uni2152.cv01.zero \uni2152.cv01.cv10.zero 
+	\uni2152.cv01.cv20.zero \uni2152.cv11.zero \uni2152.cv10.cv11.zero 
+	\uni2152.cv11.cv20.zero \uni2152.ss06.zero \uni2152.cv10.ss06.zero 
+	\uni2152.cv20.ss06.zero \uni2152.cv01.ss06.zero 
+	\uni2152.cv01.cv10.ss06.zero \uni2152.cv01.cv20.ss06.zero 
+	\uni2152.cv11.ss06.zero \uni2152.cv10.cv11.ss06.zero 
+	\uni2152.cv11.cv20.ss06.zero ] ;
     sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
+	\threequarters \uni2150 \uni2151 \uni2152 \onethird \twothirds 
 	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\asterisk ]'lookup calt_Centered_glyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
+	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 \zero.pnum 
+	\one.pnum \two.pnum \three.pnum \four.pnum \five.pnum \six.pnum 
+	\seven.pnum \eight.pnum \nine.pnum \zero.tnum \one.tnum \two.tnum 
+	\three.tnum \four.tnum \five.tnum \six.tnum \seven.tnum \eight.tnum 
+	\nine.tnum \zero.onum \one.onum \two.onum \three.onum \four.onum 
+	\five.onum \six.onum \seven.onum \eight.onum \nine.onum 
+	\zero.onum.tnum \one.onum.tnum \two.onum.tnum \three.onum.tnum 
+	\four.onum.tnum \five.onum.tnum \six.onum.tnum \seven.onum.tnum 
+	\eight.onum.tnum \nine.onum.tnum \one.cv01 \one.cv01.pnum 
+	\one.cv01.tnum \one.cv01.onum \one.cv01.onum.tnum \two.cv02 
+	\two.cv02.pnum \two.cv02.tnum \two.cv02.onum \two.cv02.onum.tnum 
+	\three.cv03 \three.cv03.pnum \three.cv03.tnum \three.cv03.onum 
+	\three.cv03.onum.tnum \four.cv04 \four.cv04.pnum \four.cv04.tnum 
+	\four.cv04.onum \four.cv04.onum.tnum \five.cv05 \five.cv05.pnum 
+	\five.cv05.tnum \five.cv05.onum \five.cv05.onum.tnum \six.cv06 
+	\six.cv06.pnum \six.cv06.tnum \six.cv06.onum \six.cv06.onum.tnum 
+	\seven.cv07 \seven.cv07.pnum \seven.cv07.tnum \seven.cv07.onum 
+	\seven.cv07.onum.tnum \eight.cv08 \eight.cv08.pnum \eight.cv08.tnum 
+	\eight.cv08.onum \eight.cv08.onum.tnum \nine.cv09 \nine.cv09.pnum 
+	\nine.cv09.tnum \nine.cv09.onum \nine.cv09.onum.tnum \zero.cv10 
+	\zero.cv10.pnum \zero.cv10.tnum \zero.cv10.onum 
+	\zero.cv10.onum.tnum \one.cv11 \one.cv11.pnum \one.cv11.tnum 
+	\one.cv11.onum \one.cv11.onum.tnum \two.cv12 \two.cv12.pnum 
+	\two.cv12.tnum \two.cv12.onum \two.cv12.onum.tnum \three.cv13 
+	\three.cv13.pnum \three.cv13.tnum \three.cv13.onum 
+	\three.cv13.onum.tnum \four.cv14 \four.cv14.pnum \four.cv14.tnum 
+	\four.cv14.onum \four.cv14.onum.tnum \five.cv15 \five.cv15.pnum 
+	\five.cv15.tnum \five.cv15.onum \five.cv15.onum.tnum \six.cv16 
+	\six.cv16.pnum \six.cv16.tnum \six.cv16.onum \six.cv16.onum.tnum 
+	\seven.cv17 \seven.cv17.pnum \seven.cv17.tnum \seven.cv17.onum 
+	\seven.cv17.onum.tnum \eight.cv18 \eight.cv18.pnum \eight.cv18.tnum 
+	\eight.cv18.onum \eight.cv18.onum.tnum \nine.cv19 \nine.cv19.pnum 
+	\nine.cv19.tnum \nine.cv19.onum \nine.cv19.onum.tnum \zero.cv20 
+	\zero.cv20.pnum \zero.cv20.tnum \zero.cv20.onum 
+	\zero.cv20.onum.tnum \uni215F.cv01 \uni215F.cv11 \onehalf.cv02 
+	\onehalf.cv12 \onehalf.cv01 \onehalf.cv01.cv02 \onehalf.cv01.cv12 
+	\onehalf.cv11 \onehalf.cv02.cv11 \onehalf.cv11.cv12 \uni2189.cv03 
+	\uni2189.cv13 \uni2189.cv10 \uni2189.cv03.cv10 \uni2189.cv10.cv13 
+	\uni2189.cv20 \uni2189.cv03.cv20 \uni2189.cv13.cv20 \onethird.cv03 
+	\onethird.cv13 \onethird.cv01 \onethird.cv01.cv03 
+	\onethird.cv01.cv13 \onethird.cv11 \onethird.cv03.cv11 
+	\onethird.cv11.cv13 \twothirds.cv03 \twothirds.cv13 \twothirds.cv02 
+	\twothirds.cv02.cv03 \twothirds.cv02.cv13 \twothirds.cv12 
+	\twothirds.cv03.cv12 \twothirds.cv12.cv13 \onequarter.cv04 
+	\onequarter.cv14 \onequarter.cv01 \onequarter.cv01.cv04 
+	\onequarter.cv01.cv14 \onequarter.cv11 \onequarter.cv04.cv11 
+	\onequarter.cv11.cv14 \threequarters.cv04 \threequarters.cv14 
+	\threequarters.cv03 \threequarters.cv03.cv04 
+	\threequarters.cv03.cv14 \threequarters.cv13 
+	\threequarters.cv04.cv13 \threequarters.cv13.cv14 \uni2155.cv05 
+	\uni2155.cv15 \uni2155.cv01 \uni2155.cv01.cv05 \uni2155.cv01.cv15 
+	\uni2155.cv11 \uni2155.cv05.cv11 \uni2155.cv11.cv15 \uni2156.cv05 
+	\uni2156.cv15 \uni2156.cv02 \uni2156.cv02.cv05 \uni2156.cv02.cv15 
+	\uni2156.cv12 \uni2156.cv05.cv12 \uni2156.cv12.cv15 \uni2157.cv05 
+	\uni2157.cv15 \uni2157.cv03 \uni2157.cv03.cv05 \uni2157.cv03.cv15 
+	\uni2157.cv13 \uni2157.cv05.cv13 \uni2157.cv13.cv15 \uni2158.cv05 
+	\uni2158.cv15 \uni2158.cv04 \uni2158.cv04.cv05 \uni2158.cv04.cv15 
+	\uni2158.cv14 \uni2158.cv05.cv14 \uni2158.cv14.cv15 \uni2159.cv06 
+	\uni2159.cv16 \uni2159.cv01 \uni2159.cv01.cv06 \uni2159.cv01.cv16 
+	\uni2159.cv11 \uni2159.cv06.cv11 \uni2159.cv11.cv16 \uni215A.cv06 
+	\uni215A.cv16 \uni215A.cv05 \uni215A.cv05.cv06 \uni215A.cv05.cv16 
+	\uni215A.cv15 \uni215A.cv06.cv15 \uni215A.cv15.cv16 \uni2150.cv07 
+	\uni2150.cv17 \uni2150.cv01 \uni2150.cv01.cv07 \uni2150.cv01.cv17 
+	\uni2150.cv11 \uni2150.cv07.cv11 \uni2150.cv11.cv17 \oneeighth.cv08 
+	\oneeighth.cv18 \oneeighth.cv01 \oneeighth.cv01.cv08 
+	\oneeighth.cv01.cv18 \oneeighth.cv11 \oneeighth.cv08.cv11 
+	\oneeighth.cv11.cv18 \threeeighths.cv08 \threeeighths.cv18 
+	\threeeighths.cv03 \threeeighths.cv03.cv08 \threeeighths.cv03.cv18 
+	\threeeighths.cv13 \threeeighths.cv08.cv13 \threeeighths.cv13.cv18 
+	\fiveeighths.cv08 \fiveeighths.cv18 \fiveeighths.cv05 
+	\fiveeighths.cv05.cv08 \fiveeighths.cv05.cv18 \fiveeighths.cv15 
+	\fiveeighths.cv08.cv15 \fiveeighths.cv15.cv18 \seveneighths.cv08 
+	\seveneighths.cv18 \seveneighths.cv07 \seveneighths.cv07.cv08 
+	\seveneighths.cv07.cv18 \seveneighths.cv17 \seveneighths.cv08.cv17 
+	\seveneighths.cv17.cv18 \uni2151.cv09 \uni2151.cv19 \uni2151.cv01 
+	\uni2151.cv01.cv09 \uni2151.cv01.cv19 \uni2151.cv11 
+	\uni2151.cv09.cv11 \uni2151.cv11.cv19 \uni2152.cv10 \uni2152.cv20 
+	\uni2152.cv01 \uni2152.cv01.cv10 \uni2152.cv01.cv20 \uni2152.cv11 
+	\uni2152.cv10.cv11 \uni2152.cv11.cv20 \one.ss06 \one.ss06.pnum 
+	\one.ss06.tnum \one.ss06.onum \one.ss06.onum.tnum \one.cv01.ss06 
+	\one.cv01.ss06.pnum \one.cv01.ss06.tnum \one.cv01.ss06.onum 
+	\one.cv01.ss06.onum.tnum \one.cv11.ss06 \one.cv11.ss06.pnum 
+	\one.cv11.ss06.tnum \one.cv11.ss06.onum \one.cv11.ss06.onum.tnum 
+	\uni215F.ss06 \uni215F.cv01.ss06 \uni215F.cv11.ss06 \onehalf.ss06 
+	\onehalf.cv02.ss06 \onehalf.cv12.ss06 \onehalf.cv01.ss06 
+	\onehalf.cv01.cv02.ss06 \onehalf.cv01.cv12.ss06 \onehalf.cv11.ss06 
+	\onehalf.cv02.cv11.ss06 \onehalf.cv11.cv12.ss06 \onethird.ss06 
+	\onethird.cv03.ss06 \onethird.cv13.ss06 \onethird.cv01.ss06 
+	\onethird.cv01.cv03.ss06 \onethird.cv01.cv13.ss06 
+	\onethird.cv11.ss06 \onethird.cv03.cv11.ss06 
+	\onethird.cv11.cv13.ss06 \onequarter.ss06 \onequarter.cv04.ss06 
+	\onequarter.cv14.ss06 \onequarter.cv01.ss06 
+	\onequarter.cv01.cv04.ss06 \onequarter.cv01.cv14.ss06 
+	\onequarter.cv11.ss06 \onequarter.cv04.cv11.ss06 
+	\onequarter.cv11.cv14.ss06 \uni2155.ss06 \uni2155.cv05.ss06 
+	\uni2155.cv15.ss06 \uni2155.cv01.ss06 \uni2155.cv01.cv05.ss06 
+	\uni2155.cv01.cv15.ss06 \uni2155.cv11.ss06 \uni2155.cv05.cv11.ss06 
+	\uni2155.cv11.cv15.ss06 \uni2159.ss06 \uni2159.cv06.ss06 
+	\uni2159.cv16.ss06 \uni2159.cv01.ss06 \uni2159.cv01.cv06.ss06 
+	\uni2159.cv01.cv16.ss06 \uni2159.cv11.ss06 \uni2159.cv06.cv11.ss06 
+	\uni2159.cv11.cv16.ss06 \uni2150.ss06 \uni2150.cv07.ss06 
+	\uni2150.cv17.ss06 \uni2150.cv01.ss06 \uni2150.cv01.cv07.ss06 
+	\uni2150.cv01.cv17.ss06 \uni2150.cv11.ss06 \uni2150.cv07.cv11.ss06 
+	\uni2150.cv11.cv17.ss06 \oneeighth.ss06 \oneeighth.cv08.ss06 
+	\oneeighth.cv18.ss06 \oneeighth.cv01.ss06 
+	\oneeighth.cv01.cv08.ss06 \oneeighth.cv01.cv18.ss06 
+	\oneeighth.cv11.ss06 \oneeighth.cv08.cv11.ss06 
+	\oneeighth.cv11.cv18.ss06 \uni2151.ss06 \uni2151.cv09.ss06 
+	\uni2151.cv19.ss06 \uni2151.cv01.ss06 \uni2151.cv01.cv09.ss06 
+	\uni2151.cv01.cv19.ss06 \uni2151.cv11.ss06 \uni2151.cv09.cv11.ss06 
+	\uni2151.cv11.cv19.ss06 \uni2152.ss06 \uni2152.cv10.ss06 
+	\uni2152.cv20.ss06 \uni2152.cv01.ss06 \uni2152.cv01.cv10.ss06 
+	\uni2152.cv01.cv20.ss06 \uni2152.cv11.ss06 \uni2152.cv10.cv11.ss06 
+	\uni2152.cv11.cv20.ss06 \seven.ss07 \seven.ss07.pnum 
+	\seven.ss07.tnum \seven.ss07.onum \seven.ss07.onum.tnum 
+	\seven.cv07.ss07 \seven.cv07.ss07.pnum \seven.cv07.ss07.tnum 
+	\seven.cv07.ss07.onum \seven.cv07.ss07.onum.tnum \seven.cv17.ss07 
+	\seven.cv17.ss07.pnum \seven.cv17.ss07.tnum \seven.cv17.ss07.onum 
+	\seven.cv17.ss07.onum.tnum \uni2150.ss07 \uni2150.cv07.ss07 
+	\uni2150.cv17.ss07 \uni2150.cv01.ss07 \uni2150.cv01.cv07.ss07 
+	\uni2150.cv01.cv17.ss07 \uni2150.cv11.ss07 \uni2150.cv07.cv11.ss07 
+	\uni2150.cv11.cv17.ss07 \seveneighths.ss07 \seveneighths.cv08.ss07 
+	\seveneighths.cv18.ss07 \seveneighths.cv07.ss07 
+	\seveneighths.cv07.cv08.ss07 \seveneighths.cv07.cv18.ss07 
+	\seveneighths.cv17.ss07 \seveneighths.cv08.cv17.ss07 
+	\seveneighths.cv17.cv18.ss07 \uni2150.ss06.ss07 
+	\uni2150.cv07.ss06.ss07 \uni2150.cv17.ss06.ss07 
+	\uni2150.cv01.ss06.ss07 \uni2150.cv01.cv07.ss06.ss07 
+	\uni2150.cv01.cv17.ss06.ss07 \uni2150.cv11.ss06.ss07 
+	\uni2150.cv07.cv11.ss06.ss07 \uni2150.cv11.cv17.ss06.ss07 
+	\zero.zero \zero.zero.pnum \zero.zero.tnum \zero.zero.onum 
+	\zero.zero.onum.tnum \zero.cv10.zero \zero.cv10.zero.pnum 
+	\zero.cv10.zero.tnum \zero.cv10.zero.onum 
+	\zero.cv10.zero.onum.tnum \zero.cv20.zero \zero.cv20.zero.pnum 
+	\zero.cv20.zero.tnum \zero.cv20.zero.onum 
+	\zero.cv20.zero.onum.tnum \uni2189.zero \uni2189.cv03.zero 
+	\uni2189.cv13.zero \uni2189.cv10.zero \uni2189.cv03.cv10.zero 
+	\uni2189.cv10.cv13.zero \uni2189.cv20.zero \uni2189.cv03.cv20.zero 
+	\uni2189.cv13.cv20.zero \uni2152.zero \uni2152.cv10.zero 
+	\uni2152.cv20.zero \uni2152.cv01.zero \uni2152.cv01.cv10.zero 
+	\uni2152.cv01.cv20.zero \uni2152.cv11.zero \uni2152.cv10.cv11.zero 
+	\uni2152.cv11.cv20.zero \uni2152.ss06.zero \uni2152.cv10.ss06.zero 
+	\uni2152.cv20.ss06.zero \uni2152.cv01.ss06.zero 
+	\uni2152.cv01.cv10.ss06.zero \uni2152.cv01.cv20.ss06.zero 
+	\uni2152.cv11.ss06.zero \uni2152.cv10.cv11.ss06.zero 
+	\uni2152.cv11.cv20.ss06.zero ] [\asterisk ]'lookup calt_Centered_glyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
+	\threequarters \uni2150 \uni2151 \uni2152 \onethird \twothirds 
 	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
+	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 \zero.pnum 
+	\one.pnum \two.pnum \three.pnum \four.pnum \five.pnum \six.pnum 
+	\seven.pnum \eight.pnum \nine.pnum \zero.tnum \one.tnum \two.tnum 
+	\three.tnum \four.tnum \five.tnum \six.tnum \seven.tnum \eight.tnum 
+	\nine.tnum \zero.onum \one.onum \two.onum \three.onum \four.onum 
+	\five.onum \six.onum \seven.onum \eight.onum \nine.onum 
+	\zero.onum.tnum \one.onum.tnum \two.onum.tnum \three.onum.tnum 
+	\four.onum.tnum \five.onum.tnum \six.onum.tnum \seven.onum.tnum 
+	\eight.onum.tnum \nine.onum.tnum \one.cv01 \one.cv01.pnum 
+	\one.cv01.tnum \one.cv01.onum \one.cv01.onum.tnum \two.cv02 
+	\two.cv02.pnum \two.cv02.tnum \two.cv02.onum \two.cv02.onum.tnum 
+	\three.cv03 \three.cv03.pnum \three.cv03.tnum \three.cv03.onum 
+	\three.cv03.onum.tnum \four.cv04 \four.cv04.pnum \four.cv04.tnum 
+	\four.cv04.onum \four.cv04.onum.tnum \five.cv05 \five.cv05.pnum 
+	\five.cv05.tnum \five.cv05.onum \five.cv05.onum.tnum \six.cv06 
+	\six.cv06.pnum \six.cv06.tnum \six.cv06.onum \six.cv06.onum.tnum 
+	\seven.cv07 \seven.cv07.pnum \seven.cv07.tnum \seven.cv07.onum 
+	\seven.cv07.onum.tnum \eight.cv08 \eight.cv08.pnum \eight.cv08.tnum 
+	\eight.cv08.onum \eight.cv08.onum.tnum \nine.cv09 \nine.cv09.pnum 
+	\nine.cv09.tnum \nine.cv09.onum \nine.cv09.onum.tnum \zero.cv10 
+	\zero.cv10.pnum \zero.cv10.tnum \zero.cv10.onum 
+	\zero.cv10.onum.tnum \one.cv11 \one.cv11.pnum \one.cv11.tnum 
+	\one.cv11.onum \one.cv11.onum.tnum \two.cv12 \two.cv12.pnum 
+	\two.cv12.tnum \two.cv12.onum \two.cv12.onum.tnum \three.cv13 
+	\three.cv13.pnum \three.cv13.tnum \three.cv13.onum 
+	\three.cv13.onum.tnum \four.cv14 \four.cv14.pnum \four.cv14.tnum 
+	\four.cv14.onum \four.cv14.onum.tnum \five.cv15 \five.cv15.pnum 
+	\five.cv15.tnum \five.cv15.onum \five.cv15.onum.tnum \six.cv16 
+	\six.cv16.pnum \six.cv16.tnum \six.cv16.onum \six.cv16.onum.tnum 
+	\seven.cv17 \seven.cv17.pnum \seven.cv17.tnum \seven.cv17.onum 
+	\seven.cv17.onum.tnum \eight.cv18 \eight.cv18.pnum \eight.cv18.tnum 
+	\eight.cv18.onum \eight.cv18.onum.tnum \nine.cv19 \nine.cv19.pnum 
+	\nine.cv19.tnum \nine.cv19.onum \nine.cv19.onum.tnum \zero.cv20 
+	\zero.cv20.pnum \zero.cv20.tnum \zero.cv20.onum 
+	\zero.cv20.onum.tnum \uni215F.cv01 \uni215F.cv11 \onehalf.cv02 
+	\onehalf.cv12 \onehalf.cv01 \onehalf.cv01.cv02 \onehalf.cv01.cv12 
+	\onehalf.cv11 \onehalf.cv02.cv11 \onehalf.cv11.cv12 \uni2189.cv03 
+	\uni2189.cv13 \uni2189.cv10 \uni2189.cv03.cv10 \uni2189.cv10.cv13 
+	\uni2189.cv20 \uni2189.cv03.cv20 \uni2189.cv13.cv20 \onethird.cv03 
+	\onethird.cv13 \onethird.cv01 \onethird.cv01.cv03 
+	\onethird.cv01.cv13 \onethird.cv11 \onethird.cv03.cv11 
+	\onethird.cv11.cv13 \twothirds.cv03 \twothirds.cv13 \twothirds.cv02 
+	\twothirds.cv02.cv03 \twothirds.cv02.cv13 \twothirds.cv12 
+	\twothirds.cv03.cv12 \twothirds.cv12.cv13 \onequarter.cv04 
+	\onequarter.cv14 \onequarter.cv01 \onequarter.cv01.cv04 
+	\onequarter.cv01.cv14 \onequarter.cv11 \onequarter.cv04.cv11 
+	\onequarter.cv11.cv14 \threequarters.cv04 \threequarters.cv14 
+	\threequarters.cv03 \threequarters.cv03.cv04 
+	\threequarters.cv03.cv14 \threequarters.cv13 
+	\threequarters.cv04.cv13 \threequarters.cv13.cv14 \uni2155.cv05 
+	\uni2155.cv15 \uni2155.cv01 \uni2155.cv01.cv05 \uni2155.cv01.cv15 
+	\uni2155.cv11 \uni2155.cv05.cv11 \uni2155.cv11.cv15 \uni2156.cv05 
+	\uni2156.cv15 \uni2156.cv02 \uni2156.cv02.cv05 \uni2156.cv02.cv15 
+	\uni2156.cv12 \uni2156.cv05.cv12 \uni2156.cv12.cv15 \uni2157.cv05 
+	\uni2157.cv15 \uni2157.cv03 \uni2157.cv03.cv05 \uni2157.cv03.cv15 
+	\uni2157.cv13 \uni2157.cv05.cv13 \uni2157.cv13.cv15 \uni2158.cv05 
+	\uni2158.cv15 \uni2158.cv04 \uni2158.cv04.cv05 \uni2158.cv04.cv15 
+	\uni2158.cv14 \uni2158.cv05.cv14 \uni2158.cv14.cv15 \uni2159.cv06 
+	\uni2159.cv16 \uni2159.cv01 \uni2159.cv01.cv06 \uni2159.cv01.cv16 
+	\uni2159.cv11 \uni2159.cv06.cv11 \uni2159.cv11.cv16 \uni215A.cv06 
+	\uni215A.cv16 \uni215A.cv05 \uni215A.cv05.cv06 \uni215A.cv05.cv16 
+	\uni215A.cv15 \uni215A.cv06.cv15 \uni215A.cv15.cv16 \uni2150.cv07 
+	\uni2150.cv17 \uni2150.cv01 \uni2150.cv01.cv07 \uni2150.cv01.cv17 
+	\uni2150.cv11 \uni2150.cv07.cv11 \uni2150.cv11.cv17 \oneeighth.cv08 
+	\oneeighth.cv18 \oneeighth.cv01 \oneeighth.cv01.cv08 
+	\oneeighth.cv01.cv18 \oneeighth.cv11 \oneeighth.cv08.cv11 
+	\oneeighth.cv11.cv18 \threeeighths.cv08 \threeeighths.cv18 
+	\threeeighths.cv03 \threeeighths.cv03.cv08 \threeeighths.cv03.cv18 
+	\threeeighths.cv13 \threeeighths.cv08.cv13 \threeeighths.cv13.cv18 
+	\fiveeighths.cv08 \fiveeighths.cv18 \fiveeighths.cv05 
+	\fiveeighths.cv05.cv08 \fiveeighths.cv05.cv18 \fiveeighths.cv15 
+	\fiveeighths.cv08.cv15 \fiveeighths.cv15.cv18 \seveneighths.cv08 
+	\seveneighths.cv18 \seveneighths.cv07 \seveneighths.cv07.cv08 
+	\seveneighths.cv07.cv18 \seveneighths.cv17 \seveneighths.cv08.cv17 
+	\seveneighths.cv17.cv18 \uni2151.cv09 \uni2151.cv19 \uni2151.cv01 
+	\uni2151.cv01.cv09 \uni2151.cv01.cv19 \uni2151.cv11 
+	\uni2151.cv09.cv11 \uni2151.cv11.cv19 \uni2152.cv10 \uni2152.cv20 
+	\uni2152.cv01 \uni2152.cv01.cv10 \uni2152.cv01.cv20 \uni2152.cv11 
+	\uni2152.cv10.cv11 \uni2152.cv11.cv20 \one.ss06 \one.ss06.pnum 
+	\one.ss06.tnum \one.ss06.onum \one.ss06.onum.tnum \one.cv01.ss06 
+	\one.cv01.ss06.pnum \one.cv01.ss06.tnum \one.cv01.ss06.onum 
+	\one.cv01.ss06.onum.tnum \one.cv11.ss06 \one.cv11.ss06.pnum 
+	\one.cv11.ss06.tnum \one.cv11.ss06.onum \one.cv11.ss06.onum.tnum 
+	\uni215F.ss06 \uni215F.cv01.ss06 \uni215F.cv11.ss06 \onehalf.ss06 
+	\onehalf.cv02.ss06 \onehalf.cv12.ss06 \onehalf.cv01.ss06 
+	\onehalf.cv01.cv02.ss06 \onehalf.cv01.cv12.ss06 \onehalf.cv11.ss06 
+	\onehalf.cv02.cv11.ss06 \onehalf.cv11.cv12.ss06 \onethird.ss06 
+	\onethird.cv03.ss06 \onethird.cv13.ss06 \onethird.cv01.ss06 
+	\onethird.cv01.cv03.ss06 \onethird.cv01.cv13.ss06 
+	\onethird.cv11.ss06 \onethird.cv03.cv11.ss06 
+	\onethird.cv11.cv13.ss06 \onequarter.ss06 \onequarter.cv04.ss06 
+	\onequarter.cv14.ss06 \onequarter.cv01.ss06 
+	\onequarter.cv01.cv04.ss06 \onequarter.cv01.cv14.ss06 
+	\onequarter.cv11.ss06 \onequarter.cv04.cv11.ss06 
+	\onequarter.cv11.cv14.ss06 \uni2155.ss06 \uni2155.cv05.ss06 
+	\uni2155.cv15.ss06 \uni2155.cv01.ss06 \uni2155.cv01.cv05.ss06 
+	\uni2155.cv01.cv15.ss06 \uni2155.cv11.ss06 \uni2155.cv05.cv11.ss06 
+	\uni2155.cv11.cv15.ss06 \uni2159.ss06 \uni2159.cv06.ss06 
+	\uni2159.cv16.ss06 \uni2159.cv01.ss06 \uni2159.cv01.cv06.ss06 
+	\uni2159.cv01.cv16.ss06 \uni2159.cv11.ss06 \uni2159.cv06.cv11.ss06 
+	\uni2159.cv11.cv16.ss06 \uni2150.ss06 \uni2150.cv07.ss06 
+	\uni2150.cv17.ss06 \uni2150.cv01.ss06 \uni2150.cv01.cv07.ss06 
+	\uni2150.cv01.cv17.ss06 \uni2150.cv11.ss06 \uni2150.cv07.cv11.ss06 
+	\uni2150.cv11.cv17.ss06 \oneeighth.ss06 \oneeighth.cv08.ss06 
+	\oneeighth.cv18.ss06 \oneeighth.cv01.ss06 
+	\oneeighth.cv01.cv08.ss06 \oneeighth.cv01.cv18.ss06 
+	\oneeighth.cv11.ss06 \oneeighth.cv08.cv11.ss06 
+	\oneeighth.cv11.cv18.ss06 \uni2151.ss06 \uni2151.cv09.ss06 
+	\uni2151.cv19.ss06 \uni2151.cv01.ss06 \uni2151.cv01.cv09.ss06 
+	\uni2151.cv01.cv19.ss06 \uni2151.cv11.ss06 \uni2151.cv09.cv11.ss06 
+	\uni2151.cv11.cv19.ss06 \uni2152.ss06 \uni2152.cv10.ss06 
+	\uni2152.cv20.ss06 \uni2152.cv01.ss06 \uni2152.cv01.cv10.ss06 
+	\uni2152.cv01.cv20.ss06 \uni2152.cv11.ss06 \uni2152.cv10.cv11.ss06 
+	\uni2152.cv11.cv20.ss06 \seven.ss07 \seven.ss07.pnum 
+	\seven.ss07.tnum \seven.ss07.onum \seven.ss07.onum.tnum 
+	\seven.cv07.ss07 \seven.cv07.ss07.pnum \seven.cv07.ss07.tnum 
+	\seven.cv07.ss07.onum \seven.cv07.ss07.onum.tnum \seven.cv17.ss07 
+	\seven.cv17.ss07.pnum \seven.cv17.ss07.tnum \seven.cv17.ss07.onum 
+	\seven.cv17.ss07.onum.tnum \uni2150.ss07 \uni2150.cv07.ss07 
+	\uni2150.cv17.ss07 \uni2150.cv01.ss07 \uni2150.cv01.cv07.ss07 
+	\uni2150.cv01.cv17.ss07 \uni2150.cv11.ss07 \uni2150.cv07.cv11.ss07 
+	\uni2150.cv11.cv17.ss07 \seveneighths.ss07 \seveneighths.cv08.ss07 
+	\seveneighths.cv18.ss07 \seveneighths.cv07.ss07 
+	\seveneighths.cv07.cv08.ss07 \seveneighths.cv07.cv18.ss07 
+	\seveneighths.cv17.ss07 \seveneighths.cv08.cv17.ss07 
+	\seveneighths.cv17.cv18.ss07 \uni2150.ss06.ss07 
+	\uni2150.cv07.ss06.ss07 \uni2150.cv17.ss06.ss07 
+	\uni2150.cv01.ss06.ss07 \uni2150.cv01.cv07.ss06.ss07 
+	\uni2150.cv01.cv17.ss06.ss07 \uni2150.cv11.ss06.ss07 
+	\uni2150.cv07.cv11.ss06.ss07 \uni2150.cv11.cv17.ss06.ss07 
+	\zero.zero \zero.zero.pnum \zero.zero.tnum \zero.zero.onum 
+	\zero.zero.onum.tnum \zero.cv10.zero \zero.cv10.zero.pnum 
+	\zero.cv10.zero.tnum \zero.cv10.zero.onum 
+	\zero.cv10.zero.onum.tnum \zero.cv20.zero \zero.cv20.zero.pnum 
+	\zero.cv20.zero.tnum \zero.cv20.zero.onum 
+	\zero.cv20.zero.onum.tnum \uni2189.zero \uni2189.cv03.zero 
+	\uni2189.cv13.zero \uni2189.cv10.zero \uni2189.cv03.cv10.zero 
+	\uni2189.cv10.cv13.zero \uni2189.cv20.zero \uni2189.cv03.cv20.zero 
+	\uni2189.cv13.cv20.zero \uni2152.zero \uni2152.cv10.zero 
+	\uni2152.cv20.zero \uni2152.cv01.zero \uni2152.cv01.cv10.zero 
+	\uni2152.cv01.cv20.zero \uni2152.cv11.zero \uni2152.cv10.cv11.zero 
+	\uni2152.cv11.cv20.zero \uni2152.ss06.zero \uni2152.cv10.ss06.zero 
+	\uni2152.cv20.ss06.zero \uni2152.cv01.ss06.zero 
+	\uni2152.cv01.cv10.ss06.zero \uni2152.cv01.cv20.ss06.zero 
+	\uni2152.cv11.ss06.zero \uni2152.cv10.cv11.ss06.zero 
+	\uni2152.cv11.cv20.ss06.zero ] ;
     sub [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
+	\threequarters \uni2150 \uni2151 \uni2152 \onethird \twothirds 
 	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] [\x ]'lookup calt_Centered_glyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
-	\threequarters \uni0250 \uni0251 \uni0252 \onethird \twothirds 
+	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 \zero.pnum 
+	\one.pnum \two.pnum \three.pnum \four.pnum \five.pnum \six.pnum 
+	\seven.pnum \eight.pnum \nine.pnum \zero.tnum \one.tnum \two.tnum 
+	\three.tnum \four.tnum \five.tnum \six.tnum \seven.tnum \eight.tnum 
+	\nine.tnum \zero.onum \one.onum \two.onum \three.onum \four.onum 
+	\five.onum \six.onum \seven.onum \eight.onum \nine.onum 
+	\zero.onum.tnum \one.onum.tnum \two.onum.tnum \three.onum.tnum 
+	\four.onum.tnum \five.onum.tnum \six.onum.tnum \seven.onum.tnum 
+	\eight.onum.tnum \nine.onum.tnum \one.cv01 \one.cv01.pnum 
+	\one.cv01.tnum \one.cv01.onum \one.cv01.onum.tnum \two.cv02 
+	\two.cv02.pnum \two.cv02.tnum \two.cv02.onum \two.cv02.onum.tnum 
+	\three.cv03 \three.cv03.pnum \three.cv03.tnum \three.cv03.onum 
+	\three.cv03.onum.tnum \four.cv04 \four.cv04.pnum \four.cv04.tnum 
+	\four.cv04.onum \four.cv04.onum.tnum \five.cv05 \five.cv05.pnum 
+	\five.cv05.tnum \five.cv05.onum \five.cv05.onum.tnum \six.cv06 
+	\six.cv06.pnum \six.cv06.tnum \six.cv06.onum \six.cv06.onum.tnum 
+	\seven.cv07 \seven.cv07.pnum \seven.cv07.tnum \seven.cv07.onum 
+	\seven.cv07.onum.tnum \eight.cv08 \eight.cv08.pnum \eight.cv08.tnum 
+	\eight.cv08.onum \eight.cv08.onum.tnum \nine.cv09 \nine.cv09.pnum 
+	\nine.cv09.tnum \nine.cv09.onum \nine.cv09.onum.tnum \zero.cv10 
+	\zero.cv10.pnum \zero.cv10.tnum \zero.cv10.onum 
+	\zero.cv10.onum.tnum \one.cv11 \one.cv11.pnum \one.cv11.tnum 
+	\one.cv11.onum \one.cv11.onum.tnum \two.cv12 \two.cv12.pnum 
+	\two.cv12.tnum \two.cv12.onum \two.cv12.onum.tnum \three.cv13 
+	\three.cv13.pnum \three.cv13.tnum \three.cv13.onum 
+	\three.cv13.onum.tnum \four.cv14 \four.cv14.pnum \four.cv14.tnum 
+	\four.cv14.onum \four.cv14.onum.tnum \five.cv15 \five.cv15.pnum 
+	\five.cv15.tnum \five.cv15.onum \five.cv15.onum.tnum \six.cv16 
+	\six.cv16.pnum \six.cv16.tnum \six.cv16.onum \six.cv16.onum.tnum 
+	\seven.cv17 \seven.cv17.pnum \seven.cv17.tnum \seven.cv17.onum 
+	\seven.cv17.onum.tnum \eight.cv18 \eight.cv18.pnum \eight.cv18.tnum 
+	\eight.cv18.onum \eight.cv18.onum.tnum \nine.cv19 \nine.cv19.pnum 
+	\nine.cv19.tnum \nine.cv19.onum \nine.cv19.onum.tnum \zero.cv20 
+	\zero.cv20.pnum \zero.cv20.tnum \zero.cv20.onum 
+	\zero.cv20.onum.tnum \uni215F.cv01 \uni215F.cv11 \onehalf.cv02 
+	\onehalf.cv12 \onehalf.cv01 \onehalf.cv01.cv02 \onehalf.cv01.cv12 
+	\onehalf.cv11 \onehalf.cv02.cv11 \onehalf.cv11.cv12 \uni2189.cv03 
+	\uni2189.cv13 \uni2189.cv10 \uni2189.cv03.cv10 \uni2189.cv10.cv13 
+	\uni2189.cv20 \uni2189.cv03.cv20 \uni2189.cv13.cv20 \onethird.cv03 
+	\onethird.cv13 \onethird.cv01 \onethird.cv01.cv03 
+	\onethird.cv01.cv13 \onethird.cv11 \onethird.cv03.cv11 
+	\onethird.cv11.cv13 \twothirds.cv03 \twothirds.cv13 \twothirds.cv02 
+	\twothirds.cv02.cv03 \twothirds.cv02.cv13 \twothirds.cv12 
+	\twothirds.cv03.cv12 \twothirds.cv12.cv13 \onequarter.cv04 
+	\onequarter.cv14 \onequarter.cv01 \onequarter.cv01.cv04 
+	\onequarter.cv01.cv14 \onequarter.cv11 \onequarter.cv04.cv11 
+	\onequarter.cv11.cv14 \threequarters.cv04 \threequarters.cv14 
+	\threequarters.cv03 \threequarters.cv03.cv04 
+	\threequarters.cv03.cv14 \threequarters.cv13 
+	\threequarters.cv04.cv13 \threequarters.cv13.cv14 \uni2155.cv05 
+	\uni2155.cv15 \uni2155.cv01 \uni2155.cv01.cv05 \uni2155.cv01.cv15 
+	\uni2155.cv11 \uni2155.cv05.cv11 \uni2155.cv11.cv15 \uni2156.cv05 
+	\uni2156.cv15 \uni2156.cv02 \uni2156.cv02.cv05 \uni2156.cv02.cv15 
+	\uni2156.cv12 \uni2156.cv05.cv12 \uni2156.cv12.cv15 \uni2157.cv05 
+	\uni2157.cv15 \uni2157.cv03 \uni2157.cv03.cv05 \uni2157.cv03.cv15 
+	\uni2157.cv13 \uni2157.cv05.cv13 \uni2157.cv13.cv15 \uni2158.cv05 
+	\uni2158.cv15 \uni2158.cv04 \uni2158.cv04.cv05 \uni2158.cv04.cv15 
+	\uni2158.cv14 \uni2158.cv05.cv14 \uni2158.cv14.cv15 \uni2159.cv06 
+	\uni2159.cv16 \uni2159.cv01 \uni2159.cv01.cv06 \uni2159.cv01.cv16 
+	\uni2159.cv11 \uni2159.cv06.cv11 \uni2159.cv11.cv16 \uni215A.cv06 
+	\uni215A.cv16 \uni215A.cv05 \uni215A.cv05.cv06 \uni215A.cv05.cv16 
+	\uni215A.cv15 \uni215A.cv06.cv15 \uni215A.cv15.cv16 \uni2150.cv07 
+	\uni2150.cv17 \uni2150.cv01 \uni2150.cv01.cv07 \uni2150.cv01.cv17 
+	\uni2150.cv11 \uni2150.cv07.cv11 \uni2150.cv11.cv17 \oneeighth.cv08 
+	\oneeighth.cv18 \oneeighth.cv01 \oneeighth.cv01.cv08 
+	\oneeighth.cv01.cv18 \oneeighth.cv11 \oneeighth.cv08.cv11 
+	\oneeighth.cv11.cv18 \threeeighths.cv08 \threeeighths.cv18 
+	\threeeighths.cv03 \threeeighths.cv03.cv08 \threeeighths.cv03.cv18 
+	\threeeighths.cv13 \threeeighths.cv08.cv13 \threeeighths.cv13.cv18 
+	\fiveeighths.cv08 \fiveeighths.cv18 \fiveeighths.cv05 
+	\fiveeighths.cv05.cv08 \fiveeighths.cv05.cv18 \fiveeighths.cv15 
+	\fiveeighths.cv08.cv15 \fiveeighths.cv15.cv18 \seveneighths.cv08 
+	\seveneighths.cv18 \seveneighths.cv07 \seveneighths.cv07.cv08 
+	\seveneighths.cv07.cv18 \seveneighths.cv17 \seveneighths.cv08.cv17 
+	\seveneighths.cv17.cv18 \uni2151.cv09 \uni2151.cv19 \uni2151.cv01 
+	\uni2151.cv01.cv09 \uni2151.cv01.cv19 \uni2151.cv11 
+	\uni2151.cv09.cv11 \uni2151.cv11.cv19 \uni2152.cv10 \uni2152.cv20 
+	\uni2152.cv01 \uni2152.cv01.cv10 \uni2152.cv01.cv20 \uni2152.cv11 
+	\uni2152.cv10.cv11 \uni2152.cv11.cv20 \one.ss06 \one.ss06.pnum 
+	\one.ss06.tnum \one.ss06.onum \one.ss06.onum.tnum \one.cv01.ss06 
+	\one.cv01.ss06.pnum \one.cv01.ss06.tnum \one.cv01.ss06.onum 
+	\one.cv01.ss06.onum.tnum \one.cv11.ss06 \one.cv11.ss06.pnum 
+	\one.cv11.ss06.tnum \one.cv11.ss06.onum \one.cv11.ss06.onum.tnum 
+	\uni215F.ss06 \uni215F.cv01.ss06 \uni215F.cv11.ss06 \onehalf.ss06 
+	\onehalf.cv02.ss06 \onehalf.cv12.ss06 \onehalf.cv01.ss06 
+	\onehalf.cv01.cv02.ss06 \onehalf.cv01.cv12.ss06 \onehalf.cv11.ss06 
+	\onehalf.cv02.cv11.ss06 \onehalf.cv11.cv12.ss06 \onethird.ss06 
+	\onethird.cv03.ss06 \onethird.cv13.ss06 \onethird.cv01.ss06 
+	\onethird.cv01.cv03.ss06 \onethird.cv01.cv13.ss06 
+	\onethird.cv11.ss06 \onethird.cv03.cv11.ss06 
+	\onethird.cv11.cv13.ss06 \onequarter.ss06 \onequarter.cv04.ss06 
+	\onequarter.cv14.ss06 \onequarter.cv01.ss06 
+	\onequarter.cv01.cv04.ss06 \onequarter.cv01.cv14.ss06 
+	\onequarter.cv11.ss06 \onequarter.cv04.cv11.ss06 
+	\onequarter.cv11.cv14.ss06 \uni2155.ss06 \uni2155.cv05.ss06 
+	\uni2155.cv15.ss06 \uni2155.cv01.ss06 \uni2155.cv01.cv05.ss06 
+	\uni2155.cv01.cv15.ss06 \uni2155.cv11.ss06 \uni2155.cv05.cv11.ss06 
+	\uni2155.cv11.cv15.ss06 \uni2159.ss06 \uni2159.cv06.ss06 
+	\uni2159.cv16.ss06 \uni2159.cv01.ss06 \uni2159.cv01.cv06.ss06 
+	\uni2159.cv01.cv16.ss06 \uni2159.cv11.ss06 \uni2159.cv06.cv11.ss06 
+	\uni2159.cv11.cv16.ss06 \uni2150.ss06 \uni2150.cv07.ss06 
+	\uni2150.cv17.ss06 \uni2150.cv01.ss06 \uni2150.cv01.cv07.ss06 
+	\uni2150.cv01.cv17.ss06 \uni2150.cv11.ss06 \uni2150.cv07.cv11.ss06 
+	\uni2150.cv11.cv17.ss06 \oneeighth.ss06 \oneeighth.cv08.ss06 
+	\oneeighth.cv18.ss06 \oneeighth.cv01.ss06 
+	\oneeighth.cv01.cv08.ss06 \oneeighth.cv01.cv18.ss06 
+	\oneeighth.cv11.ss06 \oneeighth.cv08.cv11.ss06 
+	\oneeighth.cv11.cv18.ss06 \uni2151.ss06 \uni2151.cv09.ss06 
+	\uni2151.cv19.ss06 \uni2151.cv01.ss06 \uni2151.cv01.cv09.ss06 
+	\uni2151.cv01.cv19.ss06 \uni2151.cv11.ss06 \uni2151.cv09.cv11.ss06 
+	\uni2151.cv11.cv19.ss06 \uni2152.ss06 \uni2152.cv10.ss06 
+	\uni2152.cv20.ss06 \uni2152.cv01.ss06 \uni2152.cv01.cv10.ss06 
+	\uni2152.cv01.cv20.ss06 \uni2152.cv11.ss06 \uni2152.cv10.cv11.ss06 
+	\uni2152.cv11.cv20.ss06 \seven.ss07 \seven.ss07.pnum 
+	\seven.ss07.tnum \seven.ss07.onum \seven.ss07.onum.tnum 
+	\seven.cv07.ss07 \seven.cv07.ss07.pnum \seven.cv07.ss07.tnum 
+	\seven.cv07.ss07.onum \seven.cv07.ss07.onum.tnum \seven.cv17.ss07 
+	\seven.cv17.ss07.pnum \seven.cv17.ss07.tnum \seven.cv17.ss07.onum 
+	\seven.cv17.ss07.onum.tnum \uni2150.ss07 \uni2150.cv07.ss07 
+	\uni2150.cv17.ss07 \uni2150.cv01.ss07 \uni2150.cv01.cv07.ss07 
+	\uni2150.cv01.cv17.ss07 \uni2150.cv11.ss07 \uni2150.cv07.cv11.ss07 
+	\uni2150.cv11.cv17.ss07 \seveneighths.ss07 \seveneighths.cv08.ss07 
+	\seveneighths.cv18.ss07 \seveneighths.cv07.ss07 
+	\seveneighths.cv07.cv08.ss07 \seveneighths.cv07.cv18.ss07 
+	\seveneighths.cv17.ss07 \seveneighths.cv08.cv17.ss07 
+	\seveneighths.cv17.cv18.ss07 \uni2150.ss06.ss07 
+	\uni2150.cv07.ss06.ss07 \uni2150.cv17.ss06.ss07 
+	\uni2150.cv01.ss06.ss07 \uni2150.cv01.cv07.ss06.ss07 
+	\uni2150.cv01.cv17.ss06.ss07 \uni2150.cv11.ss06.ss07 
+	\uni2150.cv07.cv11.ss06.ss07 \uni2150.cv11.cv17.ss06.ss07 
+	\zero.zero \zero.zero.pnum \zero.zero.tnum \zero.zero.onum 
+	\zero.zero.onum.tnum \zero.cv10.zero \zero.cv10.zero.pnum 
+	\zero.cv10.zero.tnum \zero.cv10.zero.onum 
+	\zero.cv10.zero.onum.tnum \zero.cv20.zero \zero.cv20.zero.pnum 
+	\zero.cv20.zero.tnum \zero.cv20.zero.onum 
+	\zero.cv20.zero.onum.tnum \uni2189.zero \uni2189.cv03.zero 
+	\uni2189.cv13.zero \uni2189.cv10.zero \uni2189.cv03.cv10.zero 
+	\uni2189.cv10.cv13.zero \uni2189.cv20.zero \uni2189.cv03.cv20.zero 
+	\uni2189.cv13.cv20.zero \uni2152.zero \uni2152.cv10.zero 
+	\uni2152.cv20.zero \uni2152.cv01.zero \uni2152.cv01.cv10.zero 
+	\uni2152.cv01.cv20.zero \uni2152.cv11.zero \uni2152.cv10.cv11.zero 
+	\uni2152.cv11.cv20.zero \uni2152.ss06.zero \uni2152.cv10.ss06.zero 
+	\uni2152.cv20.ss06.zero \uni2152.cv01.ss06.zero 
+	\uni2152.cv01.cv10.ss06.zero \uni2152.cv01.cv20.ss06.zero 
+	\uni2152.cv11.ss06.zero \uni2152.cv10.cv11.ss06.zero 
+	\uni2152.cv11.cv20.ss06.zero ] [\x ]'lookup calt_Centered_glyphs  [\zero \one \two \three \four \five \six \seven \eight \nine \onequarter \onehalf 
+	\threequarters \uni2150 \uni2151 \uni2152 \onethird \twothirds 
 	\uni2155 \uni2156 \uni2157 \uni2158 \uni2159 \uni215A \oneeighth 
-	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 ] ;
+	\threeeighths \fiveeighths \seveneighths \uni215F \uni2189 \zero.pnum 
+	\one.pnum \two.pnum \three.pnum \four.pnum \five.pnum \six.pnum 
+	\seven.pnum \eight.pnum \nine.pnum \zero.tnum \one.tnum \two.tnum 
+	\three.tnum \four.tnum \five.tnum \six.tnum \seven.tnum \eight.tnum 
+	\nine.tnum \zero.onum \one.onum \two.onum \three.onum \four.onum 
+	\five.onum \six.onum \seven.onum \eight.onum \nine.onum 
+	\zero.onum.tnum \one.onum.tnum \two.onum.tnum \three.onum.tnum 
+	\four.onum.tnum \five.onum.tnum \six.onum.tnum \seven.onum.tnum 
+	\eight.onum.tnum \nine.onum.tnum \one.cv01 \one.cv01.pnum 
+	\one.cv01.tnum \one.cv01.onum \one.cv01.onum.tnum \two.cv02 
+	\two.cv02.pnum \two.cv02.tnum \two.cv02.onum \two.cv02.onum.tnum 
+	\three.cv03 \three.cv03.pnum \three.cv03.tnum \three.cv03.onum 
+	\three.cv03.onum.tnum \four.cv04 \four.cv04.pnum \four.cv04.tnum 
+	\four.cv04.onum \four.cv04.onum.tnum \five.cv05 \five.cv05.pnum 
+	\five.cv05.tnum \five.cv05.onum \five.cv05.onum.tnum \six.cv06 
+	\six.cv06.pnum \six.cv06.tnum \six.cv06.onum \six.cv06.onum.tnum 
+	\seven.cv07 \seven.cv07.pnum \seven.cv07.tnum \seven.cv07.onum 
+	\seven.cv07.onum.tnum \eight.cv08 \eight.cv08.pnum \eight.cv08.tnum 
+	\eight.cv08.onum \eight.cv08.onum.tnum \nine.cv09 \nine.cv09.pnum 
+	\nine.cv09.tnum \nine.cv09.onum \nine.cv09.onum.tnum \zero.cv10 
+	\zero.cv10.pnum \zero.cv10.tnum \zero.cv10.onum 
+	\zero.cv10.onum.tnum \one.cv11 \one.cv11.pnum \one.cv11.tnum 
+	\one.cv11.onum \one.cv11.onum.tnum \two.cv12 \two.cv12.pnum 
+	\two.cv12.tnum \two.cv12.onum \two.cv12.onum.tnum \three.cv13 
+	\three.cv13.pnum \three.cv13.tnum \three.cv13.onum 
+	\three.cv13.onum.tnum \four.cv14 \four.cv14.pnum \four.cv14.tnum 
+	\four.cv14.onum \four.cv14.onum.tnum \five.cv15 \five.cv15.pnum 
+	\five.cv15.tnum \five.cv15.onum \five.cv15.onum.tnum \six.cv16 
+	\six.cv16.pnum \six.cv16.tnum \six.cv16.onum \six.cv16.onum.tnum 
+	\seven.cv17 \seven.cv17.pnum \seven.cv17.tnum \seven.cv17.onum 
+	\seven.cv17.onum.tnum \eight.cv18 \eight.cv18.pnum \eight.cv18.tnum 
+	\eight.cv18.onum \eight.cv18.onum.tnum \nine.cv19 \nine.cv19.pnum 
+	\nine.cv19.tnum \nine.cv19.onum \nine.cv19.onum.tnum \zero.cv20 
+	\zero.cv20.pnum \zero.cv20.tnum \zero.cv20.onum 
+	\zero.cv20.onum.tnum \uni215F.cv01 \uni215F.cv11 \onehalf.cv02 
+	\onehalf.cv12 \onehalf.cv01 \onehalf.cv01.cv02 \onehalf.cv01.cv12 
+	\onehalf.cv11 \onehalf.cv02.cv11 \onehalf.cv11.cv12 \uni2189.cv03 
+	\uni2189.cv13 \uni2189.cv10 \uni2189.cv03.cv10 \uni2189.cv10.cv13 
+	\uni2189.cv20 \uni2189.cv03.cv20 \uni2189.cv13.cv20 \onethird.cv03 
+	\onethird.cv13 \onethird.cv01 \onethird.cv01.cv03 
+	\onethird.cv01.cv13 \onethird.cv11 \onethird.cv03.cv11 
+	\onethird.cv11.cv13 \twothirds.cv03 \twothirds.cv13 \twothirds.cv02 
+	\twothirds.cv02.cv03 \twothirds.cv02.cv13 \twothirds.cv12 
+	\twothirds.cv03.cv12 \twothirds.cv12.cv13 \onequarter.cv04 
+	\onequarter.cv14 \onequarter.cv01 \onequarter.cv01.cv04 
+	\onequarter.cv01.cv14 \onequarter.cv11 \onequarter.cv04.cv11 
+	\onequarter.cv11.cv14 \threequarters.cv04 \threequarters.cv14 
+	\threequarters.cv03 \threequarters.cv03.cv04 
+	\threequarters.cv03.cv14 \threequarters.cv13 
+	\threequarters.cv04.cv13 \threequarters.cv13.cv14 \uni2155.cv05 
+	\uni2155.cv15 \uni2155.cv01 \uni2155.cv01.cv05 \uni2155.cv01.cv15 
+	\uni2155.cv11 \uni2155.cv05.cv11 \uni2155.cv11.cv15 \uni2156.cv05 
+	\uni2156.cv15 \uni2156.cv02 \uni2156.cv02.cv05 \uni2156.cv02.cv15 
+	\uni2156.cv12 \uni2156.cv05.cv12 \uni2156.cv12.cv15 \uni2157.cv05 
+	\uni2157.cv15 \uni2157.cv03 \uni2157.cv03.cv05 \uni2157.cv03.cv15 
+	\uni2157.cv13 \uni2157.cv05.cv13 \uni2157.cv13.cv15 \uni2158.cv05 
+	\uni2158.cv15 \uni2158.cv04 \uni2158.cv04.cv05 \uni2158.cv04.cv15 
+	\uni2158.cv14 \uni2158.cv05.cv14 \uni2158.cv14.cv15 \uni2159.cv06 
+	\uni2159.cv16 \uni2159.cv01 \uni2159.cv01.cv06 \uni2159.cv01.cv16 
+	\uni2159.cv11 \uni2159.cv06.cv11 \uni2159.cv11.cv16 \uni215A.cv06 
+	\uni215A.cv16 \uni215A.cv05 \uni215A.cv05.cv06 \uni215A.cv05.cv16 
+	\uni215A.cv15 \uni215A.cv06.cv15 \uni215A.cv15.cv16 \uni2150.cv07 
+	\uni2150.cv17 \uni2150.cv01 \uni2150.cv01.cv07 \uni2150.cv01.cv17 
+	\uni2150.cv11 \uni2150.cv07.cv11 \uni2150.cv11.cv17 \oneeighth.cv08 
+	\oneeighth.cv18 \oneeighth.cv01 \oneeighth.cv01.cv08 
+	\oneeighth.cv01.cv18 \oneeighth.cv11 \oneeighth.cv08.cv11 
+	\oneeighth.cv11.cv18 \threeeighths.cv08 \threeeighths.cv18 
+	\threeeighths.cv03 \threeeighths.cv03.cv08 \threeeighths.cv03.cv18 
+	\threeeighths.cv13 \threeeighths.cv08.cv13 \threeeighths.cv13.cv18 
+	\fiveeighths.cv08 \fiveeighths.cv18 \fiveeighths.cv05 
+	\fiveeighths.cv05.cv08 \fiveeighths.cv05.cv18 \fiveeighths.cv15 
+	\fiveeighths.cv08.cv15 \fiveeighths.cv15.cv18 \seveneighths.cv08 
+	\seveneighths.cv18 \seveneighths.cv07 \seveneighths.cv07.cv08 
+	\seveneighths.cv07.cv18 \seveneighths.cv17 \seveneighths.cv08.cv17 
+	\seveneighths.cv17.cv18 \uni2151.cv09 \uni2151.cv19 \uni2151.cv01 
+	\uni2151.cv01.cv09 \uni2151.cv01.cv19 \uni2151.cv11 
+	\uni2151.cv09.cv11 \uni2151.cv11.cv19 \uni2152.cv10 \uni2152.cv20 
+	\uni2152.cv01 \uni2152.cv01.cv10 \uni2152.cv01.cv20 \uni2152.cv11 
+	\uni2152.cv10.cv11 \uni2152.cv11.cv20 \one.ss06 \one.ss06.pnum 
+	\one.ss06.tnum \one.ss06.onum \one.ss06.onum.tnum \one.cv01.ss06 
+	\one.cv01.ss06.pnum \one.cv01.ss06.tnum \one.cv01.ss06.onum 
+	\one.cv01.ss06.onum.tnum \one.cv11.ss06 \one.cv11.ss06.pnum 
+	\one.cv11.ss06.tnum \one.cv11.ss06.onum \one.cv11.ss06.onum.tnum 
+	\uni215F.ss06 \uni215F.cv01.ss06 \uni215F.cv11.ss06 \onehalf.ss06 
+	\onehalf.cv02.ss06 \onehalf.cv12.ss06 \onehalf.cv01.ss06 
+	\onehalf.cv01.cv02.ss06 \onehalf.cv01.cv12.ss06 \onehalf.cv11.ss06 
+	\onehalf.cv02.cv11.ss06 \onehalf.cv11.cv12.ss06 \onethird.ss06 
+	\onethird.cv03.ss06 \onethird.cv13.ss06 \onethird.cv01.ss06 
+	\onethird.cv01.cv03.ss06 \onethird.cv01.cv13.ss06 
+	\onethird.cv11.ss06 \onethird.cv03.cv11.ss06 
+	\onethird.cv11.cv13.ss06 \onequarter.ss06 \onequarter.cv04.ss06 
+	\onequarter.cv14.ss06 \onequarter.cv01.ss06 
+	\onequarter.cv01.cv04.ss06 \onequarter.cv01.cv14.ss06 
+	\onequarter.cv11.ss06 \onequarter.cv04.cv11.ss06 
+	\onequarter.cv11.cv14.ss06 \uni2155.ss06 \uni2155.cv05.ss06 
+	\uni2155.cv15.ss06 \uni2155.cv01.ss06 \uni2155.cv01.cv05.ss06 
+	\uni2155.cv01.cv15.ss06 \uni2155.cv11.ss06 \uni2155.cv05.cv11.ss06 
+	\uni2155.cv11.cv15.ss06 \uni2159.ss06 \uni2159.cv06.ss06 
+	\uni2159.cv16.ss06 \uni2159.cv01.ss06 \uni2159.cv01.cv06.ss06 
+	\uni2159.cv01.cv16.ss06 \uni2159.cv11.ss06 \uni2159.cv06.cv11.ss06 
+	\uni2159.cv11.cv16.ss06 \uni2150.ss06 \uni2150.cv07.ss06 
+	\uni2150.cv17.ss06 \uni2150.cv01.ss06 \uni2150.cv01.cv07.ss06 
+	\uni2150.cv01.cv17.ss06 \uni2150.cv11.ss06 \uni2150.cv07.cv11.ss06 
+	\uni2150.cv11.cv17.ss06 \oneeighth.ss06 \oneeighth.cv08.ss06 
+	\oneeighth.cv18.ss06 \oneeighth.cv01.ss06 
+	\oneeighth.cv01.cv08.ss06 \oneeighth.cv01.cv18.ss06 
+	\oneeighth.cv11.ss06 \oneeighth.cv08.cv11.ss06 
+	\oneeighth.cv11.cv18.ss06 \uni2151.ss06 \uni2151.cv09.ss06 
+	\uni2151.cv19.ss06 \uni2151.cv01.ss06 \uni2151.cv01.cv09.ss06 
+	\uni2151.cv01.cv19.ss06 \uni2151.cv11.ss06 \uni2151.cv09.cv11.ss06 
+	\uni2151.cv11.cv19.ss06 \uni2152.ss06 \uni2152.cv10.ss06 
+	\uni2152.cv20.ss06 \uni2152.cv01.ss06 \uni2152.cv01.cv10.ss06 
+	\uni2152.cv01.cv20.ss06 \uni2152.cv11.ss06 \uni2152.cv10.cv11.ss06 
+	\uni2152.cv11.cv20.ss06 \seven.ss07 \seven.ss07.pnum 
+	\seven.ss07.tnum \seven.ss07.onum \seven.ss07.onum.tnum 
+	\seven.cv07.ss07 \seven.cv07.ss07.pnum \seven.cv07.ss07.tnum 
+	\seven.cv07.ss07.onum \seven.cv07.ss07.onum.tnum \seven.cv17.ss07 
+	\seven.cv17.ss07.pnum \seven.cv17.ss07.tnum \seven.cv17.ss07.onum 
+	\seven.cv17.ss07.onum.tnum \uni2150.ss07 \uni2150.cv07.ss07 
+	\uni2150.cv17.ss07 \uni2150.cv01.ss07 \uni2150.cv01.cv07.ss07 
+	\uni2150.cv01.cv17.ss07 \uni2150.cv11.ss07 \uni2150.cv07.cv11.ss07 
+	\uni2150.cv11.cv17.ss07 \seveneighths.ss07 \seveneighths.cv08.ss07 
+	\seveneighths.cv18.ss07 \seveneighths.cv07.ss07 
+	\seveneighths.cv07.cv08.ss07 \seveneighths.cv07.cv18.ss07 
+	\seveneighths.cv17.ss07 \seveneighths.cv08.cv17.ss07 
+	\seveneighths.cv17.cv18.ss07 \uni2150.ss06.ss07 
+	\uni2150.cv07.ss06.ss07 \uni2150.cv17.ss06.ss07 
+	\uni2150.cv01.ss06.ss07 \uni2150.cv01.cv07.ss06.ss07 
+	\uni2150.cv01.cv17.ss06.ss07 \uni2150.cv11.ss06.ss07 
+	\uni2150.cv07.cv11.ss06.ss07 \uni2150.cv11.cv17.ss06.ss07 
+	\zero.zero \zero.zero.pnum \zero.zero.tnum \zero.zero.onum 
+	\zero.zero.onum.tnum \zero.cv10.zero \zero.cv10.zero.pnum 
+	\zero.cv10.zero.tnum \zero.cv10.zero.onum 
+	\zero.cv10.zero.onum.tnum \zero.cv20.zero \zero.cv20.zero.pnum 
+	\zero.cv20.zero.tnum \zero.cv20.zero.onum 
+	\zero.cv20.zero.onum.tnum \uni2189.zero \uni2189.cv03.zero 
+	\uni2189.cv13.zero \uni2189.cv10.zero \uni2189.cv03.cv10.zero 
+	\uni2189.cv10.cv13.zero \uni2189.cv20.zero \uni2189.cv03.cv20.zero 
+	\uni2189.cv13.cv20.zero \uni2152.zero \uni2152.cv10.zero 
+	\uni2152.cv20.zero \uni2152.cv01.zero \uni2152.cv01.cv10.zero 
+	\uni2152.cv01.cv20.zero \uni2152.cv11.zero \uni2152.cv10.cv11.zero 
+	\uni2152.cv11.cv20.zero \uni2152.ss06.zero \uni2152.cv10.ss06.zero 
+	\uni2152.cv20.ss06.zero \uni2152.cv01.ss06.zero 
+	\uni2152.cv01.cv10.ss06.zero \uni2152.cv01.cv20.ss06.zero 
+	\uni2152.cv11.ss06.zero \uni2152.cv10.cv11.ss06.zero 
+	\uni2152.cv11.cv20.ss06.zero ] ;
 } calt_Contextual_Alternates;
+
+feature cv27 {
+
+ script DFLT;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script copt;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script cyrl;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script grek;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+
+ script latn;
+     language dflt ;
+      lookup locl_cv27_Localized_Eng;
+} cv27;
 
 feature locl {
 
@@ -5991,29 +6884,6 @@ feature locl {
      language WLF  exclude_dflt;
       lookup locl_cv27_Localized_Eng;
 } locl;
-
-feature cv27 {
-
- script DFLT;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script copt;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script cyrl;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script grek;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-
- script latn;
-     language dflt ;
-      lookup locl_cv27_Localized_Eng;
-} cv27;
 
 feature ss09 {
   featureNames {
@@ -12613,6 +13483,7 @@ feature mkmk {
       lookup mkmk_mark_to_mark_bottom_center;
       lookup mkmk_mark_to_mark_greek_top_center;
 } mkmk;
+#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 
