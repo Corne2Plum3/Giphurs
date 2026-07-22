@@ -2,14 +2,15 @@
 <glyph name="Eth" format="2">
   <advance width="1626"/>
   <unicode hex="00D0"/>
+  <anchor x="832" y="1380" name="top_center"/>
+  <anchor x="832" y="0" name="bottom_center"/>
+  <anchor x="737" y="-20" name="bottom_cedilla"/>
   <outline>
     <contour>
       <point x="860" y="620" type="line"/>
       <point x="860" y="860" type="line"/>
       <point x="0" y="860" type="line"/>
-      <point x="0" y="814"/>
-      <point x="0" y="666"/>
-      <point x="0" y="620" type="curve"/>
+      <point x="0" y="620" type="line"/>
     </contour>
     <contour>
       <point x="590" y="1144" type="line"/>
