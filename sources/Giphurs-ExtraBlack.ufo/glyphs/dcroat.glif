@@ -2,13 +2,15 @@
 <glyph name="dcroat" format="2">
   <advance width="1390"/>
   <unicode hex="0111"/>
+  <anchor x="1180" y="1480" name="top_right"/>
+  <anchor x="1000" y="1380" name="top_center"/>
+  <anchor x="555" y="0" name="bottom_center"/>
+  <anchor x="555" y="-20" name="bottom_cedilla"/>
   <outline>
     <contour>
       <point x="1390" y="1120" type="line"/>
       <point x="550" y="1120" type="line"/>
-      <point x="550" y="1166"/>
-      <point x="550" y="1314"/>
-      <point x="550" y="1360" type="curve"/>
+      <point x="550" y="1360" type="line"/>
       <point x="1390" y="1360" type="line"/>
     </contour>
     <contour>
