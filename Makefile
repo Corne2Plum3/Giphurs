@@ -63,6 +63,7 @@ clean:
 	rm -rf output/
 	rm -rf scripts/__pycache__
 	rm -rf scripts/composed_glyphs/__pycache__
+	rm -rf sources-inst
 	rm -rf $(UFO_DIR)/instance_ufos
 	rm -f $(UFO_DIR)/*.ninja
 	rm -f $(UFO_DIR)/.fuse_hidden*
