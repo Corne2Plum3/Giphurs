@@ -64,7 +64,7 @@ class Proportional_Digit_Glyph(Composed_Glyph):
         if is_italic:
             glyph_width += int(base_xml_metrics['raw_width'] - base_xml_metrics['raw_height'] / tan(pi/2 - Composed_Glyph.ITALIC_SLANT))  # non-italic raw width
         else:
-            glyph_width = base_xml_metrics['raw_width']
+            glyph_width += base_xml_metrics['raw_width']
         dst_xml_tree.getroot().insert(0, ET.Element('advance', {'width': str(glyph_width)}))
 
         # Place component
