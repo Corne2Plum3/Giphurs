@@ -368,7 +368,8 @@ def get_glyph_points_coordinates(glyph_name: str, ufo_dir: Path) -> list[tuple[i
             for point in element.findall("point"):
                 if float(point.attrib["x"]) % 1 != 0.0 or float(point.attrib["y"]) % 1 != 0.0:
                     logger.warning(f'{glif}: non-integer coordinates at element {element_index}: ({point.attrib["x"]}, {point.attrib["y"]})')
-                points_list.append((int(point.attrib["x"]), int(point.attrib["y"])))
+                if 'type' in point.attrib:  # ignore points used to set curves
+                    points_list.append((int(point.attrib["x"]), int(point.attrib["y"])))
         elif element.tag == "component":
             components_points_list: list[tuple[int, int]] = get_glyph_points_coordinates(element.attrib["base"], ufo_dir)
             x_offset: int = 0
