@@ -2,19 +2,6 @@
 <glyph name="one.cv11.onum.tnum" format="2">
   <advance width="1232"/>
   <outline>
-    <contour>
-      <point x="269" y="970" type="line"/>
-      <point x="694" y="1200" type="line"/>
-      <point x="658" y="1000" type="line"/>
-      <point x="328" y="821" type="line"/>
-    </contour>
-    <contour>
-      <point x="874" y="1200" type="line"/>
-      <point x="662" y="0" type="line"/>
-      <point x="472" y="0" type="line"/>
-      <point x="669" y="1116" type="line"/>
-      <point x="679" y="1116" type="line"/>
-      <point x="694" y="1200" type="line"/>
-    </contour>
+    <component base="one.cv11.onum" xOffset="199"/>
   </outline>
 </glyph>

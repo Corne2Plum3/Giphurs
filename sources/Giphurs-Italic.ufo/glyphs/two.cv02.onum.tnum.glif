@@ -2,43 +2,6 @@
 <glyph name="two.cv02.onum.tnum" format="2">
   <advance width="1232"/>
   <outline>
-    <contour>
-      <point x="667" y="1052" type="curve" smooth="yes"/>
-      <point x="451" y="1052"/>
-      <point x="349" y="858"/>
-      <point x="348" y="742" type="curve"/>
-      <point x="161" y="778" type="line"/>
-      <point x="202" y="1008"/>
-      <point x="417" y="1220"/>
-      <point x="697" y="1220" type="curve" smooth="yes"/>
-      <point x="946" y="1220"/>
-      <point x="1089" y="1077"/>
-      <point x="1089" y="884" type="curve" smooth="yes"/>
-      <point x="1089" y="860"/>
-      <point x="1087" y="835"/>
-      <point x="1083" y="810" type="curve"/>
-      <point x="893" y="810" type="line"/>
-      <point x="896" y="827"/>
-      <point x="897" y="845"/>
-      <point x="897" y="861" type="curve" smooth="yes"/>
-      <point x="897" y="972"/>
-      <point x="824" y="1052"/>
-    </contour>
-    <contour>
-      <point x="406" y="168" type="curve"/>
-      <point x="54" y="168" type="line"/>
-      <point x="54" y="168"/>
-      <point x="824" y="420"/>
-      <point x="893" y="810" type="curve"/>
-      <point x="1083" y="810" type="line"/>
-      <point x="1014" y="416"/>
-      <point x="406" y="168"/>
-    </contour>
-    <contour>
-      <point x="978" y="168" type="line"/>
-      <point x="948" y="0" type="line"/>
-      <point x="24" y="0" type="line"/>
-      <point x="54" y="168" type="line"/>
-    </contour>
+    <component base="two.cv02.onum" xOffset="54"/>
   </outline>
 </glyph>

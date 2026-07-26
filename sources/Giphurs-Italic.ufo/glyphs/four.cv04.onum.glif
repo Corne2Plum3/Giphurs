@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="four.cv04.onum" format="2">
-  <advance width="1182"/>
+  <advance width="1185"/>
   <outline>
-    <contour>
-      <point x="866" y="1200" type="line"/>
-      <point x="203" y="208" type="line"/>
-      <point x="589" y="208" type="line"/>
-      <point x="633" y="458" type="line"/>
-      <point x="842" y="568" type="line"/>
-      <point x="779" y="208" type="line"/>
-      <point x="989" y="208" type="line"/>
-      <point x="959" y="40" type="line"/>
-      <point x="749" y="40" type="line"/>
-      <point x="693" y="-280" type="line"/>
-      <point x="503" y="-280" type="line"/>
-      <point x="559" y="40" type="line"/>
-      <point x="-23" y="40" type="line"/>
-      <point x="7" y="208" type="line"/>
-      <point x="666" y="1200" type="line"/>
-    </contour>
+    <component base="four.cv04.pnum" xOffset="-49" yOffset="-280"/>
   </outline>
 </glyph>

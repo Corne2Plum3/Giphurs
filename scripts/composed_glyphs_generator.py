@@ -244,7 +244,7 @@ def get_csv_fractions() -> list[str]:
     return csv_lines
 
 def get_csv_digits() -> list[str]:
-    '''Write CSV lines to generate .pnum and .tnum alternates of digits.'''
+    '''Write CSV lines to generate .pnum and .tnum alternates of digits (excluding .onum).'''
 
     csv_lines: list[str] = []
 
@@ -404,6 +404,21 @@ def get_csv_full_stop_numbers() -> list[str]:
 
     return csv_lines
 
+def get_csv_onum_digits():
+    '''Writes CSV lines to generate .onum numbers EXCEPTED `zero.onum`, `one.onum` and `two.onum`.'''
+
+    csv_lines: list[str] = []
+    y_offsets: dict[int, int] = {3: -280, 4: -280, 5: -280, 6: 0, 7: -280, 8: 0, 9: -280}
+    for digit_value, digit_name in enumerate(DIGITS_NAMES):
+        for alt_suffix in _get_all_digits_alternates_suffixes(digit_value):
+            if digit_value < 3:  # 0, 1, 2
+                csv_lines.append(f'{digit_name + alt_suffix + '.onum.tnum'},,3,T,1,,{digit_name + alt_suffix + '.onum'}')         
+            else:
+                csv_lines.append(f'{digit_name + alt_suffix + '.onum'},,3,C,1,{y_offsets[digit_value]},{digit_name + alt_suffix + '.pnum'}')
+                csv_lines.append(f'{digit_name + alt_suffix + '.onum.tnum'},,3,C,1,{y_offsets[digit_value]},{digit_name + alt_suffix}') 
+                # ^ works only because all defaults numbers are the same width
+    
+    return csv_lines
 
 # === ENTRY POINT ===
 
@@ -418,6 +433,7 @@ if __name__ == '__main__':
     parser.add_argument('--circled_numbers', action='store_true', help="Generate CSV lines for numbers in a circle.")
     parser.add_argument('--parenthesis_numbers', action='store_true', help="Generate CSV lines for numbers between ().")
     parser.add_argument('--full_stop_numbers', action='store_true', help="Generate CSV lines for numbers with a period 'full stop' at the end.")
+    parser.add_argument('--onum', action='store_true', help="Generate old style figures ('onum') and their fixed width variants.")
     args = parser.parse_args()
     if args.csv_file is None:
         logger.error(f'{sys.argv[0]}: CSV file not given.')
@@ -438,6 +454,8 @@ if __name__ == '__main__':
         new_lines += get_csv_parenthesis_numbers()
     if args.all or args.full_stop_numbers():
         new_lines += get_csv_full_stop_numbers()
+    if args.all or args.onum():
+        new_lines += get_csv_onum_digits()
 
     # Update file
     if len(new_lines) != 0:

@@ -2,22 +2,6 @@
 <glyph name="one.cv01.onum.tnum" format="2">
   <advance width="1232"/>
   <outline>
-    <contour>
-      <point x="673" y="1200" type="curve"/>
-      <point x="823" y="1200" type="line"/>
-      <point x="786" y="990"/>
-      <point x="633" y="672"/>
-      <point x="253" y="672" type="curve"/>
-      <point x="283" y="840" type="line"/>
-      <point x="493" y="840"/>
-      <point x="636" y="990"/>
-    </contour>
-    <contour>
-      <point x="451" y="0" type="line"/>
-      <point x="613" y="916" type="line"/>
-      <point x="823" y="1200" type="line"/>
-      <point x="853" y="1200" type="line"/>
-      <point x="641" y="0" type="line"/>
-    </contour>
+    <component base="one.cv01.onum" xOffset="228"/>
   </outline>
 </glyph>

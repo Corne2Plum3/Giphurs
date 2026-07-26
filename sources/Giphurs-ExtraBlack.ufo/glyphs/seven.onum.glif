@@ -2,22 +2,6 @@
 <glyph name="seven.onum" format="2">
   <advance width="1232"/>
   <outline>
-    <contour>
-      <point x="346" y="-280" type="line"/>
-      <point x="346" y="600"/>
-      <point x="772" y="892"/>
-      <point x="772" y="892" type="curve"/>
-      <point x="1182" y="892" type="line"/>
-      <point x="1182" y="892"/>
-      <point x="726" y="600"/>
-      <point x="726" y="-280" type="curve"/>
-    </contour>
-    <contour>
-      <point x="50" y="864" type="line"/>
-      <point x="50" y="1200" type="line"/>
-      <point x="1182" y="1200" type="line"/>
-      <point x="1182" y="892" type="line"/>
-      <point x="1074" y="864" type="line"/>
-    </contour>
+    <component base="seven.pnum" yOffset="-280"/>
   </outline>
 </glyph>

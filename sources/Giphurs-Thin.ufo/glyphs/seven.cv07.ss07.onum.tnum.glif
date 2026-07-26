@@ -2,24 +2,6 @@
 <glyph name="seven.cv07.ss07.onum.tnum" format="2">
   <advance width="1232"/>
   <outline>
-    <contour>
-      <point x="463" y="-280" type="curve"/>
-      <point x="417" y="-280" type="line"/>
-      <point x="417" y="500"/>
-      <point x="1018" y="662"/>
-      <point x="1018" y="1182" type="curve"/>
-      <point x="1065" y="1182" type="line"/>
-      <point x="1065" y="652"/>
-      <point x="463" y="470"/>
-    </contour>
-    <contour>
-      <point x="167" y="760" type="line"/>
-      <point x="167" y="1200" type="line"/>
-      <point x="1065" y="1200" type="line"/>
-      <point x="1065" y="1182" type="line"/>
-      <point x="1043" y="1158" type="line"/>
-      <point x="213" y="1158" type="line"/>
-      <point x="213" y="760" type="line"/>
-    </contour>
+    <component base="seven.cv07.ss07" yOffset="-280"/>
   </outline>
 </glyph>

@@ -2,39 +2,6 @@
 <glyph name="zero.cv10.zero.onum.tnum" format="2">
   <advance width="1232"/>
   <outline>
-    <contour>
-      <point x="269" y="137" type="line"/>
-      <point x="775" y="1108" type="line"/>
-      <point x="911" y="1058" type="line"/>
-      <point x="396" y="69" type="line"/>
-    </contour>
-    <contour>
-      <point x="671" y="1052" type="curve" smooth="yes"/>
-      <point x="421" y="1052"/>
-      <point x="221" y="773"/>
-      <point x="221" y="496" type="curve" smooth="yes"/>
-      <point x="221" y="296"/>
-      <point x="331" y="148"/>
-      <point x="512" y="148" type="curve" smooth="yes"/>
-      <point x="762" y="148"/>
-      <point x="962" y="427"/>
-      <point x="962" y="704" type="curve" smooth="yes"/>
-      <point x="962" y="904"/>
-      <point x="852" y="1052"/>
-    </contour>
-    <contour>
-      <point x="29" y="468" type="curve" smooth="yes"/>
-      <point x="29" y="856"/>
-      <point x="328" y="1220"/>
-      <point x="701" y="1220" type="curve" smooth="yes"/>
-      <point x="972" y="1220"/>
-      <point x="1155" y="1022"/>
-      <point x="1155" y="732" type="curve" smooth="yes"/>
-      <point x="1155" y="344"/>
-      <point x="855" y="-20"/>
-      <point x="482" y="-20" type="curve" smooth="yes"/>
-      <point x="211" y="-20"/>
-      <point x="29" y="178"/>
-    </contour>
+    <component base="zero.cv10.zero.onum" xOffset="-35"/>
   </outline>
 </glyph>

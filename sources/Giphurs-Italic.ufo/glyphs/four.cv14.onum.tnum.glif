@@ -2,29 +2,6 @@
 <glyph name="four.cv14.onum.tnum" format="2">
   <advance width="1232"/>
   <outline>
-    <contour>
-      <point x="811" y="1200" type="line"/>
-      <point x="999" y="1200" type="line"/>
-      <point x="824" y="208" type="line"/>
-      <point x="636" y="208" type="line"/>
-    </contour>
-    <contour>
-      <point x="604" y="40" type="line"/>
-      <point x="794" y="40" type="line"/>
-      <point x="738" y="-280" type="line"/>
-      <point x="548" y="-280" type="line"/>
-    </contour>
-    <contour>
-      <point x="208" y="208" type="line"/>
-      <point x="12" y="208" type="line"/>
-      <point x="799" y="1200" type="line"/>
-      <point x="999" y="1200" type="line"/>
-    </contour>
-    <contour>
-      <point x="-18" y="40" type="line"/>
-      <point x="12" y="208" type="line"/>
-      <point x="1034" y="208" type="line"/>
-      <point x="1004" y="40" type="line"/>
-    </contour>
+    <component base="four.cv14" xOffset="-49" yOffset="-280"/>
   </outline>
 </glyph>
