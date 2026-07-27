@@ -429,6 +429,11 @@ with open('scripts/common_lookups_list.txt', 'r') as f:
         if len(line.strip()) >= 1:
             lookup_list.append(line.strip())
 # Loop for every .ufo
+logger.info(f'{len(UFO_FILES_LIST)} UFOs detected:')
+if len(UFO_FILES_LIST) == 0:
+    logger.error('No UFO file detected. Exiting...')
+    logger.error('If this is the first time it happens, try again. Also, ensure the SOURCES_INST_DIR_PATH environement variable is correct if set in .env file.')
+    exit(1)
 for ufo in UFO_FILES_LIST:
     logger.info(f'Pre-processing {ufo}...')  # pyright: ignore[reportUnknownMemberType]
     # lib.plist
