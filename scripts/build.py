@@ -62,9 +62,6 @@ PYFTFEATFREEZE_LOGS: Path = Path(os.environ.get('PYFTFEATFREEZE_LOGS', 'logs/pyf
 # List of directories FONTS_DIR and the type of binaries inside each of these directories (no period at the beginning)
 FONTS_SUBDIRS_TYPES: dict[str, str] = {'otf': 'otf', 'ttf': 'ttf', 'variable': 'ttf', 'webfonts': 'woff2'}
 
-# List of all .ufo files inside SOURCES_DIR_PATH
-UFO_FILES_LIST: list[Path] = [ufo for ufo in SOURCES_INST_DIR_PATH.glob("*.ufo")]
-
 # Logger (don't use print(), use this instead, there are colors :3)
 logger: VerboseLogger = configure_logging()
 
@@ -417,6 +414,14 @@ logger.success('Ready to generate the fonts.')  # pyright: ignore[reportUnknownM
 # ===== 2. Pre-processing =====
 logger.info(f'Pre-processing UFO files at "{SOURCES_INST_DIR_PATH}"...')
 
+# Detect all files inside sources-inst
+UFO_FILES_LIST: list[Path] = [ufo for ufo in SOURCES_INST_DIR_PATH.glob("*.ufo")]
+logger.info(f'{len(UFO_FILES_LIST)} UFOs detected inside "{SOURCES_INST_DIR_PATH}"')
+if len(UFO_FILES_LIST) == 0:
+    logger.error('No UFO file detected. Exiting...')
+    logger.error('If this is the first time it happens, try again. Also, ensure the SOURCES_DIR_PATH and/or SOURCES_INST_DIR_PATH environement variable is correct if set in .env file.')
+    exit(1)
+
 # For copy_tables()
 feature_list: list[str] = []
 with open('scripts/common_features_list.txt', 'r') as f:
@@ -429,11 +434,6 @@ with open('scripts/common_lookups_list.txt', 'r') as f:
         if len(line.strip()) >= 1:
             lookup_list.append(line.strip())
 # Loop for every .ufo
-logger.info(f'{len(UFO_FILES_LIST)} UFOs detected:')
-if len(UFO_FILES_LIST) == 0:
-    logger.error('No UFO file detected. Exiting...')
-    logger.error('If this is the first time it happens, try again. Also, ensure the SOURCES_INST_DIR_PATH environement variable is correct if set in .env file.')
-    exit(1)
 for ufo in UFO_FILES_LIST:
     logger.info(f'Pre-processing {ufo}...')  # pyright: ignore[reportUnknownMemberType]
     # lib.plist
