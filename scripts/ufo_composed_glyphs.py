@@ -225,7 +225,7 @@ def build_composed_glyph_from_csv(csv_file: Path | list[Path], ufo_dir: Path, we
         return -1
     
     max_priority: int = cg_list[0].priority
-    logger.info(f'Found {total_glyphs} glyphs inside {'[' + str(['"' + str(f) + '"' for f in csv_file]) + ']' if isinstance(csv_file, list) else csv_file}.')
+    logger.info(f'Found {total_glyphs} glyphs inside {str([str(f) for f in csv_file]) if isinstance(csv_file, list) else csv_file}.')
     logger.info(f'{processes_count} processes will be used.')
     error_count: int = 0
     with tqdm(total=total_glyphs) as progress_bar: 
