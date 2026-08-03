@@ -1,628 +1,103 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   width="1520"
-   height="1012"
-   viewBox="0 0 201.0833 133.87914"
-   version="1.1"
-   id="svg1"
-   sodipodi:docname="preview_3.svg"
-   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:cc="http://creativecommons.org/ns#">
-  <sodipodi:namedview
-     id="namedview1"
-     pagecolor="#505050"
-     bordercolor="#ffffff"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="1"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.50000001"
-     inkscape:cx="677.99998"
-     inkscape:cy="339.99999"
-     inkscape:window-width="2048"
-     inkscape:window-height="1076"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
-  <defs
-     id="defs1">
-    <rect
-       x="55.499996"
-       y="334.49997"
-       width="250.99998"
-       height="114.49999"
-       id="rect82" />
-  </defs>
-  <style
-     id="style1">
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns2="http://www.inkscape.org/namespaces/inkscape" xmlns:ns4="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="1520" height="1012" viewBox="0 0 201.0833 133.87914" version="1.1" id="svg1" ns1:docname="preview_3.svg" ns2:version="1.4.3 (0d15f75042, 2025-12-25)">
+  <ns1:namedview id="namedview1" pagecolor="#505050" bordercolor="#ffffff" borderopacity="1" ns2:showpageshadow="0" ns2:pageopacity="0" ns2:pagecheckerboard="1" ns2:deskcolor="#d1d1d1" ns2:zoom="0.50000001" ns2:cx="677.99998" ns2:cy="339.99999" ns2:window-width="2048" ns2:window-height="1076" ns2:window-x="0" ns2:window-y="0" ns2:window-maximized="1" ns2:current-layer="layer1" />
+  <ns0:defs id="defs1">
+    <ns0:rect x="55.499996" y="334.49997" width="250.99998" height="114.49999" id="rect82" />
+  </ns0:defs>
+  <ns0:style id="style1">
     @font-face {
-      font-family: &quot;Giphurs&quot;;
-      src: url(&quot;../fonts/variable/Giphurs[wght].ttf&quot;);
+      font-family: "Giphurs";
+      src: url("../fonts/variable/Giphurs[wght].ttf");
       font-style: normal;
       font-weight: 100 999;
     }
     @font-face {
-      font-family: &quot;Giphurs&quot;;
-      src: url(&quot;../fonts/variable/Giphurs-Italic[wght].ttf&quot;);
+      font-family: "Giphurs";
+      src: url("../fonts/variable/Giphurs-Italic[wght].ttf");
       font-style: italic;
       font-weight: 100 999;
     }
     @font-face {
-      font-family: &quot;Giphurs ExtraBlack&quot;;
-      src: url(&quot;../fonts/ttf/GiphursExtraBlack-Regular.ttf&quot;);
+      font-family: "Giphurs ExtraBlack";
+      src: url("../fonts/ttf/GiphursExtraBlack-Regular.ttf");
       font-style: normal;
       font-weight: 400;
     }
     @font-face {
-      font-family: &quot;Giphurs ExtraBlack&quot;;
-      src: url(&quot;../fonts/ttf/GiphursExtraBlack-Italic.ttf&quot;);
+      font-family: "Giphurs ExtraBlack";
+      src: url("../fonts/ttf/GiphursExtraBlack-Italic.ttf");
       font-style: italic;
       font-weight: 400;
     }
     @font-face {
-      font-family: &quot;Giphurs SC&quot;;
-      src: url(&quot;../fonts/variable/GiphursSC[wght].ttf&quot;);
+      font-family: "Giphurs SC";
+      src: url("../fonts/variable/GiphursSC[wght].ttf");
       font-style: normal;
       font-weight: 100 999;
     }
     @font-face {
-      font-family: &quot;Giphurs SC&quot;;
-      src: url(&quot;../fonts/variable/Giphurs-ItalicSC[wght].ttf&quot;);
+      font-family: "Giphurs SC";
+      src: url("../fonts/variable/Giphurs-ItalicSC[wght].ttf");
       font-style: normal;
       font-weight: 100 999;
     }
     @font-face {
-      font-family: &quot;Giphurs ExtraBlack SC&quot;;
-      src: url(&quot;../fonts/ttf/GiphursExtraBlackSC-Regular.ttf&quot;);
+      font-family: "Giphurs ExtraBlack SC";
+      src: url("../fonts/ttf/GiphursExtraBlackSC-Regular.ttf");
       font-style: normal;
       font-weight: 400;
     }
     @font-face {
-      font-family: &quot;Giphurs ExtraBlack SC&quot;;
-      src: url(&quot;../fonts/ttf/GiphursExtraBlackSC-Italic.ttf&quot;);
+      font-family: "Giphurs ExtraBlack SC";
+      src: url("../fonts/ttf/GiphursExtraBlackSC-Italic.ttf");
       font-style: italic;
       font-weight: 400;
     }
 
-  </style>
-  <g
-     id="layer1">
-    <rect
-       style="fill:#000000;stroke-width:2.55002"
-       id="rect33"
-       width="201.08333"
-       height="133.87917"
-       x="-1.4210855e-14"
-       y="-8.8817842e-16"
-       ry="0" />
-    <rect
-       style="fill:none;stroke:#80b3ff;stroke-width:0.529166;stroke-dasharray:none;stroke-opacity:1"
-       id="rect14"
-       width="62.573956"
-       height="86.186714"
-       x="134.01146"
-       y="32.014584"
-       rx="1.5874999"
-       ry="1.5875" />
-    <rect
-       style="fill:#80b3ff;stroke-width:0.283188"
-       id="rect2"
-       width="191.55833"
-       height="1.5875"
-       x="0"
-       y="-1.1625054e-06" />
-    <rect
-       style="fill:#80b3ff;stroke-width:0.163952"
-       id="rect2-1"
-       width="192.61667"
-       height="0.5291667"
-       x="4.2333336"
-       y="123.29584" />
-    <rect
-       style="fill:#80b3ff;stroke-width:0.420848"
-       id="rect4"
-       width="81.391708"
-       height="9.5249996"
-       x="4.2333336"
-       y="6.3499999"
-       ry="4.7624998"
-       rx="4.7624998" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:6.35px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#2a7fff;stroke-width:0.264583"
-       x="7.7049561"
-       y="13.315982"
-       id="text4"><tspan
-         id="tspan4"
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:6.35px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#002255;stroke-width:0.264583"
-         x="7.7049561"
-         y="13.315982">INCLUDED IN THE FONT</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#ffffff;stroke-width:0.264583"
-       x="17.272322"
-       y="24.214884"
-       id="text15-8"><tspan
-         sodipodi:role="line"
-         x="17.272322"
-         y="24.214884"
-         id="tspan14-6"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, @wght=1000';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 1000" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#ffffff;stroke-width:0.264583"
-       x="4.9251089"
-       y="22.919544"
-       id="text15-4-5-2"><tspan
-         sodipodi:role="line"
-         x="4.9251089"
-         y="22.919544"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         id="tspan36-9">• Latin, greek and cyrillic</tspan><tspan
-         sodipodi:role="line"
-         x="4.9251089"
-         y="29.41065"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         id="tspan33">• Variable weight<tspan
-   style="fill:#80b3ff"
-   id="tspan45"> </tspan><tspan
-   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Italic';fill:#80b3ff"
-   id="tspan35"><tspan
-   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Giphurs ExtraBlack';-inkscape-font-specification:'Giphurs ExtraBlack,  Italic'"
-   id="tspan5">(</tspan><tspan
-   style="font-style:italic;font-variant:normal;font-weight:900;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Heavy Italic'"
-   id="tspan6">1</tspan><tspan
-   style="font-style:italic;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Ultra-Bold Italic'"
-   id="tspan7">0</tspan> <tspan
-   style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Bold Italic'"
-   id="tspan14">s</tspan><tspan
-   style="font-style:italic;font-variant:normal;font-weight:600;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Semi-Bold Italic'"
-   id="tspan18">t</tspan><tspan
-   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Medium Italic'"
-   id="tspan28">y</tspan>l<tspan
-   style="font-style:italic;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Light Italic'"
-   id="tspan32">e</tspan><tspan
-   id="tspan38"
-   style="font-style:italic;font-variant:normal;font-weight:200;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Ultra-Light Italic'">s</tspan><tspan
-   style="font-style:italic;font-variant:normal;font-weight:100;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Thin Italic'"
-   id="tspan39">)</tspan> </tspan></tspan><tspan
-         sodipodi:role="line"
-         x="4.9251089"
-         y="35.901756"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         id="tspan73">• Automatic arrow detection<tspan
-   style="fill:#80b3ff"
-   id="tspan74"> <tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-   id="tspan75">--&gt;</tspan> --&gt;</tspan></tspan><tspan
-         sodipodi:role="line"
-         x="4.9251089"
-         y="42.392864"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         id="tspan72">• Contextual ligatures<tspan
-   style="fill:#80b3ff"
-   id="tspan80"> </tspan><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:no-common-ligatures;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#80b3ff"
-   id="tspan78">0<tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#80b3ff"
-   id="tspan79">x</tspan>0 12:34 <tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-   id="tspan82">-&gt;</tspan></tspan><tspan
-   style="fill:#80b3ff"
-   id="tspan81"> 0x0 12:34</tspan></tspan><tspan
-         sodipodi:role="line"
-         x="4.9251089"
-         y="48.883968"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         id="tspan77">• 120+ arrows -&gt; =&gt; ↪↯ </tspan><tspan
-         sodipodi:role="line"
-         x="4.9251089"
-         y="55.375076"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         id="tspan23">• Fractions <tspan
-   style="fill:#80b3ff"
-   id="tspan24">½ ⅚ ⅑ ↉</tspan></tspan><tspan
-         sodipodi:role="line"
-         x="4.9251089"
-         y="61.86618"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         id="tspan27">• Math symbols <tspan
-   style="fill:#80b3ff"
-   id="tspan29">∛ ∫ ∂ ∞  </tspan></tspan><tspan
-         sodipodi:role="line"
-         x="4.9251089"
-         y="68.357285"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         id="tspan26">• Circled letters &amp; numbers<tspan
-   style="fill:#80b3ff"
-   id="tspan30"> ① ⑵ ⒊ Ⓓ ⓔ ❻ ⓻</tspan></tspan><tspan
-         sodipodi:role="line"
-         x="4.9251089"
-         y="74.848396"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         id="tspan31">• Small caps<tspan
-   style="fill:#80b3ff"
-   id="tspan40"> </tspan><tspan
-   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Italic';fill:#80b3ff"
-   id="tspan47">(also available as &quot;Giphurs SC&quot;)</tspan></tspan><tspan
-         sodipodi:role="line"
-         x="4.9251089"
-         y="81.3395"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         id="tspan49">• A lot of glyph alternates <tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'cv21', 'cv22', 'cv23', 'cv24', 'cv25', 'ss05';fill:#80b3ff"
-   id="tspan50">G i a g u $<tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal"
-   id="tspan51"> 0</tspan></tspan></tspan><tspan
-         sodipodi:role="line"
-         x="4.9251089"
-         y="87.830605"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         id="tspan48"> </tspan><tspan
-         sodipodi:role="line"
-         x="4.9251089"
-         y="94.321709"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         id="tspan25" /><tspan
-         sodipodi:role="line"
-         x="4.9251089"
-         y="100.81282"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         id="tspan22" /><tspan
-         sodipodi:role="line"
-         x="4.9251089"
-         y="107.30392"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         id="tspan19" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:0;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#ffffff;stroke-width:0.264583"
-       x="136.35233"
-       y="102.05521"
-       id="text15-4-5-2-6"><tspan
-         sodipodi:role="line"
-         x="136.35233"
-         y="102.05521"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         id="tspan36-9-9">Same width by default</tspan><tspan
-         sodipodi:role="line"
-         x="136.35233"
-         y="108.54631"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         id="tspan71">+ proportional <tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:proportional-nums;font-variant-east-asian:normal;fill:#80b3ff"
-   id="tspan56">890123</tspan></tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:oldstyle-nums;fill:#80b3ff"
-         sodipodi:role="line"
-         id="tspan68"
-         x="136.35233"
-         y="115.03742"><tspan
-   id="tspan70"
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff">+ old style </tspan>890123</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
-         sodipodi:role="line"
-         id="tspan69"
-         x="136.35233"
-         y="121.52853"> </tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#80b3ff;stroke-width:0.264583"
-       x="197.10321"
-       y="130.51675"
-       id="version"
-       inkscape:label="version"><tspan
-         id="tspan33-9"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;stroke-width:0.264583"
-         x="197.10321"
-         y="130.51675">v2.1 (xxxxxxx)</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#80b3ff;stroke-width:0.264583"
-       x="3.9935548"
-       y="130.51678"
-       id="text33-7-3"
-       inkscape:label="url"><tspan
-         id="tspan33-9-9"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;stroke-width:0.264583"
-         x="3.9935548"
-         y="130.51678">https://github.com/Corne2Plum3/Giphurs</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, @wght=300';font-variant-numeric:slashed-zero;font-variation-settings:'wght' 300;writing-mode:lr-tb;direction:ltr;fill:#000000;stroke-width:0.264583"
-       x="193.24506"
-       y="5.6940508"
-       id="text1"><tspan
-         sodipodi:role="line"
-         id="tspan1"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, @wght=100';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;font-variation-settings:'wght' 100;fill:#80b3ff;stroke-width:0.264583"
-         x="193.24506"
-         y="5.6940508">03</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#aaccff;stroke-width:0.264583"
-       x="66.790657"
-       y="24.695704"
-       id="text16"><tspan
-         sodipodi:role="line"
-         id="tspan15"
-         style="stroke-width:0.264583"
-         x="66.790657"
-         y="24.695704" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:0;font-family:Giphurs;-inkscape-font-specification:'Giphurs, @wght=600';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 600;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#80b3ff;stroke-width:0.264583"
-       x="108.9325"
-       y="15.670379"
-       id="text10"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:12.7px;line-height:100%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#80b3ff;stroke-width:0.264583"
-         sodipodi:role="line"
-         id="tspan11"
-         x="108.9325"
-         y="15.670379">2500+</tspan><tspan
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:6.35001px;line-height:50%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#80b3ff;stroke-width:0.264583"
-         sodipodi:role="line"
-         id="tspan16"
-         x="108.9325"
-         y="22.020378">glyphs</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:6.35001px;line-height:115%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#80b3ff;stroke-width:0.264583"
-         x="108.9325"
-         y="27.259136"
-         id="tspan9">(+<tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35001px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:oldstyle-nums"
-   id="tspan17">2900</tspan> alts.)</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:0;font-family:Giphurs;-inkscape-font-specification:'Giphurs, @wght=600';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 600;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
-       x="150.01466"
-       y="15.67036"
-       id="text10-8"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:12.7px;line-height:100%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.264583"
-         sodipodi:role="line"
-         id="tspan12"
-         x="150.01466"
-         y="15.67036">900+</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:6.35px;line-height:50%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.264583"
-         x="150.01466"
-         y="22.020359"
-         id="tspan7-2">languages</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:6.35px;line-height:115%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.264583"
-         x="150.01466"
-         y="27.259109"
-         id="tspan10">convered</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:0;font-family:Giphurs;-inkscape-font-specification:'Giphurs, @wght=600';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 600;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#80b3ff;stroke-width:0.264583"
-       x="184.14241"
-       y="15.670362"
-       id="text10-8-5"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:12.7px;line-height:100%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#80b3ff;stroke-width:0.264583"
-         sodipodi:role="line"
-         id="tspan13"
-         x="184.14241"
-         y="15.670362">40+</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:6.35px;line-height:50%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#80b3ff;stroke-width:0.264583"
-         x="184.14241"
-         y="22.020363"
-         id="tspan7-2-9">font</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:6.35px;line-height:115%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#80b3ff;stroke-width:0.264583"
-         x="184.14241"
-         y="27.259111"
-         id="tspan8">features</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#80b3ff;stroke-width:0.264583"
-       x="137.91096"
-       y="49.080654"
-       id="text52"><tspan
-         sodipodi:role="line"
-         id="tspan52"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.264583"
-         x="137.91096"
-         y="49.080654">0123456789</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss01';stroke-width:0.264583"
-         x="137.91096"
-         y="58.252876"
-         id="tspan53">0123456789</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss02';stroke-width:0.264583"
-         x="137.91096"
-         y="67.425095"
-         id="tspan57">0123456789</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#80b3ff;stroke-width:0.264583"
-       x="176.55067"
-       y="76.313446"
-       id="text52-0"><tspan
-         sodipodi:role="line"
-         id="tspan52-9"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss07';fill:#80b3ff;stroke-width:0.264583"
-         x="176.55067"
-         y="76.313446">7</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss01', 'ss07';stroke-width:0.264583"
-         x="176.55067"
-         y="85.485664"
-         id="tspan53-1">7</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss02', 'ss07';stroke-width:0.264583"
-         x="176.55067"
-         y="94.657883"
-         id="tspan57-7">7</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#80b3ff;stroke-width:0.264583"
-       x="143.74062"
-       y="76.419273"
-       id="text52-1"><tspan
-         sodipodi:role="line"
-         id="tspan52-0"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss06';fill:#80b3ff;stroke-width:0.264583"
-         x="143.74062"
-         y="76.419273">1</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss01', 'ss06';stroke-width:0.264583"
-         x="143.74062"
-         y="85.591492"
-         id="tspan53-6">1</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss02', 'ss06';stroke-width:0.264583"
-         x="143.74062"
-         y="94.763718"
-         id="tspan57-1">1</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#80b3ff;stroke-width:0.264583"
-       x="137.91721"
-       y="76.403015"
-       id="text63"><tspan
-         sodipodi:role="line"
-         id="tspan63"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;font-family:Giphurs;-inkscape-font-specification:Giphurs;stroke-width:0.264583"
-         x="137.91721"
-         y="76.403015">0</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;font-feature-settings:'ss01';stroke-width:0.264583"
-         x="137.91721"
-         y="85.575233"
-         id="tspan64">0</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;font-feature-settings:'ss02';stroke-width:0.264583"
-         x="137.91721"
-         y="94.747452"
-         id="tspan65">0</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;font-feature-settings:ss06;writing-mode:lr-tb;direction:ltr;fill:#80b3ff;stroke-width:0.264583"
-       x="136.97485"
-       y="39.337475"
-       id="text2"><tspan
-         sodipodi:role="line"
-         style="fill:#ffffff;stroke-width:0.264583"
-         x="136.97485"
-         y="39.337475"
-         id="tspan3"><tspan
-   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Bold';fill:#ffffff"
-   id="tspan41">29+</tspan> alternative digits!</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46667px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss02', 'ss07';writing-mode:lr-tb;direction:ltr;fill:#80b3ff;stroke-width:0.529167;stroke-opacity:0.504425"
-       x="115.71433"
-       y="106.45345"
-       id="text42"><tspan
-         sodipodi:role="line"
-         id="tspan42"
-         style="stroke-width:0.529167"
-         x="115.71433"
-         y="106.45345" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:0;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;stroke-width:0.529167;stroke-opacity:0.504425"
-       x="24.672354"
-       y="102.06012"
-       id="text90"><tspan
-         style="font-size:16.9333px;line-height:115%;stroke-width:0.529167"
-         sodipodi:role="line"
-         id="tspan123"
-         x="24.672354"
-         y="102.06012">IlO0</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs Light';fill:#80b3ff;stroke-width:0.529167"
-         x="24.672354"
-         y="110.59711"
-         id="tspan92">Distinctive glyphs</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs Light';fill:#80b3ff;stroke-width:0.529167"
-         x="24.672354"
-         y="115.18323"
-         id="tspan93">when needed</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:0;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;stroke-width:0.529167;stroke-opacity:0.504425"
-       x="65.995056"
-       y="102.05987"
-       id="text90-4"><tspan
-         style="font-size:16.9333px;line-height:115%;stroke-width:0.529167"
-         sodipodi:role="line"
-         id="tspan123-7"
-         x="65.995056"
-         y="102.05987">t1!&quot;</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs Light';fill:#80b3ff;stroke-width:0.529167"
-         x="65.995056"
-         y="110.59686"
-         id="tspan93-0">Expressive round</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs Light';fill:#80b3ff;stroke-width:0.529167"
-         x="65.995056"
-         y="115.18298"
-         id="tspan124">and slant details</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:0;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;stroke-width:0.529167;stroke-opacity:0.504425"
-       x="108.55642"
-       y="102.05989"
-       id="text90-4-0"><tspan
-         style="font-size:16.9333px;line-height:115%;stroke-width:0.529167"
-         sodipodi:role="line"
-         id="tspan123-7-7"
-         x="108.55642"
-         y="102.05989">ag</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs Light';fill:#80b3ff;stroke-width:0.529167"
-         x="108.55642"
-         y="110.59689"
-         id="tspan124-9">Double story a &amp; g</tspan><tspan
-         sodipodi:role="line"
-         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs Light';fill:#80b3ff;stroke-width:0.529167"
-         x="108.55642"
-         y="115.183"
-         id="tspan125">(simple available)</tspan></text>
-  </g>
-  <metadata
-     id="metadata1">
+  </ns0:style>
+  <ns0:g id="layer1">
+    <ns0:rect style="fill:#000000;stroke-width:2.55002" id="rect33" width="201.08333" height="133.87917" x="-1.4210855e-14" y="-8.8817842e-16" ry="0" />
+    <ns0:rect style="fill:none;stroke:#80b3ff;stroke-width:0.529166;stroke-dasharray:none;stroke-opacity:1" id="rect14" width="62.573956" height="86.186714" x="134.01146" y="32.014584" rx="1.5874999" ry="1.5875" />
+    <ns0:rect style="fill:#80b3ff;stroke-width:0.283188" id="rect2" width="191.55833" height="1.5875" x="0" y="-1.1625054e-06" />
+    <ns0:rect style="fill:#80b3ff;stroke-width:0.163952" id="rect2-1" width="192.61667" height="0.5291667" x="4.2333336" y="123.29584" />
+    <ns0:rect style="fill:#80b3ff;stroke-width:0.420848" id="rect4" width="81.391708" height="9.5249996" x="4.2333336" y="6.3499999" ry="4.7624998" rx="4.7624998" />
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:6.35px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#2a7fff;stroke-width:0.264583" x="7.7049561" y="13.315982" id="text4"><ns0:tspan id="tspan4" style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:6.35px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#002255;stroke-width:0.264583" x="7.7049561" y="13.315982">INCLUDED IN THE FONT</ns0:tspan></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#ffffff;stroke-width:0.264583" x="17.272322" y="24.214884" id="text15-8"><ns0:tspan ns1:role="line" x="17.272322" y="24.214884" id="tspan14-6" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, @wght=1000';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 1000" /></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#ffffff;stroke-width:0.264583" x="4.9251089" y="22.919544" id="text15-4-5-2"><ns0:tspan ns1:role="line" x="4.9251089" y="22.919544" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan36-9">• Latin, greek and cyrillic</ns0:tspan><ns0:tspan ns1:role="line" x="4.9251089" y="29.41065" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan33">• Variable weight<ns0:tspan style="fill:#80b3ff" id="tspan45"> </ns0:tspan><ns0:tspan style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Italic';fill:#80b3ff" id="tspan35"><ns0:tspan style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Giphurs ExtraBlack';-inkscape-font-specification:'Giphurs ExtraBlack,  Italic'" id="tspan5">(</ns0:tspan><ns0:tspan style="font-style:italic;font-variant:normal;font-weight:900;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Heavy Italic'" id="tspan6">1</ns0:tspan><ns0:tspan style="font-style:italic;font-variant:normal;font-weight:800;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Ultra-Bold Italic'" id="tspan7">0</ns0:tspan> <ns0:tspan style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Bold Italic'" id="tspan14">s</ns0:tspan><ns0:tspan style="font-style:italic;font-variant:normal;font-weight:600;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Semi-Bold Italic'" id="tspan18">t</ns0:tspan><ns0:tspan style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Medium Italic'" id="tspan28">y</ns0:tspan>l<ns0:tspan style="font-style:italic;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Light Italic'" id="tspan32">e</ns0:tspan><ns0:tspan id="tspan38" style="font-style:italic;font-variant:normal;font-weight:200;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Ultra-Light Italic'">s</ns0:tspan><ns0:tspan style="font-style:italic;font-variant:normal;font-weight:100;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Thin Italic'" id="tspan39">)</ns0:tspan> </ns0:tspan></ns0:tspan><ns0:tspan ns1:role="line" x="4.9251089" y="35.901756" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan73">• Automatic arrow detection<ns0:tspan style="fill:#80b3ff" id="tspan74"> <ns0:tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan75">--&gt;</ns0:tspan> --&gt;</ns0:tspan></ns0:tspan><ns0:tspan ns1:role="line" x="4.9251089" y="42.392864" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan72">• Contextual ligatures<ns0:tspan style="fill:#80b3ff" id="tspan80"> </ns0:tspan><ns0:tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:no-common-ligatures;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#80b3ff" id="tspan78">0<ns0:tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#80b3ff" id="tspan79">x</ns0:tspan>0 12:34 <ns0:tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan82">-&gt;</ns0:tspan></ns0:tspan><ns0:tspan style="fill:#80b3ff" id="tspan81"> 0x0 12:34</ns0:tspan></ns0:tspan><ns0:tspan ns1:role="line" x="4.9251089" y="48.883968" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan77">• 120+ arrows -&gt; =&gt; ↪↯ </ns0:tspan><ns0:tspan ns1:role="line" x="4.9251089" y="55.375076" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan23">• Fractions <ns0:tspan style="fill:#80b3ff" id="tspan24">½ ⅚ ⅑ ↉</ns0:tspan></ns0:tspan><ns0:tspan ns1:role="line" x="4.9251089" y="61.86618" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan27">• Math symbols <ns0:tspan style="fill:#80b3ff" id="tspan29">∛ ∫ ∂ ∞  </ns0:tspan></ns0:tspan><ns0:tspan ns1:role="line" x="4.9251089" y="68.357285" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan26">• Circled letters &amp; numbers<ns0:tspan style="fill:#80b3ff" id="tspan30"> ① ⑵ ⒊ Ⓓ ⓔ ❻ ⓻</ns0:tspan></ns0:tspan><ns0:tspan ns1:role="line" x="4.9251089" y="74.848396" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan31">• Small caps<ns0:tspan style="fill:#80b3ff" id="tspan40"> </ns0:tspan><ns0:tspan style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Italic';fill:#80b3ff" id="tspan47">(also available as "Giphurs SC")</ns0:tspan></ns0:tspan><ns0:tspan ns1:role="line" x="4.9251089" y="81.3395" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan49">• A lot of glyph alternates <ns0:tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'cv21', 'cv22', 'cv23', 'cv24', 'cv25', 'ss05';fill:#80b3ff" id="tspan50">G i a g u $<ns0:tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal" id="tspan51"> 0</ns0:tspan></ns0:tspan></ns0:tspan><ns0:tspan ns1:role="line" x="4.9251089" y="87.830605" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan48"> </ns0:tspan><ns0:tspan ns1:role="line" x="4.9251089" y="94.321709" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan25" /><ns0:tspan ns1:role="line" x="4.9251089" y="100.81282" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan22" /><ns0:tspan ns1:role="line" x="4.9251089" y="107.30392" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan19" /></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:0;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#ffffff;stroke-width:0.264583" x="136.35233" y="102.05521" id="text15-4-5-2-6"><ns0:tspan ns1:role="line" x="136.35233" y="102.05521" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan36-9-9">Same width by default</ns0:tspan><ns0:tspan ns1:role="line" x="136.35233" y="108.54631" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" id="tspan71">+ proportional <ns0:tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:proportional-nums;font-variant-east-asian:normal;fill:#80b3ff" id="tspan56">890123</ns0:tspan></ns0:tspan><ns0:tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:oldstyle-nums;fill:#80b3ff" ns1:role="line" id="tspan68" x="136.35233" y="115.03742"><ns0:tspan id="tspan70" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff">+ old style </ns0:tspan>890123</ns0:tspan><ns0:tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" ns1:role="line" id="tspan69" x="136.35233" y="121.52853"> </ns0:tspan></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#80b3ff;stroke-width:0.264583" x="197.10321" y="130.51675" id="version" ns2:label="version"><ns0:tspan id="tspan33-9" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;stroke-width:0.264583" x="197.10321" y="130.51675">Version 2.100 (6cb277f)</ns0:tspan></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#80b3ff;stroke-width:0.264583" x="3.9935548" y="130.51678" id="text33-7-3" ns2:label="url"><ns0:tspan id="tspan33-9-9" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;stroke-width:0.264583" x="3.9935548" y="130.51678">https://github.com/Corne2Plum3/Giphurs</ns0:tspan></ns0:text>
+    <ns0:text xml:space="preserve" style="font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, @wght=300';font-variant-numeric:slashed-zero;font-variation-settings:'wght' 300;writing-mode:lr-tb;direction:ltr;fill:#000000;stroke-width:0.264583" x="193.24506" y="5.6940508" id="text1"><ns0:tspan ns1:role="line" id="tspan1" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:Giphurs;-inkscape-font-specification:'Giphurs, @wght=100';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;font-variation-settings:'wght' 100;fill:#80b3ff;stroke-width:0.264583" x="193.24506" y="5.6940508">03</ns0:tspan></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#aaccff;stroke-width:0.264583" x="66.790657" y="24.695704" id="text16"><ns0:tspan ns1:role="line" id="tspan15" style="stroke-width:0.264583" x="66.790657" y="24.695704" /></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:0;font-family:Giphurs;-inkscape-font-specification:'Giphurs, @wght=600';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 600;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#80b3ff;stroke-width:0.264583" x="108.9325" y="15.670379" id="text10"><ns0:tspan style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:12.7px;line-height:100%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#80b3ff;stroke-width:0.264583" ns1:role="line" id="tspan11" x="108.9325" y="15.670379">2500+</ns0:tspan><ns0:tspan style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:6.35001px;line-height:50%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#80b3ff;stroke-width:0.264583" ns1:role="line" id="tspan16" x="108.9325" y="22.020378">glyphs</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:6.35001px;line-height:115%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#80b3ff;stroke-width:0.264583" x="108.9325" y="27.259136" id="tspan9">(+<ns0:tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35001px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:oldstyle-nums" id="tspan17">2900</ns0:tspan> alts.)</ns0:tspan></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:0;font-family:Giphurs;-inkscape-font-specification:'Giphurs, @wght=600';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 600;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;stroke-width:0.264583" x="150.01466" y="15.67036" id="text10-8"><ns0:tspan style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:12.7px;line-height:100%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.264583" ns1:role="line" id="tspan12" x="150.01466" y="15.67036">900+</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:6.35px;line-height:50%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.264583" x="150.01466" y="22.020359" id="tspan7-2">languages</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:6.35px;line-height:115%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.264583" x="150.01466" y="27.259109" id="tspan10">convered</ns0:tspan></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:0;font-family:Giphurs;-inkscape-font-specification:'Giphurs, @wght=600';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-variation-settings:'wght' 600;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#80b3ff;stroke-width:0.264583" x="184.14241" y="15.670362" id="text10-8-5"><ns0:tspan style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:12.7px;line-height:100%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#80b3ff;stroke-width:0.264583" ns1:role="line" id="tspan13" x="184.14241" y="15.670362">40+</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:6.35px;line-height:50%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#80b3ff;stroke-width:0.264583" x="184.14241" y="22.020363" id="tspan7-2-9">font</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:6.35px;line-height:115%;font-family:'Giphurs SC';-inkscape-font-specification:'Giphurs SC Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#80b3ff;stroke-width:0.264583" x="184.14241" y="27.259111" id="tspan8">features</ns0:tspan></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#80b3ff;stroke-width:0.264583" x="137.91096" y="49.080654" id="text52"><ns0:tspan ns1:role="line" id="tspan52" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.264583" x="137.91096" y="49.080654">0123456789</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss01';stroke-width:0.264583" x="137.91096" y="58.252876" id="tspan53">0123456789</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss02';stroke-width:0.264583" x="137.91096" y="67.425095" id="tspan57">0123456789</ns0:tspan></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#80b3ff;stroke-width:0.264583" x="176.55067" y="76.313446" id="text52-0"><ns0:tspan ns1:role="line" id="tspan52-9" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss07';fill:#80b3ff;stroke-width:0.264583" x="176.55067" y="76.313446">7</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss01', 'ss07';stroke-width:0.264583" x="176.55067" y="85.485664" id="tspan53-1">7</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss02', 'ss07';stroke-width:0.264583" x="176.55067" y="94.657883" id="tspan57-7">7</ns0:tspan></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#80b3ff;stroke-width:0.264583" x="143.74062" y="76.419273" id="text52-1"><ns0:tspan ns1:role="line" id="tspan52-0" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss06';fill:#80b3ff;stroke-width:0.264583" x="143.74062" y="76.419273">1</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss01', 'ss06';stroke-width:0.264583" x="143.74062" y="85.591492" id="tspan53-6">1</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss02', 'ss06';stroke-width:0.264583" x="143.74062" y="94.763718" id="tspan57-1">1</ns0:tspan></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#80b3ff;stroke-width:0.264583" x="137.91721" y="76.403015" id="text63"><ns0:tspan ns1:role="line" id="tspan63" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;font-family:Giphurs;-inkscape-font-specification:Giphurs;stroke-width:0.264583" x="137.91721" y="76.403015">0</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;font-feature-settings:'ss01';stroke-width:0.264583" x="137.91721" y="85.575233" id="tspan64">0</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.17222px;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;font-feature-settings:'ss02';stroke-width:0.264583" x="137.91721" y="94.747452" id="tspan65">0</ns0:tspan></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:Giphurs;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:slashed-zero;font-variant-east-asian:normal;font-feature-settings:ss06;writing-mode:lr-tb;direction:ltr;fill:#80b3ff;stroke-width:0.264583" x="136.97485" y="39.337475" id="text2"><ns0:tspan ns1:role="line" style="fill:#ffffff;stroke-width:0.264583" x="136.97485" y="39.337475" id="tspan3"><ns0:tspan style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Giphurs;-inkscape-font-specification:'Giphurs Bold';fill:#ffffff" id="tspan41">29+</ns0:tspan> alternative digits!</ns0:tspan></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.46667px;line-height:115%;font-family:Giphurs;-inkscape-font-specification:'Giphurs Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;font-feature-settings:'ss02', 'ss07';writing-mode:lr-tb;direction:ltr;fill:#80b3ff;stroke-width:0.529167;stroke-opacity:0.504425" x="115.71433" y="106.45345" id="text42"><ns0:tspan ns1:role="line" id="tspan42" style="stroke-width:0.529167" x="115.71433" y="106.45345" /></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:0;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;stroke-width:0.529167;stroke-opacity:0.504425" x="24.672354" y="102.06012" id="text90"><ns0:tspan style="font-size:16.9333px;line-height:115%;stroke-width:0.529167" ns1:role="line" id="tspan123" x="24.672354" y="102.06012">IlO0</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs Light';fill:#80b3ff;stroke-width:0.529167" x="24.672354" y="110.59711" id="tspan92">Distinctive glyphs</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs Light';fill:#80b3ff;stroke-width:0.529167" x="24.672354" y="115.18323" id="tspan93">when needed</ns0:tspan></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:0;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;stroke-width:0.529167;stroke-opacity:0.504425" x="65.995056" y="102.05987" id="text90-4"><ns0:tspan style="font-size:16.9333px;line-height:115%;stroke-width:0.529167" ns1:role="line" id="tspan123-7" x="65.995056" y="102.05987">t1!"</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs Light';fill:#80b3ff;stroke-width:0.529167" x="65.995056" y="110.59686" id="tspan93-0">Expressive round</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs Light';fill:#80b3ff;stroke-width:0.529167" x="65.995056" y="115.18298" id="tspan124">and slant details</ns0:tspan></ns0:text>
+    <ns0:text xml:space="preserve" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;line-height:0;font-family:Giphurs;-inkscape-font-specification:'Giphurs, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;stroke-width:0.529167;stroke-opacity:0.504425" x="108.55642" y="102.05989" id="text90-4-0"><ns0:tspan style="font-size:16.9333px;line-height:115%;stroke-width:0.529167" ns1:role="line" id="tspan123-7-7" x="108.55642" y="102.05989">ag</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs Light';fill:#80b3ff;stroke-width:0.529167" x="108.55642" y="110.59689" id="tspan124-9">Double story a &amp; g</ns0:tspan><ns0:tspan ns1:role="line" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.58611px;line-height:100%;font-family:Giphurs;-inkscape-font-specification:'Giphurs Light';fill:#80b3ff;stroke-width:0.529167" x="108.55642" y="115.183" id="tspan125">(simple available)</ns0:tspan></ns0:text>
+  </ns0:g>
+  <ns0:metadata id="metadata1">
     <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <cc:license
-           rdf:resource="http://scripts.sil.org/OFL" />
-      </cc:Work>
-      <cc:License
-         rdf:about="http://scripts.sil.org/OFL">
-        <cc:permits
-           rdf:resource="http://scripts.sil.org/pub/OFL/Reproduction" />
-        <cc:permits
-           rdf:resource="http://scripts.sil.org/pub/OFL/Distribution" />
-        <cc:permits
-           rdf:resource="http://scripts.sil.org/pub/OFL/Embedding" />
-        <cc:permits
-           rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeWorks" />
-        <cc:requires
-           rdf:resource="http://scripts.sil.org/pub/OFL/Notice" />
-        <cc:requires
-           rdf:resource="http://scripts.sil.org/pub/OFL/Attribution" />
-        <cc:requires
-           rdf:resource="http://scripts.sil.org/pub/OFL/ShareAlike" />
-        <cc:requires
-           rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeRenaming" />
-        <cc:requires
-           rdf:resource="http://scripts.sil.org/pub/OFL/BundlingWhenSelling" />
-      </cc:License>
+      <ns4:Work rdf:about="">
+        <ns4:license rdf:resource="http://scripts.sil.org/OFL" />
+      </ns4:Work>
+      <ns4:License rdf:about="http://scripts.sil.org/OFL">
+        <ns4:permits rdf:resource="http://scripts.sil.org/pub/OFL/Reproduction" />
+        <ns4:permits rdf:resource="http://scripts.sil.org/pub/OFL/Distribution" />
+        <ns4:permits rdf:resource="http://scripts.sil.org/pub/OFL/Embedding" />
+        <ns4:permits rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeWorks" />
+        <ns4:requires rdf:resource="http://scripts.sil.org/pub/OFL/Notice" />
+        <ns4:requires rdf:resource="http://scripts.sil.org/pub/OFL/Attribution" />
+        <ns4:requires rdf:resource="http://scripts.sil.org/pub/OFL/ShareAlike" />
+        <ns4:requires rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeRenaming" />
+        <ns4:requires rdf:resource="http://scripts.sil.org/pub/OFL/BundlingWhenSelling" />
+      </ns4:License>
     </rdf:RDF>
-  </metadata>
-</svg>
+  </ns0:metadata>
+</ns0:svg>

@@ -12,11 +12,11 @@ Your average Arial/Helvetica/Circular **sans serif** font, made with [Fontforge]
 
 It is a variable font, with the weight customizable across a wide range, and a lot of differents [OpenType features](https://github.com/Corne2Plum3/Giphurs/wiki/OpenType-font-features) to customize the font. The font covers quite a large amount of glyphs, over **2500** glyphs, and supports more than **600** [languages](https://github.com/Corne2Plum3/Giphurs/wiki/Supported-languages-list) (according to [hyperglot](https://github.com/rosettatype/hyperglot)).
 
-![](documentation/preview_1.svg)
+![](documentation/preview_1.png)
 
-![](documentation/preview_2.svg)
+![](documentation/preview_2.png)
 
-![](documentation/preview_3.svg)
+![](documentation/preview_3.png)
 
 # Why?
 
