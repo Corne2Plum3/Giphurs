@@ -20,7 +20,6 @@ It is possible to configure some of the scripts using a `.env` file at the proje
 | `COMMON_LOOKUPS_LIST` | `Path` | `'./scripts/common_lookups_list.txt'` | Path to a text file listing the standard OpenType lookup blocks that must be systematically copied across all UFOs. |
 | `FEATURES_LOOKUPS_REF` | `Path` | `./{SOURCES_INST_DIR_PATH} / '{FONT_NAME}-Regular.ufo / features.fea'` | The master OpenType feature file utilized as the golden reference source when injecting lookups and features into other styles. |
 | `FONT_NAME` | `str` | `'Giphurs'` | The primary family name of the font. Used for identifying specific source files and naming output files. |
-| `FONT_VERSION` | `str` | `None` | The version string to apply to all fonts (e.g., `"2.0.1"`). If left blank/unset, the script preserves whatever version values already exist inside the UFO sources. |
 | `FONTS_DIR_BACKUP_PATH` | `Path` | `'./fonts-backup'` | The directory where existing font binaries are archived before a new build process is initiated. |
 | `FONTS_DIR_PATH` | `Path` | `'./fonts'` | The target output directory where all generated font binaries (`otf`, `ttf`, `woff2`) will be saved. |
 | `KEEP_UFO_INST` | `bool` | `False` | Determines whether the temporary working folder (`SOURCES_INST_DIR_PATH`) should be kept or deleted after the build finishes. Evaluates to `True` if set to `true` or `1`. |

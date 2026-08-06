@@ -9,7 +9,6 @@ from pathlib import Path
 import shutil
 import time
 from ufo_copy_fea_blocks import copy_fea_blocks
-from ufo_set_version import set_version
 from ufo_use_typo_metrics import use_typo_metrics
 from verboselogs import VerboseLogger   # pyright: ignore[reportMissingTypeStubs]
 
@@ -450,10 +449,6 @@ for ufo in UFO_FILES_LIST:
     # lookup blocks
     if FEATURES_LOOKUPS_REF != ufo / 'features.fea':
         if copy_fea_blocks(FEATURES_LOOKUPS_REF, ufo / 'features.fea', 'lookup', lookup_list) != 0:
-            exit(1)
-    # version
-    if FONT_VERSION is not None:
-        if set_version(FONT_VERSION, ufo) != 0:
             exit(1)
 logger.success('Pre-processing done with success.')  # pyright: ignore[reportUnknownMemberType]
 

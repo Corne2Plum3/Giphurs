@@ -2,6 +2,7 @@
 
 # Name of the font
 FONT_NAME := Giphurs
+FONT_VERSION := 3.000
 
 # Paths (without '/' for directories!)
 UFO_DIR := ./sources
@@ -9,6 +10,7 @@ UFO_COMPOSED_GENERATOR_SCRIPT := "scripts/composed_glyphs_generator.py"
 UFO_COMPOSED_SCRIPT := "scripts/ufo_composed_glyphs.py"
 UFO_COMPOSED_CSV_1 := "scripts/composed_glyphs.csv"  # filled by hand
 UFO_COMPOSED_CSV_2 := "scripts/composed_glyphs_generated.csv"  # filled by UFO_COMPOSED_SCRIPT
+UFO_SET_VERSION := "scripts/ufo_set_version.py"
 UFO_USE_TYPO_METRICS_SCRIPT := "scripts/ufo_use_typo_metrics.py"
 
 # documentaton
@@ -21,7 +23,8 @@ help:
 	@echo "  * make proof        : Creates HTML specimens of the font (in output/ directory) and opens the HTML report in your web browser."
 	@echo "  * make tests        : Runs automated tests (in output/ directory) and opens the HTML report in your web browser."
 	@echo "UFO sources scripts"
-	@echo "  * make ufo_composed_glyphs  : Build all glyphs based on other glyphs across all UFOs (the UFO files must be opened and exported throught Fontforge after, and accented glyphs has to be already built)."
+	@echo "  * make ufo_composed_glyphs  : Build all glyphs based on other glyphs across all UFOs (the UFO files must be opened and exported with Fontforge after, and accented glyphs has to be already built)."
+	@echo "  * ufo_set_version           : Change version string inside sources/ UFOs (value defined in the Makefile as FONT_VERSION variable.)"
 	@echo "  * make ufo_use_typo_metrics : Enable bit 7 ("use typo metrics") of openTypeOS2Selection in fontinfo.plist"
 
 # make a zip archive of the font folder
@@ -50,6 +53,10 @@ ufo_composed_glyphs: scripts/ sources/
 	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-Italic.ufo 400 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
 	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-ExtraBlack.ufo 1000 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
 	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-ExtraBlackItalic.ufo 1000 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
+
+ufo_set_version:
+	UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null); \
+	for ufo in $$UFO_FILES; do python3 $(UFO_SET_VERSION) $(FONT_VERSION) $${ufo}; done
 
 # edit fontinfo.plist to set the bit 7 of openTypeOS2Selection ("use typo metrics")
 # Note: This is currently automatically run when building fonts
