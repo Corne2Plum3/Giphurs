@@ -17,7 +17,7 @@ def set_version(version_string: str, ufo_dir: Path) -> int:
     '''
     Set the version value of a UFO. Writes into the fontinfo.plist file of the UFO.
 
-    Version string must be a decimal numbe, for example "2", "2.010" or "2.0.1" (which is the same as "2.010").
+    Version string must be a decimal number, for example "2", "2.010" or "2.0.1" (which is the same as "2.010").
     The version string written inside the UFO will be in the form of a decimal number with at least 3 decimals.
 
     This function handles the logging.
@@ -30,20 +30,15 @@ def set_version(version_string: str, ufo_dir: Path) -> int:
     '''
 
     # Read version string
-    version_major: str = version_string.split('.', maxsplit=1)[0]
-    version_minor: str
+    version_major: int = int(version_string.split('.', maxsplit=1)[0])
+    version_minor: int
     if len(version_string.split('.', maxsplit=1)) < 2:
-        version_minor = '000'
+        version_minor = 0
     else:
-        version_minor = version_string.split('.', maxsplit=1)[1].replace('.', '')
-        while len(version_minor) < 3:
-            version_minor += '0'
-    if not version_major.isnumeric() or not version_minor.isnumeric():
-        logger.critical(f'Invalid version_string value: "{version_string}".')
-        return 1
+        version_minor = int(version_string.split('.', maxsplit=1)[1].replace('.', ''))
 
     # Read file
-    logger.info(f'Setting font version value of "{ufo_dir}" to {version_major}.{version_minor}')
+    logger.info(f'Setting font version value of "{ufo_dir}" to "{version_string}..."')
     plist_raw_content: Any
     try:
         with open(ufo_dir / 'fontinfo.plist', 'rb') as f:
@@ -59,7 +54,7 @@ def set_version(version_string: str, ufo_dir: Path) -> int:
     plist_dict: dict[str, Any] = plist_raw_content  # pyright: ignore[reportUnknownVariableType]
 
     # Set (add field if missing)
-    plist_dict['openTypeNameVersion'] = f'Version {version_major}.{version_minor}'
+    plist_dict['openTypeNameVersion'] = f'Version {version_string}'
     plist_dict['versionMajor'] = version_major
     plist_dict['versionMinor'] = version_minor
 
@@ -72,7 +67,7 @@ def set_version(version_string: str, ufo_dir: Path) -> int:
         logger.critical(f'Failed to write into "{ufo_dir / 'fontinfo.plist'}": {err}')
         return 1
 
-    logger.success(f'UFO "{ufo_dir}" font version has been set to {version_major}.{version_minor}')  # pyright: ignore[reportUnknownMemberType]
+    logger.success(f'UFO "{ufo_dir}" font version has been set to {version_string} (major={version_major} minor={version_minor})')  # pyright: ignore[reportUnknownMemberType]
     return 0
 
 
