@@ -59,7 +59,6 @@ All of the font building process is described inside the `build.py` script.
        ├──► Enable OpenType OS/2 Table Bit 7 (force "use_typo_metrics")
        ├──► Inject/Synchronize shared 'feature' blocks into 'features.fea'
        ├──► Inject/Synchronize shared 'lookup' blocks into 'features.fea'
-       └──► Set customized Font Version strings if explicitly declared
        │
 [ 3. BUILD STAGE ]
        │
@@ -99,7 +98,7 @@ All of the font building process is described inside the `build.py` script.
 A composed glyph is a glyph that is created using one or several other glyphs. To give some examples, the glyph `IJ` is made of `I` and `J`, the glyph `â` is made of the small letter `a` with a circumflex accent `^` (`uni0302`). More than 60% of the glyphs in the font are composed.
 
 > [!NOTE]
-> Fontforge does include a built-in feature to build accented and composite (sequence of 1 or several glyphs). We do not use them, this isn't enough for our use, for several reasons:
+> FontForge does include a built-in feature to build accented and composite (sequence of 1 or several glyphs). We do not use them, this isn't enough for our use, for several reasons:
 > * Double-accented glyphs are built from a single accented glyph. This might be an issue as anchors aren't copied, giving less flexibility on how to place accents.
 > * It is not possible to use custom glyphs when building an accented or composed glyphs: those settings are lost when exporting to UFO.
 > * We're using custom scripts to generate some digits based glyphs, such as proportional figures, subscript variants of the font, or numbers in a circle (`uni2468` for example)
@@ -108,8 +107,8 @@ A script to generate all of those fonts called `ufo_composed_glyphs.py` exists t
 
 > [!IMPORTANT]
 > In this project, 2 CSV files are used:
-> * `composed_glyphs.csv` for glyphs that should be definied manally, mostly accented and composite glyphs.
-> * `composed_glyphs_generated.csv` for glyphs defined by the `composed_glyphs_generator.py`, commonly digit-based glyphs. **Do NOT manally modify this file!!**.
+> * `composed_glyphs.csv` for glyphs that should be defined manually, mostly accented and composite glyphs.
+> * `composed_glyphs_generated.csv` for glyphs defined by the `composed_glyphs_generator.py`, commonly digit-based glyphs. **Do NOT manually modify this file!!**.
 
 ### CSV config file
 
