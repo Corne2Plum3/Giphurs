@@ -8,11 +8,12 @@
 	<a href="./output/fontbakery/fontbakery-report.html"><img src="./output/badges/overall.svg" alt=""></a>
 </p>
 
-Your average Arial/Helvetica/Circular **sans serif** font, made with [Fontforge](https://fontforge.org/en-US/), with a goal of being simple, readable and multipurpose.
-
-It is a variable font, with the weight customizable across a wide range, and a lot of differents [OpenType features](https://github.com/Corne2Plum3/Giphurs/wiki/OpenType-font-features) to customize the font. The font covers quite a large amount of glyphs, over **2500** glyphs, and supports more than **600** [languages](https://github.com/Corne2Plum3/Giphurs/wiki/Supported-languages-list) (according to [hyperglot](https://github.com/rosettatype/hyperglot)).
-
 ![](documentation/preview_1.png)
+
+Your average **sans serif** font similar to _Arial_ or _Helvetica_, made with [FontForge](https://fontforge.org/en-US/), with a goal of being simple, readable and multipurpose. And it is free and open-source too!
+
+It is a variable font, with the weight customizable across a wide range, and a lot of different [OpenType features](https://github.com/Corne2Plum3/Giphurs/wiki/OpenType-font-features) to customize the font. The font covers quite a large amount of glyphs, over **2500** glyphs, and supports more than **600** [languages](https://github.com/Corne2Plum3/Giphurs/wiki/Supported-languages-list) (according to [hyperglot](https://github.com/rosettatype/hyperglot)).
+
 
 ![](documentation/preview_2.png)
 
