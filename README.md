@@ -8,13 +8,16 @@
 	<a href="./output/fontbakery/fontbakery-report.html"><img src="./output/badges/overall.svg" alt=""></a>
 </p>
 
-Your average Arial/Helvetica/Circular **sans serif** font, made with [Fontforge](https://fontforge.org/en-US/), with a goal of being simple, readable and multipurpose.
+![](documentation/preview_1.png)
 
-It is a variable font, with the weight customizable across a wide range, and a lot of differents [OpenType features](https://github.com/Corne2Plum3/Giphurs/wiki/OpenType-font-features) to customize the font. The font covers quite a large amount of glyphs, over **2500** glyphs, and supports more than **600** [languages](https://github.com/Corne2Plum3/Giphurs/wiki/Supported-languages-list) (according to [hyperglot](https://github.com/rosettatype/hyperglot)).
+Your average **sans serif** font similar to _Arial_ or _Helvetica_, made with [FontForge](https://fontforge.org/en-US/), with a goal of being simple, readable and multipurpose. And it is free and open-source too!
 
-![](documentation/font_presentation_1.png)
-![](documentation/font_presentation_2.png)
-![](documentation/font_presentation_3.png)
+It is a variable font, with the weight customizable across a wide range, and a lot of different [OpenType features](https://github.com/Corne2Plum3/Giphurs/wiki/OpenType-font-features) to customize the font. The font covers quite a large amount of glyphs, over **2500** glyphs, and supports more than **600** [languages](https://github.com/Corne2Plum3/Giphurs/wiki/Supported-languages-list) (according to [hyperglot](https://github.com/rosettatype/hyperglot)).
+
+
+![](documentation/preview_2.png)
+
+![](documentation/preview_3.png)
 
 # Why?
 
@@ -31,7 +34,7 @@ Well at the end, after more than 2 years, there's a final product, and literally
 
 # Status of the project
 
-The font itself works fine, but there's still stuff to do, and things may change at any time (althrough it's relatively stable now)
+The font is almost finished, it only requires some polishing and minor bug fixing and improvements.
 
 The end goal is to upload this font on [Google Fonts](https://fonts.google.com/).
 
@@ -41,25 +44,26 @@ The full list of tasks is here: https://github.com/users/Corne2Plum3/projects/4
 
 Go in [releases](https://github.com/Corne2Plum3/Giphurs/releases) page and pick the latest version. The font is available in the following formats: `otf`, `ttf` and `woff2`.
 
-You also have "SC" versions of the font (currently available for all weights except 1000) which uses small caps instead of lowercase characters.
+You also have "SC" versions of the font which uses small caps for lowercase characters.
 
-> [!WARNING]
-> If you downloaded the font before April 7th 2025 (before version 2.0.0), please redownload the font. A lot of bugs, some severe, have been found in previous versions which had been fixed.
-
-# Build the fonts
+# Building the fonts
 
 ## 0. Requirements
 
-Before going further, you're going to need these.
+Before going further, you're going to need these installed on your system to compile the font and create the images.
 
-* [Python 3.10](https://www.python.org/downloads/) or newer version.
+* [Python 3.13](https://www.python.org/downloads/) (other version not tested).
 * [pip](https://pypi.org/project/pip/) to install the Python packages (see below).
+* [inkscape](https://inkscape.org/) that can be accessed through command line to generate images of the font.
+
+And of course a font editor with support of [Unified Font Object](https://unifiedfontobject.org/) version 3 if you want to change the font. [FontForge](https://fontforge.org/en-US/) is highly recommended as this is the editor used to create the font.
 
 ## 1. Setup
 
 Everything that you will need will be installed on a virtual environment (so Debian/Ubuntu won't complain about it because of the Python packages). So in this section you will make a virtual environment and add the dependencies inside.
 
-**Note:** The following guide has been tested only on Linux, on Debian based distros (more exactly Debian 12 and Ubuntu 23.10). If you managed to generate the fonts file from another distribution (or another OS), you can open a PR so we can add it here.
+> [!NOTE]
+> The following guide has been tested on Linux only (Debian/Ubuntu).
 
 1. Ensure that the current working directory is the root of the project. If not, run the following command, replacing `path/to/the/folder/project` by the path of the directory of the project, basically where the file you're reading right now is in.
 	```sh
@@ -76,7 +80,7 @@ Everything that you will need will be installed on a virtual environment (so Deb
 	source venv/bin/activate 
 	```
 
-4. Now we're intalling the  Python packages. All of them are listed in the `requirements.txt`. To install all of them with the correct version, run the following command:
+4. Now we're installing the  Python packages. All of them are listed in the `requirements.txt`. To install all of them with the correct version, run the following command:
 	```sh
 	pip install -r requirements.txt
 	```
@@ -84,12 +88,15 @@ Everything that you will need will be installed on a virtual environment (so Deb
 ## 2. Build the font
 
 Once all dependencies are ready, you can build the fonts using the following command (add `-B` if you want to build the font and that it says that "fonts" is already up to date):
-
 ```sh
+make clean && make clean_fonts
 make build
 ```
 
-Others commands are available in the Makefile. Just run `make` to get the list of commands.
+> [!NOTE]
+> Run the first command if this isn't the first time you are compiling the font. Sometimes the font binaries aren't updates (and we don't know why...)
+
+More commands are listed in the Makefile. Just run `make help` to get the list of commands.
 
 
 # License
