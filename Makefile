@@ -39,6 +39,11 @@ help:
 archive:
 	font_version=$$(./scripts/get_font_version.sh $$(find fonts/ -type f | head -n 1)); zip -r $(FONT_NAME)_fonts_v$$font_version.zip fonts/ OFL.txt
 
+# Creates a badge displaying the font version
+badge_local_version:
+	@echo "Creating badge at output/badges/localFontVersion.svg"
+	FONT_FILE_TO_CHECK=$$(find fonts/ttf -type f 2>/dev/null) ; echo $(FONT_FILE_TO_CHECK); FONT_VERSION=$$(./scripts/get_font_version.sh $$FONT_FILE_TO_CHECK); curl "https://img.shields.io/badge/Local_fonts_version-"$(FONT_VERSION)"-black?style=flat-square" > output/badges/localFontVersion.svg
+
 # build the fonts (otf, ttf, woof2, static + variables)
 build: sources/
 	python3 ./scripts/build.py
@@ -52,13 +57,13 @@ $(IMAGES_DIR)/%.png: $(IMAGES_DIR)/%.svg
 	inkscape "$<" --export-type="png" -o "$@"
 
 # create HTML specimens of the (variable) fonts
-proof: fonts/
+proof: fonts/ badge_local_version
 	which diff3proof || (echo "diff3proof not found." && exit 1)
 	TOCHECK=$$(find fonts/variable -type f | grep -v SC 2>/dev/null); if [ -z "$$TOCHECK" ]; then TOCHECK=$$(find fonts/ttf -type f  | grep -v SC 2>/dev/null); fi ; . venv/bin/activate; mkdir -p output/ output/proof; diff3proof $$TOCHECK --output output/proof
 	open output/proof/diff3proof.html || echo "Failed to open the report in your web browser."
 
 # run fontspector tests
-tests: fonts/
+tests: fonts/ badge_local_version
 	which fontspector || (echo "fontspector not found. Read fontspector installation instruction here: https://github.com/fonttools/fontspector/blob/main/INSTALLATION.md" && exit 1)
 	TOCHECK=$$(find fonts/variable -type f 2>/dev/null); if [ -z "$$TOCHECK" ]; then TOCHECK=$$(find fonts/ttf -type f 2>/dev/null); fi ; mkdir -p output/ output/fontspector; fontspector --profile googlefonts -l warn --full-lists --succinct --html output/fontspector/fontspector-report.html --ghmarkdown output/fontspector/fontspector-report.md --badges output/badges $$TOCHECK  || echo '::warning file=sources/config.yaml,title=fontspector failures::The fontspector QA check reported errors in your font. Please check the generated report.'
 	open output/fontspector/fontspector-report.html || echo "Failed to open the report in your web browser."
