@@ -27,8 +27,8 @@ help:
 	@echo "  * make build        : Generate font binaries from UFO sources."
 	@echo "  * make clean        : Remove temporary and useless generated files, including UFO sources."
 	@echo "  * make clean_fonts  : Empties the current fonts/ folder."
-	@echo "  * make proof        : Creates HTML specimens of the font (in output/ directory) and opens the HTML report in your web browser."
 	@echo "  * make images       : Prints font version and commit number on SVG previews and converts them to PNG if inkscape is installed."
+	@echo "  * make proof        : Creates HTML specimens of the font (in output/ directory) and opens the HTML report in your web browser."
 	@echo "  * make tests        : Runs automated tests (in output/ directory) and opens the HTML report in your web browser."
 	@echo "UFO sources scripts"
 	@echo "  * make ufo_composed_glyphs  : Build all glyphs based on other glyphs across all UFOs (the UFO files must be opened and exported with Fontforge after, and accented glyphs has to be already built)."
@@ -53,7 +53,9 @@ $(IMAGES_DIR)/%.png: $(IMAGES_DIR)/%.svg
 
 # create HTML specimens of the (variable) fonts
 proof: fonts/
-	./scripts/proof.sh
+	which diff3proof || (echo "diff3proof not found." && exit 1)
+	TOCHECK=$$(find fonts/variable -type f | grep -v SC 2>/dev/null); if [ -z "$$TOCHECK" ]; then TOCHECK=$$(find fonts/ttf -type f  | grep -v SC 2>/dev/null); fi ; . venv/bin/activate; mkdir -p output/ output/proof; diff3proof $$TOCHECK --output output/proof
+	open output/proof/diff3proof.html || echo "Failed to open the report in your web browser."
 
 # run fontspector tests
 tests: fonts/
