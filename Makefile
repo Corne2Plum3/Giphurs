@@ -33,6 +33,7 @@ archive:
 
 # Creates a badge displaying the font version
 badge_local_version:
+	mkdir -p output/badges
 	FONT_FILE_TO_CHECK=$$(find fonts/ttf -type f 2>/dev/null) ; echo $(FONT_FILE_TO_CHECK); FONT_VERSION=$$(./scripts/get_font_version.sh $$FONT_FILE_TO_CHECK); curl "https://img.shields.io/badge/Local_fonts_version-"$(FONT_VERSION)"-black?style=flat-square" > output/badges/localFontVersion.svg
 
 # build the fonts (otf, ttf, woof2, static + variables)
