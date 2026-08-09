@@ -55,12 +55,14 @@ $(IMAGES_DIR)/%.png: $(IMAGES_DIR)/%.svg
 proof: fonts/
 	./scripts/proof.sh
 
-# run fontbakery tests
+# run fontspector tests
 tests: fonts/
-	./scripts/tests.sh
+	which fontspector || (echo "fontspector not found. Read fontspector installation instruction here: https://github.com/fonttools/fontspector/blob/main/INSTALLATION.md" && exit 1)
+	TOCHECK=$$(find fonts/variable -type f 2>/dev/null); if [ -z "$$TOCHECK" ]; then TOCHECK=$$(find fonts/ttf -type f 2>/dev/null); fi ; mkdir -p output/ output/fontspector; fontspector --profile googlefonts -l warn --full-lists --succinct --html output/fontspector/fontspector-report.html --ghmarkdown output/fontspector/fontspector-report.md --badges output/badges $$TOCHECK  || echo '::warning file=sources/config.yaml,title=fontspector failures::The fontspector QA check reported errors in your font. Please check the generated report.'
+	open output/fontspector/fontspector-report.html || echo "Failed to open the report in your web browser."
 
 # build composed glyphs (accented + composite + digits)
-# Updates UFO_COMPOSED_CSV_2 and then edit UFOs
+# Updates $UFO_COMPOSED_CSV and then edit UFOs
 ufo_composed_glyphs: scripts/ sources/
 	python3 $(UFO_COMPOSED_GENERATOR_SCRIPT) $(UFO_COMPOSED_CSV_2) --all
 	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-Thin.ufo 100 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)

@@ -52,9 +52,17 @@ You also have "SC" versions of the font which uses small caps for lowercase char
 
 Before going further, you're going to need these installed on your system to compile the font and create the images.
 
+Mandatory:
+
 * [Python 3.13](https://www.python.org/downloads/) (other version not tested).
 * [pip](https://pypi.org/project/pip/) to install the Python packages (see below).
+
+Optional(-ish):
+
+* [fontspector](https://github.com/fonttools/fontspector/blob/main/INSTALLATION.md) for testing the font.
+	* Or use the [web-based version](https://fonttools.github.io/fontspector/)
 * [inkscape](https://inkscape.org/) that can be accessed through command line to generate images of the font.
+	* Otherwise something else that can convert SVG to PNG with font features support
 
 And of course a font editor with support of [Unified Font Object](https://unifiedfontobject.org/) version 3 if you want to change the font. [FontForge](https://fontforge.org/en-US/) is highly recommended as this is the editor used to create the font.
 
