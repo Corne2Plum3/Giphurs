@@ -341,7 +341,7 @@ def add_hinting(src_path: Path, dst_path: Path):
     Return:
         int: exit code of gftools command
     """
-    gftools_command: str = f'gftools fix-nonhinting {src_path} {dst_path} 2>&1 | tee -a {GFTOOLS_LOGS}'
+    gftools_command: str = f'gftools fix-nonhinting -q {src_path} {dst_path} 2>&1 | tee -a {GFTOOLS_LOGS}'
     exit_code: int = run_shell_command(gftools_command, True, 'error', GFTOOLS_LOGS, False)
     return exit_code
 
