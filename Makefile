@@ -1,24 +1,16 @@
-.PHONY: archive proof tests clean clean_fonts setup_venv
+.PHONY: archive proof tests clean clean_fonts
 
 # Name of the font
 FONT_NAME := Giphurs
 FONT_VERSION := 3.000
 
 # Paths (without '/' for directories!)
-FONT_DIR := ./fonts
-ONE_FONT_FILE := ./fonts/ttf/Giphurs-Regular.ttf  # Used to grab the font version when generating images
 IMAGES_DIR := ./documentation
-IMAGES_PREPROCESSING_SCRIPT := ./documentation/svg_version_and_commit.py
-UFO_DIR := ./sources
-UFO_COMPOSED_GENERATOR_SCRIPT := "scripts/composed_glyphs_generator.py"
-UFO_COMPOSED_SCRIPT := "scripts/ufo_composed_glyphs.py"
-UFO_COMPOSED_CSV_1 := "scripts/composed_glyphs.csv"  # filled by hand
-UFO_COMPOSED_CSV_2 := "scripts/composed_glyphs_generated.csv"  # filled by UFO_COMPOSED_SCRIPT
-UFO_SET_VERSION := "scripts/ufo_set_version.py"
-UFO_USE_TYPO_METRICS_SCRIPT := "scripts/ufo_use_typo_metrics.py"
-
 SVGS := $(wildcard $(IMAGES_DIR)/*.svg)
 PNGS := $(SVGS:.svg=.png)
+UFO_DIR := ./sources
+UFO_COMPOSED_CSV_1 := "scripts/composed_glyphs.csv"  # filled by hand
+UFO_COMPOSED_CSV_2 := "scripts/composed_glyphs_generated.csv"  # filled by UFO_COMPOSED_SCRIPT
 
 # documentaton
 help:
@@ -41,7 +33,6 @@ archive:
 
 # Creates a badge displaying the font version
 badge_local_version:
-	@echo "Creating badge at output/badges/localFontVersion.svg"
 	FONT_FILE_TO_CHECK=$$(find fonts/ttf -type f 2>/dev/null) ; echo $(FONT_FILE_TO_CHECK); FONT_VERSION=$$(./scripts/get_font_version.sh $$FONT_FILE_TO_CHECK); curl "https://img.shields.io/badge/Local_fonts_version-"$(FONT_VERSION)"-black?style=flat-square" > output/badges/localFontVersion.svg
 
 # build the fonts (otf, ttf, woof2, static + variables)
@@ -52,7 +43,7 @@ build: sources/
 images: $(PNGS)
 
 $(IMAGES_DIR)/%.png: $(IMAGES_DIR)/%.svg
-	python3 $(IMAGES_PREPROCESSING_SCRIPT) $< $(ONE_FONT_FILE) "version"
+	python3 ./documentation/svg_version_and_commit.py $< $$(find fonts/ttf -type f 2>/dev/null | head -n 1) "version"
 	which inkscape || (echo "inkscape not found. You have to convert all SVG files inside documentation/ to PNG manually." && exit 1)
 	inkscape "$<" --export-type="png" -o "$@"
 
@@ -69,25 +60,25 @@ tests: fonts/ badge_local_version
 	open output/fontspector/fontspector-report.html || echo "Failed to open the report in your web browser."
 
 # build composed glyphs (accented + composite + digits)
-# Updates $UFO_COMPOSED_CSV and then edit UFOs
+# Updates $UFO_COMPOSED_CSV_2 and then edit UFOs
 ufo_composed_glyphs: scripts/ sources/
-	python3 $(UFO_COMPOSED_GENERATOR_SCRIPT) $(UFO_COMPOSED_CSV_2) --all
-	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-Thin.ufo 100 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
-	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-ThinItalic.ufo 100 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
-	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-Regular.ufo 400 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
-	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-Italic.ufo 400 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
-	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-ExtraBlack.ufo 1000 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
-	python3 $(UFO_COMPOSED_SCRIPT) $(UFO_DIR)/$(FONT_NAME)-ExtraBlackItalic.ufo 1000 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
+	python3 ./scripts/composed_glyphs_generator.py $(UFO_COMPOSED_CSV_2) --all
+	python3 ./scripts/composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-Thin.ufo 100 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
+	python3 ./scripts/composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-ThinItalic.ufo 100 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
+	python3 ./scripts/composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-Regular.ufo 400 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
+	python3 ./scripts/composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-Italic.ufo 400 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
+	python3 ./scripts/composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-ExtraBlack.ufo 1000 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
+	python3 ./scripts/composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-ExtraBlackItalic.ufo 1000 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
 
 ufo_set_version:
 	UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null); \
-	for ufo in $$UFO_FILES; do python3 $(UFO_SET_VERSION) $(FONT_VERSION) $${ufo}; done
+	for ufo in $$UFO_FILES; do python3 ./scripts/ufo_set_version.py $(FONT_VERSION) $${ufo}; done
 
 # edit fontinfo.plist to set the bit 7 of openTypeOS2Selection ("use typo metrics")
 # Note: This is currently automatically run when building fonts
 ufo_use_typo_metrics: sources/
 	UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null); \
-	for ufo in $$UFO_FILES; do python3 $(UFO_USE_TYPO_METRICS_SCRIPT) $${ufo}; done
+	for ufo in $$UFO_FILES; do python3 ./scripts/ufo_use_typo_metrics.py $${ufo}; done
 
 # Cleaning process
 clean:
