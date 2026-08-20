@@ -11660,7 +11660,7 @@ lookup mark_Mark_positioning {
 	<anchor 595 -80> mark @bottom_ypogegrammeni
 	<anchor 1119 0> mark @bottom_right
 	<anchor 595 0> mark @bottom_center;
-  pos base [\b.sc \r.sc \beta.sc \uni0432.sc ] <anchor 561 1200> mark @top_center
+  pos base [\b.sc \r.sc \beta.sc \uni0432.sc \uni027C.sc ] <anchor 561 1200> mark @top_center
 	<anchor 561 0> mark @bottom_center;
   pos base [\c.sc \oslash.sc \uni0188.sc \uni023C.sc \uni037C.sc \uni03F2.sc \uni0441.sc \uni0454.sc \uni051B.sc ] <anchor 694 -20> mark @bottom_cedilla
 	<anchor 694 0> mark @bottom_center
@@ -11684,7 +11684,7 @@ lookup mark_Mark_positioning {
 	<anchor 390 1200> mark @top_center
 	<anchor 479 0> mark @bottom_right
 	<anchor 390 0> mark @bottom_center;
-  pos base [\j.sc \uni0237.sc \uni0249.sc \uni03F3.sc \uni0458.sc ] <anchor 502 0> mark @bottom_center
+  pos base [\j.sc \uni0237.sc \uni0249.sc \uni03F3.sc \uni0458.sc \uni025F.sc ] <anchor 502 0> mark @bottom_center
 	<anchor 814 1200> mark @top_center;
   pos base [\k.sc \kgreenlandic.sc \kappa.sc \uni043A.sc ] <anchor 598 0> mark @bottom_center
 	<anchor 598 1200> mark @top_center;
@@ -11853,7 +11853,7 @@ lookup mark_Mark_positioning {
   pos base [\florin.sc ] <anchor 582 1200> mark @top_center;
   pos base [\uni019A.sc ] <anchor 559 0> mark @bottom_center
 	<anchor 260 1200> mark @top_center;
-  pos base [\ohorn.sc \uni0259.sc ] <anchor 694 1200> mark @top_center
+  pos base [\ohorn.sc \uni0259.sc \uni025A.sc ] <anchor 694 1200> mark @top_center
 	<anchor 849 0> mark @bottom_right
 	<anchor 694 -20> mark @bottom_cedilla
 	<anchor 694 0> mark @bottom_center;
@@ -11947,7 +11947,7 @@ lookup mark_Mark_positioning {
 	<anchor 390 1792> mark @top_center;
   pos base [\upsilondieresistonos.sc \uni1FE2.sc \uni1FE3.sc ] <anchor 604 0> mark @bottom_center
 	<anchor 604 1792> mark @top_center;
-  pos base [\delta.sc \uni1E9F.sc ] <anchor 663 1200> mark @top_center
+  pos base [\delta.sc \uni1E9F.sc \uni018D.sc ] <anchor 663 1200> mark @top_center
 	<anchor 663 0> mark @bottom_center;
   pos base [\lambda.sc \uni043B.loclBGR.sc ] <anchor 1119 0> mark @bottom_right
 	<anchor 595 0> mark @bottom_center
@@ -12515,6 +12515,13 @@ lookup mark_Mark_positioning {
 	<anchor 498 0> mark @bottom_right
 	<anchor 319 -20> mark @bottom_cedilla;
   pos base [\dotlessuni2149 ] <anchor 781 1039> mark @top_center;
+  pos base [\uni01AA.sc ] <anchor 533 0> mark @bottom_center
+	<anchor 533 1200> mark @top_center;
+  pos base [\uni01BA.sc ] <anchor 539 1200> mark @top_center;
+  pos base [\uni025C.sc \uni025D.sc ] <anchor 398 0> mark @bottom_right
+	<anchor 544 -20> mark @bottom_cedilla
+	<anchor 544 0> mark @bottom_center
+	<anchor 544 1200> mark @top_center;
 } mark_Mark_positioning;
 
 lookup mkmk_mark_to_mark_top_center {
@@ -13831,7 +13838,26 @@ feature mkmk {
 	\uni2152.cv10.cv11.ss06.zero \uni2152.cv11.cv20.ss06.zero \colon.centered 
 	\asterisk.centered \dotlessuni0268 \dotlessuni029D \dotlessuni02B2 
 	\dotlessuni1DA4 \dotlessuni2071 \dotlessuni2148 \dotlessuni2149 
-	\double_circle_empty ];
+	\double_circle_empty \mu.sc \omega1.sc \phi1.sc \sigma1.sc \theta1.sc 
+	\uni018D.sc \uni01AA.sc \uni01BA.sc \uni01BE.sc \uni0238.sc \uni0239.sc 
+	\uni023F.sc \uni0240.sc \uni0252.sc \uni0255.sc \uni0258.sc \uni025A.sc 
+	\uni025C.sc \uni025D.sc \uni025E.sc \uni025F.sc \uni0261.sc \uni0262.sc 
+	\uni0267.sc \uni026B.sc \uni026C.sc \uni026D.sc \uni026E.sc \uni0270.sc 
+	\uni0271.sc \uni0273.sc \uni0274.sc \uni0276.sc \uni0277.sc \uni0278.sc 
+	\uni0279.sc \uni027A.sc \uni027B.sc \uni027C.sc \uni027E.sc \uni0280.sc 
+	\uni0281.sc \uni0282.sc \uni0284.sc \uni0285.sc \uni0286.sc \uni0287.sc 
+	\uni028D.sc \uni028E.sc \uni028F.sc \uni0290.sc \uni0291.sc \uni0293.sc 
+	\uni0296.sc \uni0297.sc \uni0299.sc \uni029A.sc \uni029B.sc \uni029C.sc 
+	\uni029E.sc \uni029F.sc \uni02A0.sc \uni02A1.sc \uni02A2.sc \uni02AC.sc 
+	\uni02AD.sc \uni02AE.sc \uni02AF.sc \uni0371.sc \uni0373.sc \uni03D0.sc 
+	\uni03D7.sc \uni03DF.sc \uni03E1.sc \uni03E3.sc \uni03E5.sc \uni03E7.sc 
+	\uni03E9.sc \uni03EB.sc \uni03ED.sc \uni03EF.sc \uni03F0.sc \uni03F1.sc 
+	\uni03F5.sc \uni03FB.sc \uni0479.sc \uni04CF.sc \uni04E1.sc \uni1E9B.sc 
+	\uni1E9C.sc \uni1E9D.sc \uni1FBE.sc \uni210A.sc \uni210E.sc \uni210F.sc 
+	\uni2113.sc \uni212F.sc \uni2134.sc \uni2139.sc \uni213C.sc \uni213D.sc 
+	\uni2146.sc \uni2147.sc \uni2148.sc \uni2149.sc \uni214E.sc \uni2184.sc 
+	\uni2C65.sc \uni2C66.sc \uniA641.sc \uniA643.sc \uniA64B.sc \uniA64D.sc 
+	\uniA657.sc ];
 @GDEF_Ligature = [\i \j \igrave \iacute \icircumflex \idieresis \dotlessi \itilde 
 	\imacron \ibreve \iogonek \jcircumflex \uni01D0 \uni0209 \uni020B \uni0249 
 	\uni0457 \uni1EC9 \arrowright \arrowleft \arrowboth \arrowdblright 
