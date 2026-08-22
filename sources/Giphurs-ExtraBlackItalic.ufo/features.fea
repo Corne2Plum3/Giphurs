@@ -12721,11 +12721,11 @@ lookup mark_Mark_positioning {
 	<anchor 455 1040> mark @top_center
 	<anchor 272 0> mark @bottom_center
 	<anchor 452 0> mark @bottom_right;
-  pos base [\dotlessuni2148 ] <anchor 555 1039> mark @top_center
-	<anchor 319 0> mark @bottom_center
-	<anchor 498 0> mark @bottom_right
-	<anchor 319 -20> mark @bottom_cedilla;
-  pos base [\dotlessuni2149 ] <anchor 781 1039> mark @top_center;
+  pos base [\dotlessuni2148 ] <anchor 428 0> mark @bottom_right
+	<anchor 225 0> mark @bottom_center
+	<anchor 408 1040> mark @top_center
+	<anchor 221 -20> mark @bottom_cedilla;
+  pos base [\dotlessuni2149 ] <anchor 408 1040> mark @top_center;
 } mark_Mark_positioning;
 
 lookup mkmk_mark_to_mark_top_center {
