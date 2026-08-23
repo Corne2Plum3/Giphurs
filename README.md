@@ -114,5 +114,4 @@ This font is under the [SIL Open Font License, Version 1.1](https://scripts.sil.
 
 # Credits
 
-Some glyphs (very complicated to draw) in the `U+21xx` range are stolen from [DejaVu Sans](https://github.com/dejavu-fonts/dejavu-fonts) and [Noto Sans](https://github.com/notofonts/notofonts.github.io), 
-
+The fraktur glyphs (`U+210C`, `U+2111`, `U+211C`, `U+2128` and `U+212D`) are from [_Noto Sans Math_](https://github.com/notofonts/math) because they are too hard to draw. _Noto Sans Math_ is licensed under the  [SIL Open Font License, Version 1.1](https://openfontlicense.org/open-font-license-official-text/).
