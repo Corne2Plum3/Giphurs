@@ -8077,7 +8077,8 @@ lookup kern_Horizontal_kerning {
 	\uni0491.sc \uni0493.sc \uni04A5.sc \uni04F7.sc \uni04FB.sc 
 	\uni1E6B.sc \uni1E6D.sc \uni1E6F.sc \uni1E71.sc ];
     @kc85_first_46 = [\h \hbar \hcircumflex \m \n \nacute \napostrophe \ncaron \ncommaaccent \uni0266 
-	\uni0439 \uni045B \uni1E23 \uni1E25 \uni1E27 \uni1E29 \uni1E2B \uni217F ];
+	\uni0439 \uni045B \uni1E23 \uni1E25 \uni1E27 \uni1E29 \uni1E2B \uni210E 
+	\uni210F \uni217F ];
     @kc85_first_47 = [\iota \iotadieresis \iotadieresistonos \uni0269 \uni1F30 \uni1F31 \uni1F32 
 	\uni1F33 \uni1F34 \uni1F35 \uni1F36 \uni1F37 \uni1F76 \uni1F77 \uni1FD0 
 	\uni1FD1 \uni1FD2 \uni1FD3 \uni1FD6 \uni1FD7 ];
@@ -11365,6 +11366,9 @@ lookup mark_Mark_positioning {
   pos base [\uni1EF4 ] <anchor 671 1380> mark @top_center
 	<anchor 671 -336> mark @bottom_center;
   pos base [\uni1EF5 ] <anchor 573 1040> mark @top_center;
+  pos base [\uni210E ] <anchor 69 -20> mark @bottom_cedilla
+	<anchor 316 1380> mark @top_center
+	<anchor 435 0> mark @bottom_center;
   pos base [\uni1F00 \uni1F01 \uni1F02 \uni1F03 \uni1F04 \uni1F05 \uni1F06 ] <anchor 617 -90> mark @bottom_ypogegrammeni
 	<anchor 578 0> mark @bottom_center
 	<anchor 613 1436> mark @top_center;
@@ -12358,11 +12362,11 @@ lookup mark_Mark_positioning {
 	<anchor 290 0> mark @bottom_right
 	<anchor 268 0> mark @bottom_center
 	<anchor 268 1040> mark @top_center;
-  pos base [\dotlessuni2148 ] <anchor 555 1039> mark @top_center
-	<anchor 319 0> mark @bottom_center
-	<anchor 498 0> mark @bottom_right
-	<anchor 319 -20> mark @bottom_cedilla;
-  pos base [\dotlessuni2149 ] <anchor 781 1039> mark @top_center;
+  pos base [\dotlessuni2148 ] <anchor 185 -20> mark @bottom_cedilla
+	<anchor 372 1040> mark @top_center
+	<anchor 189 0> mark @bottom_center
+	<anchor 328 0> mark @bottom_right;
+  pos base [\dotlessuni2149 ] <anchor 439 1040> mark @top_center;
 } mark_Mark_positioning;
 
 lookup mkmk_mark_to_mark_top_center {
