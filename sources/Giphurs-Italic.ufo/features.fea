@@ -635,6 +635,7 @@ lookup smcp_Small_caps_main_lookup {
     sub \yacute by \yacute.sc ;
     sub \ydieresis by \ydieresis.sc ;
     sub \dotlessi by \dotlessi.sc ;
+    sub \mu by \mu.sc ;
     sub \thorn by \thorn.sc ;
     sub \ae by \ae.sc ;
     sub \oslash by \oslash.sc ;
@@ -844,6 +845,7 @@ lookup smcp_Small_caps_main_lookup {
     sub \uni027C by \uni027C.sc ;
     sub \uni027D by \uni027D.sc ;
     sub \uni027E by \uni027E.sc ;
+    sub \uni027F by \uni027F.sc ;
     sub \uni0280 by \uni0280.sc ;
     sub \uni0281 by \uni0281.sc ;
     sub \uni0282 by \uni0282.sc ;
@@ -941,6 +943,13 @@ lookup smcp_Small_caps_main_lookup {
     sub \uni03DD by \uni03DD.sc ;
     sub \uni03DF by \uni03DF.sc ;
     sub \uni03E1 by \uni03E1.sc ;
+    sub \uni03E3 by \uni03E3.sc ;
+    sub \uni03E5 by \uni03E5.sc ;
+    sub \uni03E7 by \uni03E7.sc ;
+    sub \uni03E9 by \uni03E9.sc ;
+    sub \uni03EB by \uni03EB.sc ;
+    sub \uni03ED by \uni03ED.sc ;
+    sub \uni03EF by \uni03EF.sc ;
     sub \uni03F1 by \uni03F1.sc ;
     sub \uni03F2 by \uni03F2.sc ;
     sub \uni03F3 by \uni03F3.sc ;
@@ -1226,6 +1235,19 @@ lookup smcp_Small_caps_main_lookup {
     sub \uni1EFB by \uni1EFB.sc ;
     sub \uni1EFD by \uni1EFD.sc ;
     sub \uni1EFF by \uni1EFF.sc ;
+    sub \uni213C by \uni213C.sc ;
+    sub \uni213D by \uni213D.sc ;
+    sub \uni2146 by \uni2146.sc ;
+    sub \uni2147 by \uni2147.sc ;
+    sub \uni2148 by \uni2148.sc ;
+    sub \uni2149 by \uni2149.sc ;
+    sub \uni210E by \uni210E.sc ;
+    sub \uni212F by \uni212F.sc ;
+    sub \uni2134 by \uni2134.sc ;
+    sub \uni210A by \uni210A.sc ;
+    sub \uni210F by \uni210F.sc ;
+    sub \uni2113 by \uni2113.sc ;
+    sub \uni2139 by \uni2139.sc ;
     sub \uni214E by \uni214E.sc ;
     sub \uni217C by \uni217C.sc ;
     sub \uni217D by \uni217D.sc ;
@@ -1394,28 +1416,6 @@ lookup smcp_Small_caps_main_lookup {
     sub \uni0434.loclBGR by \uni0434.loclBGR.sc ;
     sub \uni043B.loclBGR by \uni043B.loclBGR.sc ;
     sub \uni0444.loclBGR by \uni0444.loclBGR.sc ;
-    sub \uni03E7 by uni03E7.sc ;
-    sub \uni2148 by uni2148.sc ;
-    sub \uni03EB by uni03EB.sc ;
-    sub \uni210E by uni210E.sc ;
-    sub \uni2149 by uni2149.sc ;
-    sub \uni03E3 by uni03E3.sc ;
-    sub \uni210A by uni210A.sc ;
-    sub \uni213D by uni213D.sc ;
-    sub \uni2134 by uni2134.sc ;
-    sub \uni213C by uni213C.sc ;
-    sub \uni2113 by uni2113.sc ;
-    sub \uni2146 by uni2146.sc ;
-    sub \uni2147 by uni2147.sc ;
-    sub \uni03EF by uni03EF.sc ;
-    sub \uni027F by uni027F.sc ;
-    sub \uni2139 by uni2139.sc ;
-    sub \uni03ED by uni03ED.sc ;
-    sub \uni210F by uni210F.sc ;
-    sub \uni03E9 by uni03E9.sc ;
-    sub \uni212F by uni212F.sc ;
-    sub \mu by mu.sc ;
-    sub \uni03E5 by uni03E5.sc ;
 } smcp_Small_caps_main_lookup;
 
 lookup smcp_Small_caps_locl_to_non_locl_lookup {
@@ -4009,8 +4009,8 @@ lookup ccmp_latn {
     sub \e \uni0302  by \ecircumflex;
     sub \e \uni0308  by \edieresis;
     sub \i \gravecomb  by \igrave;
-    sub \uni0456 \acutecomb  by \iacute;
     sub \i \acutecomb  by \iacute;
+    sub \uni0456 \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0308  by \idieresis;
     sub \n \tildecomb  by \ntilde;
@@ -4066,8 +4066,8 @@ lookup ccmp_latn {
     sub \I \uni0306  by \Ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \i \uni0328  by \iogonek;
     sub \iogonek \gravecomb  by \iogonek;
+    sub \i \uni0328  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4154,13 +4154,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \A \uni030A \acutecomb  by \uni01DC;
-    sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni0308 \uni0304  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \Oslash \acutecomb  by \uni01E0;
+    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5086,8 +5086,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0456 \uni0307  by \uni0457;
+    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -6220,28 +6220,46 @@ lookup calt_Contextual_Alternates {
 	\uni2152.cv11.cv20.ss06.zero ] ;
 } calt_Contextual_Alternates;
 
-feature cv27 {
+feature ss03 {
+  featureNames {
+    name 3 1 0x409 "Alternative uppercases";
+  };
 
  script DFLT;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
+      lookup cv21_Alternative_letter_G;
+      lookup cv22_Alternative_letter_I;
+      lookup cv29_Alternative_letter_Q;
 
  script copt;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
+      lookup cv21_Alternative_letter_G;
+      lookup cv22_Alternative_letter_I;
+      lookup cv29_Alternative_letter_Q;
 
  script cyrl;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
+      lookup cv21_Alternative_letter_G;
+      lookup cv22_Alternative_letter_I;
+      lookup cv29_Alternative_letter_Q;
 
  script grek;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
+      lookup cv21_Alternative_letter_G;
+      lookup cv22_Alternative_letter_I;
+      lookup cv29_Alternative_letter_Q;
 
  script latn;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-} cv27;
+      lookup cv21_Alternative_letter_G;
+      lookup cv22_Alternative_letter_I;
+      lookup cv29_Alternative_letter_Q;
+} ss03;
 
 feature locl {
 
@@ -6330,46 +6348,28 @@ feature locl {
       lookup locl_cv27_Localized_Eng;
 } locl;
 
-feature ss03 {
-  featureNames {
-    name 3 1 0x409 "Alternative uppercases";
-  };
+feature cv27 {
 
  script DFLT;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-      lookup cv21_Alternative_letter_G;
-      lookup cv22_Alternative_letter_I;
-      lookup cv29_Alternative_letter_Q;
 
  script copt;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-      lookup cv21_Alternative_letter_G;
-      lookup cv22_Alternative_letter_I;
-      lookup cv29_Alternative_letter_Q;
 
  script cyrl;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-      lookup cv21_Alternative_letter_G;
-      lookup cv22_Alternative_letter_I;
-      lookup cv29_Alternative_letter_Q;
 
  script grek;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-      lookup cv21_Alternative_letter_G;
-      lookup cv22_Alternative_letter_I;
-      lookup cv29_Alternative_letter_Q;
 
  script latn;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-      lookup cv21_Alternative_letter_G;
-      lookup cv22_Alternative_letter_I;
-      lookup cv29_Alternative_letter_Q;
-} ss03;
+} cv27;
 
 feature ss09 {
   featureNames {
@@ -6486,6 +6486,29 @@ feature smcp {
       lookup smcp_Small_caps_turkish_i_lookup;
 } smcp;
 
+feature cv01 {
+
+ script DFLT;
+     language dflt ;
+      lookup cv01_Alternative_digit_1_A;
+
+ script copt;
+     language dflt ;
+      lookup cv01_Alternative_digit_1_A;
+
+ script cyrl;
+     language dflt ;
+      lookup cv01_Alternative_digit_1_A;
+
+ script grek;
+     language dflt ;
+      lookup cv01_Alternative_digit_1_A;
+
+ script latn;
+     language dflt ;
+      lookup cv01_Alternative_digit_1_A;
+} cv01;
+
 feature ss01 {
   featureNames {
     name 3 1 0x409 "Alternative numbers set 1";
@@ -6556,29 +6579,6 @@ feature ss01 {
       lookup cv09_Alternative_digit_9_A;
       lookup cv10_Alternative_digit_0_A;
 } ss01;
-
-feature cv01 {
-
- script DFLT;
-     language dflt ;
-      lookup cv01_Alternative_digit_1_A;
-
- script copt;
-     language dflt ;
-      lookup cv01_Alternative_digit_1_A;
-
- script cyrl;
-     language dflt ;
-      lookup cv01_Alternative_digit_1_A;
-
- script grek;
-     language dflt ;
-      lookup cv01_Alternative_digit_1_A;
-
- script latn;
-     language dflt ;
-      lookup cv01_Alternative_digit_1_A;
-} cv01;
 
 feature cv02 {
 
@@ -6787,6 +6787,29 @@ feature cv10 {
       lookup cv10_Alternative_digit_0_A;
 } cv10;
 
+feature cv11 {
+
+ script DFLT;
+     language dflt ;
+      lookup cv11_Alternative_digit_1_B;
+
+ script copt;
+     language dflt ;
+      lookup cv11_Alternative_digit_1_B;
+
+ script cyrl;
+     language dflt ;
+      lookup cv11_Alternative_digit_1_B;
+
+ script grek;
+     language dflt ;
+      lookup cv11_Alternative_digit_1_B;
+
+ script latn;
+     language dflt ;
+      lookup cv11_Alternative_digit_1_B;
+} cv11;
+
 feature ss02 {
   featureNames {
     name 3 1 0x409 "Alternative numbers set 2";
@@ -6857,29 +6880,6 @@ feature ss02 {
       lookup cv19_Alternative_digit_9_B;
       lookup cv20_Alternative_digit_0_B;
 } ss02;
-
-feature cv11 {
-
- script DFLT;
-     language dflt ;
-      lookup cv11_Alternative_digit_1_B;
-
- script copt;
-     language dflt ;
-      lookup cv11_Alternative_digit_1_B;
-
- script cyrl;
-     language dflt ;
-      lookup cv11_Alternative_digit_1_B;
-
- script grek;
-     language dflt ;
-      lookup cv11_Alternative_digit_1_B;
-
- script latn;
-     language dflt ;
-      lookup cv11_Alternative_digit_1_B;
-} cv11;
 
 feature cv12 {
 
@@ -7146,35 +7146,6 @@ feature cv22 {
       lookup cv22_Alternative_letter_I;
 } cv22;
 
-feature cv23 {
-
- script DFLT;
-     language dflt ;
-      lookup cv23_Alternative_small_letter_a;
-
- script copt;
-     language dflt ;
-      lookup cv23_Alternative_small_letter_a;
-
- script cyrl;
-     language dflt ;
-      lookup cv23_Alternative_small_letter_a;
-
- script grek;
-     language dflt ;
-      lookup cv23_Alternative_small_letter_a;
-
- script latn;
-     language dflt ;
-      lookup cv23_Alternative_small_letter_a;
-     language CAT  exclude_dflt;
-      lookup cv23_Alternative_small_letter_a;
-     language MOL  exclude_dflt;
-      lookup cv23_Alternative_small_letter_a;
-     language ROM  exclude_dflt;
-      lookup cv23_Alternative_small_letter_a;
-} cv23;
-
 feature ss04 {
   featureNames {
     name 3 1 0x409 "Alternative lowercases";
@@ -7215,6 +7186,35 @@ feature ss04 {
       lookup cv25_Alternative_small_letter_u;
       lookup cv28_Alternative_small_letter_l;
 } ss04;
+
+feature cv23 {
+
+ script DFLT;
+     language dflt ;
+      lookup cv23_Alternative_small_letter_a;
+
+ script copt;
+     language dflt ;
+      lookup cv23_Alternative_small_letter_a;
+
+ script cyrl;
+     language dflt ;
+      lookup cv23_Alternative_small_letter_a;
+
+ script grek;
+     language dflt ;
+      lookup cv23_Alternative_small_letter_a;
+
+ script latn;
+     language dflt ;
+      lookup cv23_Alternative_small_letter_a;
+     language CAT  exclude_dflt;
+      lookup cv23_Alternative_small_letter_a;
+     language MOL  exclude_dflt;
+      lookup cv23_Alternative_small_letter_a;
+     language ROM  exclude_dflt;
+      lookup cv23_Alternative_small_letter_a;
+} cv23;
 
 feature cv24 {
 
@@ -10252,7 +10252,7 @@ lookup kern_Horizontal_kerning {
 lookup mark_Mark_positioning {
   lookupflag 0;
   markClass [\uni0345 ] <anchor 626 -90> @bottom_ypogegrammeni;
-  markClass [\uni1FBE ] <anchor -9 -90> @bottom_ypogegrammeni;
+  markClass [\uni1FBE \uni1FBE.sc ] <anchor -9 -90> @bottom_ypogegrammeni;
   markClass [\uni0328 ] <anchor 779 0> @bottom_right;
   markClass [\uni031B ] <anchor 261 1480> @top_right;
   markClass [\uni0326 \uni0325 \dotbelowcomb \uni0331 \uni032D \uni0330 \uni032E \uni0324 \uni032F \uni035F ] <anchor 642 0> @bottom_center;
@@ -10993,6 +10993,8 @@ lookup mark_Mark_positioning {
 	<anchor 715 1400> mark @top_center;
   pos base [\uni03DA ] <anchor 499 0> mark @bottom_center
 	<anchor 746 1400> mark @top_center;
+  pos base [\uni03ED \uni0431 ] <anchor 468 0> mark @bottom_center
+	<anchor 715 1400> mark @top_center;
   pos base [\uni0424 ] <anchor 912 1380> mark @top_center
 	<anchor 669 0> mark @bottom_center;
   pos base [\uni0403 \uni1E1E ] <anchor 105 0> mark @bottom_center
@@ -11021,8 +11023,6 @@ lookup mark_Mark_positioning {
   pos base [\uni042E ] <anchor 1134 1380> mark @top_center
 	<anchor 891 0> mark @bottom_center;
   pos base [\uni040E \uni04F0 \uni04F2 ] <anchor 781 1716> mark @top_center;
-  pos base [\uni0431 ] <anchor 468 0> mark @bottom_center
-	<anchor 715 1400> mark @top_center;
   pos base [\uni0432 ] <anchor 642 1040> mark @top_center
 	<anchor 459 0> mark @bottom_center;
   pos base [\uni0437 ] <anchor 375 0> mark @bottom_center
@@ -11791,7 +11791,7 @@ lookup mark_Mark_positioning {
 	<anchor 451 -80> mark @bottom_ypogegrammeni
 	<anchor 989 0> mark @bottom_right
 	<anchor 465 0> mark @bottom_center;
-  pos base [\b.sc \beta.sc \uni0432.sc ] <anchor 643 1200> mark @top_center
+  pos base [\b.sc \beta.sc \uni0432.sc \uni0299.sc \uni03D0.sc ] <anchor 643 1200> mark @top_center
 	<anchor 431 0> mark @bottom_center;
   pos base [\c.sc \oslash.sc \uni0188.sc \uni023C.sc \uni037C.sc \uni03F2.sc \uni0441.sc \uni0454.sc ] <anchor 560 -20> mark @bottom_cedilla
 	<anchor 564 0> mark @bottom_center
@@ -11799,15 +11799,15 @@ lookup mark_Mark_positioning {
   pos base [\d.sc ] <anchor 326 -20> mark @bottom_cedilla
 	<anchor 430 0> mark @bottom_center
 	<anchor 642 1200> mark @top_center;
-  pos base [\e.sc \epsilontonos.sc \epsilon.sc \uni0435.sc \uni1F10.sc \uni1F11.sc \uni1F12.sc \uni1F13.sc \uni1F14.sc \uni1F15.sc \uni1F72.sc \uni1F73.sc ] <anchor 611 1200> mark @top_center
+  pos base [\e.sc \epsilontonos.sc \epsilon.sc \uni0435.sc \uni1F10.sc \uni1F11.sc \uni1F12.sc \uni1F13.sc \uni1F14.sc \uni1F15.sc \uni1F72.sc \uni1F73.sc \uni03F5.sc ] <anchor 611 1200> mark @top_center
 	<anchor 395 -20> mark @bottom_cedilla
 	<anchor 788 0> mark @bottom_right
 	<anchor 399 0> mark @bottom_center;
   pos base [\f.sc \gamma.sc \uni03DD.sc \uni0433.sc ] <anchor 100 0> mark @bottom_center
 	<anchor 611 1200> mark @top_center;
-  pos base [\g.sc \q.sc \uni0275.sc \uni028A.sc \theta.sc \uni0473.sc \uni04D9.sc \uni04E9.sc \q.sc.cv29 ] <anchor 776 1200> mark @top_center
+  pos base [\g.sc \q.sc \uni0275.sc \uni028A.sc \theta.sc \uni0473.sc \uni04D9.sc \uni04E9.sc \q.sc.cv29 \theta1.sc \uni0262.sc ] <anchor 776 1200> mark @top_center
 	<anchor 564 0> mark @bottom_center;
-  pos base [\h.sc \etatonos.sc \eta.sc \uni043D.sc \uni1F20.sc \uni1F21.sc \uni1F22.sc \uni1F23.sc \uni1F24.sc \uni1F25.sc \uni1F26.sc \uni1F27.sc \uni1F74.sc \uni1F75.sc \uni210E.sc ] <anchor 475 -80> mark @bottom_ypogegrammeni
+  pos base [\h.sc \etatonos.sc \eta.sc \uni043D.sc \uni1F20.sc \uni1F21.sc \uni1F22.sc \uni1F23.sc \uni1F24.sc \uni1F25.sc \uni1F26.sc \uni1F27.sc \uni1F74.sc \uni1F75.sc \uni029C.sc \uni210E.sc ] <anchor 475 -80> mark @bottom_ypogegrammeni
 	<anchor 96 -20> mark @bottom_cedilla
 	<anchor 489 0> mark @bottom_center
 	<anchor 701 1200> mark @top_center;
@@ -11817,22 +11817,22 @@ lookup mark_Mark_positioning {
 	<anchor 260 0> mark @bottom_center;
   pos base [\j.sc \uni0237.sc \uni0249.sc \uni03F3.sc \uni0458.sc \uni025F.sc ] <anchor 372 0> mark @bottom_center
 	<anchor 896 1200> mark @top_center;
-  pos base [\k.sc \kgreenlandic.sc \kappa.sc \uni043A.sc ] <anchor 468 0> mark @bottom_center
+  pos base [\k.sc \kgreenlandic.sc \kappa.sc \uni043A.sc \uni03F0.sc ] <anchor 468 0> mark @bottom_center
 	<anchor 680 1200> mark @top_center;
-  pos base [\l.sc \ldot.sc ] <anchor 399 0> mark @bottom_center
+  pos base [\l.sc \ldot.sc \uni029F.sc ] <anchor 399 0> mark @bottom_center
 	<anchor 312 1200> mark @top_center;
-  pos base [\m.sc \uni026F.sc \uni03BC.sc \uni043C.sc ] <anchor 778 1200> mark @top_center
+  pos base [\m.sc \uni026F.sc \uni03BC.sc \uni043C.sc \mu.sc ] <anchor 778 1200> mark @top_center
 	<anchor 566 0> mark @bottom_center;
-  pos base [\n.sc \uni0265.sc \uni028B.sc \uni0377.sc \nu.sc \pi.sc \uni0438.sc \uni043F.sc \uni0446.sc ] <anchor 701 1200> mark @top_center
+  pos base [\n.sc \uni0265.sc \uni028B.sc \uni0377.sc \nu.sc \pi.sc \uni0438.sc \uni043F.sc \uni0446.sc \omega1.sc \uni0274.sc ] <anchor 701 1200> mark @top_center
 	<anchor 489 0> mark @bottom_center;
   pos base [\o.sc \omicron.sc \omicrontonos.sc \uni043E.sc \uni1F40.sc \uni1F41.sc \uni1F42.sc \uni1F43.sc \uni1F44.sc \uni1F45.sc \uni1F78.sc \uni1F79.sc ] <anchor 776 1200> mark @top_center
 	<anchor 719 0> mark @bottom_right
 	<anchor 1270 1200> mark @top_right
 	<anchor 560 -20> mark @bottom_cedilla
 	<anchor 564 0> mark @bottom_center;
-  pos base [\p.sc \rho.sc \uni0440.sc \uni048F.sc \uni1FE4.sc \uni1FE5.sc ] <anchor 667 1200> mark @top_center
+  pos base [\p.sc \rho.sc \uni0440.sc \uni048F.sc \uni1FE4.sc \uni1FE5.sc \uni03F1.sc ] <anchor 667 1200> mark @top_center
 	<anchor 124 0> mark @bottom_center;
-  pos base [\r.sc ] <anchor 667 1200> mark @top_center
+  pos base [\r.sc \uni0280.sc ] <anchor 667 1200> mark @top_center
 	<anchor 455 0> mark @bottom_center;
   pos base [\s.sc \longs.sc \uni0455.sc \uni1E9C.sc ] <anchor 411 -20> mark @bottom_cedilla
 	<anchor 415 0> mark @bottom_center
@@ -11849,7 +11849,7 @@ lookup mark_Mark_positioning {
 	<anchor 463 0> mark @bottom_center;
   pos base [\w.sc \uni051D.sc ] <anchor 756 0> mark @bottom_center
 	<anchor 968 1200> mark @top_center;
-  pos base [\x.sc \y.sc \uni024F.sc \upsilon.sc \chi.sc \upsilontonos.sc \uni0443.sc \uni0445.sc \uni04AF.sc \uni04B1.sc \uni1F50.sc \uni1F51.sc \uni1F52.sc \uni1F53.sc \uni1F54.sc \uni1F55.sc \uni1F56.sc \uni1F57.sc \uni1F7A.sc \uni1F7B.sc ] <anchor 474 0> mark @bottom_center
+  pos base [\x.sc \y.sc \uni024F.sc \upsilon.sc \chi.sc \upsilontonos.sc \uni0443.sc \uni0445.sc \uni04AF.sc \uni04B1.sc \uni1F50.sc \uni1F51.sc \uni1F52.sc \uni1F53.sc \uni1F54.sc \uni1F55.sc \uni1F56.sc \uni1F57.sc \uni1F7A.sc \uni1F7B.sc \uni028F.sc ] <anchor 474 0> mark @bottom_center
 	<anchor 686 1200> mark @top_center;
   pos base [\z.sc \uni01B6.sc \zeta.sc ] <anchor 435 0> mark @bottom_center
 	<anchor 647 1200> mark @top_center;
@@ -11965,13 +11965,13 @@ lookup mark_Mark_positioning {
 	<anchor 560 -20> mark @bottom_cedilla
 	<anchor 564 0> mark @bottom_center
 	<anchor 815 1420> mark @top_center;
-  pos base [\oe.sc ] <anchor 918 0> mark @bottom_center
+  pos base [\oe.sc \uni0276.sc ] <anchor 918 0> mark @bottom_center
 	<anchor 1130 1200> mark @top_center;
   pos base [\racute.sc \rcaron.sc \uni0211.sc \uni0213.sc \uni1E59.sc ] <anchor 455 0> mark @bottom_center
 	<anchor 727 1536> mark @top_center;
   pos base [\rcommaaccent.sc ] <anchor 667 1200> mark @top_center
 	<anchor 383 -409> mark @bottom_center;
-  pos base [\sacute.sc \scircumflex.sc \scaron.sc \uni1E61.sc \uni1E65.sc ] <anchor 411 -20> mark @bottom_cedilla
+  pos base [\sacute.sc \scircumflex.sc \scaron.sc \uni1E61.sc \uni1E65.sc \uni1E9B.sc ] <anchor 411 -20> mark @bottom_cedilla
 	<anchor 415 0> mark @bottom_center
 	<anchor 689 1536> mark @top_center;
   pos base [\scedilla.sc ] <anchor 371 -336> mark @bottom_center
@@ -12091,13 +12091,13 @@ lookup mark_Mark_positioning {
   pos base [\uni0263.sc \uni0264.sc \uni0437.sc ] <anchor 656 1200> mark @top_center
 	<anchor 444 0> mark @bottom_center;
   pos base [\uni0272.sc ] <anchor 755 1200> mark @top_center;
-  pos base [\uni0283.sc \xi.sc \sigma.sc ] <anchor 399 0> mark @bottom_center
+  pos base [\uni0283.sc \xi.sc \sigma.sc \sigma1.sc ] <anchor 399 0> mark @bottom_center
 	<anchor 611 1200> mark @top_center;
   pos base [\uni0289.sc ] <anchor 559 0> mark @bottom_center
 	<anchor 771 1200> mark @top_center
 	<anchor 701 0> mark @bottom_right
 	<anchor 1250 1200> mark @top_right;
-  pos base [\uni0292.sc ] <anchor 621 1200> mark @top_center
+  pos base [\uni0292.sc \uni04E1.sc ] <anchor 621 1200> mark @top_center
 	<anchor 409 0> mark @bottom_center;
   pos base [\uni037B.sc \uni037D.sc \uni044D.sc ] <anchor 474 -20> mark @bottom_cedilla
 	<anchor 478 0> mark @bottom_center
@@ -12113,7 +12113,7 @@ lookup mark_Mark_positioning {
   pos base [\lambda.sc \uni043B.loclBGR.sc ] <anchor 989 0> mark @bottom_right
 	<anchor 465 0> mark @bottom_center
 	<anchor 677 1200> mark @top_center;
-  pos base [\phi.sc ] <anchor 534 0> mark @bottom_right
+  pos base [\phi.sc \phi1.sc \uni0278.sc ] <anchor 534 0> mark @bottom_right
 	<anchor 445 0> mark @bottom_center
 	<anchor 657 1200> mark @top_center;
   pos base [\psi.sc \uni0471.sc ] <anchor 502 0> mark @bottom_center
@@ -12426,7 +12426,7 @@ lookup mark_Mark_positioning {
 	<anchor 1270 1200> mark @top_right
 	<anchor 560 -20> mark @bottom_cedilla
 	<anchor 836 1536> mark @top_center;
-  pos base [\uniA7B7.sc ] <anchor 1060 1102> mark @top_center
+  pos base [\uniA7B7.sc \uniA64D.sc ] <anchor 1060 1102> mark @top_center
 	<anchor 867 3> mark @bottom_center;
   pos base [\uni0434.loclBGR.sc ] <anchor 759 1200> mark @top_center
 	<anchor 547 0> mark @bottom_center;
