@@ -153,6 +153,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \Ucircumflex by \ucircumflex.sc ;
     sub \Udieresis by \udieresis.sc ;
     sub \Yacute by \yacute.sc ;
+    sub \AE by \ae.sc ;
     sub \Eth by \eth.sc ;
     sub \Oslash by \oslash.sc ;
     sub \Thorn by \thorn.sc ;
@@ -178,6 +179,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \Imacron by \imacron.sc ;
     sub \Ibreve by \ibreve.sc ;
     sub \Iogonek by \iogonek.sc ;
+    sub \Idotaccent by \i.sc \uni0307 ;
     sub \Jcircumflex by \jcircumflex.sc ;
     sub \Lacute by \lacute.sc ;
     sub \Ldot by \ldot.sc ;
@@ -204,6 +206,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \Zdotaccent by \zdotaccent.sc ;
     sub \Zcaron by \zcaron.sc ;
     sub \Dcroat by \dcroat.sc ;
+    sub \OE by \oe.sc ;
     sub \Hbar by \hbar.sc ;
     sub \Kcommaaccent by \kcommaaccent.sc ;
     sub \Uogonek by \uogonek.sc ;
@@ -227,6 +230,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \uni018E by \uni01DD.sc ;
     sub \uni018F by \uni0259.sc ;
     sub \uni0190 by \uni025B.sc ;
+    sub \uni0191 by \florin.sc ;
     sub \uni0193 by \uni0260.sc ;
     sub \uni0194 by \uni0263.sc ;
     sub \uni0196 by \uni0269.sc ;
@@ -238,6 +242,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \Ohorn by \ohorn.sc ;
     sub \uni01A2 by \uni01A3.sc ;
     sub \uni01A4 by \uni01A5.sc ;
+    sub \uni01A6 by \uni0280.sc ;
     sub \uni01A7 by \uni01A8.sc ;
     sub \uni01A9 by \uni0283.sc ;
     sub \uni01AC by \uni01AD.sc ;
@@ -271,6 +276,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \uni01F4 by \uni01F5.sc ;
     sub \uni01F8 by \uni01F9.sc ;
     sub \Aringacute by \aringacute.sc ;
+    sub \AEacute by \aeacute.sc ;
     sub \Oslashacute by \oslashacute.sc ;
     sub \uni021E by \uni021F.sc ;
     sub \uni0228 by \uni0229.sc ;
@@ -299,8 +305,10 @@ lookup c2sc_Small_caps_from_caps {
     sub \uni0220 by \uni019E.sc ;
     sub \uni0222 by \uni0223.sc ;
     sub \uni0224 by \uni0225.sc ;
+    sub \uni023A by \uni2C65.sc ;
     sub \uni023B by \uni023C.sc ;
     sub \uni023D by \uni019A.sc ;
+    sub \uni023E by \uni2C66.sc ;
     sub \uni0241 by \uni0242.sc ;
     sub \uni0243 by \uni0180.sc ;
     sub \uni0244 by \uni0289.sc ;
@@ -310,6 +318,8 @@ lookup c2sc_Small_caps_from_caps {
     sub \uni024A by \uni024B.sc ;
     sub \uni024C by \uni024D.sc ;
     sub \uni024E by \uni024F.sc ;
+    sub \uni0372 by \uni0373.sc ;
+    sub \uni0370 by \uni0371.sc ;
     sub \uni0376 by \uni0377.sc ;
     sub \Alpha by \alpha.sc ;
     sub \Epsilon by \epsilon.sc ;
@@ -326,6 +336,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \Chi by \chi.sc ;
     sub \uni037F by \uni03F3.sc ;
     sub \Gamma by \gamma.sc ;
+    sub \uni0394 by \delta.sc ;
     sub \Theta by \theta.sc ;
     sub \Lambda by \lambda.sc ;
     sub \Xi by \xi.sc ;
@@ -333,6 +344,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \Sigma by \sigma.sc ;
     sub \Phi by \phi.sc ;
     sub \Psi by \psi.sc ;
+    sub \uni03A9 by \omega.sc ;
     sub \Iotadieresis by \iotadieresis.sc ;
     sub \Upsilondieresis by \upsilondieresis.sc ;
     sub \Alphatonos by \alphatonos.sc ;
@@ -342,14 +354,176 @@ lookup c2sc_Small_caps_from_caps {
     sub \Omicrontonos by \omicrontonos.sc ;
     sub \Upsilontonos by \upsilontonos.sc ;
     sub \Omegatonos by \omegatonos.sc ;
+    sub \uni03CF by \uni03D7.sc ;
+    sub \Upsilon1 by \uni01B4.sc ;
+    sub \uni03D3 by \uni01B4.sc \acutecomb ;
+    sub \uni03D4 by \uni01B4.sc \uni0308 ;
     sub \uni03D8 by \uni03D9.sc ;
     sub \uni03DA by \uni03DB.sc ;
     sub \uni03DC by \uni03DD.sc ;
+    sub \uni03DE by \uni03DF.sc ;
+    sub \uni03E0 by \uni03E1.sc ;
+    sub \uni03E2 by \uni03E3.sc ;
+    sub \uni03E4 by \uni03E5.sc ;
+    sub \uni03E6 by \uni03E7.sc ;
+    sub \uni03E8 by \uni03E9.sc ;
+    sub \uni03EA by \uni03EB.sc ;
+    sub \uni03EC by \uni03ED.sc ;
+    sub \uni03EE by \uni03EF.sc ;
+    sub \uni03F4 by \uni03F5.sc ;
     sub \uni03F7 by \uni03F8.sc ;
     sub \uni03F9 by \uni03F2.sc ;
+    sub \uni03FA by \uni03FB.sc ;
     sub \uni03FD by \uni037B.sc ;
     sub \uni03FE by \uni037C.sc ;
     sub \uni03FF by \uni037D.sc ;
+    sub \uni0410 by \uni0430.sc ;
+    sub \uni0413 by \uni0433.sc ;
+    sub \uni0415 by \uni0435.sc ;
+    sub \uni041A by \uni043A.sc ;
+    sub \uni041C by \uni043C.sc ;
+    sub \uni041D by \uni043D.sc ;
+    sub \uni041E by \uni043E.sc ;
+    sub \uni041F by \uni043F.sc ;
+    sub \uni0420 by \uni0440.sc ;
+    sub \uni0421 by \uni0441.sc ;
+    sub \uni0422 by \uni0442.sc ;
+    sub \uni0424 by \uni0444.sc ;
+    sub \uni0425 by \uni0445.sc ;
+    sub \uni0400 by \uni0450.sc ;
+    sub \uni0401 by \uni0451.sc ;
+    sub \uni0403 by \uni0453.sc ;
+    sub \uni040C by \uni045C.sc ;
+    sub \uni0402 by \uni0452.sc ;
+    sub \uni0404 by \uni0454.sc ;
+    sub \uni0405 by \uni0455.sc ;
+    sub \uni0406 by \uni0456.sc ;
+    sub \uni0407 by \uni0457.sc ;
+    sub \uni0408 by \uni0458.sc ;
+    sub \uni041B by \uni043B.sc ;
+    sub \uni0409 by \uni0459.sc ;
+    sub \uni040A by \uni045A.sc ;
+    sub \uni040B by \uni045B.sc ;
+    sub \uni0418 by \uni0438.sc ;
+    sub \uni0411 by \uni0431.sc ;
+    sub \uni0416 by \uni0436.sc ;
+    sub \uni0417 by \uni0437.sc ;
+    sub \uni0423 by \uni0443.sc ;
+    sub \uni0426 by \uni0446.sc ;
+    sub \uni0427 by \uni0447.sc ;
+    sub \uni0429 by \uni0449.sc ;
+    sub \uni0428 by \uni0448.sc ;
+    sub \uni042A by \uni044A.sc ;
+    sub \uni0414 by \uni0434.sc ;
+    sub \uni042C by \uni044C.sc ;
+    sub \uni042B by \uni044B.sc ;
+    sub \uni042D by \uni044D.sc ;
+    sub \uni042E by \uni044E.sc ;
+    sub \uni042F by \uni044F.sc ;
+    sub \uni040D by \uni045D.sc ;
+    sub \uni040E by \uni045E.sc ;
+    sub \uni0419 by \uni0439.sc ;
+    sub \uni040F by \uni045F.sc ;
+    sub \uni0460 by \uni0461.sc ;
+    sub \uni0462 by \uni0463.sc ;
+    sub \uni0464 by \uni0465.sc ;
+    sub \uni0466 by \uni0467.sc ;
+    sub \uni0468 by \uni0469.sc ;
+    sub \uni046A by \uni046B.sc ;
+    sub \uni046C by \uni046D.sc ;
+    sub \uni046E by \uni046F.sc ;
+    sub \uni0470 by \uni0471.sc ;
+    sub \uni0472 by \uni0473.sc ;
+    sub \uni0474 by \uni0475.sc ;
+    sub \uni0476 by \uni0477.sc ;
+    sub \uni0478 by \uni0479.sc ;
+    sub \uni047A by \uni047B.sc ;
+    sub \uni047C by \uni047D.sc ;
+    sub \uni047E by \uni047F.sc ;
+    sub \uni0480 by \uni0481.sc ;
+    sub \uni04AE by \uni04AF.sc ;
+    sub \uni048A by \uni048B.sc ;
+    sub \uni048C by \uni048D.sc ;
+    sub \uni048E by \uni048F.sc ;
+    sub \uni0490 by \uni0491.sc ;
+    sub \uni0492 by \uni0493.sc ;
+    sub \uni0494 by \uni0495.sc ;
+    sub \uni0496 by \uni0497.sc ;
+    sub \uni0498 by \uni0499.sc ;
+    sub \uni049A by \uni049B.sc ;
+    sub \uni049C by \uni049D.sc ;
+    sub \uni049E by \uni049F.sc ;
+    sub \uni04A0 by \uni04A1.sc ;
+    sub \uni04A2 by \uni04A3.sc ;
+    sub \uni04A4 by \uni04A5.sc ;
+    sub \uni04A6 by \uni04A7.sc ;
+    sub \uni04A8 by \uni04A9.sc ;
+    sub \uni04C1 by \uni04C2.sc ;
+    sub \uni04AA by \uni04AB.sc ;
+    sub \uni04AC by \uni04AD.sc ;
+    sub \uni04B0 by \uni04B1.sc ;
+    sub \uni04B2 by \uni04B3.sc ;
+    sub \uni04B4 by \uni04B5.sc ;
+    sub \uni04B6 by \uni04B7.sc ;
+    sub \uni04B8 by \uni04B9.sc ;
+    sub \uni04BA by \uni04BB.sc ;
+    sub \uni04BC by \uni04BD.sc ;
+    sub \uni04BE by \uni04BF.sc ;
+    sub \uni04C0 by \uni04CF.sc ;
+    sub \uni04D0 by \uni04D1.sc ;
+    sub \uni04D2 by \uni04D3.sc ;
+    sub \uni04D6 by \uni04D7.sc ;
+    sub \uni04DC by \uni04DD.sc ;
+    sub \uni04DE by \uni04DF.sc ;
+    sub \uni04E2 by \uni04E3.sc ;
+    sub \uni04E4 by \uni04E5.sc ;
+    sub \uni04E6 by \uni04E7.sc ;
+    sub \uni04EC by \uni04ED.sc ;
+    sub \uni04EE by \uni04EF.sc ;
+    sub \uni04F0 by \uni04F1.sc ;
+    sub \uni04F2 by \uni04F3.sc ;
+    sub \uni04F4 by \uni04F5.sc ;
+    sub \uni04F8 by \uni04F9.sc ;
+    sub \uni04C3 by \uni04C4.sc ;
+    sub \uni04C5 by \uni04C6.sc ;
+    sub \uni04C7 by \uni04C8.sc ;
+    sub \uni04C9 by \uni04CA.sc ;
+    sub \uni04CB by \uni04CC.sc ;
+    sub \uni04CD by \uni04CE.sc ;
+    sub \uni04D4 by \uni04D5.sc ;
+    sub \uni04D8 by \uni04D9.sc ;
+    sub \uni04DA by \uni04DB.sc ;
+    sub \uni04E0 by \uni04E1.sc ;
+    sub \uni04E8 by \uni04E9.sc ;
+    sub \uni04EA by \uni04EB.sc ;
+    sub \uni04F6 by \uni04F7.sc ;
+    sub \uni04FA by \uni04FB.sc ;
+    sub \uni04FC by \uni04FD.sc ;
+    sub \uni04FE by \uni04FF.sc ;
+    sub \uni0500 by \uni0501.sc ;
+    sub \uni0502 by \uni0503.sc ;
+    sub \uni0504 by \uni0505.sc ;
+    sub \uni0506 by \uni0507.sc ;
+    sub \uni0508 by \uni0509.sc ;
+    sub \uni050A by \uni050B.sc ;
+    sub \uni050C by \uni050D.sc ;
+    sub \uni050E by \uni050F.sc ;
+    sub \uni0510 by \uni0511.sc ;
+    sub \uni0512 by \uni0513.sc ;
+    sub \uni0514 by \uni0515.sc ;
+    sub \uni0516 by \uni0517.sc ;
+    sub \uni051E by \uni051F.sc ;
+    sub \uni051A by \uni051B.sc ;
+    sub \uni051C by \uni051D.sc ;
+    sub \uni0518 by \uni0519.sc ;
+    sub \uni0520 by \uni0521.sc ;
+    sub \uni0522 by \uni0523.sc ;
+    sub \uni0524 by \uni0525.sc ;
+    sub \uni0526 by \uni0527.sc ;
+    sub \uni0528 by \uni0529.sc ;
+    sub \uni052A by \uni052B.sc ;
+    sub \uni052C by \uni052D.sc ;
+    sub \uni052E by \uni052F.sc ;
     sub \uni1E02 by \uni1E03.sc ;
     sub \uni1E08 by \uni1E09.sc ;
     sub \uni1E0A by \uni1E0B.sc ;
@@ -425,6 +599,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \uni1E72 by \uni1E73.sc ;
     sub \uni1E92 by \uni1E93.sc ;
     sub \uni1E94 by \uni1E95.sc ;
+    sub \uni1E9E by \uni1E9E ;
     sub \uni1EA0 by \uni1EA1.sc ;
     sub \uni1EA2 by \uni1EA3.sc ;
     sub \uni1EA4 by \uni1EA5.sc ;
@@ -473,7 +648,34 @@ lookup c2sc_Small_caps_from_caps {
     sub \uni1EFA by \uni1EFB.sc ;
     sub \uni1EFC by \uni1EFD.sc ;
     sub \uni1EFE by \uni1EFF.sc ;
+    sub \uni2102 by \uni2102 ;
+    sub \uni210D by \uni210D ;
+    sub \uni2119 by \uni2119 ;
+    sub \uni211A by \uni211A ;
+    sub \uni211D by \uni211D ;
+    sub \uni213E by \uni213E ;
+    sub \uni213F by \uni213C.sc ;
+    sub \uni2145 by \uni2145 ;
+    sub \uni2124 by \uni2124 ;
+    sub \uni2115 by \uni2115 ;
+    sub \uni210B by \uni210B ;
+    sub \uni210C by \uni210C ;
+    sub \uni2110 by \uni2110 ;
+    sub \Ifraktur by \Ifraktur ;
+    sub \uni2112 by \uni2112 ;
+    sub \uni211B by \uni211B ;
+    sub \Rfraktur by \Rfraktur ;
+    sub \uni2128 by \uni2128 ;
+    sub \uni212C by \uni212C ;
+    sub \uni212D by \uni212D ;
+    sub \uni2130 by \uni2130 ;
+    sub \uni2131 by \uni2131 ;
+    sub \uni2133 by \uni2133 ;
+    sub \uni2107 by \uni025B.sc ;
     sub \Omega by \omega.sc ;
+    sub \uni212A by \k.sc ;
+    sub \uni212B by \aring.sc ;
+    sub \uni2132 by \uni214E.sc ;
     sub \uni2160 by \uni2170.sc ;
     sub \uni2164 by \uni2174.sc ;
     sub \uni2169 by \uni2179.sc ;
@@ -481,6 +683,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \uni216D by \uni217D.sc ;
     sub \uni216E by \uni217E.sc ;
     sub \uni216F by \uni217F.sc ;
+    sub \uni2183 by \uni2184.sc ;
     sub \uni01C4 by \uni01C6.sc ;
     sub \uni01C7 by \uni01C9.sc ;
     sub \uni01CA by \uni01CC.sc ;
@@ -494,6 +697,7 @@ lookup c2sc_Small_caps_from_caps {
     sub \uni2168 by \uni2178.sc ;
     sub \uni216A by \uni217A.sc ;
     sub \uni216B by \uni217B.sc ;
+    sub \IJ by \ij.sc ;
     sub \uni1F08 by \uni1F00.sc ;
     sub \uni1F09 by \uni1F01.sc ;
     sub \uni1F0A by \uni1F02.sc ;
@@ -565,10 +769,12 @@ lookup c2sc_Small_caps_from_caps {
     sub \uni1FC9 by \uni1F73.sc ;
     sub \uniA78B by \uniA78C.sc ;
     sub \Beta by \beta.sc ;
+    sub \uni0412 by \uni0432.sc ;
     sub \uni2C64 by \uni027D.sc ;
     sub \uniA78D by \uni0265.sc ;
     sub \uniA7AA by \uni0266.sc ;
     sub \uniA7AE by \uni026A.sc ;
+    sub \uniA7AD by \uni026C.sc ;
     sub \uniA7B2 by \uni029D.sc ;
     sub \uni2C63 by \uni1D7D.sc ;
     sub \uni2C6D by \uni0251.sc ;
@@ -577,6 +783,13 @@ lookup c2sc_Small_caps_from_caps {
     sub \uniA7C7 by \uniA7C8.sc ;
     sub \uniA7B4 by \uniA7B5.sc ;
     sub \uni2C6F by \uni0250.sc ;
+    sub \uniA640 by \uniA641.sc ;
+    sub \uniA642 by \uniA643.sc ;
+    sub \uniA64A by \uniA64B.sc ;
+    sub \uniA64C by \uniA64D.sc ;
+    sub \uniA656 by \uniA657.sc ;
+    sub \uniA7CB by \uni0264.sc ;
+    sub \uniA7DC by \uni019B.sc ;
 } c2sc_Small_caps_from_caps;
 
 lookup smcp_Small_caps_main_lookup {
@@ -4009,8 +4222,8 @@ lookup ccmp_latn {
     sub \e \uni0302  by \ecircumflex;
     sub \e \uni0308  by \edieresis;
     sub \i \gravecomb  by \igrave;
-    sub \uni0456 \acutecomb  by \iacute;
     sub \i \acutecomb  by \iacute;
+    sub \uni0456 \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0308  by \idieresis;
     sub \n \tildecomb  by \ntilde;
@@ -4066,8 +4279,8 @@ lookup ccmp_latn {
     sub \I \uni0306  by \Ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \i \uni0328  by \iogonek;
     sub \iogonek \gravecomb  by \iogonek;
+    sub \i \uni0328  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4154,13 +4367,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \A \uni030A \acutecomb  by \uni01DC;
-    sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni0308 \uni0304  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \Oslash \acutecomb  by \uni01E0;
+    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5086,8 +5299,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0456 \uni0307  by \uni0457;
+    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -6220,46 +6433,28 @@ lookup calt_Contextual_Alternates {
 	\uni2152.cv11.cv20.ss06.zero ] ;
 } calt_Contextual_Alternates;
 
-feature ss03 {
-  featureNames {
-    name 3 1 0x409 "Alternative uppercases";
-  };
+feature cv27 {
 
  script DFLT;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-      lookup cv21_Alternative_letter_G;
-      lookup cv22_Alternative_letter_I;
-      lookup cv29_Alternative_letter_Q;
 
  script copt;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-      lookup cv21_Alternative_letter_G;
-      lookup cv22_Alternative_letter_I;
-      lookup cv29_Alternative_letter_Q;
 
  script cyrl;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-      lookup cv21_Alternative_letter_G;
-      lookup cv22_Alternative_letter_I;
-      lookup cv29_Alternative_letter_Q;
 
  script grek;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-      lookup cv21_Alternative_letter_G;
-      lookup cv22_Alternative_letter_I;
-      lookup cv29_Alternative_letter_Q;
 
  script latn;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-      lookup cv21_Alternative_letter_G;
-      lookup cv22_Alternative_letter_I;
-      lookup cv29_Alternative_letter_Q;
-} ss03;
+} cv27;
 
 feature locl {
 
@@ -6348,28 +6543,46 @@ feature locl {
       lookup locl_cv27_Localized_Eng;
 } locl;
 
-feature cv27 {
+feature ss03 {
+  featureNames {
+    name 3 1 0x409 "Alternative uppercases";
+  };
 
  script DFLT;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
+      lookup cv21_Alternative_letter_G;
+      lookup cv22_Alternative_letter_I;
+      lookup cv29_Alternative_letter_Q;
 
  script copt;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
+      lookup cv21_Alternative_letter_G;
+      lookup cv22_Alternative_letter_I;
+      lookup cv29_Alternative_letter_Q;
 
  script cyrl;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
+      lookup cv21_Alternative_letter_G;
+      lookup cv22_Alternative_letter_I;
+      lookup cv29_Alternative_letter_Q;
 
  script grek;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
+      lookup cv21_Alternative_letter_G;
+      lookup cv22_Alternative_letter_I;
+      lookup cv29_Alternative_letter_Q;
 
  script latn;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-} cv27;
+      lookup cv21_Alternative_letter_G;
+      lookup cv22_Alternative_letter_I;
+      lookup cv29_Alternative_letter_Q;
+} ss03;
 
 feature ss09 {
   featureNames {
@@ -6486,29 +6699,6 @@ feature smcp {
       lookup smcp_Small_caps_turkish_i_lookup;
 } smcp;
 
-feature cv01 {
-
- script DFLT;
-     language dflt ;
-      lookup cv01_Alternative_digit_1_A;
-
- script copt;
-     language dflt ;
-      lookup cv01_Alternative_digit_1_A;
-
- script cyrl;
-     language dflt ;
-      lookup cv01_Alternative_digit_1_A;
-
- script grek;
-     language dflt ;
-      lookup cv01_Alternative_digit_1_A;
-
- script latn;
-     language dflt ;
-      lookup cv01_Alternative_digit_1_A;
-} cv01;
-
 feature ss01 {
   featureNames {
     name 3 1 0x409 "Alternative numbers set 1";
@@ -6579,6 +6769,29 @@ feature ss01 {
       lookup cv09_Alternative_digit_9_A;
       lookup cv10_Alternative_digit_0_A;
 } ss01;
+
+feature cv01 {
+
+ script DFLT;
+     language dflt ;
+      lookup cv01_Alternative_digit_1_A;
+
+ script copt;
+     language dflt ;
+      lookup cv01_Alternative_digit_1_A;
+
+ script cyrl;
+     language dflt ;
+      lookup cv01_Alternative_digit_1_A;
+
+ script grek;
+     language dflt ;
+      lookup cv01_Alternative_digit_1_A;
+
+ script latn;
+     language dflt ;
+      lookup cv01_Alternative_digit_1_A;
+} cv01;
 
 feature cv02 {
 
@@ -6787,29 +7000,6 @@ feature cv10 {
       lookup cv10_Alternative_digit_0_A;
 } cv10;
 
-feature cv11 {
-
- script DFLT;
-     language dflt ;
-      lookup cv11_Alternative_digit_1_B;
-
- script copt;
-     language dflt ;
-      lookup cv11_Alternative_digit_1_B;
-
- script cyrl;
-     language dflt ;
-      lookup cv11_Alternative_digit_1_B;
-
- script grek;
-     language dflt ;
-      lookup cv11_Alternative_digit_1_B;
-
- script latn;
-     language dflt ;
-      lookup cv11_Alternative_digit_1_B;
-} cv11;
-
 feature ss02 {
   featureNames {
     name 3 1 0x409 "Alternative numbers set 2";
@@ -6880,6 +7070,29 @@ feature ss02 {
       lookup cv19_Alternative_digit_9_B;
       lookup cv20_Alternative_digit_0_B;
 } ss02;
+
+feature cv11 {
+
+ script DFLT;
+     language dflt ;
+      lookup cv11_Alternative_digit_1_B;
+
+ script copt;
+     language dflt ;
+      lookup cv11_Alternative_digit_1_B;
+
+ script cyrl;
+     language dflt ;
+      lookup cv11_Alternative_digit_1_B;
+
+ script grek;
+     language dflt ;
+      lookup cv11_Alternative_digit_1_B;
+
+ script latn;
+     language dflt ;
+      lookup cv11_Alternative_digit_1_B;
+} cv11;
 
 feature cv12 {
 
@@ -7146,6 +7359,35 @@ feature cv22 {
       lookup cv22_Alternative_letter_I;
 } cv22;
 
+feature cv23 {
+
+ script DFLT;
+     language dflt ;
+      lookup cv23_Alternative_small_letter_a;
+
+ script copt;
+     language dflt ;
+      lookup cv23_Alternative_small_letter_a;
+
+ script cyrl;
+     language dflt ;
+      lookup cv23_Alternative_small_letter_a;
+
+ script grek;
+     language dflt ;
+      lookup cv23_Alternative_small_letter_a;
+
+ script latn;
+     language dflt ;
+      lookup cv23_Alternative_small_letter_a;
+     language CAT  exclude_dflt;
+      lookup cv23_Alternative_small_letter_a;
+     language MOL  exclude_dflt;
+      lookup cv23_Alternative_small_letter_a;
+     language ROM  exclude_dflt;
+      lookup cv23_Alternative_small_letter_a;
+} cv23;
+
 feature ss04 {
   featureNames {
     name 3 1 0x409 "Alternative lowercases";
@@ -7186,35 +7428,6 @@ feature ss04 {
       lookup cv25_Alternative_small_letter_u;
       lookup cv28_Alternative_small_letter_l;
 } ss04;
-
-feature cv23 {
-
- script DFLT;
-     language dflt ;
-      lookup cv23_Alternative_small_letter_a;
-
- script copt;
-     language dflt ;
-      lookup cv23_Alternative_small_letter_a;
-
- script cyrl;
-     language dflt ;
-      lookup cv23_Alternative_small_letter_a;
-
- script grek;
-     language dflt ;
-      lookup cv23_Alternative_small_letter_a;
-
- script latn;
-     language dflt ;
-      lookup cv23_Alternative_small_letter_a;
-     language CAT  exclude_dflt;
-      lookup cv23_Alternative_small_letter_a;
-     language MOL  exclude_dflt;
-      lookup cv23_Alternative_small_letter_a;
-     language ROM  exclude_dflt;
-      lookup cv23_Alternative_small_letter_a;
-} cv23;
 
 feature cv24 {
 
