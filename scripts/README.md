@@ -70,12 +70,12 @@ All of the font building process is described inside the `build.py` script.
        │
        ├──► [rename_loop]    ──► Rename weight 1000 fonts files
        │
-       └──► [pyftfeatfreeze] ──► Spawns multiprocessing/sequential tasks to freeze 'smcp' 
+       └──► [pyftfeatfreeze] ──► Spawns multiprocessing/sequential tasks to freeze 'smcp'
                                  features into standalone Small Caps (SC) font variations
        │
 [ 4. POST-PROCESSING STAGE ]
        │
-       └──► [gftools fix-nonhinting] ──► Inject / apply screen-rasterization optimization hinting 
+       └──► [gftools fix-nonhinting] ──► Inject / apply screen-rasterization optimization hinting
                                          to all compiled binaries, then discards intermediate backups
        │
 [ 5. CLEAN-UP STAGE ]
@@ -113,7 +113,7 @@ A script to generate all of those fonts called `ufo_composed_glyphs.py` exists t
 
 The CSV files are using a comma `,` separator and have the following fields (from left to right):
 * `Glyphname`: name of the glyph to generate
-* `Weight`: in which weight this line applies. Can be `100`, `400`, `1000`, or empty to support all weights. 
+* `Weight`: in which weight this line applies. Can be `100`, `400`, `1000`, or empty to support all weights.
 * `Styles`: in which styles this line applies. `1` = normal ; `2` = italic ; `3` = both
 * `Category`: type of the glyph to generate (see table below)
 * `Param. 1` and `Param. 2`: depends of the category
@@ -149,12 +149,17 @@ For the parameters:
 ### Usage
 
 It is best used with the `make ufo_composed_glyph` command from the `Makefile` in the project's root folder. It will:
-1. Update `composed_glyphs_generated.csv`
-2. Edit the UFOs files inside `sources/`.
+1. Update `composed_glyphs_generated.csv`.
+2. Edit all of the UFOs files inside `sources/`.
 
 > [!CAUTION]
 > After using one of these scripts, open ALL of the UFO files using Fontforge to regenerate the UFO with the export feature.
 
+> [!TIP]
+> It's possible to only build specific glyphs with their dependencies with the option `GLYPHS` and a list of glyphs separated by spaces. For example, the following command will build the glyphs `i`, `uni043A.sc`, and `kappa.sc` as it's needed for the previous glyph.
+  ```sh
+  make ufo_composed_glyphs GLYPHS="i uni043A.sc"
+  ```
 
 ### Other tools
 
