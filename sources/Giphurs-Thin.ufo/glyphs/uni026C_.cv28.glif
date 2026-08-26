@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni026C.cv22" format="2">
-  <advance width="862"/>
+<glyph name="uni026C.cv28" format="2">
+  <advance width="790"/>
+  <anchor x="400" y="0" name="bottom_center"/>
+  <anchor x="400" y="1380" name="top_center"/>
   <outline>
     <contour>
-      <point x="792" y="549" type="line"/>
+      <point x="377" y="0" type="line"/>
+      <point x="377" y="1480" type="line"/>
+      <point x="422" y="1480" type="line"/>
+      <point x="422" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="790" y="549" type="line"/>
       <point x="212" y="549" type="line"/>
       <point x="212" y="589" type="line"/>
-      <point x="792" y="589" type="line"/>
+      <point x="790" y="589" type="line"/>
     </contour>
     <contour>
       <point x="0" y="760" type="curve" smooth="yes"/>
@@ -29,16 +37,6 @@
       <point x="212" y="549" type="line"/>
       <point x="92" y="549"/>
       <point x="0" y="640"/>
-    </contour>
-    <contour>
-      <point x="425" y="1438" type="line"/>
-      <point x="425" y="42" type="line"/>
-      <point x="425" y="0" type="line"/>
-      <point x="377" y="0" type="line"/>
-      <point x="377" y="42" type="line"/>
-      <point x="377" y="1438" type="line"/>
-      <point x="377" y="1480" type="line"/>
-      <point x="425" y="1480" type="line"/>
     </contour>
   </outline>
 </glyph>
