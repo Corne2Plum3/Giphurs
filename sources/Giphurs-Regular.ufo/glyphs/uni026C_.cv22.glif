@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni026C.cv22" format="2">
-  <advance width="790"/>
+  <advance width="770"/>
+  <anchor x="390" y="0" name="bottom_center"/>
+  <anchor x="390" y="1380" name="top_center"/>
   <outline>
+    <contour>
+      <point x="300" y="0" type="line"/>
+      <point x="300" y="1480" type="line"/>
+      <point x="480" y="1480" type="line"/>
+      <point x="480" y="0" type="line"/>
+    </contour>
     <contour>
       <point x="770" y="514" type="line"/>
       <point x="240" y="514" type="line"/>
@@ -29,16 +37,6 @@
       <point x="240" y="514" type="line"/>
       <point x="110" y="514"/>
       <point x="0" y="598"/>
-    </contour>
-    <contour>
-      <point x="490" y="1312" type="line"/>
-      <point x="490" y="168" type="line"/>
-      <point x="490" y="0" type="line"/>
-      <point x="300" y="0" type="line"/>
-      <point x="300" y="168" type="line"/>
-      <point x="300" y="1312" type="line"/>
-      <point x="300" y="1480" type="line"/>
-      <point x="490" y="1480" type="line"/>
     </contour>
   </outline>
 </glyph>
