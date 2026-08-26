@@ -157,9 +157,9 @@ It is best used with the `make ufo_composed_glyph` command from the `Makefile` i
 
 > [!TIP]
 > It's possible to only build specific glyphs with their dependencies with the option `GLYPHS` and a list of glyphs separated by spaces. For example, the following command will build the glyphs `i`, `uni043A.sc`, and `kappa.sc` as it's needed for the previous glyph.
-  ```sh
-  make ufo_composed_glyphs GLYPHS="i uni043A.sc"
-  ```
+>  ```sh
+>  make ufo_composed_glyphs GLYPHS="i uni043A.sc"
+>  ```
 
 ### Other tools
 
