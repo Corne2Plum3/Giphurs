@@ -12,6 +12,11 @@ UFO_DIR := ./sources
 UFO_COMPOSED_CSV_1 := "scripts/composed_glyphs.csv"  # filled by hand
 UFO_COMPOSED_CSV_2 := "scripts/composed_glyphs_generated.csv"  # filled by UFO_COMPOSED_SCRIPT
 
+# Optional: space-separated list of glyph names to restrict `make ufo_composed_glyphs` to
+# (e.g. `make ufo_composed_glyphs GLYPHS="Aacute Ccedilla"`). Leave unset/empty to build everything.
+GLYPHS :=
+UFO_COMPOSED_GLYPHS_ARGS := $(if $(strip $(GLYPHS)),--glyphs $(GLYPHS),)
+
 # documentaton
 help:
 	@echo "Available make commands:"
@@ -64,12 +69,12 @@ tests: fonts/ badge_local_version
 # Updates $UFO_COMPOSED_CSV_2 and then edit UFOs
 ufo_composed_glyphs: scripts/ sources/
 	python3 ./scripts/composed_glyphs_generator.py $(UFO_COMPOSED_CSV_2) --all
-	python3 ./scripts/ufo_composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-Thin.ufo 100 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
-	python3 ./scripts/ufo_composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-ThinItalic.ufo 100 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
-	python3 ./scripts/ufo_composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-Regular.ufo 400 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
-	python3 ./scripts/ufo_composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-Italic.ufo 400 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
-	python3 ./scripts/ufo_composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-ExtraBlack.ufo 1000 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
-	python3 ./scripts/ufo_composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-ExtraBlackItalic.ufo 1000 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2)
+	python3 ./scripts/ufo_composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-Thin.ufo 100 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2) $(UFO_COMPOSED_GLYPHS_ARGS)
+	python3 ./scripts/ufo_composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-ThinItalic.ufo 100 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2) $(UFO_COMPOSED_GLYPHS_ARGS)
+	python3 ./scripts/ufo_composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-Regular.ufo 400 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2) $(UFO_COMPOSED_GLYPHS_ARGS)
+	python3 ./scripts/ufo_composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-Italic.ufo 400 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2) $(UFO_COMPOSED_GLYPHS_ARGS)
+	python3 ./scripts/ufo_composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-ExtraBlack.ufo 1000 1 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2) $(UFO_COMPOSED_GLYPHS_ARGS)
+	python3 ./scripts/ufo_composed_glyphs.py $(UFO_DIR)/$(FONT_NAME)-ExtraBlackItalic.ufo 1000 2 $(UFO_COMPOSED_CSV_1) $(UFO_COMPOSED_CSV_2) $(UFO_COMPOSED_GLYPHS_ARGS)
 
 ufo_set_version:
 	UFO_FILES=$$(find $(UFO_DIR) -name "*.ufo" 2>/dev/null); \
