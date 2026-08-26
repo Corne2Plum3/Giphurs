@@ -119,7 +119,7 @@ def rename_loop(files: dict[Path, Path]) -> int:
             error_count += 1
 
     if error_count == 0:
-        logger.success('Weight 1000 fonts successfully renamed.')  # pyright: ignore[reportUnknownMemberType]
+        logger.success(f'{len(files)} file(s) successfully renamed.')  # pyright: ignore[reportUnknownMemberType]
     else:
         logger.warning(f'{error_count} error(s) occured when renaming weight 1000 files.')
     return error_count
@@ -458,20 +458,23 @@ logger.info(f'Building font binaries at "{FONTS_DIR_PATH}"...')
 # --- Main
 if build_all_fonts(SOURCES_INST_DIR_PATH) != 0:  # gftools
     exit(1)
+
 rename_loop(
     {
-        FONTS_DIR_PATH / 'otf' / f'{FONT_NAME}-ExtraBlack.otf'           : FONTS_DIR_PATH / 'otf' / f'{FONT_NAME}ExtraBlack-Regular.otf',
-        FONTS_DIR_PATH / 'otf' / f'{FONT_NAME}-ExtraBlackItalic.otf'     : FONTS_DIR_PATH / 'otf' / f'{FONT_NAME}ExtraBlack-Italic.otf',
-        FONTS_DIR_PATH / 'ttf' / f'{FONT_NAME}-ExtraBlack.ttf'           : FONTS_DIR_PATH / 'ttf' / f'{FONT_NAME}ExtraBlack-Regular.ttf',
-        FONTS_DIR_PATH / 'ttf' / f'{FONT_NAME}-ExtraBlackItalic.ttf'     : FONTS_DIR_PATH / 'ttf' / f'{FONT_NAME}ExtraBlack-Italic.ttf',
+        FONTS_DIR_PATH / 'otf' / f'{FONT_NAME}-ExtraBlack.otf'             : FONTS_DIR_PATH / 'otf' / f'{FONT_NAME}ExtraBlack-Regular.otf',
+        FONTS_DIR_PATH / 'otf' / f'{FONT_NAME}-ExtraBlackItalic.otf'       : FONTS_DIR_PATH / 'otf' / f'{FONT_NAME}ExtraBlack-Italic.otf',
+        FONTS_DIR_PATH / 'ttf' / f'{FONT_NAME}-ExtraBlack.ttf'             : FONTS_DIR_PATH / 'ttf' / f'{FONT_NAME}ExtraBlack-Regular.ttf',
+        FONTS_DIR_PATH / 'ttf' / f'{FONT_NAME}-ExtraBlackItalic.ttf'       : FONTS_DIR_PATH / 'ttf' / f'{FONT_NAME}ExtraBlack-Italic.ttf',
         FONTS_DIR_PATH / 'webfonts' / f'{FONT_NAME}-ExtraBlack.woff2'      : FONTS_DIR_PATH / 'webfonts' / f'{FONT_NAME}ExtraBlack-Regular.woff2',
         FONTS_DIR_PATH / 'webfonts' / f'{FONT_NAME}-ExtraBlackItalic.woff2': FONTS_DIR_PATH / 'webfonts' / f'{FONT_NAME}ExtraBlack-Italic.woff2'
-    }
+    }  # {old : new}
 )
 # --- Small Caps
 if build_all_sc_fonts(font_dir=FONTS_DIR_PATH, font_subdir_types=FONTS_SUBDIRS_TYPES, processes_count=PROCESSES_COUNT):
     exit(1)
 logger.success('Building process done with success.')  # pyright: ignore[reportUnknownMemberType]
+logger.info('Renaming variable italic SC file...')
+rename_loop({FONTS_DIR_PATH / 'variable' / f'{FONT_NAME}-ItalicSC[wght].ttf': FONTS_DIR_PATH / 'variable' / f'{FONT_NAME}SC-Italic[wght].ttf'})
 
 # ===== 4. Post-processing =====
 logger.info('Post-processing all fonts...')
