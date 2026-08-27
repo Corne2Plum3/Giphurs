@@ -2364,7 +2364,11 @@ lookup cv21_Alternative_letter_G {
     sub \uni01E4 by \uni01E4.cv21 ;
     sub \Gcaron by \Gcaron.cv21 ;
     sub \uni01F4 by \uni01F4.cv21 ;
+    sub \uni0262 by \uni0262.cv21 ;
+    sub \uni029B by \uni029B.cv21 ;
     sub \uni1E20 by \uni1E20.cv21 ;
+    sub \uni20B2 by \uni20B2.cv21 ;
+    sub \uni2141 by \uni2141.cv21 ;
     sub \uni24BC by \uni24BC.cv21 ;
     sub \g.sc by \g.sc.cv21 ;
     sub \gcircumflex.sc by \gcircumflex.sc.cv21 ;
@@ -2374,6 +2378,9 @@ lookup cv21_Alternative_letter_G {
     sub \uni01E5.sc by \uni01E5.sc.cv21 ;
     sub \gcaron.sc by \gcaron.sc.cv21 ;
     sub \uni01F5.sc by \uni01F5.sc.cv21 ;
+    sub \uni0260.sc by \uni0260.sc.cv21 ;
+    sub \uni0262.sc by \uni0262.sc.cv21 ;
+    sub \uni029B.sc by \uni029B.sc.cv21 ;
     sub \uni1E21.sc by \uni1E21.sc.cv21 ;
 } cv21_Alternative_letter_G;
 
@@ -2617,6 +2624,7 @@ lookup ss05_Alternative_currency_signs {
     sub \uni20AA by \uni20AA.ss05 ;
     sub \Euro by \Euro.ss05 ;
     sub \uni20B2 by \uni20B2.ss05 ;
+    sub \uni20B2.cv21 by \uni20B2.cv21.ss05 ;
 } ss05_Alternative_currency_signs;
 
 lookup ss06_Serif_on_digit_1 {
@@ -4222,8 +4230,8 @@ lookup ccmp_latn {
     sub \e \uni0302  by \ecircumflex;
     sub \e \uni0308  by \edieresis;
     sub \i \gravecomb  by \igrave;
-    sub \uni0456 \acutecomb  by \iacute;
     sub \i \acutecomb  by \iacute;
+    sub \uni0456 \acutecomb  by \iacute;
     sub \i \uni0302  by \icircumflex;
     sub \i \uni0308  by \idieresis;
     sub \n \tildecomb  by \ntilde;
@@ -4279,8 +4287,8 @@ lookup ccmp_latn {
     sub \I \uni0306  by \Ibreve;
     sub \i \uni0306  by \ibreve;
     sub \I \uni0328  by \Iogonek;
-    sub \i \uni0328  by \iogonek;
     sub \iogonek \gravecomb  by \iogonek;
+    sub \i \uni0328  by \iogonek;
     sub \I \uni0307  by \Idotaccent;
     sub \J \uni0302  by \Jcircumflex;
     sub \j \uni0302  by \jcircumflex;
@@ -4367,13 +4375,13 @@ lookup ccmp_latn {
     sub \U \uni0308 \uni030C  by \uni01D9;
     sub \u \uni0308 \uni030C  by \uni01DA;
     sub \U \uni0308 \gravecomb  by \uni01DB;
-    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \A \uni030A \acutecomb  by \uni01DC;
-    sub \A \uni0308 \uni0304  by \uni01DE;
+    sub \u \uni0308 \gravecomb  by \uni01DC;
     sub \AE \acutecomb  by \uni01DE;
+    sub \A \uni0308 \uni0304  by \uni01DE;
     sub \a \uni0308 \uni0304  by \uni01DF;
-    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \Oslash \acutecomb  by \uni01E0;
+    sub \A \uni0307 \uni0304  by \uni01E0;
     sub \a \uni0307 \uni0304  by \uni01E1;
     sub \AE \uni0304  by \uni01E2;
     sub \ae \uni0304  by \uni01E3;
@@ -5299,8 +5307,8 @@ lookup ccmp_cyrl {
     sub \uni043A \acutecomb  by \uni045C;
     sub \uni0438 \gravecomb  by \uni045D;
     sub \uni0443 \uni0306  by \uni045E;
-    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0456 \uni0307  by \uni0457;
+    sub \uni0456 \uni0308  by \uni0457;
     sub \uni0474 \uni030F  by \uni0476;
     sub \uni0475 \uni030F  by \uni0477;
     sub \W \gravecomb  by \uni0498;
@@ -6433,46 +6441,28 @@ lookup calt_Contextual_Alternates {
 	\uni2152.cv11.cv20.ss06.zero ] ;
 } calt_Contextual_Alternates;
 
-feature ss03 {
-  featureNames {
-    name 3 1 0x409 "Alternative uppercases";
-  };
+feature cv27 {
 
  script DFLT;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-      lookup cv21_Alternative_letter_G;
-      lookup cv22_Alternative_letter_I;
-      lookup cv29_Alternative_letter_Q;
 
  script copt;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-      lookup cv21_Alternative_letter_G;
-      lookup cv22_Alternative_letter_I;
-      lookup cv29_Alternative_letter_Q;
 
  script cyrl;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-      lookup cv21_Alternative_letter_G;
-      lookup cv22_Alternative_letter_I;
-      lookup cv29_Alternative_letter_Q;
 
  script grek;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-      lookup cv21_Alternative_letter_G;
-      lookup cv22_Alternative_letter_I;
-      lookup cv29_Alternative_letter_Q;
 
  script latn;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-      lookup cv21_Alternative_letter_G;
-      lookup cv22_Alternative_letter_I;
-      lookup cv29_Alternative_letter_Q;
-} ss03;
+} cv27;
 
 feature locl {
 
@@ -6561,28 +6551,46 @@ feature locl {
       lookup locl_cv27_Localized_Eng;
 } locl;
 
-feature cv27 {
+feature ss03 {
+  featureNames {
+    name 3 1 0x409 "Alternative uppercases";
+  };
 
  script DFLT;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
+      lookup cv21_Alternative_letter_G;
+      lookup cv22_Alternative_letter_I;
+      lookup cv29_Alternative_letter_Q;
 
  script copt;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
+      lookup cv21_Alternative_letter_G;
+      lookup cv22_Alternative_letter_I;
+      lookup cv29_Alternative_letter_Q;
 
  script cyrl;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
+      lookup cv21_Alternative_letter_G;
+      lookup cv22_Alternative_letter_I;
+      lookup cv29_Alternative_letter_Q;
 
  script grek;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
+      lookup cv21_Alternative_letter_G;
+      lookup cv22_Alternative_letter_I;
+      lookup cv29_Alternative_letter_Q;
 
  script latn;
      language dflt ;
       lookup locl_cv27_Localized_Eng;
-} cv27;
+      lookup cv21_Alternative_letter_G;
+      lookup cv22_Alternative_letter_I;
+      lookup cv29_Alternative_letter_Q;
+} ss03;
 
 feature ss09 {
   featureNames {
@@ -6699,29 +6707,6 @@ feature smcp {
       lookup smcp_Small_caps_turkish_i_lookup;
 } smcp;
 
-feature cv01 {
-
- script DFLT;
-     language dflt ;
-      lookup cv01_Alternative_digit_1_A;
-
- script copt;
-     language dflt ;
-      lookup cv01_Alternative_digit_1_A;
-
- script cyrl;
-     language dflt ;
-      lookup cv01_Alternative_digit_1_A;
-
- script grek;
-     language dflt ;
-      lookup cv01_Alternative_digit_1_A;
-
- script latn;
-     language dflt ;
-      lookup cv01_Alternative_digit_1_A;
-} cv01;
-
 feature ss01 {
   featureNames {
     name 3 1 0x409 "Alternative numbers set 1";
@@ -6792,6 +6777,29 @@ feature ss01 {
       lookup cv09_Alternative_digit_9_A;
       lookup cv10_Alternative_digit_0_A;
 } ss01;
+
+feature cv01 {
+
+ script DFLT;
+     language dflt ;
+      lookup cv01_Alternative_digit_1_A;
+
+ script copt;
+     language dflt ;
+      lookup cv01_Alternative_digit_1_A;
+
+ script cyrl;
+     language dflt ;
+      lookup cv01_Alternative_digit_1_A;
+
+ script grek;
+     language dflt ;
+      lookup cv01_Alternative_digit_1_A;
+
+ script latn;
+     language dflt ;
+      lookup cv01_Alternative_digit_1_A;
+} cv01;
 
 feature cv02 {
 
@@ -7000,29 +7008,6 @@ feature cv10 {
       lookup cv10_Alternative_digit_0_A;
 } cv10;
 
-feature cv11 {
-
- script DFLT;
-     language dflt ;
-      lookup cv11_Alternative_digit_1_B;
-
- script copt;
-     language dflt ;
-      lookup cv11_Alternative_digit_1_B;
-
- script cyrl;
-     language dflt ;
-      lookup cv11_Alternative_digit_1_B;
-
- script grek;
-     language dflt ;
-      lookup cv11_Alternative_digit_1_B;
-
- script latn;
-     language dflt ;
-      lookup cv11_Alternative_digit_1_B;
-} cv11;
-
 feature ss02 {
   featureNames {
     name 3 1 0x409 "Alternative numbers set 2";
@@ -7093,6 +7078,29 @@ feature ss02 {
       lookup cv19_Alternative_digit_9_B;
       lookup cv20_Alternative_digit_0_B;
 } ss02;
+
+feature cv11 {
+
+ script DFLT;
+     language dflt ;
+      lookup cv11_Alternative_digit_1_B;
+
+ script copt;
+     language dflt ;
+      lookup cv11_Alternative_digit_1_B;
+
+ script cyrl;
+     language dflt ;
+      lookup cv11_Alternative_digit_1_B;
+
+ script grek;
+     language dflt ;
+      lookup cv11_Alternative_digit_1_B;
+
+ script latn;
+     language dflt ;
+      lookup cv11_Alternative_digit_1_B;
+} cv11;
 
 feature cv12 {
 
@@ -7359,6 +7367,35 @@ feature cv22 {
       lookup cv22_Alternative_letter_I;
 } cv22;
 
+feature cv23 {
+
+ script DFLT;
+     language dflt ;
+      lookup cv23_Alternative_small_letter_a;
+
+ script copt;
+     language dflt ;
+      lookup cv23_Alternative_small_letter_a;
+
+ script cyrl;
+     language dflt ;
+      lookup cv23_Alternative_small_letter_a;
+
+ script grek;
+     language dflt ;
+      lookup cv23_Alternative_small_letter_a;
+
+ script latn;
+     language dflt ;
+      lookup cv23_Alternative_small_letter_a;
+     language CAT  exclude_dflt;
+      lookup cv23_Alternative_small_letter_a;
+     language MOL  exclude_dflt;
+      lookup cv23_Alternative_small_letter_a;
+     language ROM  exclude_dflt;
+      lookup cv23_Alternative_small_letter_a;
+} cv23;
+
 feature ss04 {
   featureNames {
     name 3 1 0x409 "Alternative lowercases";
@@ -7399,35 +7436,6 @@ feature ss04 {
       lookup cv25_Alternative_small_letter_u;
       lookup cv28_Alternative_small_letter_l;
 } ss04;
-
-feature cv23 {
-
- script DFLT;
-     language dflt ;
-      lookup cv23_Alternative_small_letter_a;
-
- script copt;
-     language dflt ;
-      lookup cv23_Alternative_small_letter_a;
-
- script cyrl;
-     language dflt ;
-      lookup cv23_Alternative_small_letter_a;
-
- script grek;
-     language dflt ;
-      lookup cv23_Alternative_small_letter_a;
-
- script latn;
-     language dflt ;
-      lookup cv23_Alternative_small_letter_a;
-     language CAT  exclude_dflt;
-      lookup cv23_Alternative_small_letter_a;
-     language MOL  exclude_dflt;
-      lookup cv23_Alternative_small_letter_a;
-     language ROM  exclude_dflt;
-      lookup cv23_Alternative_small_letter_a;
-} cv23;
 
 feature cv24 {
 
@@ -8067,19 +8075,20 @@ lookup kern_Horizontal_kerning {
 	\uni1E06 \uni1E9E \uniA7B4 \uniA7B5 ];
     @kc85_first_3 = [\C \Cacute \Ccaron \Ccedilla \Ccircumflex \Cdotaccent \uni0187 \uni023B \uni03F9 
 	\uni03FE \uni0421 \uni0464 \uni0480 \uni04AA \uni1E08 \uni2103 \uni216D ];
-    @kc85_first_4 = [\D \Dcaron \Dcroat \Eth \G.cv21 \Gbreve.cv21 \Gcaron.cv21 \Gcircumflex.cv21 
-	\Gcommaaccent.cv21 \Gdotaccent.cv21 \O \Oacute \Obreve \Ocircumflex 
-	\Odieresis \Ograve \Ohungarumlaut \Omacron \Omicron \Omicrontonos 
-	\Oslash \Oslashacute \Otilde \Theta \uni0189 \uni018A \uni018F 
-	\uni0193.cv21 \uni019F \uni01D1 \uni01E4.cv21 \uni01EA \uni01EC 
-	\uni01F4.cv21 \uni020C \uni020E \uni022A \uni022C \uni022E \uni0230 
-	\uni0298 \uni03D8 \uni03F4 \uni03FD \uni03FF \uni041E \uni042E \uni0472 
-	\uni047A \uni04BC \uni04BE \uni04D8 \uni04DA \uni04E6 \uni04E8 \uni04EA 
-	\uni04EC \uni050C \uni1E0A \uni1E0C \uni1E0E \uni1E10 \uni1E12 
-	\uni1E20.cv21 \uni1E4C \uni1E4E \uni1E50 \uni1E52 \uni1ECC \uni1ECE 
-	\uni1ED0 \uni1ED2 \uni1ED4 \uni1ED6 \uni1ED8 \uni1EDA \uni1EDC \uni1EDE 
-	\uni1EE0 \uni1EE2 \uni1F48 \uni1F49 \uni1F4A \uni1F4B \uni1F4C \uni1F4D 
-	\uni1FF8 \uni1FF9 \uni2108 \uni216E \uni2180 \uni2181 \uni2182 \uniA7C7 ];
+    @kc85_first_4 = [\O \D \Ograve \Oacute \Ocircumflex \Otilde \Odieresis \Eth \Oslash \Dcaron 
+	\Omacron \Obreve \Dcroat \Ohungarumlaut \uni0189 \uni018A \uni018F 
+	\uni019F \uni01D1 \uni01EA \uni01EC \Oslashacute \uni022A \uni022C 
+	\uni022E \uni0230 \uni020C \uni020E \uni0298 \Omicron \Theta 
+	\Omicrontonos \uni03D8 \uni03F4 \uni03FD \uni03FF \uni041E \uni042E 
+	\uni0472 \uni047A \uni04BC \uni04BE \uni04E6 \uni04EC \uni04D8 \uni04DA 
+	\uni04E8 \uni04EA \uni050C \uni1E0A \uni1E10 \uni1E4C \uni1E4E \uni1E50 
+	\uni1E52 \uni1E0C \uni1E0E \uni1E12 \uni1ECC \uni1ECE \uni1ED0 \uni1ED2 
+	\uni1ED4 \uni1ED6 \uni1ED8 \uni1EDA \uni1EDC \uni1EDE \uni1EE0 \uni1EE2 
+	\uni2108 \uni216E \uni2180 \uni2181 \uni2182 \uni1F48 \uni1F49 \uni1F4A 
+	\uni1F4B \uni1F4C \uni1F4D \uni1FF8 \uni1FF9 \uniA7C7 \G.cv21 
+	\Gcircumflex.cv21 \Gbreve.cv21 \Gdotaccent.cv21 \Gcommaaccent.cv21 
+	\uni0193.cv21 \uni01E4.cv21 \Gcaron.cv21 \uni01F4.cv21 \uni1E20.cv21 
+	\uni20B2.cv21 \uni2141.cv21 \uni20B2.cv21.ss05 ];
     @kc85_first_5 = [\G \Gbreve \Gcaron \Gcircumflex \Gcommaaccent \Gdotaccent \Omega \Omegatonos \Q 
 	\Q.cv29 \two.cv02.pnum \two.cv12.pnum \two.pnum \uni01E4 \uni03A9 
 	\uni051A \uni051A.cv29 \uni1E20 \uni1F68 \uni1F69 \uni1F6A \uni1F6B 
@@ -8212,20 +8221,20 @@ lookup kern_Horizontal_kerning {
 	\zero.cv20.zero.superior.tnum \zero.superior \zero.superior.pnum 
 	\zero.zero.superior \zero.zero.superior.pnum 
 	\zero.zero.superior.tnum ];
-    @kc85_first_23 = [\aeacute \e \eacute \ebreve \ecircumflex \edieresis \edotaccent \egrave \emacron 
-	\eogonek \o \oacute \obreve \ocircumflex \odieresis \oe \ograve 
-	\ohungarumlaut \omacron \omicron \omicrontonos \oslash \oslashacute 
-	\otilde \six.cv16.onum \six.cv16.pnum \uni018D \uni01D2 \uni01DD 
-	\uni01E3 \uni01EB \uni01ED \uni0205 \uni0207 \uni020D \uni020F \uni0229 
-	\uni022B \uni022D \uni022F \uni0231 \uni0247 \uni0254 \uni0258 \uni0259 
-	\uni0275 \uni0278 \uni037B \uni037D \uni03D9 \uni03F6 \uni0435 \uni043E 
-	\uni044D \uni044E \uni0473 \uni04BD \uni04BF \uni04D7 \uni04D9 \uni04DB 
-	\uni04E7 \uni04E9 \uni04EB \uni04ED \uni050D \uni1E15 \uni1E17 \uni1E19 
-	\uni1E1B \uni1E1D \uni1E4D \uni1E4F \uni1E51 \uni1E53 \uni1EB9 \uni1EBB 
-	\uni1EBD \uni1EBF \uni1EC1 \uni1EC3 \uni1EC5 \uni1EC7 \uni1ECD \uni1ECF 
-	\uni1ED1 \uni1ED3 \uni1ED5 \uni1ED7 \uni1ED9 \uni1EDB \uni1EDD \uni1EDF 
-	\uni1EE1 \uni1EE3 \uni1F40 \uni1F41 \uni1F42 \uni1F43 \uni1F44 \uni1F45 
-	\uni1F78 \uni1F79 \uni2184 ];
+    @kc85_first_23 = [\o \e \egrave \eacute \ecircumflex \edieresis \ograve \oacute \ocircumflex 
+	\otilde \odieresis \oslash \emacron \ebreve \edotaccent \eogonek 
+	\omacron \obreve \oe \ohungarumlaut \uni018D \uni01D2 \uni01DD \uni01E3 
+	\uni01EB \uni01ED \aeacute \oslashacute \uni0229 \uni022B \uni022D 
+	\uni022F \uni0231 \uni0205 \uni020D \uni0207 \uni020F \uni0247 \uni0254 
+	\uni0258 \uni0259 \uni0275 \uni0278 \uni037B \uni037D \omicrontonos 
+	\uni03D9 \uni03F6 \uni0435 \uni043E \uni044D \uni044E \uni0473 \uni04DB 
+	\uni04BD \uni04BF \uni04D7 \uni04E7 \uni04ED \uni04D9 \uni04E9 \uni04EB 
+	\uni050D \uni1E15 \uni1E17 \uni1E1D \uni1E4D \uni1E4F \uni1E51 \uni1E53 
+	\uni1E19 \uni1E1B \uni1EB9 \uni1EBB \uni1EBD \uni1EBF \uni1EC1 \uni1EC3 
+	\uni1EC5 \uni1EC7 \uni1ECD \uni1ECF \uni1ED1 \uni1ED3 \uni1ED5 \uni1ED7 
+	\uni1ED9 \uni1EDB \uni1EDD \uni1EDF \uni1EE1 \uni1EE3 \uni2184 \uni1F40 
+	\uni1F41 \uni1F42 \uni1F43 \uni1F44 \uni1F45 \uni1F78 \uni1F79 \omicron 
+	\six.cv16.pnum \six.cv16.onum \uni0262.cv21 ];
     @kc85_first_24 = [\alpha \alphatonos \pi \uni1F00 \uni1F01 \uni1F02 \uni1F03 \uni1F04 \uni1F05 
 	\uni1F06 \uni1F07 \uni1F80 \uni1F81 \uni1F82 \uni1F83 \uni1F84 \uni1F85 
 	\uni1F86 \uni1F87 \uni1FB0 \uni1FB1 \uni1FB2 \uni1FB3 \uni1FB4 \uni1FB6 
@@ -8311,22 +8320,22 @@ lookup kern_Horizontal_kerning {
 	\uni04B3.sc \uni04C2.sc \uni04DD.sc \uni04FD.sc \uni04FF.sc 
 	\uni0515.sc \uni0517.sc \uni051F.sc \uni052B.sc \uni1E31.sc 
 	\uni1E33.sc \uni1E35.sc \uni1E8B.sc \uni1E8D.sc \x.sc ];
-    @kc85_first_33 = [\d.sc \dcaron.sc \dcroat.sc \eth.sc \nine.cv09.onum \nine.cv19.onum \nine.onum 
-	\o.sc \oacute.sc \obreve.sc \ocircumflex.sc \odieresis.sc \ograve.sc 
-	\ohungarumlaut.sc \omacron.sc \omicron.sc \oslash.sc \otilde.sc 
-	\theta1.sc \uni01D2.sc \uni020D.sc \uni020F.sc \uni022B.sc 
+    @kc85_first_33 = [\d.sc \o.sc \eth.sc \ograve.sc \oacute.sc \ocircumflex.sc \otilde.sc 
+	\odieresis.sc \oslash.sc \dcaron.sc \dcroat.sc \omacron.sc \obreve.sc 
+	\ohungarumlaut.sc \uni01D2.sc \uni020D.sc \uni020F.sc \uni022B.sc 
 	\uni022D.sc \uni022F.sc \uni0231.sc \uni0256.sc \uni0257.sc 
-	\uni0277.sc \uni029A.sc \uni037B.sc \uni037D.sc \uni03D9.sc 
-	\uni043E.sc \uni044E.sc \uni0473.sc \uni047B.sc \uni04D9.sc 
-	\uni04DB.sc \uni04E7.sc \uni04E9.sc \uni04EB.sc \uni04ED.sc 
-	\uni1E0B.sc \uni1E0D.sc \uni1E0F.sc \uni1E11.sc \uni1E13.sc 
-	\uni1E4D.sc \uni1E4F.sc \uni1E51.sc \uni1E53.sc \uni1ECD.sc 
-	\uni1ECF.sc \uni1ED1.sc \uni1ED3.sc \uni1ED5.sc \uni1ED7.sc 
-	\uni1ED9.sc \uni1EDB.sc \uni1EDD.sc \uni1F40.sc \uni1F41.sc 
-	\uni1F42.sc \uni1F43.sc \uni1F44.sc \uni1F45.sc \uni1F78.sc 
-	\uni1F79.sc \uni2184.sc \uniA7B7.sc \uniA7C8.sc \zero.cv10.onum 
-	\zero.cv10.zero.onum \zero.cv20.onum \zero.cv20.zero.onum 
-	\zero.onum \zero.zero.onum ];
+	\uni0277.sc \uni029A.sc \uni037B.sc \uni037D.sc \omicron.sc 
+	\theta1.sc \uni03D9.sc \uni043E.sc \uni044E.sc \uni0473.sc 
+	\uni047B.sc \uni04D9.sc \uni04DB.sc \uni04E7.sc \uni04E9.sc 
+	\uni04EB.sc \uni04ED.sc \uni1E0B.sc \uni1E0D.sc \uni1E0F.sc 
+	\uni1E11.sc \uni1E13.sc \uni1E4D.sc \uni1E4F.sc \uni1E51.sc 
+	\uni1E53.sc \uni1ECD.sc \uni1ECF.sc \uni1ED1.sc \uni1ED3.sc 
+	\uni1ED5.sc \uni1ED7.sc \uni1ED9.sc \uni1EDB.sc \uni1EDD.sc 
+	\uni1F40.sc \uni1F41.sc \uni1F42.sc \uni1F43.sc \uni1F44.sc 
+	\uni1F45.sc \uni1F78.sc \uni1F79.sc \uni2184.sc \uniA7B7.sc 
+	\uniA7C8.sc \zero.onum \nine.onum \nine.cv09.onum \zero.cv10.onum 
+	\nine.cv19.onum \zero.cv20.onum \zero.zero.onum 
+	\zero.cv10.zero.onum \zero.cv20.zero.onum \uni0262.sc.cv21 ];
     @kc85_first_34 = [\dotlessi.sc \i.sc \iacute.sc \ibreve.sc \icircumflex.sc \idieresis.sc 
 	\igrave.sc \imacron.sc \iogonek.sc \iota.sc \iotadieresis.sc 
 	\iotadieresistonos.sc \iotatonos.sc \itilde.sc \uni01D0.sc 
@@ -8484,22 +8493,23 @@ lookup kern_Horizontal_kerning {
 	\uni1EB0 \uni1EB2 \uni1EB4 \uni1EB6 \uni1FB8 \uni1FB9 \uni1FBC \uni212B 
 	\uniA7DC ];
     @kc85_second_2 = [\AE \AEacute \uni01E2 \uni04D4 ];
-    @kc85_second_3 = [\C \Cacute \Ccaron \Ccedilla \Ccircumflex \Cdotaccent \Euro \Euro.ss05 \G \G.cv21 
-	\Gbreve \Gbreve.cv21 \Gcaron \Gcaron.cv21 \Gcircumflex 
-	\Gcircumflex.cv21 \Gcommaaccent \Gcommaaccent.cv21 \Gdotaccent 
-	\Gdotaccent.cv21 \O \OE \Oacute \Obreve \Ocircumflex \Odieresis \Ograve 
-	\Ohorn \Ohungarumlaut \Omacron \Omicron \Omicrontonos \Oslash 
-	\Oslashacute \Otilde \Q \Q.cv29 \Theta \colonmonetary \emptyset 
-	\uni0187 \uni0193 \uni0193.cv21 \uni019F \uni01A2 \uni01D1 \uni01E4 
-	\uni01E4.cv21 \uni01EA \uni01EC \uni01F4 \uni01F4.cv21 \uni020C 
-	\uni020E \uni022A \uni022C \uni022E \uni0230 \uni023B \uni024A \uni0298 
-	\uni03D8 \uni03F4 \uni03FE \uni0404 \uni041E \uni0421 \uni0472 \uni047A 
-	\uni0480 \uni04AA \uni04BC \uni04BE \uni04D8 \uni04DA \uni04E6 \uni04E8 
-	\uni04EA \uni050C \uni051A \uni051A.cv29 \uni1E08 \uni1E20 
-	\uni1E20.cv21 \uni1E4C \uni1E4E \uni1E50 \uni1E52 \uni1ECC \uni1ECE 
-	\uni1ED0 \uni1ED2 \uni1ED4 \uni1ED6 \uni1ED8 \uni1EDA \uni1EDC \uni1EDE 
-	\uni1EE0 \uni1EE2 \uni20A2 \uni20B2 \uni20B2.ss05 \uni20B5 \uni20BE 
-	\uni216D \uni2180 \uni2182 \uni2185 ];
+    @kc85_second_3 = [\O \C \G \Q \Ccedilla \Ograve \Oacute \Ocircumflex \Otilde \Odieresis \Oslash 
+	\Gcommaaccent \Cacute \Ccircumflex \Cdotaccent \Ccaron \Gcircumflex 
+	\Gbreve \Gdotaccent \Omacron \Obreve \OE \Ohungarumlaut \uni0187 
+	\uni0193 \uni019F \Ohorn \uni01A2 \uni01D1 \uni01E4 \Gcaron \uni01EA 
+	\uni01EC \uni01F4 \Oslashacute \uni022A \uni022C \uni022E \uni0230 
+	\uni020C \uni020E \uni023B \uni024A \uni0298 \Omicron \Theta 
+	\Omicrontonos \uni03D8 \uni03F4 \uni03FE \uni041E \uni0421 \uni0404 
+	\uni0472 \uni047A \uni0480 \uni04AA \uni04BC \uni04BE \uni04E6 \uni04D8 
+	\uni04DA \uni04E8 \uni04EA \uni050C \uni051A \uni1E08 \uni1E20 \uni1E4C 
+	\uni1E4E \uni1E50 \uni1E52 \uni1ECC \uni1ECE \uni1ED0 \uni1ED2 \uni1ED4 
+	\uni1ED6 \uni1ED8 \uni1EDA \uni1EDC \uni1EDE \uni1EE0 \uni1EE2 
+	\colonmonetary \uni20A2 \Euro \uni20B2 \uni20B5 \uni20BE \uni216D 
+	\uni2180 \uni2185 \uni2182 \emptyset \G.cv21 \Gcircumflex.cv21 
+	\Gbreve.cv21 \Gdotaccent.cv21 \Gcommaaccent.cv21 \uni0193.cv21 
+	\uni01E4.cv21 \Gcaron.cv21 \uni01F4.cv21 \uni1E20.cv21 \Q.cv29 
+	\uni051A.cv29 \Euro.ss05 \uni20B2.ss05 \uni20B2.cv21 \uni2141.cv21 
+	\uni20B2.cv21.ss05 ];
     @kc85_second_4 = [\Dcroat \Lslash \lslash \uni0189 \uni0197 \uni019A \uni0244 \uni024C ];
     @kc85_second_5 = [\I \Iacute \Ibreve \Icircumflex \Idieresis \Idotaccent \Igrave \Imacron \Iogonek 
 	\Iota \Iotadieresis \Itilde \uni01CF \uni0208 \uni020A \uni0406 
@@ -8626,44 +8636,45 @@ lookup kern_Horizontal_kerning {
 	\uni22A2 \uni22A7 \uni22A8 \uni22A9 \uni22AB ];
     @kc85_second_23 = [\beta \mu \p \uni01BF \uni03BC \uni048F \uni0516 \uni1E55 \uni1E57 \uni2C64 
 	\uniA7B4 \uniA7B5 ];
-    @kc85_second_24 = [\c \cacute \ccaron \ccedilla \ccircumflex \cdotaccent \e \eacute \ebreve \ecaron 
-	\ecircumflex \edieresis \edotaccent \egrave \emacron \eogonek \o 
-	\oacute \obreve \ocircumflex \odieresis \oe \ograve \ohorn 
-	\ohungarumlaut \omacron \omicron \omicrontonos \oslash \oslashacute 
-	\otilde \six.cv16.onum \six.cv16.pnum \uni0188 \uni018D \uni01A3 
-	\uni01D2 \uni01DD \uni01EB \uni020D \uni020F \uni022B \uni022D \uni022F 
-	\uni0231 \uni023C \uni0247 \uni0255 \uni0258 \uni0259 \uni025A \uni0275 
-	\uni0276 \uni029B \uni03D9 \uni03F2 \uni03F5 \uni0435 \uni043E \uni0450 
-	\uni0451 \uni0473 \uni047B \uni04A9 \uni04AB \uni04D7 \uni04D9 \uni04DB 
-	\uni04E7 \uni04E9 \uni04EB \uni050D \uni1E09 \uni1E15 \uni1E17 \uni1E19 
-	\uni1E1B \uni1E1D \uni1E4D \uni1E4F \uni1E51 \uni1E53 \uni1EB9 \uni1EBB 
-	\uni1EBD \uni1EBF \uni1EC1 \uni1EC3 \uni1EC5 \uni1EC7 \uni1ECD \uni1ECF 
-	\uni1ED1 \uni1ED3 \uni1ED5 \uni1ED7 \uni1ED9 \uni1EDB \uni1EDD \uni1EDF 
-	\uni1EE1 \uni1EE3 \uni1F40 \uni1F41 \uni1F42 \uni1F43 \uni1F44 \uni1F45 
-	\uni1F78 \uni1F79 \uni20C0 \uni217D ];
-    @kc85_second_25 = [\c.sc \cacute.sc \ccaron.sc \ccedilla.sc \ccircumflex.sc \cdotaccent.sc \g.sc 
-	\gbreve.sc \gcaron.sc \gcircumflex.sc \gcommaaccent.sc 
-	\gdotaccent.sc \nine.cv09.onum \nine.cv19.onum \nine.onum \o.sc 
-	\oacute.sc \obreve.sc \ocircumflex.sc \odieresis.sc \ograve.sc 
-	\ohorn.sc \ohungarumlaut.sc \omacron.sc \omicron.sc \omicrontonos.sc 
-	\oslash.sc \oslashacute.sc \otilde.sc \q.sc \q.sc.cv29 \theta.sc 
-	\theta1.sc \uni0188.sc \uni01A3.sc \uni01D2.sc \uni01E5.sc 
-	\uni01EB.sc \uni01ED.sc \uni01F5.sc \uni020D.sc \uni020F.sc 
-	\uni022B.sc \uni022D.sc \uni022F.sc \uni0231.sc \uni023C.sc 
-	\uni0255.sc \uni0259.sc \uni025A.sc \uni025E.sc \uni0260.sc 
-	\uni0261.sc \uni0262.sc \uni0275.sc \uni0276.sc \uni0277.sc 
-	\uni0298.sc \uni029B.sc \uni02A0.sc \uni037C.sc \uni03D9.sc 
-	\uni03F2.sc \uni043E.sc \uni0441.sc \uni0444.loclBGR.sc \uni0454.sc 
-	\uni0473.sc \uni047B.sc \uni0481.sc \uni04AB.sc \uni04D9.sc 
-	\uni04DB.sc \uni04E7.sc \uni04E9.sc \uni04EB.sc \uni050D.sc 
-	\uni051B.sc \uni051B.sc.cv29 \uni1E09.sc \uni1E21.sc \uni1E4D.sc 
-	\uni1E4F.sc \uni1E51.sc \uni1E53.sc \uni1ECD.sc \uni1ECF.sc 
-	\uni1ED1.sc \uni1ED3.sc \uni1ED5.sc \uni1ED7.sc \uni1ED9.sc 
-	\uni1EDB.sc \uni1EDD.sc \uni1EDF.sc \uni1EE1.sc \uni1EE3.sc 
-	\uni1F40.sc \uni1F41.sc \uni1F42.sc \uni1F43.sc \uni1F44.sc 
-	\uni1F45.sc \uni1F78.sc \uni1F79.sc \uni217D.sc \uniA64D.sc 
-	\zero.cv10.onum \zero.cv10.zero.onum \zero.cv20.onum 
-	\zero.cv20.zero.onum \zero.onum \zero.zero.onum ];
+    @kc85_second_24 = [\o \e \c \ccedilla \egrave \eacute \ecircumflex \edieresis \ograve \oacute 
+	\ocircumflex \otilde \odieresis \oslash \cacute \ccircumflex 
+	\cdotaccent \ccaron \emacron \ebreve \edotaccent \eogonek \ecaron 
+	\omacron \obreve \oe \ohungarumlaut \uni0188 \uni018D \ohorn \uni01A3 
+	\uni01D2 \uni01DD \uni01EB \oslashacute \uni022B \uni022D \uni022F 
+	\uni0231 \uni020D \uni020F \uni023C \uni0247 \uni0255 \uni0258 \uni0259 
+	\uni025A \uni0275 \uni0276 \uni029B \omicrontonos \uni03D9 \uni03F2 
+	\uni03F5 \uni0435 \uni043E \uni0450 \uni0451 \uni0473 \uni047B \uni04A9 
+	\uni04DB \uni04AB \uni04D7 \uni04E7 \uni04D9 \uni04E9 \uni04EB \uni050D 
+	\uni1E09 \uni1E15 \uni1E17 \uni1E1D \uni1E4D \uni1E4F \uni1E51 \uni1E53 
+	\uni1E19 \uni1E1B \uni1EB9 \uni1EBB \uni1EBD \uni1EBF \uni1EC1 \uni1EC3 
+	\uni1EC5 \uni1EC7 \uni1ECD \uni1ECF \uni1ED1 \uni1ED3 \uni1ED5 \uni1ED7 
+	\uni1ED9 \uni1EDB \uni1EDD \uni1EDF \uni1EE1 \uni1EE3 \uni20C0 \uni217D 
+	\uni1F40 \uni1F41 \uni1F42 \uni1F43 \uni1F44 \uni1F45 \uni1F78 \uni1F79 
+	\omicron \six.cv16.pnum \six.cv16.onum \uni0262.cv21 \uni029B.cv21 ];
+    @kc85_second_25 = [\c.sc \g.sc \o.sc \q.sc \ccedilla.sc \ograve.sc \oacute.sc \ocircumflex.sc 
+	\otilde.sc \odieresis.sc \oslash.sc \cacute.sc \ccircumflex.sc 
+	\cdotaccent.sc \ccaron.sc \gcircumflex.sc \gbreve.sc \gdotaccent.sc 
+	\gcommaaccent.sc \omacron.sc \obreve.sc \ohungarumlaut.sc 
+	\uni0188.sc \ohorn.sc \uni01A3.sc \uni01D2.sc \uni01E5.sc \gcaron.sc 
+	\uni01EB.sc \uni01ED.sc \uni01F5.sc \oslashacute.sc \uni020D.sc 
+	\uni020F.sc \uni022B.sc \uni022D.sc \uni022F.sc \uni0231.sc 
+	\uni023C.sc \uni0255.sc \uni0259.sc \uni025A.sc \uni025E.sc 
+	\uni0260.sc \uni0261.sc \uni0262.sc \uni0275.sc \uni0276.sc 
+	\uni0277.sc \uni0298.sc \uni029B.sc \uni02A0.sc \uni037C.sc \theta.sc 
+	\omicron.sc \omicrontonos.sc \theta1.sc \uni03D9.sc \uni03F2.sc 
+	\uni043E.sc \uni0441.sc \uni0454.sc \uni0473.sc \uni047B.sc 
+	\uni0481.sc \uni04AB.sc \uni04D9.sc \uni04DB.sc \uni04E7.sc 
+	\uni04E9.sc \uni04EB.sc \uni050D.sc \uni051B.sc \uni1E09.sc 
+	\uni1E21.sc \uni1E4D.sc \uni1E4F.sc \uni1E51.sc \uni1E53.sc 
+	\uni1ECD.sc \uni1ECF.sc \uni1ED1.sc \uni1ED3.sc \uni1ED5.sc 
+	\uni1ED7.sc \uni1ED9.sc \uni1EDB.sc \uni1EDD.sc \uni1EDF.sc 
+	\uni1EE1.sc \uni1EE3.sc \uni1F40.sc \uni1F41.sc \uni1F42.sc 
+	\uni1F43.sc \uni1F44.sc \uni1F45.sc \uni1F78.sc \uni1F79.sc 
+	\uni217D.sc \uniA64D.sc \uni0444.loclBGR.sc \zero.onum \nine.onum 
+	\nine.cv09.onum \zero.cv10.onum \nine.cv19.onum \zero.cv20.onum 
+	\q.sc.cv29 \uni051B.sc.cv29 \zero.zero.onum \zero.cv10.zero.onum 
+	\zero.cv20.zero.onum \uni0260.sc.cv21 \uni0262.sc.cv21 
+	\uni029B.sc.cv21 ];
     @kc85_second_26 = [\cedilla \comma \eight.cv08.subscript \eight.cv08.subscript.pnum 
 	\eight.cv08.subscript.tnum \eight.cv18.subscript 
 	\eight.cv18.subscript.pnum \eight.cv18.subscript.tnum 
@@ -13168,6 +13179,7 @@ feature mkmk {
       lookup mkmk_mark_to_mark_bottom_center;
       lookup mkmk_mark_to_mark_greek_top_center;
 } mkmk;
+#Mark attachment classes (defined in GDEF, used in lookupflags)
 
 @GDEF_Simple = [\o \n \u \d \b \p \q \h \m \e \c \f \r \t \v \w \x \y \l \k \s \a \g \z \space \A \V \H 
 	\O \E \F \P \N \L \I \D \B \T \R \C \G \Q \U \M \Z \X \Y \W \J \K \S \eight \six \nine \three \zero 
