@@ -10493,17 +10493,17 @@ lookup kern_Horizontal_kerning {
 lookup mark_Mark_positioning {
   lookupflag 0;
   markClass [\uni0345 ] <anchor 626 -90> @bottom_ypogegrammeni;
-  markClass [\uni1FBE \uni1FBE.sc ] <anchor -4 -90> @bottom_ypogegrammeni;
+  markClass [\uni1FBE.sc \uni1FBE.comb ] <anchor -4 -90> @bottom_ypogegrammeni;
   markClass [\uni0328 ] <anchor 713 0> @bottom_right;
   markClass [\uni031B ] <anchor 261 1480> @top_right;
   markClass [\uni0326 \uni0325 \dotbelowcomb \uni0331 \uni032D \uni0330 \uni032E \uni0324 \uni032F \uni035F ] <anchor 642 0> @bottom_center;
   markClass [\uni0329 \uni0332 ] <anchor 512 0> @bottom_center;
   markClass [\gravecomb \acutecomb \uni0302 \tildecomb \uni030A \uni0304 \uni0306 \uni0307 \uni030C \uni030B \uni030F \uni0311 \uni0314 \uni0315 \uni0485 \uni0486 \hookabovecomb \uni0313 \uni0312 \uni0340 \uni0341 \uni0343 \uni0342 \uni0357 \uni030D \acutecomb_uni0307 \uni0302_gravecomb \uni0302_acutecomb \uni0302_hookabovecomb \uni0306_gravecomb \uni0306_acutecomb \uni0306_hookabovecomb \uni030A_gravecomb \uni030A_acutecomb \uni030A_hookabovecomb \gravecomb.case \acutecomb.case \uni0302.case \tildecomb.case \uni0304.case \uni0306.case \uni0307.case \uni0308.case \uni030B.case \uni030C.case \uni030F.case \uni0306_gravecomb.case \uni0306_acutecomb.case \uni0306_hookabovecomb.case \tildecomb_uni0308.case \uni030C_uni0307.case ] <anchor 825 1040> @top_center;
   markClass [\uni0308 ] <anchor 893 1040> @top_center;
-  markClass [\dieresistonos \uni1FC1 \uni1FED \uni1FEE ] <anchor 397 1040> @top_center;
   markClass [\uni0483 \uni0484 \uni0487 \uni1DC4 \uni1DC5 \uni1DC6 \uni1DC7 ] <anchor 695 1040> @top_center;
-  markClass [\uni1FC0 ] <anchor 470 1040> @top_center;
   markClass [\uni0308_gravecomb \uni0308_acutecomb \uni0308_uni030C ] <anchor 527 1040> @top_center;
+  markClass [\dieresistonos.comb \uni1FC1.comb \uni1FED.comb \uni1FEE.comb ] <anchor 397 1040> @top_center;
+  markClass [\uni1FC0.comb ] <anchor 470 1040> @top_center;
   markClass [\uni0327 ] <anchor 623 -20> @bottom_cedilla;
   pos base [\o \omicrontonos \uni043E \uni1F40 \uni1F41 \uni1F42 \uni1F43 \uni1F44 \uni1F45 \uni1F78 \uni1F79 \omicron ] <anchor 444 -20> mark @bottom_cedilla
 	<anchor 631 1040> mark @top_center
@@ -12742,15 +12742,15 @@ lookup mkmk_mark_to_mark_bottom_center {
 lookup mkmk_mark_to_mark_greek_top_center {
   lookupflag 0;
   markClass [\tonos2 ] <anchor 325 1040> @mkmk_greek_top_center;
-  pos mark [\tonos \uni1FFD ] <anchor 255 1376> mark @mkmk_greek_top_center;
-  pos mark [\dieresistonos \uni1FED \uni1FEE ] <anchor 502 1632> mark @mkmk_greek_top_center;
-  pos mark [\uni1FCD \uni1FCE \uni1FDD \uni1FDE ] <anchor 502 1436> mark @mkmk_greek_top_center;
-  pos mark [\uni1FCF \uni1FDF ] <anchor 596 1751> mark @mkmk_greek_top_center;
-  pos mark [\uni1FBD \uni1FBF ] <anchor 325 1436> mark @mkmk_greek_top_center;
-  pos mark [\uni1FC0 ] <anchor 530 1376> mark @mkmk_greek_top_center;
-  pos mark [\uni1FC1 ] <anchor 523 1754> mark @mkmk_greek_top_center;
-  pos mark [\uni1FEF ] <anchor 453 1376> mark @mkmk_greek_top_center;
-  pos mark [\uni1FFE ] <anchor 327 1436> mark @mkmk_greek_top_center;
+  pos mark [\tonos.comb \uni1FFD.comb ] <anchor 255 1376> mark @mkmk_greek_top_center;
+  pos mark [\dieresistonos.comb \uni1FED.comb \uni1FEE.comb ] <anchor 502 1632> mark @mkmk_greek_top_center;
+  pos mark [\uni1FBD.comb \uni1FBF.comb ] <anchor 325 1436> mark @mkmk_greek_top_center;
+  pos mark [\uni1FC0.comb ] <anchor 530 1376> mark @mkmk_greek_top_center;
+  pos mark [\uni1FC1.comb ] <anchor 523 1754> mark @mkmk_greek_top_center;
+  pos mark [\uni1FCD.comb \uni1FCE.comb \uni1FDD.comb \uni1FDE.comb ] <anchor 502 1436> mark @mkmk_greek_top_center;
+  pos mark [\uni1FCF.comb \uni1FDF.comb ] <anchor 596 1751> mark @mkmk_greek_top_center;
+  pos mark [\uni1FEF.comb ] <anchor 453 1376> mark @mkmk_greek_top_center;
+  pos mark [\uni1FFE.comb ] <anchor 327 1436> mark @mkmk_greek_top_center;
   pos mark [\tonos2 ] <anchor 385 1376> mark @mkmk_greek_top_center;
 } mkmk_mark_to_mark_greek_top_center;
 
@@ -14066,7 +14066,11 @@ feature mkmk {
 	\tildecomb.case \uni0304.case \uni0306.case \uni0307.case \uni0308.case 
 	\uni030B.case \uni030C.case \uni030F.case \uni0306_gravecomb.case 
 	\uni0306_acutecomb.case \uni0306_hookabovecomb.case 
-	\tildecomb_uni0308.case \uni030C_uni0307.case \tonos2 ];
+	\tildecomb_uni0308.case \uni030C_uni0307.case \tonos.comb 
+	\dieresistonos.comb \uni1FBD.comb \uni1FBE.comb \uni1FBF.comb \uni1FC0.comb 
+	\uni1FC1.comb \uni1FCD.comb \uni1FCE.comb \uni1FCF.comb \uni1FDD.comb 
+	\uni1FDE.comb \uni1FDF.comb \uni1FED.comb \uni1FEE.comb \uni1FEF.comb 
+	\uni1FFD.comb \uni1FFE.comb \tonos2 ];
 
 table GDEF {
   GlyphClassDef @GDEF_Simple, @GDEF_Ligature, @GDEF_Mark, ;
