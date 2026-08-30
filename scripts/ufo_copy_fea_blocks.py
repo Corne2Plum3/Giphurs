@@ -59,7 +59,7 @@ def copy_fea_blocks(fea_src: Path, fea_dst: Path, mode: str, names: list[str]) -
                     dst_index = i
                     break
             if dst_index is None:
-                logger.info(f'{mode} "{statement_target}" not found in destination "{fea_dst}".')
+                logger.warning(f'{mode} "{statement_target}" not found in destination "{fea_dst}".')
             # Copy
             if dst_index is not None:  # statement both in src and dst
                 dst_ast.statements[dst_index] = src_ast.statements[src_index]  # pyright: ignore[reportUnknownMemberType]
@@ -73,7 +73,7 @@ def copy_fea_blocks(fea_src: Path, fea_dst: Path, mode: str, names: list[str]) -
             f.write(dst_ast.asFea())
 
     except Exception as err:
-        logger.critical(f'{err}')
+        logger.error(f'{err}')
         return 1
     
     logger.success(f'Done copying {mode} into "{fea_dst}".')  # pyright: ignore[reportUnknownMemberType]

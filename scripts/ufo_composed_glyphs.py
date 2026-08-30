@@ -94,9 +94,9 @@ def parse_composed_glyph_csv_line(line: str, index: int | None = None) -> Compos
     def _log_fail(msg: str, index: int | None):
         '''Logging when returning None because of invalid value.'''
         if index is None:
-            logger.warning(f'Failed to parse line "{line}": {msg}')
+            logger.error(f'Failed to parse line "{line}": {msg}')
         else:
-            logger.warning(f'Failed to parse line {index}: {msg}')
+            logger.error(f'Failed to parse line {index}: {msg}')
 
     data: list[str] = line.split(',')
 
@@ -249,7 +249,7 @@ def build_composed_glyph_from_csv(csv_file: Path | list[Path], ufo_dir: Path, we
         logger.info(f'Reading "{csv_file}"...')
         cg_list = parse_composed_glyph_csv(csv_file, weight, style, 2)  # priority is 0 by default
     if len(cg_list) == 0:
-        logger.info('No glyph has been generated, nothing to build.')
+        logger.warning('No glyph has been generated, nothing to build.')
         return 0
 
     # Restrict to the requested glyphs (+ dependencies) if asked
@@ -265,7 +265,7 @@ def build_composed_glyph_from_csv(csv_file: Path | list[Path], ufo_dir: Path, we
     cg_list = set_glyph_priorities_from_list(cg_list)
     total_glyphs: int = len(cg_list)
     if len(cg_list) == 0:
-        logger.warning('No glyph has been generated.')
+        logger.error('No glyph has been generated.')
         return -1
 
     max_priority: int = cg_list[0].priority
@@ -295,7 +295,7 @@ def build_composed_glyph_from_csv(csv_file: Path | list[Path], ufo_dir: Path, we
     else:
         logger.success(f'Sucessfully generated {total_glyphs - error_count} / {total_glyphs} glyphs into "{ufo_dir}"')  # pyright: ignore[reportUnknownMemberType]
         if error_count > 0:
-            logger.warning(f'Failed to generate {error_count} glyphs.')
+            logger.error(f'Failed to generate {error_count} glyphs.')
 
     logger.warning(f'PLEASE OPEN AND SAVE "{ufo_dir}" WITH FONTFORGE TO COMPLETE THE PROCESS!!!' )
 
@@ -316,15 +316,15 @@ if __name__ == '__main__':
     try:
         args = parser.parse_args()
     except Exception as err:
-        logger.error(err)
+        logger.critical(err)
         print(parser.print_help())
         exit(1)
     for csv_file in args.csv_config:
         if not Path(csv_file).exists():
-            logger.error(f'CSV config not found: "{args.csv_config}"')
+            logger.critical(f'CSV config not found: "{args.csv_config}"')
             exit(1)
     if not Path(args.ufo_dir).exists():
-        logger.error(f'UFO not found: "{args.ufo_dir}"')
+        logger.critical(f'UFO not found: "{args.ufo_dir}"')
         exit(1)
 
     # Run
