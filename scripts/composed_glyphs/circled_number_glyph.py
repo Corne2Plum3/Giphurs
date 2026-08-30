@@ -17,7 +17,7 @@ class Circled_Number_Glyph(Composed_Glyph):
     def __init__(self, name: str, weight: str | None, styles: int, unlink_references: bool, glyphs: list[str]):
         super().__init__(name, weight, styles, glyphs)
         self.unlink_references = unlink_references
-    
+
     def generate_glif(self, weight: str, style: int, ufo_dir: Path) -> int:
         # Parameters check
         super().generate_glif(weight, style, ufo_dir)
@@ -36,7 +36,7 @@ class Circled_Number_Glyph(Composed_Glyph):
             '400' : 120,
             '1000': 40
         }
-        
+
         # Open XML file and clean it
         glif_filename: Path | None = get_glif_from_name(self.name, ufo_dir)
         if glif_filename is None:
@@ -73,7 +73,7 @@ class Circled_Number_Glyph(Composed_Glyph):
         xml_tree = add_component(xml_tree, base)  # pyright: ignore[reportArgumentType, reportAssignmentType]
 
         # Place the digits
-        if du is not None:  # pyright: ignore[reportUnnecessaryComparison]
+        if du is not None:
             y_offset: int = -499
             middle: float = base_circle_metrics["left_kern"] + base_circle_metrics["raw_width"] / 2
             xt: float
@@ -85,7 +85,7 @@ class Circled_Number_Glyph(Composed_Glyph):
                 xml_tree = add_component(xml_tree, du, x_offset=xu, y_offset=y_offset)  # pyright: ignore[reportAssignmentType, reportArgumentType]
             else:  # two digits : tens = digit_1 and units = digit_2 (!)
                 both_digits_length = (dt_glyph_metrics["glyph_width"] + du_glyph_metrics["glyph_width"]) * TWO_DIGITS_WIDTH_COEF[weight]
-                xt = middle - both_digits_length / 2 + TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] * (Composed_Glyph.SUPS_HEIGHT / Composed_Glyph.DIGITS_HEIGHT) 
+                xt = middle - both_digits_length / 2 + TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] * (Composed_Glyph.SUPS_HEIGHT / Composed_Glyph.DIGITS_HEIGHT)
                 xu = middle + both_digits_length / 2 - TWO_DIGITS_OVERLAP[weight] * TWO_DIGITS_WIDTH_COEF[weight] * (Composed_Glyph.SUPS_HEIGHT / Composed_Glyph.DIGITS_HEIGHT) - du_glyph_metrics["glyph_width"] * TWO_DIGITS_WIDTH_COEF[weight]
                 if style & Composed_Glyph.STYLE_ITALIC:  # if is italic
                     xt -= abs(y_offset) / tan(pi/2-Composed_Glyph.ITALIC_SLANT) * TWO_DIGITS_WIDTH_COEF[weight]
@@ -102,6 +102,5 @@ class Circled_Number_Glyph(Composed_Glyph):
 
         # Unlink reference (another save I know...)
         if self.unlink_references:
-            unlink_references(self.name, ufo_dir)
-
+            unlink_references(self.name, ufo_dir, [1, 2, 3, 4])
         return 0

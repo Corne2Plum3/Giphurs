@@ -91,22 +91,21 @@ Assuming you are using FontForge:
 6. **Avoid** if possible to have the **first point** in a outline at the **same place** than another point.
 7. **Avoid** overlapping segments, otherwise rendering at small size might be shit (see image below).
     ![image](./documentation/contributing_overlapping_segments.jpg)
-8. If possible, try to **not remove overlaps** if your glyph is made of several segments, and make the outermost outline going **clockwise**.
-    > [!CAUTION]
-    > Only exception to this rule are `{zero|one|...|nine}[.cv01-20][.ss06-ss07].superior` which must have only one outline that's **counterclockwise**, otherwise numbers in a black circle won't be generated correctly.
-9. Ensure each outline are in the same order and includes the same amount of points across all weights. The direction of each outline must be the same.
+8. If possible, try to **not remove overlaps** if your glyph is made of several segments.
+9. Make the outermost outline going **clockwise**.
+10. Ensure each outline are in the same order and includes the same amount of points across all weights. The direction of each outline must be the same.
     > [!NOTE]
     > The normal and italic version of the font are independent.
-10. All extremas in curves **must** be a point, especially for the outermost contour, unless interpolation between weights forces it and there are no way around. If possible, try to use the least amount of points.
-11. You must **not** change existing font's metadata (name, version, etc.) unless this is really needed. Version is only done by the project's maintainer(s) when making a new release of the font.
-12. If FontForge crashes and when restarting it asks you to recover your file, **do not accept**. From experience, doing this breaks the font.
-13. Do **not** save the font as SFD file (what you get using the _File / Save_ option). Instead, export the font with _file / Generate Fonts_ with **UFO3** format, **without bitmap** font and **do not rename** glyphs. Ensure you are using these options:
+11. All extremas in curves **must** be a point, especially for the outermost contour, unless interpolation between weights forces it and there are no way around. If possible, try to use the least amount of points.
+12. You must **not** change existing font's metadata (name, version, etc.) unless this is really needed. Version is only done by the project's maintainer(s) when making a new release of the font. If you wish to do such changes, open an issue.
+13. If FontForge crashes and when restarting it asks you to recover your file, **do not accept**. From experience, doing this breaks the font.
+14. Do **not** save the font as SFD file (what you get using the _File / Save_ option). Instead, export the font with _file / Generate Fonts_ with **UFO3** format, **without bitmap** font and **do not rename** glyphs. Ensure you are using these options:
     ![image](./documentation/contributing_export_options.jpg)
     > [!IMPORTANT]
     > If you use other options, you **must** show in your pull request what export options you used and explain why.
-14. All glyphs in all UFOs must be in the same order (=`glyphs/fontinfo.plist` are the same).
-15. **Do NOT** manually edit the UFOs file with something else than FontForge before commit.
-16. The font **must** be able to compile with `make build`, and all files are generated. The `make tests` command report **must not** have any **FATAL** or **FAIL** _(unless this is impossible to avoid but this is very rare)_.
+15. All glyphs in all UFOs must be in the same order (=`glyphs/fontinfo.plist` are the same).
+16. **Do NOT** manually edit the UFOs file with something else than FontForge before commit.
+17. The font **must** be able to compile with `make build`, and all files are generated. The `make tests` command report **must not** have any **FATAL** or **FAIL** _(unless this is impossible to avoid but this is very rare)_.
 
 > [!TIP]
 > If you are adding new glyphs, consider the following:
