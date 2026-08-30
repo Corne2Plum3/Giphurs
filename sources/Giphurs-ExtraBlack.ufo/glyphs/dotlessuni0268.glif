@@ -7,18 +7,18 @@
   <anchor x="582" y="0" name="bottom_right"/>
   <outline>
     <contour>
-      <point x="0" y="400" type="line"/>
-      <point x="0" y="446"/>
-      <point x="0" y="594"/>
-      <point x="0" y="640" type="curve"/>
-      <point x="804" y="640" type="line"/>
       <point x="804" y="400" type="line"/>
+      <point x="804" y="640" type="line"/>
+      <point x="0" y="640" type="line"/>
+      <point x="0" y="594"/>
+      <point x="0" y="446"/>
+      <point x="0" y="400" type="curve"/>
     </contour>
     <contour>
-      <point x="222" y="0" type="line"/>
-      <point x="222" y="1040" type="line"/>
-      <point x="582" y="1040" type="line"/>
       <point x="582" y="0" type="line"/>
+      <point x="582" y="1040" type="line"/>
+      <point x="222" y="1040" type="line"/>
+      <point x="222" y="0" type="line"/>
     </contour>
   </outline>
 </glyph>

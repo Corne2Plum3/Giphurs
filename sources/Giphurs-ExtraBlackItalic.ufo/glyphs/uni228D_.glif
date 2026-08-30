@@ -5,21 +5,20 @@
   <note>union (U+222A) as base + the dot from i.superior</note>
   <outline>
     <contour>
-      <point x="557" y="734" type="curve" smooth="yes"/>
-      <point x="557" y="788"/>
-      <point x="599" y="830"/>
-      <point x="653" y="830" type="curve" smooth="yes"/>
-      <point x="707" y="830"/>
-      <point x="749" y="788"/>
-      <point x="749" y="734" type="curve" smooth="yes"/>
-      <point x="749" y="680"/>
-      <point x="707" y="638"/>
-      <point x="653" y="638" type="curve" smooth="yes"/>
-      <point x="599" y="638"/>
       <point x="557" y="680"/>
+      <point x="599" y="638"/>
+      <point x="653" y="638" type="curve" smooth="yes"/>
+      <point x="707" y="638"/>
+      <point x="749" y="680"/>
+      <point x="749" y="734" type="curve" smooth="yes"/>
+      <point x="749" y="788"/>
+      <point x="707" y="830"/>
+      <point x="653" y="830" type="curve" smooth="yes"/>
+      <point x="599" y="830"/>
+      <point x="557" y="788"/>
+      <point x="557" y="734" type="curve" smooth="yes"/>
     </contour>
     <contour>
-      <point x="139" y="734" type="line" smooth="yes"/>
       <point x="133" y="700"/>
       <point x="130" y="667"/>
       <point x="130" y="635" type="curve" smooth="yes"/>
@@ -43,6 +42,7 @@
       <point x="319" y="734" type="curve" smooth="yes"/>
       <point x="409" y="1244" type="line"/>
       <point x="229" y="1244" type="line"/>
+      <point x="139" y="734" type="line" smooth="yes"/>
     </contour>
   </outline>
 </glyph>

@@ -5,7 +5,6 @@
   <note>radical + three.superior</note>
   <outline>
     <contour>
-      <point x="416" y="1317" type="curve" smooth="yes"/>
       <point x="358" y="1317" type="line"/>
       <point x="358" y="1202" type="line"/>
       <point x="417" y="1202" type="line" smooth="yes"/>
@@ -46,27 +45,28 @@
       <point x="584" y="1439" type="curve" smooth="yes"/>
       <point x="584" y="1366"/>
       <point x="522" y="1317"/>
+      <point x="416" y="1317" type="curve" smooth="yes"/>
     </contour>
     <contour>
-      <point x="1600" y="1668" type="line"/>
-      <point x="1600" y="1514" type="line"/>
+      <point x="1320" y="1668" type="line"/>
       <point x="1128" y="1514" type="line"/>
-      <point x="1320" y="1668" type="line"/>
+      <point x="1600" y="1514" type="line"/>
+      <point x="1600" y="1668" type="line"/>
     </contour>
     <contour>
-      <point x="140" y="660" type="line"/>
-      <point x="320" y="660" type="line"/>
-      <point x="512" y="500" type="line"/>
       <point x="140" y="500" type="line"/>
+      <point x="512" y="500" type="line"/>
+      <point x="320" y="660" type="line"/>
+      <point x="140" y="660" type="line"/>
     </contour>
     <contour>
-      <point x="553" y="0" type="line"/>
-      <point x="320" y="660" type="line"/>
-      <point x="512" y="660" type="line"/>
-      <point x="652" y="224" type="line"/>
-      <point x="1128" y="1668" type="line"/>
-      <point x="1320" y="1668" type="line"/>
       <point x="751" y="0" type="line"/>
+      <point x="1320" y="1668" type="line"/>
+      <point x="1128" y="1668" type="line"/>
+      <point x="652" y="224" type="line"/>
+      <point x="512" y="660" type="line"/>
+      <point x="320" y="660" type="line"/>
+      <point x="553" y="0" type="line"/>
     </contour>
   </outline>
 </glyph>

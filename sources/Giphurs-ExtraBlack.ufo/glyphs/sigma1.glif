@@ -6,7 +6,6 @@
   <anchor x="600" y="30" name="bottom_center"/>
   <outline>
     <contour>
-      <point x="600" y="320" type="line"/>
       <point x="463" y="320"/>
       <point x="410" y="383"/>
       <point x="410" y="520" type="curve" smooth="yes"/>
@@ -40,6 +39,7 @@
       <point x="1070" y="86"/>
       <point x="976" y="319"/>
       <point x="666" y="319" type="curve"/>
+      <point x="600" y="320" type="line"/>
     </contour>
   </outline>
 </glyph>

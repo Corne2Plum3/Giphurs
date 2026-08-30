@@ -5,19 +5,18 @@
   <anchor x="822" y="1200" name="top_center"/>
   <outline>
     <contour>
-      <point x="132" y="1200" type="line"/>
       <point x="75" y="880" type="line"/>
       <point x="633" y="880" type="line"/>
       <point x="690" y="1200" type="line"/>
+      <point x="132" y="1200" type="line"/>
     </contour>
     <contour>
-      <point x="1512" y="1200" type="line"/>
       <point x="954" y="1200" type="line"/>
       <point x="897" y="880" type="line"/>
       <point x="1455" y="880" type="line"/>
+      <point x="1512" y="1200" type="line"/>
     </contour>
     <contour>
-      <point x="189" y="880" type="line"/>
       <point x="162" y="835"/>
       <point x="74" y="676"/>
       <point x="74" y="466" type="curve" smooth="yes"/>
@@ -43,6 +42,7 @@
       <point x="438" y="621"/>
       <point x="481" y="809"/>
       <point x="633" y="880" type="curve"/>
+      <point x="189" y="880" type="line"/>
     </contour>
   </outline>
 </glyph>

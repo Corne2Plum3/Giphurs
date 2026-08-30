@@ -1,7 +1,7 @@
 """
 Various useful functions to interact with ufo directories, and more especially the glyphs inside.
 
-Note: All glyphs must be located to a folder called "glyphs" to work correctly.   
+Note: All glyphs must be located to a folder called "glyphs" to work correctly.
 """
 import copy
 from logger import configure_logging
@@ -10,6 +10,7 @@ import xml.etree.ElementTree as ET
 from fontTools.feaLib.parser import Parser  # pyright: ignore[reportMissingTypeStubs]
 from fontTools.feaLib.ast import (    # pyright: ignore[reportMissingTypeStubs]
     Block,
+    Element,
     FeatureBlock,
     FeatureFile,
     GlyphClass,
@@ -144,7 +145,7 @@ def add_glyph_reference_to_sequence(src_glif_xml_tree: ET.ElementTree,
         for element in xml_outline_list:  # delete the already existing ones
             output_xml_root.remove(element)
         ET.SubElement(output_xml_root, 'outline')
-    
+
     # Copy the anchors
     if copy_anchors:
         for src_anchor in src_anchor_list:
@@ -173,7 +174,7 @@ def add_glyph_reference_to_sequence(src_glif_xml_tree: ET.ElementTree,
     ET.SubElement(dst_xml_outline, "component", new_component_attrib)
 
     # Update the advance value
-    new_width: int = int(output_xml_advance.attrib['width']) + kern + get_glyph_metrics(src_glyph_name, ufo_dir)['glyph_width']    
+    new_width: int = int(output_xml_advance.attrib['width']) + kern + get_glyph_metrics(src_glyph_name, ufo_dir)['glyph_width']
     output_xml_advance.attrib['width'] = str(new_width)
 
     return output_glif_xml_tree
@@ -184,7 +185,7 @@ def clean_glyph(glif_xml_tree: ET.ElementTree) -> ET.ElementTree | None:
 
     Args:
         glif_xml_tree: output of `ET.parse()` from the .glif file to clear.
-    
+
     Return:
         A new XML `ElementTree` object, if success, `None` if fail.
     '''
@@ -197,11 +198,11 @@ def clean_glyph(glif_xml_tree: ET.ElementTree) -> ET.ElementTree | None:
     if root is None:
         logger.error('Couldn\'t find root of glif_xml_tree')
         return None
-    
-    # Clear anchors 
+
+    # Clear anchors
     for element in root.findall('anchor'):
        root.remove(element)
-    
+
     # Clear outline content
     outline: ET.Element[str] | None = root.find('outline')
     if outline is None:
@@ -210,13 +211,42 @@ def clean_glyph(glif_xml_tree: ET.ElementTree) -> ET.ElementTree | None:
 
     return tree
 
+def reverse_points(points: list[ET.Element]) -> list[ET.Element]:
+    """
+    Reverse a closed contour's winding direction. Coordinates are taken in
+    reverse order, but `type`/`smooth` are shifted by one point, since in
+    UFO a segment's type is stored on the point that *ends* it — flipping
+    direction moves that end point too.
+    """
+    n = len(points)
+    if n == 0:
+        return []
+ 
+    oncurve_idxs = [i for i, p in enumerate(points) if p.get("type") is not None]
+    if not oncurve_idxs:
+        # an all-off-curve contour (e.g. a TrueType-style implied-on-curve
+        # contour) -- reversing it is just reversing the point order.
+        return [copy.deepcopy(p) for p in reversed(points)]
+ 
+    new_points = [copy.deepcopy(p) for p in points]
+ 
+    m = len(oncurve_idxs)
+    for k, idx in enumerate(oncurve_idxs):
+        next_idx = oncurve_idxs[(k + 1) % m]
+        point_type = points[next_idx].get("type")
+        if point_type is not None:
+            new_points[idx].set("type", point_type)
+ 
+    new_points.reverse()
+    return new_points
+
 def set_glyph_width(glif_xml_tree: ET.ElementTree, width: int) -> ET.ElementTree | None:
     '''
         Set the advance width value of a glyph.
 
         Args:
         glif_xml_tree: output of `ET.parse()` from the .glif file to clear.
-    
+
         Return:
             A new XML `ElementTree` object, if success, `None` if fail.
     '''
@@ -228,7 +258,7 @@ def set_glyph_width(glif_xml_tree: ET.ElementTree, width: int) -> ET.ElementTree
     if root is None:
         logger.error('Couldn\'t find root of glif_xml_tree')
         return None
-    
+
     # Set advance value
     if root.find('advance') is None:
         root.append(ET.Element('advance', {'width': str(width)}))
@@ -348,7 +378,7 @@ def get_glyph_points_coordinates(glyph_name: str, ufo_dir: Path) -> list[tuple[i
         glyph_name: The name of the glyph
         ufo_dir: The ufo directory the glyph is from
     Returns:
-        list: list of tuples (int, int) with the coordinate of all points from all contours (`[(x1, y1), (x2, y2), ...]`)    
+        list: list of tuples (int, int) with the coordinate of all points from all contours (`[(x1, y1), (x2, y2), ...]`)
     """
     glif: Path | None = get_glif_from_name(glyph_name, ufo_dir)
     if glif is None:
@@ -472,7 +502,7 @@ def get_kerning(glyph_first: str, glyph_second: str, ufo_dir: Path) -> float | i
         glyph_first: Name of the first glyph
         glyph_second: Name of the second glyph
         ufo_dir: .ufo file to look at.
-    Note: 
+    Note:
         Given how this is implemented right now, the script and language aren't checked, and
         thus, only the first lookup table found in the `feature kern` block is used.
     Returns:
@@ -495,13 +525,13 @@ def get_kerning(glyph_first: str, glyph_second: str, ufo_dir: Path) -> float | i
     for statement in feature_file.statements:
         if isinstance(statement, GlyphClassDefinition):
             glyph_classes[statement.name] = list(statement.glyphSet())
-            
+
         if isinstance(statement, LookupBlock):
             lookups[statement.name] = statement
             for sub_statement in statement.statements:
                 if isinstance(statement, GlyphClassDefinition):
                     glyph_classes[statement.name] = statement.glyphs
-            
+
         if isinstance(statement, FeatureBlock) and statement.name == "kern":
             feature_kern_block = statement
             for sub_statement in statement.statements:
@@ -610,7 +640,7 @@ def move_glyph(glyph_name: str, ufo_dir: Path, x: int, y: int, move_points: bool
                     else:
                         outline_element.attrib["yOffset"] = str(y)
         # ignore other type of elements, keep them as is
-    
+
     # Save
     try:
         xml_tree.write(glif, encoding="UTF-8", xml_declaration=True)
@@ -619,12 +649,13 @@ def move_glyph(glyph_name: str, ufo_dir: Path, x: int, y: int, move_points: bool
         return 1
     return 0
 
-def unlink_references(glyph_name: str, ufo_dir: Path) -> int:
+def unlink_references(glyph_name: str, ufo_dir: Path, reversed_contours: list[int] | None = None) -> int:
     """
     Replaces all components of a glyph (references towards other glyphs) by points. Changes UFO file.
     Args:
         glyph_name: The name of the glyph where to apply the transformation
         ufo_dir: The ufo directory the glyph is from
+        reversed_countours: List of countour numbers (starting from 0) where the outline should be reversed
     Returns:
         `0` if success, non-zero otherwise.
     """
@@ -643,7 +674,7 @@ def unlink_references(glyph_name: str, ufo_dir: Path) -> int:
         logger.error(f'<outline> not found.')
         return 1
 
-    # Find all <components> node
+    # Find all <components> node (before deletion)
     components_nodes: list[ET.Element[str]] = xml_outline.findall("component")
 
     # Get points from components_nodes
@@ -668,8 +699,10 @@ def unlink_references(glyph_name: str, ufo_dir: Path) -> int:
         xml_outline.remove(node)
 
     # Inject the new contours
-    for contour in xml_contours_list:
+    for n, contour in enumerate(xml_contours_list):
         new_node: ET.Element[str] = ET.SubElement(xml_outline, "contour", {})
+        if reversed_contours is not None and n in reversed_contours:
+            contour = reverse_points(contour)
         for point in contour:
             ET.SubElement(new_node, point.tag, point.attrib)
 
@@ -680,4 +713,3 @@ def unlink_references(glyph_name: str, ufo_dir: Path) -> int:
         logger.error(f'Failed to save {glif}: {err}')
         return 1
     return 0
-
