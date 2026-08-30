@@ -10,7 +10,6 @@ import xml.etree.ElementTree as ET
 from fontTools.feaLib.parser import Parser  # pyright: ignore[reportMissingTypeStubs]
 from fontTools.feaLib.ast import (    # pyright: ignore[reportMissingTypeStubs]
     Block,
-    Element,
     FeatureBlock,
     FeatureFile,
     GlyphClass,
@@ -100,7 +99,7 @@ def add_glyph_reference_to_sequence(src_glif_xml_tree: ET.ElementTree,
         try:
             return [node.attrib['base'] for node in xml_tree.getroot().find('outline').findall('component')]  # pyright: ignore[reportOptionalMemberAccess, reportUnknownMemberType, reportAttributeAccessIssue]
         except Exception as err:
-            logger.warning(f'Failed to get glyphs from dst_glif_xml_tree: {err}')
+            logger.error(f'Failed to get glyphs from dst_glif_xml_tree: {err}')
         return []
 
     # Read src and dst input
@@ -283,11 +282,11 @@ def get_glif_from_name(glyph_name: str, ufo_dir: Path) -> Path | None:
     try:
         tree: ET.ElementTree[ET.Element[str]] = ET.parse(ufo_dir / 'glyphs' / 'contents.plist')
     except Exception as err:
-        logger.warning(f'Couldn\'t parse {ufo_dir / 'glyphs' / 'contents.plist'}: {err}')
+        logger.error(f'Couldn\'t parse {ufo_dir / 'glyphs' / 'contents.plist'}: {err}')
         return None
     glyphs_dict: ET.Element[str] | None = tree.getroot().find("dict")
     if glyphs_dict is None:
-        logger.warning('Couldn\'t find <dict> in contents.plist')
+        logger.error('Couldn\'t find <dict> in contents.plist')
         return None
 
     # find glyph_name
@@ -305,7 +304,7 @@ def get_glif_from_name(glyph_name: str, ufo_dir: Path) -> Path | None:
     if glyph_found:
         return ufo_dir / 'glyphs' / str(string_list[index].text)
     else:
-        logger.warning(f'Glyph not found: {glyph_name}')
+        logger.error(f'Glyph not found: {glyph_name}')
         return None
 
 def get_glyph_anchor_points(glyph_name: str, ufo_dir: Path) -> dict[str, tuple[int, int]]:
@@ -666,7 +665,7 @@ def unlink_references(glyph_name: str, ufo_dir: Path, reversed_contours: list[in
     try:
         xml_tree: ET.ElementTree[ET.Element[str]] = ET.parse(glif)
     except Exception as err:
-        logger.warning(f'Couldn\'t parse {glif}: {err}')
+        logger.error(f'Couldn\'t parse {glif}: {err}')
         return 1
     xml_root: ET.Element[str] = xml_tree.getroot()
     xml_outline: ET.Element[str] | None = xml_root.find("outline")

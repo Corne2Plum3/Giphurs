@@ -436,7 +436,7 @@ if __name__ == '__main__':
     parser.add_argument('--onum', action='store_true', help="Generate old style figures ('onum') and their fixed width variants.")
     args = parser.parse_args()
     if args.csv_file is None:
-        logger.error(f'{sys.argv[0]}: CSV file not given.')
+        logger.critical(f'{sys.argv[0]}: CSV file not given.')
         parser.print_help()
         exit(1)
 
