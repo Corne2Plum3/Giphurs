@@ -17,7 +17,6 @@
       <point x="100" y="320"/>
     </contour>
     <contour>
-      <point x="587" y="890" type="line"/>
       <point x="587" y="311" type="line"/>
       <point x="688" y="311" type="line"/>
       <point x="688" y="914" type="line"/>
@@ -29,9 +28,9 @@
       <point x="484" y="1004" type="curve" smooth="yes"/>
       <point x="450" y="1004" type="line"/>
       <point x="450" y="890" type="line"/>
+      <point x="587" y="890" type="line"/>
     </contour>
     <contour>
-      <point x="1234" y="882" type="curve" smooth="yes"/>
       <point x="1234" y="771"/>
       <point x="1176" y="704"/>
       <point x="1098" y="704" type="curve" smooth="yes"/>
@@ -43,9 +42,9 @@
       <point x="1098" y="1060" type="curve" smooth="yes"/>
       <point x="1176" y="1060"/>
       <point x="1234" y="993"/>
+      <point x="1234" y="882" type="curve" smooth="yes"/>
     </contour>
     <contour>
-      <point x="1091" y="299" type="curve" smooth="yes"/>
       <point x="1230" y="299"/>
       <point x="1350" y="435"/>
       <point x="1350" y="768" type="curve" smooth="yes"/>
@@ -73,6 +72,7 @@
       <point x="873" y="529" type="line"/>
       <point x="885" y="408"/>
       <point x="952" y="299"/>
+      <point x="1091" y="299" type="curve" smooth="yes"/>
     </contour>
   </outline>
 </glyph>
