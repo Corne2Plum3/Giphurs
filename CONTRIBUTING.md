@@ -92,7 +92,11 @@ Assuming you are using FontForge:
 7. **Avoid** overlapping segments, otherwise rendering at small size might be shit (see image below).
     ![image](./documentation/contributing_overlapping_segments.jpg)
 8. If possible, try to **not remove overlaps** if your glyph is made of several segments.
-9. Make the outermost outline going **clockwise**.
+9. Make the outermost outline going **counter-clockwise**.
+    > [!NOTE]
+    > The goal is to have the outermost outline going in clockwise direction in these files, and not having a `ccw-outer-contour` WARN with Fontspector. However, **the generated variable TTF have reversed outlines** compared to what is visible on FontForge. I recommend displaying the points number, SVG mode, and trying to get the outermost outline going on counter-clockwise.
+    >
+    > With the correct direction feature on FontForge, it will try to get the opposite of what we want. You might want to invert the direction of all outlines after using this feature.
 10. Ensure each outline are in the same order and includes the same amount of points across all weights. The direction of each outline must be the same.
     > [!NOTE]
     > The normal and italic version of the font are independent.
