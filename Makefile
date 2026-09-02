@@ -58,12 +58,16 @@ proof: fonts/ badge_local_version
 	which diff3proof || (echo "diff3proof not found." && exit 1)
 	TOCHECK=$$(find fonts/variable -type f | grep -v SC 2>/dev/null); if [ -z "$$TOCHECK" ]; then TOCHECK=$$(find fonts/ttf -type f  | grep -v SC 2>/dev/null); fi ; . venv/bin/activate; mkdir -p output/ output/proof; diff3proof $$TOCHECK --output output/proof
 	open output/proof/diff3proof.html || echo "Failed to open the report in your web browser."
+	TOCHECK=$$(find fonts/variable -type f | grep SC 2>/dev/null); if [ -z "$$TOCHECK" ]; then TOCHECK=$$(find fonts/ttf -type f  | grep SC 2>/dev/null); fi ; . venv/bin/activate; mkdir -p output/ output/proof; diff3proof $$TOCHECK --output output/proof-SC
+	open output/proof-SC/diff3proof.html || echo "Failed to open the report in your web browser."
 
 # run fontspector tests
 tests: fonts/ badge_local_version
 	which fontspector || (echo "fontspector not found. Read fontspector installation instruction here: https://github.com/fonttools/fontspector/blob/main/INSTALLATION.md" && exit 1)
-	TOCHECK=$$(find fonts/variable -type f 2>/dev/null); if [ -z "$$TOCHECK" ]; then TOCHECK=$$(find fonts/ttf -type f 2>/dev/null); fi ; mkdir -p output/ output/fontspector; fontspector --profile googlefonts -l warn --full-lists --succinct --html output/fontspector/fontspector-report.html --ghmarkdown output/fontspector/fontspector-report.md --badges output/badges $$TOCHECK  || echo '::warning file=sources/config.yaml,title=fontspector failures::The fontspector QA check reported errors in your font. Please check the generated report.'
+	TOCHECK=$$(find fonts/variable -type f | grep -v SC 2>/dev/null); if [ -z "$$TOCHECK" ]; then TOCHECK=$$(find fonts/ttf -type f | grep -v SC 2>/dev/null); fi ; mkdir -p output/ output/fontspector; fontspector --profile googlefonts -l warn --full-lists --succinct --html output/fontspector/fontspector-report.html --ghmarkdown output/fontspector/fontspector-report.md --badges output/badges $$TOCHECK  || echo '::warning file=sources/config.yaml,title=fontspector failures::The fontspector QA check reported errors in your font. Please check the generated report.'
 	open output/fontspector/fontspector-report.html || echo "Failed to open the report in your web browser."
+	TOCHECK=$$(find fonts/variable -type f | grep SC 2>/dev/null); if [ -z "$$TOCHECK" ]; then TOCHECK=$$(find fonts/ttf -type f | grep SC 2>/dev/null); fi ; mkdir -p output/ output/fontspector; fontspector --profile googlefonts -l warn --full-lists --succinct --html output/fontspector/fontspector-report-SC.html --ghmarkdown output/fontspector/fontspector-report-SC.md --badges output/badges-SC $$TOCHECK  || echo '::warning file=sources/config.yaml,title=fontspector failures::The fontspector QA check reported errors in your font. Please check the generated report.'
+	open output/fontspector/fontspector-report-SC.html || echo "Failed to open the report in your web browser."
 
 # build composed glyphs (accented + composite + digits)
 # Updates $UFO_COMPOSED_CSV_2 and then edit UFOs
