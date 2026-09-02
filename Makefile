@@ -2,7 +2,7 @@
 
 # Name of the font
 FONT_NAME := Giphurs
-FONT_VERSION := 3.000
+FONT_VERSION := 3.100
 
 # Paths (without '/' for directories!)
 IMAGES_DIR := ./documentation
