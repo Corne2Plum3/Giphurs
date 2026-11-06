@@ -34,11 +34,9 @@ Well at the end, after more than 2 years, there's a final product, and literally
 
 # Status of the project
 
-The font is almost finished, it only requires some polishing and minor bug fixing and improvements.
+The font can be considered finished. However, if you have suggestions or found a bug, don't hesitate to [open an issue](https://github.com/Corne2Plum3/Giphurs/issues/).
 
-The end goal is to upload this font on [Google Fonts](https://fonts.google.com/).
-
-The full list of tasks is here: https://github.com/users/Corne2Plum3/projects/4
+Also I tried to [send this font to Google Fonts](https://github.com/google/fonts/issues/10887), but they declined because they had other priorities at the moment.
 
 # Download
 
